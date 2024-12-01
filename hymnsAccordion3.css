@@ -1,0 +1,291 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+    padding:0;
+}
+  
+img, picture, video, canvas, svg {
+    display: block;
+    /* max-width: 100%; */
+}
+input, button, textarea, select {
+    font: inherit;
+    color: inherit;
+    font-weight: inherit;
+    background-color: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word; 
+}
+h2{
+    min-width: max-content;
+    padding-right: calc(var(--_panel-gap) + var(--_button-size));
+    
+}
+html {
+    color-scheme: dark;
+}
+body{
+    font-family: system-ui;
+    font-size: 1.125rem;
+    line-height: 1.6;
+    height:100svh;
+}
+
+.wrapper{
+    max-width: max-content;
+    margin-inline: auto;
+    padding-inline: 1rem;
+    outline: red solid;
+    /* height: 100%; */
+    /* max-height:30rem; */
+    
+}
+.accordion{
+    --_button-size: 3rem;
+    --_panel-padding: 0.75rem;
+    --_panel-gap: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+    
+    contain: content;
+}
+
+@media (orientation: landscape) {
+    .accordion{
+        flex-direction: row;
+        height:100%
+        
+    }
+    .accordion_title{
+        overflow: hidden;
+        width: max-content;
+        
+        
+    }
+    .wrapper{
+        max-width: min-content;
+        max-height:30rem;
+        height: 100%;
+    }
+ 
+}
+#panel1{
+    position: relative;
+    isolation: isolate;
+    flex-basis: calc((var(--_panel-padding)*2) + var(--_button-size));
+    overflow: hidden;
+    padding: var(--_panel-padding);
+    /* padding-right: calc(var(--_button-size) + var(--_panel-gap)); */
+    border-radius:calc(((var(--_panel-padding)*2) + var(--_button-size))/2); 
+}
+
+.accordion_panel{
+    
+    position: relative;
+    isolation: isolate;
+    flex-basis: 0;
+    overflow: hidden;
+    padding: 0;
+    /* padding-right: calc(var(--_button-size) + var(--_panel-gap)); */
+    border-radius:calc(((var(--_panel-padding)*2) + var(--_button-size))/2);
+ }
+ @media (prefers-reduced-motion: no-preference){
+    .accordion_panel {
+        transition: flex-basis 500ms, flex-grow 500ms ,padding 500ms;
+    }
+ }
+.accordion_open{
+    flex-basis: calc((var(--_panel-padding)*2) + var(--_button-size));
+    padding: var(--_panel-padding);
+    padding-right: calc(var(--_button-size) + var(--_panel-gap));
+
+}
+#panel2{
+    /* padding-right:var(--_panel-padding); */
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    /* visibility: hidden; */
+}
+
+#panel2_heading{
+    padding: var(--_panel-padding);
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* margin-right: calc(var(--_panel-padding)); */
+    /* gap:var(--_panel-gap); */
+
+    position: relative;
+}
+.closePanel{
+    position:absolute;
+    border-radius: 100%;
+    height:var(--_button-size);
+    aspect-ratio: 1;
+    background:hsl(0 0 0 / 0.55 );
+    border:none;
+    z-index: 1;
+
+    inset: var(--_panel-padding);
+    left:auto;
+    /* opacity: 0; */
+        
+}
+
+.accordion_panel:has([aria-expanded="true"]) .closePanel{
+
+    transition: all 2s;
+    transition-behavior: allow-discrete;
+    display:block;
+    opacity: 1;
+}
+
+.closePanel.hidden{
+    display:none;
+}
+.x{
+    /* outline:red solid 2px; */
+    height: 1.1rem;
+
+    display: flex;
+    align-items: center;
+    padding-bottom: 19%;
+    justify-content: center;
+
+}
+
+.accordion_fullyOpen{
+    
+}
+.accordion_content > p {
+    
+    opacity: 0;
+    
+    margin-left: calc(var(--_button-size) + var(--_panel-gap));
+}
+iframe{
+    width: calc(95% - (var(--_button-size) + var(--_panel-gap)));
+    width: calc(95% - (2rem));
+    width:calc(100% - 2rem);
+    /* height:85% ; */
+    overflow: hidden;
+    position: absolute;
+    /* margin-left: calc(var(--_button-size) + (var(--_panel-gap))); */
+    /* margin-left: 1rem; */
+    /* inset:10rem 0; */
+    /* padding: 0; */
+    display: block;
+    border-radius:0 0 calc(((var(--_panel-padding)*2) + var(--_button-size))/3) calc(((var(--_panel-padding)*2) + var(--_button-size))/3) ;
+    margin-left:1rem;
+    /* margin-top: 0.5rem; */
+    height: calc(100% - 6rem);
+}
+
+@media (prefers-reduced-motion: no-preference){
+    .accordion_content > p {
+    transform: translateY(2rem);
+    }
+}
+
+.accordion_panel.open .accordion_content p {
+    transform: translateY(0);
+    opacity: 1;
+    transition: opacity 500ms 500ms, transform 500ms 500ms;
+}
+.accordion_panel.open{
+    
+    flex-grow: 1;
+    /* To do: sheet music 100svh - then hide other tabs - shift upwards*/
+    flex-basis:clamp(15rem, 100svh, 100svh);
+}
+.accordion_panel:focus-within{
+    outline: 3px solid var(--_panel-color);
+    outline-offset: 4px;
+}
+.accordion_title{
+    font-size: 1.5rem;
+    font-weight: 700;
+    position: relative;
+    isolation: isolate;
+    display: grid;
+    align-items: center;
+    /* outline:red solid */
+}
+
+@media (orientation: portrait) {
+    .accordion_title::after {
+        content: "";
+        position: absolute;
+        
+        left:calc((var(--_panel-gap) + var(--_button-size)) * -1);
+        z-index: -1;
+    
+        width: calc(100% + (var(--_panel-gap)*2) + (var(--_button-size)*2));
+        height: var(--_button-size);
+        background:hsl(0 0 0 / 0.55 );
+        border-radius: 100vw;
+    }
+    .wrapper{
+        /* max-width: 330px; */
+        min-width: min-content;
+        
+    }
+}
+
+.accordion_image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+.accordion_panel.open .accordion_image{
+    filter: brightness(0.5);
+    transition: filter 500ms;
+}
+.accordion_icon{
+    fill:var(--_panel-color);
+    background: hsl(0 0 0 / 0.55 );
+    width: var(--_button-size);
+    aspect-ratio: 1/1;
+    padding:0.75rem;
+    border-radius: 50%;
+    z-index: 2;
+}
+.accordion_panel:nth-child(1){
+    --_panel-color: hsl(160, 70%, 50%);
+}
+.accordion_panel:nth-child(2){
+    --_panel-color: hsl(184, 70%, 50%);
+}
+.accordion_panel:nth-child(3){
+    --_panel-color: hsl(220, 70%, 50%);
+}
+.accordion_panel:nth-child(4){
+    --_panel-color: hsl(350, 70%, 50%);
+}
+.accordion_panel:nth-child(5){
+    --_panel-color: hsl(20,70%,50%);
+}
+
+.accordion_trigger{
+    background: transparent;
+    border: 0;
+    display:flex;
+    align-items: center;
+    gap: var(--_panel-gap);
+    flex-direction: row-reverse;
+    
+    outline:0;
+}
+.visibility{
+    visibility: hidden;
+    opacity: 0;
+}
