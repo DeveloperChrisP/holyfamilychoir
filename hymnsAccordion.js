@@ -61,13 +61,14 @@ if (panelToActivate.id == "panel1"){
                     element.classList.add("accordion_open");
                 }
                 panelToActivate.querySelector("#firstX").classList.remove("hidden");
+                panelToActivate.classList.add("open");
                 // panelToActivate.querySelector(".closePanel").classList.remove("hidden");
 } 
 else {
     panelToActivate.classList.add("open");
     panelToActivate.querySelector(".closePanel").classList.remove("hidden");
 
-    for (let index = 0; index < panels.length; index++) {
+    for (let index = 1; index < panels.length; index++) {
         const element = panelToActivate.parentElement.querySelectorAll(".accordion_panel")[index];
         element.classList.add("visibility");
     }

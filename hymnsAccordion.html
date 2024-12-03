@@ -14,7 +14,7 @@
             <!-- <div class="accordion_1stheading"> -->
                 <div class="accordion_panel " id="panel1">
                     <h2 class="panel_heading" id="panel1_heading">
-                        <button class="accordion_trigger" aria-controls="panel1_content" aria-expanded="false">
+                        <button class="accordion_trigger" id="panel1_trigger" aria-controls="panel1_content" aria-expanded="false">
                             <span class="accordion_title" id="panel1_title">Silent Night</span>
                             <svg class="accordion_icon" aria-hidden="true">
                                 <use xlink:href="#trebleCleff"></use>
@@ -24,7 +24,7 @@
                     </h2>
                 
                     <div class="accordion_content" id="panel1_content" aria-labelledby="panel1_heading" aria-hidden="true" role="region">
-                        <p style="text-orientation: mixed;">Cheese slices mascarpone cheddar. Say cheese cheese slices jarlsberg danish fontina bocconcini blue castello boursin cream cheese. Feta camembert de normandie roquefort gouda stilton feta cheesecake roquefort. Swiss dolcelatte camembert de normandie when the cheese comes out everybody's happy paneer pepper jack roquefort feta. Red leicester melted cheese.</p>
+                        <!-- <p style="text-orientation: mixed;">Cheese slices mascarpone cheddar. Say cheese cheese slices jarlsberg danish fontina bocconcini blue castello boursin cream cheese. Feta camembert de normandie roquefort gouda stilton feta cheesecake roquefort. Swiss dolcelatte camembert de normandie when the cheese comes out everybody's happy paneer pepper jack roquefort feta. Red leicester melted cheese.</p> -->
                         <img src="./images/Choir Background.jpg" alt="" class="accordion_image">
                     </div>
                 </div>
@@ -43,7 +43,7 @@
                     </h2>
                 
                     <div class="accordion_content " id="panel2_content" aria-labelledby="panel2_heading" aria-hidden="true" role="region">
-                        <iframe  frameborder="1" src="./sheetMusic/SilentNight.pdf" allow="fullscreen" loading="lazy"></iframe>
+                        <iframe  frameborder="1" src="" allow="fullscreen" loading="lazy" width="auto" height="auto"></iframe>
                         <img src="./images/acclamations.png" alt="" class="accordion_image">
                     </div>
                 </div>
@@ -68,6 +68,21 @@
                             <li><div class="audioCategory__light"></div><button class="audioSelection">Bass</button></li>
                             <li><div class="audioCategory__light"></div><button class="audioSelection">Piano</button></li>
                         </ul>
+                        <div class="product__mediaPlayer ">
+                            <!-- <iframe class="hidden" width="100%" height="100%" src="" title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe> -->
+                            <h3 class="mediaPlayer__title">Audio Player</h3>
+                            <div class="flexContainer">
+                                <div class="mediaPlayer__light"></div>
+                                <h5 class="mediaPlayer__description">No media loaded</h5>
+                            </div>
+                            <div class="mediaPlayer__audioDiv">
+                                <audio controls preload="metadata" src="" class="mediaPlayer__audio"></audio>
+                            </div>
+                            <div class="mediaPlayer__QueueContainer">
+                                <h6><button class="mediaPlayer__Queue">Queue Video</button></h6>
+                                <h6><button class="mediaPlayer__Queue">Play Queued Videos</button></h6>
+                            </div>
+                        </div>
                         <img src="./images/psalms.png" alt="" class="accordion_image">
                     </div>
                 </div>

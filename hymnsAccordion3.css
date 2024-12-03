@@ -38,7 +38,7 @@ body{
     max-width: max-content;
     margin-inline: auto;
     padding-inline: 1rem;
-    outline: red solid;
+    /* outline: red solid; */
     /* height: 100%; */
     /* max-height:30rem; */
     
@@ -55,22 +55,58 @@ body{
     contain: content;
 }
 
+.accordion_trigger{
+    background: transparent;
+    border: 0;
+    display:flex;
+    align-items: center;
+    gap: var(--_panel-gap);
+    flex-direction: row-reverse;
+    
+    outline:0;
+}
+
 @media (orientation: landscape) {
     .accordion{
         flex-direction: row;
         height:100%
         
     }
+    .accordion_panel{
+        max-height: min(100vh , 30rem);
+       
+    }
+    .accordion_panel.visibility{
+            display: block;
+            visibility: visible;
+            opacity: 1;
+    
+    }
+    #panel1_trigger{
+        /* display:flex;*/
+        flex-direction: column-reverse; 
+        /* height: fit-content; */
+    }
     .accordion_title{
         overflow: hidden;
         width: max-content;
+        /* writing-mode: vertical-rl;
+        text-orientation: upright; */
         
         
     }
+    .accordion_icon{
+        
+    }
+    #panel1_title{
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+    }
     .wrapper{
-        max-width: min-content;
+        max-width: max-content;
         max-height:30rem;
         height: 100%;
+        /* overflow: hidden; */
     }
  
 }
@@ -102,8 +138,14 @@ body{
 .accordion_open{
     flex-basis: calc((var(--_panel-padding)*2) + var(--_button-size));
     padding: var(--_panel-padding);
-    padding-right: calc(var(--_button-size) + var(--_panel-gap));
+    /* padding-right: calc(var(--_button-size) + var(--_panel-gap)); */
 
+}
+
+.visibility{
+    visibility: hidden;
+    opacity: 0;
+    display:none
 }
 #panel2{
     /* padding-right:var(--_panel-padding); */
@@ -138,16 +180,17 @@ body{
         
 }
 
-.accordion_panel:has([aria-expanded="true"]) .closePanel{
+.accordion_panel .closePanel{
 
-    transition: all 2s;
-    transition-behavior: allow-discrete;
-    display:block;
+    visibility: visible;
     opacity: 1;
+    transition: all 500ms;
 }
 
 .closePanel.hidden{
-    display:none;
+    visibility: hidden;
+    opacity:0;
+    transition: all 500ms;
 }
 .x{
     /* outline:red solid 2px; */
@@ -163,12 +206,24 @@ body{
 .accordion_fullyOpen{
     
 }
-.accordion_content > p {
-    
+.accordion_content p, .accordion_content ul, .accordion_content iframe, .accordion_content .product__mediaPlayer {
+    /* z-index: -2; */
     opacity: 0;
+    visibility: hidden;
     
-    margin-left: calc(var(--_button-size) + var(--_panel-gap));
+    
+    /* margin-left: calc(var(--_button-size) + var(--_panel-gap)); */
 }
+.accordion_panel.open .accordion_content p, .accordion_panel.open .accordion_content ul, .accordion_panel.open .accordion_content iframe, .accordion_panel.open .accordion_content .product__mediaPlayer {
+    /* z-index: -2; */
+    opacity: 1;
+    visibility: visible;
+    transition: all 2s;
+    
+    
+    /* margin-left: calc(var(--_button-size) + var(--_panel-gap)); */
+}
+
 iframe{
     width: calc(95% - (var(--_button-size) + var(--_panel-gap)));
     width: calc(95% - (2rem));
@@ -202,7 +257,7 @@ iframe{
     
     flex-grow: 1;
     /* To do: sheet music 100svh - then hide other tabs - shift upwards*/
-    flex-basis:clamp(15rem, 100svh, 100svh);
+    flex-basis:clamp(15rem, calc(100svh - ((var(--_panel-padding)*2) + var(--_button-size) + var(--_panel-gap))), calc(100svh - ((var(--_panel-padding)*2) + var(--_button-size) + var(--_panel-gap))));
 }
 .accordion_panel:focus-within{
     outline: 3px solid var(--_panel-color);
@@ -233,7 +288,7 @@ iframe{
     }
     .wrapper{
         /* max-width: 330px; */
-        min-width: min-content;
+        min-width: 100%;
         
     }
 }
@@ -275,17 +330,83 @@ iframe{
     --_panel-color: hsl(20,70%,50%);
 }
 
-.accordion_trigger{
-    background: transparent;
-    border: 0;
-    display:flex;
-    align-items: center;
+
+
+
+.product__audioCategory {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
     gap: var(--_panel-gap);
-    flex-direction: row-reverse;
-    
-    outline:0;
+    padding: var(--_panel-padding);
+    overflow: hidden;
+    margin-top: var(--_panel-padding);
 }
-.visibility{
-    visibility: hidden;
-    opacity: 0;
+.product__audioCategory li {
+    display: flex;
+    gap: calc(var(--_panel-padding));
+    align-items: center;
+    }
+.audioCategory__light {
+    border: black solid 0.3rem;
+    border-radius: 50%;
+    width: 0.5rem;
+}
+.audioSelection{
+    background:hsl(0 0 0 / 0.55 );
+    padding:var(--_panel-padding);
+    border-radius: 0.5rem;
+    width: 100%;
+}
+
+.product__mediaPlayer {
+    background: hsl(0 0 0 / 0.45 );
+    overflow: hidden;
+    color:white;
+    border-radius: 0.5rem;
+    margin-top: var(--_panel-gap);
+}
+
+.mediaPlayer__title {
+    padding-left: var(--_panel-padding);
+    padding-top: calc( var(--_panel-padding)/2);
+    text-shadow: 0.1rem 0.2rem 0.2rem black;
+}
+.flexContainer {
+    display:flex;
+    gap: calc(var(--_panel-padding)/2);
+    align-items: center;
+    padding-left: var(--_panel-padding);
+    padding-bottom: calc( var(--_panel-padding)/2);
+}
+.mediaPlayer__light {
+    border: black solid 0.3rem;
+    border-radius: 50%;
+    width: 0.5rem;
+}
+.mediaPlayer__audioDiv {
+    padding: 0 var(--_panel-padding);
+    /* padding-right: var(--defaultPadding); */
+}
+.mediaPlayer__audio {
+    display: block;
+    box-shadow: black 2px 1px 8px;
+    border-radius: 3rem;
+    width: 100%;
+}
+.mediaPlayer__QueueContainer {
+    padding: var(--_panel-padding);
+    padding-top:0;
+    display:flex;
+    justify-content: space-between;
+}
+.mediaPlayer__Queue {
+    display:none;
+    text-decoration-line: line-through;
+    margin-top:var(--_panel-padding)
+}
+.accordion_panel#panel3{
+    /* padding-right: var(--_panel-padding); */
+    
 }
