@@ -38,7 +38,11 @@ body{
     max-width: max-content;
     margin-inline: auto;
     padding-inline: 1rem;
-    /* outline: red solid; */
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    outline: red solid 2px;
     /* height: 100%; */
     /* max-height:30rem; */
     
@@ -50,9 +54,13 @@ body{
 
     display: flex;
     flex-direction: column;
-    gap:1rem;
-    
+    /* gap:var(--_panel-gap); */
+    width: 100%;
     contain: content;
+    
+}
+.accordion.halfGap{
+    gap:calc(var(--_panel-gap)/2)
 }
 
 .accordion_trigger{
@@ -66,16 +74,17 @@ body{
     outline:0;
 }
 
-@media (orientation: landscape) {
+/* @media (orientation: landscape) {
     .accordion{
         flex-direction: row;
-        height:100%
+        
         
     }
     .accordion_panel{
         max-height: min(100vh , 30rem);
        
     }
+   
     .accordion_panel.visibility{
             display: block;
             visibility: visible;
@@ -83,15 +92,14 @@ body{
     
     }
     #panel1_trigger{
-        /* display:flex;*/
+        
         flex-direction: column-reverse; 
-        /* height: fit-content; */
+       
     }
     .accordion_title{
         overflow: hidden;
         width: max-content;
-        /* writing-mode: vertical-rl;
-        text-orientation: upright; */
+      
         
         
     }
@@ -103,67 +111,79 @@ body{
         text-orientation: upright;
     }
     .wrapper{
-        max-width: max-content;
-        max-height:30rem;
-        height: 100%;
-        /* overflow: hidden; */
+ 
     }
  
-}
+} */
 #panel1{
     position: relative;
     isolation: isolate;
     flex-basis: calc((var(--_panel-padding)*2) + var(--_button-size));
     overflow: hidden;
-    padding: var(--_panel-padding);
+    margin-top:0;
     /* padding-right: calc(var(--_button-size) + var(--_panel-gap)); */
     border-radius:calc(((var(--_panel-padding)*2) + var(--_button-size))/2); 
+   
 }
 
 .accordion_panel{
-    
+    width: 100%;
+    min-width:max-content;
     position: relative;
     isolation: isolate;
-    flex-basis: 0;
+    flex-basis:0;
     overflow: hidden;
     padding: 0;
+    margin-top:0;
     /* padding-right: calc(var(--_button-size) + var(--_panel-gap)); */
     border-radius:calc(((var(--_panel-padding)*2) + var(--_button-size))/2);
- }
+    transition: margin-top 2s, flex-basis 2s;
+}
+.accordion_panel.plusGap{
+    margin-top:var(--_panel-gap);
+    transition: margin-top 2s, flex-basis 2s;
+    
+   }
+
  @media (prefers-reduced-motion: no-preference){
     .accordion_panel {
-        transition: flex-basis 500ms, flex-grow 500ms ,padding 500ms;
+        transition: flex-basis 2s, flex-grow 2s ,padding 2s, margin-top 2s;
     }
  }
 .accordion_open{
     flex-basis: calc((var(--_panel-padding)*2) + var(--_button-size));
-    padding: var(--_panel-padding);
+    /* padding: var(--_panel-padding); */
     /* padding-right: calc(var(--_button-size) + var(--_panel-gap)); */
-
 }
+.accordion_panel.open{
+    
+    flex-grow: 1;
+    /* To do: sheet music 100svh - then hide other tabs - shift upwards*/
+    flex-basis:clamp(15rem, calc(100svh - ((var(--_panel-padding)*2) + var(--_button-size) + var(--_panel-gap))), calc(100svh - ((var(--_panel-padding)*2) + var(--_button-size) + var(--_panel-gap))));
+    /* flex-basis:clamp(15rem, calc(100svh - ((var(--_panel-padding)*4) + (var(--_button-size)*2) + (var(--_panel-gap))*2)),100svh ); */
+}
+
 
 .visibility{
-    visibility: hidden;
+    /* visibility: hidden;
     opacity: 0;
-    display:none
-}
-#panel2{
-    /* padding-right:var(--_panel-padding); */
-    position: relative;
-    overflow: hidden;
-    padding: 0;
-    margin: 0;
-    /* visibility: hidden; */
+    display:none */
+    flex-basis:0;
 }
 
-#panel2_heading{
+#panel1_heading{opacity: 1; transform:none;
+
+}
+.panel_heading{
+    opacity:0;
     padding: var(--_panel-padding);
-    /* display: flex; */
-    /* justify-content: space-between; */
-    /* margin-right: calc(var(--_panel-padding)); */
-    /* gap:var(--_panel-gap); */
-
-    position: relative;
+    transition: opacity 1s;
+    
+   
+}
+.panel_heading.visible{
+    opacity: 1;
+    transition: opacity 2s 1.5s;
 }
 .closePanel{
     position:absolute;
@@ -177,7 +197,7 @@ body{
     inset: var(--_panel-padding);
     left:auto;
     /* opacity: 0; */
-        
+      
 }
 
 .accordion_panel .closePanel{
@@ -192,13 +212,16 @@ body{
     opacity:0;
     transition: all 500ms;
 }
+/* .accordion_panel.hidden{
+    display:none;
+} */
 .x{
     /* outline:red solid 2px; */
     height: 1.1rem;
 
     display: flex;
     align-items: center;
-    padding-bottom: 19%;
+    /* padding-bottom: 19%; */
     justify-content: center;
 
 }
@@ -253,12 +276,7 @@ iframe{
     opacity: 1;
     transition: opacity 500ms 500ms, transform 500ms 500ms;
 }
-.accordion_panel.open{
-    
-    flex-grow: 1;
-    /* To do: sheet music 100svh - then hide other tabs - shift upwards*/
-    flex-basis:clamp(15rem, calc(100svh - ((var(--_panel-padding)*2) + var(--_button-size) + var(--_panel-gap))), calc(100svh - ((var(--_panel-padding)*2) + var(--_button-size) + var(--_panel-gap))));
-}
+
 .accordion_panel:focus-within{
     outline: 3px solid var(--_panel-color);
     outline-offset: 4px;
@@ -347,6 +365,7 @@ iframe{
     display: flex;
     gap: calc(var(--_panel-padding));
     align-items: center;
+    list-style: none;
     }
 .audioCategory__light {
     border: black solid 0.3rem;
@@ -380,7 +399,7 @@ iframe{
     padding-left: var(--_panel-padding);
     padding-bottom: calc( var(--_panel-padding)/2);
 }
-.mediaPlayer__light {
+#mediaPlayer__light {
     border: black solid 0.3rem;
     border-radius: 50%;
     width: 0.5rem;
@@ -409,4 +428,98 @@ iframe{
 .accordion_panel#panel3{
     /* padding-right: var(--_panel-padding); */
     
+}
+/* button:is(:hover, :focus),.title:is(:hover, :focus){
+    cursor: pointer;
+} */
+
+/* .videoTitle.hidden {
+        opacity: 0;
+        translate:0 5vh; 
+        transition-property: translate opacity overlay;
+        transition-duration: 2s;
+        transition: all 2s; 
+        display:none;
+        transition-behavior: allow-discrete;
+ }
+    
+.videoTitle {
+    display:block; 
+    @starting-style {
+    opacity: 0;
+    translate:0 -5vh; 
+}
+    opacity: 1; 
+    translate: 0 0; 
+    transition: all 2s;
+} */
+
+.audioCategory__light{
+    height: 0.5rem;
+    aspect-ratio: 1;
+    border: 2px solid;
+    border-radius: 100%;
+}
+.audioCategory__light.satb {background-color: hsl(60, 100%, 30%);}
+
+.flexContainer {
+    display: grid; 
+    grid-template-columns: 2rem 1fr;
+    
+    justify-content: start;
+    
+    text-align: start;
+    margin: 0.1rem 0;
+}
+#mediaPlayer__light {
+    align-self: center;
+    justify-self: start;
+    margin-left:1.5rem;
+    height: 0.5rem;
+    width: 0.5rem;
+    border: 2px solid;
+    border-radius: 50%;
+}
+
+
+.satb.selected {background-color: hsl(60, 100%, 90%);
+    box-shadow: 0.2rem 0.2rem 0.3rem hsl(60, 100%, 90%), -0.2rem -0.2rem 0.3rem hsl(60, 100%, 90%),0.2rem -0.2rem 0.3rem hsl(60, 100%, 90%),-0.2rem 0.2rem 0.3rem hsl(60, 100%, 90%);}
+        
+        /* .circle.satb:is(:hover,:focus){background-color: hsl(60, 100%, 90%);} */
+        
+.audioCategory__light.melody {background-color: hsl(120, 100%, 30%);}
+        /* .circle.melody:is(:hover,:focus){background-color: hsl(120, 100%, 90%);} */
+.melody.selected {background-color: hsl(120, 100%, 90%);
+    box-shadow: 0.2rem 0.2rem 0.3rem hsl(120, 100%, 90%), -0.2rem -0.2rem 0.3rem hsl(120, 100%, 90%),0.2rem -0.2rem 0.3rem hsl(120, 100%, 90%),-0.2rem 0.2rem 0.3rem hsl(120, 100%, 90%);}
+        
+.audioCategory__light.alto {background-color:hsl(240, 100%, 30%);}
+        /* .circle.alto:is(:hover,:focus){background-color: hsl(240, 100%, 90%);} */
+.alto.selected {background-color: hsl(240, 100%, 90%);
+    box-shadow: 0.2rem 0.2rem 0.3rem hsl(240, 100%, 90%), -0.2rem -0.2rem 0.3rem hsl(240, 100%, 90%),0.2rem -0.2rem 0.3rem hsl(240, 100%, 90%),-0.2rem 0.2rem 0.3rem hsl(240, 100%, 90%);}
+        
+.audioCategory__light.tenor {background-color:hsl(0, 100%, 30%);}
+        /* .circle.tenor:is(:hover,:focus){background-color: hsl(0, 100%, 90%);} */
+.tenor.selected {background-color: hsl(0, 100%, 90%);
+    box-shadow: 0.2rem 0.2rem 0.3rem hsl(0, 100%, 90%), -0.2rem -0.2rem 0.3rem hsl(0, 100%, 90%),0.2rem -0.2rem 0.3rem hsl(0, 100%, 90%),-0.2rem 0.2rem 0.3rem hsl(0, 100%, 90%);}
+        
+.audioCategory__light.bass {background-color:hsl(0, 59%, 30%);}
+        /* .circle.bass:is(:hover,:focus){background-color: hsl(0, 59%, 90%);} */
+.bass.selected {background-color: hsl(0, 59%, 90%);
+        box-shadow: 0.2rem 0.2rem 0.3rem hsl(0, 59%, 90%), -0.2rem -0.2rem 0.3rem hsl(0, 59%, 90%),0.2rem -0.2rem 0.3rem hsl(0, 59%, 90%),-0.2rem 0.2rem 0.3rem hsl(0, 59%, 90%);}
+        
+.audioCategory__light.piano {background-color:hsl(180, 100%, 30%);}
+        /* .circle.piano:is(:hover,:focus){background-color: hsl(180, 100%, 90%);} */
+.piano.selected {background-color: hsl(180, 100%, 90%);
+    box-shadow: 0.2rem 0.2rem 0.3rem hsl(180, 100%, 90%), -0.2rem -0.2rem 0.3rem hsl(180, 100%, 90%),0.2rem -0.2rem 0.3rem hsl(180, 100%, 90%),-0.2rem 0.2rem 0.3rem hsl(180, 100%, 90%);}
+
+.up, .down{
+    width: 2rem;
+    aspect-ratio: 1;
+}
+.up{
+    -moz-transform: scale(1, -1);
+    -webkit-transform: scale(1, -1);
+    -o-transform: scale(1, -1);
+    -ms-transform: scale(1, -1);
+    transform: scale(1, -1);
 }

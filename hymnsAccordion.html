@@ -48,7 +48,7 @@
                     </div>
                 </div>
                 
-                <div id="panel3" class="accordion_panel ">
+                <div id="panel3" class="accordion_panel">
                     <h2 class="panel_heading" id="panel3_heading">
                         <button class="accordion_trigger" aria-controls="panel3_content" aria-expanded="false">
                             <span class="accordion_title" id="panel3_title">Audio</span>
@@ -59,21 +59,21 @@
                         <button class="closePanel hidden"><span class="x">x</span></button>
                     </h2>
                 
-                    <div class="accordion_content" id="panel3_content" aria-labelledby="panel3_heading" aria-hidden="true" role="region">
+                    <div class="accordion_content"  id="panel3_content" aria-labelledby="panel3_heading" aria-hidden="true" role="region">
                         <ul class="product__audioCategory ">
-                            <li><div class="audioCategory__light"></div><button class="audioSelection">SATB</button></li>
-                            <li><div class="audioCategory__light"></div><button class="audioSelection">Melody</button></li>
-                            <li><div class="audioCategory__light"></div><button class="audioSelection">Alto</button></li>
-                            <li><div class="audioCategory__light"></div><button class="audioSelection">Tenor</button></li>
-                            <li><div class="audioCategory__light"></div><button class="audioSelection">Bass</button></li>
-                            <li><div class="audioCategory__light"></div><button class="audioSelection">Piano</button></li>
+                            <li><div class="audioCategory__light satb"></div><button class="audioSelection">SATB</button></li>
+                            <li><div class="audioCategory__light melody"></div><button class="audioSelection">Melody</button></li>
+                            <li><div class="audioCategory__light alto"></div><button class="audioSelection">Alto</button></li>
+                            <li><div class="audioCategory__light tenor"></div><button class="audioSelection">Tenor</button></li>
+                            <li><div class="audioCategory__light bass"></div><button class="audioSelection">Bass</button></li>
+                            <li><div class="audioCategory__light piano"></div><button class="audioSelection">Piano</button></li>
                         </ul>
-                        <div class="product__mediaPlayer ">
+                        <div class="product__mediaPlayer">
                             <!-- <iframe class="hidden" width="100%" height="100%" src="" title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe> -->
                             <h3 class="mediaPlayer__title">Audio Player</h3>
                             <div class="flexContainer">
-                                <div class="mediaPlayer__light"></div>
-                                <h5 class="mediaPlayer__description">No media loaded</h5>
+                                <div id="mediaPlayer__light"></div>
+                                <h5 id="mediaPlayer__description">No media loaded</h5>
                             </div>
                             <div class="mediaPlayer__audioDiv">
                                 <audio controls preload="metadata" src="" class="mediaPlayer__audio"></audio>
@@ -99,7 +99,7 @@
                     </h2>
                 
                     <div class="accordion_content" id="panel4_content" aria-labelledby="panel4_heading" aria-hidden="true" role="region">
-                        <p>Squirty cheese cheesecake cream cheese. Paneer chalk and cheese cheesy grin cheeseburger say cheese cheeseburger cheese triangles hard cheese. Cow cut the cheese jarlsberg babybel say cheese bavarian bergkase fromage frais lancashire. Cauliflower cheese macaroni cheese paneer swiss bocconcini red leicester cut the cheese queso. Cheesy grin.</p>
+                        <iframe  frameborder="1" src="https://www.youtube-nocookie.com/embed/POcDlbYiF9c?si=cBj0zCzSgsO6fK7T" allow="fullscreen" loading="lazy" width="auto" height="auto" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="no-referrer-when-downgrade" ></iframe>
                         <img src="./images/danSchutteMass.png" alt="" class="accordion_image">
                     </div>
                 </div>
@@ -123,7 +123,10 @@
             
             <!-- </div> -->
         </article>
-
+        <div style="display:none" class="hymnSelect">
+            <button class="up">V</button>
+            <button class="down">V</button>
+        </div>
     </div>
 
     <svg width="0" height="0" class="hidden">
