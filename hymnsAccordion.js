@@ -1,66 +1,108 @@
 var accordion = document.querySelector("article.accordion");
 var count = "";
 
-function Hymn(title,vocalPart,sheetMusic,video){
+// const preTitle1 = allHymns[count-1].title;
+// const preTitle2 = allHymns[count+1].title;
+// document.querySelector("#prepanel0_title").textContent = preTitle1;
+// document.querySelector("#prepanel1_title").textContent = preTitle2;
+
+
+function Hymn(title,sheetMusic,vocalPart,video){
     this.title = title;
-    this.vocalPart = vocalPart;
     this.sheetMusic = sheetMusic;
+    this.vocalPart = vocalPart;
     this.video = video;
-    count++; 
- }
+    count++;
+}
  const allHymns = [];
 
  allHymns.push(new Hymn 
     ("Silent Night",
-        ["satb", "melody","alto","tenor","bass","piano"],
         "./sheetMusic/SilentNight.pdf",
+        ["satb", "melody","alto","tenor","bass","piano"],
         "https://www.youtube-nocookie.com/embed/POcDlbYiF9c?si=cBj0zCzSgsO6fK7T"
     ));
 allHymns.push(new Hymn 
     ("Here We Bring You",
-        [],
         "dfdsfd",
+        [],
         "https://www.youtube-nocookie.com/embed/POcDlbYiF9c?si=cBj0zCzSgsO6fK7T"
     ));
 allHymns.push (new Hymn 
     ("Hark the Herald",
-        [],
         "",
+        ["melody","alto","bass","piano"],
         "dsfsdf"
     ));
 count = 0;
-const title = allHymns[count].title;
+
 
 //up & down buttons
 document.querySelector(".hymnSelect").addEventListener("click", (e)=> {
-    
-    console.log(e.target.classList);
+      
     if (e.target.classList == "up"){
-        console.log("going up");
         count--;
         if (count == -1){
             count = allHymns.length-1;
         }
     }
-    else {
-        console.log("going down");
+    else{
         count++;
-    if (count == allHymns.length){
+        if (count == allHymns.length){
         count = 0;
+        }
     }
-    }
+hymnSelect();  
 })
 
-document.querySelector("#panel1_title").textContent = title;
-accordion.addEventListener("click", (e)=> {
+function hymnSelect (){ //populate titles based upon 'count' number//
 
-    
+const title = allHymns[count].title;
+document.querySelector("#panel1_title").textContent = title;
+var lastHymn = allHymns[allHymns.length-1].title; //Hark the herald
+var secondToLastHymn = allHymns[allHymns.length-2].title; //Here we bring you
+var pretitle2 = allHymns[1].title; //Here we bring you//
+
+//top 2 titles//
+if (count == 0){
+    document.querySelector("#prepanel1_title").textContent = lastHymn;
+    document.querySelector("#prepanel0_title").textContent = secondToLastHymn
+}
+else {
+    document.querySelector("#prepanel1_title").textContent = allHymns[count-1].title;
+    if (count == 1){
+        document.querySelector("#prepanel0_title").textContent = lastHymn;
+    }
+    else {
+        document.querySelector("#prepanel0_title").textContent = allHymns[count-2].title;
+    }
+}
+
+//bottom 2 tittles//
+if (count == allHymns.length-1){
+    document.querySelector("#prepanel2_title").textContent = allHymns[0].title;
+    document.querySelector("#prepanel3_title").textContent = allHymns[1].title;
+}
+else {
+    document.querySelector("#prepanel2_title").textContent = allHymns[count+1].title;
+    if (count == allHymns.length-2){
+        document.querySelector("#prepanel3_title").textContent = allHymns[0].title;
+    }
+    else {
+        document.querySelector("#prepanel3_title").textContent = allHymns[count+2].title;
+    }
+}
+document.querySelector(".countVisual").textContent = count; //debugging//
+}
+
+
+
+accordion.addEventListener("click", (e)=> {
 
     const activePanel = e.target.closest(".accordion_panel");
     const specificClick = e.target.closest(".closePanel");
     const audioButton = e.target.closest(".audioSelection")
-   
-
+    const title = allHymns[count].title;
 if (!activePanel) return;
 if (specificClick) {
         closeAccordion(specificClick);
@@ -83,7 +125,8 @@ else if (audioButton){
         
     }
     switch (audioButton.innerHTML) {
-        case "SATB":
+        case capitalize(allHymns[count].vocalPart[0]):
+            console.log(audioButton.innerHTML)
             /* Add selection light to SATB button */
             audioButton.parentElement.querySelector(".satb").classList.add("selected");
             /* Add selection light to Media Player button */
@@ -93,7 +136,7 @@ else if (audioButton){
             accordionContent.querySelector("#mediaPlayer__description").textContent = audioDescription;
             
             break;
-        case "Melody":
+        case capitalize(allHymns[count].vocalPart[1]):
             /* Add selection light to SATB button */
             audioButton.parentElement.querySelector(".melody").classList.add("selected");
             /* Add selection light to Media Player button */
@@ -103,7 +146,7 @@ else if (audioButton){
             accordionContent.querySelector("#mediaPlayer__description").textContent = audioDescription;
             
             break;
-        case "Alto":
+        case capitalize(allHymns[count].vocalPart[2]):
             /* Add selection light to SATB button */
             audioButton.parentElement.querySelector(".alto").classList.add("selected");
             /* Add selection light to Media Player button */
@@ -113,7 +156,7 @@ else if (audioButton){
             accordionContent.querySelector("#mediaPlayer__description").textContent = audioDescription;
             
             break;
-        case "Tenor":
+        case capitalize(allHymns[count].vocalPart[3]):
             /* Add selection light to SATB button */
             audioButton.parentElement.querySelector(".tenor").classList.add("selected");
             /* Add selection light to Media Player button */
@@ -123,7 +166,7 @@ else if (audioButton){
             accordionContent.querySelector("#mediaPlayer__description").textContent = audioDescription;
             
             break;
-        case "Bass":
+        case capitalize(allHymns[count].vocalPart[4]):
             /* Add selection light to SATB button */
             audioButton.parentElement.querySelector(".bass").classList.add("selected");
             /* Add selection light to Media Player button */
@@ -133,7 +176,7 @@ else if (audioButton){
             accordionContent.querySelector("#mediaPlayer__description").textContent = audioDescription;
             
             break;
-        case "Piano":
+        case capitalize(allHymns[count].vocalPart[5]):
             /* Add selection light to SATB button */
             audioButton.parentElement.querySelector(".piano").classList.add("selected");
             /* Add selection light to Media Player button */
@@ -156,7 +199,7 @@ else if (audioButton){
 
 function toggleAccordion (panelToActivate){
     const buttons = panelToActivate.parentElement.querySelectorAll("button");
-    const contents = panelToActivate.parentElement.querySelectorAll(".accordion_content p");
+    const contents = panelToActivate.parentElement.querySelectorAll(".accordion_content");
     const panels = panelToActivate.parentElement.querySelectorAll(".accordion_panel");
     const panel1 = document.querySelector(".accordion_panel");
     const headings = panelToActivate.parentElement.querySelectorAll(".panel_heading");
@@ -164,21 +207,27 @@ function toggleAccordion (panelToActivate){
 
 //choose panels to active based on Object info
     if (panelToActivate.id == "panel1" ) {
+        panelToActivate.parentElement.parentElement.lastElementChild.classList.add("hidden"); //hide hymn selection buttons
+        panelToActivate.classList.add("open"); // open 1st panel to add filter effect
         if (allHymns[count].sheetMusic.length == 0){
             panelToActivate.parentElement.querySelector("#panel2").classList.add("hidden");
-        }
+        }else{panelToActivate.parentElement.querySelector("#panel2").classList.remove("hidden");}
+        
         if (allHymns[count].vocalPart.length == 0){
             panelToActivate.parentElement.querySelector("#panel3").classList.add("hidden");
-        } 
+        }else{panelToActivate.parentElement.querySelector("#panel3").classList.remove("hidden");}
+        
         if (allHymns[count].video.length == 0){
             panelToActivate.parentElement.querySelector("#panel4").classList.add("hidden");
-        }
+        }else{panelToActivate.parentElement.querySelector("#panel4").classList.remove("hidden");}
         
         const populatedPanels = panelToActivate.parentElement.querySelectorAll(".accordion_panel");
             for (let index = 0; index < populatedPanels.length; index++) {
                 const element = populatedPanels[index].classList.add("accordion_open");
               }
 panelToActivate.querySelector("#firstX").classList.remove("hidden");//add 'x' to 1st panel
+
+
 for (let index = 0; index < panels.length; index++) { //add margin-top to panels once open
     const element = panels[index];
     const otherElement = headings[index];
@@ -189,11 +238,32 @@ for (let index = 0; index < panels.length; index++) { //add margin-top to panels
     }
     //fully open selected panel
     else {
+        switch (panelToActivate.id) {
+            case "panel2":
+                panelToActivate.lastElementChild.firstElementChild.setAttribute("src",allHymns[count].sheetMusic);
+                break;
+            case "panel3":
+                const allListItems = panelToActivate.lastElementChild.firstElementChild.querySelectorAll("li");
+                for (let index = 0; index < allHymns[count].vocalPart.length; index++) { //populate audio parts
+                    const element = allListItems[index];
+                    element.classList.add("visible");
+                    element.lastElementChild.innerHTML = capitalize(allHymns[count].vocalPart[index]);
+                }
+                
+                break;
+            case "panel4":
+                panelToActivate.lastElementChild.firstElementChild.setAttribute("src",allHymns[count].video);
+                break;
+        
+            default:
+                break;
+        }
+
 
         panelToActivate.classList.add("open");//open panel
         panelToActivate.querySelector(".closePanel").classList.remove("hidden");//add "x" to panel
 
-        //display:none to all panels except selected + panel1
+        //hide all panels except selected + panel1
     for (let index = 1; index < panels.length; index++) {
         const element = panelToActivate.parentElement.querySelectorAll(".accordion_panel")[index];
         const anotherElement = headings[index];
@@ -212,24 +282,26 @@ for (let index = 0; index < panels.length; index++) { //add margin-top to panels
 
 
 function closeAccordion (closeButton){
-    
+    const allButtons = closeButton.parentElement.parentElement.parentElement.querySelectorAll(".closePanel");
     const panels = closeButton.parentElement.parentElement.parentElement.querySelectorAll(".accordion_panel");
     const headings = closeButton.parentElement.parentElement.parentElement.querySelectorAll(".panel_heading");
     const clickedPanel = closeButton.parentElement.parentElement.querySelector(".accordion_panel");
     if (closeButton.id == "firstX"){
+        closeButton.parentElement.parentElement.parentElement.parentElement.lastElementChild.classList.remove("hidden");
+
         for (let index = 0; index < panels.length; index++) {
             const element = closeButton.parentElement.parentElement.parentElement.querySelectorAll(".accordion_panel")[index];
+            const element2 = panels[index];
+            const otherElement = headings[index];
             element.classList.remove("accordion_open");
             element.classList.remove("open");
-        }
-        closeButton.classList.add("hidden");
-        for (let index = 0; index < panels.length; index++) { //remove margin-top to panels once open
-            const element = panels[index];
-            const otherElement = headings[index];
-            element.classList.remove("plusGap");
+            element2.classList.remove("plusGap"); //remove margin-top to panels once open
             otherElement.classList.remove("visible");
+            element.classList.remove("visibility");
+            allButtons[index].classList.add("hidden");
         }
-
+       
+        
     }
     else {
         // console.log(clickedPanel);
@@ -248,4 +320,30 @@ function closeAccordion (closeButton){
     }
 }
 
+//manipulate strings//
+function capitalizer (sentence, operator){
+    return operator(sentence);
+}
 
+function capitalize(sentence){ //capitalize 1st letter
+   return sentence[0].toUpperCase() + sentence.substring(1);
+}
+function firstWord (sentence){
+    return sentence[0].toUpperCase() + sentence.substring(1);
+    
+}
+function allWords (sentence){
+    let words = sentence.split(" ");
+    for (let index = 0; index < words.length; index++) {
+      words[index] = words[index][0].toUpperCase() + words[index].substring(1);
+    }
+    return words.join(" ");
+}
+function allLowerCase (sentence){
+    return sentence.toLowerCase();
+}
+function removeSpaces (sentence){
+    let words = sentence.split(" ");
+    words = words.join("");
+    return words;
+}
