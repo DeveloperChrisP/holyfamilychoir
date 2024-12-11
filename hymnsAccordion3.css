@@ -32,15 +32,22 @@ body{
     font-size: 1.125rem;
     line-height: 1.6;
     height:100svh;
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
 }
 
 .wrapper{
+    height: calc((((var(--_panel-padding)*2) + var(--_button-size) + (var(--_panel-gap)*2))*6) - (var(--_panel-gap)*2));
+    --_shadow-size: 0.1rem;
+    --_shadow-size-negative: -0.1rem;
     --_button-size: 3rem;
     --_panel-padding: 0.75rem;
     --_panel-gap: 1rem;
-    --_time:1s;
-
+    --_time:5s;
+    overflow: hidden;
     max-width: max-content;
+    
     margin-inline: auto;
     padding-inline: 1rem;
     display:flex;
@@ -48,8 +55,9 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    outline: red solid 2px;
-    min-height: 100%;
+    /* outline: red solid 2px; */
+    /* min-height: 100%; */
+    contain: content;
     /* max-height:30rem; */
 }
 /* #prepanel0_heading{
@@ -63,7 +71,7 @@ body{
     flex-direction: column;
     /* gap:var(--_panel-gap); */
     width: 100%;
-    contain: content;
+    /*  */
     /* transform: translateY(-5rem); */
 }
 .accordion.halfGap{
@@ -123,16 +131,7 @@ body{
  
 } */
 
-#panel1{
-    position: relative;
-    isolation: isolate;
-    flex-basis: calc((var(--_panel-padding)*2) + var(--_button-size));
-    overflow: hidden;
-    margin-top:0;
-    /* padding-right: calc(var(--_button-size) + var(--_panel-gap)); */
-    border-radius:calc(((var(--_panel-padding)*2) + var(--_button-size))/2); 
-   
-}
+
 
 .accordion_panel{
     width: 100%;
@@ -146,7 +145,7 @@ body{
     /* padding-right: calc(var(--_button-size) + var(--_panel-gap)); */
     border-radius:calc(((var(--_panel-padding)*2) + var(--_button-size))/2);
     transition: margin var(--_time), flex-basis var(--_time);
-
+    
 }
 .accordion_panel.plusGap{
     margin-top:var(--_panel-gap);
@@ -171,12 +170,60 @@ body{
     flex-basis:clamp(15rem, calc(100svh - ((var(--_panel-padding)*2) + var(--_button-size) + var(--_panel-gap))), calc(100svh - ((var(--_panel-padding)*2) + var(--_button-size) + var(--_panel-gap))));
     /* flex-basis:clamp(15rem, calc(100svh - ((var(--_panel-padding)*4) + (var(--_button-size)*2) + (var(--_panel-gap))*2)),100svh ); */
 }
-.accordion_panel.prepanel0 {
+
+#panel1{
+    position: relative;
+    isolation: isolate;
+    flex-basis: calc((var(--_panel-padding)*2) + var(--_button-size));
+    overflow: hidden;
+    margin-top:0;
+    /* padding-right: calc(var(--_button-size) + var(--_panel-gap)); */
+    border-radius:calc(((var(--_panel-padding)*2) + var(--_button-size))/2); 
+    filter: blur(0) grayscale(0%) opacity(1) drop-shadow(hsla(0, 2%, 45%, 1) var(--_shadow-size) var(--_shadow-size) 0.3rem) drop-shadow(hsla(0, 2%, 45%, 1) var(--_shadow-size-negative) var(--_shadow-size-negative) 0.3rem)drop-shadow(hsla(0, 2%, 45%, 1) var(--_shadow-size-negative) var(--_shadow-size) 0.3rem) drop-shadow(hsla(0, 2%, 45%, 1) var(--_shadow-size) var(--_shadow-size-negative) 0.3rem);
+
+}
+
+
+#prepanelTop , #prepanelBottom{
+    filter:blur(5px) grayscale(90%) opacity(0.3);
+    min-height: calc(var(--_button-size) + var(--_panel-padding)*2);
+}
+
+#prepanel0 , #prepanel3{
+    filter:blur(2px) grayscale(90%) opacity(0.5);
+    min-height: calc(var(--_button-size) + var(--_panel-padding)*2);
+}
+#prepanel1, #prepanel2 {
+    filter: blur(0) grayscale(60%) opacity(0.7);
+    min-height: calc(var(--_button-size) + var(--_panel-padding)*2);
+}
+/*Top 2 panels transition down*/
+#prepanel0.transformDown {
+    filter:blur(0) grayscale(60%) opacity(0.7);
+    transition: all var(--_time);
+}
+#prepanel1.transformDown {
+    filter: blur(0) grayscale(0%) opacity(1) drop-shadow(hsla(0, 2%, 45%, 1) var(--_shadow-size) var(--_shadow-size) 0.3rem) drop-shadow(hsla(0, 2%, 45%, 1) var(--_shadow-size-negative) var(--_shadow-size-negative) 0.3rem)drop-shadow(hsla(0, 2%, 45%, 1) var(--_shadow-size-negative) var(--_shadow-size) 0.3rem) drop-shadow(hsla(0, 2%, 45%, 1) var(--_shadow-size) var(--_shadow-size-negative) 0.3rem);
+
+    transition: all var(--_time);
+}
+#panel1.transformDown {/*Main panel transition down*/
+    filter: blur(0) grayscale(60%) opacity(0.7) drop-shadow(hsla(0, 2%, 45%, 1) 1px 1px 1px) drop-shadow(hsla(0, 2%, 45%, 1) -1px -1px 1px) drop-shadow(hsla(0, 2%, 45%, 1) -1px 1px 1px) drop-shadow(hsla(0, 2%, 45%, 1) 1px -1px 1px);
+    transition: all var(--_time);
+
+}
+/*Bottom 2 panels transition down*/
+
+#prepanel2.transformDown {
     filter:blur(2px) grayscale() opacity(0.5);
+    transition: all var(--_time);
 }
-.accordion_panel.prepanel1 {
-    filter: grayscale() opacity(0.7);
+#prepanel3.transformDown {
+    filter: grayscale(none) opacity(1);
+    transition: all var(--_time);
 }
+
+
 
 .visibility{
     /* visibility: hidden;
@@ -289,6 +336,11 @@ iframe{
     transition: opacity var(--_time) var(--_time), transform var(--_time) var(--_time);
 }
 
+.accordion_panel.transformDown {
+    transform: translateY(calc(var(--_button-size) + (var(--_panel-padding)*2) + (var(--_panel-gap)*2)));
+    transition: transform var();
+}
+
 /* .accordion_panel:focus-within{
     outline: 3px solid var(--_panel-color);
     outline-offset: 4px;
@@ -301,7 +353,7 @@ iframe{
     display: grid;
     align-items: center;
     /* outline:red solid */
-    text-shadow: black 0.1rem 0.1rem 0.3rem ;
+    text-shadow: black 0.3rem 0.3rem;
 }
 
 @media (orientation: portrait) {
@@ -319,7 +371,7 @@ iframe{
     }
     .wrapper{
         /* max-width: 330px; */
-        min-width: 100%;
+        /* min-width: 100%; */
         
     }
 }
@@ -336,6 +388,8 @@ iframe{
     filter: brightness(0.5);
     transition: filter var(--_time);
 }
+
+
 .accordion_icon{
     fill:var(--_panel-color);
     background: hsl(0 0 0 / 0.55 );
@@ -542,6 +596,8 @@ iframe{
     transform: scale(1, -1);
 }
 .hymnSelect{
+    position: absolute;
+    inset:0 0 auto 0;
     display: flex;
     margin-top:var(--_panel-gap);
     /* margin-top:1rem; */

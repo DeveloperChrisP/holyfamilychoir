@@ -52,7 +52,11 @@ document.querySelector(".hymnSelect").addEventListener("click", (e)=> {
         count = 0;
         }
     }
-hymnSelect();  
+scroll(e);   
+
+setTimeout(() => {hymnSelect()
+    
+}, 5000);
 })
 
 function hymnSelect (){ //populate titles based upon 'count' number//
@@ -347,3 +351,23 @@ function removeSpaces (sentence){
     words = words.join("");
     return words;
 }
+
+
+function scroll (e){
+    console.log(e.target);
+    console.log(e.target.classList.value);
+    console.log(e.target.parentElement.parentElement.querySelectorAll(".accordion_panel"));
+    const allPanels = e.target.parentElement.parentElement.querySelectorAll(".accordion_panel");
+
+    for (let index = 0; index < allPanels.length; index++) {
+        const element = allPanels[index];
+        element.classList.toggle("transformDown");
+    }
+    setTimeout(() => {for (let index = 0; index < allPanels.length; index++) {
+        const element = allPanels[index];
+        element.classList.toggle("transformDown");
+    }
+    }, 5000);
+
+}
+

@@ -10,10 +10,25 @@
 <body onload="hymnSelect()">
 
     <div class="wrapper">
+        <div class="accordion_panel accordion_open" id="prepanelTop">
+            <h2 class="panel_heading visible" id="prepanelTop_heading">
+                <button class="accordion_trigger">
+                    <span class="accordion_title" id="prepanelTop_title">Pre-panel Top</span>
+                    <svg class="accordion_icon">
+                        <use xlink:href="#trebleCleffIcon2"></use>
+                    </svg>
+                </button>
+            </h2>
         
+            <div class="accordion_content" id="prepanel0_content">
+                <img src="./images/Choir Background.jpg" alt="" class="accordion_image">
+            </div>
+        </div>
+
+
         <div class="accordion_panel accordion_open prepanel0" id="prepanel0">
             <h2 class="panel_heading visible" id="prepanel0_heading">
-                <button class="accordion_trigger" id="prepanel0_trigger">prepan0
+                <button class="accordion_trigger" id="prepanel0_trigger">
                     <span class="accordion_title" id="prepanel0_title">Pre-panel</span>
                     <svg class="accordion_icon">
                         <use xlink:href="#trebleCleffIcon2"></use>
@@ -28,7 +43,7 @@
 
         <div class="accordion_panel accordion_open prepanel1" id="prepanel1">
             <h2 class="panel_heading visible" id="prepanel1_heading">
-                <button class="accordion_trigger" id="prepanel1_trigger">prepan1
+                <button class="accordion_trigger" id="prepanel1_trigger">
                     <span class="accordion_title" id="prepanel1_title">Pre-panel</span>
                     <svg class="accordion_icon">
                         <use xlink:href="#trebleCleffIcon2"></use>
@@ -157,7 +172,7 @@
 
         <div class="accordion_panel accordion_open prepanel1" id="prepanel2">
             <h2 class="panel_heading visible" id="prepanel2_heading">
-                <button class="accordion_trigger" id="prepanel2_trigger">prepan 2
+                <button class="accordion_trigger" id="prepanel2_trigger">
                     <span class="accordion_title" id="prepanel2_title">Pre-panel2</span>
                     <svg class="accordion_icon">
                         <use xlink:href="#trebleCleffIcon2"></use>
@@ -171,7 +186,7 @@
         </div>
         <div class="accordion_panel accordion_open prepanel0" id="prepanel3">
             <h2 class="panel_heading visible" id="prepanel0_heading">
-                <button class="accordion_trigger" id="prepanel3_trigger">prepan3
+                <button class="accordion_trigger" id="prepanel3_trigger">
                     <span class="accordion_title" id="prepanel3_title">Pre-panel</span>
                     <svg class="accordion_icon">
                         <use xlink:href="#trebleCleffIcon2"></use>
@@ -184,12 +199,29 @@
             </div>
         </div>
 
+        <div class="accordion_panel accordion_open" id="prepanelBottom">
+            <h2 class="panel_heading visible">
+                <button class="accordion_trigger">
+                    <span class="accordion_title" id="prepanelBottom_title">Pre-panel Bottom</span>
+                    <svg class="accordion_icon">
+                        <use xlink:href="#trebleCleffIcon2"></use>
+                    </svg>
+                </button>
+            </h2>
+        
+            <div class="accordion_content" id="prepanel0_content">
+                <img src="./images/Choir Background.jpg" alt="" class="accordion_image">
+            </div>
+        </div>
         <div class="hymnSelect">
-            <button class="up">V</button>
+            <button class="up">V</button>   
             <button class="down">V</button>
             <div class="countVisual">0</div>
         </div>
+
     </div>
+
+
 
     <svg width="0" height="0" class="hidden">
         <symbol version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="headphones">
