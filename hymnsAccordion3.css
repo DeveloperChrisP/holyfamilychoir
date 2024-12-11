@@ -31,10 +31,11 @@ body{
     font-family: system-ui;
     font-size: 1.125rem;
     line-height: 1.6;
-    height:100svh;
+    min-height:100svh;
     display: grid;
     place-content: center;
     min-height: 100vh;
+    color: white;
 }
 
 .wrapper{
@@ -44,9 +45,11 @@ body{
     --_button-size: 3rem;
     --_panel-padding: 0.75rem;
     --_panel-gap: 1rem;
-    --_time:5s;
+    /* time needs to match with JS scrollSpeed */
+    --_time:600ms; 
     overflow: hidden;
-    max-width: max-content;
+    width: 100vw;
+    max-width: 700px;
     
     margin-inline: auto;
     padding-inline: 1rem;
@@ -54,7 +57,7 @@ body{
     gap:calc(var(--_panel-gap)*2);
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     /* outline: red solid 2px; */
     /* min-height: 100%; */
     contain: content;
@@ -183,6 +186,11 @@ body{
 
 }
 
+/* Difference panel filter effects for moving panels */
+#prepanelTopPlaceholder , #prepanelBottomPlaceholder {
+    filter:blur(7px) grayscale(100%) opacity(0.2);
+    min-height: calc(var(--_button-size) + var(--_panel-padding)*2); 
+}
 
 #prepanelTop , #prepanelBottom{
     filter:blur(5px) grayscale(90%) opacity(0.3);
@@ -190,40 +198,93 @@ body{
 }
 
 #prepanel0 , #prepanel3{
-    filter:blur(2px) grayscale(90%) opacity(0.5);
+    filter:blur(2px) grayscale(80%) opacity(0.5);
     min-height: calc(var(--_button-size) + var(--_panel-padding)*2);
 }
 #prepanel1, #prepanel2 {
     filter: blur(0) grayscale(60%) opacity(0.7);
     min-height: calc(var(--_button-size) + var(--_panel-padding)*2);
+    /* transition: filter calc(var(--_time)/2); */
+    }
+    #prepanel1.open, #prepanel2.open {
+        filter: blur(10px) grayscale(100%) opacity(0.3);
+        
+    }
+#prepanelTopPlaceholder.transformDown{
+    filter:blur(5px) grayscale(90%) opacity(0.3); 
+    
 }
-/*Top 2 panels transition down*/
+#prepanelTop.transformDown {
+    filter:blur(2px) grayscale(80%) opacity(0.5);
+    
+}
+/*Top 2 Main panels transition down*/
 #prepanel0.transformDown {
     filter:blur(0) grayscale(60%) opacity(0.7);
-    transition: all var(--_time);
+    
 }
 #prepanel1.transformDown {
     filter: blur(0) grayscale(0%) opacity(1) drop-shadow(hsla(0, 2%, 45%, 1) var(--_shadow-size) var(--_shadow-size) 0.3rem) drop-shadow(hsla(0, 2%, 45%, 1) var(--_shadow-size-negative) var(--_shadow-size-negative) 0.3rem)drop-shadow(hsla(0, 2%, 45%, 1) var(--_shadow-size-negative) var(--_shadow-size) 0.3rem) drop-shadow(hsla(0, 2%, 45%, 1) var(--_shadow-size) var(--_shadow-size-negative) 0.3rem);
 
-    transition: all var(--_time);
+    
 }
 #panel1.transformDown {/*Main panel transition down*/
-    filter: blur(0) grayscale(60%) opacity(0.7) drop-shadow(hsla(0, 2%, 45%, 1) 1px 1px 1px) drop-shadow(hsla(0, 2%, 45%, 1) -1px -1px 1px) drop-shadow(hsla(0, 2%, 45%, 1) -1px 1px 1px) drop-shadow(hsla(0, 2%, 45%, 1) 1px -1px 1px);
-    transition: all var(--_time);
+    filter: blur(0) grayscale(60%) opacity(0.7);
+  
 
 }
 /*Bottom 2 panels transition down*/
 
 #prepanel2.transformDown {
-    filter:blur(2px) grayscale() opacity(0.5);
-    transition: all var(--_time);
+    filter:blur(2px) grayscale(80%) opacity(0.5);
+   
 }
 #prepanel3.transformDown {
-    filter: grayscale(none) opacity(1);
-    transition: all var(--_time);
+    filter:blur(5px) grayscale(90%) opacity(0.3);;
+   
+}
+#prepanelBottom.transformDown {
+    filter:blur(7px) grayscale(100%) opacity(0.2);
+   
 }
 
+/* transform Up button */
 
+#prepanelTop.transformUp {
+    filter:blur(7px) grayscale(100%) opacity(0.2);
+  
+}
+/*Top 2 Main panels transition down*/
+#prepanel0.transformUp {
+    filter:blur(5px) grayscale(90%) opacity(0.3);
+    
+}
+#prepanel1.transformUp {
+    filter:blur(0) grayscale(80%) opacity(0.5);
+    
+}
+#panel1.transformUp {/*Main panel transition down*/
+    filter:blur(0) grayscale(60%) opacity(0.7);
+   
+}
+/*Bottom 2 panels transition up*/
+
+#prepanel2.transformUp {
+    filter: blur(0) grayscale(0%) opacity(1) drop-shadow(hsla(0, 2%, 45%, 1) var(--_shadow-size) var(--_shadow-size) 0.3rem) drop-shadow(hsla(0, 2%, 45%, 1) var(--_shadow-size-negative) var(--_shadow-size-negative) 0.3rem)drop-shadow(hsla(0, 2%, 45%, 1) var(--_shadow-size-negative) var(--_shadow-size) 0.3rem) drop-shadow(hsla(0, 2%, 45%, 1) var(--_shadow-size) var(--_shadow-size-negative) 0.3rem);
+    
+}
+#prepanel3.transformUp {
+    filter: blur(0) grayscale(60%) opacity(0.7);
+    
+}
+#prepanelBottom.transformUp {
+    filter:blur(2px) grayscale(80%) opacity(0.5);
+    
+}
+#prepanelBottomPlaceholder.transformUp{
+    filter:blur(5px) grayscale(90%) opacity(0.3);
+    
+}
 
 .visibility{
     /* visibility: hidden;
@@ -338,9 +399,16 @@ iframe{
 
 .accordion_panel.transformDown {
     transform: translateY(calc(var(--_button-size) + (var(--_panel-padding)*2) + (var(--_panel-gap)*2)));
-    transition: transform var();
+    transition: filter calc(var(--_time)/2), transform calc(var(--_time)/2);
+}
+.accordion_panel.transformUp {
+    transform: translateY(calc((var(--_button-size) + (var(--_panel-padding)*2) + (var(--_panel-gap)*2))*-1));
+    transition: filter calc(var(--_time)/2), transform calc(var(--_time)/2);
 }
 
+.transition{
+    transition: all var(--_time);
+}
 /* .accordion_panel:focus-within{
     outline: 3px solid var(--_panel-color);
     outline-offset: 4px;
@@ -364,7 +432,7 @@ iframe{
         left:calc((var(--_panel-gap) + var(--_button-size)) * -1);
         z-index: -1;
     
-        width: calc(100% + (var(--_panel-gap)*2) + (var(--_button-size)*2));
+        width: calc(100% + (var(--_panel-gap)*2) + (var(--_button-size)*1.5));
         height: var(--_button-size);
         background:hsl(0 0 0 / 0.55 );
         border-radius: 100vw;

@@ -10,6 +10,21 @@
 <body onload="hymnSelect()">
 
     <div class="wrapper">
+        <div class="accordion_panel accordion_open" id="prepanelTopPlaceholder">
+            <h2 class="panel_heading visible">
+                <button class="accordion_trigger">
+                    <span class="accordion_title" id="prepanelTopPlaceholder_title">Lorum Ipsom</span>
+                    <svg class="accordion_icon">
+                        <use xlink:href="#trebleCleffIcon2"></use>
+                    </svg>
+                </button>
+            </h2>
+        
+            <div class="accordion_content">
+                <img src="./images/Choir Background.jpg" alt="" class="accordion_image">
+            </div>
+        </div>
+
         <div class="accordion_panel accordion_open" id="prepanelTop">
             <h2 class="panel_heading visible" id="prepanelTop_heading">
                 <button class="accordion_trigger">
@@ -88,7 +103,7 @@
                         <button class="closePanel hidden"><span class="x">x</span></button>
                     </h2>
                 
-                    <div class="accordion_content " id="panel2_content" aria-labelledby="panel2_heading" aria-hidden="true" role="region">
+                    <div class="accordion_content" id="panel2_content" aria-labelledby="panel2_heading" aria-hidden="true" role="region">
                         <iframe  frameborder="1" src="" allow="fullscreen" loading="lazy" width="auto" height="auto"></iframe>
                         <img src="./images/acclamations.png" alt="" class="accordion_image">
                     </div>
@@ -213,10 +228,27 @@
                 <img src="./images/Choir Background.jpg" alt="" class="accordion_image">
             </div>
         </div>
+
+        <div class="accordion_panel accordion_open" id="prepanelBottomPlaceholder">
+            <h2 class="panel_heading visible">
+                <button class="accordion_trigger">
+                    <span class="accordion_title" id="prepanelBottomPlaceholder_title">Lorum Ipsom</span>
+                    <svg class="accordion_icon">
+                        <use xlink:href="#trebleCleffIcon2"></use>
+                    </svg>
+                </button>
+            </h2>
+        
+            <div class="accordion_content">
+                <img src="./images/Choir Background.jpg" alt="" class="accordion_image">
+            </div>
+        </div>
+
+
         <div class="hymnSelect">
             <button class="up">V</button>   
             <button class="down">V</button>
-            <div class="countVisual">0</div>
+            <!-- <div class="countVisual">0</div> -->
         </div>
 
     </div>

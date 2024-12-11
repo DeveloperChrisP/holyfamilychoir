@@ -1,6 +1,6 @@
 var accordion = document.querySelector("article.accordion");
 var count = "";
-
+var scrollSpeed = 300; //needs to match 1/2 of CSS Time
 // const preTitle1 = allHymns[count-1].title;
 // const preTitle2 = allHymns[count+1].title;
 // document.querySelector("#prepanel0_title").textContent = preTitle1;
@@ -56,7 +56,7 @@ scroll(e);
 
 setTimeout(() => {hymnSelect()
     
-}, 5000);
+}, scrollSpeed);
 })
 
 function hymnSelect (){ //populate titles based upon 'count' number//
@@ -65,20 +65,28 @@ const title = allHymns[count].title;
 document.querySelector("#panel1_title").textContent = title;
 var lastHymn = allHymns[allHymns.length-1].title; //Hark the herald
 var secondToLastHymn = allHymns[allHymns.length-2].title; //Here we bring you
-var pretitle2 = allHymns[1].title; //Here we bring you//
+var thirdToLastHymn = allHymns[allHymns.length-3].title; // Silent night
 
 //top 2 titles//
 if (count == 0){
     document.querySelector("#prepanel1_title").textContent = lastHymn;
-    document.querySelector("#prepanel0_title").textContent = secondToLastHymn
+    document.querySelector("#prepanel0_title").textContent = secondToLastHymn;
+    document.querySelector("#prepanelTop_title").textContent = thirdToLastHymn;
 }
 else {
     document.querySelector("#prepanel1_title").textContent = allHymns[count-1].title;
     if (count == 1){
         document.querySelector("#prepanel0_title").textContent = lastHymn;
+        document.querySelector("#prepanelTop_title").textContent = secondToLastHymn;
     }
     else {
         document.querySelector("#prepanel0_title").textContent = allHymns[count-2].title;
+        if (count == 2){
+            document.querySelector("#prepanelTop_title").textContent = lastHymn;
+        }
+        else{
+            document.querySelector("#prepanelTop_title").textContent = allHymns[count-3].title;
+        }
     }
 }
 
@@ -86,17 +94,24 @@ else {
 if (count == allHymns.length-1){
     document.querySelector("#prepanel2_title").textContent = allHymns[0].title;
     document.querySelector("#prepanel3_title").textContent = allHymns[1].title;
+    document.querySelector("#prepanelBottom_title").textContent = allHymns[2].title;
 }
 else {
     document.querySelector("#prepanel2_title").textContent = allHymns[count+1].title;
     if (count == allHymns.length-2){
         document.querySelector("#prepanel3_title").textContent = allHymns[0].title;
+        document.querySelector("#prepanelBottom_title").textContent = allHymns[1].title;
     }
     else {
         document.querySelector("#prepanel3_title").textContent = allHymns[count+2].title;
+        if (count == allHymns.length-3){
+            document.querySelector("#prepanelBottom_title").textContent = allHymns[0].title;
+        }else{
+            document.querySelector("#prepanelBottom_title").textContent = allHymns[count+3].title;
+        }
     }
 }
-document.querySelector(".countVisual").textContent = count; //debugging//
+// document.querySelector(".countVisual").textContent = count; //debugging//
 }
 
 
@@ -211,6 +226,9 @@ function toggleAccordion (panelToActivate){
 
 //choose panels to active based on Object info
     if (panelToActivate.id == "panel1" ) {
+        panelToActivate.parentElement.parentElement.querySelector("#prepanel1").classList.add("open","transition") //add blur filter to panels either side of panel1
+        panelToActivate.parentElement.parentElement.querySelector("#prepanel2").classList.add("open","transition")
+        
         panelToActivate.parentElement.parentElement.lastElementChild.classList.add("hidden"); //hide hymn selection buttons
         panelToActivate.classList.add("open"); // open 1st panel to add filter effect
         if (allHymns[count].sheetMusic.length == 0){
@@ -292,7 +310,9 @@ function closeAccordion (closeButton){
     const clickedPanel = closeButton.parentElement.parentElement.querySelector(".accordion_panel");
     if (closeButton.id == "firstX"){
         closeButton.parentElement.parentElement.parentElement.parentElement.lastElementChild.classList.remove("hidden");
-
+        
+        
+        
         for (let index = 0; index < panels.length; index++) {
             const element = closeButton.parentElement.parentElement.parentElement.querySelectorAll(".accordion_panel")[index];
             const element2 = panels[index];
@@ -304,8 +324,10 @@ function closeAccordion (closeButton){
             element.classList.remove("visibility");
             allButtons[index].classList.add("hidden");
         }
-       
-        
+        closeButton.parentElement.parentElement.parentElement.parentElement.querySelector("#prepanel1").classList.remove("open") //remove blur filter to panels either side of panel1
+        closeButton.parentElement.parentElement.parentElement.parentElement.querySelector("#prepanel2").classList.remove("open")   
+        closeButton.parentElement.parentElement.parentElement.parentElement.querySelector("#prepanel1").classList.remove("transition") //remove blur filter to panels either side of panel1
+        closeButton.parentElement.parentElement.parentElement.parentElement.querySelector("#prepanel2").classList.remove("transition")  
     }
     else {
         // console.log(clickedPanel);
@@ -358,7 +380,7 @@ function scroll (e){
     console.log(e.target.classList.value);
     console.log(e.target.parentElement.parentElement.querySelectorAll(".accordion_panel"));
     const allPanels = e.target.parentElement.parentElement.querySelectorAll(".accordion_panel");
-
+if (e.target.classList.value == "up"){
     for (let index = 0; index < allPanels.length; index++) {
         const element = allPanels[index];
         element.classList.toggle("transformDown");
@@ -367,7 +389,18 @@ function scroll (e){
         const element = allPanels[index];
         element.classList.toggle("transformDown");
     }
-    }, 5000);
-
+    }, scrollSpeed);
+}
+else {
+    for (let index = 0; index < allPanels.length; index++) {
+        const element = allPanels[index];
+        element.classList.toggle("transformUp");
+    }
+    setTimeout(() => {for (let index = 0; index < allPanels.length; index++) {
+        const element = allPanels[index];
+        element.classList.toggle("transformUp");
+    }
+    }, scrollSpeed);
+}
 }
 
