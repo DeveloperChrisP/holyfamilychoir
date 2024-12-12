@@ -46,7 +46,7 @@ body{
     --_panel-padding: 0.75rem;
     --_panel-gap: 1rem;
     /* time needs to match with JS scrollSpeed */
-    --_time:600ms; 
+    --_time:1000ms; 
     overflow: hidden;
     width: 100vw;
     max-width: 700px;
