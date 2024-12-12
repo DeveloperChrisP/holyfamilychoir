@@ -1,6 +1,6 @@
 var accordion = document.querySelector("article.accordion");
 var count = "";
-var scrollSpeed = 150; //needs to match 1/2 of CSS Time
+var scrollSpeed = 300; //needs to match 1/2 of CSS Time
 // const preTitle1 = allHymns[count-1].title;
 // const preTitle2 = allHymns[count+1].title;
 // document.querySelector("#prepanel0_title").textContent = preTitle1;
