@@ -1,6 +1,6 @@
 var accordion = document.querySelector("article.accordion");
 var count = "";
-var scrollSpeed = 300; //needs to match 1/2 of CSS Time
+var scrollSpeed = 150; //needs to match 1/2 of CSS Time
 // const preTitle1 = allHymns[count-1].title;
 // const preTitle2 = allHymns[count+1].title;
 // document.querySelector("#prepanel0_title").textContent = preTitle1;
@@ -55,7 +55,6 @@ document.querySelector(".hymnSelect").addEventListener("click", (e)=> {
 scroll(e);   
 
 setTimeout(() => {hymnSelect()
-    
 }, scrollSpeed);
 })
 
@@ -222,12 +221,11 @@ function toggleAccordion (panelToActivate){
     const panels = panelToActivate.parentElement.querySelectorAll(".accordion_panel");
     const panel1 = document.querySelector(".accordion_panel");
     const headings = panelToActivate.parentElement.querySelectorAll(".panel_heading");
-
+    const prepanels = panelToActivate.parentElement.parentElement.querySelectorAll(".prepanel");
 
 //choose panels to active based on Object info
     if (panelToActivate.id == "panel1" ) {
-        panelToActivate.parentElement.parentElement.querySelector("#prepanel1").classList.add("open","transition") //add blur filter to panels either side of panel1
-        panelToActivate.parentElement.parentElement.querySelector("#prepanel2").classList.add("open","transition")
+        
         
         panelToActivate.parentElement.parentElement.lastElementChild.classList.add("hidden"); //hide hymn selection buttons
         panelToActivate.classList.add("open"); // open 1st panel to add filter effect
@@ -248,6 +246,11 @@ function toggleAccordion (panelToActivate){
                 const element = populatedPanels[index].classList.add("accordion_open");
               }
 panelToActivate.querySelector("#firstX").classList.remove("hidden");//add 'x' to 1st panel
+//blur out background panels why accordion opens//
+for (let index = 0; index < prepanels.length; index++) {
+    const element = prepanels[index];
+    element.classList.add("backgroundpanels");
+}
 
 
 for (let index = 0; index < panels.length; index++) { //add margin-top to panels once open
@@ -308,11 +311,11 @@ function closeAccordion (closeButton){
     const panels = closeButton.parentElement.parentElement.parentElement.querySelectorAll(".accordion_panel");
     const headings = closeButton.parentElement.parentElement.parentElement.querySelectorAll(".panel_heading");
     const clickedPanel = closeButton.parentElement.parentElement.querySelector(".accordion_panel");
+    const prepanels = closeButton.parentElement.parentElement.parentElement.parentElement.querySelectorAll(".prepanel");
+    
     if (closeButton.id == "firstX"){
         closeButton.parentElement.parentElement.parentElement.parentElement.lastElementChild.classList.remove("hidden");
-        
-        
-        
+
         for (let index = 0; index < panels.length; index++) {
             const element = closeButton.parentElement.parentElement.parentElement.querySelectorAll(".accordion_panel")[index];
             const element2 = panels[index];
@@ -324,10 +327,13 @@ function closeAccordion (closeButton){
             element.classList.remove("visibility");
             allButtons[index].classList.add("hidden");
         }
-        closeButton.parentElement.parentElement.parentElement.parentElement.querySelector("#prepanel1").classList.remove("open") //remove blur filter to panels either side of panel1
-        closeButton.parentElement.parentElement.parentElement.parentElement.querySelector("#prepanel2").classList.remove("open")   
-        closeButton.parentElement.parentElement.parentElement.parentElement.querySelector("#prepanel1").classList.remove("transition") //remove blur filter to panels either side of panel1
-        closeButton.parentElement.parentElement.parentElement.parentElement.querySelector("#prepanel2").classList.remove("transition")  
+        for (let index = 0; index < prepanels.length; index++) {
+            const element = prepanels[index];
+            element.classList.add("transition");
+            element.classList.remove("backgroundpanels");
+            
+            }
+            
     }
     else {
         // console.log(clickedPanel);
@@ -376,29 +382,43 @@ function removeSpaces (sentence){
 
 
 function scroll (e){
+    const allPanels = e.target.parentElement.parentElement.querySelectorAll(".accordion_panel");
+    
+    //add transition time for scroll function
+    for (let index = 0; index < allPanels.length; index++) {
+        const element = allPanels[index];
+        element.classList.remove("transition")
+    }
+    // e.target.parentElement.parentElement.querySelectorAll(".accordion_open")[3].classList.add("transition"); //add blur filter to panels either side of panel1
+       
     console.log(e.target);
     console.log(e.target.classList.value);
     console.log(e.target.parentElement.parentElement.querySelectorAll(".accordion_panel"));
-    const allPanels = e.target.parentElement.parentElement.querySelectorAll(".accordion_panel");
-if (e.target.classList.value == "up"){
-    for (let index = 0; index < allPanels.length; index++) {
-        const element = allPanels[index];
-        element.classList.toggle("transformDown");
+    if (e.target.classList.value == "up"){
+        for (let index = 0; index < allPanels.length; index++) {
+            const element = allPanels[index];
+            element.classList.toggle("transformDown");
+        
     }
     setTimeout(() => {for (let index = 0; index < allPanels.length; index++) {
         const element = allPanels[index];
+        
         element.classList.toggle("transformDown");
+        // element.classList.remove("transition");
     }
     }, scrollSpeed);
-}
-else {
-    for (let index = 0; index < allPanels.length; index++) {
-        const element = allPanels[index];
-        element.classList.toggle("transformUp");
+    
     }
+    else {
+        for (let index = 0; index < allPanels.length; index++) {
+            const element = allPanels[index];
+            element.classList.toggle("transformUp");
+            // element.classList.remove("transition");
+        }
     setTimeout(() => {for (let index = 0; index < allPanels.length; index++) {
         const element = allPanels[index];
         element.classList.toggle("transformUp");
+        
     }
     }, scrollSpeed);
 }

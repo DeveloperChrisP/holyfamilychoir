@@ -46,7 +46,7 @@ body{
     --_panel-padding: 0.75rem;
     --_panel-gap: 1rem;
     /* time needs to match with JS scrollSpeed */
-    --_time:600ms; 
+    --_time:300ms; 
     overflow: hidden;
     width: 100vw;
     max-width: 700px;
@@ -68,8 +68,6 @@ body{
    
 } */
 .accordion{
-
-
     display: flex;
     flex-direction: column;
     /* gap:var(--_panel-gap); */
@@ -147,21 +145,22 @@ body{
     margin-top:0;
     /* padding-right: calc(var(--_button-size) + var(--_panel-gap)); */
     border-radius:calc(((var(--_panel-padding)*2) + var(--_button-size))/2);
-    transition: margin var(--_time), flex-basis var(--_time);
+    /* transition: margin var(--_time), flex-basis var(--_time); */
     
 }
 .accordion_panel.plusGap{
     margin-top:var(--_panel-gap);
-    transition: margin var(--_time), flex-basis var(--_time);
+    /* transition: margin var(--_time), flex-basis var(--_time); */
     margin-bottom:0;
    }
 
  @media (prefers-reduced-motion: no-preference){
     .accordion_panel {
-        transition: flex-basis var(--_time), flex-grow var(--_time) , margin-top var(--_time);
+        transition: flex-basis var(--_time), flex-grow var(--_time) , margin var(--_time);
     }
  }
 .accordion_open{
+    
     flex-basis: calc((var(--_panel-padding)*2) + var(--_button-size));
     /* padding: var(--_panel-padding); */
     /* padding-right: calc(var(--_button-size) + var(--_panel-gap)); */
@@ -172,6 +171,7 @@ body{
     /* To do: sheet music 100svh - then hide other tabs - shift upwards*/
     flex-basis:clamp(15rem, calc(100svh - ((var(--_panel-padding)*2) + var(--_button-size) + var(--_panel-gap))), calc(100svh - ((var(--_panel-padding)*2) + var(--_button-size) + var(--_panel-gap))));
     /* flex-basis:clamp(15rem, calc(100svh - ((var(--_panel-padding)*4) + (var(--_button-size)*2) + (var(--_panel-gap))*2)),100svh ); */
+    /* transition: all calc(var(--_time)/4); */
 }
 
 #panel1{
@@ -182,110 +182,124 @@ body{
     margin-top:0;
     /* padding-right: calc(var(--_button-size) + var(--_panel-gap)); */
     border-radius:calc(((var(--_panel-padding)*2) + var(--_button-size))/2); 
-    filter: blur(0) grayscale(0%) opacity(1) drop-shadow(hsla(0, 2%, 45%, 1) var(--_shadow-size) var(--_shadow-size) 0.3rem) drop-shadow(hsla(0, 2%, 45%, 1) var(--_shadow-size-negative) var(--_shadow-size-negative) 0.3rem)drop-shadow(hsla(0, 2%, 45%, 1) var(--_shadow-size-negative) var(--_shadow-size) 0.3rem) drop-shadow(hsla(0, 2%, 45%, 1) var(--_shadow-size) var(--_shadow-size-negative) 0.3rem);
-
+    
 }
 
 /* Difference panel filter effects for moving panels */
-#prepanelTopPlaceholder , #prepanelBottomPlaceholder {
+.prepanelTopPlaceholder , .prepanelBottomPlaceholder {
     filter:blur(7px) grayscale(100%) opacity(0.2);
     min-height: calc(var(--_button-size) + var(--_panel-padding)*2); 
 }
 
-#prepanelTop , #prepanelBottom{
+.prepanelTop , .prepanelBottom{
     filter:blur(5px) grayscale(90%) opacity(0.3);
     min-height: calc(var(--_button-size) + var(--_panel-padding)*2);
 }
 
-#prepanel0 , #prepanel3{
+.prepanel0 , .prepanel3{
     filter:blur(2px) grayscale(80%) opacity(0.5);
     min-height: calc(var(--_button-size) + var(--_panel-padding)*2);
 }
-#prepanel1, #prepanel2 {
+.prepanel1, .prepanel2 {
     filter: blur(0) grayscale(60%) opacity(0.7);
     min-height: calc(var(--_button-size) + var(--_panel-padding)*2);
     /* transition: filter calc(var(--_time)/2); */
-    }
-    #prepanel1.open, #prepanel2.open {
-        filter: blur(10px) grayscale(100%) opacity(0.3);
-        
-    }
-#prepanelTopPlaceholder.transformDown{
+}
+
+.panel1 {
+    filter: blur(0) grayscale(0%) opacity(1) drop-shadow(hsla(0, 2%, 45%, 1) var(--_shadow-size) var(--_shadow-size) 0.3rem) drop-shadow(hsla(0, 2%, 45%, 1) var(--_shadow-size-negative) var(--_shadow-size-negative) 0.3rem)drop-shadow(hsla(0, 2%, 45%, 1) var(--_shadow-size-negative) var(--_shadow-size) 0.3rem) drop-shadow(hsla(0, 2%, 45%, 1) var(--_shadow-size) var(--_shadow-size-negative) 0.3rem);
+
+}
+.prepanelTopPlaceholder.transformDown{
     filter:blur(5px) grayscale(90%) opacity(0.3); 
     
 }
-#prepanelTop.transformDown {
+.prepanelTop.transformDown {
     filter:blur(2px) grayscale(80%) opacity(0.5);
     
 }
 /*Top 2 Main panels transition down*/
-#prepanel0.transformDown {
+.prepanel0.transformDown {
     filter:blur(0) grayscale(60%) opacity(0.7);
     
 }
-#prepanel1.transformDown {
+.prepanel1.transformDown {
     filter: blur(0) grayscale(0%) opacity(1) drop-shadow(hsla(0, 2%, 45%, 1) var(--_shadow-size) var(--_shadow-size) 0.3rem) drop-shadow(hsla(0, 2%, 45%, 1) var(--_shadow-size-negative) var(--_shadow-size-negative) 0.3rem)drop-shadow(hsla(0, 2%, 45%, 1) var(--_shadow-size-negative) var(--_shadow-size) 0.3rem) drop-shadow(hsla(0, 2%, 45%, 1) var(--_shadow-size) var(--_shadow-size-negative) 0.3rem);
 
     
 }
-#panel1.transformDown {/*Main panel transition down*/
+.panel1.transformDown {/*Main panel transition down*/
     filter: blur(0) grayscale(60%) opacity(0.7);
   
 
 }
 /*Bottom 2 panels transition down*/
 
-#prepanel2.transformDown {
+.prepanel2.transformDown {
     filter:blur(2px) grayscale(80%) opacity(0.5);
    
 }
-#prepanel3.transformDown {
+.prepanel3.transformDown {
     filter:blur(5px) grayscale(90%) opacity(0.3);;
    
 }
-#prepanelBottom.transformDown {
+.prepanelBottom.transformDown {
     filter:blur(7px) grayscale(100%) opacity(0.2);
    
 }
 
 /* transform Up button */
 
-#prepanelTop.transformUp {
+.prepanelTop.transformUp {
     filter:blur(7px) grayscale(100%) opacity(0.2);
   
 }
 /*Top 2 Main panels transition down*/
-#prepanel0.transformUp {
+.prepanel0.transformUp {
     filter:blur(5px) grayscale(90%) opacity(0.3);
     
 }
-#prepanel1.transformUp {
+.prepanel1.transformUp {
     filter:blur(0) grayscale(80%) opacity(0.5);
     
 }
-#panel1.transformUp {/*Main panel transition down*/
+.panel1.transformUp {/*Main panel transition down*/
     filter:blur(0) grayscale(60%) opacity(0.7);
    
 }
 /*Bottom 2 panels transition up*/
 
-#prepanel2.transformUp {
+.prepanel2.transformUp {
     filter: blur(0) grayscale(0%) opacity(1) drop-shadow(hsla(0, 2%, 45%, 1) var(--_shadow-size) var(--_shadow-size) 0.3rem) drop-shadow(hsla(0, 2%, 45%, 1) var(--_shadow-size-negative) var(--_shadow-size-negative) 0.3rem)drop-shadow(hsla(0, 2%, 45%, 1) var(--_shadow-size-negative) var(--_shadow-size) 0.3rem) drop-shadow(hsla(0, 2%, 45%, 1) var(--_shadow-size) var(--_shadow-size-negative) 0.3rem);
     
 }
-#prepanel3.transformUp {
+.prepanel3.transformUp {
     filter: blur(0) grayscale(60%) opacity(0.7);
     
 }
-#prepanelBottom.transformUp {
+.prepanelBottom.transformUp {
     filter:blur(2px) grayscale(80%) opacity(0.5);
     
 }
-#prepanelBottomPlaceholder.transformUp{
+.prepanelBottomPlaceholder.transformUp{
     filter:blur(5px) grayscale(90%) opacity(0.3);
     
 }
 
+.transition {
+    transition: filter var(--_time);
+}
+.backgroundpanels{
+    filter: blur(10px) grayscale(80%) opacity(0.5);
+    transition: filter var(--_time);
+}
+
+.transformDown{
+    transition: all calc((var(--_time))/2);
+}
+.transformUp{
+    transition: all calc((var(--_time))/2);
+}
 .visibility{
     /* visibility: hidden;
     opacity: 0;
@@ -399,16 +413,16 @@ iframe{
 
 .accordion_panel.transformDown {
     transform: translateY(calc(var(--_button-size) + (var(--_panel-padding)*2) + (var(--_panel-gap)*2)));
-    transition: filter calc(var(--_time)/2), transform calc(var(--_time)/2);
+    /* transition: filter calc(var(--_time)/2), transform calc(var(--_time)/2); */
 }
 .accordion_panel.transformUp {
     transform: translateY(calc((var(--_button-size) + (var(--_panel-padding)*2) + (var(--_panel-gap)*2))*-1));
-    transition: filter calc(var(--_time)/2), transform calc(var(--_time)/2);
+    /* transition: filter calc(var(--_time)/2), transform calc(var(--_time)/2); */
 }
 
-.transition{
-    transition: all var(--_time);
-}
+/* .transition{
+    transition: all calc(var(--_time)/2);
+} */
 /* .accordion_panel:focus-within{
     outline: 3px solid var(--_panel-color);
     outline-offset: 4px;
