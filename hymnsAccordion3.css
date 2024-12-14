@@ -36,17 +36,19 @@ body{
     place-content: center;
     min-height: 100vh;
     color: white;
+    
 }
 
 .wrapper{
     height: calc((((var(--_panel-padding)*2) + var(--_button-size) + (var(--_panel-gap)*2))*6) - (var(--_panel-gap)*2));
+    height: 100svh;
     --_shadow-size: 0.1rem;
     --_shadow-size-negative: -0.1rem;
     --_button-size: 3rem;
     --_panel-padding: 0.75rem;
     --_panel-gap: 1rem;
     /* time needs to match with JS scrollSpeed */
-    --_time:1000ms; 
+    --_time:700ms; 
     overflow: hidden;
     width: 100vw;
     max-width: 700px;
@@ -62,6 +64,7 @@ body{
     /* min-height: 100%; */
     contain: content;
     /* max-height:30rem; */
+    
 }
 /* #prepanel0_heading{
     opacity: 1; transform:none;
@@ -74,6 +77,7 @@ body{
     width: 100%;
     /*  */
     /* transform: translateY(-5rem); */
+    
 }
 .accordion.halfGap{
     gap:calc(var(--_panel-gap)/2)
@@ -165,11 +169,12 @@ body{
     /* padding: var(--_panel-padding); */
     /* padding-right: calc(var(--_button-size) + var(--_panel-gap)); */
 }
+/* .prepanel{display:none;} */
 .accordion_panel.open{
     
     flex-grow: 1;
     /* To do: sheet music 100svh - then hide other tabs - shift upwards*/
-    flex-basis:clamp(15rem, calc(100svh - ((var(--_panel-padding)*2) + var(--_button-size) + var(--_panel-gap))), calc(100svh - ((var(--_panel-padding)*2) + var(--_button-size) + var(--_panel-gap))));
+    flex-basis:clamp(15rem, calc(100svh - ((var(--_panel-padding)*2) + var(--_button-size) + var(--_panel-gap)) - 1.3rem), calc(100svh - ((var(--_panel-padding)*2) + var(--_button-size) + var(--_panel-gap))));
     /* flex-basis:clamp(15rem, calc(100svh - ((var(--_panel-padding)*4) + (var(--_button-size)*2) + (var(--_panel-gap))*2)),100svh ); */
     /* transition: all calc(var(--_time)/4); */
 }
@@ -538,7 +543,8 @@ iframe{
     overflow: hidden;
     color:white;
     border-radius: 0.5rem;
-    margin-top: var(--_panel-gap);
+    margin: var(--_panel-gap);
+    
 }
 
 .mediaPlayer__title {

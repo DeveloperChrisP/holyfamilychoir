@@ -1,52 +1,52 @@
 var accordion = document.querySelector("article.accordion");
-var count = "";
-var scrollSpeed = 500; //needs to match 1/2 of CSS Time
-// const preTitle1 = allHymns[count-1].title;
-// const preTitle2 = allHymns[count+1].title;
-// document.querySelector("#prepanel0_title").textContent = preTitle1;
-// document.querySelector("#prepanel1_title").textContent = preTitle2;
+var wrapper = document.querySelector(".wrapper");
+var count;
+var scrollSpeed = 350; //needs to match 1/2 of CSS Time
 
-
+const allHymns = [];
 function Hymn(title,sheetMusic,vocalPart,video){
     this.title = title;
     this.sheetMusic = sheetMusic;
     this.vocalPart = vocalPart;
     this.video = video;
     count++;
+    allHymns.push(this);
 }
- const allHymns = [];
+ 
 
- allHymns.push(new Hymn 
+new Hymn 
     ("Silent Night",
         "./sheetMusic/SilentNight.pdf",
         ["satb", "melody","alto","tenor","bass","piano"],
         "https://www.youtube-nocookie.com/embed/POcDlbYiF9c?si=cBj0zCzSgsO6fK7T"
-    ));
-allHymns.push(new Hymn 
-    ("Here We Bring You",
+    );
+new Hymn ("Here We Bring You",
         "dfdsfd",
         [],
         "https://www.youtube-nocookie.com/embed/POcDlbYiF9c?si=cBj0zCzSgsO6fK7T"
-    ));
-allHymns.push (new Hymn 
-    ("Hark the Herald",
+    );
+new Hymn ("Hark the Herald",
         "",
         ["melody","alto","bass","piano"],
         "dsfsdf"
-    ));
+    );
+
+
 count = 0;
 
 
 //up & down buttons
-document.querySelector(".hymnSelect").addEventListener("click", (e)=> {
+document.querySelector(".wrapper").addEventListener("click", (e)=> {
       
-    if (e.target.classList == "up"){
+    if (e.target.classList.contains("up") || e.target.closest(".accordion_panel").classList.contains("prepanel1")){
+        
         count--;
         if (count == -1){
             count = allHymns.length-1;
         }
     }
-    else{
+    else if (e.target.classList.contains("down") || e.target.closest(".accordion_panel").classList.contains("prepanel2")){
+        
         count++;
         if (count == allHymns.length){
         count = 0;
@@ -89,7 +89,7 @@ else {
     }
 }
 
-//bottom 2 tittles//
+//bottom 3 tittles//
 if (count == allHymns.length-1){
     document.querySelector("#prepanel2_title").textContent = allHymns[0].title;
     document.querySelector("#prepanel3_title").textContent = allHymns[1].title;
@@ -115,7 +115,7 @@ else {
 
 
 
-accordion.addEventListener("click", (e)=> {
+wrapper.addEventListener("click", (e)=> {
 
     const activePanel = e.target.closest(".accordion_panel");
     const specificClick = e.target.closest(".closePanel");
@@ -128,8 +128,11 @@ if (specificClick) {
 else if (audioButton){
     const allLights = audioButton.parentElement.parentElement.querySelectorAll(".audioCategory__light");
     const accordionContent = audioButton.parentElement.parentElement.parentElement;
-    console.log(audioButton);
-    const partTitle = audioButton.innerHTML;
+    
+    let partTitle = audioButton.innerHTML;
+    if (partTitle == "Satb"){
+        partTitle = partTitle.toUpperCase();
+    }
     const audioDescription = title + " - " + partTitle;   
     const filename = "./audio/" + title.replace(/ /g, "") + "-" + partTitle + ".mp3";
     
@@ -144,7 +147,7 @@ else if (audioButton){
     }
     switch (audioButton.innerHTML) {
         case capitalize(allHymns[count].vocalPart[0]):
-            console.log(audioButton.innerHTML)
+            
             /* Add selection light to SATB button */
             audioButton.parentElement.querySelector(".satb").classList.add("selected");
             /* Add selection light to Media Player button */
@@ -246,7 +249,7 @@ function toggleAccordion (panelToActivate){
                 const element = populatedPanels[index].classList.add("accordion_open");
               }
 panelToActivate.querySelector("#firstX").classList.remove("hidden");//add 'x' to 1st panel
-//blur out background panels why accordion opens//
+//blur out background panels when accordion opens//
 for (let index = 0; index < prepanels.length; index++) {
     const element = prepanels[index];
     element.classList.add("backgroundpanels");
@@ -269,6 +272,14 @@ for (let index = 0; index < panels.length; index++) { //add margin-top to panels
                 break;
             case "panel3":
                 const allListItems = panelToActivate.lastElementChild.firstElementChild.querySelectorAll("li");
+               
+                
+                for (let index = 0; index < allListItems.length; index++) { //remove any lingering audio parts
+                    const element = allListItems[index];
+                    element.classList.remove("visible");
+                    }
+                
+                
                 for (let index = 0; index < allHymns[count].vocalPart.length; index++) { //populate audio parts
                     const element = allListItems[index];
                     element.classList.add("visible");
@@ -283,11 +294,11 @@ for (let index = 0; index < panels.length; index++) { //add margin-top to panels
             default:
                 break;
         }
-
-
+        
+        if (!panelToActivate.classList.contains("panel")){return;}; //return if main panel not clicked
         panelToActivate.classList.add("open");//open panel
         panelToActivate.querySelector(".closePanel").classList.remove("hidden");//add "x" to panel
-
+        
         //hide all panels except selected + panel1
     for (let index = 1; index < panels.length; index++) {
         const element = panelToActivate.parentElement.querySelectorAll(".accordion_panel")[index];
@@ -336,7 +347,7 @@ function closeAccordion (closeButton){
             
     }
     else {
-        // console.log(clickedPanel);
+        
         // clickedPanel.classList.add("hidden");
         closeButton.parentElement.parentElement.classList.remove("open");
         closeButton.classList.add("hidden");
@@ -391,10 +402,8 @@ function scroll (e){
     }
     // e.target.parentElement.parentElement.querySelectorAll(".accordion_open")[3].classList.add("transition"); //add blur filter to panels either side of panel1
        
-    console.log(e.target);
-    console.log(e.target.classList.value);
-    console.log(e.target.parentElement.parentElement.querySelectorAll(".accordion_panel"));
-    if (e.target.classList.value == "up"){
+    
+    if (e.target.classList.contains("up")||e.target.closest(".accordion_panel").classList.contains("prepanel1")){
         for (let index = 0; index < allPanels.length; index++) {
             const element = allPanels[index];
             element.classList.toggle("transformDown");
@@ -409,7 +418,7 @@ function scroll (e){
     }, scrollSpeed);
     
     }
-    else {
+    else if (e.target.classList.contains("down")||e.target.closest(".accordion_panel").classList.contains("prepanel2")) {
         for (let index = 0; index < allPanels.length; index++) {
             const element = allPanels[index];
             element.classList.toggle("transformUp");
