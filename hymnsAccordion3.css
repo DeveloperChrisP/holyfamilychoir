@@ -47,6 +47,7 @@ body{
     --_button-size: 3rem;
     --_panel-padding: 0.75rem;
     --_panel-gap: 1rem;
+    --_buttonColor: hsla(0, 2%, 45%, 1);
     /* time needs to match with JS scrollSpeed */
     --_time:700ms; 
     overflow: hidden;
@@ -174,7 +175,7 @@ body{
     
     flex-grow: 1;
     /* To do: sheet music 100svh - then hide other tabs - shift upwards*/
-    flex-basis:clamp(15rem, calc(100svh - ((var(--_panel-padding)*2) + var(--_button-size) + var(--_panel-gap)) - 1.3rem), calc(100svh - ((var(--_panel-padding)*2) + var(--_button-size) + var(--_panel-gap))));
+    flex-basis:clamp(15rem, calc(100svh - ((var(--_panel-padding)*2) + var(--_button-size) + var(--_panel-gap)) - 1.3rem), calc(100svh - ((var(--_panel-padding)*2) + var(--_button-size) + var(--_panel-gap)) - 1.3rem));
     /* flex-basis:clamp(15rem, calc(100svh - ((var(--_panel-padding)*4) + (var(--_button-size)*2) + (var(--_panel-gap))*2)),100svh ); */
     /* transition: all calc(var(--_time)/4); */
 }
@@ -673,8 +674,11 @@ iframe{
     box-shadow: 0.2rem 0.2rem 0.3rem hsl(180, 100%, 90%), -0.2rem -0.2rem 0.3rem hsl(180, 100%, 90%),0.2rem -0.2rem 0.3rem hsl(180, 100%, 90%),-0.2rem 0.2rem 0.3rem hsl(180, 100%, 90%);}
 
 .up, .down{
-    width: 2rem;
+    width: 5rem;
     aspect-ratio: 1;
+    background-color: black;
+    box-shadow: var(--_buttonColor) 1rem 1rem 1rem, var(--_buttonColor) -1rem 1rem 1rem, var(--_buttonColor) -1rem -1rem 1rem, var(--_buttonColor) 1rem -1rem 1rem;
+    border-radius: 10px;
 }
 .up{
     -moz-transform: scale(1, -1);
@@ -684,10 +688,12 @@ iframe{
     transform: scale(1, -1);
 }
 .hymnSelect{
+    display:flex;
+    justify-content: space-between;
     position: absolute;
-    inset:0 0 auto 0;
+    inset:0 2rem auto 2rem;
     display: flex;
-    margin-top:var(--_panel-gap);
+    margin-top:1.5rem;
     /* margin-top:1rem; */
     opacity: 1;
     visibility: visible;

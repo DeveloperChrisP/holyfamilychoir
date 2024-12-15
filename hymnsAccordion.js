@@ -14,39 +14,62 @@ function Hymn(title,sheetMusic,vocalPart,video){
 }
  
 
-new Hymn 
-    ("Silent Night",
-        "./sheetMusic/SilentNight.pdf",
-        ["satb", "melody","alto","tenor","bass","piano"],
-        "https://www.youtube-nocookie.com/embed/POcDlbYiF9c?si=cBj0zCzSgsO6fK7T"
-    );
-new Hymn ("Here We Bring You",
-        "dfdsfd",
-        [],
-        "https://www.youtube-nocookie.com/embed/POcDlbYiF9c?si=cBj0zCzSgsO6fK7T"
-    );
-new Hymn ("Hark the Herald",
+new Hymn ("Long ago prophets knew",
         "",
-        ["melody","alto","bass","piano"],
-        "dsfsdf"
+        [],
+        "https://www.youtube.com/embed/OeLA1LhqFA4?si=Y_jd5YhNoRzLi9ae"
     );
+new Hymn ("The Angel Gabriel",
+        "",
+        [],
+        "https://www.youtube.com/embed/pliqObTHxUQ?si=n-iBUx5I6ggQvds1"
+    );
+new Hymn ("In the Breaking of the Bread",
+    "",
+    "",
+    "https://www.youtube.com/embed/0H8CPadsVco?si=TEfbe6JW7aAJ_ZVA"
+);
+new Hymn ("O Mary Conceived In The Grace Of Your Son",
+    "",
+    ["Piano"],
+    ""
+);
+new Hymn ("Unto us is born a son",
+    "",
+    "",
+    "https://www.youtube.com/embed/4_4xMMpcqbM?si=RhsMJeDjUpuP2bYO"
+);
+new Hymn ("Hark the Herald Angels Sing",
+    "",
+    "",
+    "https://www.youtube.com/embed/9Bwn0k0k8xI?si=vilS4HDunUKoLrlC"
+);
+new Hymn ("Silent Night",
+    "./sheetMusic/SilentNight.pdf",
+    ["satb", "melody","alto","tenor","bass","piano"],
+    "https://www.youtube-nocookie.com/embed/POcDlbYiF9c?si=cBj0zCzSgsO6fK7T"
+);
 
+new Hymn ("O Come all ye faithful",
+    "",
+    "",
+    "https://www.youtube.com/embed/8ZYZEr3JtZY?si=ZRXVkFmw8cKqnLO1"
+);
 
 count = 0;
 
 
 //up & down buttons
-document.querySelector(".wrapper").addEventListener("click", (e)=> {
+document.querySelector(".hymnSelect").addEventListener("click", (e)=> {
       
-    if (e.target.classList.contains("up") || e.target.closest(".accordion_panel").classList.contains("prepanel1")){
+    if (e.target.classList == "up" ){
         
         count--;
         if (count == -1){
             count = allHymns.length-1;
         }
     }
-    else if (e.target.classList.contains("down") || e.target.closest(".accordion_panel").classList.contains("prepanel2")){
-        
+    else {
         count++;
         if (count == allHymns.length){
         count = 0;
@@ -115,7 +138,7 @@ else {
 
 
 
-wrapper.addEventListener("click", (e)=> {
+accordion.addEventListener("click", (e)=> {
 
     const activePanel = e.target.closest(".accordion_panel");
     const specificClick = e.target.closest(".closePanel");
@@ -134,7 +157,7 @@ else if (audioButton){
         partTitle = partTitle.toUpperCase();
     }
     const audioDescription = title + " - " + partTitle;   
-    const filename = "./audio/" + title.replace(/ /g, "") + "-" + partTitle + ".mp3";
+    const filename = "./audio/" + title + "/" + title/*.replace(/ /g, "")*/ + " - " + partTitle + ".mp3";
     
 
     document.querySelector("#mediaPlayer__light").removeAttribute("class");
@@ -403,7 +426,7 @@ function scroll (e){
     // e.target.parentElement.parentElement.querySelectorAll(".accordion_open")[3].classList.add("transition"); //add blur filter to panels either side of panel1
        
     
-    if (e.target.classList.contains("up")||e.target.closest(".accordion_panel").classList.contains("prepanel1")){
+    if (e.target.classList == "up"){
         for (let index = 0; index < allPanels.length; index++) {
             const element = allPanels[index];
             element.classList.toggle("transformDown");
@@ -418,7 +441,7 @@ function scroll (e){
     }, scrollSpeed);
     
     }
-    else if (e.target.classList.contains("down")||e.target.closest(".accordion_panel").classList.contains("prepanel2")) {
+    else  {
         for (let index = 0; index < allPanels.length; index++) {
             const element = allPanels[index];
             element.classList.toggle("transformUp");
