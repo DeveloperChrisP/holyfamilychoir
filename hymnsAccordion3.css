@@ -51,7 +51,7 @@ body{
     /* time needs to match with JS scrollSpeed */
     --_time:700ms; 
     overflow: hidden;
-    width: 100vw;
+    width: 100%;
     max-width: 700px;
     
     margin-inline: auto;
@@ -82,6 +82,7 @@ body{
 }
 .accordion.halfGap{
     gap:calc(var(--_panel-gap)/2)
+    
 }
 
 .accordion_trigger{
@@ -93,6 +94,7 @@ body{
     flex-direction: row-reverse;
     
     outline:0;
+    
 }
 
 /* @media (orientation: landscape) {
@@ -140,8 +142,8 @@ body{
 
 
 .accordion_panel{
-    width: 100%;
-    min-width:max-content;
+    /* width: 100%; */
+    /* min-width:1rem; */
     position: relative;
     isolation: isolate;
     flex-basis:0;
@@ -152,6 +154,8 @@ body{
     border-radius:calc(((var(--_panel-padding)*2) + var(--_button-size))/2);
     /* transition: margin var(--_time), flex-basis var(--_time); */
     
+    width: 100%;
+    padding-right: calc(var(--_button-size));
 }
 .accordion_panel.plusGap{
     margin-top:var(--_panel-gap);
