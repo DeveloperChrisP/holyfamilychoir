@@ -32,7 +32,7 @@ body{
     font-size: 1.125rem;
     line-height: 1.6;
     min-height:100svh;
-    display: grid;
+    /* display: grid; */
     place-content: center;
     min-height: 100vh;
     color: white;
@@ -61,7 +61,7 @@ body{
     flex-direction: column;
     justify-content: center;
     /* align-items: center; */
-    /* outline: red solid 2px; */
+    outline: red solid 2px;
     /* min-height: 100%; */
     contain: content;
     /* max-height:30rem; */
@@ -155,7 +155,7 @@ body{
     /* transition: margin var(--_time), flex-basis var(--_time); */
     
     width: 100%;
-    padding-right: calc(var(--_button-size));
+    /* padding-right: calc(var(--_button-size)); */
 }
 .accordion_panel.plusGap{
     margin-top:var(--_panel-gap);
@@ -391,7 +391,7 @@ body{
     /* margin-left: calc(var(--_button-size) + var(--_panel-gap)); */
 }
 
-iframe{
+.accordion_content iframe{
     width: calc(95% - (var(--_button-size) + var(--_panel-gap)));
     width: calc(95% - (2rem));
     width:calc(100% - 2rem);
@@ -420,7 +420,9 @@ iframe{
     opacity: 1;
     transition: opacity var(--_time) var(--_time), transform var(--_time) var(--_time);
 }
+.accordion_content{
 
+}
 .accordion_panel.transformDown {
     transform: translateY(calc(var(--_button-size) + (var(--_panel-padding)*2) + (var(--_panel-gap)*2)));
     /* transition: filter calc(var(--_time)/2), transform calc(var(--_time)/2); */
@@ -446,6 +448,7 @@ iframe{
     align-items: center;
     /* outline:red solid */
     text-shadow: black 0.3rem 0.3rem;
+   
 }
 
 @media (orientation: portrait) {
@@ -586,10 +589,24 @@ iframe{
     justify-content: space-between;
 }
 .mediaPlayer__Queue {
-    display:none;
+    /* display:none; */
     text-decoration-line: line-through;
     margin-top:var(--_panel-padding)
 }
+.playQueuedVideos{
+    position:absolute;
+    height: 100%;
+    width: 100%;
+    background-color: blue;
+    left:0;
+    
+}
+.playQueuedVideos iframe{
+    height:100%;
+    width: 100%;
+    /* margin: var(--_panel-padding); */
+}
+
 .accordion_panel#panel3{
     /* padding-right: var(--_panel-padding); */
     
@@ -726,4 +743,58 @@ iframe{
     height:2rem;
     text-align: center;
     font-weight: 900;
+}
+.accordion_title.oversized{
+    font-size:1rem;
+}
+
+.litergyPlan{
+    height:100%;
+    width: 100%;
+    padding: calc(var(--_panel-padding)*2);
+    background: linear-gradient(rgb(208, 208, 11), orange);
+    z-index: 1;
+    position: fixed;
+    left:0;
+    left:100%;
+    border-radius: 10%;
+    display:flex;
+    flex-direction: column;
+    display:none;
+}
+.litergyPlan h1{
+    text-align: center;
+    color: black;
+    text-decoration: underline;
+    text-decoration-style: double;
+}
+.litergyPlan hr{
+    width: calc(100% + (var(--_panel-padding)*2));
+    margin-left:calc((var(--_panel-padding)*1)*-1);
+}
+.litergyPlan ul{
+    list-style: none;
+}
+.litergyPlan ul button{
+    text-decoration: underline;
+}
+.litergyPlan span{
+    font-weight: 400;
+    font-style: italic;
+}
+.litergyPlan ol{
+    margin-left:2rem;
+    color: black;
+    font-weight: 300;
+}
+.litergyPlan h4{
+    font-weight: 400;
+}
+.litergyPlan button{
+    border-style: none;
+    color:black;
+}
+
+.playQueuedVideos{
+    display: none;
 }

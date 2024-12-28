@@ -10,6 +10,35 @@
 <body onload="hymnSelect()">
 
     <div class="wrapper">
+        <div class="litergyPlan hidden">
+            <h1>Litergy Plan</h1>
+            <h2><button>All Hymns</button></h2>
+            <hr/>
+            <h3>
+                <ul>
+                    <li><button>Date <span>- Occasion</span></button>
+                    <ol>
+                        <li><h4>Title 1</h4></li>
+                        <li><h4>Title 2</h4></li>
+                        <li><h4>Title 3</h4></li>
+                        <li><h4>Title 4</h4></li>
+                    </ol>
+                    
+                    </li>
+
+                    <li><button>Date <span>- Occasion</span></button>
+                    
+                        <ol>
+                            <li><h4>Title 1</h4></li>
+                            <li><h4>Title 2</h4></li>
+                            <li><h4>Title 3</h4></li>
+                            <li><h4>Title 4</h4></li>
+                        </ol>
+                    </li>
+                </ul>
+            </h3>
+            <h5 id="test"></h5>
+        </div>
         <div class="accordion_panel accordion_open prepanel prepanelTopPlaceholder" id="prepanelTopPlaceholder">
             <h2 class="panel_heading visible">
                 <button class="accordion_trigger">
@@ -250,7 +279,10 @@
             <button class="down">V</button>
             <!-- <div class="countVisual">0</div> -->
         </div>
-
+        <div class="playQueuedVideos">
+            <iframe  frameborder="1" src="" allow="fullscreen" loading="lazy" width="auto" height="auto" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="no-referrer-when-downgrade" ></iframe>
+                        
+        </div>    
     </div>
 
 
@@ -298,6 +330,7 @@
     </svg>
 <script src="./hymnsAccordion.js"></script>
 
+<script src="./litergyPlans.js"></script>
 
 </body>
 </html>

@@ -4,6 +4,7 @@ var count;
 var scrollSpeed = 350; //needs to match 1/2 of CSS Time
 
 const allHymns = [];
+const queuedVideos = [];
 function Hymn(title,sheetMusic,vocalPart,video){
     this.title = title;
     this.sheetMusic = sheetMusic;
@@ -11,8 +12,10 @@ function Hymn(title,sheetMusic,vocalPart,video){
     this.video = video;
     count++;
     allHymns.push(this);
+   
 }
- 
+
+
 
 new Hymn ("Long ago prophets knew",
         "",
@@ -55,8 +58,93 @@ new Hymn ("O Come all ye faithful",
     "",
     "https://www.youtube.com/embed/8ZYZEr3JtZY?si=ZRXVkFmw8cKqnLO1"
 );
+new Hymn ("What child is this",
+    "",
+    "",
+    "https://www.youtube.com/embed/6jroBAl3WW8?si=kZEj9G4qmknU1RlB"
+)
+new Hymn ("In the bleak mid-winter",
+    "",
+    "",
+    "https://www.youtube.com/embed/cBCYZ9jIJkI?si=7IfiGM2MqBrA1q6t"
+)
+new Hymn ("Bread of life",
+    "",
+    "",
+    "https://www.youtube.com/embed/iYKxMAn3Kfo?si=Fei0At7L0HqudqQ3"
+)
+new Hymn ("Sing of Mary",
+    "",
+    "",
+    "https://www.youtube.com/embed/Ap6Hym_ERQM?si=dN6iC0-7Wsk2DXnz"
+)
+new Hymn ("Bethlehem of noblest cities",
+    "",
+    "",
+    "https://www.youtube.com/embed/rlbmmn9uOLg?si=H0LS3ygSKcTXnlA6"
+)
+new Hymn ("As with gladness men of old",
+    "",
+    "",
+    "https://www.youtube.com/embed/y-TplMYH0Ko?si=abx_LTDZfoet_c44"
+)
+new Hymn ("We three kings",
+    "",
+    "",
+    "https://www.youtube.com/embed/Lx35_DRIZ8g?si=bCTGGMdpULJm0UDc"
+)
+new Hymn ("As I kneel before you",
+    "",
+    "",
+    "https://www.youtube.com/embed/BYv6E9xnJ1U?si=W5qvVIl1dVdmlVEA"
+)
+new Hymn ("I heard the voice of Jesus say",
+    "",
+    "",
+    "https://www.youtube.com/embed/Kh4XxlWZhMs?si=xmfUNd4cYzk_fRjQ"
+)
+new Hymn ("Water of life",
+    "",
+    "",
+    "https://www.youtube.com/embed/p153CSsGRxs?si=_yModMrXNcTu4vYm"
+)
+new Hymn ("O let all who thirst",
+    "",
+    "",
+    "https://www.youtube.com/embed/MwG6PCWnih0?si=qltwXx5awggq5kJp"
+)
+new Hymn ("Hail Queen of heaven",
+    "",
+    "",
+    "https://www.youtube.com/embed/xfkPTmry3zI?si=SkUYW9G4hlpippRf"
+)
+
+allLitergies = [];
+function Litergy (date,occasion,titles){
+    this.date = date;
+    this.occasion = occasion;
+    this.titles = titles;
+    allLitergies.push(this);
+}   
+
+
+new Litergy ("15th December", "3rd Sunday Advent", "Silent Night");
 
 count = 0;
+const answer = [{title:"sdlkfj"}, {title:"ssdfkfj"},{title:"sdlkfj"},{title:"sdlkfj"},{title:"sdlkfj"}];
+
+
+function hymn1 (hymn){
+    return hymn.title === "Silent Night";
+}
+
+function hymn2(hymn){
+    return hymn.title === "The Angel Gabriel";
+}
+answer.push (allHymns.find(hymn1), allHymns.find(hymn2))
+
+console.log (allLitergies);
+document.querySelector("#test").textContent = allLitergies;
 
 
 //up & down buttons
@@ -88,6 +176,8 @@ document.querySelector("#panel1_title").textContent = title;
 var lastHymn = allHymns[allHymns.length-1].title; //Hark the herald
 var secondToLastHymn = allHymns[allHymns.length-2].title; //Here we bring you
 var thirdToLastHymn = allHymns[allHymns.length-3].title; // Silent night
+
+
 
 //top 2 titles//
 if (count == 0){
