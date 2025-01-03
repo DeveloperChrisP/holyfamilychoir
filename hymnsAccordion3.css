@@ -725,6 +725,7 @@ body{
     }
     overflow: hidden;
     flex-basis:2rem;
+    
 }
 .hymnSelect.hidden{
     opacity: 0;

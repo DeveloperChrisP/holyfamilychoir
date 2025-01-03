@@ -354,7 +354,7 @@ function toggleAccordion (panelToActivate){
 
 //choose panels to active based on Object info
     if (panelToActivate.id == "panel1" ) {
-        
+    wrapper.querySelector(".hymnSelect").classList.add("hidden");    
         
         panelToActivate.parentElement.parentElement.lastElementChild.classList.add("hidden"); //hide hymn selection buttons
         panelToActivate.classList.add("open"); // open 1st panel to add filter effect
@@ -375,6 +375,7 @@ function toggleAccordion (panelToActivate){
                 const element = populatedPanels[index].classList.add("accordion_open");
               }
 panelToActivate.querySelector("#firstX").classList.remove("hidden");//add 'x' to 1st panel
+
 //blur out background panels when accordion opens//
 for (let index = 0; index < prepanels.length; index++) {
     const element = prepanels[index];
@@ -451,6 +452,7 @@ function closeAccordion (closeButton){
     const prepanels = closeButton.parentElement.parentElement.parentElement.parentElement.querySelectorAll(".prepanel");
     
     if (closeButton.id == "firstX"){
+        wrapper.querySelector(".hymnSelect").classList.remove("hidden");
         closeButton.parentElement.parentElement.parentElement.parentElement.lastElementChild.classList.remove("hidden");
 
         for (let index = 0; index < panels.length; index++) {
