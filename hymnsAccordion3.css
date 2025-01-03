@@ -748,52 +748,101 @@ body{
     font-size:1rem;
 }
 
-.litergyPlan{
+.liturgyPlan{
     height:100%;
     width: 100%;
     padding: calc(var(--_panel-padding)*2);
     background: linear-gradient(rgb(208, 208, 11), orange);
     z-index: 1;
     position: fixed;
-    left:0;
-    left:100%;
+    right:0;
+    /* left:100%; */
     border-radius: 10%;
     display:flex;
     flex-direction: column;
-    display:none;
+    gap:var(--_panel-gap);
+    transition: 1s;
+    color: black;
+    
 }
-.litergyPlan h1{
+.allHymns{
+    font-family: "Lavishly Yours", serif;
+    font-size: 1.8rem;
+}
+.liturgyPlan.hidden{
+    right:100%;
+    transition: 1s;
+}
+.liturgyPlan h5 {
+    font-size:2rem;
+    line-height: 2rem;
+    font-family: "Lavishly Yours", serif;
+    font-weight: 400;
+    font-style: normal;
+      
+    color:black;
+    /* font-style: italic; */
+    /* font-weight: 500; */
+}
+.liturgyPlan h1{
     text-align: center;
     color: black;
     text-decoration: underline;
     text-decoration-style: double;
+    font-family: "Lavishly Yours", serif;
+    font-size: 3rem;
 }
-.litergyPlan hr{
+.liturgyPlan hr{
     width: calc(100% + (var(--_panel-padding)*2));
     margin-left:calc((var(--_panel-padding)*1)*-1);
 }
-.litergyPlan ul{
+.liturgyPlan ul{
     list-style: none;
 }
-.litergyPlan ul button{
-    text-decoration: underline;
-}
-.litergyPlan span{
-    font-weight: 400;
+.liturgyPlan ul #nextDate{
+    /* text-decoration: underline; */
     font-style: italic;
+    text-align: left;
+    display: inline-block;
 }
-.litergyPlan ol{
+.liturgyPlan .container{
+    display: flex;
+    align-items: center;
+    gap:0.5rem
+}
+.liturgyPlan #nextOccasion{
+    font-family: "Lavishly Yours", serif;;
+    font-weight: 600;
+    /* font-style: italic; */
+    text-align: left;
+}
+.liturgyPlan ol{
     margin-left:2rem;
     color: black;
     font-weight: 300;
 }
-.litergyPlan h4{
+.liturgyPlan h4{
     font-weight: 400;
 }
-.litergyPlan button{
+.liturgyPlan button{
     border-style: none;
     color:black;
 }
+.openLiturgyPlan{
+    background-color: rgb(208, 208, 11);
+    height:2rem;
+    aspect-ratio: 1;
+    z-index:1 ;
+    top:177px;
+    left:0;
+    position: absolute;
+    
+
+    color:black;
+    text-align: center;
+    border-radius: 0 50% 50% 0 ;
+}
+
 
 .playQueuedVideos{
     display: none;
