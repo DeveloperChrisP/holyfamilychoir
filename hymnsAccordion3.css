@@ -61,7 +61,7 @@ body{
     flex-direction: column;
     justify-content: center;
     /* align-items: center; */
-    outline: red solid 2px;
+    /* outline: red solid 2px; */
     /* min-height: 100%; */
     contain: content;
     /* max-height:30rem; */
