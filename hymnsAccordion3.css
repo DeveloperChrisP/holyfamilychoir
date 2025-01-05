@@ -41,7 +41,7 @@ body{
 
 .wrapper{
     height: calc((((var(--_panel-padding)*2) + var(--_button-size) + (var(--_panel-gap)*2))*6) - (var(--_panel-gap)*2));
-    height: 100svh;
+    /* height: 100svh; */
     --_shadow-size: 0.1rem;
     --_shadow-size-negative: -0.1rem;
     --_button-size: 3rem;
@@ -49,8 +49,8 @@ body{
     --_panel-gap: 1rem;
     --_buttonColor: hsla(0, 2%, 45%, 1);
     /* time needs to match with JS scrollSpeed */
-    --_time:700ms; 
-    overflow: hidden;
+    --_time:200ms; 
+    /* overflow: hidden; */
     width: 100%;
     max-width: 700px;
     
@@ -750,6 +750,12 @@ body{
 }
 
 .liturgyPlan{
+    --liturgyTransition:1s;
+    --lavishFont:  "Lavishly Yours", serif;
+    --lavishSizeSmall: 1.8rem;
+    --lavishSizeBig: 3rem;
+    
+
     height:100%;
     width: 100%;
     padding: calc(var(--_panel-padding)*2);
@@ -767,17 +773,18 @@ body{
     
 }
 .allHymns{
-    font-family: "Lavishly Yours", serif;
-    font-size: 1.8rem;
+    font-family: var(--lavishFont);
+    font-size: var(--lavishSizeSmall);
+    text-shadow: 1px 1px white;
 }
 .liturgyPlan.hidden{
     right:100%;
-    transition: 1s;
+    transition: var(--liturgyTransition);
 }
 .liturgyPlan h5 {
-    font-size:2rem;
+    font-size:var(--lavishSizeSmall);
     line-height: 2rem;
-    font-family: "Lavishly Yours", serif;
+    font-family: var(--lavishFont);
     font-weight: 400;
     font-style: normal;
       
@@ -790,8 +797,9 @@ body{
     color: black;
     text-decoration: underline;
     text-decoration-style: double;
-    font-family: "Lavishly Yours", serif;
-    font-size: 3rem;
+    font-family: var(--lavishFont);
+    font-size: var(--lavishSizeBig);
+    text-shadow: 1px 1px white;
 }
 .liturgyPlan hr{
     width: calc(100% + (var(--_panel-padding)*2));
@@ -802,20 +810,28 @@ body{
 }
 .liturgyPlan ul #nextDate{
     /* text-decoration: underline; */
-    font-style: italic;
+    /* font-style: italic; */
     text-align: left;
     display: inline-block;
+    
 }
 .liturgyPlan .container{
     display: flex;
-    align-items: center;
-    gap:0.5rem
+    align-items:end;
+    gap:0.5rem;
+    text-shadow: 1px 1px white;
+    justify-content: start;
+    flex-flow: wrap;
+}
+.liturgyPlan h5 {
+    text-shadow: none;
 }
 .liturgyPlan #nextOccasion{
-    font-family: "Lavishly Yours", serif;;
+    font-family: var(--lavishFont);
     font-weight: 600;
     /* font-style: italic; */
     text-align: left;
+   
 }
 .liturgyPlan ol{
     margin-left:2rem;
@@ -830,14 +846,16 @@ body{
     color:black;
 }
 .openLiturgyPlan{
-    background-color: rgb(208, 208, 11);
+    background-color: rgb(208, 195, 11);
     height:2rem;
     aspect-ratio: 1;
-    z-index:1 ;
+    z-index:2 ;
     top:177px;
-    left:0;
-    position: absolute;
+    /* left:0; */
     
+    left:100%;
+    position: absolute;
+    transition: 1s;
 
     color:black;
     text-align: center;
@@ -848,3 +866,4 @@ body{
 .playQueuedVideos{
     display: none;
 }
+

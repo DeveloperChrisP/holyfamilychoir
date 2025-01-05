@@ -1,7 +1,7 @@
 var accordion = document.querySelector("article.accordion");
 var wrapper = document.querySelector(".wrapper");
 var count;
-var scrollSpeed = 350; //needs to match 1/2 of CSS Time
+var scrollSpeed = 100; //needs to match 1/2 of CSS Time
 
 let allHymns = [];
 
@@ -14,8 +14,19 @@ function Hymn(title,hymnNumber,sheetMusic,vocalPart,video){
     this.video = video;
     count++;
     allHymns.push(this);
-   
 }
+allLitergies = [];
+
+
+function Litergy (date,occasion,year,hymn){
+    this.date = date;
+    this.occasion = occasion;
+    this.year = year;
+    this.hymn = hymn;
+
+    date.setHours(10);date.setMinutes(30);
+    allLitergies.push(this);
+} 
 
 new Hymn ("As I kneel before you",360,"","","https://www.youtube.com/embed/BYv6E9xnJ1U?si=W5qvVIl1dVdmlVEA");
 new Hymn ("As with gladness men of old",166,"","","https://www.youtube.com/embed/y-TplMYH0Ko?si=abx_LTDZfoet_c44");
@@ -52,19 +63,6 @@ new Hymn ("We three kings",170,"","","https://www.youtube.com/embed/Lx35_DRIZ8g?
 new Hymn ("What child is this",145,"","","https://www.youtube.com/embed/6jroBAl3WW8?si=kZEj9G4qmknU1RlB");
 
 
-allLitergies = [];
-
-
-function Litergy (date,occasion,year,hymn){
-    this.date = date;
-    this.occasion = occasion;
-    this.year = year;
-    this.hymn = hymn;
-
-    allLitergies.push(this);
-}   
-
-
 //specify litergys
 new Litergy (new Date("08 dec 2024"), "2nd Sunday Advent","C",
 grabHymnObject("On jordan's bank","praise to you o christ our saviour","this is my body","holy virgin by god's decree"))
@@ -93,16 +91,16 @@ grabHymnObject("bethlehem of noblest cities","As with gladness men of old","We t
 new Litergy (new Date("12 jan 2025"), "The Baptism of the Lord","C",
 grabHymnObject("i heard the voice of Jesus say","water of life","o let all who thirst","hail queen of heaven"));
 
-// allLitergies.sort(function(a,b){return a.date - b.date}); //sort Liturgy array incase not sorted manually
+allLitergies.sort(function(a,b){return a.date - b.date}); //sort Liturgy array incase not sorted manually
 
-// allHymns = allLitergies[7].hymn;
+
 
 const todaysDate = new Date();
 //next litergy will change after 10:30am
-todaysDate.setMinutes(30);
-todaysDate.setSeconds(0);
-todaysDate.setHours(10);
-todaysDate.setMilliseconds(0);
+// todaysDate.setMinutes(30);
+// todaysDate.setSeconds(0);
+// todaysDate.setHours(10);
+// todaysDate.setMilliseconds(0);
 
 const nextLitergy = allLitergies.filter(x => x.date >= todaysDate);
 const originalHymns = allHymns;
@@ -112,33 +110,56 @@ wrapper.querySelector("#nextDateButton").closest("li").addEventListener("click",
     count = 0;
     hymnSelect();
     wrapper.querySelector(".liturgyPlan").classList.add("hidden");
+    
 });
 wrapper.querySelector(".openLiturgyPlan").addEventListener("click",function(){
     wrapper.querySelector(".liturgyPlan").classList.remove("hidden");
+    
 });
 wrapper.querySelector(".allHymns").addEventListener("click",function(){
     allHymns = originalHymns;
     hymnSelect();
     wrapper.querySelector(".liturgyPlan").classList.add("hidden");
+    
 });
 
 
-// console.log (allLitergies);
-console.log (allLitergies[7].hymn);
 
-wrapper.querySelector("#nextDate").textContent = nextLitergy[0].date.toDateString();
+
+wrapper.querySelector("#nextDate").textContent = ordinal(nextLitergy[0].date.toLocaleDateString(undefined,{day:"numeric"})) + " of " +  nextLitergy[0].date.toLocaleDateString(undefined,{month:"long"});
 wrapper.querySelector("#nextOccasion").textContent = nextLitergy[0].occasion;
 wrapper.querySelector("#hymn1").textContent = nextLitergy[0].hymn[0].title;
 wrapper.querySelector("#hymn2").textContent = nextLitergy[0].hymn[1].title;
 wrapper.querySelector("#hymn3").textContent = nextLitergy[0].hymn[2].title;
 wrapper.querySelector("#hymn4").textContent = nextLitergy[0].hymn[3].title;
-
-// document.querySelector("#test").textContent = allLitergies[1].hymn[0][0].title;
+    var testDate = new Date ().toLocaleDateString(undefined, {day: "numeric"});
+    
+// document.querySelector("#test").textContent = ordinal(testDate)
 // allLitergies[0].date + " - " + allLitergies[0].occasion;
 // document.querySelector("#test2").textContent = todaysDate;
 // document.querySelector("#test3").textContent = nextLitergy[0].date.toDateString();
 
-
+function ordinal (day){ //add 'st','nd','rd' or 'th' to date
+    let nth; 
+         switch (day%10) {
+             case 1:
+                 nth = "st";
+                 break;
+             case 2:
+                 nth = "nd";
+                 break;
+             case 3:
+                 nth = "rd";
+                 break;
+             
+             default:
+                 break;
+         }
+     if (day >= 4 && day <= 20){
+         nth = "th";
+     }
+ return day + nth;
+ }
 
 function grabHymnObject(hymnTitle1,hymnTitle2,hymnTitle3,hymnTitle4,hymnTitle5,hymnTitle6,hymnTitle7,hymnTitle8){
     //return array of hymn objects (up to 8) depending on how many are requested in 'new litergy'
