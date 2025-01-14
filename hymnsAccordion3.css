@@ -41,7 +41,7 @@ body{
 
 .wrapper{
     height: calc((((var(--_panel-padding)*2) + var(--_button-size) + (var(--_panel-gap)*2))*6) - (var(--_panel-gap)*2));
-    /* height: 100svh; */
+    height: 100svh;
     --_shadow-size: 0.1rem;
     --_shadow-size-negative: -0.1rem;
     --_button-size: 3rem;
@@ -165,7 +165,7 @@ body{
 
  @media (prefers-reduced-motion: no-preference){
     .accordion_panel {
-        transition: flex-basis var(--_time), flex-grow var(--_time) , margin var(--_time);
+        transition: flex-basis calc(var(--_time)*4), flex-grow calc(var(--_time)*4) , margin var(--_time);
     }
  }
 .accordion_open{
