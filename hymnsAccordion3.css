@@ -589,7 +589,7 @@ body{
     justify-content: space-between;
 }
 .mediaPlayer__Queue {
-    /* display:none; */
+    display:none;
     text-decoration-line: line-through;
     margin-top:var(--_panel-padding)
 }

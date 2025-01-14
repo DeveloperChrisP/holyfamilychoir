@@ -34,7 +34,7 @@ new Hymn ("Amazing Grace",846,"","","https://www.youtube.com/embed/HsCp5LG_zNE?s
 new Hymn ("As I kneel before you",360,"","","https://www.youtube.com/embed/BYv6E9xnJ1U?si=W5qvVIl1dVdmlVEA");
 new Hymn ("As with gladness men of old",166,"","","https://www.youtube.com/embed/y-TplMYH0Ko?si=abx_LTDZfoet_c44");
 new Hymn ("Bethlehem of noblest cities",167,"","","https://www.youtube.com/embed/rlbmmn9uOLg?si=H0LS3ygSKcTXnlA6")
-new Hymn ("Blessed virgin mother",361,"","[Piano]","");
+new Hymn ("Blessed virgin mother",361,"",["Piano"],"");
 new Hymn ("Blest are you, Lord",603,"","","https://www.youtube.com/embed/tsGr49LpuGI?si=p4yTl1Xy_chXtTgN");
 new Hymn ("Bread of life",631,"","","https://www.youtube.com/embed/iYKxMAn3Kfo?si=Fei0At7L0HqudqQ3");
 new Hymn ("Daily,daily sing to Mary",353,"","","https://www.youtube.com/embed/Xwkca-3GiM4?si=UE2_gA3FfHCirCC0");
