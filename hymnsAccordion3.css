@@ -34,14 +34,14 @@ body{
     min-height:100svh;
     /* display: grid; */
     place-content: center;
-    min-height: 100vh;
+    /* min-height: 100vh; */
     color: white;
     
 }
 
 .wrapper{
-    height: calc((((var(--_panel-padding)*2) + var(--_button-size) + (var(--_panel-gap)*2))*6) - (var(--_panel-gap)*2));
-    height: 100svh;
+    /* height: calc((((var(--_panel-padding)*2) + var(--_button-size) + (var(--_panel-gap)*2))*6) - (var(--_panel-gap)*2)); */
+    max-height: 100svh;
     --_shadow-size: 0.1rem;
     --_shadow-size-negative: -0.1rem;
     --_button-size: 3rem;
@@ -67,10 +67,7 @@ body{
     /* max-height:30rem; */
     
 }
-/* #prepanel0_heading{
-    opacity: 1; transform:none;
-   
-} */
+
 .accordion{
     display: flex;
     flex-direction: column;
@@ -451,7 +448,7 @@ body{
    
 }
 
-@media (orientation: portrait) {
+
     .accordion_title::after {
         content: "";
         position: absolute;
@@ -464,12 +461,8 @@ body{
         background:hsl(0 0 0 / 0.55 );
         border-radius: 100vw;
     }
-    .wrapper{
-        /* max-width: 330px; */
-        /* min-width: 100%; */
-        
-    }
-}
+    
+
 
 .accordion_image {
     position: absolute;
@@ -765,13 +758,19 @@ body{
     right:0;
     /* left:100%; */
     border-radius: 10%;
-    display:flex;
-    flex-direction: column;
+    display:grid;
+    /* flex-direction: column; */
+    grid-template-rows: repeat(5,max-content);
+    grid-template-columns: 1fr;
     gap:var(--_panel-gap);
     transition: 1s;
     color: black;
     
 }
+.liturgyPlan .container.hidden {
+    display: none;
+}
+
 .allHymns{
     font-family: var(--lavishFont);
     font-size: var(--lavishSizeSmall);
@@ -801,6 +800,57 @@ body{
     font-size: var(--lavishSizeBig);
     text-shadow: 1px 1px white;
 }
+
+.liturgyPlan .flex-container{
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    font-family: var(--lavishFont);
+    font-size: large;
+    align-items: baseline;
+   
+    
+    
+}
+.hymnsTitle {
+    
+}
+
+.acclamationsTitle {
+    
+}
+.hymnsTitle.selected,.acclamationsTitle.selected{
+    font-weight: 900;
+    /* text-shadow: white 1px 1px ; */
+    text-decoration: underline;
+    font-size: var(--lavishSizeSmall);
+}
+.container-HymnsAcclamations{
+    display: flex;
+
+}
+.hymns,.acclamations {
+   flex-basis:0;
+   display:none;
+    transition: all 1s;
+   height: fit-content;
+   
+}
+.container2{
+    min-height:20rem;
+}
+.acclamations {
+ /* text-align: center; */
+}
+.hymns.selected,.acclamations.selected{
+    flex-grow: 1;
+    height: fit-content;
+    /* outline: solid red; */
+    overflow: auto;
+    transition: all 1s;
+    display: block;
+}
+
 .liturgyPlan hr{
     width: calc(100% + (var(--_panel-padding)*2));
     margin-left:calc((var(--_panel-padding)*1)*-1);

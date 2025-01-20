@@ -16,7 +16,8 @@ function Hymn(title,hymnNumber,sheetMusic,vocalPart,video){
     allHymns.push(this);
 }
 allLitergies = [];
-
+const allAcclamations = [];
+const allAcclamationSettings = [];
 
 function Litergy (date,occasion,year,selector,hymn){
     this.date = date;
@@ -29,12 +30,64 @@ function Litergy (date,occasion,year,selector,hymn){
     allLitergies.push(this);
 } 
 
+function Acclamation (massTitle, title,sheetMusic,vocalPart,video){
+    this.massTitle = massTitle;
+    this.title = title;
+    this.sheetMusic = sheetMusic;
+    this.vocalPart = vocalPart;
+    this.video = video;
+    allAcclamations.push(this);
+}
+
+function AcclamationSetting (massTitle,acclamation){
+    this.massTitle = massTitle;
+    this.acclamation = acclamation;
+    allAcclamationSettings.push(this);
+}
+
+function grabAcclamationObject(massTitle){
+    //return array of hymn objects (up to 8) depending on how many are requested in 'new litergy'
+    
+    var hymns =[];
+   
+    // if (massTitle !== undefined)
+        
+        hymns = allAcclamations.filter(x => (x.massTitle.toLowerCase() == massTitle.toLowerCase()));  
+
+    
+    return hymns;
+    
+}
+
+new Acclamation ("Dan Schutte Mass","Glory to God","",["sab","melody","alto","piano"],"https://www.youtube.com/embed/oeKKr2xIFMg?si=UTR02G3kyx-Hus-A")
+new Acclamation ("Dan Schutte Mass","Holy holy","",["SAB","melody","alto","piano"],"https://www.youtube.com/embed/LsFxjynY5dw?si=-xN5UmeR6stjopkt")
+new Acclamation ("Dan Schutte Mass","We proclaim your death","",["SAB","melody","alto","piano"],"https://www.youtube.com/embed/slLLVzWzQWg?si=2LqjV5sjar3PxuSD")
+new Acclamation ("Dan Schutte Mass","When we eat this bread","","","https://www.youtube.com/embed/I-72zONivNQ?si=fvRRp56uvagvTfRm")
+new Acclamation ("Dan Schutte Mass","Lamb of God","",["SAB","melody","alto","piano"],"https://www.youtube.com/embed/PBuZqtPLcIo?si=0HLxaD3bYyvmlqb8")
+
+new Acclamation ("Mass of Creation","Glory to God","","","https://www.youtube.com/embed/bbHerWk32Vk?si=ys3OGM0_1Exjecv4")
+new Acclamation ("Mass of Creation","Holy Holy","","","https://www.youtube.com/embed/2nwTK9YKWWo?si=jE6ilEY5LqOOeh7e")
+new Acclamation ("Mass of Creation","We proclaim your death","","","https://www.youtube.com/embed/MaPV39uou1I?si=QPqM_OOPfo3qBqPW")
+new Acclamation ("Mass of Creation","When we eat this bread","","","https://www.youtube.com/embed/cBApgcKhJo0?si=V6t0Fou6IH22dmU8")
+new Acclamation ("Mass of Creation","Amen","","","https://www.youtube.com/embed/8drMbyPFlPU?si=UrAor9slVmBgzMg5")
+new Acclamation ("Mass of Creation","Lamb of God","",["SATB","melody","alto","tenor","bass","piano"],"https://www.youtube.com/embed/_KlqHDoGLzE?si=FOKHV82msHsXCsGJ")
+
+new AcclamationSetting ("Dan Schutte Mass", grabAcclamationObject("Dan Schutte Mass"))
+new AcclamationSetting ("Mass of Creation", grabAcclamationObject("Mass of Creation"))
+
+for (let index = 0; index < allAcclamationSettings.length; index++) {
+    const element = document.querySelectorAll(".acclamations h4")[index];
+    element.textContent = allAcclamationSettings[index].massTitle;
+}
+
+
+
 new Hymn ("Alleluia, sing to Jesus",644,"","","https://www.youtube.com/embed/UJDWFYIkBns?si=FjlGK0j-FEm0vRXU");
 new Hymn ("Amazing Grace",846,"","","https://www.youtube.com/embed/HsCp5LG_zNE?si=SVRmh5evJYOhTVy8");
 new Hymn ("As I kneel before you",360,"","","https://www.youtube.com/embed/BYv6E9xnJ1U?si=W5qvVIl1dVdmlVEA");
 new Hymn ("As with gladness men of old",166,"","","https://www.youtube.com/embed/y-TplMYH0Ko?si=abx_LTDZfoet_c44");
 new Hymn ("Bethlehem of noblest cities",167,"","","https://www.youtube.com/embed/rlbmmn9uOLg?si=H0LS3ygSKcTXnlA6")
-new Hymn ("Blessed virgin mother",361,"",["Piano"],"");
+new Hymn ("Blessed virgin mother",361,"",["piano"],"");
 new Hymn ("Blest are you, Lord",603,"","","https://www.youtube.com/embed/tsGr49LpuGI?si=p4yTl1Xy_chXtTgN");
 new Hymn ("Bread of life",631,"","","https://www.youtube.com/embed/iYKxMAn3Kfo?si=Fei0At7L0HqudqQ3");
 new Hymn ("Daily,daily sing to Mary",353,"","","https://www.youtube.com/embed/Xwkca-3GiM4?si=UE2_gA3FfHCirCC0");
@@ -54,7 +107,7 @@ new Hymn ("Lay your hands",432, "","","https://www.youtube.com/embed/q5UvY7itnn8
 new Hymn ("Long ago prophets knew",116,"","","https://www.youtube.com/embed/OeLA1LhqFA4?si=Y_jd5YhNoRzLi9ae");
 new Hymn ("O Come all ye faithful",159,"","","https://www.youtube.com/embed/8ZYZEr3JtZY?si=ZRXVkFmw8cKqnLO1");
 new Hymn ("O let all who thirst",408,"","","https://www.youtube.com/embed/MwG6PCWnih0?si=qltwXx5awggq5kJp");    
-new Hymn ("O Mary Conceived In The Grace Of Your Son",354,"",["Piano"],"");
+new Hymn ("O Mary Conceived In The Grace Of Your Son",354,"",["piano"],"");
 new Hymn ("On Christmas night all Christians sing",134,"","","https://www.youtube.com/embed/wxaLyJ5G4zM?si=ntSZgM5_fK_rTuF-");
 new Hymn ("On Jordan's bank",94,"","","https://www.youtube.com/embed/OVHkMWwnGWk?si=jIJKo6aQAzqYlVFL")
 new Hymn ("One Bread, One Body",832,"","","https://www.youtube.com/embed/WHAu3fLF7NI?si=Dfu0x8PsljIxRoY0");
@@ -126,7 +179,32 @@ grabHymnObject("Praise my soul the King of Heaven","Alleluia, sing to Jesus","Am
 
 allLitergies.sort(function(a,b){return a.date - b.date}); //sort Liturgy array incase not sorted manually
 
+document.querySelector(".liturgyPlan").addEventListener("click", (e)=> {
+    const clickedText = e.target.textContent;
+    const liturgyPlan = document.querySelector(".liturgyPlan");
+    switch (clickedText) {
+        case "Acclamations":
+            liturgyPlan.querySelector(".acclamationsTitle").classList.add("selected");
+            liturgyPlan.querySelector(".hymnsTitle",".hymns").classList.remove("selected");
+            liturgyPlan.querySelector(".acclamations").classList.add("selected");
+            liturgyPlan.querySelector(".hymns").classList.remove("selected");
 
+            liturgyPlan.querySelector(".container").classList.add("hidden");
+            break;
+        case "Hymns":
+            liturgyPlan.querySelector(".acclamationsTitle").classList.remove("selected");
+            liturgyPlan.querySelector(".hymnsTitle",".hymns").classList.add("selected");
+            liturgyPlan.querySelector(".acclamations").classList.remove("selected");
+            liturgyPlan.querySelector(".hymns").classList.add("selected");
+
+            liturgyPlan.querySelector(".container").classList.remove("hidden");
+            break;
+        
+    
+        default:
+            break;
+    }
+});
 
 const todaysDate = new Date();
 //next litergy will change after 10:30am
@@ -137,6 +215,18 @@ const todaysDate = new Date();
 
 const nextLitergy = allLitergies.filter(x => x.date >= todaysDate);
 const originalHymns = allHymns;
+
+wrapper.querySelector(".acclamations").addEventListener("click",function(e){
+    console.log(e.target.classList.value);
+    massTitle = e.target.textContent;
+    allHymns = originalHymns;
+    allHymns = allAcclamationSettings[e.target.classList.value].acclamation;
+    count = 0;
+    hymnSelect();
+    wrapper.querySelector(".liturgyPlan").classList.add("hidden");
+    
+});
+
 wrapper.querySelector("#nextDateButton").closest("li").addEventListener("click",function(){
     allHymns = originalHymns;
     allHymns = nextLitergy[0].hymn;
@@ -195,6 +285,7 @@ function ordinal (day){ //add 'st','nd','rd' or 'th' to date
  return day + nth;
  }
 
+
 function grabHymnObject(hymnTitle1,hymnTitle2,hymnTitle3,hymnTitle4,hymnTitle5,hymnTitle6,hymnTitle7,hymnTitle8){
     //return array of hymn objects (up to 8) depending on how many are requested in 'new litergy'
     
@@ -239,11 +330,31 @@ setTimeout(() => {hymnSelect()
 
 function hymnSelect (){ //populate titles based upon 'count' number//
 
-const title = allHymns[count].title;
+var title = allHymns[count].title;
 document.querySelector("#panel1_title").textContent = title;
 var lastHymn = allHymns[allHymns.length-1].title; //Hark the herald
-var secondToLastHymn = allHymns[allHymns.length-2].title; //Here we bring you
-var thirdToLastHymn = allHymns[allHymns.length-3].title; // Silent night
+switch (allHymns.length) {
+    case 1:
+        var secondToLastHymn = "undefined"
+        var thirdToLastHymn = "undefined"
+        break;
+
+    case 2:
+        var secondToLastHymn = allHymns[allHymns.length-2].title; //Here we bring you
+        var thirdToLastHymn = "undefined"
+        break;
+
+    default:
+        var thirdToLastHymn = allHymns[allHymns.length-3].title; // Silent night
+        break;
+}
+
+// if (allHymns.length < 2){var secondToLastHymn = "undefined"}
+// else{
+// var secondToLastHymn = allHymns[allHymns.length-2].title; //Here we bring you
+// }
+
+// var thirdToLastHymn = allHymns[allHymns.length-3].title; // Silent night
 
 
 
@@ -271,12 +382,12 @@ else {
 }
 
 //bottom 3 tittles//
-if (count == allHymns.length-1){
+if (count == allHymns.length-1 && allHymns.length > 1){
     document.querySelector("#prepanel2_title").textContent = allHymns[0].title;
     document.querySelector("#prepanel3_title").textContent = allHymns[1].title;
     document.querySelector("#prepanelBottom_title").textContent = allHymns[2].title;
 }
-else {
+else if(allHymns.length > 1) {
     document.querySelector("#prepanel2_title").textContent = allHymns[count+1].title;
     if (count == allHymns.length-2){
         document.querySelector("#prepanel3_title").textContent = allHymns[0].title;
@@ -292,16 +403,26 @@ else {
     }
 }
 // document.querySelector(".countVisual").textContent = count; //debugging//
+
 }
+
+
+
 
 
 
 accordion.addEventListener("click", (e)=> {
 
+
+    
     const activePanel = e.target.closest(".accordion_panel");
     const specificClick = e.target.closest(".closePanel");
     const audioButton = e.target.closest(".audioSelection")
-    const title = allHymns[count].title;
+    title = allHymns[count].title;
+
+
+    
+
 if (!activePanel) return;
 if (specificClick) {
         closeAccordion(specificClick);
@@ -315,9 +436,21 @@ else if (audioButton){
         partTitle = partTitle.toUpperCase();
     }
     const audioDescription = title + " - " + partTitle;   
-    const filename = "./audio/" + title + "/" + title/*.replace(/ /g, "")*/ + " - " + partTitle + ".mp3";
+    let filename = "./audio/" + title.toLowerCase() + "/" + title.toLowerCase()/*.replace(/ /g, "")*/ + " - " + partTitle.toLowerCase() + ".mp3";
     
-
+    
+    // ./audio/gloria/gloria - melody.mp3
+    if (document.querySelector(".liturgyPlan button").classList.contains("selected") == true){
+        filename = "./audio/" + "hymns/" + title.toLowerCase() + "/" + title.toLowerCase()/*.replace(/ /g, "")*/ + " - " + partTitle.toLowerCase() + ".mp3";
+        
+    }else{
+        filename = "./audio/" + "acclamations/" + massTitle.toLowerCase() + "/" + title.toLowerCase() + "/" + massTitle.toLowerCase() + " - " + title.toLowerCase()/*.replace(/ /g, "")*/ + " - " + partTitle.toLowerCase() + ".mp3";
+        
+    }
+   
+        //  filename = "not happening"
+    // }
+    console.log(filename);
     document.querySelector("#mediaPlayer__light").removeAttribute("class");
     // document.querySelector("#title").removeAttribute("class");
 
