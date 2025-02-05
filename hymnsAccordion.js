@@ -39,8 +39,9 @@ function Acclamation (massTitle, title,sheetMusic,vocalPart,video){
     allAcclamations.push(this);
 }
 
-function AcclamationSetting (massTitle,acclamation){
+function AcclamationSetting (massTitle,composer,acclamation){
     this.massTitle = massTitle;
+    this.composer = composer;
     this.acclamation = acclamation;
     allAcclamationSettings.push(this);
 }
@@ -73,44 +74,47 @@ new Acclamation ("Mass of Creation","Amen","","","https://www.youtube.com/embed/
 new Acclamation ("Mass of Creation","Lamb of God","",["SATB","melody","alto","tenor","bass","piano"],"https://www.youtube.com/embed/_KlqHDoGLzE?si=FOKHV82msHsXCsGJ")
 
 new Acclamation ("Mass of Hope","Alleluia","",["satb","melody","alto","tenor","bass","piano"],"https://www.youtube.com/embed/PC8Fl0CAWB8?si=CsDSavSKw_6fwM1f&start=8&end=149")
-new Acclamation ("Mass of Hope","Holy, holy","","","https://www.youtube.com/embed/PC8Fl0CAWB8?si=CsDSavSKw_6fwM1f&start=154&end=240");
+new Acclamation ("Mass of Hope","Holy, holy","","","https://www.youtube.com/embed/PC8Fl0CAWB8?si=CsDSavSKw_6fwM1f&start=154&end=244");
 new Acclamation ("Mass of Hope","We proclaim your death","","","https://www.youtube.com/embed/PC8Fl0CAWB8?si=CsDSavSKw_6fwM1f&start=245&end=277");
 new Acclamation ("Mass of Hope","When we eat this bread","","","https://www.youtube.com/embed/PC8Fl0CAWB8?si=CsDSavSKw_6fwM1f&start=282&end=330");
 new Acclamation ("Mass of Hope","Save us, saviour","","","https://www.youtube.com/embed/PC8Fl0CAWB8?si=CsDSavSKw_6fwM1f&start=335&end=385");
 new Acclamation ("Mass of Hope","Great Amen","","","https://www.youtube.com/embed/PC8Fl0CAWB8?si=CsDSavSKw_6fwM1f&start=390");
 
-new AcclamationSetting ("Dan Schutte Mass", grabAcclamationObject("Dan Schutte Mass"))
-new AcclamationSetting ("Mass of Creation", grabAcclamationObject("Mass of Creation"))
-new AcclamationSetting ("Mass of Hope", grabAcclamationObject("Mass of Hope"))
+new AcclamationSetting ("Mass of Christ the Saviour","Dan Schutte", grabAcclamationObject("Dan Schutte Mass"))
+new AcclamationSetting ("Mass of Creation","Marty Haugen", grabAcclamationObject("Mass of Creation"))
+new AcclamationSetting ("Mass of Hope","Bernadette Farrell", grabAcclamationObject("Mass of Hope"))
 
 for (let index = 0; index < allAcclamationSettings.length; index++) {
     const element = document.querySelectorAll(".acclamations h4")[index];
     element.textContent = allAcclamationSettings[index].massTitle;
 }
+for (let index = 0; index < allAcclamationSettings.length; index++) {
+    const element = document.querySelectorAll(".acclamations h6")[index];
+    element.textContent = allAcclamationSettings[index].composer;
+}
 
-
-new Hymn ("All that I am",600, "","","");
+new Hymn ("All that I am",600, "","","https://www.youtube.com/embed/AySM36XeEgc?si=13R1KC5qvEAZT7Bv");
 new Hymn ("Alleluia, sing to Jesus",644,"","","https://www.youtube.com/embed/UJDWFYIkBns?si=FjlGK0j-FEm0vRXU");
 new Hymn ("Amazing Grace",846,"","","https://www.youtube.com/embed/HsCp5LG_zNE?si=SVRmh5evJYOhTVy8");
 new Hymn ("As I kneel before you",360,"","","https://www.youtube.com/embed/BYv6E9xnJ1U?si=W5qvVIl1dVdmlVEA");
 new Hymn ("As with gladness men of old",166,"","","https://www.youtube.com/embed/y-TplMYH0Ko?si=abx_LTDZfoet_c44");
-new Hymn ("At the lamb's high feast",269,"","","");
-new Hymn ("At the name of Jesus", 762, "","","");
-new Hymn ("Be thou my vision",970, "", "", "");
+new Hymn ("At the lamb's high feast",269,"","","https://www.youtube.com/embed/XklMKDpm8kk?si=EP3BSMl2nRpv8jY0");
+new Hymn ("At the name of Jesus", 762, "","","https://www.youtube.com/embed/_7w-tDjlpgk?si=3Qk7NpB35c6_TRa4");
+new Hymn ("Be thou my vision",970, "", "", "https://www.youtube.com/embed/aTKoZZL8XRQ?si=ZqaqqxpVc38IscsA");
 new Hymn ("Bethlehem of noblest cities",167,"","","https://www.youtube.com/embed/rlbmmn9uOLg?si=H0LS3ygSKcTXnlA6")
 new Hymn ("Blessed virgin mother",361,"",["piano"],"");
 new Hymn ("Blest are you, Lord",603,"","","https://www.youtube.com/embed/tsGr49LpuGI?si=p4yTl1Xy_chXtTgN");
-new Hymn ("Christ be our light",883,"","","");
+new Hymn ("Christ be our light",883,"","","https://www.youtube.com/embed/7eeBHrn2Dt0?si=tuSsdtdJwFErezsM");
 new Hymn ("Bread of life",631,"","","https://www.youtube.com/embed/iYKxMAn3Kfo?si=Fei0At7L0HqudqQ3");
-new Hymn ("Crown him with many crowns",321,"","","");
+new Hymn ("Crown him with many crowns",321,"","","https://www.youtube.com/embed/V0F-kXSwJVM?si=7xYPegtLzhWFcTsC");
 new Hymn ("Daily, daily sing to Mary",353,"","","https://www.youtube.com/embed/Xwkca-3GiM4?si=UE2_gA3FfHCirCC0");
 new Hymn ("Dear Lord and Father of mankind",934,"","","https://www.youtube.com/embed/b1MN3chW1Hk?si=C30Yg9l0jHnjT-HO");
-new Hymn ("Do not be afraid", 972,"","","");
-new Hymn ("Eternal Father, strong to save",963,"","","");
+new Hymn ("Do not be afraid", 972,"","","https://www.youtube.com/embed/v2rO0LhSWJ0?si=FQY4vdhRmNNUhdrf");
+new Hymn ("Eternal Father, strong to save",963,"","","https://www.youtube.com/embed/7VrraIIjabo?si=nuwA52iq9beMhqOz");
 new Hymn ("Follow me, follow me",863,"","","https://www.youtube.com/embed/fzkP3jy8BEM?si=f4M8NvoxXceQJcbr");
-new Hymn ("For all the saints",371,"","","");
-new Hymn ("Freely, freely",849,"","","");
-new Hymn ("Gather us in",475,"","","");
+new Hymn ("For all the saints",371,"","","https://www.youtube.com/embed/4oH4MujfUFw?si=YmzoVg4NAViggZEY");
+new Hymn ("Freely, freely",849,"","","https://www.youtube.com/embed/BS1ndKgU36I?si=WxQ_TqVhrJyE184Q");
+new Hymn ("Gather us in",475,"","","https://www.youtube.com/embed/HuLORIyEet4?si=_nhhj7WvmOj5ojiM");
 new Hymn ("Gifts of bread & wine",643,"","","");
 new Hymn ("Godhead here in hiding",660, "","","");
 new Hymn ("Hail Queen of heaven",356,"","","https://www.youtube.com/embed/xfkPTmry3zI?si=SkUYW9G4hlpippRf");
