@@ -60,11 +60,11 @@ function grabAcclamationObject(massTitle){
     
 }
 
-new Acclamation ("Dan Schutte Mass","Glory to God","",["sab","alto","bass","piano"],"https://www.youtube.com/embed/oeKKr2xIFMg?si=UTR02G3kyx-Hus-A")
-new Acclamation ("Dan Schutte Mass","Holy holy","",["SAB","melody","alto","bass"],"https://www.youtube.com/embed/LsFxjynY5dw?si=-xN5UmeR6stjopkt")
-new Acclamation ("Dan Schutte Mass","We proclaim your death","","","https://www.youtube.com/embed/slLLVzWzQWg?si=2LqjV5sjar3PxuSD")
-new Acclamation ("Dan Schutte Mass","When we eat this bread","","","https://www.youtube.com/embed/I-72zONivNQ?si=fvRRp56uvagvTfRm")
-new Acclamation ("Dan Schutte Mass","Lamb of God","",["SAB","melody","alto","bass"],"https://www.youtube.com/embed/PBuZqtPLcIo?si=0HLxaD3bYyvmlqb8")
+new Acclamation ("Mass of Christ the Saviour","Glory to God","",["sab","alto","bass","piano"],"https://www.youtube.com/embed/oeKKr2xIFMg?si=UTR02G3kyx-Hus-A")
+new Acclamation ("Mass of Christ the Saviour","Holy holy","",["SAB","melody","alto","bass"],"https://www.youtube.com/embed/LsFxjynY5dw?si=-xN5UmeR6stjopkt")
+new Acclamation ("Mass of Christ the Saviour","We proclaim your death","","","https://www.youtube.com/embed/slLLVzWzQWg?si=2LqjV5sjar3PxuSD")
+new Acclamation ("Mass of Christ the Saviour","When we eat this bread","","","https://www.youtube.com/embed/I-72zONivNQ?si=fvRRp56uvagvTfRm")
+new Acclamation ("Mass of Christ the Saviour","Lamb of God","",["SAB","melody","alto","bass"],"https://www.youtube.com/embed/PBuZqtPLcIo?si=0HLxaD3bYyvmlqb8")
 
 new Acclamation ("Mass of Creation","Glory to God","","","https://www.youtube.com/embed/bbHerWk32Vk?si=ys3OGM0_1Exjecv4")
 new Acclamation ("Mass of Creation","Holy Holy","","","https://www.youtube.com/embed/2nwTK9YKWWo?si=jE6ilEY5LqOOeh7e")
@@ -74,13 +74,13 @@ new Acclamation ("Mass of Creation","Amen","","","https://www.youtube.com/embed/
 new Acclamation ("Mass of Creation","Lamb of God","",["SATB","melody","alto","tenor","bass","piano"],"https://www.youtube.com/embed/_KlqHDoGLzE?si=FOKHV82msHsXCsGJ")
 
 new Acclamation ("Mass of Hope","Alleluia","",["satb","melody","alto","tenor","bass","piano"],"https://www.youtube.com/embed/PC8Fl0CAWB8?si=CsDSavSKw_6fwM1f&start=8&end=149")
-new Acclamation ("Mass of Hope","Holy, holy","","","https://www.youtube.com/embed/PC8Fl0CAWB8?si=CsDSavSKw_6fwM1f&start=154&end=244");
+new Acclamation ("Mass of Hope","Holy, holy","",["melody","piano"],"https://www.youtube.com/embed/PC8Fl0CAWB8?si=CsDSavSKw_6fwM1f&start=154&end=244");
 new Acclamation ("Mass of Hope","We proclaim your death","","","https://www.youtube.com/embed/PC8Fl0CAWB8?si=CsDSavSKw_6fwM1f&start=245&end=277");
-new Acclamation ("Mass of Hope","When we eat this bread","","","https://www.youtube.com/embed/PC8Fl0CAWB8?si=CsDSavSKw_6fwM1f&start=282&end=330");
+new Acclamation ("Mass of Hope","When we eat this bread","",["melody","piano"],"https://www.youtube.com/embed/PC8Fl0CAWB8?si=CsDSavSKw_6fwM1f&start=282&end=330");
 new Acclamation ("Mass of Hope","Save us, saviour","","","https://www.youtube.com/embed/PC8Fl0CAWB8?si=CsDSavSKw_6fwM1f&start=335&end=385");
-new Acclamation ("Mass of Hope","Great Amen","","","https://www.youtube.com/embed/PC8Fl0CAWB8?si=CsDSavSKw_6fwM1f&start=390");
+new Acclamation ("Mass of Hope","Great Amen","",["melody","piano"],"https://www.youtube.com/embed/PC8Fl0CAWB8?si=CsDSavSKw_6fwM1f&start=390");
 
-new AcclamationSetting ("Mass of Christ the Saviour","Dan Schutte", grabAcclamationObject("Dan Schutte Mass"))
+new AcclamationSetting ("Mass of Christ the Saviour","Dan Schutte", grabAcclamationObject("Mass of Christ the Saviour"))
 new AcclamationSetting ("Mass of Creation","Marty Haugen", grabAcclamationObject("Mass of Creation"))
 new AcclamationSetting ("Mass of Hope","Bernadette Farrell", grabAcclamationObject("Mass of Hope"))
 

@@ -852,7 +852,7 @@ body{
  font-size: var(--lavishSizeSmall);
  font-weight: 600;
  color: rgba(128, 128, 128, 0.366);
- margin-left: 1rem;
+ margin-left: 0.5rem;
 }
 .hymns.selected,.acclamations.selected{
     flex-grow: 1;
