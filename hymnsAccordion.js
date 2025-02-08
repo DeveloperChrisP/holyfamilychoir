@@ -74,13 +74,13 @@ new Acclamation ("Mass of Creation","Amen","","","https://www.youtube.com/embed/
 new Acclamation ("Mass of Creation","Lamb of God","",["SATB","melody","alto","tenor","bass","piano"],"https://www.youtube.com/embed/_KlqHDoGLzE?si=FOKHV82msHsXCsGJ")
 
 new Acclamation ("Mass of Hope","Alleluia","",["satb","melody","alto","tenor","bass","piano"],"https://www.youtube.com/embed/PC8Fl0CAWB8?si=CsDSavSKw_6fwM1f&start=8&end=149")
-new Acclamation ("Mass of Hope","Holy holy","",["melody","piano"],"https://www.youtube.com/embed/PC8Fl0CAWB8?si=CsDSavSKw_6fwM1f&start=154&end=244");
+new Acclamation ("Mass of Hope","Holy, holy","",["melody","piano"],"https://www.youtube.com/embed/PC8Fl0CAWB8?si=CsDSavSKw_6fwM1f&start=154&end=244");
 new Acclamation ("Mass of Hope","We proclaim your death","","","https://www.youtube.com/embed/PC8Fl0CAWB8?si=CsDSavSKw_6fwM1f&start=245&end=277");
 new Acclamation ("Mass of Hope","When we eat this bread","",["melody","piano"],"https://www.youtube.com/embed/PC8Fl0CAWB8?si=CsDSavSKw_6fwM1f&start=282&end=330");
 new Acclamation ("Mass of Hope","Save us, saviour","","","https://www.youtube.com/embed/PC8Fl0CAWB8?si=CsDSavSKw_6fwM1f&start=335&end=385");
 new Acclamation ("Mass of Hope","Great Amen","",["melody","piano"],"https://www.youtube.com/embed/PC8Fl0CAWB8?si=CsDSavSKw_6fwM1f&start=390");
 
-new AcclamationSetting ("Mass of Christ the Saviour","Dan Schutte", grabAcclamationObject("Mass of Christ the Saviour"))
+new AcclamationSetting ("Christ the Saviour","Dan Schutte", grabAcclamationObject("Mass of Christ the Saviour"))
 new AcclamationSetting ("Mass of Creation","Marty Haugen", grabAcclamationObject("Mass of Creation"))
 new AcclamationSetting ("Mass of Hope","Bernadette Farrell", grabAcclamationObject("Mass of Hope"))
 
@@ -93,7 +93,9 @@ for (let index = 0; index < allAcclamationSettings.length; index++) {
     element.textContent = allAcclamationSettings[index].composer;
 }
 
+new Hymn ("Abide with me",907,"","","https://www.youtube.com/embed/zf12lQnKlGk?si=FbBC6mn29tMilxZ5")
 new Hymn ("All that I am",600, "","","https://www.youtube.com/embed/AySM36XeEgc?si=13R1KC5qvEAZT7Bv");
+new Hymn ("All things bright and beautiful",685,"","","https://www.youtube.com/embed/J22y9QRFuqM?si=jBBPLSLf-QiXmGFs")
 new Hymn ("Alleluia, sing to Jesus",644,"","","https://www.youtube.com/embed/UJDWFYIkBns?si=FjlGK0j-FEm0vRXU");
 new Hymn ("Amazing Grace",846,"","","https://www.youtube.com/embed/HsCp5LG_zNE?si=SVRmh5evJYOhTVy8");
 new Hymn ("As I kneel before you",360,"","","https://www.youtube.com/embed/BYv6E9xnJ1U?si=W5qvVIl1dVdmlVEA");
@@ -108,7 +110,7 @@ new Hymn ("Christ be our light",883,"","","https://www.youtube.com/embed/7eeBHrn
 new Hymn ("Bread of life",631,"","","https://www.youtube.com/embed/iYKxMAn3Kfo?si=Fei0At7L0HqudqQ3");
 new Hymn ("Crown him with many crowns",321,"","","https://www.youtube.com/embed/V0F-kXSwJVM?si=7xYPegtLzhWFcTsC");
 new Hymn ("Daily, daily sing to Mary",353,"","","https://www.youtube.com/embed/Xwkca-3GiM4?si=UE2_gA3FfHCirCC0");
-new Hymn ("Dear Lord and Father of mankind",934,"","","https://www.youtube.com/embed/b1MN3chW1Hk?si=C30Yg9l0jHnjT-HO");
+new Hymn ("Dear Lord and Father of mankind",934,"","","https://www.youtube.com/embed/esmn8kNV-S4?si=KvwHeScuoaG6hIEU");
 new Hymn ("Do not be afraid", 972,"","","https://www.youtube.com/embed/v2rO0LhSWJ0?si=FQY4vdhRmNNUhdrf");
 new Hymn ("Eternal Father, strong to save",963,"","","https://www.youtube.com/embed/7VrraIIjabo?si=nuwA52iq9beMhqOz");
 new Hymn ("Follow me, follow me",863,"","","https://www.youtube.com/embed/fzkP3jy8BEM?si=f4M8NvoxXceQJcbr");
@@ -117,25 +119,33 @@ new Hymn ("Freely, freely",849,"","","https://www.youtube.com/embed/BS1ndKgU36I?
 new Hymn ("Gather us in",475,"","","https://www.youtube.com/embed/HuLORIyEet4?si=_nhhj7WvmOj5ojiM");
 new Hymn ("Gifts of bread & wine",643,"","","");
 new Hymn ("Godhead here in hiding",660, "","","");
+new Hymn ("Guide me O thou great redeemer",960,"","","https://www.youtube.com/embed/M7h26Ev_eLQ?si=UmMJvTYTCLGqLkHm")
 new Hymn ("Hail Queen of heaven",356,"","","https://www.youtube.com/embed/xfkPTmry3zI?si=SkUYW9G4hlpippRf");
 new Hymn ("Hark the Herald Angels Sing",155,"","","https://www.youtube.com/embed/9Bwn0k0k8xI?si=vilS4HDunUKoLrlC");
 new Hymn ("He is Lord",761,"","","");
+new Hymn ("He who would valiant be",862,"","","https://www.youtube.com/embed/AD7W92d4jmE?si=t6gu0qjlx4gG3Het")
 new Hymn ("Here I am, Lord",865,"","","");
 new Hymn ("Here we bring you","","","","");
 new Hymn ("Holy is his name",339,"","","https://www.youtube.com/embed/uILEUS4fyQg?si=mMs3PRADRaNuBI2s")
 new Hymn ("Holy virgin by God's decree",366,"","","https://www.youtube.com/embed/aJZhYBXse2g?si=j7DLVkqiusbcid97");
+new Hymn ("How great though art",721,"","","https://www.youtube.com/embed/i6cuVLzUVKY?si=7p65giWxScRq43UW")
 new Hymn ("I heard the voice of Jesus say",795,"","","https://www.youtube.com/embed/Kh4XxlWZhMs?si=xmfUNd4cYzk_fRjQ");
+new Hymn ("I vow to thee my country","","","","https://www.youtube.com/embed/hY9mtoKNeas?si=5Pk8fN_aiqk894Ok")
 new Hymn ("I will be with you",866,"","","");
 new Hymn ("I'll sing a hymn to Mary",355, "","","https://www.youtube.com/embed/SB3Rc2gXGH8?si=-pVYf2yLsbBscT0e");
 new Hymn ("Immaculate Mary",365,"","","https://www.youtube.com/embed/hXqTGl6mbYg?si=62ZRgf9GcBlBYmM0");
+new Hymn ("Immortal, invisible",725,"","","https://www.youtube.com/embed/lmefJS09fKE?si=5cKzvl1vDm-9QeNn")
 new Hymn ("In bread we bring you, Lord",609,"","","");
 new Hymn ("In the bleak mid-winter",144,"","","https://www.youtube.com/embed/cBCYZ9jIJkI?si=7IfiGM2MqBrA1q6t");
 new Hymn ("In the Breaking of the Bread",624,"","","https://www.youtube.com/embed/0H8CPadsVco?si=TEfbe6JW7aAJ_ZVA");
 new Hymn ("It came upon the midnight clear",135,"","","https://www.youtube.com/embed/hx7LJZIXXJo?si=7a3g6ieIB0AZB4MY");
+new Hymn ("Jerusalem","","","","https://www.youtube.com/embed/KuSJFx6tuZ0?si=D81QimGli0IL0nxJ")
 new Hymn ("Lay your hands",432, "","","https://www.youtube.com/embed/q5UvY7itnn8?si=tRTETqvYEvcjjvSg");
+new Hymn ("Lead us, heavenly father",315,"","","https://www.youtube.com/embed/JYB2YEuKTLg?si=LSjAqn9RViSsTBHZ");
 new Hymn ("Let all mortal flesh",607,"","","");
 new Hymn ("Long ago prophets knew",116,"","","https://www.youtube.com/embed/OeLA1LhqFA4?si=Y_jd5YhNoRzLi9ae");
-new Hymn ("Love divine, all loves excelling",801,"","","");
+new Hymn ("Love divine, all loves excelling",801,"","","https://www.youtube.com/embed/cu5zgfKMbAU?si=zNiaaCx1SNydoh4F");
+new Hymn ("Make me a channel of your peace",898,"","","https://www.youtube.com/embed/C8QYMvsp7VI?si=Jpymro5PI9Jj33jb")
 new Hymn ("O bread of heaven",662,"","","");
 new Hymn ("O Come all ye faithful",159,"","","https://www.youtube.com/embed/8ZYZEr3JtZY?si=ZRXVkFmw8cKqnLO1");
 new Hymn ("O God you search me",779,"","","");
@@ -148,7 +158,7 @@ new Hymn ("On Jordan's bank",94,"","","https://www.youtube.com/embed/OVHkMWwnGWk
 new Hymn ("One Bread, One Body",832,"","","https://www.youtube.com/embed/WHAu3fLF7NI?si=Dfu0x8PsljIxRoY0");
 new Hymn ("Once in royal David's city",128,"","","https://www.youtube.com/embed/PtiCLJvyePw?si=TeMsFVrdT232gYs2");
 new Hymn ("Our God reigns",768,"","","");
-new Hymn ("Praise my soul the King of Heaven",807,"","","https://www.youtube.com/embed/GyRIVbdsi4c?si=ittnj3ufy9aj98Nj");
+new Hymn ("Praise my soul the King of Heaven",807,"","","https://www.youtube.com/embed/wB33ANHrRNQ?si=JytOncTWfvO4xlbH");
 new Hymn ("Praise to you o christ our saviour",200,"","","https://www.youtube.com/embed/mybxBzhONyU?si=TAS1uxRc6ZY-Bq5V");
 new Hymn ("Silent Night",136,"./sheetMusic/SilentNight.pdf",["satb", "melody","alto","tenor","bass","piano"],"https://www.youtube-nocookie.com/embed/POcDlbYiF9c?si=cBj0zCzSgsO6fK7T");
 new Hymn ("Sing of Mary, pure and lowly",341,"","","https://www.youtube.com/embed/Ap6Hym_ERQM?si=dN6iC0-7Wsk2DXnz");
@@ -160,9 +170,11 @@ new Hymn ("Take our bread",605,"","","");
 new Hymn ("Tell out my soul",880,"","","");
 new Hymn ("The angel Gabriel",113,"","","https://www.youtube.com/embed/pliqObTHxUQ?si=n-iBUx5I6ggQvds1");
 new Hymn ("The Church's One Foundation",830,"","","https://www.youtube.com/embed/1ooRvCyULoU?si=c381yxAE3XBSKWhi");
+new Hymn ("The day thou gavest",679,"","","https://www.youtube.com/embed/FlCF3-aDpb0?si=kW0cJBR8-Y2CVfwP")
 new Hymn ("The first Noel",150,"","","https://www.youtube.com/embed/1mItWsC8RtM?si=_cbhrtdvUladP4Yn");
 new Hymn ("The king of glory comes",107,"","","https://www.youtube.com/embed/aTl1Q8yudfM?si=x0GFpzoPCkMWtZRA");
 new Hymn ("The light of Christ",747,"","","https://www.youtube.com/embed/ylgeOR1LT_s?si=_01aQwXMVrFL7dOY");
+new Hymn ("The Lord's my shepherd",806,"","","https://www.youtube.com/embed/TXdEVb32SFg?si=pawmxxV4mR5gI_Ij")
 new Hymn ("The Servant King",749,"","","");
 new Hymn ("The Summons",877,"","","https://www.youtube.com/embed/VFXAmB_Iq7k?si=6VEiE0TBf4zx_8W0");
 new Hymn ("The voice of God",108,"","","https://www.youtube.com/embed/r9EohwMRurc?si=35hV3H_r-sr145bJ")
@@ -204,7 +216,8 @@ new Litergy (new Date("19 jan 2025"), "2nd Sunday of Ordinary Time","C","Chris",
 new Litergy (new Date("26 jan 2025"), "3rd Sunday of Ordinary Time","C","Chris",grabHymnObject("We have a gospel to proclaim","Blest are you, Lord","This is my body","Where are you bound, Mary?"));
 new Litergy (new Date("2 Feb 2025"), "The Presentation of the Lord","C","Chris",grabHymnObject("Sing of the Lord's Goodness","The King of Glory Comes","The light of Christ","Daily, daily sing to Mary"));
 new Litergy (new Date("9 Feb 2025"), "5th Sunday of Ordinary Time","C","Chris",grabHymnObject("Follow me, follow me","The Summons","Dear Lord and Father of mankind","Sing we of the blessed Mother"));
-new Litergy (new Date("16 Feb 2025"), "6th Sunday of Ordinary Time","C","Chris",grabHymnObject("Praise my soul the King of Heaven","Alleluia, sing to Jesus","Amazing Grace","Sing of Mary, pure and lowly"));
+
+new Litergy (new Date("16 Feb 2025"), "6th Sunday of Ordinary Time","C","Julian",grabHymnObject("He who would valiant be","Lead us, heavenly father","Immortal, invisible","Immaculate Mary"));
 
 
 allLitergies.sort(function(a,b){return a.date - b.date}); //sort Liturgy array incase not sorted manually
