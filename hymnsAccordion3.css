@@ -836,6 +836,22 @@ body{
    height: fit-content;
    
 }
+.hymns ol{
+    list-style-type: none;
+
+}
+#nextHymns{
+    display:grid;
+    grid-template-columns: min-content 1fr;
+    gap:0.5rem;
+    align-items: center;
+}
+#nextHymns h6{
+    font-family: var(--lavishFont);
+    font-size:var(--lavishSizeSmall);
+    color:rgba(128, 128, 128, 0.366);
+}
+
 .container2{
     min-height:20rem;
 }
