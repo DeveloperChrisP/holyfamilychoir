@@ -220,7 +220,7 @@ new Litergy (new Date("2 Feb 2025"), "The Presentation of the Lord","C","Chris",
 new Litergy (new Date("9 Feb 2025"), "5th Sunday of Ordinary Time","C","Chris",grabHymnObject("Follow me, follow me","The Summons","Dear Lord and Father of mankind","Sing we of the blessed Mother"));
 
 new Litergy (new Date("16 Feb 2025"), "6th Sunday of Ordinary Time","C","Julian",grabHymnObject("Our God reigns","Blest are you, Lord","O God, our help in ages past","Immaculate Mary"));
-new Litergy (new Date("15 Feb 2025"), "7th Sunday of Ordinary Time","C","Julian",grabHymnObject("God of mercy and compassion","Make me a channel of your peace","Freely, freely","O lady, full of God's own grace"));
+new Litergy (new Date("23 Feb 2025"), "7th Sunday of Ordinary Time","C","Julian",grabHymnObject("God of mercy and compassion","Make me a channel of your peace","Freely, freely","O lady, full of God's own grace"));
 
 
 allLitergies.sort(function(a,b){return a.date - b.date}); //sort Liturgy array incase not sorted manually
