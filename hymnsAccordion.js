@@ -75,7 +75,7 @@ new Acclamation ("Mass of Creation","Lamb of God","",["SATB","melody","alto","te
 
 new Acclamation ("Mass of Hope","Glory to God (Jugan)","",["satb","melody (chorus)","alto (chorus)","tenor (chorus)","bass (chorus)"],"");
 new Acclamation ("Mass of Hope","Alleluia","",["satb","melody","alto","tenor","bass","piano"],"https://www.youtube.com/embed/PC8Fl0CAWB8?si=CsDSavSKw_6fwM1f&start=8&end=149")
-new Acclamation ("Mass of Hope","Holy, holy","",["melody","piano"],"https://www.youtube.com/embed/PC8Fl0CAWB8?si=CsDSavSKw_6fwM1f&start=154&end=244");
+new Acclamation ("Mass of Hope","Holy holy","",["melody","piano"],"https://www.youtube.com/embed/PC8Fl0CAWB8?si=CsDSavSKw_6fwM1f&start=154&end=244");
 new Acclamation ("Mass of Hope","We proclaim your death","","","https://www.youtube.com/embed/PC8Fl0CAWB8?si=CsDSavSKw_6fwM1f&start=245&end=277");
 new Acclamation ("Mass of Hope","When we eat this bread","",["melody","piano"],"https://www.youtube.com/embed/PC8Fl0CAWB8?si=CsDSavSKw_6fwM1f&start=282&end=330");
 new Acclamation ("Mass of Hope","Save us, saviour","","","https://www.youtube.com/embed/PC8Fl0CAWB8?si=CsDSavSKw_6fwM1f&start=335&end=385");
