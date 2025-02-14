@@ -73,6 +73,7 @@ new Acclamation ("Mass of Creation","When we eat this bread","","","https://www.
 new Acclamation ("Mass of Creation","Amen","","","https://www.youtube.com/embed/8drMbyPFlPU?si=UrAor9slVmBgzMg5")
 new Acclamation ("Mass of Creation","Lamb of God","",["SATB","melody","alto","tenor","bass","piano"],"https://www.youtube.com/embed/_KlqHDoGLzE?si=FOKHV82msHsXCsGJ")
 
+new Acclamation ("Mass of Hope","Glory to God (Jugan)","",["SATB","melody (chorus)","alto (chorus)","tenor (chorus)","bass (chorus)"],"");
 new Acclamation ("Mass of Hope","Alleluia","",["satb","melody","alto","tenor","bass","piano"],"https://www.youtube.com/embed/PC8Fl0CAWB8?si=CsDSavSKw_6fwM1f&start=8&end=149")
 new Acclamation ("Mass of Hope","Holy, holy","",["melody","piano"],"https://www.youtube.com/embed/PC8Fl0CAWB8?si=CsDSavSKw_6fwM1f&start=154&end=244");
 new Acclamation ("Mass of Hope","We proclaim your death","","","https://www.youtube.com/embed/PC8Fl0CAWB8?si=CsDSavSKw_6fwM1f&start=245&end=277");
@@ -113,6 +114,7 @@ new Hymn ("Daily, daily sing to Mary",353,"","","https://www.youtube.com/embed/X
 new Hymn ("Dear Lord and Father of mankind",934,"","","https://www.youtube.com/embed/esmn8kNV-S4?si=KvwHeScuoaG6hIEU");
 new Hymn ("Do not be afraid", 972,"","","https://www.youtube.com/embed/v2rO0LhSWJ0?si=FQY4vdhRmNNUhdrf");
 new Hymn ("Eternal Father, strong to save",963,"","","https://www.youtube.com/embed/7VrraIIjabo?si=nuwA52iq9beMhqOz");
+new Hymn ("Father, I place into your hands",971,"","","https://www.youtube.com/embed/zBfRNrvvUfc?si=h6RYtmp33PcqireD")
 new Hymn ("Follow me, follow me",863,"","","https://www.youtube.com/embed/fzkP3jy8BEM?si=f4M8NvoxXceQJcbr");
 new Hymn ("For all the saints",371,"","","https://www.youtube.com/embed/4oH4MujfUFw?si=YmzoVg4NAViggZEY");
 new Hymn ("Freely, freely",849,"","","https://www.youtube.com/embed/BS1ndKgU36I?si=WxQ_TqVhrJyE184Q");
@@ -139,7 +141,8 @@ new Hymn ("Immortal, invisible",725,"","","https://www.youtube.com/embed/lmefJS0
 new Hymn ("In bread we bring you, Lord",609,"","","");
 new Hymn ("In the bleak mid-winter",144,"","","https://www.youtube.com/embed/cBCYZ9jIJkI?si=7IfiGM2MqBrA1q6t");
 new Hymn ("In the Breaking of the Bread",624,"","","https://www.youtube.com/embed/0H8CPadsVco?si=TEfbe6JW7aAJ_ZVA");
-new Hymn ("It came upon the midnight clear",135,"","","https://www.youtube.com/embed/hx7LJZIXXJo?si=7a3g6ieIB0AZB4MY");
+new Hymn ("Infant Holy, Infant lowly", 138, "",["SATB","melody","alto","tenor","bass"],"https://www.youtube.com/embed/kFQMDG1j9JQ?si=SB72UyZyoQFlbOMN");
+new Hymn ("It came upon the midnight clear",135,"","","https://www.youtube.com/embed/hx7LJZIXXJo?si=7a3g6ieIB0AZB4MY&start=6&end=129");
 new Hymn ("Jerusalem","","","","https://www.youtube.com/embed/KuSJFx6tuZ0?si=D81QimGli0IL0nxJ")
 new Hymn ("Lay your hands",432, "","","https://www.youtube.com/embed/q5UvY7itnn8?si=tRTETqvYEvcjjvSg");
 new Hymn ("Lead us, heavenly father",315,"","","https://www.youtube.com/embed/JYB2YEuKTLg?si=LSjAqn9RViSsTBHZ");
@@ -154,20 +157,21 @@ new Hymn ("O God you search me",779,"","","");
 new Hymn ("O lady, full of God's own grace","","","","https://www.youtube.com/embed/V2HW50l46fo?si=GxFnbCyFOqbDFbwk");
 new Hymn ("O let all who thirst",408,"","","https://www.youtube.com/embed/MwG6PCWnih0?si=qltwXx5awggq5kJp");    
 new Hymn ("O Mary Conceived In The Grace Of Your Son",354,"",["piano"],"");
-new Hymn ("O purest of creatures", 347,"","","");
+new Hymn ("O purest of creatures", 347,"","","https://www.youtube.com/embed/NFBb5g2tXgk?si=j58XTHjmY4JXkuFm");
 new Hymn ("On Christmas night all Christians sing",134,"","","https://www.youtube.com/embed/wxaLyJ5G4zM?si=ntSZgM5_fK_rTuF-");
 new Hymn ("On Jordan's bank",94,"","","https://www.youtube.com/embed/OVHkMWwnGWk?si=jIJKo6aQAzqYlVFL")
 new Hymn ("One Bread, One Body",832,"","","https://www.youtube.com/embed/WHAu3fLF7NI?si=Dfu0x8PsljIxRoY0");
 new Hymn ("Once in royal David's city",128,"","","https://www.youtube.com/embed/PtiCLJvyePw?si=TeMsFVrdT232gYs2");
 new Hymn ("Our God reigns",768,"","","https://www.youtube.com/embed/QPq1Gf6SNPU?si=Kic5wI-7VpL_G7HC");
 new Hymn ("Praise my soul the King of Heaven",807,"","","https://www.youtube.com/embed/wB33ANHrRNQ?si=JytOncTWfvO4xlbH");
+new Hymn ("Praise to the Lord, the Almighty",601,"","","https://www.youtube.com/embed/3NNatbKemz0?si=osg9I05Avx9VVZbk");
 new Hymn ("Praise to you o christ our saviour",200,"","","https://www.youtube.com/embed/mybxBzhONyU?si=TAS1uxRc6ZY-Bq5V");
 new Hymn ("Silent Night",136,"./sheetMusic/SilentNight.pdf",["satb", "melody","alto","tenor","bass","piano"],"https://www.youtube-nocookie.com/embed/POcDlbYiF9c?si=cBj0zCzSgsO6fK7T");
 new Hymn ("Sing of Mary, pure and lowly",341,"","","https://www.youtube.com/embed/Ap6Hym_ERQM?si=dN6iC0-7Wsk2DXnz");
 new Hymn ("Sing of the Lord's Goodness",713,"","","https://www.youtube.com/embed/xzTXl_jA-XQ?si=4Poy3GZQvRYyieDe")
 new Hymn ("Sing we of the blessed Mother",344,"","","https://www.youtube.com/embed/zYZ4MbY5kG0?si=2NTmZecGpeCPOkvP");
 new Hymn ("Sweet Sacrament Divine",663,"","","");
-new Hymn ("Shine Jesus Shine",388,"","","https://www.youtube.com/embed/nC5CCWZu3c4?si=6gQLvMf6z_GntZlh");
+new Hymn ("Shine Jesus shine",388,"","","https://www.youtube.com/embed/nC5CCWZu3c4?si=6gQLvMf6z_GntZlh");
 new Hymn ("Take our bread",605,"","","");
 new Hymn ("Tell out my soul",880,"","","");
 new Hymn ("The angel Gabriel",113,"","","https://www.youtube.com/embed/pliqObTHxUQ?si=n-iBUx5I6ggQvds1");
@@ -221,6 +225,10 @@ new Litergy (new Date("9 Feb 2025"), "5th Sunday of Ordinary Time","C","Chris",g
 
 new Litergy (new Date("16 Feb 2025"), "6th Sunday of Ordinary Time","C","Julian",grabHymnObject("Our God reigns","Blest are you, Lord","O God, our help in ages past","Immaculate Mary"));
 new Litergy (new Date("23 Feb 2025"), "7th Sunday of Ordinary Time","C","Julian",grabHymnObject("God of mercy and compassion","Make me a channel of your peace","Freely, freely","O lady, full of God's own grace"));
+new Litergy (new Date("02 Mar 2025"), "8th Sunday of Ordinary Time","C","Julian",grabHymnObject("Praise to the Lord, the Almighty","Alleluia, Sing to Jesus","Be thou my vision","O purest of creatures" ));
+new Litergy (new Date("5 Mar 2025"), "Ash Wednesday","C","Chris","");
+new Litergy (new Date("9 Mar 2025"), "1st Sunday of Lent","C","Julian",grabHymnObject("He who would valiant be","Lead us, heavenly father","Father, I place into your hands","Hail Queen of heaven"));
+new Litergy (new Date("16 Mar 2025"), "2nd Sunday of Lent","C","Julian",grabHymnObject("Shine Jesus shine","Christ be our light","Immortal, invisible","I'll sing a hymn to Mary"));
 
 
 allLitergies.sort(function(a,b){return a.date - b.date}); //sort Liturgy array incase not sorted manually
