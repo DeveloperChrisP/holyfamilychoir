@@ -73,13 +73,15 @@ new Acclamation ("Mass of Creation","When we eat this bread","","","https://www.
 new Acclamation ("Mass of Creation","Amen","","","https://www.youtube.com/embed/8drMbyPFlPU?si=UrAor9slVmBgzMg5")
 new Acclamation ("Mass of Creation","Lamb of God","",["SATB","melody","alto","tenor","bass","piano"],"https://www.youtube.com/embed/_KlqHDoGLzE?si=FOKHV82msHsXCsGJ")
 
-new Acclamation ("Mass of Hope","Glory to God (Jugan)","",["SATB","melody (chorus)","alto (chorus)","tenor (chorus)","bass (chorus)"],"");
+new Acclamation ("Mass of Hope","Glory to God (Jugan)","",["satb","melody (chorus)","alto (chorus)","tenor (chorus)","bass (chorus)"],"");
 new Acclamation ("Mass of Hope","Alleluia","",["satb","melody","alto","tenor","bass","piano"],"https://www.youtube.com/embed/PC8Fl0CAWB8?si=CsDSavSKw_6fwM1f&start=8&end=149")
 new Acclamation ("Mass of Hope","Holy, holy","",["melody","piano"],"https://www.youtube.com/embed/PC8Fl0CAWB8?si=CsDSavSKw_6fwM1f&start=154&end=244");
 new Acclamation ("Mass of Hope","We proclaim your death","","","https://www.youtube.com/embed/PC8Fl0CAWB8?si=CsDSavSKw_6fwM1f&start=245&end=277");
 new Acclamation ("Mass of Hope","When we eat this bread","",["melody","piano"],"https://www.youtube.com/embed/PC8Fl0CAWB8?si=CsDSavSKw_6fwM1f&start=282&end=330");
 new Acclamation ("Mass of Hope","Save us, saviour","","","https://www.youtube.com/embed/PC8Fl0CAWB8?si=CsDSavSKw_6fwM1f&start=335&end=385");
 new Acclamation ("Mass of Hope","Great Amen","",["melody","piano"],"https://www.youtube.com/embed/PC8Fl0CAWB8?si=CsDSavSKw_6fwM1f&start=390");
+new Acclamation ("Mass of Hope","Lamb of God (Creation)","",["SATB","melody","alto","tenor","bass","piano"],"https://www.youtube.com/embed/_KlqHDoGLzE?si=FOKHV82msHsXCsGJ");
+
 
 new AcclamationSetting ("Christ the Saviour","Dan Schutte", grabAcclamationObject("Mass of Christ the Saviour"))
 new AcclamationSetting ("Mass of Creation","Marty Haugen", grabAcclamationObject("Mass of Creation"))
@@ -141,7 +143,7 @@ new Hymn ("Immortal, invisible",725,"","","https://www.youtube.com/embed/lmefJS0
 new Hymn ("In bread we bring you, Lord",609,"","","");
 new Hymn ("In the bleak mid-winter",144,"","","https://www.youtube.com/embed/cBCYZ9jIJkI?si=7IfiGM2MqBrA1q6t");
 new Hymn ("In the Breaking of the Bread",624,"","","https://www.youtube.com/embed/0H8CPadsVco?si=TEfbe6JW7aAJ_ZVA");
-new Hymn ("Infant Holy, Infant lowly", 138, "",["SATB","melody","alto","tenor","bass"],"https://www.youtube.com/embed/kFQMDG1j9JQ?si=SB72UyZyoQFlbOMN");
+new Hymn ("Infant Holy, Infant lowly", 138, "",["satb","melody","alto","tenor","bass"],"https://www.youtube.com/embed/kFQMDG1j9JQ?si=SB72UyZyoQFlbOMN");
 new Hymn ("It came upon the midnight clear",135,"","","https://www.youtube.com/embed/hx7LJZIXXJo?si=7a3g6ieIB0AZB4MY&start=6&end=129");
 new Hymn ("Jerusalem","","","","https://www.youtube.com/embed/KuSJFx6tuZ0?si=D81QimGli0IL0nxJ")
 new Hymn ("Lay your hands",432, "","","https://www.youtube.com/embed/q5UvY7itnn8?si=tRTETqvYEvcjjvSg");
