@@ -34,14 +34,14 @@ body{
     min-height:100dvh;
     /* display: grid; */
     place-content: center;
-    /* min-height: 100vh; */
+    
     color: white;
     
 }
 
 .wrapper{
     /* height: calc((((var(--_panel-padding)*2) + var(--_button-size) + (var(--_panel-gap)*2))*6) - (var(--_panel-gap)*2)); */
-    max-height: 100svh;
+    min-height: 100svh;
     --_shadow-size: 0.1rem;
     --_shadow-size-negative: -0.1rem;
     --_button-size: 3rem;
