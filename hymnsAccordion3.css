@@ -34,14 +34,14 @@ body{
     min-height:100dvh;
     /* display: grid; */
     place-content: center;
-    
+    /* min-height: 100vh; */
     color: white;
     
 }
 
 .wrapper{
     /* height: calc((((var(--_panel-padding)*2) + var(--_button-size) + (var(--_panel-gap)*2))*6) - (var(--_panel-gap)*2)); */
-    min-height: 100svh;
+    /* max-height: min-content; */
     --_shadow-size: 0.1rem;
     --_shadow-size-negative: -0.1rem;
     --_button-size: 3rem;
@@ -64,7 +64,7 @@ body{
     /* outline: red solid 2px; */
     /* min-height: 100%; */
     contain: content;
-    /* max-height:30rem; */
+    max-height: min-content;
     
 }
 
@@ -176,7 +176,7 @@ body{
     
     flex-grow: 1;
     /* To do: sheet music 100svh - then hide other tabs - shift upwards*/
-    flex-basis:clamp(15rem, calc(100svh - ((var(--_panel-padding)*2) + var(--_button-size) + var(--_panel-gap)) - 1.3rem), calc(100svh - ((var(--_panel-padding)*2) + var(--_button-size) + var(--_panel-gap)) - 1.3rem));
+    flex-basis:clamp(15rem, calc(100svh - ((var(--_panel-padding)*2) + var(--_button-size) + var(--_panel-gap)) - 1.3rem), min-content);
     /* flex-basis:clamp(15rem, calc(100svh - ((var(--_panel-padding)*4) + (var(--_button-size)*2) + (var(--_panel-gap))*2)),100svh ); */
     /* transition: all calc(var(--_time)/4); */
 }
