@@ -156,7 +156,7 @@ new Hymn ("O bread of heaven",662,"","","");
 new Hymn ("O Come all ye faithful",159,"","","https://www.youtube.com/embed/8ZYZEr3JtZY?si=ZRXVkFmw8cKqnLO1");
 new Hymn ("O God, our help in ages past",955,"","","https://www.youtube.com/embed/9USHRbF5vbw?si=JVlRT-iodda8kmt0");
 new Hymn ("O God you search me",779,"","","");
-new Hymn ("O lady, full of God's own grace","","","","https://www.youtube.com/embed/V2HW50l46fo?si=GxFnbCyFOqbDFbwk");
+new Hymn ("O lady, full of God's own grace","-----","","","https://www.youtube.com/embed/V2HW50l46fo?si=GxFnbCyFOqbDFbwk");
 new Hymn ("O let all who thirst",408,"","","https://www.youtube.com/embed/MwG6PCWnih0?si=qltwXx5awggq5kJp");    
 new Hymn ("O Mary Conceived In The Grace Of Your Son",354,"",["piano"],"");
 new Hymn ("O purest of creatures", 347,"","","https://www.youtube.com/embed/NFBb5g2tXgk?si=j58XTHjmY4JXkuFm");

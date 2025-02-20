@@ -64,7 +64,7 @@ body{
     /* outline: red solid 2px; */
     /* min-height: 100%; */
     contain: content;
-    max-height: min-content;
+    /* max-height: min-content; */
     
 }
 
@@ -176,9 +176,15 @@ body{
     
     flex-grow: 1;
     /* To do: sheet music 100svh - then hide other tabs - shift upwards*/
-    flex-basis:clamp(15rem, calc(100svh - ((var(--_panel-padding)*2) + var(--_button-size) + var(--_panel-gap)) - 1.3rem), min-content);
-    /* flex-basis:clamp(15rem, calc(100svh - ((var(--_panel-padding)*4) + (var(--_button-size)*2) + (var(--_panel-gap))*2)),100svh ); */
+    /* flex-basis:clamp(15rem, max(min-content , calc(100svh - ((var(--_panel-padding)*2) + var(--_button-size) + var(--_panel-gap)) - 1.3rem)), 5rem); */
+    flex-basis: clamp(min-content,calc(100vh - ((var(--_panel-padding)*2) + var(--_button-size) + var(--_panel-gap)) ),min-content);
     /* transition: all calc(var(--_time)/4); */
+    /* min-height: 10rem; */
+}
+#panel4.open{
+    flex-basis: calc(100vh - ((var(--_panel-padding)*2) + var(--_button-size) + var(--_panel-gap)) );
+    /* padding-right: var(--_panel-padding); */
+    
 }
 
 #panel1{
@@ -393,7 +399,7 @@ body{
     width: calc(95% - (2rem));
     width:calc(100% - 2rem);
     /* height:85% ; */
-    overflow: hidden;
+    /* overflow: hidden; */
     position: absolute;
     /* margin-left: calc(var(--_button-size) + (var(--_panel-gap))); */
     /* margin-left: 1rem; */
@@ -600,10 +606,7 @@ body{
     /* margin: var(--_panel-padding); */
 }
 
-.accordion_panel#panel3{
-    /* padding-right: var(--_panel-padding); */
-    
-}
+
 /* button:is(:hover, :focus),.title:is(:hover, :focus){
     cursor: pointer;
 } */
