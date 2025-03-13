@@ -113,7 +113,7 @@ function dragButtonsStartingPosition(e) {
     start = e.layerY;
     paraStart.textContent = start;
     container.addEventListener('pointermove', dragButtons);
-
+    container.addEventListener('touchmove', dragButtons);
 }
 function dragButtons(e) {
     paraMove.textContent = e.layerY;
@@ -157,6 +157,7 @@ function dragButtons(e) {
 
 }
 container.addEventListener('pointerdown', dragButtonsStartingPosition, false);
+container.addEventListener('touchstart', dragButtonsStartingPosition, false);
 //
 
 //wheel control
