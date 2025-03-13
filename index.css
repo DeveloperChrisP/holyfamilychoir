@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: rgb(144, 144, 243);
+  padding: 1rem;
+  max-height: 100vh;
+  overflow: hidden;
+}
+.hymnContainer {
+  display: flex;
+  flex-direction: column;
+}
+.btn {
+  --btnShadow: rgba(105, 9, 95, 0.34);
+  background: linear-gradient(90deg, rgb(193, 125, 125), rgb(4, 4, 88));
+  border-radius: 20px;
+  font-size: 2rem;
+  color: white;
+  padding: 1rem;
+  margin: 0.2rem;
+  box-shadow: var(--btnShadow) 0.3rem 0.3rem 0.5rem,
+    var(--btnShadow) -0.3rem -0.3rem 0.5rem,
+    var(--btnShadow) -0.3rem 0.3rem 0.5rem,
+    var(--btnShadow) 0.3rem -0.3rem 0.5rem;
+  flex-basis: 0;
+  transition: flex-basis 1s;
+  -webkit-user-select: none; /*prevent text selection*/
+}
+.btn.open {
+  flex-basis: 500px;
+}
+.btn#btn0,
+.btn#btn-1 {
+  filter: blur(2px) grayscale(0.5);
+}
+.btn#btn1,
+.btn#btn-2 {
+  filter: blur(1px) grayscale(0.4);
+}
+
+button.scroll {
+  --scrollShadow: rgba(105, 9, 95, 0.34);
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  background: linear-gradient(rgb(230, 124, 230), rgb(166, 224, 166));
+  box-shadow: var(--scrollShadow) 0.3rem 0.3rem 0.5rem,
+    var(--scrollShadow) -0.3rem -0.3rem 0.5rem,
+    var(--scrollShadow) 0.3rem -0.3rem 0.5rem,
+    var(--scrollShadow) -0.3rem 0.3rem 0.5rem;
+}
+button.scroll svg {
+  height: 100%;
+}
+button#testDown {
+}
+button#testUp {
+  right: 0;
+}
+#output {
+  height: 100px;
+  width: 25%;
+  position: absolute;
+  bottom: 50px;
+  background-color: rgba(0, 255, 255, 0.553);
+  border-radius: 10px;
+  padding: 0.25rem;
+}
