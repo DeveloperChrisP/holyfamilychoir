@@ -117,10 +117,10 @@ function dragButtonsStartingPosition(e) {
 }
 function dragButtons(e) {
     paraMove.textContent = e.layerY;
-    if (e.pressure > 0) {
+    
         container.removeEventListener("click", addClassOpenToButton);
-    }
-    if (e.pressure > 0 & e.layerY > (start + 79.52)) {
+    
+    if (e.layerY > (start + 79.52)) {
 
         addButton("up");
         removeButton("up");
@@ -132,7 +132,7 @@ function dragButtons(e) {
         start = e.layerY;
 
     }
-    if (e.pressure > 0 & e.layerY < (start - 79.52)) {
+    if (e.layerY < (start - 79.52)) {
 
         addButton("down");
         removeButton("down");
