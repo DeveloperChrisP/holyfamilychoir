@@ -245,30 +245,28 @@ function dragButtons(e) {
             createDebugPara(4, "")
             container.addEventListener("click", addClassOpenToButton);
         }
-        else {
-            return;
-        }
+
     }
     if (e.pointerType == "touch") {
         addClassOpenToButton("remove");
         container.removeEventListener("click", addClassOpenToButton);
 
-        if (Math.floor(e.clientY) > (Math.floor(e.clientY) + 79.52)) {
+        if (Math.floor(e.clientY) > (start + 79.52)) {
 
             addButton("up");
             removeButton("up");
 
-            // start = Math.floor(e.clientY);
+            start = Math.floor(e.clientY);
             container.addEventListener("click", addClassOpenToButton);
 
         }
-        if (Math.floor(e.clientY) < (Math.floor(e.clientY) - 79.52)) {
+        if (Math.floor(e.clientY) < (start - 79.52)) {
 
             addButton("down");
             removeButton("down");
 
 
-            // start = Math.floor(e.clientY);
+            start = Math.floor(e.clientY);
             container.addEventListener("click", addClassOpenToButton);
         }
     }
