@@ -29,6 +29,9 @@ body {
   flex-basis: 0;
   transition: flex-basis 1s;
   -webkit-user-select: none; /*prevent text selection*/
+
+  display: grid;
+  grid-area: 1fr, 1fr, 1fr, 1fr;
 }
 .btn.open {
   flex-basis: 500px;
@@ -62,8 +65,9 @@ button#testUp {
   right: 0;
 }
 #output {
-  height: 100px;
-  width: 25%;
+  height: fit-content;
+  width: 30%;
+  min-width: max-content;
   position: absolute;
   bottom: 50px;
   background-color: rgba(0, 255, 255, 0.553);
