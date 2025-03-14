@@ -201,11 +201,11 @@ function removeButton(UpOrDown) {
 //finger gestures
 function dragButtonsStartingPosition(e) {
     console.log(e.type)
-    start = e.layerY;
+    start = Math.floor(e.clientY);
     createDebugPara(3, "starting press = " + start);
 
     if (e.pointerType == "touch") {
-        createDebugPara(5, "1st touch = " + clientY)
+        createDebugPara(5, "1st touch = " + Math.floor(e.clientY))
     }
 
 }
@@ -213,29 +213,29 @@ function dragButtons(e) {
     e.preventDefault();
 
     if (e.pointerType == "touch") {
-        createDebugPara(6, "movement touch = " + e.clientY)
+        createDebugPara(6, "movement touch = " + Math.floor(e.clientY))
     }
 
-    createDebugPara(4, "Movement num = " + e.layerY)
+    createDebugPara(4, "Movement num = " + Math.floor(e.clientY))
     if (e.pressure == 0.5) {
         addClassOpenToButton("remove");
         container.removeEventListener("click", addClassOpenToButton);
     }
-    if (e.pressure == 0.5 & e.layerY > (start + 79.52)) {
+    if (e.pressure == 0.5 & Math.floor(e.clientY) > (start + 79.52)) {
 
         addButton("up");
         removeButton("up");
 
-        start = e.layerY;
+        start = Math.floor(e.clientY);
 
     }
-    if (e.pressure == 0.5 & e.layerY < (start - 79.52)) {
+    if (e.pressure == 0.5 & Math.floor(e.clientY) < (start - 79.52)) {
 
         addButton("down");
         removeButton("down");
 
 
-        start = e.layerY;
+        start = Math.floor(e.clientY);
     }
 
 
