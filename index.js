@@ -51,8 +51,8 @@ function startup() {
     el.addEventListener('touchstart', dragButtonsStartingPosition, false);
     // el.addEventListener("touchend", handleEnd);
     // el.addEventListener("touchcancel", handleCancel);
-    el.addEventListener("touchmove", dragButtons);
-    el.addEventListener("pointermove", dragButtons);
+    // el.addEventListener("touchmove", dragButtons);
+    // el.addEventListener("pointermove", dragButtons);
     el.addEventListener('pointerdown', dragButtonsStartingPosition, false);
 
     el.addEventListener("click", addClassOpenToButton);
@@ -201,42 +201,46 @@ function removeButton(UpOrDown) {
 //finger gestures
 function dragButtonsStartingPosition(e) {
     console.log(e.type)
-    start = Math.floor(e.clientY);
+    start = e.clientY;
     createDebugPara(3, "starting press = " + start);
 
     if (e.pointerType == "touch") {
-        createDebugPara(5, "1st touch = " + Math.floor(e.clientY))
+        createDebugPara(5, "1st touch = " + e.clientY)
+        container.addEventListener("touchmove", dragButtons);
     }
+    if (e.pointerType == "mouse") {
 
+        container.addEventListener("pointermove", dragButtons);
+    }
 }
 function dragButtons(e) {
     e.preventDefault();
 
     if (e.pointerType == "touch") {
-        createDebugPara(6, "movement touch = " + Math.floor(e.clientY))
+        createDebugPara(6, "movement touch = " + e.clientY)
     }
 
-    createDebugPara(4, "Movement num = " + Math.floor(e.clientY))
+    createDebugPara(4, "Movement num = " + e.clientY)
     if (e.pointerType == "mouse") {
         if (e.pressure == 0.5) {
             addClassOpenToButton("remove");
             container.removeEventListener("click", addClassOpenToButton);
         }
-        if (e.pressure == 0.5 & Math.floor(e.clientY) > (start + 79.52)) {
+        if (e.pressure == 0.5 & e.clientY > (start + 79.52)) {
 
             addButton("up");
             removeButton("up");
 
-            start = Math.floor(e.clientY);
+            start = e.clientY;
 
         }
-        if (e.pressure == 0.5 & Math.floor(e.clientY) < (start - 79.52)) {
+        if (e.pressure == 0.5 & e.clientY < (start - 79.52)) {
 
             addButton("down");
             removeButton("down");
 
 
-            start = Math.floor(e.clientY);
+            start = e.clientY;
         }
 
 
@@ -251,22 +255,22 @@ function dragButtons(e) {
         addClassOpenToButton("remove");
         container.removeEventListener("click", addClassOpenToButton);
 
-        if (Math.floor(e.clientY) > (start + 79.52)) {
+        if (e.clientY > (start + 79.52)) {
 
             addButton("up");
             removeButton("up");
 
-            start = Math.floor(e.clientY);
+            start = e.clientY;
             container.addEventListener("click", addClassOpenToButton);
 
         }
-        if (Math.floor(e.clientY) < (start - 79.52)) {
+        if (e.clientY < (start - 79.52)) {
 
             addButton("down");
             removeButton("down");
 
 
-            start = Math.floor(e.clientY);
+            start = e.clientY;
             container.addEventListener("click", addClassOpenToButton);
         }
     }
