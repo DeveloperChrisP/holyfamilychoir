@@ -200,18 +200,20 @@ function removeButton(UpOrDown) {
 
 //finger gestures
 function dragButtonsStartingPosition(e) {
+    console.log(e.type)
     start = e.layerY;
     createDebugPara(3, "starting press = " + start);
 
     if (e.pointerType == "touch") {
-        createDebugPara(5, "1st touch = " + e.type)
+        createDebugPara(5, "1st touch = " + clientY)
     }
 
 }
 function dragButtons(e) {
     e.preventDefault();
+
     if (e.pointerType == "touch") {
-        createDebugPara(6, "movement touch = " + e.type)
+        createDebugPara(6, "movement touch = " + e.clientY)
     }
 
     createDebugPara(4, "Movement num = " + e.layerY)
