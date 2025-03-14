@@ -217,36 +217,60 @@ function dragButtons(e) {
     }
 
     createDebugPara(4, "Movement num = " + Math.floor(e.clientY))
-    if (e.pressure == 0.5) {
+    if (e.pointerType == "mouse") {
+        if (e.pressure == 0.5) {
+            addClassOpenToButton("remove");
+            container.removeEventListener("click", addClassOpenToButton);
+        }
+        if (e.pressure == 0.5 & Math.floor(e.clientY) > (start + 79.52)) {
+
+            addButton("up");
+            removeButton("up");
+
+            start = Math.floor(e.clientY);
+
+        }
+        if (e.pressure == 0.5 & Math.floor(e.clientY) < (start - 79.52)) {
+
+            addButton("down");
+            removeButton("down");
+
+
+            start = Math.floor(e.clientY);
+        }
+
+
+        if (e.pressure == 0) {
+
+            createDebugPara(4, "")
+            container.addEventListener("click", addClassOpenToButton);
+        }
+        else {
+            return;
+        }
+    }
+    if (e.pointerType == "touch") {
         addClassOpenToButton("remove");
         container.removeEventListener("click", addClassOpenToButton);
-    }
-    if (e.pressure == 0.5 & Math.floor(e.clientY) > (start + 79.52)) {
 
-        addButton("up");
-        removeButton("up");
+        if (Math.floor(e.clientY) > (start + 79.52)) {
 
-        start = Math.floor(e.clientY);
+            addButton("up");
+            removeButton("up");
 
-    }
-    if (e.pressure == 0.5 & Math.floor(e.clientY) < (start - 79.52)) {
+            start = Math.floor(e.clientY);
+            container.addEventListener("click", addClassOpenToButton);
 
-        addButton("down");
-        removeButton("down");
+        }
+        if (Math.floor(e.clientY) < (start - 79.52)) {
 
-
-        start = Math.floor(e.clientY);
-    }
+            addButton("down");
+            removeButton("down");
 
 
-    if (e.pressure == 0) {
-        num = 1;
-        createDebugPara(4, "")
-        container.addEventListener("click", addClassOpenToButton);
-    }
-    else {
-        return;
-
+            start = Math.floor(e.clientY);
+            container.addEventListener("click", addClassOpenToButton);
+        }
     }
 
 }
