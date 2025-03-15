@@ -245,9 +245,14 @@ function dragButtons(e) {
 
     }
     if (e.pointerType == "touch") {
-        createDebugPara(4, "movement touch = " + e.y)
 
-        if (e.y > (start + 79.52)) {
+        function showCoordinates(e) {
+            outputElement.innerText = `${e.touches[0].clientY}`;
+        }
+
+        createDebugPara(4, "movement touch = " + `${e.touches[0].clientY}`)
+
+        if (`${e.touches[0].clientY}` > (start + 79.52)) {
 
             addButton("up");
             removeButton("up");
@@ -256,7 +261,7 @@ function dragButtons(e) {
 
 
         }
-        if (e.y < (start - 79.52)) {
+        if (`${e.touches[0].clientY}` < (start - 79.52)) {
 
             addButton("down");
             removeButton("down");
