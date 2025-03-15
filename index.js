@@ -201,12 +201,13 @@ function removeButton(UpOrDown) {
 //finger gestures
 function dragButtonsStartingPosition(e) {
     if (e.pointerType == "mouse") {
-        start = Math.floor(e.clientY);
+        console.log(e);
+        start = Math.floor(e.y);
         createDebugPara(3, "starting mouse = " + start);
     }
     if (e.pointerType == "touch") {
-        createDebugPara(3, "starting touch = " + Math.floor(e.clientY));
-        start = Math.floor(e.clientY);
+        createDebugPara(3, "starting touch = " + Math.floor(e.y));
+        start = Math.floor(e.y);
     }
 
 }
@@ -216,23 +217,23 @@ function dragButtons(e) {
 
     if (e.pointerType == "mouse") {
         if (e.pressure == 0.5) {
-            createDebugPara(4, "Movement mouse = " + Math.floor(e.clientY))
+            createDebugPara(4, "Movement mouse = " + Math.floor(e.y))
         }
-        if (e.pressure == 0.5 & Math.floor(e.clientY) > (start + 79.52)) {
+        if (e.pressure == 0.5 & Math.floor(e.y) > (start + 79.52)) {
 
             addButton("up");
             removeButton("up");
 
-            start = Math.floor(e.clientY);
+            start = Math.floor(e.y);
 
         }
-        if (e.pressure == 0.5 & Math.floor(e.clientY) < (start - 79.52)) {
+        if (e.pressure == 0.5 & Math.floor(e.y) < (start - 79.52)) {
 
             addButton("down");
             removeButton("down");
 
 
-            start = Math.floor(e.clientY);
+            start = Math.floor(e.y);
         }
 
 
@@ -244,25 +245,25 @@ function dragButtons(e) {
 
     }
     if (e.pointerType == "touch") {
-        createDebugPara(4, "movement touch = " + e.clientY)
+        createDebugPara(4, "movement touch = " + e.y)
 
 
-        if (e.clientY > (start + 79.52)) {
+        if (e.y > (start + 79.52)) {
 
             addButton("up");
             removeButton("up");
 
-            start = e.clientY;
+            start = e.y;
 
 
         }
-        if (e.clientY < (start - 79.52)) {
+        if (e.y < (start - 79.52)) {
 
             addButton("down");
             removeButton("down");
 
 
-            start = e.clientY;
+            start = e.y;
         }
     }
 
