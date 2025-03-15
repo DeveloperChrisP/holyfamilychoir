@@ -246,9 +246,9 @@ function dragButtons(e) {
     }
     if (e.pointerType == "touch") {
 
-        function showCoordinates(e) {
-            outputElement.innerText = `${e.touches[0].clientY}`;
-        }
+
+        outputElement.innerText = `${e.touches[0].clientY}`;
+
 
         createDebugPara(4, "movement touch = " + `${e.touches[0].clientY}`)
 
