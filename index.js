@@ -246,7 +246,11 @@ function dragButtons(e) {
     }
     if (e.pointerType == "touch") {
         createDebugPara(4, "movement touch = " + e.y)
-
+        let touches = [];
+        for (let i = 0; i < e.changedTouches.length; i++) {
+            touches.push(changedTouches[i]);
+        }
+        createDebugPara(5, touches);
 
         if (e.y > (start + 79.52)) {
 
