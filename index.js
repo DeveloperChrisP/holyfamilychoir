@@ -247,12 +247,12 @@ function dragButtons(e) {
     if (e.pointerType == "touch") {
 
 
-        outputElement.innerText = `${e.touches[0].clientY}`;
+        createDebugPara(4, e.touches.clientY);
 
 
         createDebugPara(4, "movement touch = " + `${e.touches[0].clientY}`)
 
-        if (`${e.touches[0].clientY}` > (start + 79.52)) {
+        if (e.touches.clientY > (start + 79.52)) {
 
             addButton("up");
             removeButton("up");
@@ -261,7 +261,7 @@ function dragButtons(e) {
 
 
         }
-        if (`${e.touches[0].clientY}` < (start - 79.52)) {
+        if (e.touches.clientY < (start - 79.52)) {
 
             addButton("down");
             removeButton("down");
