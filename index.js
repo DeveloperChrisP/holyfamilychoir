@@ -174,8 +174,8 @@ function addButton(UpOrDown) {
     }
     if (UpOrDown == "down") {
 
-        if (count + buttonNumber == allHymns.length) { count = 0 - buttonNumber }
-        if (count + buttonNumber > allHymns.length) {
+        if (count + buttonNumber == allHymns.length - 1) { count = 0 - buttonNumber }
+        if (count + buttonNumber > allHymns.length - 1) {
             count = count - allHymns.length;
 
         }

@@ -13,6 +13,7 @@ body {
 .hymnContainer {
   display: flex;
   flex-direction: column;
+  touch-action: none;
 }
 .btn {
   --btnShadow: rgba(105, 9, 95, 0.34);
