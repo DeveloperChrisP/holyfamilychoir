@@ -48,13 +48,13 @@ function startup() {
     const el = container;
     const testUpBtn = document.getElementById("testUp");
     const testDownBtn = document.getElementById("testDown");
-    el.addEventListener('touchstart', dragButtonsStartingPosition, false);
-    el.addEventListener("touchend", endOfTouch);
+    // el.addEventListener('touchstart', dragButtonsStartingPosition, false);
+    // el.addEventListener("touchend", endOfTouch);
     // el.addEventListener("touchcancel", handleCancel);
-    el.addEventListener("touchmove", dragButtons);
-    // el.addEventListener("pointermove", dragButtons);
-    // el.addEventListener('pointerdown', dragButtonsStartingPosition, false);
+    // el.addEventListener("touchmove", dragButtons);
 
+    el.addEventListener('pointerdown', dragButtonsStartingPosition, false);
+    el.addEventListener("pointerup", endOfTouch);
     el.addEventListener("click", addClassOpenToButton);
 
     generateButtonsOriginalButtons();
@@ -200,80 +200,88 @@ function removeButton(UpOrDown) {
 
 //finger gestures
 function dragButtonsStartingPosition(e) {
-    if (e.pointerType == "mouse") {
-        console.log(e);
-        start = Math.floor(e.y);
-        createDebugPara(3, "starting mouse = " + start);
-    }
-    if (e.pointerType == "touch") {
-        createDebugPara(3, "starting touch = " + Math.floor(e.y));
-        start = Math.floor(e.y);
-    }
+    // if (e.pointerType == "mouse") {
+
+    start = Math.floor(e.y);
+
+    createDebugPara(3, "starting mouse = " + start);
+    container.addEventListener("pointermove", dragButtons);
+    // }
+    // if (e.pointerType == "touch") {
+    //     createDebugPara(3, "starting touch = " + Math.floor(e.y));
+    //     start = Math.floor(e.y);
+    // }
 
 }
 function dragButtons(e) {
     addClassOpenToButton("remove");
     container.removeEventListener("click", addClassOpenToButton);
 
-    if (e.pointerType == "mouse") {
-        if (e.pressure == 0.5) {
-            createDebugPara(4, "Movement mouse = " + Math.floor(e.y))
-        }
-        if (e.pressure == 0.5 & Math.floor(e.y) > (start + 79.52)) {
+    // if (e.pointerType == "mouse") {
+    //     if (e.pressure == 0.5) {
+    createDebugPara(4, "Movement mouse = " + Math.floor(e.y))
+    // }
+    if (Math.floor(e.y) > (start + 79.52)) {
 
-            addButton("up");
-            removeButton("up");
+        addButton("up");
+        removeButton("up");
 
-            start = Math.floor(e.y);
-
-        }
-        if (e.pressure == 0.5 & Math.floor(e.y) < (start - 79.52)) {
-
-            addButton("down");
-            removeButton("down");
-
-
-            start = Math.floor(e.y);
-        }
-
-
-        if (e.pressure == 0) {
-
-            createDebugPara(4, "")
-            container.addEventListener("click", addClassOpenToButton);
-        }
+        start = Math.floor(e.y);
 
     }
-    if (e.pointerType == "touch") {
+    if (Math.floor(e.y) < (start - 79.52)) {
+
+        addButton("down");
+        removeButton("down");
 
 
-        createDebugPara(4, e.touches[0].clientY);
-
-
-
-
-        if (e.touches[0].clientY > (start + 79.52)) {
-
-            addButton("up");
-            removeButton("up");
-
-            start = e.y;
-
-
-        }
-        if (e.touches[0].clientY < (start - 79.52)) {
-
-            addButton("down");
-            removeButton("down");
-
-
-            start = e.y;
-        }
+        start = Math.floor(e.y);
     }
+
+
+    // if (e.pressure == 0) {
+
+    //     createDebugPara(4, "")
+    //     container.addEventListener("click", addClassOpenToButton);
+    // }
 
 }
+// if (e.pointerType == "touch") {
+
+
+//     createDebugPara(4, e.touches[0].clientY);
+
+
+
+
+//     if (e.touches[0].clientY > (start + 79.52)) {
+
+//         addButton("up");
+//         removeButton("up");
+
+//         start = e.y;
+
+
+//     }
+//     if (e.touches[0].clientY < (start - 79.52)) {
+
+//         addButton("down");
+//         removeButton("down");
+
+
+//         start = e.y;
+//     }
+// }
+
+
+
 function endOfTouch() {
-    container.addEventListener("click", addClassOpenToButton);
+    createDebugPara(4, "")
+    container.removeEventListener("pointermove", dragButtons);
+
+    setTimeout(() => {//prevent eventfire on pointerup
+        container.addEventListener("click", addClassOpenToButton);
+    }, 100);
 }
 
 
