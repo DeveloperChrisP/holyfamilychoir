@@ -98,6 +98,7 @@ for (let index = 0; index < allAcclamationSettings.length; index++) {
 }
 
 new Hymn("Abide with me", 907, "", "", "https://www.youtube.com/embed/zf12lQnKlGk?si=FbBC6mn29tMilxZ5")
+new Hymn("All my hope on God is founded", 959, "", "", "https://www.youtube.com/embed/YvpXiDQZNWg?si=QUf-NnCOGLoAvQ_9")
 new Hymn("All that I am", 600, "", "", "https://www.youtube.com/embed/AySM36XeEgc?si=13R1KC5qvEAZT7Bv");
 new Hymn("All things bright and beautiful", 685, "", "", "https://www.youtube.com/embed/J22y9QRFuqM?si=jBBPLSLf-QiXmGFs")
 new Hymn("Alleluia, sing to Jesus", 644, "", "", "https://www.youtube.com/embed/UJDWFYIkBns?si=FjlGK0j-FEm0vRXU");
@@ -158,7 +159,7 @@ new Hymn("Make me a channel of your peace", 898, "", "", "https://www.youtube.co
 new Hymn("O bread of heaven", 662, "", "", "");
 new Hymn("O Come all ye faithful", 159, "", "", "https://www.youtube.com/embed/8ZYZEr3JtZY?si=ZRXVkFmw8cKqnLO1");
 new Hymn("O God, our help in ages past", 955, "", "", "https://www.youtube.com/embed/9USHRbF5vbw?si=JVlRT-iodda8kmt0");
-new Hymn("O God you search me", 779, "", "", "");
+new Hymn("O God you search me", 779, "", "", "https://www.youtube.com/embed/PuKwXVWdyEs?si=_GhYqdnASsZtXxXV");
 new Hymn("O lady, full of God's own grace", "-----", "", "", "https://www.youtube.com/embed/V2HW50l46fo?si=GxFnbCyFOqbDFbwk");
 new Hymn("O let all who thirst", 408, "", "", "https://www.youtube.com/embed/MwG6PCWnih0?si=qltwXx5awggq5kJp");
 new Hymn("O Mary Conceived In The Grace Of Your Son", 354, "", ["piano"], "");
@@ -169,6 +170,7 @@ new Hymn("One Bread, One Body", 832, "", "", "https://www.youtube.com/embed/WHAu
 new Hymn("Once in royal David's city", 128, "", "", "https://www.youtube.com/embed/PtiCLJvyePw?si=TeMsFVrdT232gYs2");
 new Hymn("Our God reigns", 768, "", "", "https://www.youtube.com/embed/QPq1Gf6SNPU?si=Kic5wI-7VpL_G7HC");
 new Hymn("Praise my soul the King of Heaven", 807, "", "", "https://www.youtube.com/embed/wB33ANHrRNQ?si=JytOncTWfvO4xlbH");
+new Hymn("Praise to the holiest in the height", 788, "", "", "https://www.youtube.com/embed/yhxrfOWVnaA?si=QG2XeyHLZSY4aGSX")
 new Hymn("Praise to the Lord, the Almighty", 601, "", "", "https://www.youtube.com/embed/3NNatbKemz0?si=osg9I05Avx9VVZbk");
 new Hymn("Praise to you o christ our saviour", 200, "", "", "https://www.youtube.com/embed/mybxBzhONyU?si=TAS1uxRc6ZY-Bq5V");
 new Hymn("Silent Night", 136, "./sheetMusic/SilentNight.pdf", ["satb", "melody", "alto", "tenor", "bass", "piano"], "https://www.youtube-nocookie.com/embed/POcDlbYiF9c?si=cBj0zCzSgsO6fK7T");
@@ -176,7 +178,7 @@ new Hymn("Sing of Mary, pure and lowly", 341, "", "", "https://www.youtube.com/e
 new Hymn("Sing of the Lord's Goodness", 713, "", "", "https://www.youtube.com/embed/xzTXl_jA-XQ?si=4Poy3GZQvRYyieDe")
 new Hymn("Sing we of the blessed Mother", 344, "", "", "https://www.youtube.com/embed/zYZ4MbY5kG0?si=2NTmZecGpeCPOkvP");
 new Hymn("Sweet Sacrament Divine", 663, "", "", "");
-new Hymn("Shine Jesus shine", 388, "", "", "https://www.youtube.com/embed/nC5CCWZu3c4?si=6gQLvMf6z_GntZlh");
+new Hymn("Shine Jesus shine", 770, "", "", "https://www.youtube.com/embed/nC5CCWZu3c4?si=6gQLvMf6z_GntZlh");
 new Hymn("Take our bread", 605, "", "", "");
 new Hymn("Tell out my soul", 880, "", "", "");
 new Hymn("The angel Gabriel", 113, "", "", "https://www.youtube.com/embed/pliqObTHxUQ?si=n-iBUx5I6ggQvds1");
@@ -236,6 +238,7 @@ new Litergy(new Date("2 Mar 2025"), "8th Sunday of Ordinary Time", "C", "Julian"
 new Litergy(new Date("5 Mar 2025"), "Ash Wednesday", "C", "Chris", grabHymnObject("Though the mountains my fall", "Hosea (Come back to me)", "Upon thy table", "Be still and know I am with you", "As I kneel before you"));
 new Litergy(new Date("9 Mar 2025"), "1st Sunday of Lent", "C", "Julian", grabHymnObject("He who would valiant be", "Lead us, heavenly father", "Father, I place into your hands", "Hail Queen of heaven"));
 new Litergy(new Date("16 Mar 2025"), "2nd Sunday of Lent", "C", "Julian", grabHymnObject("Shine Jesus shine", "Christ be our light", "Immortal, invisible", "I'll sing a hymn to Mary"));
+new Litergy(new Date("23 Mar 2025"), "3rd Sunday of Lent", "C", "Chris", grabHymnObject("Praise to the holiest in the height", "All my hope on God is founded", "Upon thy table", "O God you search me", "Guide me O thou great redeemer"));
 
 
 allLitergies.sort(function (a, b) { return a.date - b.date }); //sort Liturgy array incase not sorted manually
