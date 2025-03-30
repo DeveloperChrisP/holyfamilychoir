@@ -5,6 +5,8 @@ var scrollSpeed = 100; //needs to match 1/2 of CSS Time
 
 let allHymns = [];
 
+wrapper.addEventListener('pointerdown', dragButtonsStartingPosition, false);
+wrapper.addEventListener("pointerup", endOfTouch);
 const queuedVideos = [];
 function Hymn(title, hymnNumber, sheetMusic, vocalPart, video) {
     this.title = title;
@@ -125,6 +127,7 @@ new Hymn("For all the saints", 371, "", "", "https://www.youtube.com/embed/4oH4M
 new Hymn("Freely, freely", 849, "", "", "https://www.youtube.com/embed/BS1ndKgU36I?si=WxQ_TqVhrJyE184Q");
 new Hymn("Gather us in", 475, "", "", "https://www.youtube.com/embed/HuLORIyEet4?si=_nhhj7WvmOj5ojiM");
 new Hymn("Gifts of bread & wine", 643, "", "", "");
+new Hymn("God is love, his the care", 794, "", "", "")
 new Hymn("God of mercy and compassion", 840, "", "", "https://www.youtube.com/embed/dd8ddCFmyNc?si=pnH9I7ukeenS1we3");
 new Hymn("Godhead here in hiding", 660, "", "", "");
 new Hymn("Guide me O thou great redeemer", 960, "", "", "https://www.youtube.com/embed/M7h26Ev_eLQ?si=UmMJvTYTCLGqLkHm")
@@ -156,6 +159,7 @@ new Hymn("Let all mortal flesh", 607, "", "", "");
 new Hymn("Long ago prophets knew", 116, "", "", "https://www.youtube.com/embed/OeLA1LhqFA4?si=Y_jd5YhNoRzLi9ae");
 new Hymn("Love divine, all loves excelling", 801, "", "", "https://www.youtube.com/embed/cu5zgfKMbAU?si=zNiaaCx1SNydoh4F");
 new Hymn("Make me a channel of your peace", 898, "", "", "https://www.youtube.com/embed/C8QYMvsp7VI?si=Jpymro5PI9Jj33jb")
+new Hymn("My song is love unknown", 752, "", "", "");
 new Hymn("O bread of heaven", 662, "", "", "");
 new Hymn("O Come all ye faithful", 159, "", "", "https://www.youtube.com/embed/8ZYZEr3JtZY?si=ZRXVkFmw8cKqnLO1");
 new Hymn("O God, our help in ages past", 955, "", "", "https://www.youtube.com/embed/9USHRbF5vbw?si=JVlRT-iodda8kmt0");
@@ -239,7 +243,8 @@ new Litergy(new Date("5 Mar 2025"), "Ash Wednesday", "C", "Chris", grabHymnObjec
 new Litergy(new Date("9 Mar 2025"), "1st Sunday of Lent", "C", "Julian", grabHymnObject("He who would valiant be", "Lead us, heavenly father", "Father, I place into your hands", "Hail Queen of heaven"));
 new Litergy(new Date("16 Mar 2025"), "2nd Sunday of Lent", "C", "Julian", grabHymnObject("Shine Jesus shine", "Christ be our light", "Immortal, invisible", "I'll sing a hymn to Mary"));
 new Litergy(new Date("23 Mar 2025"), "3rd Sunday of Lent", "C", "Chris", grabHymnObject("Praise to the holiest in the height", "All my hope on God is founded", "Upon thy table", "O God you search me", "Guide me O thou great redeemer"));
-
+new Litergy(new Date("30 Mar 2025"), "4rd Sunday of Lent", "C", "Julian", grabHymnObject("God is love his the care", "My song is love unknown", "The Church's one foundation", "Holy virgin by God's decree"));
+new Litergy(new Date("6 Apr 2025"), "5th Sunday of Lent", "C", "Julian", grabHymnObject("Love divine all loves excelling", "Here we bring you", "Amazing grace", "Sing of Mary, pure and lowly"))
 
 allLitergies.sort(function (a, b) { return a.date - b.date }); //sort Liturgy array incase not sorted manually
 
@@ -383,20 +388,72 @@ function grabHymnObject(hymnTitle1, hymnTitle2, hymnTitle3, hymnTitle4, hymnTitl
 
     var hymns = [];
 
-    if (hymnTitle1 !== undefined) hymns.push(allHymns.filter(x => (x.title.toLowerCase() == hymnTitle1.toLowerCase()))[0]);
-    if (hymnTitle2 !== undefined) hymns.push(allHymns.filter(x => (x.title.toLowerCase() == hymnTitle2.toLowerCase()))[0]);
-    if (hymnTitle3 !== undefined) hymns.push(allHymns.filter(x => (x.title.toLowerCase() == hymnTitle3.toLowerCase()))[0]);
-    if (hymnTitle4 !== undefined) hymns.push(allHymns.filter(x => (x.title.toLowerCase() == hymnTitle4.toLowerCase()))[0]);
-    if (hymnTitle5 !== undefined) hymns.push(allHymns.filter(x => (x.title.toLowerCase() == hymnTitle5.toLowerCase()))[0]);
-    if (hymnTitle6 !== undefined) hymns.push(allHymns.filter(x => (x.title.toLowerCase() == hymnTitle6.toLowerCase()))[0]);
-    if (hymnTitle7 !== undefined) hymns.push(allHymns.filter(x => (x.title.toLowerCase() == hymnTitle7.toLowerCase()))[0]);
-    if (hymnTitle8 !== undefined) hymns.push(allHymns.filter(x => (x.title.toLowerCase() == hymnTitle8.toLowerCase()))[0]);
+    if (hymnTitle1 !== undefined) hymns.push(allHymns.filter(x => (x.title.toLowerCase().replace(/,/g, "") == hymnTitle1.toLowerCase().replace(/,/g, "")))[0]);
+    if (hymnTitle2 !== undefined) hymns.push(allHymns.filter(x => (x.title.toLowerCase().replace(/,/g, "") == hymnTitle2.toLowerCase().replace(/,/g, "")))[0]);
+    if (hymnTitle3 !== undefined) hymns.push(allHymns.filter(x => (x.title.toLowerCase().replace(/,/g, "") == hymnTitle3.toLowerCase().replace(/,/g, "")))[0]);
+    if (hymnTitle4 !== undefined) hymns.push(allHymns.filter(x => (x.title.toLowerCase().replace(/,/g, "") == hymnTitle4.toLowerCase().replace(/,/g, "")))[0]);
+    if (hymnTitle5 !== undefined) hymns.push(allHymns.filter(x => (x.title.toLowerCase().replace(/,/g, "") == hymnTitle5.toLowerCase().replace(/,/g, "")))[0]);
+    if (hymnTitle6 !== undefined) hymns.push(allHymns.filter(x => (x.title.toLowerCase().replace(/,/g, "") == hymnTitle6.toLowerCase().replace(/,/g, "")))[0]);
+    if (hymnTitle7 !== undefined) hymns.push(allHymns.filter(x => (x.title.toLowerCase().replace(/,/g, "") == hymnTitle7.toLowerCase().replace(/,/g, "")))[0]);
+    if (hymnTitle8 !== undefined) hymns.push(allHymns.filter(x => (x.title.toLowerCase().replace(/,/g, "") == hymnTitle8.toLowerCase().replace(/,/g, "")))[0]);
 
     return hymns;
 
 }
 
 count = 0;
+let start;
+
+function dragButtonsStartingPosition(e) {
+    start = Math.floor(e.y);
+    wrapper.addEventListener("pointermove", dragButtons);
+}
+function dragButtons(e) {
+    // addClassOpenToButton("remove");
+    // container.removeEventListener("click", addClassOpenToButton);
+
+
+
+    if (Math.floor(e.y) > start) {
+
+
+        count--;
+        if (count == -1) {
+            count = allHymns.length - 1;
+        }
+        start = Math.floor(e.y);
+
+
+        scroll(e);
+
+        setTimeout(() => {
+            hymnSelect()
+        }, scrollSpeed);
+
+
+
+    }
+    if (Math.floor(e.y) < start) {
+        count++;
+        if (count == allHymns.length) {
+            count = 0;
+        }
+        scroll(e);
+
+        setTimeout(() => {
+            hymnSelect()
+        }, scrollSpeed);
+        start = Math.floor(e.y);
+    }
+}
+function endOfTouch() {
+
+    wrapper.removeEventListener("pointermove", dragButtons);
+
+    setTimeout(() => {//prevent click on pointerup
+        // wrapper.addEventListener("click", addClassOpenToButton);
+    }, 100);
+}
 
 //up & down buttons
 document.querySelector(".hymnSelect").addEventListener("click", (e) => {
@@ -802,6 +859,7 @@ function removeSpaces(sentence) {
 
 
 function scroll(e) {
+    console.log(e);
     const allPanels = e.target.parentElement.parentElement.querySelectorAll(".accordion_panel");
 
     //add transition time for scroll function

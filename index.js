@@ -116,7 +116,7 @@ function createDebugPara(lineNumber, content) {
 }
 
 function addClassOpenToButton(orRemove) {
-    generateContentsStage1(event.target.textContent);
+    // generateContentsStage1(event.target.textContent);
     const clickedButton = event.target;
     if (orRemove == "remove") {
         clickedButton.classList.remove("open");
