@@ -136,7 +136,7 @@ new Hymn("Hark the Herald Angels Sing", 155, "", "", "https://www.youtube.com/em
 new Hymn("He is Lord", 761, "", "", "");
 new Hymn("He who would valiant be", 862, "", "", "https://www.youtube.com/embed/AD7W92d4jmE?si=t6gu0qjlx4gG3Het")
 new Hymn("Here I am, Lord", 865, "", "", "");
-new Hymn("Here we bring you", "", "", "", "");
+new Hymn("Here we bring you", "", "./sheetMusic/Here We Bring You.pdf", ["piano"], "");
 new Hymn("Holy is his name", 339, "", "", "https://www.youtube.com/embed/uILEUS4fyQg?si=mMs3PRADRaNuBI2s")
 new Hymn("Holy virgin by God's decree", 366, "", "", "https://www.youtube.com/embed/aJZhYBXse2g?si=j7DLVkqiusbcid97");
 new Hymn("Hosea (Come back to me)", 842, "", "", "https://www.youtube.com/embed/i1ntir3qgdY?si=p3aFA_z5k_semATg");
