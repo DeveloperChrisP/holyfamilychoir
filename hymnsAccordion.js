@@ -100,9 +100,11 @@ for (let index = 0; index < allAcclamationSettings.length; index++) {
 }
 
 new Hymn("Abide with me", 907, "", "", "https://www.youtube.com/embed/zf12lQnKlGk?si=FbBC6mn29tMilxZ5")
+new Hymn("All glory laud and honour", 229, "", "", "https://www.youtube.com/embed/eBfJyjDolwA?si=krjAwgqp2jbrq7UH")
 new Hymn("All my hope on God is founded", 959, "", "", "https://www.youtube.com/embed/YvpXiDQZNWg?si=QUf-NnCOGLoAvQ_9")
 new Hymn("All that I am", 600, "", "", "https://www.youtube.com/embed/AySM36XeEgc?si=13R1KC5qvEAZT7Bv");
 new Hymn("All things bright and beautiful", 685, "", "", "https://www.youtube.com/embed/J22y9QRFuqM?si=jBBPLSLf-QiXmGFs")
+new Hymn("Alleluia, Alleluia, give thanks", 268, "", "", "https://www.youtube.com/embed/I53k-dlUPx4?si=9z0O4UjI4ZWn2bVo");
 new Hymn("Alleluia, sing to Jesus", 644, "", "", "https://www.youtube.com/embed/UJDWFYIkBns?si=FjlGK0j-FEm0vRXU");
 new Hymn("Amazing Grace", 846, "", "", "https://www.youtube.com/embed/HsCp5LG_zNE?si=SVRmh5evJYOhTVy8");
 new Hymn("As I kneel before you", 360, "", "", "https://www.youtube.com/embed/BYv6E9xnJ1U?si=W5qvVIl1dVdmlVEA");
@@ -153,6 +155,8 @@ new Hymn("In the Breaking of the Bread", 624, "", "", "https://www.youtube.com/e
 new Hymn("Infant Holy, Infant lowly", 138, "", ["satb", "melody", "alto", "tenor", "bass"], "https://www.youtube.com/embed/kFQMDG1j9JQ?si=SB72UyZyoQFlbOMN");
 new Hymn("It came upon the midnight clear", 135, "", "", "https://www.youtube.com/embed/hx7LJZIXXJo?si=7a3g6ieIB0AZB4MY&start=6&end=129");
 new Hymn("Jerusalem", "", "", "", "https://www.youtube.com/embed/KuSJFx6tuZ0?si=D81QimGli0IL0nxJ")
+new Hymn("Jesu, Jesu, fill us with your love", "241", "", "", "https://www.youtube.com/embed/qSuTmW1t8zs?si=8wlA7-6bowt5zX6q")
+new Hymn("Jesus Christ is risen today", 267, "", "", "https://www.youtube.com/embed/PcTP3Pj6Smo?si=03FAkYgNIr1pRB2e")
 new Hymn("Lay your hands", 432, "", "", "https://www.youtube.com/embed/q5UvY7itnn8?si=tRTETqvYEvcjjvSg");
 new Hymn("Lead us, heavenly father", 315, "", "", "https://www.youtube.com/embed/JYB2YEuKTLg?si=LSjAqn9RViSsTBHZ");
 new Hymn("Let all mortal flesh", 607, "", "", "");
@@ -168,6 +172,7 @@ new Hymn("O lady, full of God's own grace", "-----", "", "", "https://www.youtub
 new Hymn("O let all who thirst", 408, "", "", "https://www.youtube.com/embed/MwG6PCWnih0?si=qltwXx5awggq5kJp");
 new Hymn("O Mary Conceived In The Grace Of Your Son", 354, "", ["piano"], "");
 new Hymn("O purest of creatures", 347, "", "", "https://www.youtube.com/embed/NFBb5g2tXgk?si=j58XTHjmY4JXkuFm");
+new Hymn("Of the glorious body telling", 247, "", "", "https://www.youtube.com/embed/9nVBNxfJ-oA?si=nOVzHJhwpwvkZRD3")
 new Hymn("On Christmas night all Christians sing", 134, "", "", "https://www.youtube.com/embed/wxaLyJ5G4zM?si=ntSZgM5_fK_rTuF-");
 new Hymn("On Jordan's bank", 94, "", "", "https://www.youtube.com/embed/OVHkMWwnGWk?si=jIJKo6aQAzqYlVFL")
 new Hymn("One Bread, One Body", 832, "", "", "https://www.youtube.com/embed/WHAu3fLF7NI?si=Dfu0x8PsljIxRoY0");
@@ -177,32 +182,39 @@ new Hymn("Praise my soul the King of Heaven", 807, "", "", "https://www.youtube.
 new Hymn("Praise to the holiest in the height", 788, "", "", "https://www.youtube.com/embed/yhxrfOWVnaA?si=QG2XeyHLZSY4aGSX")
 new Hymn("Praise to the Lord, the Almighty", 601, "", "", "https://www.youtube.com/embed/3NNatbKemz0?si=osg9I05Avx9VVZbk");
 new Hymn("Praise to you o christ our saviour", 200, "", "", "https://www.youtube.com/embed/mybxBzhONyU?si=TAS1uxRc6ZY-Bq5V");
+new Hymn("Saints of God in Glory", "-", "", "", "https://www.youtube.com/embed/Rtb1UHBON0k?si=1Y0wAruG-INx8oJP");
 new Hymn("Silent Night", 136, "./sheetMusic/SilentNight.pdf", ["satb", "melody", "alto", "tenor", "bass", "piano"], "https://www.youtube-nocookie.com/embed/POcDlbYiF9c?si=cBj0zCzSgsO6fK7T");
 new Hymn("Sing of Mary, pure and lowly", 341, "", "", "https://www.youtube.com/embed/Ap6Hym_ERQM?si=dN6iC0-7Wsk2DXnz");
 new Hymn("Sing of the Lord's Goodness", 713, "", "", "https://www.youtube.com/embed/xzTXl_jA-XQ?si=4Poy3GZQvRYyieDe")
 new Hymn("Sing we of the blessed Mother", 344, "", "", "https://www.youtube.com/embed/zYZ4MbY5kG0?si=2NTmZecGpeCPOkvP");
-new Hymn("Sweet Sacrament Divine", 663, "", "", "");
+new Hymn("Sweet Sacrament Divine", 663, "", "", ""); 9
 new Hymn("Shine Jesus shine", 770, "", "", "https://www.youtube.com/embed/nC5CCWZu3c4?si=6gQLvMf6z_GntZlh");
+new Hymn("Stay with me", 249, "", "", "https://www.youtube.com/embed/FCr2tn4yYKY?si=aDsPK3waY6YgSzTZ")
 new Hymn("Take our bread", 605, "", "", "");
-new Hymn("Tell out my soul", 880, "", "", "");
+new Hymn("Tell out my soul", 880, "", "", "https://www.youtube.com/embed/A59pfx4sb2Q?si=2CAw8d2OBfjEWvFT");
 new Hymn("The angel Gabriel", 113, "", "", "https://www.youtube.com/embed/pliqObTHxUQ?si=n-iBUx5I6ggQvds1");
 new Hymn("The Church's One Foundation", 830, "", "", "https://www.youtube.com/embed/1ooRvCyULoU?si=c381yxAE3XBSKWhi");
 new Hymn("The day thou gavest", 679, "", "", "https://www.youtube.com/embed/FlCF3-aDpb0?si=kW0cJBR8-Y2CVfwP")
 new Hymn("The first Noel", 150, "", "", "https://www.youtube.com/embed/1mItWsC8RtM?si=_cbhrtdvUladP4Yn");
 new Hymn("The king of glory comes", 107, "", "", "https://www.youtube.com/embed/aTl1Q8yudfM?si=x0GFpzoPCkMWtZRA");
 new Hymn("The light of Christ", 747, "", "", "https://www.youtube.com/embed/ylgeOR1LT_s?si=_01aQwXMVrFL7dOY");
+new Hymn("The Lord Jesus", "-", "", "", "https://www.youtube.com/embed/uqzixjk4egM?si=DBxPww6_bzapF8X8")
 new Hymn("The Lord's my shepherd", 806, "", "", "https://www.youtube.com/embed/TXdEVb32SFg?si=pawmxxV4mR5gI_Ij")
-new Hymn("The Servant King", 749, "", "", "");
+new Hymn("The Servant King", 749, "", "", "https://www.youtube.com/embed/A0FSZ_iSYO8?si=sYgfjzP6KVX0B4RL");
 new Hymn("The Summons", 877, "", "", "https://www.youtube.com/embed/VFXAmB_Iq7k?si=6VEiE0TBf4zx_8W0");
 new Hymn("The voice of God", 108, "", "", "https://www.youtube.com/embed/r9EohwMRurc?si=35hV3H_r-sr145bJ")
+new Hymn("Thine be the Glory", 287, "", "", "https://www.youtube.com/embed/6qKfVuvG2SY?si=U88MKx7w-wkrgLe7");
 new Hymn("This is my body", 627, "", "", "https://www.youtube.com/embed/O-60hfhJzqI?si=_vXX2hQT8MWV5zwl")
 new Hymn("This is my will, my one command", 921, "", "", "");
 new Hymn("Though the mountains my fall", 785, "", "", "https://www.youtube.com/embed/ghXT5IOzt8g?si=-ITPGRQAbQ-kBRGm");
+new Hymn("Ubi Caritas", 246, "", "", "https://www.youtube.com/embed/Vvfr_2euIFo?si=aShcg8H8_txp1nBH")
 new Hymn("Unto us is born a son", 152, "", "", "https://www.youtube.com/embed/4_4xMMpcqbM?si=RhsMJeDjUpuP2bYO");
 new Hymn("Upon thy table", 606, "", "", "https://www.youtube.com/embed/mTKeKMu0shs?si=G-bRZOzNwJniaYWw");
 new Hymn("Water of life", 512, "", "", "https://www.youtube.com/embed/p153CSsGRxs?si=_yModMrXNcTu4vYm");
 new Hymn("We have a gospel to proclaim", 852, "", "", "https://www.youtube.com/embed/OXlojQCipg4?si=fxCJvBdV-nCFq-It");
+new Hymn("We Should Glory in the Cross", "-", "", ["piano"])
 new Hymn("We three kings", 170, "", "", "https://www.youtube.com/embed/Lx35_DRIZ8g?si=bCTGGMdpULJm0UDc");
+new Hymn("Were you there", 225, "", "", "https://www.youtube.com/embed/7z1SwwFopJk?si=HdluGOjnErTcgVdP");
 new Hymn("What child is this", 145, "", "", "https://www.youtube.com/embed/6jroBAl3WW8?si=kZEj9G4qmknU1RlB");
 new Hymn("Where are you bound, Mary?", 343, "", "", "https://www.youtube.com/embed/rPWOEZzNhxM?si=w_alalLvviuN7AX5");
 
@@ -245,6 +257,10 @@ new Litergy(new Date("16 Mar 2025"), "2nd Sunday of Lent", "C", "Julian", grabHy
 new Litergy(new Date("23 Mar 2025"), "3rd Sunday of Lent", "C", "Chris", grabHymnObject("Praise to the holiest in the height", "All my hope on God is founded", "Upon thy table", "O God you search me", "Guide me O thou great redeemer"));
 new Litergy(new Date("30 Mar 2025"), "4rd Sunday of Lent", "C", "Julian", grabHymnObject("God is love his the care", "My song is love unknown", "The Church's one foundation", "Holy virgin by God's decree"));
 new Litergy(new Date("6 Apr 2025"), "5th Sunday of Lent", "C", "Julian", grabHymnObject("Love divine all loves excelling", "Here we bring you", "Amazing grace", "Sing of Mary, pure and lowly"))
+new Litergy(new Date("13 Apr 2025"), "Palm Sunday", "C", "Chris", grabHymnObject("All glory laud and honour", "The servant king", "Were you there", "Holy virgin by god's decree"))
+new Litergy(new Date("17 Apr 2025"), "Holy Thursday", "C", "Chris", grabHymnObject("We Should Glory in the Cross", "Jesu, Jesu, fill us with your love", "The Lord Jesus", "Ubi Caritas", "This is my body", "Of the Glorious Body Telling", "Stay with me"))
+new Litergy(new Date("19 Apr 2025"), "Easter Vigil", "C", "Chris", grabHymnObject("Saints of God in Glory", "Water of life", "Christ be our light", "bread of life", "Thine be the Glory"))
+new Litergy(new Date("20 Apr 2025"), "Easter Sunday", "C", "Chris", grabHymnObject("Sing of the Lord's goodness", "Jesus Christ is risen today", "Alleluia, Alleluia, give thanks", "Tell out my soul"))
 
 allLitergies.sort(function (a, b) { return a.date - b.date }); //sort Liturgy array incase not sorted manually
 
@@ -315,30 +331,45 @@ wrapper.querySelector(".allHymns").addEventListener("click", function () {
 
 });
 
-wrapper.querySelector("#nextDate").textContent = ordinal(nextLitergy[0].date.toLocaleDateString(undefined, { day: "numeric" })) + " of " + nextLitergy[0].date.toLocaleDateString(undefined, { month: "long" });
-wrapper.querySelector("#nextOccasion").textContent = nextLitergy[0].occasion;
+if (nextLitergy[0] != undefined) {
 
-if (nextLitergy[0].hymn.length > 0) {
-    wrapper.querySelector("#hymn1").textContent = nextLitergy[0].hymn[0].title;
-    wrapper.querySelector("#hymnReference1").textContent = nextLitergy[0].hymn[0].hymnNumber;
-}
-if (nextLitergy[0].hymn.length > 1) {
-    wrapper.querySelector("#hymn2").textContent = nextLitergy[0].hymn[1].title;
-    wrapper.querySelector("#hymnReference2").textContent = nextLitergy[0].hymn[1].hymnNumber;
-}
-if (nextLitergy[0].hymn.length > 2) {
-    wrapper.querySelector("#hymn3").textContent = nextLitergy[0].hymn[2].title;
-    wrapper.querySelector("#hymnReference3").textContent = nextLitergy[0].hymn[2].hymnNumber;
-}
-if (nextLitergy[0].hymn.length > 3) {
-    wrapper.querySelector("#hymn4").textContent = nextLitergy[0].hymn[3].title;
-    wrapper.querySelector("#hymnReference4").textContent = nextLitergy[0].hymn[3].hymnNumber;
-}
-if (nextLitergy[0].hymn.length > 4) {
-    wrapper.querySelector("#hymn5").textContent = nextLitergy[0].hymn[4].title;
-    wrapper.querySelector("#hymnReference5").textContent = nextLitergy[0].hymn[4].hymnNumber;
-}
+    wrapper.querySelector("#nextDate").textContent = ordinal(nextLitergy[0].date.toLocaleDateString(undefined, { day: "numeric" })) + " of " + nextLitergy[0].date.toLocaleDateString(undefined, { month: "long" });
+    wrapper.querySelector("#nextOccasion").textContent = nextLitergy[0].occasion;
 
+
+    if (nextLitergy[0].hymn.length > 0) {
+        wrapper.querySelector("#hymn1").textContent = nextLitergy[0].hymn[0].title;
+        wrapper.querySelector("#hymnReference1").textContent = nextLitergy[0].hymn[0].hymnNumber;
+    }
+    if (nextLitergy[0].hymn.length > 1) {
+        wrapper.querySelector("#hymn2").textContent = nextLitergy[0].hymn[1].title;
+        wrapper.querySelector("#hymnReference2").textContent = nextLitergy[0].hymn[1].hymnNumber;
+    }
+    if (nextLitergy[0].hymn.length > 2) {
+        wrapper.querySelector("#hymn3").textContent = nextLitergy[0].hymn[2].title;
+        wrapper.querySelector("#hymnReference3").textContent = nextLitergy[0].hymn[2].hymnNumber;
+    }
+    if (nextLitergy[0].hymn.length > 3) {
+        wrapper.querySelector("#hymn4").textContent = nextLitergy[0].hymn[3].title;
+        wrapper.querySelector("#hymnReference4").textContent = nextLitergy[0].hymn[3].hymnNumber;
+    }
+    if (nextLitergy[0].hymn.length > 4) {
+        wrapper.querySelector("#hymn5").textContent = nextLitergy[0].hymn[4].title;
+        wrapper.querySelector("#hymnReference5").textContent = nextLitergy[0].hymn[4].hymnNumber;
+    }
+    if (nextLitergy[0].hymn.length > 5) {
+        wrapper.querySelector("#hymn6").textContent = nextLitergy[0].hymn[5].title;
+        wrapper.querySelector("#hymnReference6").textContent = nextLitergy[0].hymn[5].hymnNumber;
+    }
+    if (nextLitergy[0].hymn.length > 6) {
+        wrapper.querySelector("#hymn7").textContent = nextLitergy[0].hymn[6].title;
+        wrapper.querySelector("#hymnReference7").textContent = nextLitergy[0].hymn[6].hymnNumber;
+    }
+    if (nextLitergy[0].hymn.length > 7) {
+        wrapper.querySelector("#hymn8").textContent = nextLitergy[0].hymn[7].title;
+        wrapper.querySelector("#hymnReference8").textContent = nextLitergy[0].hymn[7].hymnNumber;
+    }
+}
 
 
 
