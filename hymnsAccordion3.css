@@ -77,7 +77,7 @@ body {
   /* outline: red solid 2px; */
   /* min-height: 100%; */
   contain: content;
-  max-height: 100dvh;
+  max-height: 100vh;
   touch-action: none;
   user-select: none;
 }
