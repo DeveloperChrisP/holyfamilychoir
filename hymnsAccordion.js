@@ -264,25 +264,64 @@ new Litergy(new Date("20 Apr 2025"), "Easter Sunday", "C", "Chris", grabHymnObje
 
 allLitergies.sort(function (a, b) { return a.date - b.date }); //sort Liturgy array incase not sorted manually
 
-document.querySelector(".liturgyPlan").addEventListener("click", (e) => {
+document.querySelector(".liturgyPlan .flex-container").addEventListener("click", (e) => {
     const clickedText = e.target.textContent;
     const liturgyPlan = document.querySelector(".liturgyPlan");
+    const selectionButtons = document.querySelectorAll(".liturgyPlan .flex-container button");
+    const selectionContent = wrapper.querySelectorAll(".container-HymnsAcclamations .liturgyContents");
+    // const selectionContent2 = wrapper.querySelectorAll(".container-HymnsAcclamations");
+
+    for (let index = 0; index < selectionButtons.length; index++) {
+        const element = selectionButtons[index];
+        element.classList.remove("selected");
+    }
+    for (let index = 0; index < selectionContent.length; index++) {
+        const element = selectionContent[index];
+        element.classList.remove("selected");
+        element.classList.add("hidden")
+    }
+
+
     switch (clickedText) {
         case "Acclamations":
+
             liturgyPlan.querySelector(".acclamationsTitle").classList.add("selected");
-            liturgyPlan.querySelector(".hymnsTitle", ".hymns").classList.remove("selected");
+            // liturgyPlan.querySelector(".hymnsTitle", ".hymns").classList.remove("selected");
             liturgyPlan.querySelector(".acclamations").classList.add("selected");
-            liturgyPlan.querySelector(".hymns").classList.remove("selected");
+            // liturgyPlan.querySelector(".hymns").classList.remove("selected");
 
             liturgyPlan.querySelector(".container").classList.add("hidden");
             break;
         case "Hymns":
-            liturgyPlan.querySelector(".acclamationsTitle").classList.remove("selected");
+            // liturgyPlan.querySelector(".acclamationsTitle").classList.remove("selected");
             liturgyPlan.querySelector(".hymnsTitle", ".hymns").classList.add("selected");
-            liturgyPlan.querySelector(".acclamations").classList.remove("selected");
+            // liturgyPlan.querySelector(".acclamations").classList.remove("selected");
             liturgyPlan.querySelector(".hymns").classList.add("selected");
 
             liturgyPlan.querySelector(".container").classList.remove("hidden");
+            break;
+        case "Easter":
+            liturgyPlan.querySelector(".container").classList.add("hidden"); //upcoming
+            liturgyPlan.querySelector(".easterTitle").classList.add("selected");
+            liturgyPlan.querySelector(".easterServices").classList.add("selected");
+            liturgyPlan.querySelector(".container").classList.add("hidden");
+
+            wrapper.querySelector(".easterServices h4").textContent = allLitergies.filter(x => x.occasion == "Holy Thursday")[0].occasion;
+            wrapper.querySelectorAll(".easterServices h4")[1].textContent = allLitergies.filter(x => x.occasion == "Easter Vigil")[0].occasion;
+            wrapper.querySelectorAll(".easterServices h4")[2].textContent = allLitergies.filter(x => x.occasion == "Easter Sunday")[0].occasion;
+
+            liturgyPlan.querySelector(".easterServices ul").addEventListener("click", (e) => {
+                console.log(e.target.textContent);
+                allHymns = originalHymns;
+                allHymns = allLitergies.filter(x => x.occasion == e.target.textContent)[0].hymn;
+                count = 0;
+
+                // nextLitergy = allLitergies.filter(x => x.date >= todaysDate);
+                hymnSelect();
+                wrapper.querySelector(".liturgyPlan").classList.add("hidden");
+
+            })
+
             break;
 
 
