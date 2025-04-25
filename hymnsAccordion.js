@@ -135,7 +135,7 @@ new Hymn("Godhead here in hiding", 660, "", "", "");
 new Hymn("Guide me O thou great redeemer", 960, "", "", "https://www.youtube.com/embed/M7h26Ev_eLQ?si=UmMJvTYTCLGqLkHm")
 new Hymn("Hail Queen of heaven", 356, "", "", "https://www.youtube.com/embed/xfkPTmry3zI?si=SkUYW9G4hlpippRf");
 new Hymn("Hark the Herald Angels Sing", 155, "", "", "https://www.youtube.com/embed/9Bwn0k0k8xI?si=vilS4HDunUKoLrlC");
-new Hymn("He is Lord", 761, "", "", "");
+new Hymn("He is Lord", 761, "", "", "https://www.youtube.com/embed/BrJEATD5jq8?si=eTy6aYtchC80fY_g");
 new Hymn("He who would valiant be", 862, "", "", "https://www.youtube.com/embed/AD7W92d4jmE?si=t6gu0qjlx4gG3Het")
 new Hymn("Here I am, Lord", 865, "", "", "");
 new Hymn("Here we bring you", "", "./sheetMusic/Here We Bring You.pdf", ["piano"], "");
@@ -145,7 +145,7 @@ new Hymn("Hosea (Come back to me)", 842, "", "", "https://www.youtube.com/embed/
 new Hymn("How great though art", 721, "", "", "https://www.youtube.com/embed/i6cuVLzUVKY?si=7p65giWxScRq43UW")
 new Hymn("I heard the voice of Jesus say", 795, "", "", "https://www.youtube.com/embed/Kh4XxlWZhMs?si=xmfUNd4cYzk_fRjQ");
 new Hymn("I vow to thee my country", "", "", "", "https://www.youtube.com/embed/hY9mtoKNeas?si=5Pk8fN_aiqk894Ok")
-new Hymn("I will be with you", 866, "", "", "");
+new Hymn("I will be with you", 866, "", "", "https://www.youtube.com/embed/RL0CBsiXXl0?si=WrdvI2zJnnygDiHS");
 new Hymn("I'll sing a hymn to Mary", 355, "", "", "https://www.youtube.com/embed/SB3Rc2gXGH8?si=-pVYf2yLsbBscT0e");
 new Hymn("Immaculate Mary", 365, "", "", "https://www.youtube.com/embed/hXqTGl6mbYg?si=62ZRgf9GcBlBYmM0");
 new Hymn("Immortal, invisible", 725, "", "", "https://www.youtube.com/embed/lmefJS09fKE?si=5cKzvl1vDm-9QeNn")
@@ -164,6 +164,7 @@ new Hymn("Long ago prophets knew", 116, "", "", "https://www.youtube.com/embed/O
 new Hymn("Love divine, all loves excelling", 801, "", "", "https://www.youtube.com/embed/cu5zgfKMbAU?si=zNiaaCx1SNydoh4F");
 new Hymn("Make me a channel of your peace", 898, "", "", "https://www.youtube.com/embed/C8QYMvsp7VI?si=Jpymro5PI9Jj33jb")
 new Hymn("My song is love unknown", 752, "", "", "");
+new Hymn("Now the green blade riseth", 278, "", "", "https://www.youtube.com/embed/t_-6-VKu8SM?si=lhMNDR8p0egeFFeM")
 new Hymn("O bread of heaven", 662, "", "", "");
 new Hymn("O Come all ye faithful", 159, "", "", "https://www.youtube.com/embed/8ZYZEr3JtZY?si=ZRXVkFmw8cKqnLO1");
 new Hymn("O God, our help in ages past", 955, "", "", "https://www.youtube.com/embed/9USHRbF5vbw?si=JVlRT-iodda8kmt0");
@@ -171,6 +172,7 @@ new Hymn("O God you search me", 779, "", "", "https://www.youtube.com/embed/PuKw
 new Hymn("O lady, full of God's own grace", "-----", "", "", "https://www.youtube.com/embed/V2HW50l46fo?si=GxFnbCyFOqbDFbwk");
 new Hymn("O let all who thirst", 408, "", "", "https://www.youtube.com/embed/MwG6PCWnih0?si=qltwXx5awggq5kJp");
 new Hymn("O Mary Conceived In The Grace Of Your Son", 354, "", ["piano"], "");
+new Hymn("O Mother Blest", 364, "", "", "https://www.youtube.com/embed/Nb7PchC-p04?si=N_d9mCYKGQG5nhst");
 new Hymn("O purest of creatures", 347, "", "", "https://www.youtube.com/embed/NFBb5g2tXgk?si=j58XTHjmY4JXkuFm");
 new Hymn("Of the glorious body telling", 247, "", "", "https://www.youtube.com/embed/9nVBNxfJ-oA?si=nOVzHJhwpwvkZRD3")
 new Hymn("On Christmas night all Christians sing", 134, "", "", "https://www.youtube.com/embed/wxaLyJ5G4zM?si=ntSZgM5_fK_rTuF-");
@@ -261,6 +263,10 @@ new Litergy(new Date("13 Apr 2025"), "Palm Sunday", "C", "Chris", grabHymnObject
 new Litergy(new Date("17 Apr 2025"), "Holy Thursday", "C", "Chris", grabHymnObject("We Should Glory in the Cross", "Jesu, Jesu, fill us with your love", "The Lord Jesus", "Ubi Caritas", "This is my body", "Of the Glorious Body Telling", "Stay with me"))
 new Litergy(new Date("19 Apr 2025"), "Easter Vigil", "C", "Chris", grabHymnObject("Saints of God in Glory", "Water of life", "Christ be our light", "bread of life", "Thine be the Glory"))
 new Litergy(new Date("20 Apr 2025"), "Easter Sunday", "C", "Chris", grabHymnObject("Sing of the Lord's goodness", "Jesus Christ is risen today", "Alleluia, Alleluia, give thanks", "Tell out my soul"))
+new Litergy(new Date("27 Apr 2025"), "2nd Sunday of Easter", "C", "Chris", grabHymnObject("At the name of Jesus", "Now the green blade riseth", "He is Lord", "O Mother Blest"));
+new Litergy(new Date("4 May 2025"), "3rd Sunday of Easter", "C", "Chris", grabHymnObject("Crown him with many Crowns", "I will be with you", "One bread, One body", "Hail Queen of heaven"));
+
+
 
 allLitergies.sort(function (a, b) { return a.date - b.date }); //sort Liturgy array incase not sorted manually
 
@@ -300,20 +306,23 @@ document.querySelector(".liturgyPlan .flex-container").addEventListener("click",
 
             liturgyPlan.querySelector(".container").classList.remove("hidden");
             break;
-        case "Easter":
+        case "Future":
             liturgyPlan.querySelector(".container").classList.add("hidden"); //upcoming
             liturgyPlan.querySelector(".easterTitle").classList.add("selected");
             liturgyPlan.querySelector(".easterServices").classList.add("selected");
             liturgyPlan.querySelector(".container").classList.add("hidden");
 
-            wrapper.querySelector(".easterServices h4").textContent = allLitergies.filter(x => x.occasion == "Holy Thursday")[0].occasion;
-            wrapper.querySelectorAll(".easterServices h4")[1].textContent = allLitergies.filter(x => x.occasion == "Easter Vigil")[0].occasion;
-            wrapper.querySelectorAll(".easterServices h4")[2].textContent = allLitergies.filter(x => x.occasion == "Easter Sunday")[0].occasion;
+            if ((allLitergies.filter(x => x.date > todaysDate)[1]) != undefined) { wrapper.querySelector(".easterServices h4").textContent = allLitergies.filter(x => x.date > todaysDate)[1].occasion; }
+            if ((allLitergies.filter(x => x.date > todaysDate)[2]) != undefined) { wrapper.querySelectorAll(".easterServices h4")[1].textContent = allLitergies.filter(x => x.date > todaysDate)[2].occasion; }
+            if ((allLitergies.filter(x => x.date > todaysDate)[3]) != undefined) { wrapper.querySelectorAll(".easterServices h4")[2].textContent = allLitergies.filter(x => x.date > todaysDate)[3].occasion; }
+            if ((allLitergies.filter(x => x.date > todaysDate)[4]) != undefined) { wrapper.querySelectorAll(".easterServices h4")[3].textContent = allLitergies.filter(x => x.date > todaysDate)[4].occasion; }
+            if ((allLitergies.filter(x => x.date > todaysDate)[5]) != undefined) { wrapper.querySelectorAll(".easterServices h4")[4].textContent = allLitergies.filter(x => x.date > todaysDate)[5].occasion; }
+            if ((allLitergies.filter(x => x.date > todaysDate)[6]) != undefined) { wrapper.querySelectorAll(".easterServices h4")[5].textContent = allLitergies.filter(x => x.date > todaysDate)[6].occasion; }
 
             liturgyPlan.querySelector(".easterServices ul").addEventListener("click", (e) => {
-                console.log(e.target.textContent);
+                console.log(Number(e.target.classList.value) + 1);
                 allHymns = originalHymns;
-                allHymns = allLitergies.filter(x => x.occasion == e.target.textContent)[0].hymn;
+                allHymns = allLitergies.filter(x => x.date > todaysDate)[Number(e.target.classList.value) + 1].hymn;
                 count = 0;
 
                 // nextLitergy = allLitergies.filter(x => x.date >= todaysDate);

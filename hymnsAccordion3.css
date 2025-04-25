@@ -1024,3 +1024,8 @@ body {
 .playQueuedVideos {
   display: none;
 }
+.easterServices {
+  font-size: larger;
+  text-align: center;
+  line-height: 3rem;
+}
