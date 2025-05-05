@@ -102,6 +102,7 @@ for (let index = 0; index < allAcclamationSettings.length; index++) {
 new Hymn("Abide with me", 907, "", "", "https://www.youtube.com/embed/zf12lQnKlGk?si=FbBC6mn29tMilxZ5")
 new Hymn("All glory laud and honour", 229, "", "", "https://www.youtube.com/embed/eBfJyjDolwA?si=krjAwgqp2jbrq7UH")
 new Hymn("All my hope on God is founded", 959, "", "", "https://www.youtube.com/embed/YvpXiDQZNWg?si=QUf-NnCOGLoAvQ_9")
+new Hymn("All people that on earth do dwell", 466, "", "", "https://www.youtube.com/embed/xRklkCklycU?si=gb9Wv9eOr93r2eI1")
 new Hymn("All that I am", 600, "", "", "https://www.youtube.com/embed/AySM36XeEgc?si=13R1KC5qvEAZT7Bv");
 new Hymn("All things bright and beautiful", 685, "", "", "https://www.youtube.com/embed/J22y9QRFuqM?si=jBBPLSLf-QiXmGFs")
 new Hymn("Alleluia, Alleluia, give thanks", 268, "", "", "https://www.youtube.com/embed/I53k-dlUPx4?si=9z0O4UjI4ZWn2bVo");
@@ -116,8 +117,9 @@ new Hymn("Be thou my vision", 970, "", "", "https://www.youtube.com/embed/aTKoZZ
 new Hymn("Bethlehem of noblest cities", 167, "", "", "https://www.youtube.com/embed/rlbmmn9uOLg?si=H0LS3ygSKcTXnlA6")
 new Hymn("Blessed virgin mother", 361, "", ["piano"], "");
 new Hymn("Blest are you, Lord", 603, "", "", "https://www.youtube.com/embed/tsGr49LpuGI?si=p4yTl1Xy_chXtTgN");
-new Hymn("Christ be our light", 883, "", "", "https://www.youtube.com/embed/7eeBHrn2Dt0?si=tuSsdtdJwFErezsM");
 new Hymn("Bread of life", 631, "", "", "https://www.youtube.com/embed/iYKxMAn3Kfo?si=Fei0At7L0HqudqQ3");
+new Hymn("Christ be our light", 883, "", "", "https://www.youtube.com/embed/7eeBHrn2Dt0?si=tuSsdtdJwFErezsM");
+new Hymn("Come to the river", "sheet", "", "", "https://www.youtube.com/embed/JdMVQksOy6w?si=DkVs-oV-Urc36Ahk");
 new Hymn("Crown him with many crowns", 321, "", "", "https://www.youtube.com/embed/V0F-kXSwJVM?si=7xYPegtLzhWFcTsC");
 new Hymn("Daily, daily sing to Mary", 353, "", "", "https://www.youtube.com/embed/Xwkca-3GiM4?si=UE2_gA3FfHCirCC0");
 new Hymn("Dear Lord and Father of mankind", 934, "", "", "https://www.youtube.com/embed/esmn8kNV-S4?si=KvwHeScuoaG6hIEU");
@@ -129,7 +131,7 @@ new Hymn("For all the saints", 371, "", "", "https://www.youtube.com/embed/4oH4M
 new Hymn("Freely, freely", 849, "", "", "https://www.youtube.com/embed/BS1ndKgU36I?si=WxQ_TqVhrJyE184Q");
 new Hymn("Gather us in", 475, "", "", "https://www.youtube.com/embed/HuLORIyEet4?si=_nhhj7WvmOj5ojiM");
 new Hymn("Gifts of bread & wine", 643, "", "", "");
-new Hymn("God is love, his the care", 794, "", "", "")
+new Hymn("God is love, his the care", 794, "", "", "https://www.youtube.com/embed/poj6FN8wA1Q?si=qKQc0gaFUsE1dtUt")
 new Hymn("God of mercy and compassion", 840, "", "", "https://www.youtube.com/embed/dd8ddCFmyNc?si=pnH9I7ukeenS1we3");
 new Hymn("Godhead here in hiding", 660, "", "", "");
 new Hymn("Guide me O thou great redeemer", 960, "", "", "https://www.youtube.com/embed/M7h26Ev_eLQ?si=UmMJvTYTCLGqLkHm")
@@ -207,7 +209,7 @@ new Hymn("The Summons", 877, "", "", "https://www.youtube.com/embed/VFXAmB_Iq7k?
 new Hymn("The voice of God", 108, "", "", "https://www.youtube.com/embed/r9EohwMRurc?si=35hV3H_r-sr145bJ")
 new Hymn("Thine be the Glory", 287, "", "", "https://www.youtube.com/embed/6qKfVuvG2SY?si=U88MKx7w-wkrgLe7");
 new Hymn("This is my body", 627, "", "", "https://www.youtube.com/embed/O-60hfhJzqI?si=_vXX2hQT8MWV5zwl")
-new Hymn("This is my will, my one command", 921, "", "", "");
+new Hymn("This is my will, my one command", 921, "", "", "https://www.youtube.com/embed/-OXw6Lhs7u8?si=TAaIOPJx2OD3MYcu");
 new Hymn("Though the mountains my fall", 785, "", "", "https://www.youtube.com/embed/ghXT5IOzt8g?si=-ITPGRQAbQ-kBRGm");
 new Hymn("Ubi Caritas", 246, "", "", "https://www.youtube.com/embed/Vvfr_2euIFo?si=aShcg8H8_txp1nBH")
 new Hymn("Unto us is born a son", 152, "", "", "https://www.youtube.com/embed/4_4xMMpcqbM?si=RhsMJeDjUpuP2bYO");
@@ -265,8 +267,8 @@ new Litergy(new Date("19 Apr 2025"), "Easter Vigil", "C", "Chris", grabHymnObjec
 new Litergy(new Date("20 Apr 2025"), "Easter Sunday", "C", "Chris", grabHymnObject("Sing of the Lord's goodness", "Jesus Christ is risen today", "Alleluia, Alleluia, give thanks", "Tell out my soul"))
 new Litergy(new Date("27 Apr 2025"), "2nd Sunday of Easter", "C", "Chris", grabHymnObject("At the name of Jesus", "Now the green blade riseth", "He is Lord", "O Mother Blest"));
 new Litergy(new Date("4 May 2025"), "3rd Sunday of Easter", "C", "Chris", grabHymnObject("Crown him with many Crowns", "I will be with you", "One bread, One body", "Hail Queen of heaven"));
-
-
+new Litergy(new Date("11 May 2025"), "4th Sunday of Easter", "C", "Chris", grabHymnObject("Our God reigns", "Come to the river", "The Lord's my Shepherd", "All people that on earth do dwell", "immaculate Mary"))
+new Litergy(new Date("18 May 2025"), "5th Sunday of Easter", "C", "Chris", grabHymnObject("God is love, his the care", "This is my will, my one command", "This is my body", "As I kneel before you"))
 
 allLitergies.sort(function (a, b) { return a.date - b.date }); //sort Liturgy array incase not sorted manually
 
