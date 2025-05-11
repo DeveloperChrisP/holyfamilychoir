@@ -62,7 +62,7 @@ function grabAcclamationObject(massTitle) {
 
 }
 
-new Acclamation("Mass of Christ the Saviour", "Glory to God", "", ["sab", "alto", "bass", "piano"], "https://www.youtube.com/embed/oeKKr2xIFMg?si=UTR02G3kyx-Hus-A")
+new Acclamation("Mass of Christ the Saviour", "Glory to God", "./sheetMusic/Glory To God (Schutte Liturgy).pdf", ["sab", "alto", "bass", "piano"], "https://www.youtube.com/embed/oeKKr2xIFMg?si=UTR02G3kyx-Hus-A")
 new Acclamation("Mass of Christ the Saviour", "Holy holy", "", ["SAB", "melody", "alto", "bass"], "https://www.youtube.com/embed/LsFxjynY5dw?si=-xN5UmeR6stjopkt")
 new Acclamation("Mass of Christ the Saviour", "We proclaim your death", "", "", "https://www.youtube.com/embed/slLLVzWzQWg?si=2LqjV5sjar3PxuSD")
 new Acclamation("Mass of Christ the Saviour", "When we eat this bread", "", "", "https://www.youtube.com/embed/I-72zONivNQ?si=fvRRp56uvagvTfRm")
@@ -84,10 +84,14 @@ new Acclamation("Mass of Hope", "Save us, saviour", "", "", "https://www.youtube
 new Acclamation("Mass of Hope", "Great Amen", "", ["melody", "piano"], "https://www.youtube.com/embed/PC8Fl0CAWB8?si=CsDSavSKw_6fwM1f&start=390");
 new Acclamation("Mass of Hope", "Lamb of God (Creation)", "", ["SATB", "melody", "alto", "tenor", "bass", "piano"], "https://www.youtube.com/embed/_KlqHDoGLzE?si=FOKHV82msHsXCsGJ");
 
+new Acclamation("Simple Mass", "Holy holy", "./sheetMusic/Holy Holy (Simple Mass).pdf", "", "")
+new Acclamation("Simple Mass", "Lamb of God", "./sheetMusic/Lamb of God (Simple Mass).pdf", "", "")
+
 
 new AcclamationSetting("Mass of Christ the Saviour", "Dan Schutte", grabAcclamationObject("Mass of Christ the Saviour"))
 new AcclamationSetting("Mass of Creation", "Marty Haugen", grabAcclamationObject("Mass of Creation"))
 new AcclamationSetting("Mass of Hope", "Bernadette Farrell", grabAcclamationObject("Mass of Hope"))
+new AcclamationSetting("Simple Mass", "unknown", grabAcclamationObject("Simple Mass"))
 
 for (let index = 0; index < allAcclamationSettings.length; index++) {
     const element = document.querySelectorAll(".acclamations h4")[index];
@@ -99,7 +103,9 @@ for (let index = 0; index < allAcclamationSettings.length; index++) {
     element.textContent = allAcclamationSettings[index].composer;
 }
 
+new Hymn("A new commandment", 920, "", "", "https://www.youtube.com/embed/aqM2Ujl7Aas?si=GyuGykvyaGV3dFZI");
 new Hymn("Abide with me", 907, "", "", "https://www.youtube.com/embed/zf12lQnKlGk?si=FbBC6mn29tMilxZ5")
+new Hymn("All are welcome", 458, "", "", "https://www.youtube.com/embed/GlnVLP0qFEo?si=ndG5RjVx8SuVLSNs")
 new Hymn("All glory laud and honour", 229, "", "", "https://www.youtube.com/embed/eBfJyjDolwA?si=krjAwgqp2jbrq7UH")
 new Hymn("All my hope on God is founded", 959, "", "", "https://www.youtube.com/embed/YvpXiDQZNWg?si=QUf-NnCOGLoAvQ_9")
 new Hymn("All people that on earth do dwell", 466, "", "", "https://www.youtube.com/embed/xRklkCklycU?si=gb9Wv9eOr93r2eI1")
@@ -118,6 +124,8 @@ new Hymn("Bethlehem of noblest cities", 167, "", "", "https://www.youtube.com/em
 new Hymn("Blessed virgin mother", 361, "", ["piano"], "");
 new Hymn("Blest are you, Lord", 603, "", "", "https://www.youtube.com/embed/tsGr49LpuGI?si=p4yTl1Xy_chXtTgN");
 new Hymn("Bread of life", 631, "", "", "https://www.youtube.com/embed/iYKxMAn3Kfo?si=Fei0At7L0HqudqQ3");
+new Hymn("Breathe on me, Breath of God", 302, "", "", "https://www.youtube.com/embed/vzQo2p5LGkA?si=Rmp9LEeAMoc1d4L4")
+new Hymn("Christ be beside me", 910, "", "", "https://www.youtube.com/embed/KNkWoy5uVh8?si=38stRqmtz_7Bswpd")
 new Hymn("Christ be our light", 883, "", "", "https://www.youtube.com/embed/7eeBHrn2Dt0?si=tuSsdtdJwFErezsM");
 new Hymn("Come to the river", "sheet", "", "", "https://www.youtube.com/embed/JdMVQksOy6w?si=DkVs-oV-Urc36Ahk");
 new Hymn("Crown him with many crowns", 321, "", "", "https://www.youtube.com/embed/V0F-kXSwJVM?si=7xYPegtLzhWFcTsC");
@@ -126,14 +134,16 @@ new Hymn("Dear Lord and Father of mankind", 934, "", "", "https://www.youtube.co
 new Hymn("Do not be afraid", 972, "", "", "https://www.youtube.com/embed/v2rO0LhSWJ0?si=FQY4vdhRmNNUhdrf");
 new Hymn("Eternal Father, strong to save", 963, "", "", "https://www.youtube.com/embed/7VrraIIjabo?si=nuwA52iq9beMhqOz");
 new Hymn("Father, I place into your hands", 971, "", "", "https://www.youtube.com/embed/zBfRNrvvUfc?si=h6RYtmp33PcqireD")
+new Hymn("Fight the good fight", 860, "", "", "https://www.youtube.com/embed/YppcFC8mxKM?si=KSYOrbld0nXJNYtb")
 new Hymn("Follow me, follow me", 863, "", "", "https://www.youtube.com/embed/fzkP3jy8BEM?si=f4M8NvoxXceQJcbr");
 new Hymn("For all the saints", 371, "", "", "https://www.youtube.com/embed/4oH4MujfUFw?si=YmzoVg4NAViggZEY");
+new Hymn("For the beauty of the Earth", 726 + "(166)", "", "", "https://www.youtube.com/embed/O9wt2BYM2lo?si=vANAJNfHG3RmXCHa")
 new Hymn("Freely, freely", 849, "", "", "https://www.youtube.com/embed/BS1ndKgU36I?si=WxQ_TqVhrJyE184Q");
 new Hymn("Gather us in", 475, "", "", "https://www.youtube.com/embed/HuLORIyEet4?si=_nhhj7WvmOj5ojiM");
-new Hymn("Gifts of bread & wine", 643, "", "", "");
+new Hymn("Gifts of bread & wine", 643, "", "", "https://www.youtube.com/embed/c-AussFcZws?si=mjMWSMWt-20tjcA_");
 new Hymn("God is love, his the care", 794, "", "", "https://www.youtube.com/embed/poj6FN8wA1Q?si=qKQc0gaFUsE1dtUt")
 new Hymn("God of mercy and compassion", 840, "", "", "https://www.youtube.com/embed/dd8ddCFmyNc?si=pnH9I7ukeenS1we3");
-new Hymn("Godhead here in hiding", 660, "", "", "");
+new Hymn("Godhead here in hiding", 660, "", "", "https://www.youtube.com/embed/cqHIf5DYF2c?si=C84lGCj3tZZlXQ-4");
 new Hymn("Guide me O thou great redeemer", 960, "", "", "https://www.youtube.com/embed/M7h26Ev_eLQ?si=UmMJvTYTCLGqLkHm")
 new Hymn("Hail Queen of heaven", 356, "", "", "https://www.youtube.com/embed/xfkPTmry3zI?si=SkUYW9G4hlpippRf");
 new Hymn("Hark the Herald Angels Sing", 155, "", "", "https://www.youtube.com/embed/9Bwn0k0k8xI?si=vilS4HDunUKoLrlC");
@@ -141,7 +151,9 @@ new Hymn("He is Lord", 761, "", "", "https://www.youtube.com/embed/BrJEATD5jq8?s
 new Hymn("He who would valiant be", 862, "", "", "https://www.youtube.com/embed/AD7W92d4jmE?si=t6gu0qjlx4gG3Het")
 new Hymn("Here I am, Lord", 865, "", "", "");
 new Hymn("Here we bring you", "", "./sheetMusic/Here We Bring You.pdf", ["piano"], "");
+new Hymn("Holy Forever", "n/a", "", "", "https://www.youtube.com/embed/VhdAZ2aQtBk?si=EFlxlkTKBo3aAkd0")
 new Hymn("Holy is his name", 339, "", "", "https://www.youtube.com/embed/uILEUS4fyQg?si=mMs3PRADRaNuBI2s")
+new Hymn("Holy Spirit, Lord of Light", 301, "", "", "https://www.youtube.com/embed/hC5_ZzZV4oM?si=5WvF3hm6TLutm_Gb")
 new Hymn("Holy virgin by God's decree", 366, "", "", "https://www.youtube.com/embed/aJZhYBXse2g?si=j7DLVkqiusbcid97");
 new Hymn("Hosea (Come back to me)", 842, "", "", "https://www.youtube.com/embed/i1ntir3qgdY?si=p3aFA_z5k_semATg");
 new Hymn("How great though art", 721, "", "", "https://www.youtube.com/embed/i6cuVLzUVKY?si=7p65giWxScRq43UW")
@@ -149,7 +161,7 @@ new Hymn("I heard the voice of Jesus say", 795, "", "", "https://www.youtube.com
 new Hymn("I vow to thee my country", "", "", "", "https://www.youtube.com/embed/hY9mtoKNeas?si=5Pk8fN_aiqk894Ok")
 new Hymn("I will be with you", 866, "", "", "https://www.youtube.com/embed/RL0CBsiXXl0?si=WrdvI2zJnnygDiHS");
 new Hymn("I'll sing a hymn to Mary", 355, "", "", "https://www.youtube.com/embed/SB3Rc2gXGH8?si=-pVYf2yLsbBscT0e");
-new Hymn("Immaculate Mary", 365, "", "", "https://www.youtube.com/embed/hXqTGl6mbYg?si=62ZRgf9GcBlBYmM0");
+new Hymn("Immaculate Mary", 365, "", "", "https://www.youtube.com/embed/PcrFbTixYAA?si=HF43bqSi82D-OVlV");
 new Hymn("Immortal, invisible", 725, "", "", "https://www.youtube.com/embed/lmefJS09fKE?si=5cKzvl1vDm-9QeNn")
 new Hymn("In bread we bring you, Lord", 609, "", "", "");
 new Hymn("In the bleak mid-winter", 144, "", "", "https://www.youtube.com/embed/cBCYZ9jIJkI?si=7IfiGM2MqBrA1q6t");
@@ -165,17 +177,19 @@ new Hymn("Let all mortal flesh", 607, "", "", "");
 new Hymn("Long ago prophets knew", 116, "", "", "https://www.youtube.com/embed/OeLA1LhqFA4?si=Y_jd5YhNoRzLi9ae");
 new Hymn("Love divine, all loves excelling", 801, "", "", "https://www.youtube.com/embed/cu5zgfKMbAU?si=zNiaaCx1SNydoh4F");
 new Hymn("Make me a channel of your peace", 898, "", "", "https://www.youtube.com/embed/C8QYMvsp7VI?si=Jpymro5PI9Jj33jb")
-new Hymn("My song is love unknown", 752, "", "", "");
+new Hymn("Mary immaculate, star of the morning", 363, "", "", "https://www.youtube.com/embed/S3-ZL66lwmc?si=VZrkx1go1x1MRd1C")
+new Hymn("My song is love unknown", 752, "", "", "https://www.youtube.com/embed/Nv2bipRf1xo?si=EULjdoDQMr-asu6d");
 new Hymn("Now the green blade riseth", 278, "", "", "https://www.youtube.com/embed/t_-6-VKu8SM?si=lhMNDR8p0egeFFeM")
 new Hymn("O bread of heaven", 662, "", "", "");
 new Hymn("O Come all ye faithful", 159, "", "", "https://www.youtube.com/embed/8ZYZEr3JtZY?si=ZRXVkFmw8cKqnLO1");
 new Hymn("O God, our help in ages past", 955, "", "", "https://www.youtube.com/embed/9USHRbF5vbw?si=JVlRT-iodda8kmt0");
 new Hymn("O God you search me", 779, "", "", "https://www.youtube.com/embed/PuKwXVWdyEs?si=_GhYqdnASsZtXxXV");
-new Hymn("O lady, full of God's own grace", "-----", "", "", "https://www.youtube.com/embed/V2HW50l46fo?si=GxFnbCyFOqbDFbwk");
+new Hymn("O lady, full of God's own grace", "1031", "", "", "https://www.youtube.com/embed/V2HW50l46fo?si=GxFnbCyFOqbDFbwk");
 new Hymn("O let all who thirst", 408, "", "", "https://www.youtube.com/embed/MwG6PCWnih0?si=qltwXx5awggq5kJp");
 new Hymn("O Mary Conceived In The Grace Of Your Son", 354, "", ["piano"], "");
 new Hymn("O Mother Blest", 364, "", "", "https://www.youtube.com/embed/Nb7PchC-p04?si=N_d9mCYKGQG5nhst");
 new Hymn("O purest of creatures", 347, "", "", "https://www.youtube.com/embed/NFBb5g2tXgk?si=j58XTHjmY4JXkuFm");
+new Hymn("O Worship the King", 683, "", "", "https://www.youtube.com/embed/25mleGwF1QM?si=rHAF34l7XMI8cpMh")
 new Hymn("Of the glorious body telling", 247, "", "", "https://www.youtube.com/embed/9nVBNxfJ-oA?si=nOVzHJhwpwvkZRD3")
 new Hymn("On Christmas night all Christians sing", 134, "", "", "https://www.youtube.com/embed/wxaLyJ5G4zM?si=ntSZgM5_fK_rTuF-");
 new Hymn("On Jordan's bank", 94, "", "", "https://www.youtube.com/embed/OVHkMWwnGWk?si=jIJKo6aQAzqYlVFL")
@@ -191,9 +205,10 @@ new Hymn("Silent Night", 136, "./sheetMusic/SilentNight.pdf", ["satb", "melody",
 new Hymn("Sing of Mary, pure and lowly", 341, "", "", "https://www.youtube.com/embed/Ap6Hym_ERQM?si=dN6iC0-7Wsk2DXnz");
 new Hymn("Sing of the Lord's Goodness", 713, "", "", "https://www.youtube.com/embed/xzTXl_jA-XQ?si=4Poy3GZQvRYyieDe")
 new Hymn("Sing we of the blessed Mother", 344, "", "", "https://www.youtube.com/embed/zYZ4MbY5kG0?si=2NTmZecGpeCPOkvP");
-new Hymn("Sweet Sacrament Divine", 663, "", "", ""); 9
 new Hymn("Shine Jesus shine", 770, "", "", "https://www.youtube.com/embed/nC5CCWZu3c4?si=6gQLvMf6z_GntZlh");
+new Hymn("Soul of my saviour", 938, "", "", "https://www.youtube.com/embed/2AdFNZfGpSs?si=7XC-fDreDy8k-mPP")
 new Hymn("Stay with me", 249, "", "", "https://www.youtube.com/embed/FCr2tn4yYKY?si=aDsPK3waY6YgSzTZ")
+new Hymn("Sweet Sacrament Divine", 663, "", "", "https://www.youtube.com/embed/6N1IfoGFF-I?si=4SrRraG5OQcqP0KN");
 new Hymn("Take our bread", 605, "", "", "");
 new Hymn("Tell out my soul", 880, "", "", "https://www.youtube.com/embed/A59pfx4sb2Q?si=2CAw8d2OBfjEWvFT");
 new Hymn("The angel Gabriel", 113, "", "", "https://www.youtube.com/embed/pliqObTHxUQ?si=n-iBUx5I6ggQvds1");
@@ -214,12 +229,14 @@ new Hymn("Though the mountains my fall", 785, "", "", "https://www.youtube.com/e
 new Hymn("Ubi Caritas", 246, "", "", "https://www.youtube.com/embed/Vvfr_2euIFo?si=aShcg8H8_txp1nBH")
 new Hymn("Unto us is born a son", 152, "", "", "https://www.youtube.com/embed/4_4xMMpcqbM?si=RhsMJeDjUpuP2bYO");
 new Hymn("Upon thy table", 606, "", "", "https://www.youtube.com/embed/mTKeKMu0shs?si=G-bRZOzNwJniaYWw");
+new Hymn("Virgin wholly marvellous", "cfe 761 (tune349)", "", "", "https://www.youtube.com/embed/pWoCNeVNHuw?si=6Q3BXHqgR85IESkM")
 new Hymn("Water of life", 512, "", "", "https://www.youtube.com/embed/p153CSsGRxs?si=_yModMrXNcTu4vYm");
 new Hymn("We have a gospel to proclaim", 852, "", "", "https://www.youtube.com/embed/OXlojQCipg4?si=fxCJvBdV-nCFq-It");
 new Hymn("We Should Glory in the Cross", "-", "", ["piano"])
 new Hymn("We three kings", 170, "", "", "https://www.youtube.com/embed/Lx35_DRIZ8g?si=bCTGGMdpULJm0UDc");
 new Hymn("Were you there", 225, "", "", "https://www.youtube.com/embed/7z1SwwFopJk?si=HdluGOjnErTcgVdP");
 new Hymn("What child is this", 145, "", "", "https://www.youtube.com/embed/6jroBAl3WW8?si=kZEj9G4qmknU1RlB");
+new Hymn("When I survey the Wondrous Cross", 756, "", "", "https://www.youtube.com/embed/YSh1uU7xpdo?si=h_b1saj9HxZTLxCk")
 new Hymn("Where are you bound, Mary?", 343, "", "", "https://www.youtube.com/embed/rPWOEZzNhxM?si=w_alalLvviuN7AX5");
 
 //specify litergys
@@ -269,6 +286,16 @@ new Litergy(new Date("27 Apr 2025"), "2nd Sunday of Easter", "C", "Chris", grabH
 new Litergy(new Date("4 May 2025"), "3rd Sunday of Easter", "C", "Chris", grabHymnObject("Crown him with many Crowns", "I will be with you", "One bread, One body", "Hail Queen of heaven"));
 new Litergy(new Date("11 May 2025"), "4th Sunday of Easter", "C", "Chris", grabHymnObject("Our God reigns", "Come to the river", "The Lord's my Shepherd", "All people that on earth do dwell", "immaculate Mary"))
 new Litergy(new Date("18 May 2025"), "5th Sunday of Easter", "C", "Chris", grabHymnObject("God is love, his the care", "This is my will, my one command", "This is my body", "As I kneel before you"))
+new Litergy(new Date("25 May 2025"), "6th Sunday of Easter", "C", "Julian", grabHymnObject("Love divine all loves excelling", "Dear Lord and father of mankind", "A new commandment", "Christ be our light"))
+new Litergy(new Date("1 Jun 2025"), "Ascension Sunday", "C", "Julian", grabHymnObject("I heard the voice of Jesus say", "Alleluia, Sing to Jesus", "Fight the Good Fight", "Mary Immaculate, Star of the morning"))
+new Litergy(new Date("8 Jun 2025"), "Pentecost Sunday", "C", "Julian", grabHymnObject("Shine Jesus Shine", "Holy Spirit Lord of Light", "Breathe on me, breath of God", "O Lady full of God's own grace"))
+new Litergy(new Date("15 Jun 2025"), "Trinity Sunday", "C", "Julian", grabHymnObject("Eternal Father, Strong to save", "Lead us, heavenly Father", "For the beauty of the Earth", "I'll sing a Hymn to Mary"))
+new Litergy(new Date("22 Jun 2025"), "Corpus Christi", "C", "Julian", grabHymnObject("Gather us in", "At the lamb's high feast", "Godhead here in hiding", "O mother blest"))
+new Litergy(new Date("29 Jun 2025"), "St Peter & St Paul", "C", "Julian", grabHymnObject("Follow me, follow me", "My Song is love unknown", "Be thou my vision", "Sing of Mary pure and lowly"))
+new Litergy(new Date("6 Jul 2025"), "14th Sunday of Ordinary Time", "C", "Julian", grabHymnObject("Praise my soul the King of Heaven", "Gifts of bread & wine", "Soul of my saviour", "Hail Queen of Heaven"))
+new Litergy(new Date("13 Jul 2025"), "15th Sunday of Ordinary Time", "C", "Julian", grabHymnObject("God is Love, His the care", "O Worship the King", "The Church's One Foundation", "O Purest of Creatures"))
+new Litergy(new Date("20 Jul 2025"), "16th Sunday of Ordinary Time", "C", "Julian", grabHymnObject("All are welcome", "Bread of life", "Christ be beside me", "Daily daily sing to Mary"))
+new Litergy(new Date("27 Jul 2025"), "17th Sunday of Ordinary Time", "C", "Julian", grabHymnObject("He who would valiant be", "Sweet Sacrament Divine", "When I survey the Wondrous Cross", "Virgin Wholly Marvellous"))
 
 allLitergies.sort(function (a, b) { return a.date - b.date }); //sort Liturgy array incase not sorted manually
 
@@ -300,7 +327,7 @@ document.querySelector(".liturgyPlan .flex-container").addEventListener("click",
 
             liturgyPlan.querySelector(".container").classList.add("hidden");
             break;
-        case "Hymns":
+        case "Next Up":
             // liturgyPlan.querySelector(".acclamationsTitle").classList.remove("selected");
             liturgyPlan.querySelector(".hymnsTitle", ".hymns").classList.add("selected");
             // liturgyPlan.querySelector(".acclamations").classList.remove("selected");
@@ -320,6 +347,10 @@ document.querySelector(".liturgyPlan .flex-container").addEventListener("click",
             if ((allLitergies.filter(x => x.date > todaysDate)[4]) != undefined) { wrapper.querySelectorAll(".easterServices h4")[3].textContent = allLitergies.filter(x => x.date > todaysDate)[4].occasion; }
             if ((allLitergies.filter(x => x.date > todaysDate)[5]) != undefined) { wrapper.querySelectorAll(".easterServices h4")[4].textContent = allLitergies.filter(x => x.date > todaysDate)[5].occasion; }
             if ((allLitergies.filter(x => x.date > todaysDate)[6]) != undefined) { wrapper.querySelectorAll(".easterServices h4")[5].textContent = allLitergies.filter(x => x.date > todaysDate)[6].occasion; }
+            if ((allLitergies.filter(x => x.date > todaysDate)[7]) != undefined) { wrapper.querySelectorAll(".easterServices h4")[6].textContent = allLitergies.filter(x => x.date > todaysDate)[7].occasion; }
+            if ((allLitergies.filter(x => x.date > todaysDate)[8]) != undefined) { wrapper.querySelectorAll(".easterServices h4")[7].textContent = allLitergies.filter(x => x.date > todaysDate)[8].occasion; }
+            if ((allLitergies.filter(x => x.date > todaysDate)[9]) != undefined) { wrapper.querySelectorAll(".easterServices h4")[8].textContent = allLitergies.filter(x => x.date > todaysDate)[9].occasion; }
+            if ((allLitergies.filter(x => x.date > todaysDate)[10]) != undefined) { wrapper.querySelectorAll(".easterServices h4")[9].textContent = allLitergies.filter(x => x.date > todaysDate)[10].occasion; }
 
             liturgyPlan.querySelector(".easterServices ul").addEventListener("click", (e) => {
                 console.log(Number(e.target.classList.value) + 1);
@@ -418,6 +449,10 @@ if (nextLitergy[0] != undefined) {
     if (nextLitergy[0].hymn.length > 7) {
         wrapper.querySelector("#hymn8").textContent = nextLitergy[0].hymn[7].title;
         wrapper.querySelector("#hymnReference8").textContent = nextLitergy[0].hymn[7].hymnNumber;
+    }
+    if (nextLitergy[0].hymn.length > 8) {
+        wrapper.querySelector("#hymn9").textContent = nextLitergy[0].hymn[8].title;
+        wrapper.querySelector("#hymnReference9").textContent = nextLitergy[0].hymn[8].hymnNumber;
     }
 }
 
