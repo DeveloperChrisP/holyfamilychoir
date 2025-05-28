@@ -84,7 +84,7 @@ new Acclamation("Mass of Hope", "Save us, saviour", "", "", "https://www.youtube
 new Acclamation("Mass of Hope", "Great Amen", "", ["melody", "piano"], "https://www.youtube.com/embed/PC8Fl0CAWB8?si=CsDSavSKw_6fwM1f&start=390");
 new Acclamation("Mass of Hope", "Lamb of God (Creation)", "", ["SATB", "melody", "alto", "tenor", "bass", "piano"], "https://www.youtube.com/embed/_KlqHDoGLzE?si=FOKHV82msHsXCsGJ");
 
-new Acclamation("Simple Mass", "Holy holy", "./sheetMusic/Holy Holy (Simple Mass).pdf", ["satb","melody","alto","tenor","bass","piano"], "")
+new Acclamation("Simple Mass", "Holy holy", "./sheetMusic/Holy Holy (Simple Mass).pdf", ["satb", "melody", "alto", "tenor", "bass", "piano"], "")
 new Acclamation("Simple Mass", "Lamb of God", "./sheetMusic/Lamb of God (Simple Mass).pdf", "", "")
 
 
@@ -103,6 +103,7 @@ for (let index = 0; index < allAcclamationSettings.length; index++) {
     element.textContent = allAcclamationSettings[index].composer;
 }
 
+new Hymn("A hymn of glory let us sing!", "sheet", "", "", "https://www.youtube.com/embed/fWLdhI9zZbs?si=s5xONlEFIr-KQDbp")
 new Hymn("A new commandment", 920, "", "", "https://www.youtube.com/embed/aqM2Ujl7Aas?si=GyuGykvyaGV3dFZI");
 new Hymn("Abide with me", 907, "", "", "https://www.youtube.com/embed/zf12lQnKlGk?si=FbBC6mn29tMilxZ5")
 new Hymn("All are welcome", 458, "", "", "https://www.youtube.com/embed/GlnVLP0qFEo?si=ndG5RjVx8SuVLSNs")
@@ -287,7 +288,8 @@ new Litergy(new Date("4 May 2025"), "3rd Sunday of Easter", "C", "Chris", grabHy
 new Litergy(new Date("11 May 2025"), "4th Sunday of Easter", "C", "Chris", grabHymnObject("Our God reigns", "Come to the river", "The Lord's my Shepherd", "All people that on earth do dwell", "immaculate Mary"))
 new Litergy(new Date("18 May 2025"), "5th Sunday of Easter", "C", "Chris", grabHymnObject("God is love, his the care", "This is my will, my one command", "This is my body", "As I kneel before you"))
 new Litergy(new Date("25 May 2025"), "6th Sunday of Easter", "C", "Julian", grabHymnObject("Love divine all loves excelling", "Dear Lord and father of mankind", "A new commandment", "Christ be our light"))
-new Litergy(new Date("1 Jun 2025"), "Ascension Sunday", "C", "Julian", grabHymnObject("I heard the voice of Jesus say", "Alleluia, Sing to Jesus", "Fight the Good Fight", "Mary Immaculate, Star of the morning"))
+new Litergy(new Date("29 May 2025"), "Ascension of Our Lord", "C", "Chris", grabHymnObject("A hymn of glory let us sing!", "He is Lord", "This is my body", "Crown him with many crowns"))
+new Litergy(new Date("1 Jun 2025"), "7th Sunday of Easter", "C", "Julian", grabHymnObject("I heard the voice of Jesus say", "Alleluia, Sing to Jesus", "Fight the Good Fight", "Mary Immaculate, Star of the morning"))
 new Litergy(new Date("8 Jun 2025"), "Pentecost Sunday", "C", "Julian", grabHymnObject("Shine Jesus Shine", "Holy Spirit Lord of Light", "Breathe on me, breath of God", "O Lady full of God's own grace"))
 new Litergy(new Date("15 Jun 2025"), "Trinity Sunday", "C", "Julian", grabHymnObject("Eternal Father, Strong to save", "Lead us, heavenly Father", "For the beauty of the Earth", "I'll sing a Hymn to Mary"))
 new Litergy(new Date("22 Jun 2025"), "Corpus Christi", "C", "Julian", grabHymnObject("Gather us in", "At the lamb's high feast", "Godhead here in hiding", "O mother blest"))
@@ -296,6 +298,10 @@ new Litergy(new Date("6 Jul 2025"), "14th Sunday of Ordinary Time", "C", "Julian
 new Litergy(new Date("13 Jul 2025"), "15th Sunday of Ordinary Time", "C", "Julian", grabHymnObject("God is Love, His the care", "O Worship the King", "The Church's One Foundation", "O Purest of Creatures"))
 new Litergy(new Date("20 Jul 2025"), "16th Sunday of Ordinary Time", "C", "Julian", grabHymnObject("All are welcome", "Bread of life", "Christ be beside me", "Daily daily sing to Mary"))
 new Litergy(new Date("27 Jul 2025"), "17th Sunday of Ordinary Time", "C", "Julian", grabHymnObject("He who would valiant be", "Sweet Sacrament Divine", "When I survey the Wondrous Cross", "Virgin Wholly Marvellous"))
+
+
+
+
 
 allLitergies.sort(function (a, b) { return a.date - b.date }); //sort Liturgy array incase not sorted manually
 
@@ -381,6 +387,8 @@ const todaysDate = new Date();
 
 const nextLitergy = allLitergies.filter(x => x.date >= todaysDate);
 const originalHymns = allHymns;
+
+if (nextLitergy[0].date.getDay() != 7) { nextLitergy[0].date.setHours(19); } // If next Litergy is not a Sunday - set time to 19:30 (so Next Up Litergy remains for evening masses)
 
 wrapper.querySelector(".acclamations").addEventListener("click", function (e) {
     console.log(e.target.classList.value);
