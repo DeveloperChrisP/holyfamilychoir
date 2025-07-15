@@ -92,8 +92,12 @@ body {
 	flex-direction: column;
 	/* gap:var(--_panel-gap); */
 	width: 100%;
+	/* display: none; */
 	/*  */
 	/* transform: translateY(-5rem); */
+}
+.hidden {
+	display: none;
 }
 .accordion.halfGap {
 	gap: calc(var(--_panel-gap) / 2);
@@ -841,9 +845,9 @@ body {
 .liturgyPlan {
 	--liturgyTransition: 1s;
 	--lavishFont: 'Lavishly Yours', serif;
-	--lavishSizeSmall: 1rem;
-	--lavishSizeBig: 2.4rem;
-
+	--lavishSizeSmall: 2rem;
+	--lavishSizeBig: 3.4rem;
+	min-height: max-content;
 	height: fit-content;
 	width: 100%;
 	padding: calc(var(--_panel-padding) * 2);

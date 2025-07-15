@@ -7,6 +7,11 @@ let allHymns = [];
 togglePanels();
 function togglePanels() {
 	const allPanels = document.querySelectorAll('.accordion_panel');
+	const mainPanel = document.querySelector('.accordion');
+	const navArrows = document.querySelector('.hymnSelect');
+
+	navArrows.classList.toggle('hidden');
+	mainPanel.classList.toggle('hidden');
 	allPanels.forEach((panel) => {
 		panel.classList.toggle('hidden');
 	});
