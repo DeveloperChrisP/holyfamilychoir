@@ -392,6 +392,7 @@ document.querySelector(".liturgyPlan .flex-container").addEventListener("click",
                 // nextLitergy = allLitergies.filter(x => x.date >= todaysDate);
                 hymnSelect();
                 wrapper.querySelector(".liturgyPlan").classList.add("hidden");
+                togglePanels();
 
             })
 
