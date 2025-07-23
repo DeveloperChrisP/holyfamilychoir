@@ -17,8 +17,8 @@ function togglePanels() {
     });
     document.querySelector(".wrapper").classList.toggle("restrictHeight");
 }
-wrapper.addEventListener('pointerdown', dragButtonsStartingPosition, false);
-wrapper.addEventListener("pointerup", endOfTouch);
+// wrapper.addEventListener('pointerdown', dragButtonsStartingPosition, false);
+// wrapper.addEventListener("pointerup", endOfTouch);
 const queuedVideos = [];
 function Hymn(title, hymnNumber, sheetMusic, vocalPart, video) {
     this.title = title;
@@ -33,13 +33,13 @@ allLitergies = [];
 const allAcclamations = [];
 const allAcclamationSettings = [];
 
-function Litergy(date, occasion, year, selector, hymn) {
+function Litergy(date, occasion, year, selector, hymn, instrumental) {
     this.date = date;
     this.occasion = occasion;
     this.year = year;
     this.selector = selector;
     this.hymn = hymn;
-
+    this.instrumental = instrumental;
     date.setHours(10); date.setMinutes(30);
     allLitergies.push(this);
 }
@@ -115,6 +115,7 @@ for (let index = 0; index < allAcclamationSettings.length; index++) {
     element.textContent = allAcclamationSettings[index].composer;
 }
 
+new Hymn("10,000 reasons", "sheet", "./sheetMusic/10,000 Reasons (Bless The Lord) (G) - sheet music.pdf", "", "https://www.youtube.com/embed/XtwIT8JjddM?si=nEiKqySIOsHt8SG_")
 new Hymn("A hymn of glory let us sing!", "sheet", "", "", "https://www.youtube.com/embed/fWLdhI9zZbs?si=s5xONlEFIr-KQDbp")
 new Hymn("A new commandment", 920, "", "", "https://www.youtube.com/embed/aqM2Ujl7Aas?si=GyuGykvyaGV3dFZI");
 new Hymn("Abide with me", 907, "", "", "https://www.youtube.com/embed/zf12lQnKlGk?si=FbBC6mn29tMilxZ5")
@@ -128,6 +129,7 @@ new Hymn("Alleluia, Alleluia, give thanks", 268, "", "", "https://www.youtube.co
 new Hymn("Alleluia, sing to Jesus", 644, "", "", "https://www.youtube.com/embed/UJDWFYIkBns?si=FjlGK0j-FEm0vRXU");
 new Hymn("Amazing Grace", 846, "", "", "https://www.youtube.com/embed/HsCp5LG_zNE?si=SVRmh5evJYOhTVy8");
 new Hymn("As I kneel before you", 360, "", "", "https://www.youtube.com/embed/BYv6E9xnJ1U?si=W5qvVIl1dVdmlVEA");
+new Hymn("As the deer longs", 214, "", "", "https://www.youtube.com/embed/oENImc-U1dc?si=29REO6eWepKuJCVY")
 new Hymn("As with gladness men of old", 166, "", "", "https://www.youtube.com/embed/y-TplMYH0Ko?si=abx_LTDZfoet_c44");
 new Hymn("At the lamb's high feast", 269, "", "", "https://www.youtube.com/embed/XklMKDpm8kk?si=EP3BSMl2nRpv8jY0");
 new Hymn("At the name of Jesus", 762, "", "", "https://www.youtube.com/embed/_7w-tDjlpgk?si=3Qk7NpB35c6_TRa4");
@@ -135,6 +137,7 @@ new Hymn("Be still and know I am with you", 968, "", "", "https://www.youtube.co
 new Hymn("Be still for the presence of the Lord", 720, "", "", "https://www.youtube.com/embed/2-xp3v3d0dQ?si=iXQswQmsOQEGJa6a");
 new Hymn("Be thou my vision", 970, "", "", "https://www.youtube.com/embed/aTKoZZL8XRQ?si=ZqaqqxpVc38IscsA");
 new Hymn("Bethlehem of noblest cities", 167, "", "", "https://www.youtube.com/embed/rlbmmn9uOLg?si=H0LS3ygSKcTXnlA6")
+new Hymn("Bless the Lord, my soul", 813, "", "", "https://www.youtube.com/embed/3y_2ZStGV58?si=JoCK3Ay47AX9uGpT");
 new Hymn("Blessed virgin mother", 361, "", ["piano"], "");
 new Hymn("Blest are you, Lord", 603, "", "", "https://www.youtube.com/embed/tsGr49LpuGI?si=p4yTl1Xy_chXtTgN");
 new Hymn("Bread of life", 631, "", "", "https://www.youtube.com/embed/iYKxMAn3Kfo?si=Fei0At7L0HqudqQ3");
@@ -189,6 +192,8 @@ new Hymn("Jesus Christ is risen today", 267, "", "", "https://www.youtube.com/em
 new Hymn("Lay your hands", 432, "", "", "https://www.youtube.com/embed/q5UvY7itnn8?si=tRTETqvYEvcjjvSg");
 new Hymn("Lead us, heavenly father", 315, "", "", "https://www.youtube.com/embed/JYB2YEuKTLg?si=LSjAqn9RViSsTBHZ");
 new Hymn("Let all mortal flesh", 607, "", "", "");
+new Hymn("Laudate Dominum", 698, "", "", "https://www.youtube.com/embed/N-A5VL37DGY?si=LLDn5VU97RwY4TyG")
+new Hymn("Laudate Dominum2", 730, "", "", "https://www.youtube.com/embed/41gigcgbRnY?si=rKvYekxlPwipk1p3")
 new Hymn("Long ago prophets knew", 116, "", "", "https://www.youtube.com/embed/OeLA1LhqFA4?si=Y_jd5YhNoRzLi9ae");
 new Hymn("Lord of all hopefulness", 969, "", "", "https://www.youtube.com/embed/fxEuqZ_4iI0?si=vxAYvDdp-QoMbhzO");
 new Hymn("Love divine, all loves excelling", 801, "", "", "https://www.youtube.com/embed/cu5zgfKMbAU?si=zNiaaCx1SNydoh4F");
@@ -204,6 +209,7 @@ new Hymn("O God, our help in ages past", 955, "", "", "https://www.youtube.com/e
 new Hymn("O God you search me", 779, "", "", "https://www.youtube.com/embed/PuKwXVWdyEs?si=_GhYqdnASsZtXxXV");
 new Hymn("O lady, full of God's own grace", "1031", "", "", "https://www.youtube.com/embed/V2HW50l46fo?si=GxFnbCyFOqbDFbwk");
 new Hymn("O let all who thirst", 408, "", "", "https://www.youtube.com/embed/MwG6PCWnih0?si=qltwXx5awggq5kJp");
+new Hymn("O Lord hear my prayer", 929, "", "", "https://www.youtube.com/embed/npjgYMt2pHc?si=rgQ2VlIwKSI-j7bi")
 new Hymn("O Lord my God", 721, "", "", "https://www.youtube.com/embed/i6cuVLzUVKY?si=7p65giWxScRq43UW")
 new Hymn("O Mary Conceived In The Grace Of Your Son", 354, "", ["piano"], "");
 new Hymn("O Mother Blest", 364, "", "", "https://www.youtube.com/embed/Nb7PchC-p04?si=N_d9mCYKGQG5nhst");
@@ -319,12 +325,12 @@ new Litergy(new Date("13 Jul 2025"), "15th Sunday in Ordinary Time", "C", "Julia
 new Litergy(new Date("20 Jul 2025"), "16th Sunday in Ordinary Time", "C", "Julian", grabHymnObject("All are welcome", "Bread of life", "Christ be beside me", "Daily daily sing to Mary"))
 new Litergy(new Date("27 Jul 2025"), "17th Sunday in Ordinary Time", "C", "Julian", grabHymnObject("He who would valiant be", "Sweet Sacrament Divine", "When I survey the Wondrous Cross", "Virgin Wholly Marvellous"))
 new Litergy(new Date("3 Aug 2025"), "18th Sunday in Ordinary Time", "C", "Chris", grabHymnObject('Dear Lord and Father of Mankind', 'Take our bread', 'All my hope on God is founded', "I'll sing a hymn to Mary"))
-new Litergy(new Date("10 Aug 2025"), "19th Sunday in Ordinary Time", "C", "Chris", grabHymnObject("O Lord my God", "Do not be afraid", "This is my body", "Holy Virgin, by God's decree"))
+new Litergy(new Date("10 Aug 2025"), "19th Sunday in Ordinary Time", "C", "Chris", grabHymnObject("O Lord my God", "Do not be afraid", "This is my body", "Holy Virgin, by God's decree"), grabHymnObject("Bless the Lord, my soul", "10,000 reasons"))
 new Litergy(new Date("14 Aug 2025"), "The Assumption of the Blessed Virgin Mary", "C", "Chris", grabHymnObject("I'll sing a hymn to Mary", "O Mother blest", "Holy is his name", "As I kneel before you"))
-new Litergy(new Date("17 Aug 2025"), "20th Sunday in Ordinary Time", "C", "Chris", grabHymnObject("The Church's one foundation", "I am the bread of life", "Be still for the presence of the Lord", "Sing we of the blessed Mother"))
-new Litergy(new Date("24 Aug 2025"), "21st Sunday in Ordinary Time", "C", "Chris", grabHymnObject("Tell out my soul", "Alleluia Sing to Jesus", "One bread, one body", "Hail, Queen of heaven"))
-new Litergy(new Date("31 Aug 2025"), "22nd Sunday in Ordinary Time", "C", "Chris", grabHymnObject("Christ is our King", "Whatsoever you do", "The servant song", "Sing of Mary, pure and lowly"))
-new Litergy(new Date("7 Sep 2025"), "23rd Sunday in Ordinary Time", "C", "Chris", grabHymnObject("Lord of all hopefulness", "The Summons", "All that I am", "My soul proclaims you, mighty God"))
+new Litergy(new Date("17 Aug 2025"), "20th Sunday in Ordinary Time", "C", "Chris", grabHymnObject("The Church's one foundation", "I am the bread of life", "Be still for the presence of the Lord", "Sing we of the blessed Mother"), grabHymnObject("My song is love unknown"))
+new Litergy(new Date("24 Aug 2025"), "21st Sunday in Ordinary Time", "C", "Chris", grabHymnObject("Tell out my soul", "Alleluia Sing to Jesus", "One bread, one body", "Hail, Queen of heaven"), grabHymnObject("Laudate Dominum", "Laudate Dominum2"))
+new Litergy(new Date("31 Aug 2025"), "22nd Sunday in Ordinary Time", "C", "Chris", grabHymnObject("Christ is our King", "Whatsoever you do", "The servant song", "Sing of Mary, pure and lowly"), grabHymnObject("O Lord hear my prayer"))
+new Litergy(new Date("7 Sep 2025"), "23rd Sunday in Ordinary Time", "C", "Chris", grabHymnObject("Lord of all hopefulness", "The Summons", "All that I am", "My soul proclaims you, mighty God"), grabHymnObject("As the deer longs"))
 
 
 
@@ -387,6 +393,10 @@ document.querySelector(".liturgyPlan .flex-container").addEventListener("click",
                 console.log(Number(e.target.classList.value) + 1);
                 allHymns = originalHymns;
                 allHymns = allLitergies.filter(x => x.date > todaysDate)[Number(e.target.classList.value) + 1].hymn;
+                const chosenLiturgy = allLitergies.filter(x => x.date > todaysDate)[Number(e.target.classList.value) + 1];
+                if (chosenLiturgy.instrumental != undefined) {
+                    allHymns = allHymns.concat(chosenLiturgy.instrumental);
+                }
                 count = 0;
 
                 // nextLitergy = allLitergies.filter(x => x.date >= todaysDate);
@@ -413,6 +423,10 @@ const todaysDate = new Date();
 
 const nextLitergy = allLitergies.filter(x => x.date >= todaysDate);
 const originalHymns = allHymns;
+function instrumentalSection() {
+    // Add 'Extras' title and additional hymns if 'instrumental' hymn is added to 'current liturgy
+
+}
 
 if (nextLitergy[0].date.getDay() != 7) { nextLitergy[0].date.setHours(19); } // If next Litergy is not a Sunday - set time to 19:30 (so Next Up Litergy remains for evening masses)
 
@@ -427,9 +441,13 @@ wrapper.querySelector(".acclamations").addEventListener("click", function (e) {
     togglePanels();
 });
 
-wrapper.querySelector("#nextDateButton").closest("li").addEventListener("click", function () {
+wrapper.querySelector(".liturgyContents.hymns.selected").addEventListener("click", function () {
     allHymns = originalHymns;
-    allHymns = nextLitergy[0].hymn;
+    if (nextLitergy[0].instrumental == undefined) { allHymns = (nextLitergy[0].hymn) } else {
+        allHymns = (nextLitergy[0].hymn).concat(nextLitergy[0].instrumental);
+    }
+    console.log(allHymns);
+    // .concat(nextLitergy[0].instrumental);
     count = 0;
     hymnSelect();
     wrapper.querySelector(".liturgyPlan").classList.add("hidden");
@@ -450,44 +468,97 @@ if (nextLitergy[0] != undefined) {
 
     wrapper.querySelector("#nextDate").textContent = ordinal(nextLitergy[0].date.toLocaleDateString(undefined, { day: "numeric" })) + " of " + nextLitergy[0].date.toLocaleDateString(undefined, { month: "long" });
     wrapper.querySelector("#nextOccasion").textContent = nextLitergy[0].occasion;
+    let x = 0;
+    //populate hymn titles with nexthymn object
+    nextLitergy[0].hymn.forEach((hymn, idx) => {
+        const hymnText = wrapper.querySelector(`#hymn${idx + 1}`);
+        const hymnRef = wrapper.querySelector(`#hymnReference${idx + 1}`);
+        hymnText.textContent = nextLitergy[0].hymn[idx].title;
+        hymnRef.textContent = nextLitergy[0].hymn[idx].hymnNumber;
+        x++;
 
+    })
+    //unhide blank title & title ref numbers
+    const nextHymnArray = wrapper.querySelectorAll('#nextHymns h6');
+    nextHymnArray.forEach((hymn, idx) => {
+        hymn.classList.remove('hidden');
+        wrapper.querySelectorAll('#nextHymns h4')[idx].classList.remove('hidden');
 
-    if (nextLitergy[0].hymn.length > 0) {
-        wrapper.querySelector("#hymn1").textContent = nextLitergy[0].hymn[0].title;
-        wrapper.querySelector("#hymnReference1").textContent = nextLitergy[0].hymn[0].hymnNumber;
+    })
+    //hide blank titles and title reference numbers
+    for (let index = x; index < nextHymnArray.length; index++) {
+        const element = wrapper.querySelectorAll('#nextHymns h6')[index];
+        const element2 = wrapper.querySelectorAll('#nextHymns h4')[index];
+        element.classList.add('hidden');
+        element2.classList.add('hidden');
     }
-    if (nextLitergy[0].hymn.length > 1) {
-        wrapper.querySelector("#hymn2").textContent = nextLitergy[0].hymn[1].title;
-        wrapper.querySelector("#hymnReference2").textContent = nextLitergy[0].hymn[1].hymnNumber;
+    console.log(x);
+    // if (nextLitergy[0].hymn.length > 0) {
+    //     wrapper.querySelector("#hymn1").textContent = nextLitergy[0].hymn[0].title;
+    //     wrapper.querySelector("#hymnReference1").textContent = nextLitergy[0].hymn[0].hymnNumber;
+    // }
+    // else if (nextLitergy[0].hymn.length > 1) {
+    //     wrapper.querySelector("#hymn2").textContent = nextLitergy[0].hymn[1].title;
+    //     wrapper.querySelector("#hymnReference2").textContent = nextLitergy[0].hymn[1].hymnNumber;
+    // }
+    // else if (nextLitergy[0].hymn.length > 2) {
+    //     wrapper.querySelector("#hymn3").textContent = nextLitergy[0].hymn[2].title;
+    //     wrapper.querySelector("#hymnReference3").textContent = nextLitergy[0].hymn[2].hymnNumber;
+    // }
+    // else if (nextLitergy[0].hymn.length > 3) {
+    //     wrapper.querySelector("#hymn4").textContent = nextLitergy[0].hymn[3].title;
+    //     wrapper.querySelector("#hymnReference4").textContent = nextLitergy[0].hymn[3].hymnNumber;
+    // }
+    // else if (nextLitergy[0].hymn.length > 4) {
+    //     wrapper.querySelector("#hymn5").textContent = nextLitergy[0].hymn[4].title;
+    //     wrapper.querySelector("#hymnReference5").textContent = nextLitergy[0].hymn[4].hymnNumber;
+    // }
+    // else if (nextLitergy[0].hymn.length > 5) {
+    //     wrapper.querySelector("#hymn6").textContent = nextLitergy[0].hymn[5].title;
+    //     wrapper.querySelector("#hymnReference6").textContent = nextLitergy[0].hymn[5].hymnNumber;
+    // }
+    // else if (nextLitergy[0].hymn.length > 6) {
+    //     wrapper.querySelector("#hymn7").textContent = nextLitergy[0].hymn[6].title;
+    //     wrapper.querySelector("#hymnReference7").textContent = nextLitergy[0].hymn[6].hymnNumber;
+    // }
+    // else if (nextLitergy[0].hymn.length > 7) {
+    //     wrapper.querySelector("#hymn8").textContent = nextLitergy[0].hymn[7].title;
+    //     wrapper.querySelector("#hymnReference8").textContent = nextLitergy[0].hymn[7].hymnNumber;
+    // }
+    // else if (nextLitergy[0].hymn.length > 8) {
+    //     wrapper.querySelector("#hymn9").textContent = nextLitergy[0].hymn[8].title;
+    //     wrapper.querySelector("#hymnReference9").textContent = nextLitergy[0].hymn[8].hymnNumber;
+    // }
+    //unhide 'extras' title, if 'instrumental' category is included in 'Liturgy' file of 'nextliturgy'.
+    const instrumentalTitle = document.querySelector('.extras')
+    if (nextLitergy[0].instrumental) {
+        instrumentalTitle.classList.remove('hidden');
+        populateInstrumentals();
     }
-    if (nextLitergy[0].hymn.length > 2) {
-        wrapper.querySelector("#hymn3").textContent = nextLitergy[0].hymn[2].title;
-        wrapper.querySelector("#hymnReference3").textContent = nextLitergy[0].hymn[2].hymnNumber;
+    //populate hymn titles with nexthymn object
+    function populateInstrumentals() {
+        nextLitergy[0].instrumental.forEach((hymn, idx) => {
+            const hymnText = wrapper.querySelector(`#extra${idx + 1}`);
+            const hymnRef = wrapper.querySelector(`#extraReference${idx + 1}`);
+            hymnText.textContent = nextLitergy[0].instrumental[idx].title;
+            hymnRef.textContent = nextLitergy[0].instrumental[idx].hymnNumber;
+        })
     }
-    if (nextLitergy[0].hymn.length > 3) {
-        wrapper.querySelector("#hymn4").textContent = nextLitergy[0].hymn[3].title;
-        wrapper.querySelector("#hymnReference4").textContent = nextLitergy[0].hymn[3].hymnNumber;
-    }
-    if (nextLitergy[0].hymn.length > 4) {
-        wrapper.querySelector("#hymn5").textContent = nextLitergy[0].hymn[4].title;
-        wrapper.querySelector("#hymnReference5").textContent = nextLitergy[0].hymn[4].hymnNumber;
-    }
-    if (nextLitergy[0].hymn.length > 5) {
-        wrapper.querySelector("#hymn6").textContent = nextLitergy[0].hymn[5].title;
-        wrapper.querySelector("#hymnReference6").textContent = nextLitergy[0].hymn[5].hymnNumber;
-    }
-    if (nextLitergy[0].hymn.length > 6) {
-        wrapper.querySelector("#hymn7").textContent = nextLitergy[0].hymn[6].title;
-        wrapper.querySelector("#hymnReference7").textContent = nextLitergy[0].hymn[6].hymnNumber;
-    }
-    if (nextLitergy[0].hymn.length > 7) {
-        wrapper.querySelector("#hymn8").textContent = nextLitergy[0].hymn[7].title;
-        wrapper.querySelector("#hymnReference8").textContent = nextLitergy[0].hymn[7].hymnNumber;
-    }
-    if (nextLitergy[0].hymn.length > 8) {
-        wrapper.querySelector("#hymn9").textContent = nextLitergy[0].hymn[8].title;
-        wrapper.querySelector("#hymnReference9").textContent = nextLitergy[0].hymn[8].hymnNumber;
-    }
+
+    // if (nextLitergy[0].instrumental) {
+    //     if (nextLitergy[0].instrumental.length <= 1) {
+    //         wrapper.querySelector("#extra1").textContent = nextLitergy[0].instrumental[0].title;
+    //         wrapper.querySelector("#extraReference1").textContent = nextLitergy[0].instrumental[0].hymnNumber;
+    //     }
+    //     else if (nextLitergy[0].hymn.length <= 2) {
+    //         wrapper.querySelector("#extra2").textContent = nextLitergy[0].instrumental[1].title;
+    //         wrapper.querySelector("#extraReference2").textContent = nextLitergy[0].instrumental[1].hymnNumber;
+    //     }
+    //     else if (nextLitergy[0].hymn.length <= 2) {
+    //         wrapper.querySelector("#extra3").textContent = nextLitergy[0].instrumental[2].title;
+    //         wrapper.querySelector("#extra3").textContent = nextLitergy[0].instrumental[2].hymnNumber;
+    //     }
+    // }
 }
 
 
