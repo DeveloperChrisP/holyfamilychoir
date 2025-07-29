@@ -1,3 +1,5 @@
+// const { createElement } = require("react");
+
 var accordion = document.querySelector("article.accordion");
 var wrapper = document.querySelector(".wrapper");
 var count;
@@ -337,7 +339,10 @@ new Litergy(new Date("7 Sep 2025"), "23rd Sunday in Ordinary Time", "C", "Chris"
 allLitergies.sort(function (a, b) { return a.date - b.date }); //sort Liturgy array incase not sorted manually
 
 document.querySelector(".liturgyPlan .flex-container").addEventListener("click", (e) => {
-    const clickedText = e.target.textContent;
+    if (!e.target.closest('button')) { return }
+    const clickedText = e.target.closest('button').textContent;
+    function makeCategorySelection() { }
+
     const liturgyPlan = document.querySelector(".liturgyPlan");
     const selectionButtons = document.querySelectorAll(".liturgyPlan .flex-container button");
     const selectionContent = wrapper.querySelectorAll(".container-HymnsAcclamations .liturgyContents");
@@ -353,7 +358,7 @@ document.querySelector(".liturgyPlan .flex-container").addEventListener("click",
         element.classList.add("hidden")
     }
 
-
+    console.log(clickedText)
     switch (clickedText) {
         case "Acclamations":
 
@@ -378,33 +383,128 @@ document.querySelector(".liturgyPlan .flex-container").addEventListener("click",
             liturgyPlan.querySelector(".easterServices").classList.add("selected");
             liturgyPlan.querySelector(".container").classList.add("hidden");
 
-            if ((allLitergies.filter(x => x.date > todaysDate)[1]) != undefined) { wrapper.querySelector(".easterServices h4").textContent = allLitergies.filter(x => x.date > todaysDate)[1].occasion; }
-            if ((allLitergies.filter(x => x.date > todaysDate)[2]) != undefined) { wrapper.querySelectorAll(".easterServices h4")[1].textContent = allLitergies.filter(x => x.date > todaysDate)[2].occasion; }
-            if ((allLitergies.filter(x => x.date > todaysDate)[3]) != undefined) { wrapper.querySelectorAll(".easterServices h4")[2].textContent = allLitergies.filter(x => x.date > todaysDate)[3].occasion; }
-            if ((allLitergies.filter(x => x.date > todaysDate)[4]) != undefined) { wrapper.querySelectorAll(".easterServices h4")[3].textContent = allLitergies.filter(x => x.date > todaysDate)[4].occasion; }
-            if ((allLitergies.filter(x => x.date > todaysDate)[5]) != undefined) { wrapper.querySelectorAll(".easterServices h4")[4].textContent = allLitergies.filter(x => x.date > todaysDate)[5].occasion; }
-            if ((allLitergies.filter(x => x.date > todaysDate)[6]) != undefined) { wrapper.querySelectorAll(".easterServices h4")[5].textContent = allLitergies.filter(x => x.date > todaysDate)[6].occasion; }
-            if ((allLitergies.filter(x => x.date > todaysDate)[7]) != undefined) { wrapper.querySelectorAll(".easterServices h4")[6].textContent = allLitergies.filter(x => x.date > todaysDate)[7].occasion; }
-            if ((allLitergies.filter(x => x.date > todaysDate)[8]) != undefined) { wrapper.querySelectorAll(".easterServices h4")[7].textContent = allLitergies.filter(x => x.date > todaysDate)[8].occasion; }
-            if ((allLitergies.filter(x => x.date > todaysDate)[9]) != undefined) { wrapper.querySelectorAll(".easterServices h4")[8].textContent = allLitergies.filter(x => x.date > todaysDate)[9].occasion; }
-            if ((allLitergies.filter(x => x.date > todaysDate)[10]) != undefined) { wrapper.querySelectorAll(".easterServices h4")[9].textContent = allLitergies.filter(x => x.date > todaysDate)[10].occasion; }
+            const futureTitles = wrapper.querySelectorAll(".easterServices h4")
+            const futureContent = wrapper.querySelectorAll('.easterServices li')
+            function checkAndPopulateInstrumentals(number) {
 
-            liturgyPlan.querySelector(".easterServices ul").addEventListener("click", (e) => {
-                console.log(Number(e.target.classList.value) + 1);
-                allHymns = originalHymns;
-                allHymns = allLitergies.filter(x => x.date > todaysDate)[Number(e.target.classList.value) + 1].hymn;
-                const chosenLiturgy = allLitergies.filter(x => x.date > todaysDate)[Number(e.target.classList.value) + 1];
-                if (chosenLiturgy.instrumental != undefined) {
-                    allHymns = allHymns.concat(chosenLiturgy.instrumental);
+                if (nextLitergy[number + 1].instrumental) {
+                    // console.log(nextLitergy[number + 1]);
+                    const instrumentalsDiv = document.createElement('div')
+                    instrumentalsDiv.classList.add('futureHymnsOpen', 'extras_future')
+                    const instrumentalsTitle = document.createElement('h2')
+
+                    document.createTextNode('Choir Extras');
+                    const list = document.createElement('ul');
+
+                    instrumentalsDiv.appendChild(instrumentalsTitle).appendChild(document.createTextNode('Choir Extras'));
+                    // .appendChild(document.createElement('h2'));
+                    instrumentalsDiv.appendChild(list)
+                    nextLitergy[number + 1].instrumental.forEach((hymn, idx) => {
+
+
+
+                        instrumentalsDiv.appendChild(list).appendChild(document.createElement('li')).appendChild(document.createElement('h4')).appendChild(document.createTextNode(hymn.title))
+                    })
+
+                    futureContent[number].append(instrumentalsDiv);
                 }
-                count = 0;
 
-                // nextLitergy = allLitergies.filter(x => x.date >= todaysDate);
-                hymnSelect();
-                wrapper.querySelector(".liturgyPlan").classList.add("hidden");
-                togglePanels();
 
-            })
+
+            }
+            function addElement(addOrRemove, number) {
+                const hymnsObjectArray = (allLitergies.filter(x => x.date > todaysDate)[number].hymn);
+                if (addOrRemove === 'add') {
+                    const newDiv = document.createElement("div");
+                    newDiv.classList.add('futureHymnsOpen')
+                    hymnsObjectArray.forEach((hymn, idx) => {
+
+                        // create a new div element
+                        const newH6 = document.createElement("h6");
+
+                        // and give it some content
+                        const hymnText = allLitergies.filter(x => x.date > todaysDate)[number + 1].hymn[idx].title
+                        const newContent = document.createTextNode(hymnText);
+
+                        // add the text node to the newly created div
+                        newH6.appendChild(newContent);
+                        newDiv.appendChild(newH6)
+                        // add the newly created element and its content into the DOM
+
+                    })
+                    futureContent[number].appendChild(newDiv);
+                    checkAndPopulateInstrumentals(number);
+                } else {
+                    // const newDiv = wrapper.querySelectorAll(futureContent);
+                    // console.log(futureContent[number])
+                    const allCreatedDivs = futureContent[number].querySelectorAll('.futureHymnsOpen');
+                    allCreatedDivs.forEach((div) => { futureContent[number].removeChild(div) });
+                    // futureContent[number].removeChild(futureContent[number].querySelector('.extras_future'));
+
+                }
+            }
+
+            allLitergies.filter(x => x.date > todaysDate)[1].hymn.forEach((hymn, idx) => {
+            });
+
+
+
+
+            if ((allLitergies.filter(x => x.date > todaysDate)[1]) != undefined) { futureTitles[0].textContent = allLitergies.filter(x => x.date > todaysDate)[1].occasion; }
+            if ((allLitergies.filter(x => x.date > todaysDate)[2]) != undefined) { futureTitles[1].textContent = allLitergies.filter(x => x.date > todaysDate)[2].occasion; }
+            if ((allLitergies.filter(x => x.date > todaysDate)[3]) != undefined) { futureTitles[2].textContent = allLitergies.filter(x => x.date > todaysDate)[3].occasion; }
+            if ((allLitergies.filter(x => x.date > todaysDate)[4]) != undefined) { futureTitles[3].textContent = allLitergies.filter(x => x.date > todaysDate)[4].occasion; }
+            if ((allLitergies.filter(x => x.date > todaysDate)[5]) != undefined) { futureTitles[4].textContent = allLitergies.filter(x => x.date > todaysDate)[5].occasion; }
+            if ((allLitergies.filter(x => x.date > todaysDate)[6]) != undefined) { futureTitles[5].textContent = allLitergies.filter(x => x.date > todaysDate)[6].occasion; }
+            if ((allLitergies.filter(x => x.date > todaysDate)[7]) != undefined) { futureTitles[6].textContent = allLitergies.filter(x => x.date > todaysDate)[7].occasion; }
+            if ((allLitergies.filter(x => x.date > todaysDate)[8]) != undefined) { futureTitles[7].textContent = allLitergies.filter(x => x.date > todaysDate)[8].occasion; }
+            if ((allLitergies.filter(x => x.date > todaysDate)[9]) != undefined) { futureTitles[8].textContent = allLitergies.filter(x => x.date > todaysDate)[9].occasion; }
+            if ((allLitergies.filter(x => x.date > todaysDate)[10]) != undefined) { futureTitles[9].textContent = allLitergies.filter(x => x.date > todaysDate)[10].occasion; }
+
+            //open/close up hymn list in future hymns
+            liturgyPlan.querySelector(".easterServices ul").addEventListener("click", (e) => {
+                console.log(e.target.closest('li'))
+                const closestDivFirstClass = e.target.closest('div').classList[0]
+                // console.log(closestDivFirstClass)
+                if (closestDivFirstClass !== 'futureHymnsOpen') {
+                    // console.log(e.target.classList)
+
+                    const activeTitle = wrapper.querySelectorAll('.easterServices li')
+                    if (e.target.closest('li').classList.value !== 'active') {
+                        // console.log(e.target.closest('li').classList.value)
+                        e.target.closest('li').classList.add('active');
+                        addElement('add', e.target.closest('li').id - 1);
+                    }
+                    else {
+                        // console.log(e.target.closest('li').id - 1)
+                        addElement('remove', e.target.closest('li').id - 1);
+                        e.target.closest('li').classList.remove('active');
+                    }
+
+                }
+                //further open hymns if selected
+                else {
+
+
+
+                    // liturgyPlan.querySelector(".easterServices ul").addEventListener("click", (e) => {
+                    // console.log(Number(e.target.classList.value) + 1);
+                    allHymns = originalHymns;
+                    allHymns = allLitergies.filter(x => x.date > todaysDate)[Number(e.target.closest('li').id)].hymn;
+                    const chosenLiturgy = allLitergies.filter(x => x.date > todaysDate)[Number(e.target.closest('li').id)];
+                    if (chosenLiturgy.instrumental != undefined) {
+                        allHymns = allHymns.concat(chosenLiturgy.instrumental);
+                    }
+                    count = 0;
+
+                    // nextLitergy = allLitergies.filter(x => x.date >= todaysDate);
+                    hymnSelect();
+                    wrapper.querySelector(".liturgyPlan").classList.add("hidden");
+                    togglePanels();
+
+                    // })
+                }
+            });
 
             break;
 
@@ -412,6 +512,7 @@ document.querySelector(".liturgyPlan .flex-container").addEventListener("click",
         default:
             break;
     }
+
 });
 
 const todaysDate = new Date();
@@ -431,7 +532,7 @@ function instrumentalSection() {
 if (nextLitergy[0].date.getDay() != 7) { nextLitergy[0].date.setHours(19); } // If next Litergy is not a Sunday - set time to 19:30 (so Next Up Litergy remains for evening masses)
 
 wrapper.querySelector(".acclamations").addEventListener("click", function (e) {
-    console.log(e.target.classList.value);
+    // console.log(e.target.classList.value);
     massTitle = e.target.textContent;
     allHymns = originalHymns;
     allHymns = allAcclamationSettings[e.target.classList.value].acclamation;
@@ -446,7 +547,7 @@ wrapper.querySelector(".liturgyContents.hymns.selected").addEventListener("click
     if (nextLitergy[0].instrumental == undefined) { allHymns = (nextLitergy[0].hymn) } else {
         allHymns = (nextLitergy[0].hymn).concat(nextLitergy[0].instrumental);
     }
-    console.log(allHymns);
+
     // .concat(nextLitergy[0].instrumental);
     count = 0;
     hymnSelect();
@@ -492,7 +593,7 @@ if (nextLitergy[0] != undefined) {
         element.classList.add('hidden');
         element2.classList.add('hidden');
     }
-    console.log(x);
+    // console.log(x);
     // if (nextLitergy[0].hymn.length > 0) {
     //     wrapper.querySelector("#hymn1").textContent = nextLitergy[0].hymn[0].title;
     //     wrapper.querySelector("#hymnReference1").textContent = nextLitergy[0].hymn[0].hymnNumber;
@@ -821,7 +922,7 @@ accordion.addEventListener("click", (e) => {
 
         //  filename = "not happening"
         // }
-        console.log(filename);
+        // console.log(filename);
         document.querySelector("#mediaPlayer__light").removeAttribute("class");
         // document.querySelector("#title").removeAttribute("class");
 
@@ -1080,7 +1181,7 @@ function removeSpaces(sentence) {
 
 
 function scroll(e) {
-    console.log(e);
+    // console.log(e);
     const allPanels = e.target.parentElement.parentElement.querySelectorAll(".accordion_panel");
 
     //add transition time for scroll function
