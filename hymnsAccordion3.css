@@ -929,27 +929,47 @@ body {
 	transition: all 1s;
 	height: fit-content;
 }
+.liturgyContents ul {
+	text-align: left;
+}
+.liturgyContents ul li.active {
+	padding: 1rem;
+	width: fit-content;
+	border-radius: 20px;
+	background-color: rgb(208, 208, 50);
+	transition: height 2s;
+	margin: 0.5rem 0;
+}
 .hymns ol {
 	list-style-type: none;
 }
 #nextHymns,
-#extraHymns {
+#extraHymns,
+.futureHymnsOpen,
+.extras_future li {
 	display: grid;
 	grid-template-columns: min-content 1fr;
 	gap: 0.5rem;
 	align-items: baseline;
+	text-align: left;
+}
+.extras_future {
+	display: block;
 }
 #nextHymns h6,
-#extraHymns h6 {
+#extraHymns h6,
+.futureHymnsOpen h6 {
 	font-family: var(--lavishFont);
 	font-size: var(--lavishSizeSmall);
 	color: rgba(128, 128, 128, 0.366);
 }
-.extras h2 {
+.extras h2,
+.extras_future h2 {
 	font-family: var(--lavishFont);
 	font-size: var(--lavishSizeBig);
 	font-style: italic;
 	text-decoration: underline;
+	margin: 1rem 0 0.5rem 0;
 }
 
 .container2 {

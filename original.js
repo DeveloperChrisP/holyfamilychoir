@@ -1,5 +1,7 @@
 // const { createElement } = require("react");
 
+// const { createElement } = require("react");
+
 var accordion = document.querySelector("article.accordion");
 var wrapper = document.querySelector(".wrapper");
 var count;
@@ -358,7 +360,7 @@ document.querySelector(".liturgyPlan .flex-container").addEventListener("click",
         element.classList.add("hidden")
     }
 
-    console.log(clickedText)
+    // console.log(clickedText)
     switch (clickedText) {
         case "Acclamations":
 
@@ -393,20 +395,27 @@ document.querySelector(".liturgyPlan .flex-container").addEventListener("click",
                     instrumentalsDiv.classList.add('futureHymnsOpen', 'extras_future')
                     const instrumentalsTitle = document.createElement('h2')
 
-                    document.createTextNode('Choir Extras');
-                    const list = document.createElement('ul');
 
+
+                    // document.createTextNode('Choir Extras');
+                    const list = document.createElement('ul');
                     instrumentalsDiv.appendChild(instrumentalsTitle).appendChild(document.createTextNode('Choir Extras'));
                     // .appendChild(document.createElement('h2'));
-                    instrumentalsDiv.appendChild(list)
+                    const newFile = instrumentalsDiv.appendChild(list)
+                    newFile;
                     nextLitergy[number + 1].instrumental.forEach((hymn, idx) => {
+                        const createLi = document.createElement('li')
+                        const createH6 = document.createElement('h6')
+                        const createH4 = document.createElement('h4')
+                        const refText = document.createTextNode(hymn.hymnNumber)
+                        const titleText = document.createTextNode(hymn.title)
 
-
-
-                        instrumentalsDiv.appendChild(list).appendChild(document.createElement('li')).appendChild(document.createElement('h4')).appendChild(document.createTextNode(hymn.title))
+                        newFile.appendChild(createLi).append(createH6, createH4);
+                        createH6.appendChild(refText)
+                        createH4.appendChild(titleText)
                     })
-
-                    futureContent[number].append(instrumentalsDiv);
+                    instrumentalsDiv.append(newFile);
+                    futureContent[number].appendChild(instrumentalsDiv);
                 }
 
 
@@ -420,15 +429,19 @@ document.querySelector(".liturgyPlan .flex-container").addEventListener("click",
                     hymnsObjectArray.forEach((hymn, idx) => {
 
                         // create a new div element
-                        const newH6 = document.createElement("h6");
-
+                        const newH4 = document.createElement('h4');
+                        let newH6 = document.createElement('h6');
                         // and give it some content
                         const hymnText = allLitergies.filter(x => x.date > todaysDate)[number + 1].hymn[idx].title
+                        const hymnRef = allLitergies.filter(x => x.date > todaysDate)[number + 1].hymn[idx].hymnNumber
                         const newContent = document.createTextNode(hymnText);
+                        newH6.appendChild(document.createTextNode(hymnRef));
 
+                        newH4.appendChild(newContent);
                         // add the text node to the newly created div
-                        newH6.appendChild(newContent);
+
                         newDiv.appendChild(newH6)
+                        newDiv.appendChild(newH4)
                         // add the newly created element and its content into the DOM
 
                     })
@@ -463,7 +476,7 @@ document.querySelector(".liturgyPlan .flex-container").addEventListener("click",
 
             //open/close up hymn list in future hymns
             liturgyPlan.querySelector(".easterServices ul").addEventListener("click", (e) => {
-                console.log(e.target.closest('li'))
+                // console.log(e.target.closest('li'))
                 const closestDivFirstClass = e.target.closest('div').classList[0]
                 // console.log(closestDivFirstClass)
                 if (closestDivFirstClass !== 'futureHymnsOpen') {
@@ -490,8 +503,8 @@ document.querySelector(".liturgyPlan .flex-container").addEventListener("click",
                     // liturgyPlan.querySelector(".easterServices ul").addEventListener("click", (e) => {
                     // console.log(Number(e.target.classList.value) + 1);
                     allHymns = originalHymns;
-                    allHymns = allLitergies.filter(x => x.date > todaysDate)[Number(e.target.closest('li').id)].hymn;
-                    const chosenLiturgy = allLitergies.filter(x => x.date > todaysDate)[Number(e.target.closest('li').id)];
+                    allHymns = allLitergies.filter(x => x.date > todaysDate)[Number(e.target.closest('li.active').id)].hymn;
+                    const chosenLiturgy = allLitergies.filter(x => x.date > todaysDate)[Number(e.target.closest('li.active  ').id)];
                     if (chosenLiturgy.instrumental != undefined) {
                         allHymns = allHymns.concat(chosenLiturgy.instrumental);
                     }
