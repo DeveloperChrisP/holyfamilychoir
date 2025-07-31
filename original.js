@@ -197,7 +197,7 @@ new Hymn("Lay your hands", 432, "", "", "https://www.youtube.com/embed/q5UvY7itn
 new Hymn("Lead us, heavenly father", 315, "", "", "https://www.youtube.com/embed/JYB2YEuKTLg?si=LSjAqn9RViSsTBHZ");
 new Hymn("Let all mortal flesh", 607, "", "", "");
 new Hymn("Laudate Dominum", 698, "", "", "https://www.youtube.com/embed/N-A5VL37DGY?si=LLDn5VU97RwY4TyG")
-new Hymn("Laudate Dominum2", 730, "", "", "https://www.youtube.com/embed/41gigcgbRnY?si=rKvYekxlPwipk1p3")
+new Hymn("Laudate Dominum2", 730, "", "", "https://www.youtube.com/embed/JXWFKSPCJ-4?si=SxZ8L0LVtC1kMoD3")
 new Hymn("Long ago prophets knew", 116, "", "", "https://www.youtube.com/embed/OeLA1LhqFA4?si=Y_jd5YhNoRzLi9ae");
 new Hymn("Lord of all hopefulness", 969, "", "", "https://www.youtube.com/embed/fxEuqZ_4iI0?si=vxAYvDdp-QoMbhzO");
 new Hymn("Love divine, all loves excelling", 801, "", "", "https://www.youtube.com/embed/cu5zgfKMbAU?si=zNiaaCx1SNydoh4F");
@@ -386,81 +386,6 @@ document.querySelector(".liturgyPlan .flex-container").addEventListener("click",
             liturgyPlan.querySelector(".container").classList.add("hidden");
 
             const futureTitles = wrapper.querySelectorAll(".easterServices h4")
-            const futureContent = wrapper.querySelectorAll('.easterServices li')
-            function checkAndPopulateInstrumentals(number) {
-
-                if (nextLitergy[number + 1].instrumental) {
-                    // console.log(nextLitergy[number + 1]);
-                    const instrumentalsDiv = document.createElement('div')
-                    instrumentalsDiv.classList.add('futureHymnsOpen', 'extras_future')
-                    const instrumentalsTitle = document.createElement('h2')
-
-
-
-                    // document.createTextNode('Choir Extras');
-                    const list = document.createElement('ul');
-                    instrumentalsDiv.appendChild(instrumentalsTitle).appendChild(document.createTextNode('Choir Extras'));
-                    // .appendChild(document.createElement('h2'));
-                    const newFile = instrumentalsDiv.appendChild(list)
-                    newFile;
-                    nextLitergy[number + 1].instrumental.forEach((hymn, idx) => {
-                        const createLi = document.createElement('li')
-                        const createH6 = document.createElement('h6')
-                        const createH4 = document.createElement('h4')
-                        const refText = document.createTextNode(hymn.hymnNumber)
-                        const titleText = document.createTextNode(hymn.title)
-
-                        newFile.appendChild(createLi).append(createH6, createH4);
-                        createH6.appendChild(refText)
-                        createH4.appendChild(titleText)
-                    })
-                    instrumentalsDiv.append(newFile);
-                    futureContent[number].appendChild(instrumentalsDiv);
-                }
-
-
-
-            }
-            function addElement(addOrRemove, number) {
-                const hymnsObjectArray = (allLitergies.filter(x => x.date > todaysDate)[number].hymn);
-                if (addOrRemove === 'add') {
-                    const newDiv = document.createElement("div");
-                    newDiv.classList.add('futureHymnsOpen')
-                    hymnsObjectArray.forEach((hymn, idx) => {
-
-                        // create a new div element
-                        const newH4 = document.createElement('h4');
-                        let newH6 = document.createElement('h6');
-                        // and give it some content
-                        const hymnText = allLitergies.filter(x => x.date > todaysDate)[number + 1].hymn[idx].title
-                        const hymnRef = allLitergies.filter(x => x.date > todaysDate)[number + 1].hymn[idx].hymnNumber
-                        const newContent = document.createTextNode(hymnText);
-                        newH6.appendChild(document.createTextNode(hymnRef));
-
-                        newH4.appendChild(newContent);
-                        // add the text node to the newly created div
-
-                        newDiv.appendChild(newH6)
-                        newDiv.appendChild(newH4)
-                        // add the newly created element and its content into the DOM
-
-                    })
-                    futureContent[number].appendChild(newDiv);
-                    checkAndPopulateInstrumentals(number);
-                } else {
-                    // const newDiv = wrapper.querySelectorAll(futureContent);
-                    // console.log(futureContent[number])
-                    const allCreatedDivs = futureContent[number].querySelectorAll('.futureHymnsOpen');
-                    allCreatedDivs.forEach((div) => { futureContent[number].removeChild(div) });
-                    // futureContent[number].removeChild(futureContent[number].querySelector('.extras_future'));
-
-                }
-            }
-
-            allLitergies.filter(x => x.date > todaysDate)[1].hymn.forEach((hymn, idx) => {
-            });
-
-
 
 
             if ((allLitergies.filter(x => x.date > todaysDate)[1]) != undefined) { futureTitles[0].textContent = allLitergies.filter(x => x.date > todaysDate)[1].occasion; }
@@ -473,60 +398,132 @@ document.querySelector(".liturgyPlan .flex-container").addEventListener("click",
             if ((allLitergies.filter(x => x.date > todaysDate)[8]) != undefined) { futureTitles[7].textContent = allLitergies.filter(x => x.date > todaysDate)[8].occasion; }
             if ((allLitergies.filter(x => x.date > todaysDate)[9]) != undefined) { futureTitles[8].textContent = allLitergies.filter(x => x.date > todaysDate)[9].occasion; }
             if ((allLitergies.filter(x => x.date > todaysDate)[10]) != undefined) { futureTitles[9].textContent = allLitergies.filter(x => x.date > todaysDate)[10].occasion; }
-
-            //open/close up hymn list in future hymns
-            liturgyPlan.querySelector(".easterServices ul").addEventListener("click", (e) => {
-                // console.log(e.target.closest('li'))
-                const closestDivFirstClass = e.target.closest('div').classList[0]
-                // console.log(closestDivFirstClass)
-                if (closestDivFirstClass !== 'futureHymnsOpen') {
-                    // console.log(e.target.classList)
-
-                    const activeTitle = wrapper.querySelectorAll('.easterServices li')
-                    if (e.target.closest('li').classList.value !== 'active') {
-                        // console.log(e.target.closest('li').classList.value)
-                        e.target.closest('li').classList.add('active');
-                        addElement('add', e.target.closest('li').id - 1);
-                    }
-                    else {
-                        // console.log(e.target.closest('li').id - 1)
-                        addElement('remove', e.target.closest('li').id - 1);
-                        e.target.closest('li').classList.remove('active');
-                    }
-
-                }
-                //further open hymns if selected
-                else {
-
-
-
-                    // liturgyPlan.querySelector(".easterServices ul").addEventListener("click", (e) => {
-                    // console.log(Number(e.target.classList.value) + 1);
-                    allHymns = originalHymns;
-                    allHymns = allLitergies.filter(x => x.date > todaysDate)[Number(e.target.closest('li.active').id)].hymn;
-                    const chosenLiturgy = allLitergies.filter(x => x.date > todaysDate)[Number(e.target.closest('li.active  ').id)];
-                    if (chosenLiturgy.instrumental != undefined) {
-                        allHymns = allHymns.concat(chosenLiturgy.instrumental);
-                    }
-                    count = 0;
-
-                    // nextLitergy = allLitergies.filter(x => x.date >= todaysDate);
-                    hymnSelect();
-                    wrapper.querySelector(".liturgyPlan").classList.add("hidden");
-                    togglePanels();
-
-                    // })
-                }
-            });
-
             break;
 
-
-        default:
-            break;
     }
 
+    function checkAndPopulateInstrumentals(number) {
+        const futureContent = wrapper.querySelectorAll('.easterServices li')
+        if (nextLitergy[number + 1].instrumental) {
+            // console.log(nextLitergy[number + 1]);
+            const instrumentalsDiv = document.createElement('div')
+            instrumentalsDiv.classList.add('futureHymnsOpen', 'extras_future')
+            const instrumentalsTitle = document.createElement('h2')
+
+
+
+            // document.createTextNode('Choir Extras');
+            const list = document.createElement('ul');
+            instrumentalsDiv.appendChild(instrumentalsTitle).appendChild(document.createTextNode('Choir Extras'));
+            // .appendChild(document.createElement('h2'));
+            const newFile = instrumentalsDiv.appendChild(list)
+            newFile;
+            nextLitergy[number + 1].instrumental.forEach((hymn, idx) => {
+                const createLi = document.createElement('li')
+                const createH6 = document.createElement('h6')
+                const createH4 = document.createElement('h4')
+                const refText = document.createTextNode(hymn.hymnNumber)
+                const titleText = document.createTextNode(hymn.title)
+
+                newFile.appendChild(createLi).append(createH6, createH4);
+                createH6.appendChild(refText)
+                createH4.appendChild(titleText)
+            })
+            instrumentalsDiv.append(newFile);
+            futureContent[number].appendChild(instrumentalsDiv);
+        }
+
+
+
+    }
+    function addElement(addOrRemove, number) {
+        const futureContent = wrapper.querySelectorAll('.easterServices li')
+        const hymnsObjectArray = (allLitergies.filter(x => x.date > todaysDate)[number].hymn);
+        if (addOrRemove === 'add') {
+            const newDiv = document.createElement("div");
+            newDiv.classList.add('futureHymnsOpen')
+            hymnsObjectArray.forEach((hymn, idx) => {
+
+                // create a new div element
+                const newH4 = document.createElement('h4');
+                let newH6 = document.createElement('h6');
+                // and give it some content
+                const hymnText = allLitergies.filter(x => x.date > todaysDate)[number + 1].hymn[idx].title
+                const hymnRef = allLitergies.filter(x => x.date > todaysDate)[number + 1].hymn[idx].hymnNumber
+                const newContent = document.createTextNode(hymnText);
+                newH6.appendChild(document.createTextNode(hymnRef));
+
+                newH4.appendChild(newContent);
+                // add the text node to the newly created div
+
+                newDiv.appendChild(newH6)
+                newDiv.appendChild(newH4)
+                // add the newly created element and its content into the DOM
+
+            })
+            futureContent[number].appendChild(newDiv);
+            checkAndPopulateInstrumentals(number);
+        } else {
+            // const newDiv = wrapper.querySelectorAll(futureContent);
+            // console.log(futureContent[number])
+            const allCreatedDivs = futureContent[number].querySelectorAll('.futureHymnsOpen');
+            allCreatedDivs.forEach((div) => { futureContent[number].removeChild(div) });
+            // futureContent[number].removeChild(futureContent[number].querySelector('.extras_future'));
+
+        }
+    }
+
+
+
+    //open/close up hymn list in future hymns
+    liturgyPlan.querySelector(".easterServices ul").addEventListener("click", (e) => {
+        // console.log(e.target.closest('li'))
+        const closestDivFirstClass = e.target.closest('div').classList[0]
+        // console.log(closestDivFirstClass)
+        if (closestDivFirstClass !== 'futureHymnsOpen') {
+            // console.log(e.target.classList)
+
+            const activeTitle = wrapper.querySelectorAll('.easterServices li')
+            if (e.target.closest('li').classList.value !== 'active') {
+                console.log(e.target.closest('li').classList.value)
+                e.target.closest('li').classList.add('active');
+                addElement('add', e.target.closest('li').id - 1);
+            } else {
+                // console.log(e.target.closest('li').id - 1)
+                console.log(e.target.closest('li').classList.value)
+                addElement('remove', e.target.closest('li').id - 1);
+                e.target.closest('li').classList.remove('active');
+            }
+
+        }
+        //further open hymns if selected
+        else {
+
+
+
+            // liturgyPlan.querySelector(".easterServices ul").addEventListener("click", (e) => {
+            // console.log(Number(e.target.classList.value) + 1);
+            allHymns = originalHymns;
+            allHymns = allLitergies.filter(x => x.date > todaysDate)[Number(e.target.closest('li.active').id)].hymn;
+            const chosenLiturgy = allLitergies.filter(x => x.date > todaysDate)[Number(e.target.closest('li.active  ').id)];
+            if (chosenLiturgy.instrumental != undefined) {
+                allHymns = allHymns.concat(chosenLiturgy.instrumental);
+            }
+            count = 0;
+
+            // nextLitergy = allLitergies.filter(x => x.date >= todaysDate);
+            hymnSelect();
+            wrapper.querySelector(".liturgyPlan").classList.add("hidden");
+            togglePanels();
+
+            // })
+        }
+    });
+
+
 });
+
+
 
 const todaysDate = new Date();
 //next litergy will change after 10:30am
