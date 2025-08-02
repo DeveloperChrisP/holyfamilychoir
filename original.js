@@ -382,10 +382,10 @@ document.querySelector(".liturgyPlan .flex-container").addEventListener("click",
         case "Future":
             liturgyPlan.querySelector(".container").classList.add("hidden"); //upcoming
             liturgyPlan.querySelector(".easterTitle").classList.add("selected");
-            liturgyPlan.querySelector(".easterServices").classList.add("selected");
+            liturgyPlan.querySelector(".futureServices").classList.add("selected");
             liturgyPlan.querySelector(".container").classList.add("hidden");
 
-            const futureTitles = wrapper.querySelectorAll(".easterServices h4")
+            const futureTitles = wrapper.querySelectorAll(".futureServices h4")
 
 
             if ((allLitergies.filter(x => x.date > todaysDate)[1]) != undefined) { futureTitles[0].textContent = allLitergies.filter(x => x.date > todaysDate)[1].occasion; }
@@ -403,7 +403,7 @@ document.querySelector(".liturgyPlan .flex-container").addEventListener("click",
     }
 });
 function checkAndPopulateInstrumentals(number) {
-    const futureContent = wrapper.querySelectorAll('.easterServices li.hymnOccasion')
+    const futureContent = wrapper.querySelectorAll('.futureServices li.hymnOccasion')
     if (nextLitergy[number].instrumental) {
         // console.log(nextLitergy[number]);
         const instrumentalsDiv = document.createElement('div')
@@ -438,7 +438,7 @@ function checkAndPopulateInstrumentals(number) {
 }
 
 function addElement(addOrRemove, number) {
-    const futureContent = wrapper.querySelectorAll('.easterServices li.hymnOccasion')
+    const futureContent = wrapper.querySelectorAll('.futureServices li.hymnOccasion')
     const hymnsObjectArray = (allLitergies.filter(x => x.date > todaysDate)[number].hymn);
     if (addOrRemove === 'add') {
         const newDiv = document.createElement("div");
@@ -479,14 +479,15 @@ function addElement(addOrRemove, number) {
 futureHymnsSection();
 function futureHymnsSection() {
     //open/close up hymn list in future hymns
-    liturgyPlan.querySelector(".easterServices ul").addEventListener("click", (e) => {
+    liturgyPlan.querySelector(".futureServices ul").addEventListener("click", (e) => {
+        // console.log(e.target)
+        // console.log(e.target.closest('div').classList.contains('futureServices'))
         const targetFirstClass = Number(e.target.classList[0])
         const closestDivFirstClass = e.target.closest('div').classList[0]
-        const title = nextLitergy[Number(e.target.classList[0]) + 1].occasion
+        // const title = nextLitergy[Number(e.target.classList[0]) + 1].occasion
         // console.log(title)
-        if (e.target.textContent == title) {
-
-            const activeTitle = wrapper.querySelectorAll('.easterServices li')
+        if (e.target.closest('div').classList.contains('futureServices')) {
+            const activeTitle = wrapper.querySelectorAll('.futureServices li')
             if (e.target.closest('li').classList[1] !== 'active') {
 
                 e.target.closest('li').classList.add('active');
@@ -505,11 +506,11 @@ function futureHymnsSection() {
 
 
 
-            // liturgyPlan.querySelector(".easterServices ul").addEventListener("click", (e) => {
+            // liturgyPlan.querySelector(".futureServices ul").addEventListener("click", (e) => {
             // console.log(Number(e.target.classList.value) + 1);
             allHymns = originalHymns;
-            allHymns = allLitergies.filter(x => x.date > todaysDate)[Number(e.target.closest('li.active').id)].hymn;
-            const chosenLiturgy = allLitergies.filter(x => x.date > todaysDate)[Number(e.target.closest('li.active  ').id)];
+            allHymns = allLitergies.filter(x => x.date > todaysDate)[Number(e.target.closest('li.active').id) + 1].hymn;
+            const chosenLiturgy = allLitergies.filter(x => x.date > todaysDate)[Number(e.target.closest('li.active  ').id) + 1];
             if (chosenLiturgy.instrumental != undefined) {
                 allHymns = allHymns.concat(chosenLiturgy.instrumental);
             }
