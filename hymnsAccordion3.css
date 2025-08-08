@@ -836,7 +836,7 @@ button.down.hidden {
 	height: fit-content;
 	width: 100%;
 	padding: calc(var(--_panel-padding) * 2);
-	background: linear-gradient(rgb(208, 208, 11), orange);
+	background: linear-gradient(rgb(76, 31, 240), orange);
 	z-index: 1;
 	/* position: absolute; */
 	right: 0;
