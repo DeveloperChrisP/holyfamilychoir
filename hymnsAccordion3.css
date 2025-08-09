@@ -832,11 +832,14 @@ button.down.hidden {
 	--lavishFont: "Lavishly Yours", serif;
 	--lavishSizeSmall: 2rem;
 	--lavishSizeBig: 3.4rem;
+	--liturgyCategoriesColour: rgb(184, 180, 180);
+	--linearGradient1: rgba(248, 251, 37, 0.89);
+	--linearGradient2: orange;
 	min-height: max-content;
 	height: fit-content;
 	width: 100%;
 	padding: calc(var(--_panel-padding) * 2);
-	background: linear-gradient(rgb(76, 31, 240), orange);
+	background: linear-gradient(var(--linearGradient1), var(--linearGradient2));
 	z-index: 1;
 	/* position: absolute; */
 	right: 0;
@@ -921,7 +924,7 @@ button.down.hidden {
 	padding: 1rem;
 	width: fit-content;
 	border-radius: 20px;
-	background-color: rgb(208, 208, 50);
+	background: rgba(255, 255, 0, 0.735);
 	transition: height 2s;
 	margin: 0.5rem 0;
 }
@@ -946,7 +949,8 @@ button.down.hidden {
 .futureHymnsOpen h6 {
 	font-family: var(--lavishFont);
 	font-size: var(--lavishSizeSmall);
-	color: rgba(128, 128, 128, 0.366);
+	color: var(--liturgyCategoriesColour);
+	text-shadow: white 1px 1px;
 }
 .extras h2,
 .extras_future h2 {
@@ -974,7 +978,7 @@ button.down.hidden {
 	font-family: var(--lavishFont);
 	font-size: var(--lavishSizeSmall);
 	font-weight: 600;
-	color: rgba(128, 128, 128, 0.366);
+	color: var(--liturgyCategoriesColour);
 	margin-left: 0.5rem;
 }
 .liturgyContents.selected {
@@ -1026,7 +1030,7 @@ button.down.hidden {
 }
 .liturgyPlan button {
 	border-style: none;
-	color: black;
+	/* color: var(--liturgyCategoriesColour); */
 }
 .openLiturgyPlan {
 	background-color: rgb(208, 195, 11);
