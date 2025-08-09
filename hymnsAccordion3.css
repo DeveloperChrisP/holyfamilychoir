@@ -950,7 +950,7 @@ button.down.hidden {
 	font-family: var(--lavishFont);
 	font-size: var(--lavishSizeSmall);
 	color: var(--liturgyCategoriesColour);
-	/* text-shadow: white 1px 1px; */
+	text-shadow: white 1px 1px;
 }
 .extras h2,
 .extras_future h2 {
