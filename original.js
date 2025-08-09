@@ -852,7 +852,7 @@ function hymnSelect() { //populate titles based upon 'count' number//
     var secondToLastHymn = allHymns[allHymns.length - 2].title; //Here we bring you
 
 
-    var thirdToLastHymn = allHymns[allHymns.length - 3].title; // Silent night
+    // var thirdToLastHymn = allHymns[allHymns.length - 3].title; // Silent night
 
 
 
