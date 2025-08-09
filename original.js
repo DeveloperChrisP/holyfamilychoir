@@ -802,7 +802,7 @@ function endOfTouch() {
 //up & down buttons
 document.querySelectorAll("button.up, button.down").forEach(btn => {
     btn.addEventListener("click", (e) => {
-
+        console.log(e.target)
 
         if (e.target.closest('button').classList == "up") {
 
@@ -852,7 +852,7 @@ function hymnSelect() { //populate titles based upon 'count' number//
     var secondToLastHymn = allHymns[allHymns.length - 2].title; //Here we bring you
 
 
-    // var thirdToLastHymn = allHymns[allHymns.length - 3].title; // Silent night
+    var thirdToLastHymn = allHymns[allHymns.length - 3].title; // Silent night
 
 
 
