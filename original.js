@@ -49,8 +49,12 @@ function Litergy(date, occasion, year, selector, hymn, instrumental) {
 
     this.instrumental = grabHymnObject(instrumental);
 
-    date.setHours(10); date.setMinutes(30);
+    if (date.getDay() != 7) { date.setHours(19); } // If next Litergy is not a Sunday - set time to 19:30 (so Next Up Litergy remains for evening masses)
+    else {
+        date.setHours(10); date.setMinutes(30);
+    }
     allLitergies.push(this);
+
 
 }
 
@@ -338,7 +342,7 @@ new Litergy(new Date("20 Jul 2025"), "16th Sunday in Ordinary Time", "C", "Julia
 new Litergy(new Date("27 Jul 2025"), "17th Sunday in Ordinary Time", "C", "Julian", ["He who would valiant be", "Sweet Sacrament Divine", "When I survey the Wondrous Cross", "Virgin Wholly Marvellous"])
 new Litergy(new Date("3 Aug 2025"), "18th Sunday in Ordinary Time", "C", "Chris", ['Dear Lord and Father of Mankind', 'Take our bread', 'All my hope on God is founded', "I'll sing a hymn to Mary"])
 new Litergy(new Date("10 Aug 2025"), "19th Sunday in Ordinary Time", "C", "Chris", ["O Lord my God", "Do not be afraid", "This is my body", "Holy Virgin, by God's decree"], ["Bless the Lord, my soul", "10,000 reasons"])
-new Litergy(new Date("14 Aug 2025"), "The Assumption of the Blessed Virgin Mary", "C", "Chris", ["I'll sing a hymn to Mary", "O Mother blest", "Holy is his name", "As I kneel before you"])
+new Litergy(new Date("15 Aug 2025"), "The Assumption of the Blessed Virgin Mary", "C", "Chris", ["I'll sing a hymn to Mary", "O Mother blest", "Holy is his name", "As I kneel before you"])
 new Litergy(new Date("17 Aug 2025"), "20th Sunday in Ordinary Time", "C", "Chris", ["The Church's one foundation", "I am the bread of life", "Be still for the presence of the Lord", "Sing we of the blessed Mother"], ["My song is love unknown"])
 new Litergy(new Date("24 Aug 2025"), "21st Sunday in Ordinary Time", "C", "Chris", ["Tell out my soul", "Alleluia Sing to Jesus", "One bread, one body", "Hail, Queen of heaven"], ["Laudate Dominum", "Laudate Dominum2"])
 new Litergy(new Date("31 Aug 2025"), "22nd Sunday in Ordinary Time", "C", "Chris", ["Christ is our King", "Whatsoever you do", "The servant song", "Sing of Mary, pure and lowly"], ["O Lord hear my prayer"])
@@ -552,7 +556,7 @@ function instrumentalSection() {
 
 }
 
-if (nextLitergy[0].date.getDay() != 7) { nextLitergy[0].date.setHours(19); } // If next Litergy is not a Sunday - set time to 19:30 (so Next Up Litergy remains for evening masses)
+
 
 wrapper.querySelector(".acclamations").addEventListener("click", function (e) {
 
