@@ -49,7 +49,7 @@ function Litergy(date, occasion, year, selector, hymn, instrumental) {
 
     this.instrumental = grabHymnObject(instrumental);
 
-    if (date.getDay() != 7) { date.setHours(19); } // If next Litergy is not a Sunday - set time to 19:30 (so Next Up Litergy remains for evening masses)
+    if (date.getDay() != 0) { date.setHours(20); date.setMinutes(30); } // If next Litergy is not a Sunday - set time to 19:30 (so Next Up Litergy remains for evening masses)
     else {
         date.setHours(10); date.setMinutes(30);
     }
