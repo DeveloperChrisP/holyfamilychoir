@@ -920,6 +920,10 @@ button.down.hidden {
 .liturgyContents ul {
 	text-align: left;
 }
+.liturgyContents ul li.hymnOccasion {
+	font-size: 1.5rem;
+	margin-block: 1.5rem;
+}
 .liturgyContents ul li.active {
 	padding: 1rem;
 	width: fit-content;
