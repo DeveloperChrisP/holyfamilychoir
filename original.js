@@ -1147,6 +1147,8 @@ function toggleAccordion(panelToActivate) {
                 break;
 
             case "panel5":
+                document.querySelector("div.wrapper").classList.remove("restrictHeight")
+                document.getElementById("panel5").classList.add("expand");
                 // const content = document.createTextNode(allHymns[count].title)
                 // const updatedContent = document.createElement('h1').appendChild(content)
                 // const currentDiv = document.getElementById("panel5_content")
@@ -1154,10 +1156,10 @@ function toggleAccordion(panelToActivate) {
                 addElement("div", "", "panel5_content");
                 document.getElementById("panel5").lastElementChild.lastElementChild.id = "lyrics";
                 addElement("h1", allHymns[count].title, "lyrics");
+
                 allHymns[count].lyrics.forEach((verse, idx) => {
                     addElement("h2", `Verse ${idx + 1}`, "lyrics")
                     addElement("p", allHymns[count].lyrics[idx], "lyrics")
-
                 })
                 break;
 
@@ -1210,9 +1212,11 @@ function closeAccordion(closeButton) {
     const prepanels = closeButton.parentElement.parentElement.parentElement.parentElement.querySelectorAll(".prepanel");
 
     if (closeButton.parentElement.parentElement.id == "panel5" || closeButton.id == "firstX") {
-
+        document.getElementById("panel5").classList.remove("expand");
         const element = document.getElementById("lyrics");
-        element.remove(); // Removes the div with the 'lyrics' id
+        if (element) {
+            element.remove();
+        } // Removes the div with the 'lyrics' id
     };
 
     if (closeButton.id == "firstX") {

@@ -217,7 +217,9 @@ body {
 	/* padding-right: calc(var(--_button-size) + var(--_panel-gap)); */
 	border-radius: calc(((var(--_panel-padding) * 2) + var(--_button-size)) / 2);
 }
-
+#panel5.expand {
+	min-height: max-content;
+}
 /* Difference panel filter effects for moving panels */
 .prepanelTopPlaceholder,
 .prepanelBottomPlaceholder {
@@ -478,7 +480,7 @@ body {
 	transition: opacity var(--_time) var(--_time),
 		transform var(--_time) var(--_time);
 }
-.accordion_content {
+.accordion_panel.open .accordion_content {
 }
 .accordion_panel.transformDown {
 	transform: translateY(
