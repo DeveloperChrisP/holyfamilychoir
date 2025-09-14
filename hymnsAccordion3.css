@@ -785,6 +785,19 @@ body {
 		-0.2rem 0.2rem 0.3rem hsl(180, 100%, 90%);
 }
 
+#lyrics {
+	padding: 0 1rem;
+}
+#lyrics h1 {
+	font-size: 2rem;
+}
+#lyrics h2 {
+	font-size: 1rem;
+}
+#lyrics p {
+	margin-bottom: 20px;
+}
+
 .up,
 .down {
 	position: absolute;

@@ -27,15 +27,25 @@ function togglePanels() {
 // wrapper.addEventListener('pointerdown', dragButtonsStartingPosition, false);
 // wrapper.addEventListener("pointerup", endOfTouch);
 const queuedVideos = [];
-function Hymn(title, hymnNumber, sheetMusic, vocalPart, video) {
+function Hymn(title, hymnNumber, sheetMusic, vocalPart, video, lyrics) {
     this.title = title;
     this.hymnNumber = hymnNumber;
     this.sheetMusic = sheetMusic;
     this.vocalPart = vocalPart;
     this.video = video;
+    this.lyrics = lyrics
     count++;
     allHymns.push(this);
 }
+function createLyricObject(lyrics) {
+    const lyricObject = {
+
+    }
+
+
+
+};
+
 allLitergies = [];
 const allAcclamations = [];
 const allAcclamationSettings = [];
@@ -160,7 +170,7 @@ new Hymn("Breathe on me, Breath of God", 302, "", "", "https://www.youtube.com/e
 new Hymn("Centre of my life", 423, "", "", "https://www.youtube.com/embed/B5Zo548rT8o?si=RS5kEu3QkdFq6otW")
 new Hymn("Christ be beside me", 910, "", "", "https://www.youtube.com/embed/KNkWoy5uVh8?si=38stRqmtz_7Bswpd")
 new Hymn("Christ be our light", 883, "", "", "https://www.youtube.com/embed/7eeBHrn2Dt0?si=tuSsdtdJwFErezsM");
-new Hymn("Christ is made the sure foundation", 456, "", "", "https://www.youtube.com/embed/RPq0CwbwkqI?si=CPEIF1QlGumNhQfx")
+new Hymn("Christ is made the sure foundation", 456, "", "", "https://www.youtube.com/embed/RPq0CwbwkqI?si=CPEIF1QlGumNhQfx", ["Christ is made the sure foundation, Christ the head and cornerstone, chosen of the Lord, and precious, binding all the church in one, holy Zion's help forever, and her confidence alone.", "All that dedicated city, dearly loved of God on high, in exultant jubilation pours perpetual melody, God the One in Three adoring in glad hymns eternally.", "To this temple, where we call You, come, O Lord of Hosts, today; with accustomed loving kindness, hear Your servants as they pray; and Your fullest benediction shed within its walls alway.", "Grant, we pray, to all Your servants what they ask of You to gain, what they gain from You, forever with the blessed to retain, and hereafter in Your glory evermore with You to reign.", "Praise and honor to the Father, praise and honor to the Son, praise and honor to the Spirit, ever Three, and ever One, consubstantial, coeternal, while unending ages run."])
 new Hymn("Christ is our King", 325, "", "", "https://www.youtube.com/embed/SBdD_fSHNUM?si=PVRoDFeOOJoBpHRp")
 new Hymn("Come to the river", "sheet", "", "", "https://www.youtube.com/embed/JdMVQksOy6w?si=DkVs-oV-Urc36Ahk");
 new Hymn("Crown him with many crowns", 321, "", "", "https://www.youtube.com/embed/V0F-kXSwJVM?si=7xYPegtLzhWFcTsC");
@@ -186,7 +196,7 @@ new Hymn("Godhead here in hiding", 660, "", "", "https://www.youtube.com/embed/c
 new Hymn("Guide me O thou great redeemer", 960, "", "", "https://www.youtube.com/embed/M7h26Ev_eLQ?si=UmMJvTYTCLGqLkHm")
 new Hymn("Hail Queen of heaven", 356, "", "", "https://www.youtube.com/embed/xfkPTmry3zI?si=SkUYW9G4hlpippRf");
 new Hymn("Hark the Herald Angels Sing", 155, "", "", "https://www.youtube.com/embed/9Bwn0k0k8xI?si=vilS4HDunUKoLrlC");
-new Hymn("He is Lord", 761, "", "", "https://www.youtube.com/embed/BrJEATD5jq8?si=eTy6aYtchC80fY_g");
+new Hymn("He is Lord", 761, "", "", "https://www.youtube.com/embed/BrJEATD5jq8?si=eTy6aYtchC80fY_g", ["He is Lord, he is Lord. He is risen from the dead and he is Lord. Ev’ry knee shall bow, ev’ry tongue confess that Jesus Christ is Lord.", "He is King, he is King. He is risen from the dead and he is King. Ev’ry knee shall bow, ev’ry tongue confess that Jesus Christ is King.", "He is love, he is love. He is risen from the dead and he is love. Ev’ry knee shall bow, ev’ry tongue confess that Jesus Christ is love."]);
 new Hymn("He who would valiant be", 862, "", "", "https://www.youtube.com/embed/AD7W92d4jmE?si=t6gu0qjlx4gG3Het")
 new Hymn("Here I am, Lord", 865, "", "", "");
 new Hymn("Here we bring you", "", "./sheetMusic/Here We Bring You.pdf", ["piano"], "");
@@ -201,7 +211,7 @@ new Hymn("I am the bread of life", 629, "", "", "https://www.youtube.com/embed/g
 new Hymn("I heard the voice of Jesus say", 795, "", "", "https://www.youtube.com/embed/Kh4XxlWZhMs?si=xmfUNd4cYzk_fRjQ");
 new Hymn("I vow to thee my country", "", "", "", "https://www.youtube.com/embed/hY9mtoKNeas?si=5Pk8fN_aiqk894Ok")
 new Hymn("I will be with you", 866, "", "", "https://www.youtube.com/embed/RL0CBsiXXl0?si=WrdvI2zJnnygDiHS");
-new Hymn("I'll sing a hymn to Mary", 355, "", "", "https://www.youtube.com/embed/SB3Rc2gXGH8?si=-pVYf2yLsbBscT0e");
+new Hymn("I'll sing a hymn to Mary", 355, "", "", "https://www.youtube.com/embed/SB3Rc2gXGH8?si=-pVYf2yLsbBscT0e", ["I’ll sing a hymn to Mary, the Mother of my God, the Virgin of all virgins, of David’s royal blood. O teach me, Holy Mary, a loving song to frame, O may I imitate thee And magnify God’s name.", "O noble Tower of David, of gold and ivory, the Ark of God’s own promise, the gate of heav’n to me; to live, and not to love thee, would fill my soul with shame; O may I imitate thee And magnify God’s name.", "The Saints are high in glory, with golden crowns so bright; but brighter far is Mary, upon her throne of light O that which God did give thee, let mortal ne’er disclaim; O may I imitate thee and magnify God’s name.", "But in the crown of Mary, there lies a wondrous gem, as Queen of all the Angels, which Mary shares with them: no sin hath e’er defiled thee, so doth our faith proclaim; O may I imitate thee and magnify God’s name."]);
 new Hymn("Immaculate Mary", 365, "", "", "https://www.youtube.com/embed/PcrFbTixYAA?si=HF43bqSi82D-OVlV");
 new Hymn("Immortal, invisible", 725, "", "", "https://www.youtube.com/embed/lmefJS09fKE?si=5cKzvl1vDm-9QeNn")
 new Hymn("In bread we bring you, Lord", 609, "", "", "https://www.youtube.com/embed/OrtI_rEcGHI?si=THvVL9iuFqs-eFbk");
@@ -290,7 +300,7 @@ new Hymn("We three kings", 170, "", "", "https://www.youtube.com/embed/Lx35_DRIZ
 new Hymn("Were you there", 225, "", "", "https://www.youtube.com/embed/7z1SwwFopJk?si=HdluGOjnErTcgVdP");
 new Hymn("What child is this", 145, "", "", "https://www.youtube.com/embed/6jroBAl3WW8?si=kZEj9G4qmknU1RlB");
 new Hymn("Whatsoever you do", 926, "", "", "https://www.youtube.com/embed/oDa1mcyK8B4?si=_6sQlfjIpREqHU1N")
-new Hymn("When I survey the Wondrous Cross", 756, "", "", "https://www.youtube.com/embed/YSh1uU7xpdo?si=h_b1saj9HxZTLxCk")
+new Hymn("When I survey the Wondrous Cross", 756, "", "", "https://www.youtube.com/embed/YSh1uU7xpdo?si=h_b1saj9HxZTLxCk", ["When I survey the wondrous cross on which the Prince of Glory died, my richest gain I count but loss, and poor contempt on all my pride.", "Forbid it, Lord, that I should boast, save in the death of Christ, my God; all the vain things that charm me most, I sacrifice them to his blood.", "See from his head, his hands, his feet, sorrow and love flow mingled down; did e’er such love and sorrow meet, or thorns compose so rich a crown?", "His dying crimson like a robe, spreads o’er his body on the Tree; then I am dead to all the globe, and all the globe is dead to me.", "Were the whole realm of nature mine, that were an offering far too small; love so amazing, so divine, demands my soul, my life, my all."])
 new Hymn("Where are you bound, Mary?", 343, "", "", "https://www.youtube.com/embed/rPWOEZzNhxM?si=w_alalLvviuN7AX5");
 
 
@@ -1084,6 +1094,10 @@ function toggleAccordion(panelToActivate) {
             panelToActivate.parentElement.querySelector("#panel4").classList.add("hidden");
         } else { panelToActivate.parentElement.querySelector("#panel4").classList.remove("hidden"); }
 
+        if (allHymns[count].lyrics) {
+            panelToActivate.parentElement.querySelector("#panel5").classList.remove("hidden");
+        } else { panelToActivate.parentElement.querySelector("#panel5").classList.add("hidden"); }
+
         const populatedPanels = panelToActivate.parentElement.querySelectorAll(".accordion_panel");
         for (let index = 0; index < populatedPanels.length; index++) {
             const element = populatedPanels[index].classList.add("accordion_open");
@@ -1132,9 +1146,39 @@ function toggleAccordion(panelToActivate) {
                 panelToActivate.lastElementChild.firstElementChild.setAttribute("src", allHymns[count].video);
                 break;
 
+            case "panel5":
+                // const content = document.createTextNode(allHymns[count].title)
+                // const updatedContent = document.createElement('h1').appendChild(content)
+                // const currentDiv = document.getElementById("panel5_content")
+                // currentDiv.append(updatedContent);
+                addElement("div", "", "panel5_content");
+                document.getElementById("panel5").lastElementChild.lastElementChild.id = "lyrics";
+                addElement("h1", allHymns[count].title, "lyrics");
+                allHymns[count].lyrics.forEach((verse, idx) => {
+                    addElement("h2", `Verse ${idx + 1}`, "lyrics")
+                    addElement("p", allHymns[count].lyrics[idx], "lyrics")
+
+                })
+                break;
+
             default:
                 break;
         }
+        function addElement(elementType, text, divID) {
+            // create a new div element
+            const newDiv = document.createElement(elementType);
+
+            // and give it some content
+            const newContent = document.createTextNode(text);
+
+            // add the text node to the newly created div
+            newDiv.appendChild(newContent);
+
+            // add the newly created element and its content into the DOM
+            const currentDiv = document.getElementById(divID);
+            currentDiv.appendChild(newDiv)
+        }
+
 
         if (!panelToActivate.classList.contains("panel")) { return; }; //return if main panel not clicked
         panelToActivate.classList.add("open");//open panel
@@ -1164,6 +1208,12 @@ function closeAccordion(closeButton) {
     const headings = closeButton.parentElement.parentElement.parentElement.querySelectorAll(".panel_heading");
     const clickedPanel = closeButton.parentElement.parentElement.querySelector(".accordion_panel");
     const prepanels = closeButton.parentElement.parentElement.parentElement.parentElement.querySelectorAll(".prepanel");
+
+    if (closeButton.parentElement.parentElement.id == "panel5" || closeButton.id == "firstX") {
+
+        const element = document.getElementById("lyrics");
+        element.remove(); // Removes the div with the 'lyrics' id
+    };
 
     if (closeButton.id == "firstX") {
         wrapper.querySelectorAll("button.up, button.down").forEach(btn => {
