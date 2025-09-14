@@ -76,7 +76,6 @@ body {
 	/* align-items: center; */
 	/* outline: red solid 2px; */
 	/* min-height: 100%; */
-	contain: content;
 	min-height: 100dvh;
 	touch-action: none;
 	user-select: none;
@@ -84,6 +83,7 @@ body {
 	/* max-height: 100vh; */
 }
 .wrapper.restrictHeight {
+	contain: content;
 	max-height: 100vh;
 }
 
