@@ -1147,7 +1147,7 @@ function toggleAccordion(panelToActivate) {
                 break;
 
             case "panel5":
-                document.querySelector("div.wrapper").classList.remove("restrictHeight")
+                // document.querySelector("div.wrapper").classList.remove("restrictHeight")
                 document.getElementById("panel5").classList.add("expand");
                 // const content = document.createTextNode(allHymns[count].title)
                 // const updatedContent = document.createElement('h1').appendChild(content)

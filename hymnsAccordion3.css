@@ -80,10 +80,10 @@ body {
 	touch-action: none;
 	user-select: none;
 	position: relative;
+	contain: content;
 	/* max-height: 100vh; */
 }
 .wrapper.restrictHeight {
-	contain: content;
 	max-height: 100vh;
 }
 
