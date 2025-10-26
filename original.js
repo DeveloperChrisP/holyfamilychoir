@@ -124,11 +124,17 @@ new Acclamation("Mass of Hope", "Lamb of God (Creation)", "", ["SATB", "melody",
 new Acclamation("Simple Mass", "Holy holy", "./sheetMusic/Holy Holy (Simple Mass).pdf", ["satb", "melody", "alto", "tenor", "bass", "piano"], "")
 new Acclamation("Simple Mass", "Lamb of God", "./sheetMusic/Lamb of God (Simple Mass).pdf", "", "")
 
+new Acclamation("Celtic Mass", "Glory to God", "./sheetMusic/acclamations/Celtic Mass/Glory to God/Glory to God (Celtic Liturgy).pdf", "", "");
+new Acclamation("Celtic Mass", "Alleluia", "./sheetMusic/acclamations/Celtic Mass/Alleluia/Alleluia (Celtic Liturgy).pdf", "", "https://www.youtube.com/embed/AFvdHcrPhkw?si=V7FLgxX593bN33GH");
+new Acclamation("Celtic Mass", "Holy Holy", "./sheetMusic/acclamations/Celtic Mass/Holy Holy/Holy, Holy, Holy (Celtic Liturgy).pdf", "", "");
+new Acclamation("Celtic Mass", "Memorial Acclamation", "./sheetMusic/acclamations/Celtic Mass/Memorial Acclamation/Memorial Acclamations (Celtic Liturgy).pdf", "", "");
+new Acclamation("Celtic Mass", "Lamb of God", "./sheetMusic/acclamations/Celtic Mass/Lamb of God/Lamb Of God (Celtic Liturgy).pdf", "", "");
 
 new AcclamationSetting("Mass of Christ the Saviour", "Dan Schutte", "Mass of Christ the Saviour")
 new AcclamationSetting("Mass of Creation", "Marty Haugen", "Mass of Creation")
 new AcclamationSetting("Mass of Hope", "Bernadette Farrell", "Mass of Hope")
 new AcclamationSetting("Simple Mass", "unknown", "Simple Mass")
+new AcclamationSetting("Celtic Mass", "Christopher Walker", "Celtic Mass")
 
 for (let index = 0; index < allAcclamationSettings.length; index++) {
     const element = document.querySelectorAll(".acclamations h4")[index];
@@ -298,6 +304,7 @@ new Hymn("We have a gospel to proclaim", 852, "", "", "https://www.youtube.com/e
 new Hymn("We Should Glory in the Cross", "-", "", ["piano"])
 new Hymn("We three kings", 170, "", "", "https://www.youtube.com/embed/Lx35_DRIZ8g?si=bCTGGMdpULJm0UDc");
 new Hymn("Were you there", 225, "", "", "https://www.youtube.com/embed/7z1SwwFopJk?si=HdluGOjnErTcgVdP");
+new Hymn("What a beautiful name", "n/a", "./sheetMusic/What a Beautiful Name.pdf", "", "https://www.youtube.com/embed/nQWFzMvCfLE?si=RVe6ehjYO5i6ZIb5")
 new Hymn("What child is this", 145, "", "", "https://www.youtube.com/embed/6jroBAl3WW8?si=kZEj9G4qmknU1RlB");
 new Hymn("Whatsoever you do", 926, "", "", "https://www.youtube.com/embed/oDa1mcyK8B4?si=_6sQlfjIpREqHU1N")
 new Hymn("When I survey the Wondrous Cross", 756, "", "", "https://www.youtube.com/embed/YSh1uU7xpdo?si=h_b1saj9HxZTLxCk", ["When I survey the wondrous cross on which the Prince of Glory died, my richest gain I count but loss, and poor contempt on all my pride.", "Forbid it, Lord, that I should boast, save in the death of Christ, my God; all the vain things that charm me most, I sacrifice them to his blood.", "See from his head, his hands, his feet, sorrow and love flow mingled down; did e’er such love and sorrow meet, or thorns compose so rich a crown?", "His dying crimson like a robe, spreads o’er his body on the Tree; then I am dead to all the globe, and all the globe is dead to me.", "Were the whole realm of nature mine, that were an offering far too small; love so amazing, so divine, demands my soul, my life, my all."])
@@ -866,13 +873,14 @@ function hymnSelect() { //populate titles based upon 'count' number//
     var lastHymn = allHymns[allHymns.length - 1].title; //Hark the herald
     switch (allHymns.length) {
         case 1:
-            var secondToLastHymn = "undefined"
-            var thirdToLastHymn = "undefined"
+            var secondToLastHymn = title;
+            var thirdToLastHymn = title;
+            var lastHymn = title;
             break;
 
         case 2:
             var secondToLastHymn = allHymns[allHymns.length - 2].title; //Here we bring you
-            var thirdToLastHymn = "undefined"
+            var thirdToLastHymn = title;
             break;
 
         default:
@@ -882,7 +890,7 @@ function hymnSelect() { //populate titles based upon 'count' number//
 
     // if (allHymns.length < 2){var secondToLastHymn = "undefined"}
     // else{
-    var secondToLastHymn = allHymns[allHymns.length - 2].title; //Here we bring you
+    // var secondToLastHymn = allHymns[allHymns.length - 2].title; //Here we bring you
 
 
     // var thirdToLastHymn = allHymns[allHymns.length - 3].title; // Silent night
