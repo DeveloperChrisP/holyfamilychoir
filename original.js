@@ -124,11 +124,11 @@ new Acclamation("Mass of Hope", "Lamb of God (Creation)", "", ["SATB", "melody",
 new Acclamation("Simple Mass", "Holy holy", "./sheetMusic/Holy Holy (Simple Mass).pdf", ["satb", "melody", "alto", "tenor", "bass", "piano"], "")
 new Acclamation("Simple Mass", "Lamb of God", "./sheetMusic/Lamb of God (Simple Mass).pdf", "", "")
 
-new Acclamation("Celtic Mass", "Glory to God", "./sheetMusic/acclamations/Celtic Mass/Glory to God/Glory To God (Celtic Liturgy).pdf", "", "");
+new Acclamation("Celtic Mass", "Gloria", "./sheetMusic/acclamations/Celtic Mass/Glory to God/Glory To God (Celtic Liturgy).pdf", ["satb"], "");
 new Acclamation("Celtic Mass", "Alleluia", "./sheetMusic/acclamations/Celtic Mass/Alleluia/Alleluia (Celtic Liturgy).pdf", "", "https://www.youtube.com/embed/AFvdHcrPhkw?si=V7FLgxX593bN33GH");
 new Acclamation("Celtic Mass", "Holy Holy", "./sheetMusic/acclamations/Celtic Mass/Holy Holy/Holy, Holy, Holy (Celtic Liturgy).pdf", "", "");
 new Acclamation("Celtic Mass", "Memorial Acclamation", "./sheetMusic/acclamations/Celtic Mass/Memorial Acclamation/Memorial Acclamations (Celtic Liturgy).pdf", "", "");
-new Acclamation("Celtic Mass", "Lamb of God", "./sheetMusic/acclamations/Celtic Mass/Lamb of God/Lamb Of God (Celtic Liturgy).pdf", "", "");
+new Acclamation("Celtic Mass", "Lamb of God", "./sheetMusic/acclamations/Celtic Mass/Lamb of God/Lamb Of God (Celtic Liturgy).pdf", "", "https://www.youtube.com/embed/rW6qeHqQvOw?si=FuIo9pu-Dmm8NtlC");
 
 new AcclamationSetting("Mass of Christ the Saviour", "Dan Schutte", "Mass of Christ the Saviour")
 new AcclamationSetting("Mass of Creation", "Marty Haugen", "Mass of Creation")
