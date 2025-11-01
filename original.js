@@ -46,11 +46,11 @@ function createLyricObject(lyrics) {
 
 };
 
-allLitergies = [];
+allLiturgies = [];
 const allAcclamations = [];
 const allAcclamationSettings = [];
 
-function Litergy(date, occasion, year, selector, hymn, instrumental) {
+function Liturgy(date, occasion, year, selector, hymn, instrumental) {
     this.date = date;
     this.occasion = occasion;
     this.year = year;
@@ -59,11 +59,11 @@ function Litergy(date, occasion, year, selector, hymn, instrumental) {
 
     this.instrumental = grabHymnObject(instrumental);
 
-    if (date.getDay() != 0) { date.setHours(20); date.setMinutes(30); } // If next Litergy is not a Sunday - set time to 19:30 (so Next Up Litergy remains for evening masses)
+    if (date.getDay() != 0) { date.setHours(20); date.setMinutes(30); } // If next Liturgy is not a Sunday - set time to 19:30 (so Next Up Liturgy remains for evening masses)
     else {
         date.setHours(10); date.setMinutes(30);
     }
-    allLitergies.push(this);
+    allLiturgies.push(this);
 
 
 }
@@ -88,7 +88,7 @@ function AcclamationSetting(massTitle, composer, acclamation) {
 }
 
 function grabAcclamationObject(massTitle) {
-    //return array of hymn objects (up to 8) depending on how many are requested in 'new litergy'
+    //return array of hymn objects (up to 8) depending on how many are requested in 'new liturgy'
 
     // if (massTitle !== undefined)
 
@@ -201,6 +201,8 @@ new Hymn("God of mercy and compassion", 840, "", "", "https://www.youtube.com/em
 new Hymn("Godhead here in hiding", 660, "", "", "https://www.youtube.com/embed/cqHIf5DYF2c?si=C84lGCj3tZZlXQ-4");
 new Hymn("Guide me O thou great redeemer", 960, "", "", "https://www.youtube.com/embed/M7h26Ev_eLQ?si=UmMJvTYTCLGqLkHm")
 new Hymn("Hail Queen of heaven", 356, "", "", "https://www.youtube.com/embed/xfkPTmry3zI?si=SkUYW9G4hlpippRf");
+new Hymn("Hail to the Lord's annointed", 102, "", "", "https://www.youtube.com/embed/EkrepBvrLI4?si=-QRATtEu2Te8oD_E")
+new Hymn("Hark! a herald voice is calling", 92, "", "", "https://www.youtube.com/embed/laIuZ3wc9zE?si=QBDsrXVD9OIiicFe")
 new Hymn("Hark the Herald Angels Sing", 155, "", "", "https://www.youtube.com/embed/9Bwn0k0k8xI?si=vilS4HDunUKoLrlC");
 new Hymn("He is Lord", 761, "", "", "https://www.youtube.com/embed/BrJEATD5jq8?si=eTy6aYtchC80fY_g", ["He is Lord, he is Lord. He is risen from the dead and he is Lord. Ev’ry knee shall bow, ev’ry tongue confess that Jesus Christ is Lord.", "He is King, he is King. He is risen from the dead and he is King. Ev’ry knee shall bow, ev’ry tongue confess that Jesus Christ is King.", "He is love, he is love. He is risen from the dead and he is love. Ev’ry knee shall bow, ev’ry tongue confess that Jesus Christ is love."]);
 new Hymn("He who would valiant be", 862, "", "", "https://www.youtube.com/embed/AD7W92d4jmE?si=t6gu0qjlx4gG3Het")
@@ -246,8 +248,10 @@ new Hymn("My soul proclaims you, mighty God", 340 + ' (' + 846 + ')', "", "",)
 new Hymn("Now the green blade riseth", 278, "", "", "https://www.youtube.com/embed/t_-6-VKu8SM?si=lhMNDR8p0egeFFeM")
 new Hymn("O bread of heaven", 662, "", "", "");
 new Hymn("O Come all ye faithful", 159, "", "", "https://www.youtube.com/embed/8ZYZEr3JtZY?si=ZRXVkFmw8cKqnLO1");
+new Hymn("O come o come Emmanuel", 112, "", "", "https://www.youtube.com/embed/kKu0or0t8Uw?si=jnaJVa0r0dCIFHE0")
 new Hymn("O God, our help in ages past", 955, "", "", "https://www.youtube.com/embed/9USHRbF5vbw?si=JVlRT-iodda8kmt0");
 new Hymn("O God you search me", 779, "", "", "https://www.youtube.com/embed/PuKwXVWdyEs?si=_GhYqdnASsZtXxXV");
+new Hymn("O Jesus Christ remember", 982, "", "", "https://www.youtube.com/embed/AomWml9x4DQ?si=utPixDpoaWZm-uGy")
 new Hymn("O lady, full of God's own grace", "1031", "", "", "https://www.youtube.com/embed/V2HW50l46fo?si=GxFnbCyFOqbDFbwk");
 new Hymn("O let all who thirst", 408, "", "", "https://www.youtube.com/embed/MwG6PCWnih0?si=qltwXx5awggq5kJp");
 new Hymn("O Lord hear my prayer", 929, "", "", "https://www.youtube.com/embed/npjgYMt2pHc?si=rgQ2VlIwKSI-j7bi")
@@ -280,6 +284,7 @@ new Hymn("Taste and See", "Sheet", "./sheetMusic/Taste & See (chords & lyrics).p
 new Hymn("Tell out my soul", 880, "", "", "https://www.youtube.com/embed/A59pfx4sb2Q?si=2CAw8d2OBfjEWvFT");
 new Hymn("The angel Gabriel", 113, "", "", "https://www.youtube.com/embed/pliqObTHxUQ?si=n-iBUx5I6ggQvds1");
 new Hymn("The Church's One Foundation", 830, "", "", "https://www.youtube.com/embed/1ooRvCyULoU?si=c381yxAE3XBSKWhi");
+new Hymn("The day of Resurrection", 283, "", "", "https://www.youtube.com/embed/49hPB6NTVEE?si=UjT6P_mLMGsWZQxs")
 new Hymn("The day thou gavest", 679, "", "", "https://www.youtube.com/embed/FlCF3-aDpb0?si=kW0cJBR8-Y2CVfwP")
 new Hymn("The first Noel", 150, "", "", "https://www.youtube.com/embed/1mItWsC8RtM?si=_cbhrtdvUladP4Yn");
 new Hymn("The king of glory comes", 107, "", "", "https://www.youtube.com/embed/aTl1Q8yudfM?si=x0GFpzoPCkMWtZRA");
@@ -294,6 +299,7 @@ new Hymn("Thine be the Glory", 287, "", "", "https://www.youtube.com/embed/6qKfV
 new Hymn("This is my body", 627, "", "", "https://www.youtube.com/embed/O-60hfhJzqI?si=_vXX2hQT8MWV5zwl")
 new Hymn("This is my will, my one command", 921, "", "", "https://www.youtube.com/embed/-OXw6Lhs7u8?si=TAaIOPJx2OD3MYcu");
 new Hymn("Though the mountains may fall", 785, "", "", "https://www.youtube.com/embed/ghXT5IOzt8g?si=-ITPGRQAbQ-kBRGm");
+new Hymn("Turn to me", 786, "", "", "https://www.youtube.com/embed/C0_8VPBRDgY?si=b2B_ea92iST7WEoQ")
 new Hymn("Ubi Caritas", 246, "", "", "https://www.youtube.com/embed/Vvfr_2euIFo?si=aShcg8H8_txp1nBH")
 new Hymn("Unto us is born a son", 152, "", "", "https://www.youtube.com/embed/4_4xMMpcqbM?si=RhsMJeDjUpuP2bYO");
 new Hymn("Upon thy table", 606, "", "", "https://www.youtube.com/embed/mTKeKMu0shs?si=G-bRZOzNwJniaYWw");
@@ -311,83 +317,95 @@ new Hymn("When I survey the Wondrous Cross", 756, "", "", "https://www.youtube.c
 new Hymn("Where are you bound, Mary?", 343, "", "", "https://www.youtube.com/embed/rPWOEZzNhxM?si=w_alalLvviuN7AX5");
 
 
-//specify litergys
+//specify liturgies
 
-new Litergy(new Date("16 apr 2023"), "2nd Sunday of Easter", "A", "Chris", ["At the name of Jesus", "Crown him with many crowns", "Godhead here in hiding", "Sing of Mary, pure and lowly"])
-new Litergy(new Date("23 apr 2023"), "3rd Sunday of Easter", "A", "Chris", ["Christ be our light", "I will be with you", "Bread of life", "Holy virgin by God's decree"])
-new Litergy(new Date("30 apr 2023"), "4th Sunday of Easter", "A", "Chris", ["At the lamb's high feast", "Gifts of bread & wine", "This is my body", "Hail Queen of Heaven"])
-new Litergy(new Date("07 may 2023"), "5th Sunday of Easter", "A", "Chris", ["Sing of the Lord's goodness", "This is my will, my one command", "The light of Christ", "Daily, daily sing to Mary"])
-new Litergy(new Date("14 may 2023"), "6th Sunday of Easter", "A", "Chris", ["Alleluia, sing to Jesus", "Take our bread", "O God you search me", "As I kneel before you"])
-new Litergy(new Date("21 may 2023"), "7th Sunday of Easter", "A", "Julian", ["Gather us in", "In bread we bring you, Lord", "Let all mortal flesh", "Eternal father, strong to save"])
-new Litergy(new Date("28 may 2023"), "Pentecost", "A", "Julian", ["Here I am, Lord", "Here we bring you", "Sweet Sacrament Divine", "Immaculate Mary"])
-new Litergy(new Date("04 jun 2023"), "Trinity Sunday", "A", "Julian", ["Praise my soul the King of heaven", "Blest are you, Lord", "Freely, freely", "Sing of Mary, pure and lowly"])
-new Litergy(new Date("11 jun 2023"), "10th Sunday of Ordinary Time", "A", "Julian", ["Love divine, all loves excelling", "O bread of heaven", "The servant King", "I'll sing a hymn to Mary"])
-new Litergy(new Date("18 jun 2023"), "11th Sunday of Ordinary Time", "A", "Julian", ["Shine Jesus Shine", "All that I am", "Be thou my vision", "O purest of creatures"])
-new Litergy(new Date("25 jun 2023"), "12th Sunday of Ordinary Time", "A", "Julian", ["Tell out my soul", "Take our bread", "Do not be afraid", "O lady, full of God's own grace"])
+new Liturgy(new Date("16 apr 2023"), "2nd Sunday of Easter", "A", "Chris", ["At the name of Jesus", "Crown him with many crowns", "Godhead here in hiding", "Sing of Mary, pure and lowly"])
+new Liturgy(new Date("23 apr 2023"), "3rd Sunday of Easter", "A", "Chris", ["Christ be our light", "I will be with you", "Bread of life", "Holy virgin by God's decree"])
+new Liturgy(new Date("30 apr 2023"), "4th Sunday of Easter", "A", "Chris", ["At the lamb's high feast", "Gifts of bread & wine", "This is my body", "Hail Queen of Heaven"])
+new Liturgy(new Date("07 may 2023"), "5th Sunday of Easter", "A", "Chris", ["Sing of the Lord's goodness", "This is my will, my one command", "The light of Christ", "Daily, daily sing to Mary"])
+new Liturgy(new Date("14 may 2023"), "6th Sunday of Easter", "A", "Chris", ["Alleluia, sing to Jesus", "Take our bread", "O God you search me", "As I kneel before you"])
+new Liturgy(new Date("21 may 2023"), "7th Sunday of Easter", "A", "Julian", ["Gather us in", "In bread we bring you, Lord", "Let all mortal flesh", "Eternal father, strong to save"])
+new Liturgy(new Date("28 may 2023"), "Pentecost", "A", "Julian", ["Here I am, Lord", "Here we bring you", "Sweet Sacrament Divine", "Immaculate Mary"])
+new Liturgy(new Date("04 jun 2023"), "Trinity Sunday", "A", "Julian", ["Praise my soul the King of heaven", "Blest are you, Lord", "Freely, freely", "Sing of Mary, pure and lowly"])
+new Liturgy(new Date("11 jun 2023"), "10th Sunday of Ordinary Time", "A", "Julian", ["Love divine, all loves excelling", "O bread of heaven", "The servant King", "I'll sing a hymn to Mary"])
+new Liturgy(new Date("18 jun 2023"), "11th Sunday of Ordinary Time", "A", "Julian", ["Shine Jesus Shine", "All that I am", "Be thou my vision", "O purest of creatures"])
+new Liturgy(new Date("25 jun 2023"), "12th Sunday of Ordinary Time", "A", "Julian", ["Tell out my soul", "Take our bread", "Do not be afraid", "O lady, full of God's own grace"])
 
-new Litergy(new Date("29 jun 2023"), "Saints Peter & Paul", "A", "Chris", ["Our God reigns", "The Summons", "He is Lord", "For all the saints"])
+new Liturgy(new Date("29 jun 2023"), "Saints Peter & Paul", "A", "Chris", ["Our God reigns", "The Summons", "He is Lord", "For all the saints"])
 
-new Litergy(new Date("08 dec 2024"), "2nd Sunday Advent", "C", "Chris", ["On jordan's bank", "praise to you o christ our saviour", "this is my body", "holy virgin by god's decree"])
-new Litergy(new Date("15 dec 2024"), "3rd Sunday Advent", "C", "Chris", ["the voice of god", "holy is his name", "the king of glory comes", "blessed virgin mother"]);
-new Litergy(new Date("22 dec 2024"), "4th Sunday Advent", "C", "Chris", ["long ago prophets knew", "the angel gabriel", "in the breaking of the bread", "o mary conceived in the grace of your son"]);
-new Litergy(new Date("24 dec 2024"), "Christmas Eve", "C", "Chris", ["on christmas night all christians sing", "it came upon the midnight clear", "once in royal david's city", "the first noel"]);
-new Litergy(new Date("25 dec 2024"), "Christmas Day", "C", "Chris", ["unto us is born a son", "hark the herald angels sing", "silent night", "o come all ye faithful"]);
-new Litergy(new Date("29 dec 2024"), "Feast of Holy Family", "C", "Chris", ["what child is this", "in the bleak mid-winter", "bread of life", "sing of mary, pure and lowly"]);
-new Litergy(new Date("01 jan 2025"), "Mary the Holy mother of God", "C", "Chris", ["I'll sing a hymn to mary", "hail queen of heaven", "as i kneel before you", "holy virgin by god's decree"]);
-new Litergy(new Date("5 jan 2025"), "The Epiphany", "C", "Chris", ["bethlehem of noblest cities", "As with gladness men of old", "We three kings", "As I kneel before you"]);
-new Litergy(new Date("12 jan 2025"), "The Baptism of the Lord", "C", "Chris", ["i heard the voice of Jesus say", "water of life", "o let all who thirst", "hail queen of heaven"]);
-new Litergy(new Date("19 jan 2025"), "2nd Sunday of Ordinary Time", "C", "Chris", ["The Church's one foundation", "Lay your hands", "One Bread, One Body", "Immaculate Mary"]);
-new Litergy(new Date("26 jan 2025"), "3rd Sunday of Ordinary Time", "C", "Chris", ["We have a gospel to proclaim", "Blest are you, Lord", "This is my body", "Where are you bound, Mary?"]);
-new Litergy(new Date("2 Feb 2025"), "The Presentation of the Lord", "C", "Chris", ["Sing of the Lord's Goodness", "The King of Glory Comes", "The light of Christ", "Daily, daily sing to Mary"]);
-new Litergy(new Date("9 Feb 2025"), "5th Sunday of Ordinary Time", "C", "Chris", ["Follow me, follow me", "The Summons", "Dear Lord and Father of mankind", "Sing we of the blessed Mother"]);
+new Liturgy(new Date("08 dec 2024"), "2nd Sunday Advent", "C", "Chris", ["On jordan's bank", "praise to you o christ our saviour", "this is my body", "holy virgin by god's decree"])
+new Liturgy(new Date("15 dec 2024"), "3rd Sunday Advent", "C", "Chris", ["the voice of god", "holy is his name", "the king of glory comes", "blessed virgin mother"]);
+new Liturgy(new Date("22 dec 2024"), "4th Sunday Advent", "C", "Chris", ["long ago prophets knew", "the angel gabriel", "in the breaking of the bread", "o mary conceived in the grace of your son"]);
+new Liturgy(new Date("24 dec 2024"), "Christmas Eve", "C", "Chris", ["on christmas night all christians sing", "it came upon the midnight clear", "once in royal david's city", "the first noel"]);
+new Liturgy(new Date("25 dec 2024"), "Christmas Day", "C", "Chris", ["unto us is born a son", "hark the herald angels sing", "silent night", "o come all ye faithful"]);
+new Liturgy(new Date("29 dec 2024"), "Feast of Holy Family", "C", "Chris", ["what child is this", "in the bleak mid-winter", "bread of life", "sing of mary, pure and lowly"]);
+new Liturgy(new Date("01 jan 2025"), "Mary the Holy mother of God", "C", "Chris", ["I'll sing a hymn to mary", "hail queen of heaven", "as i kneel before you", "holy virgin by god's decree"]);
+new Liturgy(new Date("5 jan 2025"), "The Epiphany", "C", "Chris", ["bethlehem of noblest cities", "As with gladness men of old", "We three kings", "As I kneel before you"]);
+new Liturgy(new Date("12 jan 2025"), "The Baptism of the Lord", "C", "Chris", ["i heard the voice of Jesus say", "water of life", "o let all who thirst", "hail queen of heaven"]);
+new Liturgy(new Date("19 jan 2025"), "2nd Sunday of Ordinary Time", "C", "Chris", ["The Church's one foundation", "Lay your hands", "One Bread, One Body", "Immaculate Mary"]);
+new Liturgy(new Date("26 jan 2025"), "3rd Sunday of Ordinary Time", "C", "Chris", ["We have a gospel to proclaim", "Blest are you, Lord", "This is my body", "Where are you bound, Mary?"]);
+new Liturgy(new Date("2 Feb 2025"), "The Presentation of the Lord", "C", "Chris", ["Sing of the Lord's Goodness", "The King of Glory Comes", "The light of Christ", "Daily, daily sing to Mary"]);
+new Liturgy(new Date("9 Feb 2025"), "5th Sunday of Ordinary Time", "C", "Chris", ["Follow me, follow me", "The Summons", "Dear Lord and Father of mankind", "Sing we of the blessed Mother"]);
 
-new Litergy(new Date("16 Feb 2025"), "6th Sunday of Ordinary Time", "C", "Julian", ["Our God reigns", "Blest are you, Lord", "O God, our help in ages past", "Immaculate Mary"]);
-new Litergy(new Date("23 Feb 2025"), "7th Sunday of Ordinary Time", "C", "Julian", ["God of mercy and compassion", "Make me a channel of your peace", "Freely, freely", "O lady, full of God's own grace"]);
-new Litergy(new Date("2 Mar 2025"), "8th Sunday of Ordinary Time", "C", "Julian", ["Praise to the Lord, the Almighty", "Alleluia, Sing to Jesus", "Be thou my vision", "O purest of creatures"]);
-new Litergy(new Date("5 Mar 2025"), "Ash Wednesday", "C", "Chris", ["Though the mountains may fall", "Hosea (Come back to me)", "Upon thy table", "Be still and know I am with you", "As I kneel before you"]);
-new Litergy(new Date("9 Mar 2025"), "1st Sunday of Lent", "C", "Julian", ["He who would valiant be", "Lead us, heavenly father", "Father, I place into your hands", "Hail Queen of heaven"]);
-new Litergy(new Date("16 Mar 2025"), "2nd Sunday of Lent", "C", "Julian", ["Shine Jesus shine", "Christ be our light", "Immortal, invisible", "I'll sing a hymn to Mary"]);
-new Litergy(new Date("23 Mar 2025"), "3rd Sunday of Lent", "C", "Chris", ["Praise to the holiest in the height", "All my hope on God is founded", "Upon thy table", "O God you search me", "Guide me O thou great redeemer"]);
-new Litergy(new Date("30 Mar 2025"), "4rd Sunday of Lent", "C", "Julian", ["God is love his the care", "My song is love unknown", "The Church's one foundation", "Holy virgin by God's decree"]);
-new Litergy(new Date("6 Apr 2025"), "5th Sunday of Lent", "C", "Julian", ["Love divine all loves excelling", "Here we bring you", "Amazing grace", "Sing of Mary, pure and lowly"])
-new Litergy(new Date("13 Apr 2025"), "Palm Sunday", "C", "Chris", ["All glory laud and honour", "The servant king", "Were you there", "Holy virgin by god's decree"])
-new Litergy(new Date("17 Apr 2025"), "Holy Thursday", "C", "Chris", ["We Should Glory in the Cross", "Jesu, Jesu, fill us with your love", "The Lord Jesus", "Ubi Caritas", "This is my body", "Of the Glorious Body Telling", "Stay with me"])
-new Litergy(new Date("19 Apr 2025"), "Easter Vigil", "C", "Chris", ["Saints of God in Glory", "Water of life", "Christ be our light", "bread of life", "Thine be the Glory"])
-new Litergy(new Date("20 Apr 2025"), "Easter Sunday", "C", "Chris", ["Sing of the Lord's goodness", "Jesus Christ is risen today", "Alleluia, Alleluia, give thanks", "Tell out my soul"])
-new Litergy(new Date("27 Apr 2025"), "2nd Sunday of Easter", "C", "Chris", ["At the name of Jesus", "Now the green blade riseth", "He is Lord", "O Mother Blest"]);
-new Litergy(new Date("4 May 2025"), "3rd Sunday of Easter", "C", "Chris", ["Crown him with many Crowns", "I will be with you", "One bread, One body", "Hail Queen of heaven"]);
-new Litergy(new Date("11 May 2025"), "4th Sunday of Easter", "C", "Chris", ["Our God reigns", "Come to the river", "The Lord's my Shepherd", "All people that on earth do dwell", "immaculate Mary"])
-new Litergy(new Date("18 May 2025"), "5th Sunday of Easter", "C", "Chris", ["God is love, his the care", "This is my will, my one command", "This is my body", "As I kneel before you"])
-new Litergy(new Date("25 May 2025"), "6th Sunday of Easter", "C", "Julian", ["Love divine all loves excelling", "Dear Lord and father of mankind", "A new commandment", "Christ be our light"])
-new Litergy(new Date("29 May 2025"), "Ascension of Our Lord", "C", "Chris", ["A hymn of glory let us sing!", "He is Lord", "This is my body", "Crown him with many crowns"])
-new Litergy(new Date("1 Jun 2025"), "7th Sunday of Easter", "C", "Julian", ["I heard the voice of Jesus say", "Alleluia, Sing to Jesus", "Fight the Good Fight", "Mary Immaculate, Star of the morning"])
-new Litergy(new Date("8 Jun 2025"), "Pentecost Sunday", "C", "Julian", ["Shine Jesus Shine", "Holy Spirit Lord of Light", "Breathe on me, breath of God", "O Lady full of God's own grace"])
-new Litergy(new Date("15 Jun 2025"), "Trinity Sunday", "C", "Julian", ["Eternal Father, Strong to save", "Lead us, heavenly Father", "For the beauty of the Earth", "I'll sing a Hymn to Mary"])
-new Litergy(new Date("22 Jun 2025"), "Corpus Christi", "C", "Julian", ["Gather us in", "At the lamb's high feast", "Godhead here in hiding", "O mother blest"])
-new Litergy(new Date("29 Jun 2025"), "St Peter & St Paul", "C", "Julian", ["Follow me, follow me", "My Song is love unknown", "Be thou my vision", "Sing of Mary pure and lowly"])
-new Litergy(new Date("6 Jul 2025"), "14th Sunday in Ordinary Time", "C", "Julian", ["Praise my soul the King of Heaven", "Gifts of bread & wine", "Soul of my saviour", "Hail Queen of Heaven"])
-new Litergy(new Date("13 Jul 2025"), "15th Sunday in Ordinary Time", "C", "Julian", ["God is Love, His the care", "O Worship the King", "The Church's One Foundation", "O Purest of Creatures"])
-new Litergy(new Date("20 Jul 2025"), "16th Sunday in Ordinary Time", "C", "Julian", ["All are welcome", "Bread of life", "Christ be beside me", "Daily daily sing to Mary"])
-new Litergy(new Date("27 Jul 2025"), "17th Sunday in Ordinary Time", "C", "Julian", ["He who would valiant be", "Sweet Sacrament Divine", "When I survey the Wondrous Cross", "Virgin Wholly Marvellous"])
-new Litergy(new Date("3 Aug 2025"), "18th Sunday in Ordinary Time", "C", "Chris", ['Dear Lord and Father of Mankind', 'Take our bread', 'All my hope on God is founded', "I'll sing a hymn to Mary"])
-new Litergy(new Date("10 Aug 2025"), "19th Sunday in Ordinary Time", "C", "Chris", ["O Lord my God", "Do not be afraid", "This is my body", "Holy Virgin, by God's decree"], ["Bless the Lord, my soul", "10,000 reasons"])
-new Litergy(new Date("15 Aug 2025"), "The Assumption of the Blessed Virgin Mary", "C", "Chris", ["I'll sing a hymn to Mary", "O Mother blest", "Holy is his name", "As I kneel before you"])
-new Litergy(new Date("17 Aug 2025"), "20th Sunday in Ordinary Time", "C", "Chris", ["The Church's one foundation", "I am the bread of life", "Be still for the presence of the Lord", "Sing we of the blessed Mother"], ["My song is love unknown"])
-new Litergy(new Date("24 Aug 2025"), "21st Sunday in Ordinary Time", "C", "Chris", ["Tell out my soul", "Alleluia Sing to Jesus", "One bread, one body", "Hail, Queen of heaven"], ["Laudate Dominum", "Laudate Dominum2"])
-new Litergy(new Date("31 Aug 2025"), "22nd Sunday in Ordinary Time", "C", "Chris", ["Christ is our King", "Whatsoever you do", "The servant song", "Sing of Mary, pure and lowly"], ["O Lord hear my prayer"])
-new Litergy(new Date("7 Sep 2025"), "23rd Sunday in Ordinary Time", "C", "Chris", ["Lord of all hopefulness", "The Summons", "All that I am", "My soul proclaims you, mighty God"], ["As the deer longs"])
-new Litergy(new Date("14 Sep 2025"), "The Exaltation of the Holy Cross", "C", "Chris", ["Christ is made the sure foundation", "When I survey the wondrous cross", "He is Lord", "I'll sing a hymn to Mary"], ["In Christ alone", "Glory be to Jesus"])
-new Litergy(new Date("21 Sep 2025"), "25th Sunday in Ordinary Time", "C", "Chris", ["For the healing of the nations", "In bread we bring you, Lord", "O let all who thirst", "Hail Queen of heaven"], ["O Lord hear my prayer"])
-new Litergy(new Date("28 Sep 2025"), "26th Sunday in Ordinary Time", "C", "Chris", ["Praise to the Lord, the almighty", "The Lord's my shepherd", "Christ be our light", "As I kneel before you"])
-new Litergy(new Date("5 Oct 2025"), "27th Sunday in Ordinary Time", "C", "Chris", ["Though the mountains may fall", "Walk with me, O my Lord", "Lord of Creation, to you be all praise", "Holy virgin by God's decree"])
-new Litergy(new Date("12 Oct 2025"), "28th Sunday in Ordinary Time", "C", "Chris", ["All people that on earth do dwell", "Amazing Grace", "Be still for the presence of the Lord", "Sing we of the blessed mother"], ["Bless the Lord my soul", "10,000 reasons"])
-new Litergy(new Date("19 Oct 2025"), "29th Sunday in Ordinary Time", "C", "Chris", ["All my hope on God is founded", "Father in my life I see", "Father, hear the prayer we offer", "Immaculate Mary"], ["Centre of my life", "O Lord, hear my prayer"])
-new Litergy(new Date("26 Oct 2025"), "30th Sunday in Ordinary Time", "C", "Chris", ["Tell out my soul", "In bread we bring you Lord", "Dear Lord and father of mankind", "Blessed virgin mother"], ["Bless the Lord my soul", "Centre of my life", "O Lord hear my prayer", "Taste and See"])
-new Litergy(new Date("2 Nov 2025"), "Solemnity of All Saints", "C", "Chris", ["For all the Saints", "Be thou my vision", "Holy holy holy, Lord God almighty", "As I kneel before you"], ["Christ be beside me"])
+new Liturgy(new Date("16 Feb 2025"), "6th Sunday of Ordinary Time", "C", "Julian", ["Our God reigns", "Blest are you, Lord", "O God, our help in ages past", "Immaculate Mary"]);
+new Liturgy(new Date("23 Feb 2025"), "7th Sunday of Ordinary Time", "C", "Julian", ["God of mercy and compassion", "Make me a channel of your peace", "Freely, freely", "O lady, full of God's own grace"]);
+new Liturgy(new Date("2 Mar 2025"), "8th Sunday of Ordinary Time", "C", "Julian", ["Praise to the Lord, the Almighty", "Alleluia, Sing to Jesus", "Be thou my vision", "O purest of creatures"]);
+new Liturgy(new Date("5 Mar 2025"), "Ash Wednesday", "C", "Chris", ["Though the mountains may fall", "Hosea (Come back to me)", "Upon thy table", "Be still and know I am with you", "As I kneel before you"]);
+new Liturgy(new Date("9 Mar 2025"), "1st Sunday of Lent", "C", "Julian", ["He who would valiant be", "Lead us, heavenly father", "Father, I place into your hands", "Hail Queen of heaven"]);
+new Liturgy(new Date("16 Mar 2025"), "2nd Sunday of Lent", "C", "Julian", ["Shine Jesus shine", "Christ be our light", "Immortal, invisible", "I'll sing a hymn to Mary"]);
+new Liturgy(new Date("23 Mar 2025"), "3rd Sunday of Lent", "C", "Chris", ["Praise to the holiest in the height", "All my hope on God is founded", "Upon thy table", "O God you search me", "Guide me O thou great redeemer"]);
+new Liturgy(new Date("30 Mar 2025"), "4rd Sunday of Lent", "C", "Julian", ["God is love his the care", "My song is love unknown", "The Church's one foundation", "Holy virgin by God's decree"]);
+new Liturgy(new Date("6 Apr 2025"), "5th Sunday of Lent", "C", "Julian", ["Love divine all loves excelling", "Here we bring you", "Amazing grace", "Sing of Mary, pure and lowly"])
+new Liturgy(new Date("13 Apr 2025"), "Palm Sunday", "C", "Chris", ["All glory laud and honour", "The servant king", "Were you there", "Holy virgin by god's decree"])
+new Liturgy(new Date("17 Apr 2025"), "Holy Thursday", "C", "Chris", ["We Should Glory in the Cross", "Jesu, Jesu, fill us with your love", "The Lord Jesus", "Ubi Caritas", "This is my body", "Of the Glorious Body Telling", "Stay with me"])
+new Liturgy(new Date("19 Apr 2025"), "Easter Vigil", "C", "Chris", ["Saints of God in Glory", "Water of life", "Christ be our light", "bread of life", "Thine be the Glory"])
+new Liturgy(new Date("20 Apr 2025"), "Easter Sunday", "C", "Chris", ["Sing of the Lord's goodness", "Jesus Christ is risen today", "Alleluia, Alleluia, give thanks", "Tell out my soul"])
+new Liturgy(new Date("27 Apr 2025"), "2nd Sunday of Easter", "C", "Chris", ["At the name of Jesus", "Now the green blade riseth", "He is Lord", "O Mother Blest"]);
+new Liturgy(new Date("4 May 2025"), "3rd Sunday of Easter", "C", "Chris", ["Crown him with many Crowns", "I will be with you", "One bread, One body", "Hail Queen of heaven"]);
+new Liturgy(new Date("11 May 2025"), "4th Sunday of Easter", "C", "Chris", ["Our God reigns", "Come to the river", "The Lord's my Shepherd", "All people that on earth do dwell", "immaculate Mary"])
+new Liturgy(new Date("18 May 2025"), "5th Sunday of Easter", "C", "Chris", ["God is love, his the care", "This is my will, my one command", "This is my body", "As I kneel before you"])
+new Liturgy(new Date("25 May 2025"), "6th Sunday of Easter", "C", "Julian", ["Love divine all loves excelling", "Dear Lord and father of mankind", "A new commandment", "Christ be our light"])
+new Liturgy(new Date("29 May 2025"), "Ascension of Our Lord", "C", "Chris", ["A hymn of glory let us sing!", "He is Lord", "This is my body", "Crown him with many crowns"])
+new Liturgy(new Date("1 Jun 2025"), "7th Sunday of Easter", "C", "Julian", ["I heard the voice of Jesus say", "Alleluia, Sing to Jesus", "Fight the Good Fight", "Mary Immaculate, Star of the morning"])
+new Liturgy(new Date("8 Jun 2025"), "Pentecost Sunday", "C", "Julian", ["Shine Jesus Shine", "Holy Spirit Lord of Light", "Breathe on me, breath of God", "O Lady full of God's own grace"])
+new Liturgy(new Date("15 Jun 2025"), "Trinity Sunday", "C", "Julian", ["Eternal Father, Strong to save", "Lead us, heavenly Father", "For the beauty of the Earth", "I'll sing a Hymn to Mary"])
+new Liturgy(new Date("22 Jun 2025"), "Corpus Christi", "C", "Julian", ["Gather us in", "At the lamb's high feast", "Godhead here in hiding", "O mother blest"])
+new Liturgy(new Date("29 Jun 2025"), "St Peter & St Paul", "C", "Julian", ["Follow me, follow me", "My Song is love unknown", "Be thou my vision", "Sing of Mary pure and lowly"])
+new Liturgy(new Date("6 Jul 2025"), "14th Sunday in Ordinary Time", "C", "Julian", ["Praise my soul the King of Heaven", "Gifts of bread & wine", "Soul of my saviour", "Hail Queen of Heaven"])
+new Liturgy(new Date("13 Jul 2025"), "15th Sunday in Ordinary Time", "C", "Julian", ["God is Love, His the care", "O Worship the King", "The Church's One Foundation", "O Purest of Creatures"])
+new Liturgy(new Date("20 Jul 2025"), "16th Sunday in Ordinary Time", "C", "Julian", ["All are welcome", "Bread of life", "Christ be beside me", "Daily daily sing to Mary"])
+new Liturgy(new Date("27 Jul 2025"), "17th Sunday in Ordinary Time", "C", "Julian", ["He who would valiant be", "Sweet Sacrament Divine", "When I survey the Wondrous Cross", "Virgin Wholly Marvellous"])
+new Liturgy(new Date("3 Aug 2025"), "18th Sunday in Ordinary Time", "C", "Chris", ['Dear Lord and Father of Mankind', 'Take our bread', 'All my hope on God is founded', "I'll sing a hymn to Mary"])
+new Liturgy(new Date("10 Aug 2025"), "19th Sunday in Ordinary Time", "C", "Chris", ["O Lord my God", "Do not be afraid", "This is my body", "Holy Virgin, by God's decree"], ["Bless the Lord, my soul", "10,000 reasons"])
+new Liturgy(new Date("15 Aug 2025"), "The Assumption of the Blessed Virgin Mary", "C", "Chris", ["I'll sing a hymn to Mary", "O Mother blest", "Holy is his name", "As I kneel before you"])
+new Liturgy(new Date("17 Aug 2025"), "20th Sunday in Ordinary Time", "C", "Chris", ["The Church's one foundation", "I am the bread of life", "Be still for the presence of the Lord", "Sing we of the blessed Mother"], ["My song is love unknown"])
+new Liturgy(new Date("24 Aug 2025"), "21st Sunday in Ordinary Time", "C", "Chris", ["Tell out my soul", "Alleluia Sing to Jesus", "One bread, one body", "Hail, Queen of heaven"], ["Laudate Dominum", "Laudate Dominum2"])
+new Liturgy(new Date("31 Aug 2025"), "22nd Sunday in Ordinary Time", "C", "Chris", ["Christ is our King", "Whatsoever you do", "The servant song", "Sing of Mary, pure and lowly"], ["O Lord hear my prayer"])
+new Liturgy(new Date("7 Sep 2025"), "23rd Sunday in Ordinary Time", "C", "Chris", ["Lord of all hopefulness", "The Summons", "All that I am", "My soul proclaims you, mighty God"], ["As the deer longs"])
+new Liturgy(new Date("14 Sep 2025"), "The Exaltation of the Holy Cross", "C", "Chris", ["Christ is made the sure foundation", "When I survey the wondrous cross", "He is Lord", "I'll sing a hymn to Mary"], ["In Christ alone", "Glory be to Jesus"])
+new Liturgy(new Date("21 Sep 2025"), "25th Sunday in Ordinary Time", "C", "Chris", ["For the healing of the nations", "In bread we bring you, Lord", "O let all who thirst", "Hail Queen of heaven"], ["O Lord hear my prayer"])
+new Liturgy(new Date("28 Sep 2025"), "26th Sunday in Ordinary Time", "C", "Chris", ["Praise to the Lord, the almighty", "The Lord's my shepherd", "Christ be our light", "As I kneel before you"])
+new Liturgy(new Date("5 Oct 2025"), "27th Sunday in Ordinary Time", "C", "Chris", ["Though the mountains may fall", "Walk with me, O my Lord", "Lord of Creation, to you be all praise", "Holy virgin by God's decree"])
+new Liturgy(new Date("12 Oct 2025"), "28th Sunday in Ordinary Time", "C", "Chris", ["All people that on earth do dwell", "Amazing Grace", "Be still for the presence of the Lord", "Sing we of the blessed mother"], ["Bless the Lord my soul", "10,000 reasons"])
+new Liturgy(new Date("19 Oct 2025"), "29th Sunday in Ordinary Time", "C", "Chris", ["All my hope on God is founded", "Father in my life I see", "Father, hear the prayer we offer", "Immaculate Mary"], ["Centre of my life", "O Lord, hear my prayer"])
+new Liturgy(new Date("26 Oct 2025"), "30th Sunday in Ordinary Time", "C", "Chris", ["Tell out my soul", "In bread we bring you Lord", "Dear Lord and father of mankind", "Blessed virgin mother"], ["Bless the Lord my soul", "Centre of my life", "O Lord hear my prayer", "Taste and See"])
+new Liturgy(new Date("2 Nov 2025"), "Solemnity of All Saints", "C", "Chris", ["For all the Saints", "Be thou my vision", "Holy holy holy, Lord God almighty", "As I kneel before you"], ["Christ be beside me"])
+new Liturgy(new Date("9 Nov 2025"), "32nd Sunday in Ordinary Time", "C", "Julian", ["The day of Resurrection", "Lord of all Hopefulness", "Fight the good fight", "Daily daily, sing to Mary"], ["Come to the river"]);
+new Liturgy(new Date("16 Nov 2025"), "33rd Sunday in Ordinary Time", "C", "Julian", ["Love Divine all Loves Excelling", "Alleluia sing to Jesus", "All Glory, Laud and honour", "O Purest of creatures"], ["Turn to me"])
+new Liturgy(new Date("23 Nov 2025"), "Christ The King", "C", "Julian", ["Crown him with many crowns", "At the lamb's high feast", "At the name of Jesus", "Holy virgin by God's decree"])
+new Liturgy(new Date("30 Nov 2025"), "1st Sunday of Advent", "C", "Julian", ["Our God Reigns", "Hark! a Herald voice is calling", "O Jesus Christ remember", "Christ be our light"])
+new Liturgy(new Date("7 Dec 2025"), "2nd Sunday of Advent", "C", "Julian", ["Praise my soul, the king of heaven", "Hail to the Lord's annointed", "Let all mortal flesh", "Hail Queen of heaven"])
+new Liturgy(new Date("14 Dec 2025"), "3rd Sunday of Advent", "C", "Julian", ["O come o come Emmanuel", "On jordan's bank", "Christ be beside me", "O lady full of God's own grace"])
+new Liturgy(new Date("21 Dec 2025"), "4th Sunday of Advent", "C", "Julian", ["Immortal invisible", "Bethlehem of noblest cities", "The angel Gabriel", "Immaculate Mary"])
+
+const todaysDate = new Date();
+let nextLiturgy = allLiturgies.filter(x => x.date >= todaysDate);
+nextLiturgy = [allLiturgies[allLiturgies.length - 6]]; //show latest liturgy on opening page (for easier adding)
+
 
 const liturgyPlan = document.querySelector(".liturgyPlan");
 
-allLitergies.sort(function (a, b) { return a.date - b.date }); //sort Liturgy array incase not sorted manually
+allLiturgies.sort(function (a, b) { return a.date - b.date }); //sort Liturgy array incase not sorted manually
 
 document.querySelector(".liturgyPlan .flex-container").addEventListener("click", (e) => {
     if (!e.target.closest('button')) { return }
@@ -436,16 +454,16 @@ document.querySelector(".liturgyPlan .flex-container").addEventListener("click",
             const futureTitles = wrapper.querySelectorAll(".futureServices h4")
 
 
-            if ((allLitergies.filter(x => x.date > todaysDate)[1]) != undefined) { futureTitles[0].textContent = allLitergies.filter(x => x.date > todaysDate)[1].occasion; }
-            if ((allLitergies.filter(x => x.date > todaysDate)[2]) != undefined) { futureTitles[1].textContent = allLitergies.filter(x => x.date > todaysDate)[2].occasion; }
-            if ((allLitergies.filter(x => x.date > todaysDate)[3]) != undefined) { futureTitles[2].textContent = allLitergies.filter(x => x.date > todaysDate)[3].occasion; }
-            if ((allLitergies.filter(x => x.date > todaysDate)[4]) != undefined) { futureTitles[3].textContent = allLitergies.filter(x => x.date > todaysDate)[4].occasion; }
-            if ((allLitergies.filter(x => x.date > todaysDate)[5]) != undefined) { futureTitles[4].textContent = allLitergies.filter(x => x.date > todaysDate)[5].occasion; }
-            if ((allLitergies.filter(x => x.date > todaysDate)[6]) != undefined) { futureTitles[5].textContent = allLitergies.filter(x => x.date > todaysDate)[6].occasion; }
-            if ((allLitergies.filter(x => x.date > todaysDate)[7]) != undefined) { futureTitles[6].textContent = allLitergies.filter(x => x.date > todaysDate)[7].occasion; }
-            if ((allLitergies.filter(x => x.date > todaysDate)[8]) != undefined) { futureTitles[7].textContent = allLitergies.filter(x => x.date > todaysDate)[8].occasion; }
-            if ((allLitergies.filter(x => x.date > todaysDate)[9]) != undefined) { futureTitles[8].textContent = allLitergies.filter(x => x.date > todaysDate)[9].occasion; }
-            if ((allLitergies.filter(x => x.date > todaysDate)[10]) != undefined) { futureTitles[9].textContent = allLitergies.filter(x => x.date > todaysDate)[10].occasion; }
+            if ((allLiturgies.filter(x => x.date > todaysDate)[1]) != undefined) { futureTitles[0].textContent = allLiturgies.filter(x => x.date > todaysDate)[1].occasion; }
+            if ((allLiturgies.filter(x => x.date > todaysDate)[2]) != undefined) { futureTitles[1].textContent = allLiturgies.filter(x => x.date > todaysDate)[2].occasion; }
+            if ((allLiturgies.filter(x => x.date > todaysDate)[3]) != undefined) { futureTitles[2].textContent = allLiturgies.filter(x => x.date > todaysDate)[3].occasion; }
+            if ((allLiturgies.filter(x => x.date > todaysDate)[4]) != undefined) { futureTitles[3].textContent = allLiturgies.filter(x => x.date > todaysDate)[4].occasion; }
+            if ((allLiturgies.filter(x => x.date > todaysDate)[5]) != undefined) { futureTitles[4].textContent = allLiturgies.filter(x => x.date > todaysDate)[5].occasion; }
+            if ((allLiturgies.filter(x => x.date > todaysDate)[6]) != undefined) { futureTitles[5].textContent = allLiturgies.filter(x => x.date > todaysDate)[6].occasion; }
+            if ((allLiturgies.filter(x => x.date > todaysDate)[7]) != undefined) { futureTitles[6].textContent = allLiturgies.filter(x => x.date > todaysDate)[7].occasion; }
+            if ((allLiturgies.filter(x => x.date > todaysDate)[8]) != undefined) { futureTitles[7].textContent = allLiturgies.filter(x => x.date > todaysDate)[8].occasion; }
+            if ((allLiturgies.filter(x => x.date > todaysDate)[9]) != undefined) { futureTitles[8].textContent = allLiturgies.filter(x => x.date > todaysDate)[9].occasion; }
+            if ((allLiturgies.filter(x => x.date > todaysDate)[10]) != undefined) { futureTitles[9].textContent = allLiturgies.filter(x => x.date > todaysDate)[10].occasion; }
             break;
 
     }
@@ -453,7 +471,7 @@ document.querySelector(".liturgyPlan .flex-container").addEventListener("click",
 function checkAndPopulateInstrumentals(number) {
     const futureContent = wrapper.querySelectorAll('.futureServices li.hymnOccasion')
 
-    if (nextLitergy[number].instrumental.length !== 0) {
+    if (nextLiturgy[number].instrumental.length !== 0) {
 
         const instrumentalsDiv = document.createElement('div')
         instrumentalsDiv.classList.add('futureHymnsOpen', 'extras_future')
@@ -467,7 +485,7 @@ function checkAndPopulateInstrumentals(number) {
         // .appendChild(document.createElement('h2'));
         const newFile = instrumentalsDiv.appendChild(list)
         newFile;
-        nextLitergy[number].instrumental.forEach((hymn, idx) => {
+        nextLiturgy[number].instrumental.forEach((hymn, idx) => {
             const createLi = document.createElement('li')
             const createH6 = document.createElement('h6')
             const createH4 = document.createElement('h4')
@@ -488,7 +506,7 @@ function checkAndPopulateInstrumentals(number) {
 
 function addElement(addOrRemove, number) {
     const futureContent = wrapper.querySelectorAll('.futureServices li.hymnOccasion')
-    const hymnsObjectArray = (allLitergies.filter(x => x.date > todaysDate)[number].hymn);
+    const hymnsObjectArray = (allLiturgies.filter(x => x.date > todaysDate)[number].hymn);
 
     if (addOrRemove === 'add') {
         const newDiv = document.createElement("div");
@@ -499,8 +517,8 @@ function addElement(addOrRemove, number) {
             const newH4 = document.createElement('h4');
             const newH6 = document.createElement('h6');
             // and give it some content
-            const hymnText = allLitergies.filter(x => x.date > todaysDate)[number].hymn[idx].title
-            const hymnRef = allLitergies.filter(x => x.date > todaysDate)[number].hymn[idx].hymnNumber
+            const hymnText = allLiturgies.filter(x => x.date > todaysDate)[number].hymn[idx].title
+            const hymnRef = allLiturgies.filter(x => x.date > todaysDate)[number].hymn[idx].hymnNumber
             const newContent = document.createTextNode(hymnText);
             newH6.appendChild(document.createTextNode(hymnRef));
 
@@ -533,7 +551,7 @@ function futureHymnsSection() {
 
         const targetFirstClass = Number(e.target.classList[0])
         const closestDivFirstClass = e.target.closest('div').classList[0]
-        // const title = nextLitergy[Number(e.target.classList[0]) + 1].occasion
+        // const title = nextLiturgy[Number(e.target.classList[0]) + 1].occasion
 
         if (e.target.closest('div').classList.contains('futureServices')) {
             const activeTitle = wrapper.querySelectorAll('.futureServices li')
@@ -558,14 +576,14 @@ function futureHymnsSection() {
             // liturgyPlan.querySelector(".futureServices ul").addEventListener("click", (e) => {
 
             allHymns = originalHymns;
-            allHymns = allLitergies.filter(x => x.date > todaysDate)[Number(e.target.closest('li.active').id) + 1].hymn;
-            const chosenLiturgy = allLitergies.filter(x => x.date > todaysDate)[Number(e.target.closest('li.active  ').id) + 1];
+            allHymns = allLiturgies.filter(x => x.date > todaysDate)[Number(e.target.closest('li.active').id) + 1].hymn;
+            const chosenLiturgy = allLiturgies.filter(x => x.date > todaysDate)[Number(e.target.closest('li.active  ').id) + 1];
             if (chosenLiturgy.instrumental != undefined) {
                 allHymns = allHymns.concat(chosenLiturgy.instrumental);
             }
             count = 0;
 
-            // nextLitergy = allLitergies.filter(x => x.date >= todaysDate);
+            // nextLiturgy = allLiturgies.filter(x => x.date >= todaysDate);
             hymnSelect();
             wrapper.querySelector(".liturgyPlan").classList.add("hidden");
             togglePanels();
@@ -578,14 +596,14 @@ function futureHymnsSection() {
 
 
 
-const todaysDate = new Date();
-//next litergy will change after 10:30am
+
+//next liturgy will change after 10:30am
 // todaysDate.setMinutes(30);
 // todaysDate.setSeconds(0);
 // todaysDate.setHours(10);
 // todaysDate.setMilliseconds(0);
 
-const nextLitergy = allLitergies.filter(x => x.date >= todaysDate);
+
 const originalHymns = allHymns;
 function instrumentalSection() {
     // Add 'Extras' title and additional hymns if 'instrumental' hymn is added to 'current liturgy
@@ -607,11 +625,11 @@ wrapper.querySelector(".acclamations").addEventListener("click", function (e) {
 
 wrapper.querySelector(".liturgyContents.hymns.selected").addEventListener("click", function () {
     allHymns = originalHymns;
-    if (nextLitergy[0].instrumental.length == 0) { allHymns = (nextLitergy[0].hymn) } else {
-        allHymns = (nextLitergy[0].hymn).concat(nextLitergy[0].instrumental);
+    if (nextLiturgy[0].instrumental.length == 0) { allHymns = (nextLiturgy[0].hymn) } else {
+        allHymns = (nextLiturgy[0].hymn).concat(nextLiturgy[0].instrumental);
     }
 
-    // .concat(nextLitergy[0].instrumental);
+    // .concat(nextLiturgy[0].instrumental);
     count = 0;
     hymnSelect();
     wrapper.querySelector(".liturgyPlan").classList.add("hidden");
@@ -628,17 +646,22 @@ wrapper.querySelector(".allHymns").addEventListener("click", function () {
     togglePanels();
 });
 
-if (nextLitergy[0] != undefined) {
+if (nextLiturgy[0] != undefined) {
 
-    wrapper.querySelector("#nextDate").textContent = ordinal(nextLitergy[0].date.toLocaleDateString(undefined, { day: "numeric" })) + " of " + nextLitergy[0].date.toLocaleDateString(undefined, { month: "long" });
-    wrapper.querySelector("#nextOccasion").textContent = nextLitergy[0].occasion;
+    wrapper.querySelector("#nextDate").textContent = ordinal(nextLiturgy[0].date.toLocaleDateString(undefined, { day: "numeric" })) + " of " + nextLiturgy[0].date.toLocaleDateString(undefined, { month: "long" });
+    wrapper.querySelector("#nextOccasion").textContent = nextLiturgy[0].occasion;
     let x = 0;
     //populate hymn titles with nexthymn object
-    nextLitergy[0].hymn.forEach((hymn, idx) => {
+    nextLiturgy[0].hymn.forEach((hymn, idx) => {
         const hymnText = wrapper.querySelector(`#hymn${idx}`);
         const hymnRef = wrapper.querySelector(`#hymnReference${idx}`);
-        hymnText.textContent = nextLitergy[0].hymn[idx].title;
-        hymnRef.textContent = nextLitergy[0].hymn[idx].hymnNumber;
+        if (nextLiturgy[0].hymn[idx]) {
+            hymnText.textContent = nextLiturgy[0].hymn[idx].title;
+            hymnRef.textContent = nextLiturgy[0].hymn[idx].hymnNumber;
+        } else {
+            hymnText.textContent = "Undefined";
+            hymnRef.textContent = "Undefined";
+        }
         x++;
 
     })
@@ -657,70 +680,75 @@ if (nextLitergy[0] != undefined) {
         element2.classList.add('hidden');
     }
 
-    // if (nextLitergy[0].hymn.length > 0) {
-    //     wrapper.querySelector("#hymn1").textContent = nextLitergy[0].hymn[0].title;
-    //     wrapper.querySelector("#hymnReference1").textContent = nextLitergy[0].hymn[0].hymnNumber;
+    // if (nextLiturgy[0].hymn.length > 0) {
+    //     wrapper.querySelector("#hymn1").textContent = nextLiturgy[0].hymn[0].title;
+    //     wrapper.querySelector("#hymnReference1").textContent = nextLiturgy[0].hymn[0].hymnNumber;
     // }
-    // else if (nextLitergy[0].hymn.length > 1) {
-    //     wrapper.querySelector("#hymn2").textContent = nextLitergy[0].hymn[1].title;
-    //     wrapper.querySelector("#hymnReference2").textContent = nextLitergy[0].hymn[1].hymnNumber;
+    // else if (nextLiturgy[0].hymn.length > 1) {
+    //     wrapper.querySelector("#hymn2").textContent = nextLiturgy[0].hymn[1].title;
+    //     wrapper.querySelector("#hymnReference2").textContent = nextLiturgy[0].hymn[1].hymnNumber;
     // }
-    // else if (nextLitergy[0].hymn.length > 2) {
-    //     wrapper.querySelector("#hymn3").textContent = nextLitergy[0].hymn[2].title;
-    //     wrapper.querySelector("#hymnReference3").textContent = nextLitergy[0].hymn[2].hymnNumber;
+    // else if (nextLiturgy[0].hymn.length > 2) {
+    //     wrapper.querySelector("#hymn3").textContent = nextLiturgy[0].hymn[2].title;
+    //     wrapper.querySelector("#hymnReference3").textContent = nextLiturgy[0].hymn[2].hymnNumber;
     // }
-    // else if (nextLitergy[0].hymn.length > 3) {
-    //     wrapper.querySelector("#hymn4").textContent = nextLitergy[0].hymn[3].title;
-    //     wrapper.querySelector("#hymnReference4").textContent = nextLitergy[0].hymn[3].hymnNumber;
+    // else if (nextLiturgy[0].hymn.length > 3) {
+    //     wrapper.querySelector("#hymn4").textContent = nextLiturgy[0].hymn[3].title;
+    //     wrapper.querySelector("#hymnReference4").textContent = nextLiturgy[0].hymn[3].hymnNumber;
     // }
-    // else if (nextLitergy[0].hymn.length > 4) {
-    //     wrapper.querySelector("#hymn5").textContent = nextLitergy[0].hymn[4].title;
-    //     wrapper.querySelector("#hymnReference5").textContent = nextLitergy[0].hymn[4].hymnNumber;
+    // else if (nextLiturgy[0].hymn.length > 4) {
+    //     wrapper.querySelector("#hymn5").textContent = nextLiturgy[0].hymn[4].title;
+    //     wrapper.querySelector("#hymnReference5").textContent = nextLiturgy[0].hymn[4].hymnNumber;
     // }
-    // else if (nextLitergy[0].hymn.length > 5) {
-    //     wrapper.querySelector("#hymn6").textContent = nextLitergy[0].hymn[5].title;
-    //     wrapper.querySelector("#hymnReference6").textContent = nextLitergy[0].hymn[5].hymnNumber;
+    // else if (nextLiturgy[0].hymn.length > 5) {
+    //     wrapper.querySelector("#hymn6").textContent = nextLiturgy[0].hymn[5].title;
+    //     wrapper.querySelector("#hymnReference6").textContent = nextLiturgy[0].hymn[5].hymnNumber;
     // }
-    // else if (nextLitergy[0].hymn.length > 6) {
-    //     wrapper.querySelector("#hymn7").textContent = nextLitergy[0].hymn[6].title;
-    //     wrapper.querySelector("#hymnReference7").textContent = nextLitergy[0].hymn[6].hymnNumber;
+    // else if (nextLiturgy[0].hymn.length > 6) {
+    //     wrapper.querySelector("#hymn7").textContent = nextLiturgy[0].hymn[6].title;
+    //     wrapper.querySelector("#hymnReference7").textContent = nextLiturgy[0].hymn[6].hymnNumber;
     // }
-    // else if (nextLitergy[0].hymn.length > 7) {
-    //     wrapper.querySelector("#hymn8").textContent = nextLitergy[0].hymn[7].title;
-    //     wrapper.querySelector("#hymnReference8").textContent = nextLitergy[0].hymn[7].hymnNumber;
+    // else if (nextLiturgy[0].hymn.length > 7) {
+    //     wrapper.querySelector("#hymn8").textContent = nextLiturgy[0].hymn[7].title;
+    //     wrapper.querySelector("#hymnReference8").textContent = nextLiturgy[0].hymn[7].hymnNumber;
     // }
-    // else if (nextLitergy[0].hymn.length > 8) {
-    //     wrapper.querySelector("#hymn9").textContent = nextLitergy[0].hymn[8].title;
-    //     wrapper.querySelector("#hymnReference9").textContent = nextLitergy[0].hymn[8].hymnNumber;
+    // else if (nextLiturgy[0].hymn.length > 8) {
+    //     wrapper.querySelector("#hymn9").textContent = nextLiturgy[0].hymn[8].title;
+    //     wrapper.querySelector("#hymnReference9").textContent = nextLiturgy[0].hymn[8].hymnNumber;
     // }
     //unhide 'extras' title, if 'instrumental' category is included in 'Liturgy' file of 'nextliturgy'.
     const instrumentalTitle = document.querySelector('.extras')
-    if (nextLitergy[0].instrumental.length !== 0) {
+    if (nextLiturgy[0].instrumental.length !== 0) {
         instrumentalTitle.classList.remove('hidden');
         populateInstrumentals();
     }
     //populate hymn titles with nexthymn object
     function populateInstrumentals() {
-        nextLitergy[0].instrumental.forEach((hymn, idx) => {
+        nextLiturgy[0].instrumental.forEach((hymn, idx) => {
             const hymnText = wrapper.querySelector(`#extra${idx}`);
             const hymnRef = wrapper.querySelector(`#extraReference${idx}`);
-            hymnText.textContent = nextLitergy[0].instrumental[idx].title;
-            hymnRef.textContent = nextLitergy[0].instrumental[idx].hymnNumber;
+            if (nextLiturgy[0].instrumental[idx]) {
+                hymnText.textContent = nextLiturgy[0].instrumental[idx].title;
+                hymnRef.textContent = nextLiturgy[0].instrumental[idx].hymnNumber;
+            } else {
+                hymnText.textContent = "Undefined"
+                hymnRef.textContent = "___";
+            }
         })
     }
 
-    // if (nextLitergy[0].instrumental) {
-    //     if (nextLitergy[0].instrumental.length <= 1) {
-    //         wrapper.querySelector("#extra1").textContent = nextLitergy[0].instrumental[0].title;
-    //         wrapper.querySelector("#extraReference1").textContent = nextLitergy[0].instrumental[0].hymnNumber;
+    // if (nextLiturgy[0].instrumental) {
+    //     if (nextLiturgy[0].instrumental.length <= 1) {
+    //         wrapper.querySelector("#extra1").textContent = nextLiturgy[0].instrumental[0].title;
+    //         wrapper.querySelector("#extraReference1").textContent = nextLiturgy[0].instrumental[0].hymnNumber;
     //     }
-    //     else if (nextLitergy[0].hymn.length <= 2) {
-    //         wrapper.querySelector("#extra2").textContent = nextLitergy[0].instrumental[1].title;
-    //         wrapper.querySelector("#extraReference2").textContent = nextLitergy[0].instrumental[1].hymnNumber;
+    //     else if (nextLiturgy[0].hymn.length <= 2) {
+    //         wrapper.querySelector("#extra2").textContent = nextLiturgy[0].instrumental[1].title;
+    //         wrapper.querySelector("#extraReference2").textContent = nextLiturgy[0].instrumental[1].hymnNumber;
     //     }
-    //     else if (nextLitergy[0].hymn.length <= 2) {
-    //         wrapper.querySelector("#extra3").textContent = nextLitergy[0].instrumental[2].title;
-    //         wrapper.querySelector("#extra3").textContent = nextLitergy[0].instrumental[2].hymnNumber;
+    //     else if (nextLiturgy[0].hymn.length <= 2) {
+    //         wrapper.querySelector("#extra3").textContent = nextLiturgy[0].instrumental[2].title;
+    //         wrapper.querySelector("#extra3").textContent = nextLiturgy[0].instrumental[2].hymnNumber;
     //     }
     // }
 }
@@ -740,9 +768,9 @@ if (nextLitergy[0] != undefined) {
 var testDate = new Date().toLocaleDateString(undefined, { day: "numeric" });
 
 // document.querySelector("#test").textContent = ordinal(testDate)
-// allLitergies[0].date + " - " + allLitergies[0].occasion;
+// allLiturgies[0].date + " - " + allLiturgies[0].occasion;
 // document.querySelector("#test2").textContent = todaysDate;
-// document.querySelector("#test3").textContent = nextLitergy[0].date.toDateString();
+// document.querySelector("#test3").textContent = nextLiturgy[0].date.toDateString();
 
 function ordinal(day) { //add 'st','nd','rd' or 'th' to date
     let nth;
@@ -769,7 +797,7 @@ function ordinal(day) { //add 'st','nd','rd' or 'th' to date
 
 
 function grabHymnObject(hymnTitleArray) {
-    //return array of hymn objects (up to 8) depending on how many are requested in 'new litergy'
+    //return array of hymn objects (up to 8) depending on how many are requested in 'new liturgy'
 
     var hymns = [];
 

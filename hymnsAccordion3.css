@@ -848,6 +848,7 @@ button.down.hidden {
 	--lavishSizeSmall: 2rem;
 	--lavishSizeBig: 3.4rem;
 	--liturgyCategoriesColour: rgb(184, 180, 180);
+	--liturgyCategoriesTextShadow: rgb(17, 20, 194);
 	--linearGradient1: rgba(248, 251, 37, 0.89);
 	--linearGradient2: orange;
 	min-height: max-content;
@@ -901,7 +902,7 @@ button.down.hidden {
 	text-decoration-style: double;
 	font-family: var(--lavishFont);
 	font-size: var(--lavishSizeBig);
-	text-shadow: 1px 1px white;
+	text-shadow: 1px 1px rgb(212, 195, 195);
 }
 
 .liturgyPlan .flex-container {
@@ -969,7 +970,7 @@ button.down.hidden {
 	font-family: var(--lavishFont);
 	font-size: var(--lavishSizeSmall);
 	color: var(--liturgyCategoriesColour);
-	text-shadow: white 1px 1px;
+	text-shadow: var(--liturgyCategoriesTextShadow) 1px 1px;
 }
 .extras h2,
 .extras_future h2 {
