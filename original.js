@@ -400,7 +400,7 @@ new Liturgy(new Date("21 Dec 2025"), "4th Sunday of Advent", "C", "Julian", ["Im
 
 const todaysDate = new Date();
 let nextLiturgy = allLiturgies.filter(x => x.date >= todaysDate);
-nextLiturgy = [allLiturgies[allLiturgies.length - 6]]; //show latest liturgy on opening page (for easier adding)
+// nextLiturgy = [allLiturgies[allLiturgies.length - 6]]; //show latest liturgy on opening page (for easier adding)
 
 
 const liturgyPlan = document.querySelector(".liturgyPlan");
