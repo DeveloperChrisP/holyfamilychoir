@@ -438,7 +438,7 @@ document.querySelector(".liturgyPlan .flex-container").addEventListener("click",
 
             liturgyPlan.querySelector(".container").classList.add("hidden");
             break;
-        case "Next Up":
+        case "Next":
             // liturgyPlan.querySelector(".acclamationsTitle").classList.remove("selected");
             liturgyPlan.querySelector(".hymnsTitle", ".hymns").classList.add("selected");
             // liturgyPlan.querySelector(".acclamations").classList.remove("selected");
@@ -446,7 +446,7 @@ document.querySelector(".liturgyPlan .flex-container").addEventListener("click",
 
             liturgyPlan.querySelector(".container").classList.remove("hidden");
             break;
-        case "Future":
+        case "Upcoming":
             liturgyPlan.querySelector(".container").classList.add("hidden"); //upcoming
             liturgyPlan.querySelector(".easterTitle").classList.add("selected");
             liturgyPlan.querySelector(".futureServices").classList.add("selected");
