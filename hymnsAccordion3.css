@@ -66,7 +66,8 @@ body {
 	--_time: 200ms;
 	/* overflow: hidden; */
 	width: 100%;
-	max-width: fit-content;
+
+	max-width: 500px;
 
 	margin-inline: auto;
 	padding-inline: 1rem;
@@ -856,6 +857,7 @@ button.down.hidden {
 	height: fit-content;
 	/* width: 100%; */
 	/* padding: calc(var(--_panel-padding) * 2); */
+	padding: 0.5rem;
 	background: linear-gradient(var(--linearGradient1), var(--linearGradient2));
 	z-index: 1;
 	/* position: absolute; */
@@ -918,7 +920,7 @@ button.down.hidden {
 .hymnsTitle {
 }
 
-.acclamationsTitle {
+.acclamations {
 }
 .flex-container button.selected {
 	font-weight: 900;
@@ -942,7 +944,7 @@ button.down.hidden {
 	height: fit-content;
 }
 .liturgyContents ul {
-	text-align: center;
+	text-align: baseline;
 }
 .liturgyContents ul li.hymnOccasion {
 	font-size: 1.5rem;
@@ -1043,11 +1045,13 @@ button.down.hidden {
 }
 .liturgyPlan .container {
 	display: flex;
-	align-items: baseline;
+	flex-direction: column;
+	/* justify-content: center; */
+	align-items: center;
 	gap: 0.5rem;
 	text-shadow: 1px 1px var(--liturgyCategoriesColour);
 	justify-content: center;
-	flex-flow: wrap;
+	/* flex-flow: wrap; */
 }
 .liturgyPlan h5 {
 	text-shadow: none;

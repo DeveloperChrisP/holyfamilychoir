@@ -126,7 +126,7 @@ new Acclamation("Simple Mass", "Lamb of God", "./sheetMusic/Lamb of God (Simple 
 
 new Acclamation("Celtic Mass", "Gloria", "./sheetMusic/acclamations/Celtic Mass/Glory to God/Glory To God (Celtic Liturgy).pdf", ["satb", 'alto', 'tenor', 'bass'], "");
 new Acclamation("Celtic Mass", "Alleluia", "./sheetMusic/acclamations/Celtic Mass/Alleluia/Alleluia (Celtic Liturgy).pdf", "", "https://www.youtube.com/embed/AFvdHcrPhkw?si=V7FLgxX593bN33GH");
-new Acclamation("Celtic Mass", "Holy Holy", "./sheetMusic/acclamations/Celtic Mass/Holy Holy/Holy, Holy, Holy (Celtic Liturgy).pdf", "", "");
+new Acclamation("Celtic Mass", "Holy Holy", "./sheetMusic/acclamations/Celtic Mass/Holy Holy/Holy, Holy, Holy (Celtic Liturgy).pdf", ["satb", "melody", 'alto', 'tenor', 'bass', 'piano'], "");
 new Acclamation("Celtic Mass", "Memorial Acclamation", "./sheetMusic/acclamations/Celtic Mass/Memorial Acclamation/Memorial Acclamations (Celtic Liturgy).pdf", "", "");
 new Acclamation("Celtic Mass", "Lamb of God", "./sheetMusic/acclamations/Celtic Mass/Lamb of God/Lamb Of God (Celtic Liturgy).pdf", "", "https://www.youtube.com/embed/rW6qeHqQvOw?si=FuIo9pu-Dmm8NtlC");
 
