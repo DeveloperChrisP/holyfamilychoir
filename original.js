@@ -175,7 +175,7 @@ new Hymn("Bread of life", 631, "", "", "https://www.youtube.com/embed/iYKxMAn3Kf
 new Hymn("Breathe on me, Breath of God", 302, "", "", "https://www.youtube.com/embed/vzQo2p5LGkA?si=Rmp9LEeAMoc1d4L4")
 new Hymn("Centre of my life", 423, "", "", "https://www.youtube.com/embed/B5Zo548rT8o?si=RS5kEu3QkdFq6otW")
 new Hymn("Christ be beside me", 910, "", "", "https://www.youtube.com/embed/KNkWoy5uVh8?si=38stRqmtz_7Bswpd")
-new Hymn("Christ be our light", 883, "", "", "https://www.youtube.com/embed/7eeBHrn2Dt0?si=tuSsdtdJwFErezsM");
+new Hymn("Christ be our light", 883, "", "", "ttps://www.youtube.com/embed/kt3Qc04ulOM?si=ACm00WhsjdIdZRMB");
 new Hymn("Christ is made the sure foundation", 456, "", "", "https://www.youtube.com/embed/RPq0CwbwkqI?si=CPEIF1QlGumNhQfx", ["Christ is made the sure foundation, Christ the head and cornerstone, chosen of the Lord, and precious, binding all the church in one, holy Zion's help forever, and her confidence alone.", "All that dedicated city, dearly loved of God on high, in exultant jubilation pours perpetual melody, God the One in Three adoring in glad hymns eternally.", "To this temple, where we call You, come, O Lord of Hosts, today; with accustomed loving kindness, hear Your servants as they pray; and Your fullest benediction shed within its walls alway.", "Grant, we pray, to all Your servants what they ask of You to gain, what they gain from You, forever with the blessed to retain, and hereafter in Your glory evermore with You to reign.", "Praise and honor to the Father, praise and honor to the Son, praise and honor to the Spirit, ever Three, and ever One, consubstantial, coeternal, while unending ages run."])
 new Hymn("Christ is our King", 325, "", "", "https://www.youtube.com/embed/SBdD_fSHNUM?si=PVRoDFeOOJoBpHRp")
 new Hymn("Come to the river", "sheet", "", "", "https://www.youtube.com/embed/JdMVQksOy6w?si=DkVs-oV-Urc36Ahk");
@@ -997,6 +997,7 @@ accordion.addEventListener("click", (e) => {
         closeAccordion(specificClick);
     }
     else if (audioButton) {
+
         const allLights = audioButton.parentElement.parentElement.querySelectorAll(".audioCategory__light");
         const accordionContent = audioButton.parentElement.parentElement.parentElement;
 
@@ -1158,6 +1159,7 @@ function toggleAccordion(panelToActivate) {
     }
     //fully open selected panel
     else {
+
         switch (panelToActivate.id) {
             case "panel2":
                 panelToActivate.lastElementChild.firstElementChild.setAttribute("src", allHymns[count].sheetMusic);
