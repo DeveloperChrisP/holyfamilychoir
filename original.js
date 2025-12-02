@@ -207,7 +207,7 @@ new Hymn("Hark the Herald Angels Sing", 155, "", "", "https://www.youtube.com/em
 new Hymn("He is Lord", 761, "", "", "https://www.youtube.com/embed/BrJEATD5jq8?si=eTy6aYtchC80fY_g", ["He is Lord, he is Lord. He is risen from the dead and he is Lord. Ev’ry knee shall bow, ev’ry tongue confess that Jesus Christ is Lord.", "He is King, he is King. He is risen from the dead and he is King. Ev’ry knee shall bow, ev’ry tongue confess that Jesus Christ is King.", "He is love, he is love. He is risen from the dead and he is love. Ev’ry knee shall bow, ev’ry tongue confess that Jesus Christ is love."]);
 new Hymn("He who would valiant be", 862, "", "", "https://www.youtube.com/embed/AD7W92d4jmE?si=t6gu0qjlx4gG3Het")
 new Hymn("Here I am, Lord", 865, "", "", "");
-new Hymn("Here we bring you", "", "./sheetMusic/Here We Bring You.pdf", ["piano"], "");
+new Hymn("Here we bring you", "Sheet", "./sheetMusic/Here We Bring You.pdf", ["piano"], "");
 new Hymn("Holy Forever", "n/a", "", "", "https://www.youtube.com/embed/VhdAZ2aQtBk?si=EFlxlkTKBo3aAkd0")
 new Hymn("Holy holy holy, Lord God almighty", 468, "", "", "https://www.youtube.com/embed/2D4gg03f0DM?si=rKbTQbXM7fIgd9qh")
 new Hymn("Holy holy holy, Lord God almighty (Agnus Dei)", "", "", "", "https://www.youtube.com/embed/UWndDW_271g?si=06sYstfg-GFnGu4n")
@@ -394,14 +394,21 @@ new Liturgy(new Date("3 Nov 2025"), "All Souls Day", "C", "Chris", ["I am the br
 new Liturgy(new Date("9 Nov 2025"), "32nd Sunday in Ordinary Time", "C", "Julian", ["The day of Resurrection", "Lord of all Hopefulness", "Fight the good fight", "Daily daily, sing to Mary"], ["Come to the river"]);
 new Liturgy(new Date("16 Nov 2025"), "33rd Sunday in Ordinary Time", "C", "Julian", ["Love Divine all Loves Excelling", "Alleluia sing to Jesus", "All Glory, Laud and honour", "O Purest of creatures"], ["Turn to me"])
 new Liturgy(new Date("23 Nov 2025"), "Christ The King", "C", "Julian", ["Crown him with many crowns", "At the lamb's high feast", "At the name of Jesus", "Holy virgin by God's decree"])
-new Liturgy(new Date("30 Nov 2025"), "1st Sunday of Advent", "C", "Julian", ["Our God Reigns", "Hark! a Herald voice is calling", "O Jesus Christ remember", "Christ be our light"])
-new Liturgy(new Date("7 Dec 2025"), "2nd Sunday of Advent", "C", "Julian", ["Praise my soul, the king of heaven", "Hail to the Lord's annointed", "Let all mortal flesh", "Hail Queen of heaven"])
-new Liturgy(new Date("14 Dec 2025"), "3rd Sunday of Advent", "C", "Julian", ["O come o come Emmanuel", "On jordan's bank", "Christ be beside me", "O lady full of God's own grace"])
-new Liturgy(new Date("21 Dec 2025"), "4th Sunday of Advent", "C", "Julian", ["Immortal invisible", "Bethlehem of noblest cities", "The angel Gabriel", "Immaculate Mary"])
+new Liturgy(new Date("30 Nov 2025"), "1st Sunday of Advent", "A", "Julian", ["Our God Reigns", "Hark! a Herald voice is calling", "O Jesus Christ remember", "Christ be our light"])
+new Liturgy(new Date("7 Dec 2025"), "2nd Sunday of Advent", "A", "Julian", ["Praise my soul, the king of heaven", "Hail to the Lord's annointed", "Let all mortal flesh", "Hail Queen of heaven"], ['bread of life', 'christ be our light'])
+new Liturgy(new Date("14 Dec 2025"), "3rd Sunday of Advent", "A", "Julian", ["O come o come Emmanuel", "On jordan's bank", "Christ be beside me", "O lady full of God's own grace"], ['I am the bread of life'])
+new Liturgy(new Date("21 Dec 2025"), "4th Sunday of Advent", "A", "Julian", ["Immortal invisible", "Bethlehem of noblest cities", "The angel Gabriel", "Immaculate Mary"], ['O Come, O come Emmanuel'])
+new Liturgy(new Date("24 Dec 2025"), "Christmas Eve (St Pauls)", "A", 'Julian', ["O Come all ye faithful", "O Little Town of Bethlehem", "Silent Night", "Joy to the World"])
+new Liturgy(new Date("25 Dec 2025"), "Christmas Day", 'A', 'Julian', ["Hark the Herald Angels Sing", "Once in Royal David's City", "Away in a Manger", "Ding dong! Merrily on high"])
+new Liturgy(new Date("28 Dec 2025"), "1st Sunday after Christmas", "A", "Julian", ["Come to the Manager", "Jesus, my Lord, my God, my All", "It came upon a Midnight clear", "Sing of Mary, Pure and Lowly"])
+new Liturgy(new Date("4 Jan 2026"), "2nd Sunday after Christmas", "A", "Julian", ["Go Tell it on the Mountain", "As with Gladness Men of Old", "See Amid the Winter's Snow", "Virgin Wholly Marvellous"])
+new Liturgy(new Date("11 Jan 2026"), "The Baptism of the Lord", "A", "Julian", ["We Three Kings", "The First Noel", "What Child is This", "O Purest of Creatures"])
+new Liturgy(new Date("18 Jan 2026"), "2nd Sunday in Ordinary Time", "A", "Julian", ["Tell out my soul", "Bread of Life", "A New Commandment", "O Lady, full of God's own grace"])
+new Liturgy(new Date("25 Jan 2026"), "3rd Sunday in Ordinary Time", "A", "Julian", ["He who would valiant be", "Here we bring you", "Songs of Thankfulness and Praise", "I'll Sing a hymn to Mary"])
 
 const todaysDate = new Date();
 let nextLiturgy = allLiturgies.filter(x => x.date >= todaysDate);
-// nextLiturgy = [allLiturgies[allLiturgies.length - 6]]; //show latest liturgy on opening page (for easier adding)
+// nextLiturgy = [allLiturgies[allLiturgies.length - 1]]; //show latest liturgy on opening page (for easier adding)
 
 
 const liturgyPlan = document.querySelector(".liturgyPlan");
