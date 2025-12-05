@@ -233,7 +233,7 @@ new Hymn("Jesu, Jesu, fill us with your love", "241", "", "", "https://www.youtu
 new Hymn("Jesus Christ is risen today", 267, "", "", "https://www.youtube.com/embed/PcTP3Pj6Smo?si=03FAkYgNIr1pRB2e")
 new Hymn("Lay your hands", 432, "", "", "https://www.youtube.com/embed/q5UvY7itnn8?si=tRTETqvYEvcjjvSg");
 new Hymn("Lead us, heavenly father", 315, "", "", "https://www.youtube.com/embed/JYB2YEuKTLg?si=LSjAqn9RViSsTBHZ");
-new Hymn("Let all mortal flesh", 607, "", "", "");
+new Hymn("Let all mortal flesh", 607, "", "", "https://www.youtube.com/embed/Q8ByNT1m8V4?si=OzHMKVvcofhokhs0");
 new Hymn("Laudate Dominum", 698, "", "", "https://www.youtube.com/embed/N-A5VL37DGY?si=LLDn5VU97RwY4TyG")
 new Hymn("Laudate Dominum2", 730, "", "", "https://www.youtube.com/embed/JXWFKSPCJ-4?si=SxZ8L0LVtC1kMoD3")
 new Hymn("Long ago prophets knew", 116, "", "", "https://www.youtube.com/embed/OeLA1LhqFA4?si=Y_jd5YhNoRzLi9ae");
