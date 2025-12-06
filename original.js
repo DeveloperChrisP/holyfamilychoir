@@ -159,6 +159,7 @@ new Hymn("All things bright and beautiful", 685, "", "", "https://www.youtube.co
 new Hymn("Alleluia, Alleluia, give thanks", 268, "", "", "https://www.youtube.com/embed/I53k-dlUPx4?si=9z0O4UjI4ZWn2bVo");
 new Hymn("Alleluia, sing to Jesus", 644, "", "", "https://www.youtube.com/embed/UJDWFYIkBns?si=FjlGK0j-FEm0vRXU");
 new Hymn("Amazing Grace", 846, "", "", "https://www.youtube.com/embed/HsCp5LG_zNE?si=SVRmh5evJYOhTVy8");
+new Hymn("Away in a manger", 137, "", "", "https://www.youtube.com/embed/pbQpEdwGEXo?si=dIUAVhZPWvCh3R6i");
 new Hymn("As I kneel before you", 360, "", "", "https://www.youtube.com/embed/BYv6E9xnJ1U?si=W5qvVIl1dVdmlVEA");
 new Hymn("As the deer longs", 214, "", "", "https://www.youtube.com/embed/oENImc-U1dc?si=29REO6eWepKuJCVY")
 new Hymn("As with gladness men of old", 166, "", "", "https://www.youtube.com/embed/y-TplMYH0Ko?si=abx_LTDZfoet_c44");
@@ -182,6 +183,7 @@ new Hymn("Come to the river", "sheet", "", "", "https://www.youtube.com/embed/Jd
 new Hymn("Crown him with many crowns", 321, "", "", "https://www.youtube.com/embed/V0F-kXSwJVM?si=7xYPegtLzhWFcTsC");
 new Hymn("Daily, daily sing to Mary", 353, "", "", "https://www.youtube.com/embed/Xwkca-3GiM4?si=UE2_gA3FfHCirCC0");
 new Hymn("Dear Lord and Father of mankind", 934, "", "", "https://www.youtube.com/embed/esmn8kNV-S4?si=KvwHeScuoaG6hIEU");
+new Hymn("Ding Dong! Merrily on high", 153, "", "", "https://www.youtube.com/embed/YUSz2UnPhfU?si=1BUnuOEDH4XyUz9j")
 new Hymn("Do not be afraid", 972, "", "", "https://www.youtube.com/embed/v2rO0LhSWJ0?si=FQY4vdhRmNNUhdrf");
 new Hymn("Eternal Father, strong to save", 963, "", "", "https://www.youtube.com/embed/7VrraIIjabo?si=nuwA52iq9beMhqOz");
 new Hymn("Father, hear the prayer we offer", 933, "", "", "https://www.youtube.com/embed/CFoactKMJHQ?si=3GTMaEN0qPhZZCom")
@@ -231,6 +233,7 @@ new Hymn("It came upon the midnight clear", 135, "", "", "https://www.youtube.co
 new Hymn("Jerusalem", "", "", "", "https://www.youtube.com/embed/KuSJFx6tuZ0?si=D81QimGli0IL0nxJ")
 new Hymn("Jesu, Jesu, fill us with your love", "241", "", "", "https://www.youtube.com/embed/qSuTmW1t8zs?si=8wlA7-6bowt5zX6q")
 new Hymn("Jesus Christ is risen today", 267, "", "", "https://www.youtube.com/embed/PcTP3Pj6Smo?si=03FAkYgNIr1pRB2e")
+new Hymn("Joy to the world", 156, "", "", "https://www.youtube.com/embed/TX6ThHbts5Y?si=soyP3rXavIWKvChW");
 new Hymn("Lay your hands", 432, "", "", "https://www.youtube.com/embed/q5UvY7itnn8?si=tRTETqvYEvcjjvSg");
 new Hymn("Lead us, heavenly father", 315, "", "", "https://www.youtube.com/embed/JYB2YEuKTLg?si=LSjAqn9RViSsTBHZ");
 new Hymn("Let all mortal flesh", 607, "", "", "https://www.youtube.com/embed/Q8ByNT1m8V4?si=OzHMKVvcofhokhs0");
@@ -254,6 +257,7 @@ new Hymn("O God you search me", 779, "", "", "https://www.youtube.com/embed/PuKw
 new Hymn("O Jesus Christ remember", 982, "", "", "https://www.youtube.com/embed/AomWml9x4DQ?si=utPixDpoaWZm-uGy")
 new Hymn("O lady, full of God's own grace", "1031", "", "", "https://www.youtube.com/embed/V2HW50l46fo?si=GxFnbCyFOqbDFbwk");
 new Hymn("O let all who thirst", 408, "", "", "https://www.youtube.com/embed/MwG6PCWnih0?si=qltwXx5awggq5kJp");
+new Hymn("O little town of Bethlehem", 127, "", "", "https://www.youtube.com/embed/bIXQEVUNNjE?si=K4ExJw2kZT7YvXJX")
 new Hymn("O Lord hear my prayer", 929, "", "", "https://www.youtube.com/embed/npjgYMt2pHc?si=rgQ2VlIwKSI-j7bi")
 new Hymn("O Lord my God", 721, "", "", "https://www.youtube.com/embed/i6cuVLzUVKY?si=7p65giWxScRq43UW")
 new Hymn("O Mary Conceived In The Grace Of Your Son", 354, "", ["piano"], "");
@@ -395,7 +399,7 @@ new Liturgy(new Date("9 Nov 2025"), "32nd Sunday in Ordinary Time", "C", "Julian
 new Liturgy(new Date("16 Nov 2025"), "33rd Sunday in Ordinary Time", "C", "Julian", ["Love Divine all Loves Excelling", "Alleluia sing to Jesus", "All Glory, Laud and honour", "O Purest of creatures"], ["Turn to me"])
 new Liturgy(new Date("23 Nov 2025"), "Christ The King", "C", "Julian", ["Crown him with many crowns", "At the lamb's high feast", "At the name of Jesus", "Holy virgin by God's decree"])
 new Liturgy(new Date("30 Nov 2025"), "1st Sunday of Advent", "A", "Julian", ["Our God Reigns", "Hark! a Herald voice is calling", "O Jesus Christ remember", "Christ be our light"])
-new Liturgy(new Date("7 Dec 2025"), "2nd Sunday of Advent", "A", "Julian", ["Praise my soul, the king of heaven", "Hail to the Lord's annointed", "Let all mortal flesh", "Hail Queen of heaven"], ['bread of life', 'christ be our light'])
+new Liturgy(new Date("7 Dec 2025"), "2nd Sunday of Advent", "A", "Julian", ["Praise my soul, the king of heaven", "Hail to the Lord's annointed", "Let all mortal flesh", "Hail Queen of heaven"], ['bread of life'])
 new Liturgy(new Date("14 Dec 2025"), "3rd Sunday of Advent", "A", "Julian", ["O come o come Emmanuel", "On jordan's bank", "Christ be beside me", "O lady full of God's own grace"], ['I am the bread of life'])
 new Liturgy(new Date("21 Dec 2025"), "4th Sunday of Advent", "A", "Julian", ["Immortal invisible", "Bethlehem of noblest cities", "The angel Gabriel", "Immaculate Mary"], ['O Come, O come Emmanuel'])
 new Liturgy(new Date("24 Dec 2025"), "Christmas Eve (St Pauls)", "A", 'Julian', ["O Come all ye faithful", "O Little Town of Bethlehem", "Silent Night", "Joy to the World"])
@@ -408,7 +412,7 @@ new Liturgy(new Date("25 Jan 2026"), "3rd Sunday in Ordinary Time", "A", "Julian
 
 const todaysDate = new Date();
 let nextLiturgy = allLiturgies.filter(x => x.date >= todaysDate);
-// nextLiturgy = [allLiturgies[allLiturgies.length - 1]]; //show latest liturgy on opening page (for easier adding)
+nextLiturgy = [allLiturgies[allLiturgies.length - 6]]; //show latest liturgy on opening page (for easier adding)
 
 
 const liturgyPlan = document.querySelector(".liturgyPlan");
