@@ -412,7 +412,7 @@ new Liturgy(new Date("25 Jan 2026"), "3rd Sunday in Ordinary Time", "A", "Julian
 
 const todaysDate = new Date();
 let nextLiturgy = allLiturgies.filter(x => x.date >= todaysDate);
-nextLiturgy = [allLiturgies[allLiturgies.length - 6]]; //show latest liturgy on opening page (for easier adding)
+// nextLiturgy = [allLiturgies[allLiturgies.length - 6]]; //show latest liturgy on opening page (for easier adding)
 
 
 const liturgyPlan = document.querySelector(".liturgyPlan");
