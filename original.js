@@ -1026,7 +1026,7 @@ accordion.addEventListener("click", (e) => {
 
 
         // ./audio/gloria/gloria - melody.mp3
-        if (document.querySelector(".liturgyPlan button").classList.contains("selected") == true) {
+        if (document.querySelector(".liturgyPlan button").classList.contains("selected") || document.querySelector(".liturgyPlan .easterTitle").classList.contains("selected")) {
             filename = "./audio/" + "hymns/" + title.toLowerCase() + "/" + title.toLowerCase()/*.replace(/ /g, "")*/ + " - " + partTitle.toLowerCase() + ".mp3";
 
         } else {
