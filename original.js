@@ -168,12 +168,14 @@ new Hymn("At the name of Jesus", 762, "", "", "https://www.youtube.com/embed/_7w
 new Hymn("Be still and know I am with you", 968, "", "", "https://www.youtube.com/embed/isKxnOGes9k?si=OcPSGnwICZTyc9dW");
 new Hymn("Be still for the presence of the Lord", 720, "", "", "https://www.youtube.com/embed/2-xp3v3d0dQ?si=iXQswQmsOQEGJa6a");
 new Hymn("Be thou my vision", 970, "", "", "https://www.youtube.com/embed/aTKoZZL8XRQ?si=ZqaqqxpVc38IscsA");
+new Hymn("Because the Lord is my shepherd", 948, "", "", "https://www.youtube.com/embed/o1oTLkhE9qM?si=R1z1YPrwcNoGnYGG")
 new Hymn("Bethlehem of noblest cities", 167, "", "", "https://www.youtube.com/embed/rlbmmn9uOLg?si=H0LS3ygSKcTXnlA6")
 new Hymn("Bless the Lord, my soul", 813, "", "", "https://www.youtube.com/embed/3y_2ZStGV58?si=JoCK3Ay47AX9uGpT");
 new Hymn("Blessed virgin mother", 361, "", ["piano"], "");
 new Hymn("Blest are you, Lord", 603, "", "", "https://www.youtube.com/embed/tsGr49LpuGI?si=p4yTl1Xy_chXtTgN");
 new Hymn("Bread of life", 631, "", "", "https://www.youtube.com/embed/iYKxMAn3Kfo?si=Fei0At7L0HqudqQ3");
 new Hymn("Breathe on me, Breath of God", 302, "", "", "https://www.youtube.com/embed/vzQo2p5LGkA?si=Rmp9LEeAMoc1d4L4")
+new Hymn("Brother sister let me serve you", 924, "", "", "https://www.youtube.com/embed/ohy-vGSbkx8?si=yeEMWpxBWu_J93AO")
 new Hymn("Centre of my life", 423, "", "", "https://www.youtube.com/embed/B5Zo548rT8o?si=RS5kEu3QkdFq6otW")
 new Hymn("Christ be beside me", 910, "", "", "https://www.youtube.com/embed/KNkWoy5uVh8?si=38stRqmtz_7Bswpd")
 new Hymn("Christ be our light", 883, "./sheetMusic/Christ Be Our Light.pdf", "", "https://www.youtube.com/embed/kt3Qc04ulOM?si=ACm00WhsjdIdZRMB");
@@ -186,6 +188,7 @@ new Hymn("Daily, daily sing to Mary", 353, "", "", "https://www.youtube.com/embe
 new Hymn("Dear Lord and Father of mankind", 934, "", "", "https://www.youtube.com/embed/esmn8kNV-S4?si=KvwHeScuoaG6hIEU");
 new Hymn("Ding Dong! Merrily on high", 153, "", "", "https://www.youtube.com/embed/YUSz2UnPhfU?si=1BUnuOEDH4XyUz9j")
 new Hymn("Do not be afraid", 972, "", "", "https://www.youtube.com/embed/v2rO0LhSWJ0?si=FQY4vdhRmNNUhdrf");
+new Hymn("Eat this bread", 633, "", "", "https://www.youtube.com/embed/xDqk-DMS4Mk?si=M9YELT4AiVVbCZJF")
 new Hymn("Eternal Father, strong to save", 963, "", "", "https://www.youtube.com/embed/7VrraIIjabo?si=nuwA52iq9beMhqOz");
 new Hymn("Father, hear the prayer we offer", 933, "", "", "https://www.youtube.com/embed/CFoactKMJHQ?si=3GTMaEN0qPhZZCom")
 new Hymn("Father, I place into your hands", 971, "", "", "https://www.youtube.com/embed/zBfRNrvvUfc?si=h6RYtmp33PcqireD")
@@ -199,6 +202,7 @@ new Hymn("Freely, freely", 849, "", "", "https://www.youtube.com/embed/BS1ndKgU3
 new Hymn("Gather us in", 475, "", "", "https://www.youtube.com/embed/HuLORIyEet4?si=_nhhj7WvmOj5ojiM");
 new Hymn("Gifts of bread & wine", 643, "", "", "https://www.youtube.com/embed/c-AussFcZws?si=mjMWSMWt-20tjcA_");
 new Hymn("Glory be to Jesus", 750, "", "", "https://www.youtube.com/embed/FJUY1Cw5shw?si=bDNnlRLZHYf3zpGp")
+new Hymn("God has chosen me", "sheet", "", "", "https://www.youtube.com/embed/587oCGpfRZ0?si=rWjSujvVU5MIzTpa")
 new Hymn("God is love, his the care", 794, "", "", "https://www.youtube.com/embed/poj6FN8wA1Q?si=qKQc0gaFUsE1dtUt")
 new Hymn("God of mercy and compassion", 840, "", "", "https://www.youtube.com/embed/dd8ddCFmyNc?si=pnH9I7ukeenS1we3");
 new Hymn("Godhead here in hiding", 660, "", "", "https://www.youtube.com/embed/cqHIf5DYF2c?si=C84lGCj3tZZlXQ-4");
@@ -266,6 +270,7 @@ new Hymn("O Lord my God", 721, "", "", "https://www.youtube.com/embed/i6cuVLzUVK
 new Hymn("O Mary Conceived In The Grace Of Your Son", 354, "", ["piano"], "");
 new Hymn("O Mother Blest", 364, "", "", "https://www.youtube.com/embed/Nb7PchC-p04?si=N_d9mCYKGQG5nhst");
 new Hymn("O purest of creatures", 347, "", "", "https://www.youtube.com/embed/NFBb5g2tXgk?si=j58XTHjmY4JXkuFm");
+new Hymn("O the word of my Lord", 979, "", "", "https://www.youtube.com/embed/S7wrUFmTvxk?si=-RcJSWyv84SoBGZc")
 new Hymn("O Worship the King", 683, "", "", "https://www.youtube.com/embed/25mleGwF1QM?si=rHAF34l7XMI8cpMh")
 new Hymn("Of the glorious body telling", 247, "", "", "https://www.youtube.com/embed/9nVBNxfJ-oA?si=nOVzHJhwpwvkZRD3")
 new Hymn("On Christmas night all Christians sing", 134, "", "", "https://www.youtube.com/embed/wxaLyJ5G4zM?si=ntSZgM5_fK_rTuF-");
@@ -279,6 +284,7 @@ new Hymn("Praise to the Lord, the Almighty", 601, "", "", "https://www.youtube.c
 new Hymn("Praise to you o christ our saviour", 200, "", "", "https://www.youtube.com/embed/mybxBzhONyU?si=TAS1uxRc6ZY-Bq5V");
 new Hymn("Saints of God in Glory", "-", "", "", "https://www.youtube.com/embed/Rtb1UHBON0k?si=1Y0wAruG-INx8oJP");
 new Hymn("See amid the winter's snow", 151, "", "", "https://www.youtube.com/embed/T4OqarWpBWM?si=g-8h5ggRdBSzrQFY")
+new Hymn("Seek ye first", 820, "", "", "https://www.youtube.com/embed/EsBpM9IcBts?si=CYmfUYl5QoX9Jc9s")
 new Hymn("Silent Night", 136, "./sheetMusic/SilentNight.pdf", ["satb", "melody", "alto", "tenor", "bass", "piano"], "https://www.youtube-nocookie.com/embed/POcDlbYiF9c?si=cBj0zCzSgsO6fK7T");
 new Hymn("Sing of Mary, pure and lowly", 341, "", "", "https://www.youtube.com/embed/Ap6Hym_ERQM?si=dN6iC0-7Wsk2DXnz");
 new Hymn("Sing of the Lord's Goodness", 713, "", "", "https://www.youtube.com/embed/xzTXl_jA-XQ?si=4Poy3GZQvRYyieDe")
@@ -286,8 +292,10 @@ new Hymn("Sing we of the blessed Mother", 344, "", "", "https://www.youtube.com/
 new Hymn("Shine Jesus shine", 770, "", "", "https://www.youtube.com/embed/nC5CCWZu3c4?si=6gQLvMf6z_GntZlh");
 new Hymn("Songs of thankfulness and praise", 172, "", "", "https://www.youtube.com/embed/I4cg0aOczWo?si=qM_sYExeos-qFcRg")
 new Hymn("Soul of my saviour", 938, "", "", "https://www.youtube.com/embed/2AdFNZfGpSs?si=7XC-fDreDy8k-mPP")
+new Hymn("Spirit of the living God", 306, "", "", "https://www.youtube.com/embed/vSFUkLUTJAY?si=YuczmqHL6SGr2DVk")
 new Hymn("Stay with me", 249, "", "", "https://www.youtube.com/embed/FCr2tn4yYKY?si=aDsPK3waY6YgSzTZ")
 new Hymn("Sweet Sacrament Divine", 663, "", "", "https://www.youtube.com/embed/6N1IfoGFF-I?si=4SrRraG5OQcqP0KN");
+new Hymn("Take my life and let it be", 874, "", "", "https://www.youtube.com/embed/VUitRcLnfNk?si=zYJqQe2royTp1q_b")
 new Hymn("Take our bread", 605, "", "", "https://www.youtube.com/embed/g0amLuMeVjY?si=UbwdvgeVfH5Nv_KV");
 new Hymn("Taste and See", "Sheet", "./sheetMusic/Taste & See (chords & lyrics).pdf", "", "https://www.youtube.com/embed/cRHOCB0Th0M?si=8tmszbX8vsjWCobF")
 new Hymn("Tell out my soul", 880, "", "", "https://www.youtube.com/embed/A59pfx4sb2Q?si=2CAw8d2OBfjEWvFT");
@@ -297,6 +305,7 @@ new Hymn("The day of Resurrection", 283, "", "", "https://www.youtube.com/embed/
 new Hymn("The day thou gavest", 679, "", "", "https://www.youtube.com/embed/FlCF3-aDpb0?si=kW0cJBR8-Y2CVfwP")
 new Hymn("The first Noel", 150, "", "", "https://www.youtube.com/embed/1mItWsC8RtM?si=_cbhrtdvUladP4Yn");
 new Hymn("The king of glory comes", 107, "", "", "https://www.youtube.com/embed/aTl1Q8yudfM?si=x0GFpzoPCkMWtZRA");
+new Hymn("The kingdom of God", 821, "", "", "https://www.youtube.com/embed/Sy8EHdPYXhk?si=AbkI0NFd_ojkJ0gn&amp;end=126")
 new Hymn("The light of Christ", 747, "", "", "https://www.youtube.com/embed/ylgeOR1LT_s?si=_01aQwXMVrFL7dOY");
 new Hymn("The Lord Jesus", "-", "", "", "https://www.youtube.com/embed/uqzixjk4egM?si=DBxPww6_bzapF8X8")
 new Hymn("The Lord's my shepherd", 806, "", "", "https://www.youtube.com/embed/TXdEVb32SFg?si=pawmxxV4mR5gI_Ij")
@@ -307,6 +316,7 @@ new Hymn("The voice of God", 108, "", "", "https://www.youtube.com/embed/r9EohwM
 new Hymn("Thine be the Glory", 287, "", "", "https://www.youtube.com/embed/6qKfVuvG2SY?si=U88MKx7w-wkrgLe7");
 new Hymn("This is my body", 627, "", "", "https://www.youtube.com/embed/O-60hfhJzqI?si=_vXX2hQT8MWV5zwl")
 new Hymn("This is my will, my one command", 921, "", "", "https://www.youtube.com/embed/-OXw6Lhs7u8?si=TAaIOPJx2OD3MYcu");
+new Hymn("This little light of mine", "sheet", "", "", "https://www.youtube.com/embed/XzHl_1_fQ10?si=7GeTwp8W91cVSpBV&amp")
 new Hymn("Though the mountains may fall", 785, "", "", "https://www.youtube.com/embed/ghXT5IOzt8g?si=-ITPGRQAbQ-kBRGm");
 new Hymn("Turn to me", 786, "", "", "https://www.youtube.com/embed/C0_8VPBRDgY?si=b2B_ea92iST7WEoQ")
 new Hymn("Ubi Caritas", 246, "", "", "https://www.youtube.com/embed/Vvfr_2euIFo?si=aShcg8H8_txp1nBH")
@@ -315,6 +325,7 @@ new Hymn("Upon thy table", 606, "", "", "https://www.youtube.com/embed/mTKeKMu0s
 new Hymn("Virgin wholly marvellous", "cfe 761 (tune349)", "", "", "https://www.youtube.com/embed/pWoCNeVNHuw?si=6Q3BXHqgR85IESkM")
 new Hymn("Walk with me, O my Lord", 966, "", "", "https://www.youtube.com/embed/qug1yqeJQ0Y?si=8HEfSWk9ntmnSdT3")
 new Hymn("Water of life", 512, "", "", "https://www.youtube.com/embed/p153CSsGRxs?si=_yModMrXNcTu4vYm");
+new Hymn("We come to your feast", "Sheet", "", "", "https://www.youtube.com/embed/He1viPvFXzc?si=LFrNiFMv5B6KBU-I")
 new Hymn("We have a gospel to proclaim", 852, "", "", "https://www.youtube.com/embed/OXlojQCipg4?si=fxCJvBdV-nCFq-It");
 new Hymn("We Should Glory in the Cross", "-", "", ["piano"])
 new Hymn("We three kings", 170, "", "", "https://www.youtube.com/embed/Lx35_DRIZ8g?si=bCTGGMdpULJm0UDc");
@@ -324,7 +335,6 @@ new Hymn("What child is this", 145, "", "", "https://www.youtube.com/embed/6jroB
 new Hymn("Whatsoever you do", 926, "", "", "https://www.youtube.com/embed/oDa1mcyK8B4?si=_6sQlfjIpREqHU1N")
 new Hymn("When I survey the Wondrous Cross", 756, "", "", "https://www.youtube.com/embed/YSh1uU7xpdo?si=h_b1saj9HxZTLxCk", ["When I survey the wondrous cross on which the Prince of Glory died, my richest gain I count but loss, and poor contempt on all my pride.", "Forbid it, Lord, that I should boast, save in the death of Christ, my God; all the vain things that charm me most, I sacrifice them to his blood.", "See from his head, his hands, his feet, sorrow and love flow mingled down; did e’er such love and sorrow meet, or thorns compose so rich a crown?", "His dying crimson like a robe, spreads o’er his body on the Tree; then I am dead to all the globe, and all the globe is dead to me.", "Were the whole realm of nature mine, that were an offering far too small; love so amazing, so divine, demands my soul, my life, my all."])
 new Hymn("Where are you bound, Mary?", 343, "", "", "https://www.youtube.com/embed/rPWOEZzNhxM?si=w_alalLvviuN7AX5");
-
 
 //specify liturgies
 
@@ -414,6 +424,16 @@ new Liturgy(new Date("4 Jan 2026"), "2nd Sunday after Christmas", "A", "Julian",
 new Liturgy(new Date("11 Jan 2026"), "The Baptism of the Lord", "A", "Julian", ["We Three Kings", "The First Noel", "What Child is This", "O Purest of Creatures"])
 new Liturgy(new Date("18 Jan 2026"), "2nd Sunday in Ordinary Time", "A", "Julian", ["Tell out my soul", "Bread of Life", "A New Commandment", "O Lady, full of God's own grace"])
 new Liturgy(new Date("25 Jan 2026"), "3rd Sunday in Ordinary Time", "A", "Julian", ["He who would valiant be", "Here we bring you", "Songs of Thankfulness and Praise", "I'll Sing a hymn to Mary"])
+new Liturgy(new Date("1 Feb 2026"), "4th Sunday in Ordingary Time", "A", "Chris", ["All my hope on God is founded", "We come to your feast", "All that I am", "Holy is his name"])
+new Liturgy(new Date("2 Feb 2026"), "The Presentation of the Lord", "A", "Chris", ["Gather us in", "Blest are you Lord", "The light of Christ", "Shine Jesus Shine"])
+new Liturgy(new Date("8 Feb 2026"), "5th Sunday in Ordinary Time", "A", "Chris", ["Seek ye first", "bread of life", "Whatsoever you do", "Hail Queen of heaven"], ["This little light of mine"])
+new Liturgy(new Date("15 Feb 2026"), "6th Sunday in Ordinary Time", "A", "Chris", ["Take my life and let it be", "The kingdom of God", "Be thou my vision", "O Mother blest"])
+new Liturgy(new Date("18 Feb 2026"), "Ash Wednesday", "A", "Chris", ["Here I am Lord", "In bread we bring you Lord", "Dear Lord and Father of mankind", "Soul of my saviour"], ["Ubi Caritas"])
+new Liturgy(new Date("22 Feb 2026"), "1st Sunday of Lent", "A", "Chris", ["I am the bread of life", "Praise to you, O Christ our Saviour", "Love divine all loves excelling", "Holy Virgin, by God's decree"], ["Bread of life", "God has chosen me"])
+new Liturgy(new Date("1 Mar 2026"), "2nd Sunday of Lent", "A", "Chris", ["At the name of Jesus", "When I survey the wondrous Cross", "Christ be our light", "O Mary, conceived in the grace of your Son"], ["Eat this bread", "Taste and see"])
+new Liturgy(new Date("8 Mar 2026"), "3rd Sunday of Lent", "A", "Chris", ["Praise my soul the king of Heaven", "Spirit of the living God", "As the deer longs", "Immaculate Mary"], ["Brother sister let me serve you"])
+new Liturgy(new Date("15 Mar 2026"), "4th Sunday of Lent", "A", "Chris", ["Be thou my vision", "O the word of my Lord", "The Servant King", "As I kneel before you"], ["Do not be afraid", "Because the Lord is my shepherd"])
+new Liturgy(new Date("22 Mar 2026"), "5th Sunday of Lent", "A", "Chris", ["Freely freely", "When I survey the wondrous cross", "This is my body", "Holy virgin by God's decree"], ["Bless the Lord my soul", "Ubi Caritas"])
 
 const todaysDate = new Date();
 let nextLiturgy = allLiturgies.filter(x => x.date >= todaysDate);
