@@ -99,7 +99,7 @@ function grabAcclamationObject(massTitle) {
 
 }
 
-new Acclamation("Mass of Christ the Saviour", "Glory to God", "./sheetMusic/Glory To God (Schutte Liturgy).pdf", ["sab", "alto", "bass", "piano"], "https://www.youtube.com/embed/oeKKr2xIFMg?si=UTR02G3kyx-Hus-A")
+new Acclamation("Mass of Christ the Saviour", "Glory to God", "./sheetMusic/acclamations/Dan Schutte Mass/Glory To God (Schutte Liturgy).pdf", ["sab", "alto", "bass", "piano"], "https://www.youtube.com/embed/oeKKr2xIFMg?si=UTR02G3kyx-Hus-A")
 new Acclamation("Mass of Christ the Saviour", "Holy holy", "", ["SAB", "melody", "alto", "bass"], "https://www.youtube.com/embed/LsFxjynY5dw?si=-xN5UmeR6stjopkt")
 new Acclamation("Mass of Christ the Saviour", "We proclaim your death", "", "", "https://www.youtube.com/embed/slLLVzWzQWg?si=2LqjV5sjar3PxuSD")
 new Acclamation("Mass of Christ the Saviour", "When we eat this bread", "", "", "https://www.youtube.com/embed/I-72zONivNQ?si=fvRRp56uvagvTfRm")
@@ -121,8 +121,8 @@ new Acclamation("Mass of Hope", "Save us, saviour", "", "", "https://www.youtube
 new Acclamation("Mass of Hope", "Great Amen", "", ["melody", "piano"], "https://www.youtube.com/embed/PC8Fl0CAWB8?si=CsDSavSKw_6fwM1f&start=390");
 new Acclamation("Mass of Hope", "Lamb of God (Creation)", "", ["SATB", "melody", "alto", "tenor", "bass", "piano"], "https://www.youtube.com/embed/_KlqHDoGLzE?si=FOKHV82msHsXCsGJ");
 
-new Acclamation("Simple Mass", "Holy holy", "./sheetMusic/Holy Holy (Simple Mass).pdf", ["satb", "melody", "alto", "tenor", "bass", "piano"], "")
-new Acclamation("Simple Mass", "Lamb of God", "./sheetMusic/Lamb of God (Simple Mass).pdf", "", "")
+new Acclamation("Simple Mass", "Holy holy", "./sheetMusic/acclamations/Simple Mass/Holy Holy (Simple Mass).pdf", ["satb", "melody", "alto", "tenor", "bass", "piano"], "")
+new Acclamation("Simple Mass", "Lamb of God", "./sheetMusic/acclamations/Simple Mass/Lamb of God (Simple Mass).pdf", "", "")
 
 new Acclamation("Celtic Mass", "Gloria", "./sheetMusic/acclamations/Celtic Mass/Glory to God/Glory To God (Celtic Liturgy).pdf", ["satb", 'melody', 'alto', 'tenor', 'bass'], "");
 new Acclamation("Celtic Mass", "Alleluia", "./sheetMusic/acclamations/Celtic Mass/Alleluia/Alleluia (Celtic Liturgy).pdf", "", "https://www.youtube.com/embed/AFvdHcrPhkw?si=V7FLgxX593bN33GH");
@@ -202,7 +202,7 @@ new Hymn("Freely, freely", 849, "", "", "https://www.youtube.com/embed/BS1ndKgU3
 new Hymn("Gather us in", 475, "", "", "https://www.youtube.com/embed/HuLORIyEet4?si=_nhhj7WvmOj5ojiM");
 new Hymn("Gifts of bread & wine", 643, "", "", "https://www.youtube.com/embed/c-AussFcZws?si=mjMWSMWt-20tjcA_");
 new Hymn("Glory be to Jesus", 750, "", "", "https://www.youtube.com/embed/FJUY1Cw5shw?si=bDNnlRLZHYf3zpGp")
-new Hymn("God has chosen me", "sheet", "", "", "https://www.youtube.com/embed/587oCGpfRZ0?si=rWjSujvVU5MIzTpa")
+new Hymn("God has chosen me", "sheet", "sheetMusic/God Has Chosen Me.pdf", "", "https://www.youtube.com/embed/587oCGpfRZ0?si=rWjSujvVU5MIzTpa")
 new Hymn("God is love, his the care", 794, "", "", "https://www.youtube.com/embed/poj6FN8wA1Q?si=qKQc0gaFUsE1dtUt")
 new Hymn("God of mercy and compassion", 840, "", "", "https://www.youtube.com/embed/dd8ddCFmyNc?si=pnH9I7ukeenS1we3");
 new Hymn("Godhead here in hiding", 660, "", "", "https://www.youtube.com/embed/cqHIf5DYF2c?si=C84lGCj3tZZlXQ-4");
@@ -428,7 +428,7 @@ new Liturgy(new Date("1 Feb 2026"), "4th Sunday in Ordingary Time", "A", "Chris"
 new Liturgy(new Date("2 Feb 2026"), "The Presentation of the Lord", "A", "Chris", ["Gather us in", "Blest are you Lord", "The light of Christ", "Shine Jesus Shine"])
 new Liturgy(new Date("8 Feb 2026"), "5th Sunday in Ordinary Time", "A", "Chris", ["Seek ye first", "bread of life", "Whatsoever you do", "Hail Queen of heaven"], ["This little light of mine"])
 new Liturgy(new Date("15 Feb 2026"), "6th Sunday in Ordinary Time", "A", "Chris", ["Take my life and let it be", "The kingdom of God", "Be thou my vision", "O Mother blest"])
-new Liturgy(new Date("18 Feb 2026"), "Ash Wednesday", "A", "Chris", ["Here I am Lord", "In bread we bring you Lord", "Dear Lord and Father of mankind", "Soul of my saviour"], ["Ubi Caritas"])
+new Liturgy(new Date("18 Feb 2026"), "Ash Wednesday", "A", "Chris", ["Here I am Lord", "In bread we bring you Lord", "Hosea (Come back to me)", "Dear Lord and Father of mankind", "Soul of my saviour"], ["Ubi Caritas"])
 new Liturgy(new Date("22 Feb 2026"), "1st Sunday of Lent", "A", "Chris", ["I am the bread of life", "Praise to you, O Christ our Saviour", "Love divine all loves excelling", "Holy Virgin, by God's decree"], ["Bread of life", "God has chosen me"])
 new Liturgy(new Date("1 Mar 2026"), "2nd Sunday of Lent", "A", "Chris", ["At the name of Jesus", "When I survey the wondrous Cross", "Christ be our light", "O Mary, conceived in the grace of your Son"], ["Eat this bread", "Taste and see"])
 new Liturgy(new Date("8 Mar 2026"), "3rd Sunday of Lent", "A", "Chris", ["Praise my soul the king of Heaven", "Spirit of the living God", "As the deer longs", "Immaculate Mary"], ["Brother sister let me serve you"])
