@@ -146,7 +146,7 @@ for (let index = 0; index < allAcclamationSettings.length; index++) {
     element.textContent = allAcclamationSettings[index].composer;
 }
 
-new Hymn("10,000 reasons", "sheet", "./sheetMusic/10,000 Reasons (Bless The Lord) (G) - sheet music.pdf", "", "https://www.youtube.com/embed/XtwIT8JjddM?si=nEiKqySIOsHt8SG_")
+new Hymn("10,000 reasons", "sheet", "./sheetMusic/hymns/10,000 Reasons (Bless The Lord) (G) - sheet music.pdf", "", "https://www.youtube.com/embed/XtwIT8JjddM?si=nEiKqySIOsHt8SG_")
 new Hymn("A hymn of glory let us sing!", "sheet", "", "", "https://www.youtube.com/embed/fWLdhI9zZbs?si=s5xONlEFIr-KQDbp")
 new Hymn("A new commandment", 920, "", "", "https://www.youtube.com/embed/aqM2Ujl7Aas?si=GyuGykvyaGV3dFZI");
 new Hymn("Abide with me", 907, "", "", "https://www.youtube.com/embed/zf12lQnKlGk?si=FbBC6mn29tMilxZ5")
@@ -178,7 +178,7 @@ new Hymn("Breathe on me, Breath of God", 302, "", "", "https://www.youtube.com/e
 new Hymn("Brother sister let me serve you", 924, "", "", "https://www.youtube.com/embed/ohy-vGSbkx8?si=yeEMWpxBWu_J93AO")
 new Hymn("Centre of my life", 423, "", "", "https://www.youtube.com/embed/B5Zo548rT8o?si=RS5kEu3QkdFq6otW")
 new Hymn("Christ be beside me", 910, "", "", "https://www.youtube.com/embed/KNkWoy5uVh8?si=38stRqmtz_7Bswpd")
-new Hymn("Christ be our light", 883, "./sheetMusic/Christ Be Our Light.pdf", "", "https://www.youtube.com/embed/kt3Qc04ulOM?si=ACm00WhsjdIdZRMB");
+new Hymn("Christ be our light", 883, "./sheetMusic/hymns/Christ Be Our Light.pdf", "", "https://www.youtube.com/embed/kt3Qc04ulOM?si=ACm00WhsjdIdZRMB");
 new Hymn("Christ is made the sure foundation", 456, "", "", "https://www.youtube.com/embed/RPq0CwbwkqI?si=CPEIF1QlGumNhQfx", ["Christ is made the sure foundation, Christ the head and cornerstone, chosen of the Lord, and precious, binding all the church in one, holy Zion's help forever, and her confidence alone.", "All that dedicated city, dearly loved of God on high, in exultant jubilation pours perpetual melody, God the One in Three adoring in glad hymns eternally.", "To this temple, where we call You, come, O Lord of Hosts, today; with accustomed loving kindness, hear Your servants as they pray; and Your fullest benediction shed within its walls alway.", "Grant, we pray, to all Your servants what they ask of You to gain, what they gain from You, forever with the blessed to retain, and hereafter in Your glory evermore with You to reign.", "Praise and honor to the Father, praise and honor to the Son, praise and honor to the Spirit, ever Three, and ever One, consubstantial, coeternal, while unending ages run."])
 new Hymn("Christ is our King", 325, "", "", "https://www.youtube.com/embed/SBdD_fSHNUM?si=PVRoDFeOOJoBpHRp")
 new Hymn("Come to the manger", 139, "", "", "https://www.youtube.com/embed/8NUsAUORDIY?si=0Ps99tuKwY4Wgryv")
@@ -202,7 +202,7 @@ new Hymn("Freely, freely", 849, "", "", "https://www.youtube.com/embed/BS1ndKgU3
 new Hymn("Gather us in", 475, "", "", "https://www.youtube.com/embed/HuLORIyEet4?si=_nhhj7WvmOj5ojiM");
 new Hymn("Gifts of bread & wine", 643, "", "", "https://www.youtube.com/embed/c-AussFcZws?si=mjMWSMWt-20tjcA_");
 new Hymn("Glory be to Jesus", 750, "", "", "https://www.youtube.com/embed/FJUY1Cw5shw?si=bDNnlRLZHYf3zpGp")
-new Hymn("God has chosen me", "sheet", "sheetMusic/God Has Chosen Me.pdf", "", "https://www.youtube.com/embed/587oCGpfRZ0?si=rWjSujvVU5MIzTpa")
+new Hymn("God has chosen me", "sheet", "./sheetMusic/hymns/God Has Chosen Me.pdf", ["melody", "alto", "tenor", "bass", "satb"], "https://www.youtube.com/embed/587oCGpfRZ0?si=rWjSujvVU5MIzTpa")
 new Hymn("God is love, his the care", 794, "", "", "https://www.youtube.com/embed/poj6FN8wA1Q?si=qKQc0gaFUsE1dtUt")
 new Hymn("God of mercy and compassion", 840, "", "", "https://www.youtube.com/embed/dd8ddCFmyNc?si=pnH9I7ukeenS1we3");
 new Hymn("Godhead here in hiding", 660, "", "", "https://www.youtube.com/embed/cqHIf5DYF2c?si=C84lGCj3tZZlXQ-4");
@@ -215,7 +215,7 @@ new Hymn("Hark the Herald Angels Sing", 155, "", "", "https://www.youtube.com/em
 new Hymn("He is Lord", 761, "", "", "https://www.youtube.com/embed/BrJEATD5jq8?si=eTy6aYtchC80fY_g", ["He is Lord, he is Lord. He is risen from the dead and he is Lord. Ev’ry knee shall bow, ev’ry tongue confess that Jesus Christ is Lord.", "He is King, he is King. He is risen from the dead and he is King. Ev’ry knee shall bow, ev’ry tongue confess that Jesus Christ is King.", "He is love, he is love. He is risen from the dead and he is love. Ev’ry knee shall bow, ev’ry tongue confess that Jesus Christ is love."]);
 new Hymn("He who would valiant be", 862, "", "", "https://www.youtube.com/embed/AD7W92d4jmE?si=t6gu0qjlx4gG3Het")
 new Hymn("Here I am, Lord", 865, "", "", "https://www.youtube.com/embed/_sCkT5cLWCM?si=yLtHCX7cK0RJ4Hzq");
-new Hymn("Here we bring you", "Sheet", "./sheetMusic/Here We Bring You.pdf", ["piano"], "");
+new Hymn("Here we bring you", "Sheet", "./sheetMusic/hymns/Here We Bring You.pdf", ["piano"], "");
 new Hymn("Holy Forever", "n/a", "", "", "https://www.youtube.com/embed/VhdAZ2aQtBk?si=EFlxlkTKBo3aAkd0")
 new Hymn("Holy holy holy, Lord God almighty", 468, "", "", "https://www.youtube.com/embed/2D4gg03f0DM?si=rKbTQbXM7fIgd9qh")
 new Hymn("Holy holy holy, Lord God almighty (Agnus Dei)", "", "", "", "https://www.youtube.com/embed/UWndDW_271g?si=06sYstfg-GFnGu4n")
@@ -231,7 +231,7 @@ new Hymn("I'll sing a hymn to Mary", 355, "", "", "https://www.youtube.com/embed
 new Hymn("Immaculate Mary", 365, "", "", "https://www.youtube.com/embed/PcrFbTixYAA?si=HF43bqSi82D-OVlV");
 new Hymn("Immortal, invisible", 725, "", "", "https://www.youtube.com/embed/lmefJS09fKE?si=5cKzvl1vDm-9QeNn")
 new Hymn("In bread we bring you, Lord", 609, "", "", "https://www.youtube.com/embed/OrtI_rEcGHI?si=THvVL9iuFqs-eFbk");
-new Hymn("In Christ alone", "Sheet", "./sheetMusic/In Christ Alone (D).pdf", "", "https://www.youtube.com/embed/E-H-rh1rZog?si=nbkYf_N4Yz8OaTAV")
+new Hymn("In Christ alone", "Sheet", "./sheetMusic/hymns/In Christ Alone (D).pdf", "", "https://www.youtube.com/embed/E-H-rh1rZog?si=nbkYf_N4Yz8OaTAV")
 new Hymn("In the bleak mid-winter", 144, "", "", "https://www.youtube.com/embed/cBCYZ9jIJkI?si=7IfiGM2MqBrA1q6t");
 new Hymn("In the Breaking of the Bread", 624, "", "", "https://www.youtube.com/embed/0H8CPadsVco?si=TEfbe6JW7aAJ_ZVA");
 new Hymn("Infant Holy, Infant lowly", 138, "", ["satb", "melody", "alto", "tenor", "bass"], "https://www.youtube.com/embed/kFQMDG1j9JQ?si=SB72UyZyoQFlbOMN");
@@ -285,7 +285,7 @@ new Hymn("Praise to you o christ our saviour", 200, "", "", "https://www.youtube
 new Hymn("Saints of God in Glory", "-", "", "", "https://www.youtube.com/embed/Rtb1UHBON0k?si=1Y0wAruG-INx8oJP");
 new Hymn("See amid the winter's snow", 151, "", "", "https://www.youtube.com/embed/T4OqarWpBWM?si=g-8h5ggRdBSzrQFY")
 new Hymn("Seek ye first", 820, "", "", "https://www.youtube.com/embed/EsBpM9IcBts?si=CYmfUYl5QoX9Jc9s")
-new Hymn("Silent Night", 136, "./sheetMusic/SilentNight.pdf", ["satb", "melody", "alto", "tenor", "bass", "piano"], "https://www.youtube-nocookie.com/embed/POcDlbYiF9c?si=cBj0zCzSgsO6fK7T");
+new Hymn("Silent Night", 136, "./sheetMusic/hymns/SilentNight.pdf", ["satb", "melody", "alto", "tenor", "bass", "piano"], "https://www.youtube-nocookie.com/embed/POcDlbYiF9c?si=cBj0zCzSgsO6fK7T");
 new Hymn("Sing of Mary, pure and lowly", 341, "", "", "https://www.youtube.com/embed/Ap6Hym_ERQM?si=dN6iC0-7Wsk2DXnz");
 new Hymn("Sing of the Lord's Goodness", 713, "", "", "https://www.youtube.com/embed/xzTXl_jA-XQ?si=4Poy3GZQvRYyieDe")
 new Hymn("Sing we of the blessed Mother", 344, "", "", "https://www.youtube.com/embed/zYZ4MbY5kG0?si=2NTmZecGpeCPOkvP");
@@ -297,7 +297,7 @@ new Hymn("Stay with me", 249, "", "", "https://www.youtube.com/embed/FCr2tn4yYKY
 new Hymn("Sweet Sacrament Divine", 663, "", "", "https://www.youtube.com/embed/6N1IfoGFF-I?si=4SrRraG5OQcqP0KN");
 new Hymn("Take my life and let it be", 874, "", "", "https://www.youtube.com/embed/VUitRcLnfNk?si=zYJqQe2royTp1q_b")
 new Hymn("Take our bread", 605, "", "", "https://www.youtube.com/embed/g0amLuMeVjY?si=UbwdvgeVfH5Nv_KV");
-new Hymn("Taste and See", "Sheet", "./sheetMusic/Taste & See (chords & lyrics).pdf", "", "https://www.youtube.com/embed/cRHOCB0Th0M?si=8tmszbX8vsjWCobF")
+new Hymn("Taste and See", "Sheet", "./sheetMusic/hymns/Taste & See (chords & lyrics).pdf", "", "https://www.youtube.com/embed/cRHOCB0Th0M?si=8tmszbX8vsjWCobF")
 new Hymn("Tell out my soul", 880, "", "", "https://www.youtube.com/embed/A59pfx4sb2Q?si=2CAw8d2OBfjEWvFT");
 new Hymn("The angel Gabriel", 113, "", "", "https://www.youtube.com/embed/pliqObTHxUQ?si=n-iBUx5I6ggQvds1");
 new Hymn("The Church's One Foundation", 830, "", "", "https://www.youtube.com/embed/1ooRvCyULoU?si=c381yxAE3XBSKWhi");
@@ -330,7 +330,7 @@ new Hymn("We have a gospel to proclaim", 852, "", "", "https://www.youtube.com/e
 new Hymn("We Should Glory in the Cross", "-", "", ["piano"])
 new Hymn("We three kings", 170, "", "", "https://www.youtube.com/embed/Lx35_DRIZ8g?si=bCTGGMdpULJm0UDc");
 new Hymn("Were you there", 225, "", "", "https://www.youtube.com/embed/7z1SwwFopJk?si=HdluGOjnErTcgVdP");
-new Hymn("What a beautiful name", "n/a", "./sheetMusic/What a Beautiful Name.pdf", "", "https://www.youtube.com/embed/nQWFzMvCfLE?si=RVe6ehjYO5i6ZIb5")
+new Hymn("What a beautiful name", "n/a", "./sheetMusic/hymns/What a Beautiful Name.pdf", "", "https://www.youtube.com/embed/nQWFzMvCfLE?si=RVe6ehjYO5i6ZIb5")
 new Hymn("What child is this", 145, "", "", "https://www.youtube.com/embed/6jroBAl3WW8?si=kZEj9G4qmknU1RlB");
 new Hymn("Whatsoever you do", 926, "", "", "https://www.youtube.com/embed/oDa1mcyK8B4?si=_6sQlfjIpREqHU1N")
 new Hymn("When I survey the Wondrous Cross", 756, "", "", "https://www.youtube.com/embed/YSh1uU7xpdo?si=h_b1saj9HxZTLxCk", ["When I survey the wondrous cross on which the Prince of Glory died, my richest gain I count but loss, and poor contempt on all my pride.", "Forbid it, Lord, that I should boast, save in the death of Christ, my God; all the vain things that charm me most, I sacrifice them to his blood.", "See from his head, his hands, his feet, sorrow and love flow mingled down; did e’er such love and sorrow meet, or thorns compose so rich a crown?", "His dying crimson like a robe, spreads o’er his body on the Tree; then I am dead to all the globe, and all the globe is dead to me.", "Were the whole realm of nature mine, that were an offering far too small; love so amazing, so divine, demands my soul, my life, my all."])
