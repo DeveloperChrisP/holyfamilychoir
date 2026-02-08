@@ -99,11 +99,11 @@ function grabAcclamationObject(massTitle) {
 
 }
 
-new Acclamation("Mass of Christ the Saviour", "Glory to God", "./sheetMusic/acclamations/Dan Schutte Mass/Glory To God (Schutte Liturgy).pdf", ["sab", "alto", "bass", "piano"], "https://www.youtube.com/embed/oeKKr2xIFMg?si=UTR02G3kyx-Hus-A")
-new Acclamation("Mass of Christ the Saviour", "Holy holy", "", ["SAB", "melody", "alto", "bass"], "https://www.youtube.com/embed/LsFxjynY5dw?si=-xN5UmeR6stjopkt")
-new Acclamation("Mass of Christ the Saviour", "We proclaim your death", "", "", "https://www.youtube.com/embed/slLLVzWzQWg?si=2LqjV5sjar3PxuSD")
-new Acclamation("Mass of Christ the Saviour", "When we eat this bread", "", "", "https://www.youtube.com/embed/I-72zONivNQ?si=fvRRp56uvagvTfRm")
-new Acclamation("Mass of Christ the Saviour", "Lamb of God", "", ["SAB", "melody", "alto", "bass"], "https://www.youtube.com/embed/PBuZqtPLcIo?si=0HLxaD3bYyvmlqb8")
+new Acclamation("Mass of Christ the Saviour", "Glory to God", "./sheetMusic/acclamations/Dan Schutte Mass/Glory to God/Glory To God (Schutte Liturgy).pdf", ["sab", "alto", "bass", "piano"], "https://www.youtube.com/embed/oeKKr2xIFMg?si=UTR02G3kyx-Hus-A")
+new Acclamation("Mass of Christ the Saviour", "Holy holy", "./sheetMusic/acclamations/Dan Schutte Mass/Holy Holy/Holy Holy(Schutte Liturgy).pdf", ["SAB", "melody", "alto", "bass"], "https://www.youtube.com/embed/LsFxjynY5dw?si=-xN5UmeR6stjopkt")
+new Acclamation("Mass of Christ the Saviour", "We proclaim your death", "./sheetMusic/acclamations/Dan Schutte Mass/Memorial Acclamations/Dan Schutte - Memorial Acclamation 1.pdf", "", "https://www.youtube.com/embed/slLLVzWzQWg?si=2LqjV5sjar3PxuSD")
+new Acclamation("Mass of Christ the Saviour", "When we eat this bread", "./sheetMusic/acclamations/Dan Schutte Mass/Memorial Acclamations/Dan Schutte - Memorial Acclamation 2.pdf", "", "https://www.youtube.com/embed/I-72zONivNQ?si=fvRRp56uvagvTfRm")
+new Acclamation("Mass of Christ the Saviour", "Lamb of God", "./sheetMusic/acclamations/Dan Schutte Mass/Lamb of God/Lamb Of God (Schutte Liturgy).pdf", ["SAB", "melody", "alto", "bass"], "https://www.youtube.com/embed/PBuZqtPLcIo?si=0HLxaD3bYyvmlqb8")
 
 new Acclamation("Mass of Creation", "Glory to God", "", "", "https://www.youtube.com/embed/bbHerWk32Vk?si=ys3OGM0_1Exjecv4")
 new Acclamation("Mass of Creation", "Holy Holy", "", "", "https://www.youtube.com/embed/2nwTK9YKWWo?si=jE6ilEY5LqOOeh7e")
