@@ -1164,7 +1164,10 @@ function toggleAccordion(panelToActivate) {
 
         if (allHymns[count].vocalPart.length == 0) {
             panelToActivate.parentElement.querySelector("#panel3").classList.add("hidden");
-        } else { panelToActivate.parentElement.querySelector("#panel3").classList.remove("hidden"); }
+        } else {
+            panelToActivate.parentElement.querySelector("#panel3").classList.remove("hidden");
+
+        }
 
         if (allHymns[count].video.length == 0) {
             panelToActivate.parentElement.querySelector("#panel4").classList.add("hidden");
@@ -1217,7 +1220,7 @@ function toggleAccordion(panelToActivate) {
                     element.classList.add("visible");
                     element.lastElementChild.innerHTML = capitalize(allHymns[count].vocalPart[index]);
                 }
-
+                document.querySelector(".wrapper").classList.toggle("restrictHeight");
                 break;
             case "panel4":
                 panelToActivate.lastElementChild.firstElementChild.setAttribute("src", allHymns[count].video);
@@ -1295,7 +1298,9 @@ function closeAccordion(closeButton) {
             element.remove();
         } // Removes the div with the 'lyrics' id
     };
-
+    if (closeButton.parentElement.parentElement.id == "panel3") {
+        document.querySelector(".wrapper").classList.toggle("restrictHeight");
+    }
     if (closeButton.id == "firstX") {
         wrapper.querySelectorAll("button.up, button.down").forEach(btn => {
             btn.classList.remove("hidden");
