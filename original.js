@@ -100,8 +100,8 @@ function grabAcclamationObject(massTitle) {
 }
 
 new Acclamation("Mass of Christ the Saviour", "Glory to God", "./sheetMusic/acclamations/Dan Schutte Mass/Glory to God/Glory To God (Schutte Liturgy).pdf", ["sab", "alto", "bass", "piano"], "https://www.youtube.com/embed/oeKKr2xIFMg?si=UTR02G3kyx-Hus-A")
-new Acclamation("Mass of Christ the Saviour", "Gospel Acclamation Alleluia", "", ["sab", "alto", "bass", "piano"], "")
-new Acclamation("Mass of Christ the Saviour", "Lenten Gospel Acclamation", "", ["sab", "alto", "bass", "piano"], "")
+new Acclamation("Mass of Christ the Saviour", "Gospel Acclamation Alleluia", "", ["sab", "melody", "alto", "bass", "piano"], "")
+new Acclamation("Mass of Christ the Saviour", "Lenten Gospel Acclamation", "./sheetMusic/acclamations/Dan Schutte Mass/Lenten Gospel Acclamation/Dan Schutte - Lenten Gospel Acclamation.pdf", ["sab", "alto", "bass", "piano"], "")
 new Acclamation("Mass of Christ the Saviour", "Holy holy", "./sheetMusic/acclamations/Dan Schutte Mass/Holy Holy/Holy Holy(Schutte Liturgy).pdf", ["SAB", "melody", "alto", "bass"], "https://www.youtube.com/embed/LsFxjynY5dw?si=-xN5UmeR6stjopkt")
 new Acclamation("Mass of Christ the Saviour", "We proclaim your death", "./sheetMusic/acclamations/Dan Schutte Mass/Memorial Acclamations/Dan Schutte - Memorial Acclamation 1.pdf", ["piano", "melody", "alto", "sab"], "https://www.youtube.com/embed/slLLVzWzQWg?si=2LqjV5sjar3PxuSD")
 new Acclamation("Mass of Christ the Saviour", "When we eat this bread", "./sheetMusic/acclamations/Dan Schutte Mass/Memorial Acclamations/Dan Schutte - Memorial Acclamation 2.pdf", ["piano", "melody", "alto", "sab"], "https://www.youtube.com/embed/I-72zONivNQ?si=fvRRp56uvagvTfRm")
