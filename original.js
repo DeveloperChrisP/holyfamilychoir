@@ -654,8 +654,10 @@ function instrumentalSection() {
 wrapper.querySelector(".acclamations").addEventListener("click", function (e) {
 
     massTitle = e.target.textContent;
+
     allHymns = originalHymns;
-    allHymns = allAcclamationSettings[e.target.classList.value].acclamation;
+    allHymns = allAcclamationSettings[e.target.closest("li").classList.value].acclamation;
+
     count = 0;
     hymnSelect();
     wrapper.querySelector(".liturgyPlan").classList.add("hidden");
