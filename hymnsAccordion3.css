@@ -933,7 +933,12 @@ button.down.hidden {
 .hymnsTitle {
 }
 
-.acclamations {
+.acclamations button {
+	outline: solid 1px black;
+	border-radius: 10px;
+	padding-inline: 10px;
+	margin: 1px 1px 10px;
+	box-shadow: 3px 3px 3px;
 }
 .flex-container button.selected {
 	font-weight: 900;
