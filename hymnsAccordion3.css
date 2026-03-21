@@ -968,7 +968,7 @@ button.down.hidden {
 	width: fit-content;
 	border-radius: 20px;
 	background: rgba(255, 255, 0, 0.735);
-	transition: height 2s;
+	transition: all 2s;
 	margin: 0.5rem 0;
 }
 .hymns ol {
@@ -1015,7 +1015,7 @@ button.down.hidden {
 .acclamations h6 {
 	display: inline-block;
 }
-.liturgyContents li > h4 {
+.liturgyContents li button > h4 {
 	font-family:
 		system-ui,
 		-apple-system,

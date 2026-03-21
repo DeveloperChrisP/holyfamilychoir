@@ -161,6 +161,7 @@ new Hymn("All things bright and beautiful", 685, "", "", "https://www.youtube.co
 new Hymn("Alleluia, Alleluia, give thanks", 268, "", "", "https://www.youtube.com/embed/I53k-dlUPx4?si=9z0O4UjI4ZWn2bVo");
 new Hymn("Alleluia, sing to Jesus", 644, "", "", "https://www.youtube.com/embed/UJDWFYIkBns?si=FjlGK0j-FEm0vRXU");
 new Hymn("Amazing Grace", 846, "", "", "https://www.youtube.com/embed/HsCp5LG_zNE?si=SVRmh5evJYOhTVy8");
+new Hymn("An upper room", 248, "", "", "https://www.youtube.com/embed/KZ2iohk3CJw?si=E-CD-YELABrUw8Jk")
 new Hymn("Away in a manger", 137, "", "", "https://www.youtube.com/embed/pbQpEdwGEXo?si=dIUAVhZPWvCh3R6i");
 new Hymn("As I kneel before you", 360, "", "", "https://www.youtube.com/embed/BYv6E9xnJ1U?si=W5qvVIl1dVdmlVEA");
 new Hymn("As the deer longs", 214, "", "", "https://www.youtube.com/embed/oENImc-U1dc?si=29REO6eWepKuJCVY")
@@ -215,6 +216,7 @@ new Hymn("Hail to the Lord's annointed", 102, "", "", "https://www.youtube.com/e
 new Hymn("Hark! a herald voice is calling", 92, "", "", "https://www.youtube.com/embed/laIuZ3wc9zE?si=QBDsrXVD9OIiicFe")
 new Hymn("Hark the Herald Angels Sing", 155, "", "", "https://www.youtube.com/embed/9Bwn0k0k8xI?si=vilS4HDunUKoLrlC");
 new Hymn("He is Lord", 761, "", "", "https://www.youtube.com/embed/BrJEATD5jq8?si=eTy6aYtchC80fY_g", ["He is Lord, he is Lord. He is risen from the dead and he is Lord. Ev’ry knee shall bow, ev’ry tongue confess that Jesus Christ is Lord.", "He is King, he is King. He is risen from the dead and he is King. Ev’ry knee shall bow, ev’ry tongue confess that Jesus Christ is King.", "He is love, he is love. He is risen from the dead and he is love. Ev’ry knee shall bow, ev’ry tongue confess that Jesus Christ is love."]);
+new Hymn("He is risen, tell the story", 276, "", "", "https://www.youtube.com/embed/i3jPtFOANBY?si=hIaScfCO4O3jgTpt")
 new Hymn("He who would valiant be", 862, "", "", "https://www.youtube.com/embed/AD7W92d4jmE?si=t6gu0qjlx4gG3Het")
 new Hymn("Here I am, Lord", 865, "", "", "https://www.youtube.com/embed/_sCkT5cLWCM?si=yLtHCX7cK0RJ4Hzq");
 new Hymn("Here we bring you", "Sheet", "./sheetMusic/hymns/Here We Bring You.pdf", ["piano"], "");
@@ -222,6 +224,7 @@ new Hymn("Holy Forever", "n/a", "", "", "https://www.youtube.com/embed/VhdAZ2aQt
 new Hymn("Holy holy holy, Lord God almighty", 468, "", "", "https://www.youtube.com/embed/2D4gg03f0DM?si=rKbTQbXM7fIgd9qh")
 new Hymn("Holy holy holy, Lord God almighty (Agnus Dei)", "", "", "", "https://www.youtube.com/embed/UWndDW_271g?si=06sYstfg-GFnGu4n")
 new Hymn("Holy is his name", 339, "", "", "https://www.youtube.com/embed/uILEUS4fyQg?si=mMs3PRADRaNuBI2s")
+new Hymn("Holy light on earth's horizon", 328, "", "", "https://www.youtube.com/embed/ZpKBnD8f4mc?si=9mjXKM5HJhWJTUOk")
 new Hymn("Holy Spirit, Lord of Light", 301, "", "", "https://www.youtube.com/embed/hC5_ZzZV4oM?si=5WvF3hm6TLutm_Gb")
 new Hymn("Holy virgin by God's decree", 366, "", "", "https://www.youtube.com/embed/aJZhYBXse2g?si=j7DLVkqiusbcid97");
 new Hymn("Hosea (Come back to me)", 842, "", "", "https://www.youtube.com/embed/i1ntir3qgdY?si=p3aFA_z5k_semATg");
@@ -272,6 +275,7 @@ new Hymn("O Lord my God", 721, "", "", "https://www.youtube.com/embed/i6cuVLzUVK
 new Hymn("O Mary Conceived In The Grace Of Your Son", 354, "", ["piano"], "");
 new Hymn("O Mother Blest", 364, "", "", "https://www.youtube.com/embed/Nb7PchC-p04?si=N_d9mCYKGQG5nhst");
 new Hymn("O purest of creatures", 347, "", "", "https://www.youtube.com/embed/NFBb5g2tXgk?si=j58XTHjmY4JXkuFm");
+new Hymn("O Sacred Head", 237, "", "", "https://www.youtube.com/embed/wcrS8rFWMXQ?si=Uw6btV7cUilLklLm")
 new Hymn("O the word of my Lord", 979, "", "", "https://www.youtube.com/embed/S7wrUFmTvxk?si=-RcJSWyv84SoBGZc")
 new Hymn("O Worship the King", 683, "", "", "https://www.youtube.com/embed/25mleGwF1QM?si=rHAF34l7XMI8cpMh")
 new Hymn("Of the glorious body telling", 247, "", "", "https://www.youtube.com/embed/9nVBNxfJ-oA?si=nOVzHJhwpwvkZRD3")
@@ -436,7 +440,11 @@ new Liturgy(new Date("1 Mar 2026"), "2nd Sunday of Lent", "A", "Chris", ["At the
 new Liturgy(new Date("8 Mar 2026"), "3rd Sunday of Lent", "A", "Chris", ["Praise my soul the king of Heaven", "Spirit of the living God", "As the deer longs", "Immaculate Mary"], ["Brother sister let me serve you"])
 new Liturgy(new Date("15 Mar 2026"), "4th Sunday of Lent", "A", "Chris", ["Be thou my vision", "O the word of my Lord", "The Servant King", "As I kneel before you"], ["Do not be afraid", "Because the Lord is my shepherd"])
 new Liturgy(new Date("22 Mar 2026"), "5th Sunday of Lent", "A", "Chris", ["Freely freely", "When I survey the wondrous cross", "This is my body", "Holy virgin by God's decree"], ["Bless the Lord my soul", "Ubi Caritas"])
-
+new Liturgy(new Date("29 Mar 2026"), "Palm Sunday", "A", "Chris", ["All Glory Laud and Honour", "God of mercy and compassion", "O Sacred head", "Holy light on earth's horizon"], ["My song is love unknown"])
+new Liturgy(new Date("2 Apr 2026"), "Maundy Thursday", "A", "Chris", ["We should glory in the cross", "Brother sister let me serve you", "The Lord Jesus", "Ubi Caritas", "An upper room", "This is my body", "Of the glorious body telling"])
+new Liturgy(new Date("3 Apr 2026"), "Good Friday", "A", "Chris", ["When I survey the wondrous cross", "My song is love unknown"])
+new Liturgy(new Date("4 Apr 2026"), "Easter Vigil", "A", "Chris", ["Water of life", "Christ be our light", "Bread of life", "Thine be the glory"])
+new Liturgy(new Date("5 Apr 2026"), "Easter Sunday", "A", "Chris", ["Sing of the lord's goodness", "Jesus Christ is risen today", "Alleluia alleluia give thanks", "He is risen, tell the story"])
 const todaysDate = new Date();
 let nextLiturgy = allLiturgies.filter(x => x.date >= todaysDate);
 // nextLiturgy = [allLiturgies[allLiturgies.length - 1]]; //show latest liturgy on opening page (for easier adding)
