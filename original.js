@@ -298,6 +298,7 @@ new Hymn("Sing we of the blessed Mother", 344, "", "", "https://www.youtube.com/
 new Hymn("Shine Jesus shine", 770, "", "", "https://www.youtube.com/embed/nC5CCWZu3c4?si=6gQLvMf6z_GntZlh");
 new Hymn("Songs of thankfulness and praise", 172, "", "", "https://www.youtube.com/embed/I4cg0aOczWo?si=qM_sYExeos-qFcRg")
 new Hymn("Soul of my saviour", 938, "", "", "https://www.youtube.com/embed/2AdFNZfGpSs?si=7XC-fDreDy8k-mPP")
+new Hymn("Spirit of God", "sheet", "", "", "https://www.youtube.com/embed/boC7tn31vLc?si=PKBGjGK3-eUORtO8")
 new Hymn("Spirit of the living God", 306, "", "", "https://www.youtube.com/embed/vSFUkLUTJAY?si=YuczmqHL6SGr2DVk")
 new Hymn("Stay with me", 249, "", "", "https://www.youtube.com/embed/FCr2tn4yYKY?si=aDsPK3waY6YgSzTZ")
 new Hymn("Sweet Sacrament Divine", 663, "", "", "https://www.youtube.com/embed/6N1IfoGFF-I?si=4SrRraG5OQcqP0KN");
@@ -320,6 +321,7 @@ new Hymn("The servant song", 924, "", "", "https://www.youtube.com/embed/kdmgpMf
 new Hymn("The Summons", 877, "", "", "https://www.youtube.com/embed/VFXAmB_Iq7k?si=6VEiE0TBf4zx_8W0");
 new Hymn("The voice of God", 108, "", "", "https://www.youtube.com/embed/r9EohwMRurc?si=35hV3H_r-sr145bJ")
 new Hymn("Thine be the Glory", 287, "", "", "https://www.youtube.com/embed/6qKfVuvG2SY?si=U88MKx7w-wkrgLe7");
+new Hymn("This day was made by the Lord", "-", "", "", "https://www.youtube.com/embed/2Xv5LxO_wvo?si=77ddgQs-EgqGaMYA")
 new Hymn("This is my body", 627, "", "", "https://www.youtube.com/embed/O-60hfhJzqI?si=_vXX2hQT8MWV5zwl")
 new Hymn("This is my will, my one command", 921, "", "", "https://www.youtube.com/embed/-OXw6Lhs7u8?si=TAaIOPJx2OD3MYcu");
 new Hymn("This little light of mine", "sheet", "", "", "https://www.youtube.com/embed/XzHl_1_fQ10?si=7GeTwp8W91cVSpBV&amp")
@@ -341,6 +343,7 @@ new Hymn("What child is this", 145, "", "", "https://www.youtube.com/embed/6jroB
 new Hymn("Whatsoever you do", 926, "", "", "https://www.youtube.com/embed/oDa1mcyK8B4?si=_6sQlfjIpREqHU1N")
 new Hymn("When I survey the Wondrous Cross", 756, "", "", "https://www.youtube.com/embed/YSh1uU7xpdo?si=h_b1saj9HxZTLxCk", ["When I survey the wondrous cross on which the Prince of Glory died, my richest gain I count but loss, and poor contempt on all my pride.", "Forbid it, Lord, that I should boast, save in the death of Christ, my God; all the vain things that charm me most, I sacrifice them to his blood.", "See from his head, his hands, his feet, sorrow and love flow mingled down; did e’er such love and sorrow meet, or thorns compose so rich a crown?", "His dying crimson like a robe, spreads o’er his body on the Tree; then I am dead to all the globe, and all the globe is dead to me.", "Were the whole realm of nature mine, that were an offering far too small; love so amazing, so divine, demands my soul, my life, my all."])
 new Hymn("Where are you bound, Mary?", 343, "", "", "https://www.youtube.com/embed/rPWOEZzNhxM?si=w_alalLvviuN7AX5");
+new Hymn("You have put on Christ", "sheet", "", "", "https://www.youtube.com/embed/43TZ4aEO6zw?si=C90qLNV4_OW0cQwF")
 
 //specify liturgies
 
@@ -443,8 +446,8 @@ new Liturgy(new Date("22 Mar 2026"), "5th Sunday of Lent", "A", "Chris", ["Freel
 new Liturgy(new Date("29 Mar 2026"), "Palm Sunday", "A", "Chris", ["All Glory Laud and Honour", "God of mercy and compassion", "O Sacred head", "Holy light on earth's horizon"], ["My song is love unknown"])
 new Liturgy(new Date("2 Apr 2026"), "Maundy Thursday", "A", "Chris", ["We should glory in the cross", "Brother sister let me serve you", "The Lord Jesus", "Ubi Caritas", "An upper room", "This is my body", "Of the glorious body telling"])
 new Liturgy(new Date("3 Apr 2026"), "Good Friday", "A", "Chris", ["When I survey the wondrous cross", "My song is love unknown"])
-new Liturgy(new Date("4 Apr 2026"), "Easter Vigil", "A", "Chris", ["Water of life", "Christ be our light", "Bread of life", "Thine be the glory"])
-new Liturgy(new Date("5 Apr 2026"), "Easter Sunday", "A", "Chris", ["Sing of the lord's goodness", "Jesus Christ is risen today", "Alleluia alleluia give thanks", "He is risen, tell the story"])
+new Liturgy(new Date("4 Apr 2026"), "Easter Vigil", "A", "Chris", ["Saints of God in glory", "You have put on Christ", "Spirit of God", "Christ be our light", "Bread of life", "Thine be the glory"])
+new Liturgy(new Date("5 Apr 2026"), "Easter Sunday", "A", "Chris", ["Sing of the lord's goodness", "This day was made by the Lord", "Jesus Christ is risen today", "Alleluia alleluia give thanks", "He is risen, tell the story"])
 const todaysDate = new Date();
 let nextLiturgy = allLiturgies.filter(x => x.date >= todaysDate);
 // nextLiturgy = [allLiturgies[allLiturgies.length - 1]]; //show latest liturgy on opening page (for easier adding)
