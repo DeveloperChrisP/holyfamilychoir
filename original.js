@@ -448,6 +448,21 @@ new Liturgy(new Date("2 Apr 2026"), "Maundy Thursday", "A", "Chris", ["We should
 new Liturgy(new Date("3 Apr 2026"), "Good Friday", "A", "Chris", ["When I survey the wondrous cross", "My song is love unknown"])
 new Liturgy(new Date("4 Apr 2026"), "Easter Vigil", "A", "Chris", ["Saints of God in glory", "You have put on Christ", "Spirit of God", "Christ be our light", "Bread of life", "Thine be the glory"])
 new Liturgy(new Date("5 Apr 2026"), "Easter Sunday", "A", "Chris", ["Sing of the lord's goodness", "This day was made by the Lord", "Jesus Christ is risen today", "Alleluia alleluia give thanks", "He is risen, tell the story"])
+new Liturgy(new Date("12 Apr 2026"), "2nd Sunday of Easter", "A", "Julian", ["All creatures of our God & king", "Alleluia sing to Jesus", "Amazing Grace", "O purest of creatures"])
+new Liturgy(new Date("19 Apr 2026"), "3rd Sunday of Easter", "A", "Julian", ["Gather us in", "To Jesus, heart all burning", "I will be with you", "O lady, full of God's own grace"])
+new Liturgy(new Date("26 Apr 2026"), "4th Sunday of Easter", "A", "Julian", ["All are welcome", "O bread of heaven", "The Lord's my shepherd", "He who would valiant be"])
+new Liturgy(new Date("3 May 2026"), "5th Sunday of Easter", "A", "Julian", ["Here I am Lord", "Gifts of bread & wine", "Like a sea without a shore", "Holy virgin by God's decree"])
+new Liturgy(new Date("10 May 2026"), "6th Sunday of Easter", "A", "Julian", ["God is love, his the care", "Bread of life", "O come and mourn with me awhile", "Tell out my soul"])
+new Liturgy(new Date("17 May 2026"), "7th Sunday of Easter", "A", "Julian", ["Love divine, all loves excelling", "Crown him with many crowns", "Lord Jesus Christ", "As I kneel before you"])
+new Liturgy(new Date("24 May 2026"), "Pentecost Sunday", "A", "Julian", ["Shine Jesus shine", "Come down O love divine", "Breathe on me, Breath of God", "Hail Queen of heaven"])
+new Liturgy(new Date("31 May 2026"), "Trinity Sunday", "A", "Julian", ["Eternal father, strong to save", "Praise to the Lord, the almighty", "Lead us heavenly father", "Immortal invisible"])
+new Liturgy(new Date("7 Jun 2026"), "Corpus Christi", "A", "Julian", ["Guide me O thou Great redeemer", "Jesus my Lord, my God, my all", "Godhead here in hiding", "Sing of Mary, pure and lowly"])
+new Liturgy(new Date("14 Jun 2026"), "11th Sunday in Ordinary Time", "A", "Julian", ["Our God Reigns", "Here we bring you", "Soul of my saviour", "Christ be our light"])
+new Liturgy(new Date("21 Jun 2026"), "12th Sunday in Ordinary Time", "A", "Julian", ["My God accept my heart this day", "Faith of our fathers", "Lead kindly light", "I'll sing a Hymn to Mary"])
+new Liturgy(new Date("28 Jun 2026"), "13th Sunday in Ordinary Time", "A", "Julian", ["Hail Redeemer, King Divine", "Dear Lord and father of mankind", "O sacred heart", "Follow me, follow me"])
+
+//2nd/ 6th/ 17th /20th (A) Sunday of ordinary - 26th of July: "Teach Me, O God (Christopher Walker)"
+
 const todaysDate = new Date();
 let nextLiturgy = allLiturgies.filter(x => x.date >= todaysDate);
 // nextLiturgy = [allLiturgies[allLiturgies.length - 1]]; //show latest liturgy on opening page (for easier adding)
@@ -566,13 +581,20 @@ function addElement(addOrRemove, number) {
             // create a new div element
             const newH4 = document.createElement('h4');
             const newH6 = document.createElement('h6');
-            // and give it some content
-            const hymnText = allLiturgies.filter(x => x.date > todaysDate)[number].hymn[idx].title
-            const hymnRef = allLiturgies.filter(x => x.date > todaysDate)[number].hymn[idx].hymnNumber
-            const newContent = document.createTextNode(hymnText);
-            newH6.appendChild(document.createTextNode(hymnRef));
+            // and give it some content 
 
-            newH4.appendChild(newContent);
+            // console.log(allLiturgies.filter(x => x.date > todaysDate)[number].hymn[idx]);
+
+            if ((allLiturgies.filter(x => x.date > todaysDate)[number].hymn[idx].title) != undefined) {
+                const hymnText = allLiturgies.filter(x => x.date > todaysDate)[number].hymn[idx].title;
+                const hymnRef = allLiturgies.filter(x => x.date > todaysDate)[number].hymn[idx].hymnNumber
+                const newContent = document.createTextNode(hymnText);
+                newH6.appendChild(document.createTextNode(hymnRef));
+                newH4.appendChild(newContent);
+            }
+
+
+
             // add the text node to the newly created div
 
             newDiv.appendChild(newH6)
