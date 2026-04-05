@@ -585,13 +585,13 @@ function addElement(addOrRemove, number) {
 
             // console.log(allLiturgies.filter(x => x.date > todaysDate)[number].hymn[idx]);
 
-            if ((allLiturgies.filter(x => x.date > todaysDate)[number].hymn[idx].title) != undefined) {
-                const hymnText = allLiturgies.filter(x => x.date > todaysDate)[number].hymn[idx].title;
-                const hymnRef = allLiturgies.filter(x => x.date > todaysDate)[number].hymn[idx].hymnNumber
-                const newContent = document.createTextNode(hymnText);
-                newH6.appendChild(document.createTextNode(hymnRef));
-                newH4.appendChild(newContent);
-            }
+
+            const hymnText = allLiturgies.filter(x => x.date > todaysDate)[number].hymn[idx].title;
+            const hymnRef = allLiturgies.filter(x => x.date > todaysDate)[number].hymn[idx].hymnNumber
+            const newContent = document.createTextNode(hymnText);
+            newH6.appendChild(document.createTextNode(hymnRef));
+            newH4.appendChild(newContent);
+
 
 
 

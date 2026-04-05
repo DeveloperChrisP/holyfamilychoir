@@ -890,12 +890,6 @@ button.down.hidden {
 	display: none;
 }
 
-.allHymns {
-	font-family: var(--lavishFont);
-	font-size: var(--lavishSizeSmall);
-	text-shadow: 1px 1px white;
-	text-align: center;
-}
 .liturgyPlan.hidden {
 	right: 100%;
 	transition: var(--liturgyTransition);
@@ -935,7 +929,8 @@ button.down.hidden {
 
 .acclamations button,
 #nextHymns,
-.hymnOccasion {
+.hymnOccasion,
+.allHymns {
 	/* outline: solid 1px var(--_buttonColor); */
 	border-radius: 10px;
 	padding-inline: 5px;
@@ -943,9 +938,16 @@ button.down.hidden {
 	box-shadow: var(--_buttonColor) 1px 1px 3px;
 	/* margin:0.125rem 0.125rem; */
 }
-/* #nextHymns{
-	background-color: red
-} */
+.allHymns {
+	font-family: var(--lavishFont);
+	font-size: var(--lavishSizeSmall);
+	text-shadow: 1px 1px white;
+	text-align: center;
+	margin-top: 1rem;
+}
+hr {
+	margin-top: 0.25rem;
+}
 .flex-container button.selected {
 	font-weight: 900;
 	/* text-shadow: white 1px 1px ; */
