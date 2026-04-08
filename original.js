@@ -153,7 +153,7 @@ new Hymn("A hymn of glory let us sing!", "sheet", "", "", "https://www.youtube.c
 new Hymn("A new commandment", 920, "", "", "https://www.youtube.com/embed/aqM2Ujl7Aas?si=GyuGykvyaGV3dFZI");
 new Hymn("Abide with me", 907, "", "", "https://www.youtube.com/embed/zf12lQnKlGk?si=FbBC6mn29tMilxZ5")
 new Hymn("All are welcome", 458, "", "", "https://www.youtube.com/embed/GlnVLP0qFEo?si=ndG5RjVx8SuVLSNs")
-new Hymn("All creatures of our God and King", 694, "", "", "https://www.youtube.com/embed/MUZD0hgtSgE?si=mh3_Ij7UkrFV1cdZ")
+new Hymn("All creatures of our God & King", 694, "", "", "https://www.youtube.com/embed/MUZD0hgtSgE?si=mh3_Ij7UkrFV1cdZ")
 new Hymn("All glory laud and honour", 229, "", "", "https://www.youtube.com/embed/eBfJyjDolwA?si=krjAwgqp2jbrq7UH")
 new Hymn("All my hope on God is founded", 959, "", "", "https://www.youtube.com/embed/YvpXiDQZNWg?si=QUf-NnCOGLoAvQ_9")
 new Hymn("All people that on earth do dwell", 466, "", "", "https://www.youtube.com/embed/xRklkCklycU?si=gb9Wv9eOr93r2eI1")
