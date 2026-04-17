@@ -327,6 +327,7 @@ new Hymn("This is my body", 627, "", "", "https://www.youtube.com/embed/O-60hfhJ
 new Hymn("This is my will, my one command", 921, "", "", "https://www.youtube.com/embed/-OXw6Lhs7u8?si=TAaIOPJx2OD3MYcu");
 new Hymn("This little light of mine", "sheet", "", "", "https://www.youtube.com/embed/XzHl_1_fQ10?si=7GeTwp8W91cVSpBV&amp")
 new Hymn("Though the mountains may fall", 785, "", "", "https://www.youtube.com/embed/ghXT5IOzt8g?si=-ITPGRQAbQ-kBRGm");
+new Hymn("To Jesus Heart, all burning", 800, "", "", "https://www.youtube.com/embed/rM0EbMA3cJE?si=730e5YZCVTKesQ5l")
 new Hymn("Turn to me", 786, "", "", "https://www.youtube.com/embed/C0_8VPBRDgY?si=b2B_ea92iST7WEoQ")
 new Hymn("Ubi Caritas", 246, "", "", "https://www.youtube.com/embed/Vvfr_2euIFo?si=aShcg8H8_txp1nBH")
 new Hymn("Unto us is born a son", 152, "", "", "https://www.youtube.com/embed/4_4xMMpcqbM?si=RhsMJeDjUpuP2bYO");
