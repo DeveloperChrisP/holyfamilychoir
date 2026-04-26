@@ -252,7 +252,9 @@ new Hymn("Lead us, heavenly father", 315, "", "", "https://www.youtube.com/embed
 new Hymn("Let all mortal flesh", 607, "", "", "https://www.youtube.com/embed/Q8ByNT1m8V4?si=OzHMKVvcofhokhs0");
 new Hymn("Laudate Dominum", 698, "", "", "https://www.youtube.com/embed/N-A5VL37DGY?si=LLDn5VU97RwY4TyG")
 new Hymn("Laudate Dominum2", 730, "", "", "https://www.youtube.com/embed/JXWFKSPCJ-4?si=SxZ8L0LVtC1kMoD3")
+new Hymn("Like a sea without a shore", 84, "", "", "https://www.youtube.com/embed/vz9b4_P_PNs?si=W1u-nI90xKVbQhFQ")
 new Hymn("Long ago prophets knew", 116, "", "", "https://www.youtube.com/embed/OeLA1LhqFA4?si=Y_jd5YhNoRzLi9ae");
+new Hymn("Living Lord", 772, "", "", "https://www.youtube.com/embed/QA_g98O42Q4?si=gN2wLtm1K_HrDzUL")
 new Hymn("Lord of all hopefulness", 969, "", "", "https://www.youtube.com/embed/fxEuqZ_4iI0?si=vxAYvDdp-QoMbhzO");
 new Hymn("Lord of Creation, to you be all praise", 869, "", "", "https://www.youtube.com/embed/dHEfi5TKezY?si=XoSYldQ4HqqQlguW")
 new Hymn("Love divine, all loves excelling", 801, "", "", "https://www.youtube.com/embed/cu5zgfKMbAU?si=zNiaaCx1SNydoh4F");
@@ -264,6 +266,7 @@ new Hymn("My soul proclaims you, mighty God", 340 + ' (' + 846 + ')', "", "", "h
 new Hymn("Now the green blade riseth", 278, "", "", "https://www.youtube.com/embed/t_-6-VKu8SM?si=lhMNDR8p0egeFFeM")
 new Hymn("O bread of heaven", 662, "", "", "https://www.youtube.com/embed/rJvy4FbqJXY?si=Kq_cDr2usbnT0adV");
 new Hymn("O Come all ye faithful", 159, "", "", "https://www.youtube.com/embed/8ZYZEr3JtZY?si=ZRXVkFmw8cKqnLO1");
+new Hymn("O come and mourn with me awhile", 226, "", "", "https://www.youtube.com/embed/1UdhDyrKU8s?si=SeGnOPoVv7M6mA4n")
 new Hymn("O come o come Emmanuel", 112, "", "", "https://www.youtube.com/embed/kKu0or0t8Uw?si=jnaJVa0r0dCIFHE0")
 new Hymn("O God, our help in ages past", 955, "", "", "https://www.youtube.com/embed/9USHRbF5vbw?si=JVlRT-iodda8kmt0");
 new Hymn("O God you search me", 779, "", "", "https://www.youtube.com/embed/PuKwXVWdyEs?si=_GhYqdnASsZtXxXV");
@@ -455,7 +458,7 @@ new Liturgy(new Date("19 Apr 2026"), "3rd Sunday of Easter", "A", "Julian", ["Ga
 new Liturgy(new Date("26 Apr 2026"), "4th Sunday of Easter", "A", "Julian", ["All are welcome", "O bread of heaven", "The Lord's my shepherd", "He who would valiant be"])
 new Liturgy(new Date("3 May 2026"), "5th Sunday of Easter", "A", "Julian", ["Here I am Lord", "Gifts of bread & wine", "Like a sea without a shore", "Holy virgin by God's decree"])
 new Liturgy(new Date("10 May 2026"), "6th Sunday of Easter", "A", "Julian", ["God is love, his the care", "Bread of life", "O come and mourn with me awhile", "Tell out my soul"])
-new Liturgy(new Date("17 May 2026"), "7th Sunday of Easter", "A", "Julian", ["Love divine, all loves excelling", "Crown him with many crowns", "Lord Jesus Christ", "As I kneel before you"])
+new Liturgy(new Date("17 May 2026"), "7th Sunday of Easter", "A", "Julian", ["Love divine, all loves excelling", "Crown him with many crowns", "Living Lord", "As I kneel before you"])
 new Liturgy(new Date("24 May 2026"), "Pentecost Sunday", "A", "Julian", ["Shine Jesus shine", "Come down O love divine", "Breathe on me, Breath of God", "Hail Queen of heaven"])
 new Liturgy(new Date("31 May 2026"), "Trinity Sunday", "A", "Julian", ["Eternal father, strong to save", "Praise to the Lord, the almighty", "Lead us heavenly father", "Immortal invisible"])
 new Liturgy(new Date("7 Jun 2026"), "Corpus Christi", "A", "Julian", ["Guide me O thou Great redeemer", "Jesus my Lord, my God, my all", "Godhead here in hiding", "Sing of Mary, pure and lowly"])
@@ -467,7 +470,7 @@ new Liturgy(new Date("28 Jun 2026"), "13th Sunday in Ordinary Time", "A", "Julia
 
 const todaysDate = new Date();
 let nextLiturgy = allLiturgies.filter(x => x.date >= todaysDate);
-// nextLiturgy = [allLiturgies[allLiturgies.length - 1]]; //show latest liturgy on opening page (for easier adding)
+// nextLiturgy = [allLiturgies[allLiturgies.length - 7]]; //show latest liturgy on opening page (for easier adding)
 
 
 const liturgyPlan = document.querySelector(".liturgyPlan");
