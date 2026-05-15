@@ -66,11 +66,12 @@ function Liturgy(date, occasion, year, selector, hymn, instrumental, psalm) {
     }
     allLiturgies.push(this);
 }
-function Psalm(number, verse, response, pdf) {
+function Psalm(number, verse, response, pdf, audio) {
     this.number = number;
     this.verse = verse;
     this.response = response;
     this.pdf = pdf;
+    this.audio = audio;
     allPsalms.push(this);
 }
 
@@ -127,7 +128,7 @@ function grabPsalmObject(psalmNumber) {
 }
 
 new Psalm("66(65)", "1-3a. 4-5. 6-7a. 16, 20. ℟1", "Cry out with joy to God, all the earth.", "./sheetMusic/pslams/Psalm - 6th Sunday of Easter (A).pdf")
-new Psalm("27(26)", "1. 4. 7-8a. ℟13", "I believe I shall see the Lord’s goodness in the land of the living.", "./sheetMusic/pslams/Psalm - 7th Sunday of Easter (A).pdf")
+new Psalm("27(26)", "1. 4. 7-8a. ℟13", "I believe I shall see the Lord's goodness in the land of the living.", "./sheetMusic/pslams/Psalm - 7th Sunday of Easter (A).pdf", "./audio/psalms/Psalm 27(26).mp3")
 
 new Acclamation("Mass of Christ the Saviour", "Glory to God", "./sheetMusic/acclamations/Dan Schutte Mass/Glory to God/Glory To God (Schutte Liturgy).pdf", ["sab", "alto", "bass", "piano"], "https://www.youtube.com/embed/oeKKr2xIFMg?si=UTR02G3kyx-Hus-A")
 new Acclamation("Mass of Christ the Saviour", "Gospel Acclamation Alleluia", "", ["sab", "melody", "alto", "bass", "piano"], "")
@@ -516,23 +517,35 @@ allLiturgies.sort(function (a, b) { return a.date - b.date }); //sort Liturgy ar
 
 // Psalm
 if (nextLiturgy[0].psalm !== undefined) {
-    addPsalm(nextLiturgy[0].psalm.number, nextLiturgy[0].psalm.verse, nextLiturgy[0].psalm.response, nextLiturgy[0].psalm.pdf)
+    addPsalm(nextLiturgy[0].psalm.number, nextLiturgy[0].psalm.verse, nextLiturgy[0].psalm.response, nextLiturgy[0].psalm.pdf, nextLiturgy[0].psalm.audio)
 }
-function addPsalm(psalmNumber, psalmVerse, psalmResponse, psalmPDF) {
+function addPsalm(psalmNumber, psalmVerse, psalmResponse, psalmPDF, psalmAudio) {
     const psalmButton = document.createElement("button");
     psalmButton.id = "psalm";
-    console.log(psalmPDF);
+
     psalmButton.onclick = () =>
         window.location.href = psalmPDF;
     // psalmLink;
-
     // function psalmLink() {
     //     window.location.href = psalmPDF;
     // }
 
     psalmButton.innerHTML = `Psalm <span id="psalmNumber">${psalmNumber}</span><span
     id=psalmChapters>:${psalmVerse}</span> <span id=psalmResponse>${psalmResponse}</span>`
+
     document.querySelector(".container").append(psalmButton);
+    //audio
+    if (psalmAudio !== undefined) {
+
+        const audio = document.createElement("audio");
+        audio.id = 'psalmAudio';
+        audio.setAttribute("controls", true);
+        audio.setAttribute("preload", 'metadata');
+        audio.setAttribute("src", psalmAudio);
+        audio.classList = "mediaPlayer__audio";
+
+        document.querySelector(".container").append(audio);
+    }
 
 };
 
