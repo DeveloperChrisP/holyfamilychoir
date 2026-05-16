@@ -2,6 +2,15 @@
 
 // const { createElement } = require("react");
 
+// const { createElement } = require("react");
+const allLiturgies = [];
+const allAcclamations = [];
+const allAcclamationSettings = [];
+const allPsalms = [];
+const allAlleluiaVerses = [];
+
+const todaysDate = new Date();
+
 var accordion = document.querySelector("article.accordion");
 var wrapper = document.querySelector(".wrapper");
 var count;
@@ -39,27 +48,19 @@ function Hymn(title, hymnNumber, sheetMusic, vocalPart, video, lyrics) {
 }
 function createLyricObject(lyrics) {
     const lyricObject = {
-
     }
-
-
-
 };
 
-allLiturgies = [];
-const allAcclamations = [];
-const allAcclamationSettings = [];
-const allPsalms = [];
-
-function Liturgy(date, occasion, year, selector, hymn, instrumental, psalm) {
+function Liturgy(date, occasion, year, selector, hymn, instrumental, psalm, alleluia) {
     this.date = date;
     this.occasion = occasion;
     this.year = year;
     this.selector = selector;
     this.hymn = grabHymnObject(hymn);
-
     this.instrumental = grabHymnObject(instrumental);
     this.psalm = grabPsalmObject(psalm);
+    this.alleluia = grabAlleluiaObject(alleluia);
+
     if (date.getDay() != 0) { date.setHours(20); date.setMinutes(30); } // If next Liturgy is not a Sunday - set time to 19:30 (so Next Up Liturgy remains for evening masses)
     else {
         date.setHours(10); date.setMinutes(30);
@@ -73,6 +74,12 @@ function Psalm(number, verse, response, pdf, audio) {
     this.pdf = pdf;
     this.audio = audio;
     allPsalms.push(this);
+}
+function AlleluiaVerse(ref, line1, line2) {
+    this.ref = ref;
+    this.line1 = line1;
+    this.line2 = line2;
+    allAlleluiaVerses.push(this);
 }
 
 function Acclamation(massTitle, title, sheetMusic, vocalPart, video) {
@@ -106,15 +113,16 @@ function grabAcclamationObject(massTitle) {
 function grabPsalmObject(psalmNumber) {
     //return array of hymn objects (up to 8) depending on how many are requested in 'new liturgy'
 
-    var psalm
-
-    if (psalmNumber !== undefined) {
+    if (psalmNumber !== undefined && psalmNumber !== "") {
         // psalmNumber.forEach(input => {
-        psalm = allPsalms.filter(x => (x.number == psalmNumber))[0]
+        let psalm = allPsalms.filter(x => (x.number == psalmNumber))[0]
         // }
 
         // )
+        return psalm;
     }
+
+
     // if (psalmNumber !== undefined) {
     //     psalmNumber.forEach(input => {
     //         psalms.push(allPsalms.filter(x => (x.response.toLowerCase().replace(/,/g, "") == input.toLowerCase().replace(/,/g, "")))[0])
@@ -123,9 +131,22 @@ function grabPsalmObject(psalmNumber) {
     //     )
     // }
 
-    return psalm;
 
 }
+function grabAlleluiaObject(alleluiaRef) {
+    //return array of hymn objects (up to 8) depending on how many are requested in 'new liturgy'
+
+    if (alleluiaRef !== undefined && alleluiaRef !== "") {
+        // psalmNumber.forEach(input => {
+        let alleluia = allAlleluiaVerses.filter(x => (x.ref == alleluiaRef))[0]
+        // }
+
+        // )
+        return alleluia;
+    }
+}
+
+new AlleluiaVerse("John 14:18", "I will not leave you as orphans, says the Lord.", "I am going away and I will come to you, and your hearts will rejoice.")
 
 new Psalm("66(65)", "1-3a. 4-5. 6-7a. 16, 20. ℟1", "Cry out with joy to God, all the earth.", "./sheetMusic/pslams/Psalm - 6th Sunday of Easter (A).pdf")
 new Psalm("27(26)", "1. 4. 7-8a. ℟13", "I believe I shall see the Lord's goodness in the land of the living.", "./sheetMusic/pslams/Psalm - 7th Sunday of Easter (A).pdf", "./audio/psalms/Psalm 27(26).mp3")
@@ -494,8 +515,8 @@ new Liturgy(new Date("12 Apr 2026"), "2nd Sunday of Easter", "A", "Julian", ["Al
 new Liturgy(new Date("19 Apr 2026"), "3rd Sunday of Easter", "A", "Julian", ["Gather us in", "To Jesus, heart all burning", "I will be with you", "O lady, full of God's own grace"])
 new Liturgy(new Date("26 Apr 2026"), "4th Sunday of Easter", "A", "Julian", ["All are welcome", "O bread of heaven", "The Lord's my shepherd", "He who would valiant be"])
 new Liturgy(new Date("3 May 2026"), "5th Sunday of Easter", "A", "Julian", ["Here I am Lord", "Gifts of bread & wine", "Like a sea without a shore", "Holy virgin by God's decree"])
-new Liturgy(new Date("10 May 2026"), "6th Sunday of Easter", "A", "Julian", ["God is love, his the care", "Bread of life", "O come and mourn with me awhile", "Tell out my soul"], [], "66(65)")
-new Liturgy(new Date("17 May 2026"), "7th Sunday of Easter", "A", "Julian", ["Love divine, all loves excelling", "Crown him with many crowns", "Living Lord", "As I kneel before you"], [], "27(26)")
+new Liturgy(new Date("10 May 2026"), "6th Sunday of Easter", "A", "Julian", ["God is love, his the care", "Bread of life", "O come and mourn with me awhile", "Tell out my soul"], "", "66(65)")
+new Liturgy(new Date("17 May 2026"), "7th Sunday of Easter", "A", "Julian", ["Love divine, all loves excelling", "Crown him with many crowns", "Living Lord", "As I kneel before you"], "", "27(26)", "John 14:18")
 new Liturgy(new Date("24 May 2026"), "Pentecost Sunday", "A", "Julian", ["Shine Jesus shine", "Come down O love divine", "Breathe on me, Breath of God", "Hail Queen of heaven"])
 new Liturgy(new Date("31 May 2026"), "Trinity Sunday", "A", "Julian", ["Eternal father, strong to save", "Praise to the Lord, the almighty", "Lead us heavenly father", "Immortal invisible"])
 new Liturgy(new Date("7 Jun 2026"), "Corpus Christi", "A", "Julian", ["Guide me O thou Great redeemer", "Jesus my Lord, my God, my all", "Godhead here in hiding", "Sing of Mary, pure and lowly"])
@@ -505,19 +526,28 @@ new Liturgy(new Date("28 Jun 2026"), "13th Sunday in Ordinary Time", "A", "Julia
 
 //2nd/ 6th/ 17th /20th (A) Sunday of ordinary - 26th of July: "Teach Me, O God (Christopher Walker)"
 
-const todaysDate = new Date();
 let nextLiturgy = allLiturgies.filter(x => x.date >= todaysDate);
-// nextLiturgy = [allLiturgies[allLiturgies.length - 8]]; //show latest liturgy on opening page (for easier adding)
+// nextLiturgy = [allLiturgies[allLiturgies.length - 6]]; //show latest liturgy on opening page (for easier adding)
 
-console.log(allPsalms);
-console.log(nextLiturgy[0]);
+
+
 const liturgyPlan = document.querySelector(".liturgyPlan");
 
 allLiturgies.sort(function (a, b) { return a.date - b.date }); //sort Liturgy array incase not sorted manually
 
-// Psalm
-if (nextLiturgy[0].psalm !== undefined) {
+// Psalm & Alleluia
+if (nextLiturgy[0].psalm !== undefined && nextLiturgy[0].psalm !== "") {
     addPsalm(nextLiturgy[0].psalm.number, nextLiturgy[0].psalm.verse, nextLiturgy[0].psalm.response, nextLiturgy[0].psalm.pdf, nextLiturgy[0].psalm.audio)
+}
+if (nextLiturgy[0].alleluia !== undefined && nextLiturgy[0].alleluia !== "") {
+    addAlleluia(nextLiturgy[0].alleluia.line1, nextLiturgy[0].alleluia.line2)
+}
+function addAlleluia(line1, line2) {
+    const alleluia = document.createElement("div")
+    alleluia.classList = "alleluia";
+    alleluia.innerHTML = `<p><span>Alleluia</span> <br/>${line1}<br/>${line2} <br/> <span>Alleluia</span></p>`
+    document.querySelector(".container").append(alleluia);
+
 }
 function addPsalm(psalmNumber, psalmVerse, psalmResponse, psalmPDF, psalmAudio) {
     const psalmButton = document.createElement("button");
@@ -778,7 +808,7 @@ wrapper.querySelector(".acclamations").addEventListener("click", function (e) {
 
 wrapper.querySelector(".liturgyContents.hymns.selected").addEventListener("click", function () {
     allHymns = originalHymns;
-    if (nextLiturgy[0].instrumental.length == 0) { allHymns = (nextLiturgy[0].hymn) } else {
+    if (nextLiturgy[0].instrumental == undefined) { allHymns = (nextLiturgy[0].hymn) } else {
         allHymns = (nextLiturgy[0].hymn).concat(nextLiturgy[0].instrumental);
     }
 
@@ -799,7 +829,7 @@ wrapper.querySelector(".allHymns").addEventListener("click", function () {
     togglePanels();
 });
 
-if (nextLiturgy[0] != undefined) {
+if (nextLiturgy[0] !== undefined) {
 
     wrapper.querySelector("#nextDate").textContent = ordinal(nextLiturgy[0].date.toLocaleDateString(undefined, { day: "numeric" })) + " of " + nextLiturgy[0].date.toLocaleDateString(undefined, { month: "long" });
     wrapper.querySelector("#nextOccasion").textContent = nextLiturgy[0].occasion;
@@ -871,7 +901,7 @@ if (nextLiturgy[0] != undefined) {
     // }
     //unhide 'extras' title, if 'instrumental' category is included in 'Liturgy' file of 'nextliturgy'.
     const instrumentalTitle = document.querySelector('.extras')
-    if (nextLiturgy[0].instrumental.length !== 0) {
+    if (nextLiturgy[0].instrumental !== undefined) {
         instrumentalTitle.classList.remove('hidden');
         populateInstrumentals();
     }
@@ -905,17 +935,6 @@ if (nextLiturgy[0] != undefined) {
     //     }
     // }
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 var testDate = new Date().toLocaleDateString(undefined, { day: "numeric" });
@@ -953,15 +972,17 @@ function grabHymnObject(hymnTitleArray) {
     //return array of hymn objects (up to 8) depending on how many are requested in 'new liturgy'
 
 
-    if (hymnTitleArray !== undefined || "") {
+    if (hymnTitleArray !== undefined && hymnTitleArray !== "") {
         var hymns = [];
         hymnTitleArray.forEach(input => {
             hymns.push(allHymns.filter(x => (x.title.toLowerCase().replace(/,/g, "") == input.toLowerCase().replace(/,/g, "")))[0])
         }
-
         )
         return hymns;
     }
+
+
+
 
 
 }
