@@ -145,11 +145,22 @@ function grabAlleluiaObject(alleluiaRef) {
         return alleluia;
     }
 }
+new Psalm("66(65)", "1-3a. 4-5. 6-7a. 16, 20. ℟1", "Cry out with joy to God, all the earth.", "./sheetMusic/psalms/Psalm - 6th Sunday of Easter (A).pdf")
+new Psalm("27(26)", "1. 4. 7-8a. ℟13", "I believe I shall see the Lord's goodness in the land of the living.", "./sheetMusic/psalms/Psalm - 7th Sunday of Easter (A).pdf", "./audio/psalms/Psalm 27(26).mp3")
+new Psalm("104(103)", "1ab, 24ac. 29b-30. 31, 34. ℟ cf. 30", "Send forth your spirit, O Lord, and renew the face of the earth.", "./sheetMusic/psalms/Psalm - Pentecost (A).pdf")
+new Psalm("3", "52. 53. 54. 55. 56. ℟52b", "To be praised and highly exalted for ever!")
+new Psalm("147", "12-13. 14-15. 19-20. ℟12a", "O Jerusalem, glorify the Lord!")
+new Psalm("100(99)", "1-2. 3. 5. ℟3c", "We are his people, the sheep of his flock.")
+new Psalm("69(68)", "8-10. 14, 17. 33-35. ℟14c", "In your great mercy, answer me, O Lord.")
+new Psalm("34(33)", "2-3. 4-5. 6-7. 8-9. ℟5", "From all my terrors the Lord set me free.")
 
 new AlleluiaVerse("John 14:18", "I will not leave you as orphans, says the Lord.", "I am going away and I will come to you, and your hearts will rejoice.")
-
-new Psalm("66(65)", "1-3a. 4-5. 6-7a. 16, 20. ℟1", "Cry out with joy to God, all the earth.", "./sheetMusic/pslams/Psalm - 6th Sunday of Easter (A).pdf")
-new Psalm("27(26)", "1. 4. 7-8a. ℟13", "I believe I shall see the Lord's goodness in the land of the living.", "./sheetMusic/pslams/Psalm - 7th Sunday of Easter (A).pdf", "./audio/psalms/Psalm 27(26).mp3")
+new AlleluiaVerse("unknown", "Come, Holy Spirit, fill the hearts of your faithful", "and kindle in them the fire of your love.")
+new AlleluiaVerse("Cf. Revelation 1:8", "Glory be to the Father, and to the Son, and to the Holy Spirit,", "the God who is and who was and who is to come.")
+new AlleluiaVerse("John 6:51", "I am the living bread that came down from heaven, says the Lord.", "If anyone eats of this bread, he will live for ever.")
+new AlleluiaVerse("Mark 1:15", "The kingdom of God is at hand;", "repent and believe in the gospel.")
+new AlleluiaVerse("John 15:26b, 27a", "The Spirit of truth will bear witness about me, says the Lord,", "and you also will bear witness.")
+new AlleluiaVerse("Matthew 16:18", "You are Peter, and on this rock I will build my Church,", "and the gates of hell shall not prevail against it.")
 
 new Acclamation("Mass of Christ the Saviour", "Glory to God", "./sheetMusic/acclamations/Dan Schutte Mass/Glory to God/Glory To God (Schutte Liturgy).pdf", ["sab", "alto", "bass", "piano"], "https://www.youtube.com/embed/oeKKr2xIFMg?si=UTR02G3kyx-Hus-A")
 new Acclamation("Mass of Christ the Saviour", "Gospel Acclamation Alleluia", "", ["sab", "melody", "alto", "bass", "piano"], "")
@@ -517,17 +528,17 @@ new Liturgy(new Date("26 Apr 2026"), "4th Sunday of Easter", "A", "Julian", ["Al
 new Liturgy(new Date("3 May 2026"), "5th Sunday of Easter", "A", "Julian", ["Here I am Lord", "Gifts of bread & wine", "Like a sea without a shore", "Holy virgin by God's decree"])
 new Liturgy(new Date("10 May 2026"), "6th Sunday of Easter", "A", "Julian", ["God is love, his the care", "Bread of life", "O come and mourn with me awhile", "Tell out my soul"], "", "66(65)")
 new Liturgy(new Date("17 May 2026"), "7th Sunday of Easter", "A", "Julian", ["Love divine, all loves excelling", "Crown him with many crowns", "Living Lord", "As I kneel before you"], "", "27(26)", "John 14:18")
-new Liturgy(new Date("24 May 2026"), "Pentecost Sunday", "A", "Julian", ["Shine Jesus shine", "Come down O love divine", "Breathe on me, Breath of God", "Hail Queen of heaven"])
-new Liturgy(new Date("31 May 2026"), "Trinity Sunday", "A", "Julian", ["Eternal father, strong to save", "Praise to the Lord, the almighty", "Lead us heavenly father", "Immortal invisible"])
-new Liturgy(new Date("7 Jun 2026"), "Corpus Christi", "A", "Julian", ["Guide me O thou Great redeemer", "Jesus my Lord, my God, my all", "Godhead here in hiding", "Sing of Mary, pure and lowly"])
-new Liturgy(new Date("14 Jun 2026"), "11th Sunday in Ordinary Time", "A", "Julian", ["Our God Reigns", "Here we bring you", "Soul of my saviour", "Christ be our light"])
-new Liturgy(new Date("21 Jun 2026"), "12th Sunday in Ordinary Time", "A", "Julian", ["My God accept my heart this day", "Faith of our fathers", "Lead kindly light", "I'll sing a Hymn to Mary"])
-new Liturgy(new Date("28 Jun 2026"), "13th Sunday in Ordinary Time", "A", "Julian", ["Hail Redeemer, King Divine", "Dear Lord and father of mankind", "O sacred heart", "Follow me, follow me"])
+new Liturgy(new Date("24 May 2026"), "Pentecost Sunday", "A", "Julian", ["Shine Jesus shine", "Come down O love divine", "Breathe on me, Breath of God", "Hail Queen of heaven"], "", "104(103)", "unknown")
+new Liturgy(new Date("31 May 2026"), "Trinity Sunday", "A", "Julian", ["Eternal father, strong to save", "Praise to the Lord, the almighty", "Lead us heavenly father", "Immortal invisible"], "", "3", "Cf. Revelation 1:8")
+new Liturgy(new Date("7 Jun 2026"), "Corpus Christi", "A", "Julian", ["Guide me O thou Great redeemer", "Jesus my Lord, my God, my all", "Godhead here in hiding", "Sing of Mary, pure and lowly"], "", "147", "John 6:51")
+new Liturgy(new Date("14 Jun 2026"), "11th Sunday in Ordinary Time", "A", "Julian", ["Our God Reigns", "Here we bring you", "Soul of my saviour", "Christ be our light"], "", "100(99)", "Mark 1:15")
+new Liturgy(new Date("21 Jun 2026"), "12th Sunday in Ordinary Time", "A", "Julian", ["My God accept my heart this day", "Faith of our fathers", "Lead kindly light", "I'll sing a Hymn to Mary"], "", "69(68)", "John 15:26b, 27a")
+new Liturgy(new Date("28 Jun 2026"), "13th Sunday in Ordinary Time", "A", "Julian", ["Hail Redeemer, King Divine", "Dear Lord and father of mankind", "O sacred heart", "Follow me, follow me"], "", "34(33)", "Matthew 16:13-19")
 
 //2nd/ 6th/ 17th /20th (A) Sunday of ordinary - 26th of July: "Teach Me, O God (Christopher Walker)"
 
 let nextLiturgy = allLiturgies.filter(x => x.date >= todaysDate);
-// nextLiturgy = [allLiturgies[allLiturgies.length - 6]]; //show latest liturgy on opening page (for easier adding)
+nextLiturgy = [allLiturgies[allLiturgies.length - 5]]; //show latest liturgy on opening page (for easier adding)
 
 
 
@@ -560,8 +571,9 @@ function addPsalm(psalmNumber, psalmVerse, psalmResponse, psalmPDF, psalmAudio) 
     //     window.location.href = psalmPDF;
     // }
 
-    psalmButton.innerHTML = `Psalm <span id="psalmNumber">${psalmNumber}</span><span
-    id=psalmChapters>:${psalmVerse}</span> <span id=psalmResponse>${psalmResponse}</span>`
+    // <span    id=psalmChapters>:${psalmVerse}</span> //Add psalm extra refs if required
+    psalmButton.innerHTML = `Psalm <span id="psalmNumber">${psalmNumber}</span>
+    <span id=psalmResponse>${psalmResponse}</span>`
 
     document.querySelector(".container").append(psalmButton);
     //audio
