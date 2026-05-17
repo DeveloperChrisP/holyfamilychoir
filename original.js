@@ -147,7 +147,7 @@ function grabAlleluiaObject(alleluiaRef) {
 }
 new Psalm("66(65)", "1-3a. 4-5. 6-7a. 16, 20. ℟1", "Cry out with joy to God, all the earth.", "./sheetMusic/psalms/Psalm - 6th Sunday of Easter (A).pdf")
 new Psalm("27(26)", "1. 4. 7-8a. ℟13", "I believe I shall see the Lord's goodness in the land of the living.", "./sheetMusic/psalms/Psalm - 7th Sunday of Easter (A).pdf", "./audio/psalms/Psalm 27(26).mp3")
-new Psalm("104(103)", "1ab, 24ac. 29b-30. 31, 34. ℟ cf. 30", "Send forth your spirit, O Lord, and renew the face of the earth.", "./sheetMusic/psalms/Psalm - Pentecost (A).pdf")
+new Psalm("104(103)", "1ab, 24ac. 29b-30. 31, 34. ℟ cf. 30", "Send forth your spirit, O Lord, and renew the face of the earth.", "./sheetMusic/psalms/Psalm 104(103).pdf", "./audio/psalms/Psalm 104(103).mp3")
 new Psalm("3", "52. 53. 54. 55. 56. ℟52b", "To be praised and highly exalted for ever!")
 new Psalm("147", "12-13. 14-15. 19-20. ℟12a", "O Jerusalem, glorify the Lord!")
 new Psalm("100(99)", "1-2. 3. 5. ℟3c", "We are his people, the sheep of his flock.")
@@ -538,7 +538,7 @@ new Liturgy(new Date("28 Jun 2026"), "13th Sunday in Ordinary Time", "A", "Julia
 //2nd/ 6th/ 17th /20th (A) Sunday of ordinary - 26th of July: "Teach Me, O God (Christopher Walker)"
 
 let nextLiturgy = allLiturgies.filter(x => x.date >= todaysDate);
-nextLiturgy = [allLiturgies[allLiturgies.length - 5]]; //show latest liturgy on opening page (for easier adding)
+// nextLiturgy = [allLiturgies[allLiturgies.length - 5]]; //show latest liturgy on opening page (for easier adding)
 
 
 
