@@ -67,11 +67,12 @@ function Liturgy(date, occasion, year, selector, hymn, instrumental, psalm, alle
     }
     allLiturgies.push(this);
 }
-function Psalm(number, verse, response, pdf, audio) {
+function Psalm(number, verse, response, pdf, img, audio) {
     this.number = number;
     this.verse = verse;
     this.response = response;
     this.pdf = pdf;
+    this.img = img;
     this.audio = audio;
     allPsalms.push(this);
 }
@@ -146,9 +147,9 @@ function grabAlleluiaObject(alleluiaRef) {
     }
 }
 new Psalm("66(65)", "1-3a. 4-5. 6-7a. 16, 20. ℟1", "Cry out with joy to God, all the earth.", "./sheetMusic/psalms/Psalm - 6th Sunday of Easter (A).pdf")
-new Psalm("27(26)", "1. 4. 7-8a. ℟13", "I believe I shall see the Lord's goodness in the land of the living.", "./sheetMusic/psalms/Psalm - 7th Sunday of Easter (A).pdf", "./audio/psalms/Psalm 27(26).mp3")
+new Psalm("27(26)", "1. 4. 7-8a. ℟13", "I believe I shall see the Lord's goodness in the land of the living.", "./sheetMusic/psalms/Psalm - 7th Sunday of Easter (A).pdf", "", "./audio/psalms/Psalm 27(26).mp3")
 
-new Psalm("104(103)", "1ab, 24ac. 29b-30. 31, 34. ℟ cf. 30", "Send forth your spirit, O Lord, and renew the face of the earth.", "./sheetMusic/psalms/Psalm 104(103)/Psalm 104(103) - SATB.pdf", "./audio/psalms/Psalm 104(103)/Psalm 104(103) - SATB.mp3")
+new Psalm("104(103)", "1ab, 24ac. 29b-30. 31, 34. ℟ cf. 30", "Send forth your spirit, O Lord, and renew the face of the earth.", "./sheetMusic/psalms/Psalm 104(103)/Psalm 104(103) - SATB.pdf", "./sheetMusic/psalms/Psalm 104(103)/Psalm 104(103).jpg", { "SATB": "./audio/psalms/Psalm 104(103)/Psalm 104(103) - SATB.mp3", "Melody": "./audio/psalms/Psalm 104(103)/Psalm 104(103) - Melody.mp3", "Alto": "./audio/psalms/Psalm 104(103)/Psalm 104(103) - Alto.mp3", "Tenor": "./audio/psalms/Psalm 104(103)/Psalm 104(103) - Tenor.mp3", "Bass": "./audio/psalms/Psalm 104(103)/Psalm 104(103) - Bass.mp3" })
 
 new Psalm("3", "52. 53. 54. 55. 56. ℟52b", "To be praised and highly exalted for ever!")
 new Psalm("147", "12-13. 14-15. 19-20. ℟12a", "O Jerusalem, glorify the Lord!")
@@ -542,7 +543,7 @@ new Liturgy(new Date("28 Jun 2026"), "13th Sunday in Ordinary Time", "A", "Julia
 //2nd/ 6th/ 17th /20th (A) Sunday of ordinary - 26th of July: "Teach Me, O God (Christopher Walker)"
 
 let nextLiturgy = allLiturgies.filter(x => x.date >= todaysDate);
-// nextLiturgy = [allLiturgies[allLiturgies.length - 5]]; //show latest liturgy on opening page (for easier adding)
+// nextLiturgy = [allLiturgies[allLiturgies.length - 7]]; //show latest liturgy on opening page (for easier adding)
 
 
 
@@ -551,38 +552,73 @@ const liturgyPlan = document.querySelector(".liturgyPlan");
 allLiturgies.sort(function (a, b) { return a.date - b.date }); //sort Liturgy array incase not sorted manually
 
 // Psalm & Alleluia
-// if (nextLiturgy[0].psalm !== undefined && nextLiturgy[0].psalm !== "") {
-//     addPsalm(nextLiturgy[0].psalm.number, nextLiturgy[0].psalm.verse, nextLiturgy[0].psalm.response, nextLiturgy[0].psalm.pdf, nextLiturgy[0].psalm.audio)
-// }
-// if (nextLiturgy[0].alleluia !== undefined && nextLiturgy[0].alleluia !== "") {
-//     addAlleluia(nextLiturgy[0].alleluia.line1, nextLiturgy[0].alleluia.line2)
-// }
-function addAlleluia(line1, line2) {
-    const alleluia = document.createElement("div")
-    alleluia.classList = "alleluia";
-    alleluia.innerHTML = `<p><span>Alleluia</span> <br/>${line1}<br/>${line2} <br/> <span>Alleluia</span></p>`
-    document.querySelector(".container").append(alleluia);
-
+if (nextLiturgy[0].psalm !== undefined && nextLiturgy[0].psalm !== "") {
+    addPsalm(nextLiturgy[0].psalm.number, nextLiturgy[0].psalm.verse, nextLiturgy[0].psalm.response, nextLiturgy[0].psalm.pdf, nextLiturgy[0].psalm.img, nextLiturgy[0].psalm.audio)
 }
-function addPsalm(psalmNumber, psalmVerse, psalmResponse, psalmPDF, psalmAudio) {
-    const psalmButton = document.createElement("button");
-    psalmButton.id = "psalm";
 
-    psalmButton.onclick = () =>
-        window.location.href = psalmPDF;
-    // psalmLink;
-    // function psalmLink() {
-    //     window.location.href = psalmPDF;
-    // }
+if (nextLiturgy[0].alleluia !== undefined && nextLiturgy[0].alleluia !== "") {
+    addAlleluia(nextLiturgy[0].alleluia.line1, nextLiturgy[0].alleluia.line2)
+}
+function addPsalm(psalmNumber, psalmVerse, psalmResponse, psalmPDF, psalmIMG, psalmAudio) {
 
-    // <span    id=psalmChapters>:${psalmVerse}</span> //Add psalm extra refs if required
-    psalmButton.innerHTML = `Psalm <span id="psalmNumber">${psalmNumber}</span>
-    <span id=psalmResponse>${psalmResponse}</span>`
 
-    document.querySelector(".container").append(psalmButton);
-    //audio
-    if (psalmAudio !== undefined) {
+    const psalmDetails = document.createElement("details");
+    // psalmDetails.setAttribute("open", "true")
+    psalmDetails.id = "psalm";
 
+    psalmDetails.innerHTML = `
+    <summary>Psalm <span id="psalmNumber">${psalmNumber}</span> 
+    </summary>
+    <p>"${psalmResponse}"</p>`
+
+    document.querySelector(".container2").insertBefore(psalmDetails, document.querySelector(".container-HymnsAcclamations"));
+
+    if (psalmIMG !== undefined && psalmIMG !== "") {
+        const psalmImage = document.createElement("img");
+        psalmImage.id = "psalmIMG"
+        psalmImage.setAttribute("src", psalmIMG)
+        document.querySelector("#psalm").append(psalmImage);
+    }
+    if (psalmPDF !== undefined && psalmPDF !== "") {
+        const psalmButton = document.createElement("button");
+        psalmButton.innerHTML = `<a href="${psalmPDF}">Full Sheetmusic</a>`
+        // psalmButton.textContent = "Full Sheetmusic";
+        // psalmButton.setAttribute("onclick", "window.location.href=" + psalmPDF);
+        document.querySelector("#psalm").append(psalmButton);
+    }
+    // if (typeof allPsalms[2].audio == "object"){console.log("success")}else{console.log("failure")}
+    if (psalmAudio !== undefined && psalmAudio !== "" && typeof psalmAudio == "object") {
+        for (const property in psalmAudio) {
+            const tag = document.createElement("h6");
+            tag.textContent = property;
+            document.querySelector("#psalm").append(tag);
+
+            const audio = document.createElement("audio");
+            audio.id = 'psalmAudio';
+            audio.setAttribute("controls", true);
+            audio.setAttribute("preload", 'metadata');
+            audio.setAttribute("src", psalmAudio[property]);
+            audio.classList = "mediaPlayer__audio";
+
+            document.querySelector("#psalm").append(audio);
+
+
+            // console.log(`${property}: ${psalmAudio[property]}`);
+            // for (let index = 0; index < Object.keys(psalmAudio).length; index++) {
+            // const element = psalmAudio.valueOf()[index];
+            // console.log(element);
+            // }
+
+        }
+        // const audio = document.createElement("audio");
+        // audio.id = "psalmIMG"
+        // audio.setAttribute("src", psalmAudio)
+        // document.querySelector("#psalm").append(audio);
+    }
+    if (psalmAudio !== undefined && psalmAudio !== "" && typeof psalmAudio == "string") {
+        const tag = document.createElement("h6");
+        tag.textContent = "Melody";
+        document.querySelector("#psalm").append(tag);
         const audio = document.createElement("audio");
         audio.id = 'psalmAudio';
         audio.setAttribute("controls", true);
@@ -590,11 +626,45 @@ function addPsalm(psalmNumber, psalmVerse, psalmResponse, psalmPDF, psalmAudio) 
         audio.setAttribute("src", psalmAudio);
         audio.classList = "mediaPlayer__audio";
 
-        document.querySelector(".container").append(audio);
+        document.querySelector("#psalm").append(audio);
     }
 
-};
+    // psalmDetails.onclick = () =>
+    //     window.location.href = psalmPDF;
 
+    // psalmLink;
+    // function psalmLink() {
+    //     window.location.href = psalmPDF;
+    // }
+
+    // <span    id=psalmChapters>:${psalmVerse}</span> //Add psalm extra refs if required
+
+    // `Psalm <span id="psalmNumber">${psalmNumber}</span>
+    // <span id=psalmResponse>${psalmResponse}</span>`
+
+    // document.querySelector(".container2").append(psalmDetails );
+    //audio
+    // if (psalmAudio !== undefined) {
+
+    //     const audio = document.createElement("audio");
+    //     audio.id = 'psalmAudio';
+    //     audio.setAttribute("controls", true);
+    //     audio.setAttribute("preload", 'metadata');
+    //     audio.setAttribute("src", psalmAudio);
+    //     audio.classList = "mediaPlayer__audio";
+
+    //     document.querySelector(".container").append(audio);
+    // }
+
+};
+function addAlleluia(line1, line2) {
+    const alleluia = document.createElement("details")
+    alleluia.classList = "alleluia";
+    alleluia.innerHTML = `<summary><span>Alleluia</span></summary><p>${line1}<br/>${line2} <br/> <span>Alleluia</span></p>`
+    // document.querySelector("#psalm").append(alleluia);
+    document.querySelector(".container2").insertBefore(alleluia, document.querySelector(".container-HymnsAcclamations"));
+
+}
 
 
 document.querySelector(".liturgyPlan .flex-container").addEventListener("click", (e) => {

@@ -1133,26 +1133,38 @@ hr {
 	text-align: center;
 	border-radius: 0 50% 50% 0;
 }
-button#psalm {
+details#psalm[open] {
 	display: grid;
-	grid-template-columns: min-content min-content auto;
+	gap: 1rem;
+	grid-template-columns: auto;
 	grid-template-rows: auto auto;
+	grid-auto-columns: max-content;
+	/* row-gap: 5px; */
+}
+details#psalm {
+	margin-bottom: 1rem;
 	font-family: var(--lavishFont);
 	/* color: darkblue; */
 	text-shadow: 1px 1px var(--liturgyCategoriesColour);
 	text-align: left;
 	align-items: baseline;
-	grid-auto-columns: max-content;
-	/* row-gap: 5px; */
+	width: 100%;
+	/* background-color: blue; */
+	border: grey solid 1px;
+	padding: 0.5rem;
+	border-radius: 10px;
 }
-button#psalm span#psalmNumber {
+details button {
+	width: 100%;
+}
+details#psalm span#psalmNumber {
 	color: var(--liturgyCategoriesColour);
 	text-shadow: 1px 1px var(--liturgyCategoriesTextShadow);
 }
-button#psalm span#psalmChapters {
+details#psalm span#psalmChapters {
 	font-size: small;
 }
-button#psalm span#psalmResponse {
+details#psalm p {
 	font-weight: 1000;
 	font-family:
 		system-ui,
@@ -1166,22 +1178,24 @@ button#psalm span#psalmResponse {
 		"Open Sans",
 		"Helvetica Neue",
 		sans-serif;
-	grid-column: span 3;
 }
-button#psalm h6 {
+details#psalm h6 {
 	font-family: system-ui;
 	font-style: italic;
 	text-decoration: underline;
-	margin-top: 5px;
+	margin: 5px;
 	line-height: 1rem;
-	grid-column: span 3;
+	/* grid-column: span 3; */
 }
-button#psalm p {
+details#psalm a {
+	color: blue;
+}
+/* details#psalm p {
 	font-family: system-ui;
-	font-weight: 300;
+	font-weight: 700;
 	/* color:red; */
-	grid-column: span 3;
-}
+/* grid-column: span 3; 
+} */
 
 .playQueuedVideos {
 	display: none;
@@ -1198,8 +1212,9 @@ button#psalm p {
 .alleluia {
 	border: grey solid 1px;
 	padding: 0.5rem;
-	margin-block: 0.5rem;
-	border-radius: 5px;
+	margin-block: 1rem;
+	border-radius: 10px;
+	width: 100%;
 }
 .alleluia span {
 	text-transform: uppercase;
@@ -1208,13 +1223,14 @@ button#psalm p {
 #psalmAudio {
 	background-color: #fff;
 }
-details {
+/* details {
 	width: 90%;
 	margin-bottom: 1rem;
-}
-summary {
+}*/
+/* summary {
 	width: max-content;
-}
+	transition: all 5s;
+}  */
 #psalmIMG {
 	border: black 2px solid;
 	border-radius: 10px;
