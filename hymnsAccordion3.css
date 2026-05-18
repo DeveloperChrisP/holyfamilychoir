@@ -1208,3 +1208,16 @@ button#psalm p {
 #psalmAudio {
 	background-color: #fff;
 }
+details {
+	width: 90%;
+	margin-bottom: 1rem;
+}
+summary {
+	width: max-content;
+}
+#psalmIMG {
+	border: black 2px solid;
+	border-radius: 10px;
+	width: 100%;
+	margin-bottom: 5px;
+}

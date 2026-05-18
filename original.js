@@ -147,7 +147,9 @@ function grabAlleluiaObject(alleluiaRef) {
 }
 new Psalm("66(65)", "1-3a. 4-5. 6-7a. 16, 20. ℟1", "Cry out with joy to God, all the earth.", "./sheetMusic/psalms/Psalm - 6th Sunday of Easter (A).pdf")
 new Psalm("27(26)", "1. 4. 7-8a. ℟13", "I believe I shall see the Lord's goodness in the land of the living.", "./sheetMusic/psalms/Psalm - 7th Sunday of Easter (A).pdf", "./audio/psalms/Psalm 27(26).mp3")
-new Psalm("104(103)", "1ab, 24ac. 29b-30. 31, 34. ℟ cf. 30", "Send forth your spirit, O Lord, and renew the face of the earth.", "./sheetMusic/psalms/Psalm 104(103).pdf", "./audio/psalms/Psalm 104(103).mp3")
+
+new Psalm("104(103)", "1ab, 24ac. 29b-30. 31, 34. ℟ cf. 30", "Send forth your spirit, O Lord, and renew the face of the earth.", "./sheetMusic/psalms/Psalm 104(103)/Psalm 104(103) - SATB.pdf", "./audio/psalms/Psalm 104(103)/Psalm 104(103) - SATB.mp3")
+
 new Psalm("3", "52. 53. 54. 55. 56. ℟52b", "To be praised and highly exalted for ever!")
 new Psalm("147", "12-13. 14-15. 19-20. ℟12a", "O Jerusalem, glorify the Lord!")
 new Psalm("100(99)", "1-2. 3. 5. ℟3c", "We are his people, the sheep of his flock.")
@@ -528,7 +530,9 @@ new Liturgy(new Date("26 Apr 2026"), "4th Sunday of Easter", "A", "Julian", ["Al
 new Liturgy(new Date("3 May 2026"), "5th Sunday of Easter", "A", "Julian", ["Here I am Lord", "Gifts of bread & wine", "Like a sea without a shore", "Holy virgin by God's decree"])
 new Liturgy(new Date("10 May 2026"), "6th Sunday of Easter", "A", "Julian", ["God is love, his the care", "Bread of life", "O come and mourn with me awhile", "Tell out my soul"], "", "66(65)")
 new Liturgy(new Date("17 May 2026"), "7th Sunday of Easter", "A", "Julian", ["Love divine, all loves excelling", "Crown him with many crowns", "Living Lord", "As I kneel before you"], "", "27(26)", "John 14:18")
+
 new Liturgy(new Date("24 May 2026"), "Pentecost Sunday", "A", "Julian", ["Shine Jesus shine", "Come down O love divine", "Breathe on me, Breath of God", "Hail Queen of heaven"], "", "104(103)", "unknown")
+
 new Liturgy(new Date("31 May 2026"), "Trinity Sunday", "A", "Julian", ["Eternal father, strong to save", "Praise to the Lord, the almighty", "Lead us heavenly father", "Immortal invisible"], "", "3", "Cf. Revelation 1:8")
 new Liturgy(new Date("7 Jun 2026"), "Corpus Christi", "A", "Julian", ["Guide me O thou Great redeemer", "Jesus my Lord, my God, my all", "Godhead here in hiding", "Sing of Mary, pure and lowly"], "", "147", "John 6:51")
 new Liturgy(new Date("14 Jun 2026"), "11th Sunday in Ordinary Time", "A", "Julian", ["Our God Reigns", "Here we bring you", "Soul of my saviour", "Christ be our light"], "", "100(99)", "Mark 1:15")
@@ -547,12 +551,12 @@ const liturgyPlan = document.querySelector(".liturgyPlan");
 allLiturgies.sort(function (a, b) { return a.date - b.date }); //sort Liturgy array incase not sorted manually
 
 // Psalm & Alleluia
-if (nextLiturgy[0].psalm !== undefined && nextLiturgy[0].psalm !== "") {
-    addPsalm(nextLiturgy[0].psalm.number, nextLiturgy[0].psalm.verse, nextLiturgy[0].psalm.response, nextLiturgy[0].psalm.pdf, nextLiturgy[0].psalm.audio)
-}
-if (nextLiturgy[0].alleluia !== undefined && nextLiturgy[0].alleluia !== "") {
-    addAlleluia(nextLiturgy[0].alleluia.line1, nextLiturgy[0].alleluia.line2)
-}
+// if (nextLiturgy[0].psalm !== undefined && nextLiturgy[0].psalm !== "") {
+//     addPsalm(nextLiturgy[0].psalm.number, nextLiturgy[0].psalm.verse, nextLiturgy[0].psalm.response, nextLiturgy[0].psalm.pdf, nextLiturgy[0].psalm.audio)
+// }
+// if (nextLiturgy[0].alleluia !== undefined && nextLiturgy[0].alleluia !== "") {
+//     addAlleluia(nextLiturgy[0].alleluia.line1, nextLiturgy[0].alleluia.line2)
+// }
 function addAlleluia(line1, line2) {
     const alleluia = document.createElement("div")
     alleluia.classList = "alleluia";
