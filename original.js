@@ -596,6 +596,7 @@ function addPsalm(psalmNumber, psalmVerse, psalmResponse, psalmPDF, psalmIMG, ps
             const audio = document.createElement("audio");
             audio.id = 'psalmAudio';
             audio.setAttribute("controls", true);
+            audio.setAttribute("loop", true);
             audio.setAttribute("preload", 'metadata');
             audio.setAttribute("src", psalmAudio[property]);
             audio.classList = "mediaPlayer__audio";
