@@ -575,7 +575,7 @@ function addPsalm(psalmNumber, psalmVerse, psalmResponse, psalmPDF, psalmIMG, ps
 
 
     const psalmDetails = document.createElement("details");
-    psalmDetails.setAttribute("open", "true")
+    // psalmDetails.setAttribute("open", "true")
     psalmDetails.id = "psalm";
 
     psalmDetails.innerHTML = `
@@ -587,9 +587,9 @@ function addPsalm(psalmNumber, psalmVerse, psalmResponse, psalmPDF, psalmIMG, ps
 
     if (psalmIMG !== undefined && psalmIMG !== "") {
         const psalmImage = document.createElement("img");
-        // psalmImage.id = "psalmIMG"
-        // psalmImage.setAttribute("src", psalmIMG)
-        // document.querySelector("#psalm").append(psalmImage);
+        psalmImage.id = "psalmIMG"
+        psalmImage.setAttribute("src", psalmIMG)
+        document.querySelector("#psalm").append(psalmImage);
     }
     if (psalmPDF !== undefined && psalmPDF !== "") {
         const psalmButton = document.createElement("button");
