@@ -617,6 +617,7 @@ body {
 	color: white;
 	border-radius: 0.5rem;
 	margin: var(--_panel-gap);
+	padding-bottom: 1rem;
 }
 
 .mediaPlayer__title {
@@ -1190,6 +1191,12 @@ details#psalm h6 {
 details#psalm a {
 	color: blue;
 }
+details#psalm .product__mediaPlayer div.container {
+	display: flex;
+	flex-direction: row;
+	justify-content: left;
+	padding: 0.5rem;
+}
 /* details#psalm p {
 	font-family: system-ui;
 	font-weight: 700;
@@ -1219,6 +1226,7 @@ details#psalm a {
 .alleluia span {
 	text-transform: uppercase;
 	font-weight: 500;
+	font-family: var(--lavishFont);
 }
 #psalmAudio {
 	background-color: #fff;

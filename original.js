@@ -552,18 +552,30 @@ const liturgyPlan = document.querySelector(".liturgyPlan");
 allLiturgies.sort(function (a, b) { return a.date - b.date }); //sort Liturgy array incase not sorted manually
 
 // Psalm & Alleluia
-if (nextLiturgy[0].psalm !== undefined && nextLiturgy[0].psalm !== "") {
-    addPsalm(nextLiturgy[0].psalm.number, nextLiturgy[0].psalm.verse, nextLiturgy[0].psalm.response, nextLiturgy[0].psalm.pdf, nextLiturgy[0].psalm.img, nextLiturgy[0].psalm.audio)
-}
+psalmOrNot();
+function psalmOrNot() {
+    if (document.querySelector(".flex-container button.hymnsTitle").classList.contains("selected") == true) {
+        if (nextLiturgy[0].psalm !== undefined && nextLiturgy[0].psalm !== "") {
+            addPsalm(nextLiturgy[0].psalm.number, nextLiturgy[0].psalm.verse, nextLiturgy[0].psalm.response, nextLiturgy[0].psalm.pdf, nextLiturgy[0].psalm.img, nextLiturgy[0].psalm.audio)
+        }
 
-if (nextLiturgy[0].alleluia !== undefined && nextLiturgy[0].alleluia !== "") {
-    addAlleluia(nextLiturgy[0].alleluia.line1, nextLiturgy[0].alleluia.line2)
+        if (nextLiturgy[0].alleluia !== undefined && nextLiturgy[0].alleluia !== "") {
+            addAlleluia(nextLiturgy[0].alleluia.line1, nextLiturgy[0].alleluia.line2)
+        }
+    } else {
+        const element = document.getElementById("psalm");
+        const element2 = document.getElementById("alleluia");
+        if (element !== null) {
+            element.remove();
+            element2.remove();
+        }
+    }
 }
 function addPsalm(psalmNumber, psalmVerse, psalmResponse, psalmPDF, psalmIMG, psalmAudio) {
 
 
     const psalmDetails = document.createElement("details");
-    // psalmDetails.setAttribute("open", "true")
+    psalmDetails.setAttribute("open", "true")
     psalmDetails.id = "psalm";
 
     psalmDetails.innerHTML = `
@@ -575,9 +587,9 @@ function addPsalm(psalmNumber, psalmVerse, psalmResponse, psalmPDF, psalmIMG, ps
 
     if (psalmIMG !== undefined && psalmIMG !== "") {
         const psalmImage = document.createElement("img");
-        psalmImage.id = "psalmIMG"
-        psalmImage.setAttribute("src", psalmIMG)
-        document.querySelector("#psalm").append(psalmImage);
+        // psalmImage.id = "psalmIMG"
+        // psalmImage.setAttribute("src", psalmIMG)
+        // document.querySelector("#psalm").append(psalmImage);
     }
     if (psalmPDF !== undefined && psalmPDF !== "") {
         const psalmButton = document.createElement("button");
@@ -588,46 +600,97 @@ function addPsalm(psalmNumber, psalmVerse, psalmResponse, psalmPDF, psalmIMG, ps
     }
     // if (typeof allPsalms[2].audio == "object"){console.log("success")}else{console.log("failure")}
     if (psalmAudio !== undefined && psalmAudio !== "" && typeof psalmAudio == "object") {
-        for (const property in psalmAudio) {
-            const tag = document.createElement("h6");
-            tag.textContent = property;
-            document.querySelector("#psalm").append(tag);
+        // for (const property in psalmAudio) {
+        //     const tag = document.createElement("h6");
+        //     tag.textContent = property;
+        //     document.querySelector("#psalm").append(tag);
 
-            const audio = document.createElement("audio");
-            audio.id = 'psalmAudio';
-            audio.setAttribute("controls", true);
-            audio.setAttribute("loop", true);
-            audio.setAttribute("preload", 'metadata');
-            audio.setAttribute("src", psalmAudio[property]);
-            audio.classList = "mediaPlayer__audio";
+        //     const audio = document.createElement("audio");
+        //     audio.id = 'psalmAudio';
+        //     audio.setAttribute("controls", true);
+        //     audio.setAttribute("loop", true);
+        //     audio.setAttribute("preload", 'metadata');
+        //     audio.setAttribute("src", psalmAudio[property]);
+        //     audio.classList = "mediaPlayer__audio";
 
-            document.querySelector("#psalm").append(audio);
+        //     document.querySelector("#psalm").append(audio);
 
 
-            // console.log(`${property}: ${psalmAudio[property]}`);
-            // for (let index = 0; index < Object.keys(psalmAudio).length; index++) {
-            // const element = psalmAudio.valueOf()[index];
-            // console.log(element);
-            // }
+        //     // console.log(`${property}: ${psalmAudio[property]}`);
+        //     // for (let index = 0; index < Object.keys(psalmAudio).length; index++) {
+        //     // const element = psalmAudio.valueOf()[index];
+        //     // console.log(element);
+        //     // }
 
-        }
+        // }
         // const audio = document.createElement("audio");
         // audio.id = "psalmIMG"
         // audio.setAttribute("src", psalmAudio)
         // document.querySelector("#psalm").append(audio);
     }
-    if (psalmAudio !== undefined && psalmAudio !== "" && typeof psalmAudio == "string") {
-        const tag = document.createElement("h6");
-        tag.textContent = "Melody";
-        document.querySelector("#psalm").append(tag);
-        const audio = document.createElement("audio");
-        audio.id = 'psalmAudio';
-        audio.setAttribute("controls", true);
-        audio.setAttribute("preload", 'metadata');
-        audio.setAttribute("src", psalmAudio);
-        audio.classList = "mediaPlayer__audio";
+    if (psalmAudio !== undefined && psalmAudio !== "") {
+        // console.log("Object.keys = " + Object.keys(psalmAudio)[0]);
+        // console.log("Object.values = " + Object.values(psalmAudio)[0]);
+        // console.log("Object.entries = " + Object.entries(psalmAudio)[0]);
 
-        document.querySelector("#psalm").append(audio);
+        const mediaPlayer = document.createElement("div");
+        mediaPlayer.classList = "product__mediaPlayer";
+        mediaPlayer.id = "mediaPlayer";
+        if (typeof psalmAudio == "string") {
+            mediaPlayer.innerHTML = `             
+                        <h3 class="mediaPlayer__title">Audio Player</h3>
+                        <div class="flexContainer">
+                            <div id="mediaPlayer__light" class= "melody selected"></div>
+                            <h4 id="mediaPlayer__description">Psalm ${psalmNumber} - Melody</h4>
+                        </div>
+                        <div class="mediaPlayer__audioDiv">
+                            <audio controls preload="metadata" src="${psalmAudio}" class="mediaPlayer__audio"></audio>
+                        </div>`
+        } else {
+            mediaPlayer.innerHTML = `             
+                        <div class="container">
+                            <svg class="accordion_icon" aria-hidden="true">
+                                <use xlink:href="#headphones"></use>
+                            </svg>
+                            <h3 class="mediaPlayer__title">Audio Player</h3>
+                        </div>
+                        <div class="flexContainer">
+                            <div id="mediaPlayer__light" class= "${Object.keys(psalmAudio)[0].toLowerCase()} selected"></div>
+                            <h4 id="mediaPlayer__description">Psalm ${psalmNumber} - ${Object.keys(psalmAudio)[0]}</h4>
+                        </div>
+                        <div class="mediaPlayer__audioDiv">
+                            <audio loop=true id="psalmAudio" controls preload="metadata" src="${Object.values(psalmAudio)[0]}" class="mediaPlayer__audio"></audio>
+                        </div>
+                        <ul id = "audioPartContainer" class = "product__audioCategory">
+                        
+                        </ul>
+                        `
+
+        }
+        document.querySelector("#psalm").append(mediaPlayer)
+        for (const property in psalmAudio) {
+            const part = document.createElement("li");
+            part.classList = "visible"
+
+            part.innerHTML = `<div class="audioCategory__light psalm ${property.toLowerCase()}"></div>
+            <button class = "audioSelection">${property}</button>`
+            document.querySelector("#audioPartContainer").append(part)
+        }
+        document.getElementById("audioPartContainer").addEventListener("click", (e) => {
+            const objKey = e.target.closest('button').textContent;
+            console.log(psalmAudio[objKey]);
+            document.getElementById("psalmAudio").setAttribute("src", psalmAudio[objKey]);
+            document.getElementById("mediaPlayer__description").innerText = `Psalm ${psalmNumber} - ${objKey}`;
+
+            const partArray = document.querySelectorAll(".audioCategory__light.psalm");
+            for (let index = 0; index < partArray.length; index++) {
+                const element = partArray[index];
+                // console.log(element);
+
+            }
+            console.log(document.querySelectorAll(`.audioCategory__light.psalm.${e.target.innerHTML.toLowerCase()}`))
+
+        })
     }
 
     // psalmDetails.onclick = () =>
@@ -661,6 +724,7 @@ function addPsalm(psalmNumber, psalmVerse, psalmResponse, psalmPDF, psalmIMG, ps
 function addAlleluia(line1, line2) {
     const alleluia = document.createElement("details")
     alleluia.classList = "alleluia";
+    alleluia.id = "alleluia";
     alleluia.innerHTML = `<summary><span>Alleluia</span></summary><p>${line1}<br/>${line2} <br/> <span>Alleluia</span></p>`
     // document.querySelector("#psalm").append(alleluia);
     document.querySelector(".container2").insertBefore(alleluia, document.querySelector(".container-HymnsAcclamations"));
@@ -728,6 +792,7 @@ document.querySelector(".liturgyPlan .flex-container").addEventListener("click",
             break;
 
     }
+    psalmOrNot();
 });
 function checkAndPopulateInstrumentals(number) {
     const futureContent = wrapper.querySelectorAll('.futureServices li.hymnOccasion')
