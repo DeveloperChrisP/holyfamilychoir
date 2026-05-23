@@ -678,47 +678,26 @@ function addPsalm(psalmNumber, psalmVerse, psalmResponse, psalmPDF, psalmIMG, ps
         }
         document.getElementById("audioPartContainer").addEventListener("click", (e) => {
             const objKey = e.target.closest('button').textContent;
-            console.log(psalmAudio[objKey]);
+            // console.log(psalmAudio[objKey]);
             document.getElementById("psalmAudio").setAttribute("src", psalmAudio[objKey]);
             document.getElementById("mediaPlayer__description").innerText = `Psalm ${psalmNumber} - ${objKey}`;
 
             const partArray = document.querySelectorAll(".audioCategory__light.psalm");
             for (let index = 0; index < partArray.length; index++) {
                 const element = partArray[index];
-                // console.log(element);
-
+                element.classList.remove("selected")
+                // console.log();
+                element.parentElement.lastElementChild.classList.remove("active")
             }
-            console.log(document.querySelectorAll(`.audioCategory__light.psalm.${e.target.innerHTML.toLowerCase()}`))
-
+            // console.log(document.querySelectorAll(`.audioCategory__light.psalm.${e.target.innerHTML.toLowerCase()}`))
+            // console.log(e.target.parentElement.firstElementChild)
+            e.target.parentElement.firstElementChild.classList.add("selected")
+            // console.log();
+            e.target.closest("button").classList.add("active");
         })
     }
 
-    // psalmDetails.onclick = () =>
-    //     window.location.href = psalmPDF;
 
-    // psalmLink;
-    // function psalmLink() {
-    //     window.location.href = psalmPDF;
-    // }
-
-    // <span    id=psalmChapters>:${psalmVerse}</span> //Add psalm extra refs if required
-
-    // `Psalm <span id="psalmNumber">${psalmNumber}</span>
-    // <span id=psalmResponse>${psalmResponse}</span>`
-
-    // document.querySelector(".container2").append(psalmDetails );
-    //audio
-    // if (psalmAudio !== undefined) {
-
-    //     const audio = document.createElement("audio");
-    //     audio.id = 'psalmAudio';
-    //     audio.setAttribute("controls", true);
-    //     audio.setAttribute("preload", 'metadata');
-    //     audio.setAttribute("src", psalmAudio);
-    //     audio.classList = "mediaPlayer__audio";
-
-    //     document.querySelector(".container").append(audio);
-    // }
 
 };
 function addAlleluia(line1, line2) {
