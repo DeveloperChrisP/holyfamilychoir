@@ -148,10 +148,8 @@ function grabAlleluiaObject(alleluiaRef) {
 }
 new Psalm("66(65)", "1-3a. 4-5. 6-7a. 16, 20. ℟1", "Cry out with joy to God, all the earth.", "./sheetMusic/psalms/Psalm - 6th Sunday of Easter (A).pdf")
 new Psalm("27(26)", "1. 4. 7-8a. ℟13", "I believe I shall see the Lord's goodness in the land of the living.", "./sheetMusic/psalms/Psalm - 7th Sunday of Easter (A).pdf", "", "./audio/psalms/Psalm 27(26).mp3")
-
 new Psalm("104(103)", "1ab, 24ac. 29b-30. 31, 34. ℟ cf. 30", "Send forth your spirit, O Lord, and renew the face of the earth.", "./sheetMusic/psalms/Psalm 104(103)/Psalm 104(103) - SATB.pdf", "./sheetMusic/psalms/Psalm 104(103)/Psalm 104(103).jpg", { "SATB": "./audio/psalms/Psalm 104(103)/Psalm 104(103) - SATB.mp3", "Melody": "./audio/psalms/Psalm 104(103)/Psalm 104(103) - Melody.mp3", "Alto": "./audio/psalms/Psalm 104(103)/Psalm 104(103) - Alto.mp3", "Tenor": "./audio/psalms/Psalm 104(103)/Psalm 104(103) - Tenor.mp3", "Bass": "./audio/psalms/Psalm 104(103)/Psalm 104(103) - Bass.mp3" })
-
-new Psalm("3", "52. 53. 54. 55. 56. ℟52b", "To be praised and highly exalted for ever!")
+new Psalm("Daniel 3", "52. 53. 54. 55. 56. ℟52b", "To be praised and highly exalted for ever!", "./sheetMusic/psalms/Psalm Daniel 3/Psalm Daniel 3 - Melody.pdf", "./sheetMusic/psalms/Psalm Daniel 3/Psalm Daniel 3.png", { "SATB": "./audio/psalms/Psalm Daniel 3/Psalm Daniel 3 - SATB.mp3", "Melody": "./audio/psalms/Psalm Daniel 3/Psalm Daniel 3 - Melody.mp3", "Alto": "./audio/psalms/Psalm Daniel 3/Psalm Daniel 3 - Alto.mp3", "Tenor": "./audio/psalms/Psalm Daniel 3/Psalm Daniel 3 - Tenor.mp3", "Bass": "./audio/psalms/Psalm Daniel 3/Psalm Daniel 3 - Bass.mp3" })
 new Psalm("147", "12-13. 14-15. 19-20. ℟12a", "O Jerusalem, glorify the Lord!")
 new Psalm("100(99)", "1-2. 3. 5. ℟3c", "We are his people, the sheep of his flock.")
 new Psalm("69(68)", "8-10. 14, 17. 33-35. ℟14c", "In your great mercy, answer me, O Lord.")
@@ -534,7 +532,7 @@ new Liturgy(new Date("17 May 2026"), "7th Sunday of Easter", "A", "Julian", ["Lo
 
 new Liturgy(new Date("24 May 2026"), "Pentecost Sunday", "A", "Julian", ["Shine Jesus shine", "Come down O love divine", "Breathe on me, Breath of God", "Hail Queen of heaven"], "", "104(103)", "unknown")
 
-new Liturgy(new Date("31 May 2026"), "Trinity Sunday", "A", "Julian", ["Eternal father, strong to save", "Praise to the Lord, the almighty", "Lead us heavenly father", "Immortal invisible"], "", "3", "Cf. Revelation 1:8")
+new Liturgy(new Date("31 May 2026"), "Trinity Sunday", "A", "Julian", ["Eternal father, strong to save", "Praise to the Lord, the almighty", "Lead us heavenly father", "Immortal invisible"], "", "Daniel 3", "Cf. Revelation 1:8")
 new Liturgy(new Date("7 Jun 2026"), "Corpus Christi", "A", "Julian", ["Guide me O thou Great redeemer", "Jesus my Lord, my God, my all", "Godhead here in hiding", "Sing of Mary, pure and lowly"], "", "147", "John 6:51")
 new Liturgy(new Date("14 Jun 2026"), "11th Sunday in Ordinary Time", "A", "Julian", ["Our God Reigns", "Here we bring you", "Soul of my saviour", "Christ be our light"], "", "100(99)", "Mark 1:15")
 new Liturgy(new Date("21 Jun 2026"), "12th Sunday in Ordinary Time", "A", "Julian", ["My God accept my heart this day", "Faith of our fathers", "Lead kindly light", "I'll sing a Hymn to Mary"], "", "69(68)", "John 15:26b, 27a")
@@ -557,6 +555,10 @@ function psalmOrNot() {
     if (document.querySelector(".flex-container button.hymnsTitle").classList.contains("selected") == true) {
         if (nextLiturgy[0].psalm !== undefined && nextLiturgy[0].psalm !== "") {
             addPsalm(nextLiturgy[0].psalm.number, nextLiturgy[0].psalm.verse, nextLiturgy[0].psalm.response, nextLiturgy[0].psalm.pdf, nextLiturgy[0].psalm.img, nextLiturgy[0].psalm.audio)
+
+            //Auto-select 1st Psalm button
+            document.querySelector(".audioSelection").parentElement.firstElementChild.classList.add("selected")
+            document.querySelector(".audioSelection").closest("button").classList.add("active");
         }
 
         if (nextLiturgy[0].alleluia !== undefined && nextLiturgy[0].alleluia !== "") {
@@ -600,6 +602,9 @@ function addPsalm(psalmNumber, psalmVerse, psalmResponse, psalmPDF, psalmIMG, ps
     }
     // if (typeof allPsalms[2].audio == "object"){console.log("success")}else{console.log("failure")}
     if (psalmAudio !== undefined && psalmAudio !== "" && typeof psalmAudio == "object") {
+
+
+
         // for (const property in psalmAudio) {
         //     const tag = document.createElement("h6");
         //     tag.textContent = property;
@@ -632,6 +637,7 @@ function addPsalm(psalmNumber, psalmVerse, psalmResponse, psalmPDF, psalmIMG, ps
         // console.log("Object.keys = " + Object.keys(psalmAudio)[0]);
         // console.log("Object.values = " + Object.values(psalmAudio)[0]);
         // console.log("Object.entries = " + Object.entries(psalmAudio)[0]);
+
 
         const mediaPlayer = document.createElement("div");
         mediaPlayer.classList = "product__mediaPlayer";
@@ -692,7 +698,6 @@ function addPsalm(psalmNumber, psalmVerse, psalmResponse, psalmPDF, psalmIMG, ps
             // console.log(document.querySelectorAll(`.audioCategory__light.psalm.${e.target.innerHTML.toLowerCase()}`))
             // console.log(e.target.parentElement.firstElementChild)
             e.target.parentElement.firstElementChild.classList.add("selected")
-            // console.log();
             e.target.closest("button").classList.add("active");
         })
     }
