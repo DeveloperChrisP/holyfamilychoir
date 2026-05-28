@@ -940,7 +940,7 @@ button,
 	border-radius: 10px;
 	padding-inline: 5px;
 	margin: 2px 2px 5px;
-	box-shadow: var(--_buttonColor) 4px 2px 3px;
+	/* box-shadow: var(--_buttonColor) 4px 2px 3px; */
 	/* margin:0.125rem 0.125rem; */
 }
 .allHymns {
@@ -1155,11 +1155,13 @@ details#psalm {
 	padding: 0.5rem;
 	border-radius: 10px;
 }
-details button:hover {
+button:hover {
 	cursor: pointer;
 	transform: scale(1.1);
 	color: white;
+	box-shadow: black 2px 2px 3px;
 }
+
 details button {
 	width: 100%;
 	color: rgba(255, 255, 255, 0.797);
@@ -1242,7 +1244,8 @@ details#psalm .product__mediaPlayer div.container {
 	font-weight: 500;
 	font-family: var(--lavishFont);
 }
-#psalmAudio {
+#psalmAudio,
+#extrasAudio {
 	background-color: #fff;
 }
 /* details {
@@ -1253,9 +1256,17 @@ details#psalm .product__mediaPlayer div.container {
 	width: max-content;
 	transition: all 5s;
 }  */
-#psalmIMG {
+#psalmIMG,
+#extrasIMG {
 	border: black 2px solid;
 	border-radius: 10px;
 	width: 100%;
 	margin-bottom: 5px;
+}
+.imgButtonContainer {
+	display: flex;
+	gap: 0.5rem;
+}
+.product__mediaPlayer {
+	padding: 1rem;
 }
