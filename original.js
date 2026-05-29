@@ -959,7 +959,7 @@ document.querySelector(".liturgyPlan .flex-container").addEventListener("click",
             if ((allLiturgies.filter(x => x.date > todaysDate)[10]) != undefined) { futureTitles[9].textContent = allLiturgies.filter(x => x.date > todaysDate)[10].occasion; }
             break;
 
-        case "Extras":
+        case "Offertory Extras":
             liturgyPlan.querySelector(".container").classList.add("hidden"); //upcoming
             liturgyPlan.querySelector(".container").classList.add("hidden");
             liturgyPlan.querySelector(".extras").classList.add("selected");
