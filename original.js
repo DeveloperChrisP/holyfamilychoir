@@ -214,6 +214,7 @@ for (let index = 0; index < allAcclamationSettings.length; index++) {
     element.textContent = allAcclamationSettings[index].composer;
 }
 const extra = new Hymn("Taste & See", "Sheet", "./sheetMusic/hymns/Taste & See (chords & lyrics).pdf", { "SATB": "./audio/hymns/Taste and See/Taste & See - SATB.mp3", "Melody": "./audio/hymns/Taste and See/Taste & See - Melody.mp3", "Alto": "./audio/hymns/Taste and See/Taste & See - Alto.mp3", "Tenor": "./audio/hymns/Taste and See/Taste & See - Tenor.mp3", "Bass": "./audio/hymns/Taste and See/Taste & See - Bass.mp3", "Piano": "./audio/hymns/Taste and See/Taste & See - Piano.mp3" }, "https://www.youtube.com/embed/cRHOCB0Th0M?si=8tmszbX8vsjWCobF", "", { "Refrain 1": "./images/hymns/Taste & See/Refrain 1 - SATB.jpg", "Refrain 2": "./images/hymns/Taste & See/Refrain 2 - SATB.jpg", "Refrain 3": "./images/hymns/Taste & See/Refrain 3 - SATB.jpg", "Refrain 4": "./images/hymns/Taste & See/Refrain 4 - SATB.jpg" }, 32)
+const extra2 = new Hymn("How great is our God", "Sheet", { "Chords": "./sheetMusic/hymns/How Great Is Our God - Chords.pdf" }, "", "", "", "", "")
 
 new Hymn("10,000 reasons", "sheet", "./sheetMusic/hymns/10,000 Reasons (Bless The Lord) (G) - sheet music.pdf", "", "https://www.youtube.com/embed/XtwIT8JjddM?si=nEiKqySIOsHt8SG_")
 new Hymn("A hymn of glory let us sing!", "sheet", "", "", "https://www.youtube.com/embed/fWLdhI9zZbs?si=s5xONlEFIr-KQDbp")
@@ -966,6 +967,8 @@ document.querySelector(".liturgyPlan .flex-container").addEventListener("click",
             document.getElementById("alleluia").remove()
 
             addExtras(extra.title, extra.img, extra.sheetMusic, extra.vocalPart, extra.imgTimer);
+            // addExtras(extra2.title, extra.img, extra2.sheetMusic, extra.vocalPart, extra.imgTimer);
+
             break;
         // console.log(extra);
         // (ExtrasTitle, ExtrasIMG, ExtrasPDF, ExtrasAudio, Timer)
