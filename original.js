@@ -1,5 +1,6 @@
 // const { createElement } = require("react");
 
+
 // const { createElement } = require("react");
 
 // const { createElement } = require("react");
@@ -32,6 +33,9 @@ function togglePanels() {
         panel.classList.toggle("hidden");
     });
     document.querySelector(".wrapper").classList.toggle("restrictHeight");
+    document.getElementById("search").classList.toggle("hidden");
+    document.getElementById("magnifyingGlass").classList.toggle("hidden");
+
 }
 // wrapper.addEventListener('pointerdown', dragButtonsStartingPosition, false);
 // wrapper.addEventListener("pointerup", endOfTouch);
@@ -1885,3 +1889,19 @@ function scroll(e) {
     }
 }
 
+//editing
+
+// document.querySelector(".liturgyPlan").classList.add("hidden");
+// togglePanels();
+// hymnSelect();
+function hymnSearch() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("search");
+    filter = input.value.toUpperCase();
+
+    const searchedHymns = originalHymns.filter((hymn) => hymn.title.toUpperCase().includes(filter))
+    // console.log(searchedHymns);
+    allHymns = searchedHymns;
+    hymnSelect();
+
+}
