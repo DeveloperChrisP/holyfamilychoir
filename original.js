@@ -153,10 +153,10 @@ function grabAlleluiaObject(alleluiaRef) {
     }
 }
 new Psalm("66(65)", "1-3a. 4-5. 6-7a. 16, 20. ℟1", "Cry out with joy to God, all the earth.", "./sheetMusic/psalms/Psalm - 6th Sunday of Easter (A).pdf")
-new Psalm("27(26)", "1. 4. 7-8a. ℟13", "I believe I shall see the Lord's goodness in the land of the living.", "./sheetMusic/psalms/Psalm - 7th Sunday of Easter (A).pdf", "", "./audio/psalms/Psalm 27(26).mp3")
+new Psalm("27(26)", "1. 4. 7-8a. ℟13", "I believe I shall see the Lord's goodness in the land of the living.", "./sheetMusic/psalms/Psalm - 7th Sunday of Easter (A).pdf", "", "./audio/psalms/Psalm 27(26)/Psalm 27(26).mp3")
 new Psalm("104(103)", "1ab, 24ac. 29b-30. 31, 34. ℟ cf. 30", "Send forth your spirit, O Lord, and renew the face of the earth.", "./sheetMusic/psalms/Psalm 104(103)/Psalm 104(103) - SATB.pdf", "./sheetMusic/psalms/Psalm 104(103)/Psalm 104(103).jpg", { "SATB": "./audio/psalms/Psalm 104(103)/Psalm 104(103) - SATB.mp3", "Melody": "./audio/psalms/Psalm 104(103)/Psalm 104(103) - Melody.mp3", "Alto": "./audio/psalms/Psalm 104(103)/Psalm 104(103) - Alto.mp3", "Tenor": "./audio/psalms/Psalm 104(103)/Psalm 104(103) - Tenor.mp3", "Bass": "./audio/psalms/Psalm 104(103)/Psalm 104(103) - Bass.mp3" })
 new Psalm("Daniel 3", "52. 53. 54. 55. 56. ℟52b", "To be praised and highly exalted for ever!", "./sheetMusic/psalms/Psalm Daniel 3/Psalm Daniel 3 - Melody.pdf", "./sheetMusic/psalms/Psalm Daniel 3/Psalm Daniel 3.png", { "SATB": "./audio/psalms/Psalm Daniel 3/Psalm Daniel 3 - SATB.mp3", "Melody": "./audio/psalms/Psalm Daniel 3/Psalm Daniel 3 - Melody.mp3", "Alto": "./audio/psalms/Psalm Daniel 3/Psalm Daniel 3 - Alto.mp3", "Tenor": "./audio/psalms/Psalm Daniel 3/Psalm Daniel 3 - Tenor.mp3", "Bass": "./audio/psalms/Psalm Daniel 3/Psalm Daniel 3 - Bass.mp3" })
-new Psalm("147", "12-13. 14-15. 19-20. ℟12a", "O Jerusalem, glorify the Lord!")
+new Psalm("147", "12-13. 14-15. 19-20. ℟12a", "O Jerusalem, glorify the Lord!", "./sheetMusic/psalms/Psalm 147/Psalm 147 - SATB.pdf", "./sheetMusic/psalms/Psalm 147/Psalm 147.jpg", { "SATB": "./audio/psalms/Psalm 147/Psalm 147 - SATB.mp3", "Melody": "./audio/psalms/Psalm 147/Psalm 147 - Melody.mp3", "Alto": "./audio/psalms/Psalm 147/Psalm 147 - Alto.mp3", "Tenor": "./audio/psalms/Psalm 147/Psalm 147 - Tenor.mp3", "Bass": "./audio/psalms/Psalm 147/Psalm 147 - Bass.mp3" })
 new Psalm("100(99)", "1-2. 3. 5. ℟3c", "We are his people, the sheep of his flock.")
 new Psalm("69(68)", "8-10. 14, 17. 33-35. ℟14c", "In your great mercy, answer me, O Lord.")
 new Psalm("34(33)", "2-3. 4-5. 6-7. 8-9. ℟5", "From all my terrors the Lord set me free.")
@@ -217,8 +217,8 @@ for (let index = 0; index < allAcclamationSettings.length; index++) {
     const element = document.querySelectorAll(".acclamations h6")[index];
     element.textContent = allAcclamationSettings[index].composer;
 }
-const extra = new Hymn("Taste & See", "Sheet", "./sheetMusic/hymns/Taste & See (chords & lyrics).pdf", { "SATB": "./audio/hymns/Taste and See/Taste & See - SATB.mp3", "Melody": "./audio/hymns/Taste and See/Taste & See - Melody.mp3", "Alto": "./audio/hymns/Taste and See/Taste & See - Alto.mp3", "Tenor": "./audio/hymns/Taste and See/Taste & See - Tenor.mp3", "Bass": "./audio/hymns/Taste and See/Taste & See - Bass.mp3", "Piano": "./audio/hymns/Taste and See/Taste & See - Piano.mp3" }, "https://www.youtube.com/embed/cRHOCB0Th0M?si=8tmszbX8vsjWCobF", "", { "Refrain 1": "./images/hymns/Taste & See/Refrain 1 - SATB.jpg", "Refrain 2": "./images/hymns/Taste & See/Refrain 2 - SATB.jpg", "Refrain 3": "./images/hymns/Taste & See/Refrain 3 - SATB.jpg", "Refrain 4": "./images/hymns/Taste & See/Refrain 4 - SATB.jpg" }, 32)
-const extra2 = new Hymn("How great is our God", "Sheet", { "Chords": "./sheetMusic/hymns/How Great Is Our God - Chords.pdf" }, "", "", "", "", "")
+const extra = new Hymn("Taste & See", "Sheet", "./sheetMusic/hymns/Taste & See (chords & lyrics).pdf", { "SATB": "./audio/hymns/Taste and See/Taste & See - SATB.mp3", "Melody": "./audio/hymns/Taste and See/Taste & See - Melody.mp3", "Alto": "./audio/hymns/Taste and See/Taste & See - Alto.mp3", "Tenor": "./audio/hymns/Taste and See/Taste & See - Tenor.mp3", "Bass": "./audio/hymns/Taste and See/Taste & See - Bass.mp3", "Piano": "./audio/hymns/Taste and See/Taste & See - Piano.mp3" }, "https://www.youtube.com/embed/cRHOCB0Th0M?si=8tmszbX8vsjWCobF", "", { "Refrain 1": "./images/hymns/Taste & See/Refrain 1 - SATB.jpg", "Refrain 2": "./images/hymns/Taste & See/Refrain 2 - SATB.jpg", "Refrain 3": "./images/hymns/Taste & See/Refrain 3 - SATB.jpg", "Refrain 4": "./images/hymns/Taste & See/Refrain 4 - SATB.jpg" }, { "Timer": 32, "ImgOrder": [1, 2, 1, 3, 1, 4, 1] }) //Timer should be 32
+const extra2 = new Hymn("How great is our God", "Sheet", { "Chords": "./sheetMusic/hymns/How Great Is Our God - Chords.pdf" }, "", "", "", "", { "Timer": 50 })
 
 new Hymn("10,000 reasons", "sheet", "./sheetMusic/hymns/10,000 Reasons (Bless The Lord) (G) - sheet music.pdf", "", "https://www.youtube.com/embed/XtwIT8JjddM?si=nEiKqySIOsHt8SG_")
 new Hymn("A hymn of glory let us sing!", "sheet", "", "", "https://www.youtube.com/embed/fWLdhI9zZbs?si=s5xONlEFIr-KQDbp")
@@ -549,7 +549,7 @@ new Liturgy(new Date("28 Jun 2026"), "13th Sunday in Ordinary Time", "A", "Julia
 //2nd/ 6th/ 17th /20th (A) Sunday of ordinary - 26th of July: "Teach Me, O God (Christopher Walker)"
 
 let nextLiturgy = allLiturgies.filter(x => x.date >= todaysDate);
-// nextLiturgy = [allLiturgies[allLiturgies.length - 7]]; //show latest liturgy on opening page (for easier adding)
+// nextLiturgy = [allLiturgies[allLiturgies.length - 5]]; //show latest liturgy on opening page (for easier adding)
 
 
 
@@ -863,8 +863,8 @@ function addExtras(ExtrasTitle, ExtrasIMG, ExtrasPDF, ExtrasAudio, Timer) {
         // if (startTime > Timer){imgCount = Math.floor(startTime / Timer)}
         const audioElement = document.getElementById("psalmAudio");
         audioElement.addEventListener("playing", (e) => {
-            console.log(audioElement.currentTime);
-            const currentaudioTime = audioElement.currentTime;
+            // console.log(audioElement.currentTime);
+            const currentaudioTime = audioElement.currentTime * 1000;
 
 
             // if (currentaudioTime == 0) {
@@ -872,19 +872,49 @@ function addExtras(ExtrasTitle, ExtrasIMG, ExtrasPDF, ExtrasAudio, Timer) {
             // } 
             // if (currentaudioTime === 0) {
             // setTimeout(imgTimer, 3000 - (currentaudioTime * 1000));
-            const myInterval = setInterval(imgTimer, Timer * 1000);
+            // console.log(imgCount);
+            const sectionTime = Timer.Timer * 1000;
+            imgCount = imgCount + Math.floor(currentaudioTime / sectionTime);
+            imgTimer();
+            const my1stInterval = setTimeout(interval, (sectionTime) - (currentaudioTime % sectionTime));
+            if (audioElement.paused) {
+                // clearInterval(my2ndInterval);
+                clearInterval(my1stInterval);
+                // console.log("paused")
+                return;
+            }
+
+            function interval() {
+                imgTimer();
+                const my2ndInterval = setInterval(imgTimer, sectionTime);
+                if (audioElement.paused) {
+                    clearInterval(my2ndInterval);
+                    clearInterval(my1stInterval);
+                    // console.log("paused")
+                    return;
+                }
+            }
             // } 
 
             // const myInterval = setInterval(imgTimer, 3000);
             function imgTimer() {
                 // console.log(audioElement)
                 if (audioElement.paused) {
-                    clearInterval(myInterval);
+                    // clearInterval(my2ndInterval);
+                    clearInterval(my1stInterval);
                     // console.log("paused")
                     return;
                 }
-                if (Object.keys(ExtrasIMG).length - 1 >= (imgCount + 1)) { imgCount++; } else { imgCount = 0 }
-                document.getElementById("extrasIMG").setAttribute("src", Object.values(ExtrasIMG)[imgCount]);
+                if (Timer.ImgOrder == undefined) { //If no ImgOrder is defined, then cycle through images 
+                    if (Object.keys(ExtrasIMG).length - 1 >= (imgCount + 1)) { imgCount++; } else { imgCount = 0 }
+                    document.getElementById("extrasIMG").setAttribute("src", Object.values(ExtrasIMG)[imgCount]);
+                } else {//follow ImgOrder from hymn Timer
+                    if (imgCount == (Timer.ImgOrder.length) - 1) { imgCount = 0; }
+                    console.log(Timer.ImgOrder[imgCount])
+                    document.getElementById("extrasIMG").setAttribute("src", Object.values(ExtrasIMG)[(Timer.ImgOrder[imgCount]) - 1]);
+                    imgCount++;
+
+                }
             }
         })
     }
