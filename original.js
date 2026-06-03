@@ -542,6 +542,7 @@ new Liturgy(new Date("24 May 2026"), "Pentecost Sunday", "A", "Julian", ["Shine 
 
 new Liturgy(new Date("31 May 2026"), "Trinity Sunday", "A", "Julian", ["Eternal father, strong to save", "Praise to the Lord, the almighty", "Lead us heavenly father", "Immortal invisible"], "", "Daniel 3", "Cf. Revelation 1:8")
 new Liturgy(new Date("7 Jun 2026"), "Corpus Christi", "A", "Julian", ["Guide me O thou Great redeemer", "Jesus my Lord, my God, my all", "Godhead here in hiding", "Sing of Mary, pure and lowly"], "", "147", "John 6:51")
+new Liturgy(new Date("7 Jun 2026"), "1st Holy Communion Mass", "A", "Chris", ["Here I am Lord", "This is my body", "Be still for the presence of the Lord", "Bread of life", "Shine Jesus Shine"])
 new Liturgy(new Date("14 Jun 2026"), "11th Sunday in Ordinary Time", "A", "Julian", ["Our God Reigns", "Here we bring you", "Soul of my saviour", "Christ be our light"], "", "100(99)", "Mark 1:15")
 new Liturgy(new Date("21 Jun 2026"), "12th Sunday in Ordinary Time", "A", "Julian", ["My God accept my heart this day", "Faith of our fathers", "Lead kindly light", "I'll sing a Hymn to Mary"], "", "69(68)", "John 15:26b, 27a")
 new Liturgy(new Date("28 Jun 2026"), "13th Sunday in Ordinary Time", "A", "Julian", ["Hail Redeemer, King Divine", "Dear Lord and father of mankind", "O sacred heart", "Follow me, follow me"], "", "34(33)", "Matthew 16:13-19")
@@ -549,7 +550,7 @@ new Liturgy(new Date("28 Jun 2026"), "13th Sunday in Ordinary Time", "A", "Julia
 //2nd/ 6th/ 17th /20th (A) Sunday of ordinary - 26th of July: "Teach Me, O God (Christopher Walker)"
 
 let nextLiturgy = allLiturgies.filter(x => x.date >= todaysDate);
-// nextLiturgy = [allLiturgies[allLiturgies.length - 5]]; //show latest liturgy on opening page (for easier adding)
+// nextLiturgy = [allLiturgies[allLiturgies.length - 4]]; //show latest liturgy on opening page (for easier adding)
 
 
 
@@ -857,36 +858,36 @@ function addExtras(ExtrasTitle, ExtrasIMG, ExtrasPDF, ExtrasAudio, Timer) {
     })
     // console.log(Object.values(ExtrasIMG)[0]);
     //change extra images based on hymnTimer time
-    imgChanger(document.getElementById("psalmAudio").currentTime);
-    function imgChanger(startTime) {
-        let imgCount = 0;
+    // imgChanger(document.getElementById("psalmAudio").currentTime);
+    imgChanger();
+    function imgChanger() {
+        let imgCount
         // if (startTime > Timer){imgCount = Math.floor(startTime / Timer)}
         const audioElement = document.getElementById("psalmAudio");
+        //         if (audioElement.paused) {
+        //     console.log('Audio is currently paused.');
+        // }
         audioElement.addEventListener("playing", (e) => {
-            // console.log(audioElement.currentTime);
+            // let startTime = audioElement.currentTime;
             const currentaudioTime = audioElement.currentTime * 1000;
-
-
-            // if (currentaudioTime == 0) {
-
-            // } 
-            // if (currentaudioTime === 0) {
-            // setTimeout(imgTimer, 3000 - (currentaudioTime * 1000));
-            // console.log(imgCount);
             const sectionTime = Timer.Timer * 1000;
-            imgCount = imgCount + Math.floor(currentaudioTime / sectionTime);
+
+
+            // console.log(e);
+
+            // if (e.type !== "playing"){"paused"};
+            // console.log(e.type);
+            // console.log();
+
+
+            imgCount = Math.floor(currentaudioTime / sectionTime);
             imgTimer();
             const my1stInterval = setTimeout(interval, (sectionTime) - (currentaudioTime % sectionTime));
-            if (audioElement.paused) {
-                // clearInterval(my2ndInterval);
-                clearInterval(my1stInterval);
-                // console.log("paused")
-                return;
-            }
+
 
             function interval() {
                 imgTimer();
-                const my2ndInterval = setInterval(imgTimer, sectionTime);
+                const my2ndInterval = setInterval(imgTimer(), sectionTime);
                 if (audioElement.paused) {
                     clearInterval(my2ndInterval);
                     clearInterval(my1stInterval);
@@ -897,11 +898,11 @@ function addExtras(ExtrasTitle, ExtrasIMG, ExtrasPDF, ExtrasAudio, Timer) {
             // } 
 
             // const myInterval = setInterval(imgTimer, 3000);
-            function imgTimer() {
+            function imgTimer(interval) {
                 // console.log(audioElement)
                 if (audioElement.paused) {
                     // clearInterval(my2ndInterval);
-                    clearInterval(my1stInterval);
+                    // clearInterval(my2ndInterval);
                     // console.log("paused")
                     return;
                 }
