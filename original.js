@@ -1,5 +1,5 @@
 // const { createElement } = require("react");
-
+// const lyrics = require("./lyrics");  
 
 // const { createElement } = require("react");
 
@@ -152,6 +152,9 @@ function grabAlleluiaObject(alleluiaRef) {
         return alleluia;
     }
 }
+
+
+
 new Psalm("66(65)", "1-3a. 4-5. 6-7a. 16, 20. ℟1", "Cry out with joy to God, all the earth.", "./sheetMusic/psalms/Psalm - 6th Sunday of Easter (A).pdf")
 new Psalm("27(26)", "1. 4. 7-8a. ℟13", "I believe I shall see the Lord's goodness in the land of the living.", "./sheetMusic/psalms/Psalm - 7th Sunday of Easter (A).pdf", "", "./audio/psalms/Psalm 27(26)/Psalm 27(26).mp3")
 new Psalm("104(103)", "1ab, 24ac. 29b-30. 31, 34. ℟ cf. 30", "Send forth your spirit, O Lord, and renew the face of the earth.", "./sheetMusic/psalms/Psalm 104(103)/Psalm 104(103) - SATB.pdf", "./sheetMusic/psalms/Psalm 104(103)/Psalm 104(103).jpg", { "SATB": "./audio/psalms/Psalm 104(103)/Psalm 104(103) - SATB.mp3", "Melody": "./audio/psalms/Psalm 104(103)/Psalm 104(103) - Melody.mp3", "Alto": "./audio/psalms/Psalm 104(103)/Psalm 104(103) - Alto.mp3", "Tenor": "./audio/psalms/Psalm 104(103)/Psalm 104(103) - Tenor.mp3", "Bass": "./audio/psalms/Psalm 104(103)/Psalm 104(103) - Bass.mp3" })
@@ -542,7 +545,7 @@ new Liturgy(new Date("24 May 2026"), "Pentecost Sunday", "A", "Julian", ["Shine 
 
 new Liturgy(new Date("31 May 2026"), "Trinity Sunday", "A", "Julian", ["Eternal father, strong to save", "Praise to the Lord, the almighty", "Lead us heavenly father", "Immortal invisible"], "", "Daniel 3", "Cf. Revelation 1:8")
 new Liturgy(new Date("7 Jun 2026"), "Corpus Christi", "A", "Julian", ["Guide me O thou Great redeemer", "Jesus my Lord, my God, my all", "Godhead here in hiding", "Sing of Mary, pure and lowly"], "", "147", "John 6:51")
-new Liturgy(new Date("7 Jun 2026"), "1st Holy Communion Mass", "A", "Chris", ["Here I am Lord", "This is my body", "Be still for the presence of the Lord", "Bread of life", "Shine Jesus Shine"])
+new Liturgy(new Date("7 Jun 2026"), "1st Holy Communion Mass", "A", "Chris", ["Here I am Lord", "This is my body", "Be still for the presence of the Lord", "Bread of life", "Shine Jesus Shine"]).date.setHours(17);
 new Liturgy(new Date("14 Jun 2026"), "11th Sunday in Ordinary Time", "A", "Julian", ["Our God Reigns", "Here we bring you", "Soul of my saviour", "Christ be our light"], "", "100(99)", "Mark 1:15")
 new Liturgy(new Date("21 Jun 2026"), "12th Sunday in Ordinary Time", "A", "Julian", ["My God accept my heart this day", "Faith of our fathers", "Lead kindly light", "I'll sing a Hymn to Mary"], "", "69(68)", "John 15:26b, 27a")
 new Liturgy(new Date("28 Jun 2026"), "13th Sunday in Ordinary Time", "A", "Julian", ["Hail Redeemer, King Divine", "Dear Lord and father of mankind", "O sacred heart", "Follow me, follow me"], "", "34(33)", "Matthew 16:13-19")
