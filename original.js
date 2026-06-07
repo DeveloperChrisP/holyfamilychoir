@@ -545,7 +545,7 @@ new Liturgy(new Date("24 May 2026"), "Pentecost Sunday", "A", "Julian", ["Shine 
 
 new Liturgy(new Date("31 May 2026"), "Trinity Sunday", "A", "Julian", ["Eternal father, strong to save", "Praise to the Lord, the almighty", "Lead us heavenly father", "Immortal invisible"], "", "Daniel 3", "Cf. Revelation 1:8")
 new Liturgy(new Date("7 Jun 2026"), "Corpus Christi", "A", "Julian", ["Guide me O thou Great redeemer", "Jesus my Lord, my God, my all", "Godhead here in hiding", "Sing of Mary, pure and lowly"], "", "147", "John 6:51")
-new Liturgy(new Date("7 Jun 2026"), "1st Holy Communion Mass", "A", "Chris", ["Here I am Lord", "This is my body", "Be still for the presence of the Lord", "Bread of life", "Shine Jesus Shine"]).date.setHours(17);
+new Liturgy(new Date("7 Jun 2026"), "1st Holy Communion Mass", "A", "Chris", ["Here I am Lord", "This is my body", "Be still for the presence of the Lord", "Bread of life", "Shine Jesus Shine"]).date.setHours(15);
 new Liturgy(new Date("14 Jun 2026"), "11th Sunday in Ordinary Time", "A", "Julian", ["Our God Reigns", "Here we bring you", "Soul of my saviour", "Christ be our light"], "", "100(99)", "Mark 1:15")
 new Liturgy(new Date("21 Jun 2026"), "12th Sunday in Ordinary Time", "A", "Julian", ["My God accept my heart this day", "Faith of our fathers", "Lead kindly light", "I'll sing a Hymn to Mary"], "", "69(68)", "John 15:26b, 27a")
 new Liturgy(new Date("28 Jun 2026"), "13th Sunday in Ordinary Time", "A", "Julian", ["Hail Redeemer, King Divine", "Dear Lord and father of mankind", "O sacred heart", "Follow me, follow me"], "", "34(33)", "Matthew 16:13-19")
@@ -780,15 +780,15 @@ function addExtras(ExtrasTitle, ExtrasIMG, ExtrasPDF, ExtrasAudio, Timer) {
                 extrasImage.setAttribute("src", ExtrasIMG[e.target.textContent])
 
                 const imageButtons = document.querySelectorAll("#extra .imgButtonContainer button");
-                activateButton(imageButtons, e.target);
+                activateButton(imageButtons, e.target, "active");
             })
-            function activateButton(cancelButtons, activateButton) {
+            function activateButton(cancelButtons, activateButton, addClass) {
 
                 for (let index = 0; index < cancelButtons.length; index++) {
                     const element = cancelButtons[index];
-                    element.classList.remove("active")
+                    element.classList.remove(addClass)
                 }
-                activateButton.classList.add("active");
+                activateButton.classList.add(addClass);
             }
             //first img button active
         }
@@ -865,6 +865,12 @@ function addExtras(ExtrasTitle, ExtrasIMG, ExtrasPDF, ExtrasAudio, Timer) {
             <button class = "audioSelection">${property}</button>`
         document.querySelector("#audioPartContainer").append(part)
     }
+    const mediaPlayerButtons = document.querySelectorAll("#extra #mediaPlayer #audioPartContainer button")
+    const mediaPlayerLights = document.querySelectorAll("#extra #mediaPlayer #audioPartContainer .audioCategory__light")
+
+    activateButton(mediaPlayerButtons, mediaPlayerButtons[0], "active");
+    activateButton(mediaPlayerLights, mediaPlayerLights[0], "selected");
+
     document.getElementById("audioPartContainer").addEventListener("click", (e) => {
         const objKey = e.target.closest('button').textContent;
         // console.log(psalmAudio[objKey]);
