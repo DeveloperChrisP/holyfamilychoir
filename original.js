@@ -553,7 +553,7 @@ new Liturgy(new Date("28 Jun 2026"), "13th Sunday in Ordinary Time", "A", "Julia
 //2nd/ 6th/ 17th /20th (A) Sunday of ordinary - 26th of July: "Teach Me, O God (Christopher Walker)"
 
 let nextLiturgy = allLiturgies.filter(x => x.date >= todaysDate);
-nextLiturgy = [allLiturgies[allLiturgies.length - 5]]; //show latest liturgy on opening page (for easier adding)
+// nextLiturgy = [allLiturgies[allLiturgies.length - 5]]; //show latest liturgy on opening page (for easier adding)
 
 
 
@@ -758,6 +758,10 @@ function addExtras(ExtrasTitle, ExtrasIMG, ExtrasPDF, ExtrasAudio, Timer) {
         document.getElementById("extra").append(extrasImage);
         document.getElementById("extra").append(container);
 
+        // document.querySelector(".imgButtonContainer").parentElement.firstElementChild.classList.add("selected")
+        // document.getElementById("extra .imgButtonContainer").closest("button")
+        // console.log(document.querySelector("#extra .imgButtonContainer button.audioSelection"));
+
 
         if (typeof ExtrasIMG == "object") {
 
@@ -770,10 +774,23 @@ function addExtras(ExtrasTitle, ExtrasIMG, ExtrasPDF, ExtrasAudio, Timer) {
                 imgButton.textContent = tag;
                 document.querySelector(".imgButtonContainer").append(imgButton);
             }
+            document.querySelector("#extra .imgButtonContainer button.audioSelection").classList.add("active");
             document.querySelector(".imgButtonContainer").addEventListener("click", (e) => {
                 // console.log(ExtrasIMG[e.target.textContent]);
                 extrasImage.setAttribute("src", ExtrasIMG[e.target.textContent])
+
+                const imageButtons = document.querySelectorAll("#extra .imgButtonContainer button");
+                activateButton(imageButtons, e.target);
             })
+            function activateButton(cancelButtons, activateButton) {
+
+                for (let index = 0; index < cancelButtons.length; index++) {
+                    const element = cancelButtons[index];
+                    element.classList.remove("active")
+                }
+                activateButton.classList.add("active");
+            }
+            //first img button active
         }
         else { extrasImage.setAttribute("src", ExtrasIMG) }
         if (ExtrasPDF !== undefined && ExtrasPDF !== "") {
