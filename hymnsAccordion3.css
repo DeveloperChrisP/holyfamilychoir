@@ -1321,6 +1321,7 @@ details#psalm .product__mediaPlayer div.container {
 @media screen and (orientation: portrait) {
 	#extrasIMG.fullScreen {
 		transform: rotate(90deg);
+		width: 100dvh;
 	}
 }
 .imgButtonContainer {
