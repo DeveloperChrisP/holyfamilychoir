@@ -82,7 +82,7 @@ body {
 	/* touch-action: none; */
 	user-select: none;
 	position: relative;
-	contain: content;
+	/* contain: content; */
 	/* max-height: 100vh; */
 	/* width: 342px; phone width */
 }
@@ -1307,6 +1307,15 @@ details#psalm .product__mediaPlayer div.container {
 	border-radius: 10px;
 	width: 100%;
 	margin-bottom: 5px;
+}
+#psalmIMG.fullScreen,
+#extrasIMG.fullScreen {
+	height: 100vh;
+	width: 100vw;
+	position: fixed;
+	/* inset-inline-start: 0; */
+	inset: 0;
+	z-index: 10;
 }
 .imgButtonContainer {
 	display: flex;

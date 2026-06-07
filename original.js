@@ -553,7 +553,7 @@ new Liturgy(new Date("28 Jun 2026"), "13th Sunday in Ordinary Time", "A", "Julia
 //2nd/ 6th/ 17th /20th (A) Sunday of ordinary - 26th of July: "Teach Me, O God (Christopher Walker)"
 
 let nextLiturgy = allLiturgies.filter(x => x.date >= todaysDate);
-// nextLiturgy = [allLiturgies[allLiturgies.length - 4]]; //show latest liturgy on opening page (for easier adding)
+nextLiturgy = [allLiturgies[allLiturgies.length - 5]]; //show latest liturgy on opening page (for easier adding)
 
 
 
@@ -606,6 +606,10 @@ function addPsalm(psalmNumber, psalmVerse, psalmResponse, psalmPDF, psalmIMG, ps
         psalmImage.id = "psalmIMG"
         psalmImage.setAttribute("src", psalmIMG)
         document.querySelector("#psalm").append(psalmImage);
+        document.getElementById("psalmIMG").addEventListener("click", (e) => {
+            console.log(e.target)
+            e.target.classList.toggle("fullScreen")
+        })
     }
     if (psalmPDF !== undefined && psalmPDF !== "") {
         const psalmButton = document.createElement("button");
@@ -779,6 +783,9 @@ function addExtras(ExtrasTitle, ExtrasIMG, ExtrasPDF, ExtrasAudio, Timer) {
             // psalmButton.setAttribute("onclick", "window.location.href=" + psalmPDF);
             document.getElementById("extra").append(psalmButton);
         }
+        document.getElementById("extrasIMG").addEventListener("click", (e) => {
+            e.target.classList.toggle("fullScreen");
+        })
     }
     // if (typeof allPsalms[2].audio == "object"){console.log("success")}else{console.log("failure")}
     // if (ExtrasAudio !== undefined && ExtrasAudio !== "" && typeof ExtrasAudio == "object") {
@@ -1001,8 +1008,8 @@ document.querySelector(".liturgyPlan .flex-container").addEventListener("click",
             liturgyPlan.querySelector(".container").classList.add("hidden"); //upcoming
             liturgyPlan.querySelector(".container").classList.add("hidden");
             liturgyPlan.querySelector(".extras").classList.add("selected");
-            document.getElementById("psalm").remove()
-            document.getElementById("alleluia").remove()
+            // document.getElementById("psalm").remove()
+            // document.getElementById("alleluia").remove()
 
             addExtras(extra.title, extra.img, extra.sheetMusic, extra.vocalPart, extra.imgTimer);
             // addExtras(extra2.title, extra.img, extra2.sheetMusic, extra.vocalPart, extra.imgTimer);
