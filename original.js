@@ -161,7 +161,7 @@ new Psalm("104(103)", "1ab, 24ac. 29b-30. 31, 34. ℟ cf. 30", "Send forth your 
 new Psalm("Daniel 3", "52. 53. 54. 55. 56. ℟52b", "To be praised and highly exalted for ever!", "./sheetMusic/psalms/Psalm Daniel 3/Psalm Daniel 3 - Melody.pdf", "./sheetMusic/psalms/Psalm Daniel 3/Psalm Daniel 3.png", { "SATB": "./audio/psalms/Psalm Daniel 3/Psalm Daniel 3 - SATB.mp3", "Melody": "./audio/psalms/Psalm Daniel 3/Psalm Daniel 3 - Melody.mp3", "Alto": "./audio/psalms/Psalm Daniel 3/Psalm Daniel 3 - Alto.mp3", "Tenor": "./audio/psalms/Psalm Daniel 3/Psalm Daniel 3 - Tenor.mp3", "Bass": "./audio/psalms/Psalm Daniel 3/Psalm Daniel 3 - Bass.mp3" })
 new Psalm("147", "12-13. 14-15. 19-20. ℟12a", "O Jerusalem, glorify the Lord!", "./sheetMusic/psalms/Psalm 147/Psalm 147 - SATB.pdf", "./sheetMusic/psalms/Psalm 147/Psalm 147.jpg", { "SATB": "./audio/psalms/Psalm 147/Psalm 147 - SATB.mp3", "Melody": "./audio/psalms/Psalm 147/Psalm 147 - Melody.mp3", "Alto": "./audio/psalms/Psalm 147/Psalm 147 - Alto.mp3", "Tenor": "./audio/psalms/Psalm 147/Psalm 147 - Tenor.mp3", "Bass": "./audio/psalms/Psalm 147/Psalm 147 - Bass.mp3" })
 new Psalm("100(99)", "1-2. 3. 5. ℟3c", "We are his people, the sheep of his flock.", "", "./sheetMusic/psalms/Psalm 100(99)/Psalm 100(99).jpg", { "SATB": "./audio/psalms/Psalm 100(99)/Psalm 100(99) - SATB.mp3", "Melody": "./audio/psalms/Psalm 100(99)/Psalm 100(99) - Melody.mp3", "Alto": "./audio/psalms/Psalm 100(99)/Psalm 100(99) - Alto.mp3", "Tenor": "./audio/psalms/Psalm 100(99)/Psalm 100(99) - Tenor.mp3", "Bass": "./audio/psalms/Psalm 100(99)/Psalm 100(99) - Bass.mp3" })
-new Psalm("69(68)", "8-10. 14, 17. 33-35. ℟14c", "In your great mercy, answer me, O Lord.")
+new Psalm("69(68)", "8-10. 14, 17. 33-35. ℟14c", "In your great mercy, answer me, O Lord.", "", "./sheetMusic/psalms/Psalm 69(68)/Psalm 69(68).jpg")
 new Psalm("34(33)", "2-3. 4-5. 6-7. 8-9. ℟5", "From all my terrors the Lord set me free.")
 
 new AlleluiaVerse("John 14:18", "I will not leave you as orphans, says the Lord.", "I am going away and I will come to you, and your hearts will rejoice.")
@@ -233,6 +233,7 @@ new Hymn("All glory laud and honour", 229, "", "", "https://www.youtube.com/embe
 new Hymn("All my hope on God is founded", 959, "", "", "https://www.youtube.com/embed/YvpXiDQZNWg?si=QUf-NnCOGLoAvQ_9")
 new Hymn("All people that on earth do dwell", 466, "", "", "https://www.youtube.com/embed/xRklkCklycU?si=gb9Wv9eOr93r2eI1")
 new Hymn("All that I am", 600, "", "", "https://www.youtube.com/embed/AySM36XeEgc?si=13R1KC5qvEAZT7Bv");
+
 new Hymn("All things bright and beautiful", 685, "", "", "https://www.youtube.com/embed/J22y9QRFuqM?si=jBBPLSLf-QiXmGFs")
 new Hymn("Alleluia, Alleluia, give thanks", 268, "", "", "https://www.youtube.com/embed/I53k-dlUPx4?si=9z0O4UjI4ZWn2bVo");
 new Hymn("Alleluia, sing to Jesus", 644, "", "", "https://www.youtube.com/embed/UJDWFYIkBns?si=FjlGK0j-FEm0vRXU");
@@ -270,6 +271,7 @@ new Hymn("Ding Dong! Merrily on high", 153, "", "", "https://www.youtube.com/emb
 new Hymn("Do not be afraid", 972, "", "", "https://www.youtube.com/embed/v2rO0LhSWJ0?si=FQY4vdhRmNNUhdrf");
 new Hymn("Eat this bread", 633, "", "", "https://www.youtube.com/embed/xDqk-DMS4Mk?si=M9YELT4AiVVbCZJF")
 new Hymn("Eternal Father, strong to save", 963, "", "", "https://www.youtube.com/embed/7VrraIIjabo?si=nuwA52iq9beMhqOz");
+new Hymn("Eye has not seen", 792, "", "", "https://www.youtube.com/embed/rRyOS0nZr7s?si=2Qi2O7M2_kVzsgMc")
 new Hymn("Faith of our fathers", 837, "", "", "https://www.youtube.com/embed/Ay9EcTD2gzs?si=eXhqhUpXwqsoHxQT")
 new Hymn("Father, hear the prayer we offer", 933, "", "", "https://www.youtube.com/embed/CFoactKMJHQ?si=3GTMaEN0qPhZZCom")
 new Hymn("Father, I place into your hands", 971, "", "", "https://www.youtube.com/embed/zBfRNrvvUfc?si=h6RYtmp33PcqireD")
@@ -414,6 +416,7 @@ new Hymn("Though the mountains may fall", 785, "", "", "https://www.youtube.com/
 new Hymn("To Jesus Heart, all burning", 800, "", "", "https://www.youtube.com/embed/rM0EbMA3cJE?si=730e5YZCVTKesQ5l")
 new Hymn("Turn to me", 786, "", "", "https://www.youtube.com/embed/C0_8VPBRDgY?si=b2B_ea92iST7WEoQ")
 new Hymn("Ubi Caritas", 246, "", "", "https://www.youtube.com/embed/Vvfr_2euIFo?si=aShcg8H8_txp1nBH")
+new Hymn("Unless a grain of wheat", "748", "", "https://www.youtube.com/embed/hZz35vPa3kA?si=S1vb2MzDsuTDNhX0",)
 new Hymn("Unto us is born a son", 152, "", "", "https://www.youtube.com/embed/4_4xMMpcqbM?si=RhsMJeDjUpuP2bYO");
 new Hymn("Upon thy table", 606, "", "", "https://www.youtube.com/embed/mTKeKMu0shs?si=G-bRZOzNwJniaYWw");
 new Hymn("Virgin wholly marvellous", "cfe 761 (tune349)", "", "", "https://www.youtube.com/embed/pWoCNeVNHuw?si=6Q3BXHqgR85IESkM")
@@ -547,14 +550,14 @@ new Liturgy(new Date("31 May 2026"), "Trinity Sunday", "A", "Julian", ["Eternal 
 new Liturgy(new Date("7 Jun 2026"), "Corpus Christi", "A", "Julian", ["Guide me O thou Great redeemer", "Jesus my Lord, my God, my all", "Godhead here in hiding", "Sing of Mary, pure and lowly"], "", "147", "John 6:51")
 new Liturgy(new Date("7 Jun 2026"), "1st Holy Communion Mass", "A", "Chris", ["Here I am Lord", "This is my body", "Be still for the presence of the Lord", "Bread of life", "Shine Jesus Shine"]).date.setHours(15);
 new Liturgy(new Date("14 Jun 2026"), "11th Sunday in Ordinary Time", "A", "Julian", ["Our God Reigns", "Here we bring you", "Soul of my saviour", "Christ be our light"], ["God has chosen me"], "100(99)", "Mark 1:15")
-new Liturgy(new Date("21 Jun 2026"), "12th Sunday in Ordinary Time", "A", "Julian", ["My God accept my heart this day", "Faith of our fathers", "Lead kindly light", "I'll sing a Hymn to Mary"], "", "69(68)", "John 15:26b, 27a")
+new Liturgy(new Date("21 Jun 2026"), "12th Sunday in Ordinary Time", "A", "Julian", ["My God accept my heart this day", "Faith of our fathers", "Lead kindly light", "I'll sing a Hymn to Mary"], ["Do not be afraid", "O the word of my Lord"], "69(68)", "John 15:26b, 27a")
 new Liturgy(new Date("28 Jun 2026"), "13th Sunday in Ordinary Time", "A", "Julian", ["Hail Redeemer, King Divine", "Dear Lord and father of mankind", "O sacred heart", "Follow me, follow me"], "", "34(33)", "Matthew 16:13-19")
 
-new Liturgy(new Date("12 Jul 2026"), "15th Sunday in Ordinary Time", "A", "Chris", ["We Come to your feast", "O let all who thirst"])
+new Liturgy(new Date("12 Jul 2026"), "15th Sunday in Ordinary Time", "A", "Chris", ["Love divine, all loves excelling", "We Come to your feast", "Unless a grain of wheat", "Here I am, Lord"], ["Eye has not seen", "Laudate Dominum"])
 //2nd/ 6th/ 17th /20th (A) Sunday of ordinary - 26th of July: "Teach Me, O God (Christopher Walker)"
 
 let nextLiturgy = allLiturgies.filter(x => x.date >= todaysDate);
-// nextLiturgy = [allLiturgies[allLiturgies.length - 1]]; //show latest liturgy on opening page (for easier adding)
+nextLiturgy = [allLiturgies[allLiturgies.length - 1]]; //show latest liturgy on opening page (for easier adding)
 
 
 
@@ -1034,9 +1037,9 @@ document.querySelector(".liturgyPlan .flex-container").addEventListener("click",
             liturgyPlan.querySelector(".extras").classList.add("selected");
             // document.getElementById("psalm").remove()
             // document.getElementById("alleluia").remove()
-
-            addExtras(extra.title, extra.img, extra.sheetMusic, extra.vocalPart, extra.imgTimer);
-            // addExtras(extra2.title, extra.img, extra2.sheetMusic, extra.vocalPart, extra.imgTimer);
+            if (document.getElementById("extra") === null) {
+                addExtras(extra.title, extra.img, extra.sheetMusic, extra.vocalPart, extra.imgTimer);
+            }// addExtras(extra2.title, extra.img, extra2.sheetMusic, extra.vocalPart, extra.imgTimer);
 
             break;
         // console.log(extra);
