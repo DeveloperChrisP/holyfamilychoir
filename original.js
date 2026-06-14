@@ -557,7 +557,7 @@ new Liturgy(new Date("12 Jul 2026"), "15th Sunday in Ordinary Time", "A", "Chris
 //2nd/ 6th/ 17th /20th (A) Sunday of ordinary - 26th of July: "Teach Me, O God (Christopher Walker)"
 
 let nextLiturgy = allLiturgies.filter(x => x.date >= todaysDate);
-nextLiturgy = [allLiturgies[allLiturgies.length - 1]]; //show latest liturgy on opening page (for easier adding)
+// nextLiturgy = [allLiturgies[allLiturgies.length - 1]]; //show latest liturgy on opening page (for easier adding)
 
 
 
