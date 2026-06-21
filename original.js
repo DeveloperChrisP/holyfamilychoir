@@ -552,8 +552,15 @@ new Liturgy(new Date("7 Jun 2026"), "1st Holy Communion Mass", "A", "Chris", ["H
 new Liturgy(new Date("14 Jun 2026"), "11th Sunday in Ordinary Time", "A", "Julian", ["Our God Reigns", "Here we bring you", "Soul of my saviour", "Christ be our light"], ["God has chosen me"], "100(99)", "Mark 1:15")
 new Liturgy(new Date("21 Jun 2026"), "12th Sunday in Ordinary Time", "A", "Julian", ["My God accept my heart this day", "Faith of our fathers", "Lead kindly light", "I'll sing a Hymn to Mary"], ["Do not be afraid", "O the word of my Lord"], "69(68)", "John 15:26b, 27a")
 new Liturgy(new Date("28 Jun 2026"), "13th Sunday in Ordinary Time", "A", "Julian", ["Hail Redeemer, King Divine", "Dear Lord and father of mankind", "O sacred heart", "Follow me, follow me"], "", "34(33)", "Matthew 16:13-19")
-
+new Liturgy(new Date("5 Jul 2026"), "14th Sunday in Ordinary Time", "A", "Chris", ["Sing of the Lord's Goodness", "The Servant King", "O let all who thirst", "Sing of Mary, Pure and lowly"], ["Taste and see"], "145(144)", "Matthew 11:25")
 new Liturgy(new Date("12 Jul 2026"), "15th Sunday in Ordinary Time", "A", "Chris", ["Love divine, all loves excelling", "We Come to your feast", "Unless a grain of wheat", "Here I am, Lord"], ["Eye has not seen", "Laudate Dominum"])
+new Liturgy(new Date("19 Jul 2026"), "16th Sunday in Ordinary Time", "A", "Chris", ["Gather us in", "All people that on earth do dwell", "Be still for the presence of the Lord", "O Mother blest"], ["O Lord, hear my prayer", "Amazing Grace"], "86(85)", "Matthew 11:25")
+new Liturgy(new Date("26 July 2026"), "17th Sunday in Ordinary Time", "A", "Chris", ["Seek ye first", "Be thou my vision", "O the Love of my Lord is the essence", "Hail, Queen of heaven"], ["Teach me, O God"], "119(118)", "Matthew 11:25")
+new Liturgy(new Date("2 Aug 2026"), "18th Sunday in Ordinary Time", "A", "Chris", ["Alleluia Sing to Jesus", "Bread of life", "I am the bread of life", "Holy Virgin, by God's decree"], "", "145(144)")
+new Liturgy(new Date("9 Aug 2026"), "19th Sunday in Ordinary Time", "A", "Chris", ["Guide me O thou great redeemer", "Be still, and know I am with you", "I will be with you", "As I kneel before you"], ["Eye has not seen", "O the love of my Lord is the essence"], "85(84)")
+new Liturgy(new Date("16 Aug 2026"), "The Assumption of the Blessed Virgin Mary", "A", "Chris", ["Holy is his name", "My God loves me", "Mary immaculate, star of the morning", "Immaculate Mary"], ["The magnificat"], "45(44)")
+new Liturgy(new Date("23 Aug 2026"), "21st Sunday in Ordinary Time", "A", "Chris", ["All my hope on God is founded", "Praise to the Lord, the Almighty", "Be still for the presence of the Lord", "Holy Virgin, by God's decree"], ["Out of Darkness"], "138(137)")
+
 //2nd/ 6th/ 17th /20th (A) Sunday of ordinary - 26th of July: "Teach Me, O God (Christopher Walker)"
 
 let nextLiturgy = allLiturgies.filter(x => x.date >= todaysDate);
