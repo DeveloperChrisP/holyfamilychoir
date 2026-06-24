@@ -1171,7 +1171,7 @@ hr {
 	text-align: center;
 	border-radius: 0 50% 50% 0;
 }
-details#psalm[open] {
+details.psalm[open] {
 	display: grid;
 	gap: 1rem;
 	grid-template-columns: auto;
@@ -1179,7 +1179,7 @@ details#psalm[open] {
 	grid-auto-columns: max-content;
 	/* row-gap: 5px; */
 }
-details#psalm {
+details.psalm {
 	/* margin-bottom: 1rem; */
 	font-family: var(--lavishFont);
 	/* color: darkblue; */
@@ -1217,14 +1217,14 @@ details button.active {
 	box-shadow: black 2px 2px 2px;
 }
 
-details#psalm span#psalmNumber {
+details.psalm span.psalm {
 	color: var(--liturgyCategoriesColour);
 	text-shadow: 1px 1px var(--liturgyCategoriesTextShadow);
 }
-details#psalm span#psalmChapters {
+details.psalm span#psalmChapters {
 	font-size: small;
 }
-details#psalm p {
+details.psalm p {
 	font-weight: 1000;
 	font-family:
 		system-ui,
@@ -1239,7 +1239,7 @@ details#psalm p {
 		"Helvetica Neue",
 		sans-serif;
 }
-details#psalm h6 {
+details.psalm h6 {
 	font-family: system-ui;
 	font-style: italic;
 	text-decoration: underline;
@@ -1247,10 +1247,10 @@ details#psalm h6 {
 	line-height: 1rem;
 	/* grid-column: span 3; */
 }
-details#psalm a {
+details.psalm a {
 	color: blue;
 }
-details#psalm .product__mediaPlayer div.container {
+details.psalm .product__mediaPlayer div.container {
 	display: flex;
 	flex-direction: row;
 	justify-content: left;
@@ -1289,10 +1289,7 @@ details#psalm .product__mediaPlayer div.container {
 	font-weight: 500;
 	font-family: var(--lavishFont);
 }
-#psalmAudio,
-#extrasAudio {
-	background-color: #fff;
-}
+
 /* details {
 	width: 90%;
 	margin-bottom: 1rem;
@@ -1301,14 +1298,14 @@ details#psalm .product__mediaPlayer div.container {
 	width: max-content;
 	transition: all 5s;
 }  */
-#psalmIMG,
+.psalmIMG,
 #extrasIMG {
 	border: black 2px solid;
 	border-radius: 10px;
 	width: 100%;
 	margin-bottom: 5px;
 }
-#psalmIMG.fullScreen,
+.psalmIMG.fullScreen,
 #extrasIMG.fullScreen {
 	height: 100vh;
 	width: 100dvw;
@@ -1319,7 +1316,8 @@ details#psalm .product__mediaPlayer div.container {
 	/* transform: rotate(90deg); */
 }
 @media screen and (orientation: portrait) {
-	#extrasIMG.fullScreen {
+	#extrasIMG.fullScreen,
+	.psalmIMG.fullScreen {
 		transform: rotate(90deg);
 		width: 100dvh;
 	}
