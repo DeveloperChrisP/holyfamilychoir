@@ -1165,7 +1165,7 @@ function addElement(addOrRemove, number) {
 futureHymnsSection();
 function futureHymnsSection() {
     //open/close up hymn list in future hymns
-    liturgyPlan.querySelector(".futureServices ul").addEventListener("click", (e) => {
+    liturgyPlan.querySelector(".futureServices ul ").addEventListener("click", (e) => {
 
         const targetFirstClass = Number(e.target.classList[0])
         const closestDivFirstClass = e.target.closest('div').classList[0]
