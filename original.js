@@ -168,6 +168,8 @@ new Psalm("100(99)", "1-2. 3. 5. ℟3c", "We are his people, the sheep of his fl
 new Psalm("69(68)", "8-10. 14, 17. 33-35. ℟14c", "In your great mercy, answer me, O Lord.", "", "./sheetMusic/psalms/Psalm 69(68)/Psalm 69(68).jpg", { "SATB": "./audio/psalms/Psalm 69(68)/Psalm 69(68) - SATB.mp3", "Melody": "./audio/psalms/Psalm 69(68)/Psalm 69(68) - Melody.mp3", "Alto": "./audio/psalms/Psalm 69(68)/Psalm 69(68) - Alto.mp3", "Tenor": "./audio/psalms/Psalm 69(68)/Psalm 69(68) - Tenor.mp3", "Bass": "./audio/psalms/Psalm 69(68)/Psalm 69(68) - Bass.mp3" })
 new Psalm("34(33)", "2-3. 4-5. 6-7. 8-9. ℟5", "From all my terrors the Lord set me free.")
 
+new Psalm("65(64)", "10a-d. 10e-11. 12-13. 14. ℟ Luke 8:8", "Some seed fell into good soil and yielded its fruit.", "", "", { "SATB": "./audio/psalms/Psalm 65/Psalm 65 - SATB.mp3", "Melody": "./audio/psalms/Psalm 65/Psalm 65 - Melody.mp3", "Soprano": "./audio/psalms/Psalm 65/Psalm 65 - Soprano.mp3", "Alto": "./audio/psalms/Psalm 65/Psalm 65 - Alto.mp3", "Tenor": "./audio/psalms/Psalm 65/Psalm 65 - Tenor.mp3", "Bass": "./audio/psalms/Psalm 65/Psalm 65 - Bass.mp3" })
+
 new AlleluiaVerse("John 14:18", "I will not leave you as orphans, says the Lord.", "I am going away and I will come to you, and your hearts will rejoice.")
 new AlleluiaVerse("unknown", "Come, Holy Spirit, fill the hearts of your faithful", "and kindle in them the fire of your love.")
 new AlleluiaVerse("Cf. Revelation 1:8", "Glory be to the Father, and to the Son, and to the Holy Spirit,", "the God who is and who was and who is to come.")
@@ -556,19 +558,19 @@ new Liturgy(new Date("7 Jun 2026"), "1st Holy Communion Mass", "A", "Chris", ["H
 new Liturgy(new Date("14 Jun 2026"), "11th Sunday in Ordinary Time", "A", "Julian", ["Our God Reigns", "Here we bring you", "Soul of my saviour", "Christ be our light"], ["God has chosen me"], "100(99)", "Mark 1:15")
 new Liturgy(new Date("21 Jun 2026"), "12th Sunday in Ordinary Time", "A", "Julian", ["My God accept my heart this day", "Faith of our fathers", "Lead kindly light", "I'll sing a Hymn to Mary"], ["Do not be afraid", "O the word of my Lord"], "69(68)", "John 15:26b, 27a")
 new Liturgy(new Date("28 Jun 2026"), "13th Sunday in Ordinary Time", "A", "Julian", ["Hail Redeemer, King Divine", "Dear Lord and father of mankind", "O sacred heart", "Follow me, follow me"], "", "34(33)", "Matthew 16:13-19")
-// new Liturgy(new Date("5 Jul 2026"), "14th Sunday in Ordinary Time", "A", "Chris", ["Sing of the Lord's Goodness", "The Servant King", "O let all who thirst", "Sing of Mary, Pure and lowly"], ["Taste and see"], "145(144)", "Matthew 11:25")
-// new Liturgy(new Date("12 Jul 2026"), "15th Sunday in Ordinary Time", "A", "Chris", ["Love divine, all loves excelling", "We Come to your feast", "Unless a grain of wheat", "Here I am, Lord"], ["Eye has not seen", "Laudate Dominum"])
-// new Liturgy(new Date("19 Jul 2026"), "16th Sunday in Ordinary Time", "A", "Chris", ["Gather us in", "All people that on earth do dwell", "Be still for the presence of the Lord", "O Mother blest"], ["O Lord, hear my prayer", "Amazing Grace"], "86(85)", "Matthew 11:25")
-// new Liturgy(new Date("26 July 2026"), "17th Sunday in Ordinary Time", "A", "Chris", ["Seek ye first", "Be thou my vision", "O the Love of my Lord is the essence", "Hail, Queen of heaven"], ["Teach me, O God"], "119(118)", "Matthew 11:25")
-// new Liturgy(new Date("2 Aug 2026"), "18th Sunday in Ordinary Time", "A", "Chris", ["Alleluia Sing to Jesus", "Bread of life", "I am the bread of life", "Holy Virgin, by God's decree"], "", "145(144)")
-// new Liturgy(new Date("9 Aug 2026"), "19th Sunday in Ordinary Time", "A", "Chris", ["Guide me O thou great redeemer", "Be still, and know I am with you", "I will be with you", "As I kneel before you"], ["Eye has not seen", "O the love of my Lord is the essence"], "85(84)")
-// new Liturgy(new Date("16 Aug 2026"), "The Assumption of the Blessed Virgin Mary", "A", "Chris", ["Holy is his name", "My God loves me", "Mary immaculate, star of the morning", "Immaculate Mary"], ["The magnificat"], "45(44)")
-// new Liturgy(new Date("23 Aug 2026"), "21st Sunday in Ordinary Time", "A", "Chris", ["All my hope on God is founded", "Praise to the Lord, the Almighty", "Be still for the presence of the Lord", "Holy Virgin, by God's decree"], ["Out of Darkness"], "138(137)")
+new Liturgy(new Date("5 Jul 2026"), "14th Sunday in Ordinary Time", "A", "Chris", ["Sing of the Lord's Goodness", "The Servant King", "O let all who thirst", "Sing of Mary, Pure and lowly"], ["Taste and see"], "145(144)", "Matthew 11:25")
+new Liturgy(new Date("12 Jul 2026"), "15th Sunday in Ordinary Time", "A", "Chris", ["Love divine, all loves excelling", "We Come to your feast", "Unless a grain of wheat", "Here I am, Lord"], ["Eye has not seen", "Laudate Dominum"], "65(64)")
+new Liturgy(new Date("19 Jul 2026"), "16th Sunday in Ordinary Time", "A", "Chris", ["Gather us in", "All people that on earth do dwell", "Be still for the presence of the Lord", "O Mother blest"], ["O Lord, hear my prayer", "Amazing Grace"], "86(85)", "Matthew 11:25")
+new Liturgy(new Date("26 July 2026"), "17th Sunday in Ordinary Time", "A", "Chris", ["Seek ye first", "Be thou my vision", "O the Love of my Lord is the essence", "Hail, Queen of heaven"], ["Teach me, O God"], "119(118)", "Matthew 11:25")
+new Liturgy(new Date("2 Aug 2026"), "18th Sunday in Ordinary Time", "A", "Chris", ["Alleluia Sing to Jesus", "Bread of life", "I am the bread of life", "Holy Virgin, by God's decree"], "", "145(144)")
+new Liturgy(new Date("9 Aug 2026"), "19th Sunday in Ordinary Time", "A", "Chris", ["Guide me O thou great redeemer", "Be still, and know I am with you", "I will be with you", "As I kneel before you"], ["Eye has not seen", "O the love of my Lord is the essence"], "85(84)")
+new Liturgy(new Date("16 Aug 2026"), "The Assumption of the Blessed Virgin Mary", "A", "Chris", ["Holy is his name", "My God loves me", "Mary immaculate, star of the morning", "Immaculate Mary"], ["The magnificat"], "45(44)")
+new Liturgy(new Date("23 Aug 2026"), "21st Sunday in Ordinary Time", "A", "Chris", ["All my hope on God is founded", "Praise to the Lord, the Almighty", "Be still for the presence of the Lord", "Holy Virgin, by God's decree"], ["Out of Darkness"], "138(137)")
 
 //2nd/ 6th/ 17th /20th (A) Sunday of ordinary - 26th of July: "Teach Me, O God (Christopher Walker)"
 
 let nextLiturgy = allLiturgies.filter(x => x.date >= todaysDate);
-nextLiturgy = [allLiturgies[allLiturgies.length - 9]]; //show latest liturgy on opening page (for easier adding)
+// nextLiturgy = [allLiturgies[allLiturgies.length - 9]]; //show latest liturgy on opening page (for easier adding)
 
 
 
@@ -1144,7 +1146,8 @@ function addElement(addOrRemove, number) {
             // add the newly created element and its content into the DOM
 
         })
-        // addPsalm(allPsalms[number], `#hymnOccasion${number - 1}`)
+        const futurePsalm = allLiturgies.filter(x => x.date > todaysDate)[number].psalm;
+        addPsalm(futurePsalm, `#hymnOccasion${number - 1}`)
         futureContent[number - 1].appendChild(newDiv);
         checkAndPopulateInstrumentals(number);
 
@@ -1190,10 +1193,13 @@ function futureHymnsSection() {
 
 
             // liturgyPlan.querySelector(".futureServices ul").addEventListener("click", (e) => {
+            // console.log(allLiturgies.filter(x => x.date > todaysDate)[Number(e.target.closest('li.active').id.slice(12)) + 1].hymn);
 
             allHymns = originalHymns;
-            allHymns = allLiturgies.filter(x => x.date > todaysDate)[Number(e.target.closest('li.active').id) + 1].hymn;
-            const chosenLiturgy = allLiturgies.filter(x => x.date > todaysDate)[Number(e.target.closest('li.active  ').id) + 1];
+            allHymns = allLiturgies.filter(x => x.date > todaysDate)[Number(e.target.closest('li.active').id.slice(12)) + 1].hymn;
+
+
+            const chosenLiturgy = allLiturgies.filter(x => x.date > todaysDate)[Number(e.target.closest('li.active  ').id.slice(12)) + 1];
             if (chosenLiturgy.instrumental != undefined) {
                 allHymns = allHymns.concat(chosenLiturgy.instrumental);
             }
