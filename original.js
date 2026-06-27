@@ -585,7 +585,7 @@ function psalmOrNot() {
     // console.log(document.querySelector(".flex-container button.hymnsTitle").classList.contains("selected"));
 
     if (document.querySelector(".flex-container button.hymnsTitle").classList.contains("selected") == true) {
-        if (nextLiturgy[0].psalm !== undefined && nextLiturgy[0].psalm !== "" && document.querySelector(".container2 details") === null) {
+        if (nextLiturgy[0].psalm !== undefined && nextLiturgy[0].psalm !== "" && document.getElementById("nextPsalm") === null) {
             addPsalm(nextLiturgy[0].psalm, '.container2', '.container-HymnsAcclamations')
 
 
@@ -611,8 +611,13 @@ function addPsalm(psalm, insertHere, beforeThis) {
 
     const psalmDetails = document.createElement("details");
     // psalmDetails.setAttribute("open", "true") //open for editing
-    psalmDetails.id = `psalm${psalmCount}`;
     psalmDetails.classList = "psalm";
+    if (document.querySelector("button.hymnsTitle").classList.contains("selected")) {
+        psalmDetails.id = ("nextPsalm");
+    } else {
+        psalmDetails.id = `psalm${psalmCount}`;
+
+    }
 
     psalmDetails.innerHTML = `
     <summary>Psalm <span class=psalm id=psalmNumber${psalmCount}>${psalm.number}</span> 
@@ -629,7 +634,15 @@ function addPsalm(psalm, insertHere, beforeThis) {
         psalmImage.classList = "psalmIMG";
         psalmImage.id = `psalmIMG${psalmCount}`
         psalmImage.setAttribute("src", psalm.img)
-        document.querySelector(`#psalm${psalmCount}`).append(psalmImage);
+
+        if (document.querySelector("button.hymnsTitle").classList.contains("selected")) {
+            document.querySelector(`#nextPsalm`).append(psalmImage);
+
+        } else {
+
+            document.querySelector(`#psalm${psalmCount}`).append(psalmImage);
+        }
+
         document.getElementById(`psalmIMG${psalmCount}`).addEventListener("click", (e) => {
             // console.log(e.target)
             e.target.classList.toggle("fullScreen")
@@ -643,7 +656,10 @@ function addPsalm(psalm, insertHere, beforeThis) {
         psalmButton.innerHTML = `<a href="${psalm.pdf}">Full Sheetmusic</a>`
         // psalmButton.textContent = "Full Sheetmusic";
         // psalmButton.setAttribute("onclick", "window.location.href=" + psalmPDF);
-        document.querySelector(`#psalm${psalmCount}`).append(psalmButton);
+        if (document.querySelector("button.hymnsTitle").classList.contains("selected")) {
+
+            document.querySelector(`#nextPsalm`).append(psalmButton);
+        } else { document.querySelector(`#psalm${psalmCount}`).append(psalmButton); }
     }
 
     // if (typeof allPsalms[2].audio == "object"){console.log("success")}else{console.log("failure")}
@@ -719,7 +735,10 @@ function addPsalm(psalm, insertHere, beforeThis) {
                         `
 
         }
-        document.querySelector(`#psalm${psalmCount}`).append(mediaPlayer)
+        if (document.querySelector("button.hymnsTitle").classList.contains("selected")) {
+            document.querySelector(`#nextPsalm`).append(mediaPlayer)
+
+        } else { document.querySelector(`#psalm${psalmCount}`).append(mediaPlayer) }
         if (typeof psalm.audio == "object") {
             for (const property in psalm.audio) {
                 const part = document.createElement("li");
@@ -1045,7 +1064,8 @@ document.querySelector(".liturgyPlan .flex-container").addEventListener("click",
             if (document.getElementById("extra") !== null) {
                 document.getElementById("extra").remove();
             }
-
+            document.getElementById("nextPsalm").remove();
+            document.getElementById("alleluia").remove();
             const futureTitles = wrapper.querySelectorAll(".futureServices h4")
 
             if ((allLiturgies.filter(x => x.date > todaysDate)[1]) != undefined) { futureTitles[0].textContent = allLiturgies.filter(x => x.date > todaysDate)[1].occasion; }
@@ -1058,6 +1078,7 @@ document.querySelector(".liturgyPlan .flex-container").addEventListener("click",
             if ((allLiturgies.filter(x => x.date > todaysDate)[8]) != undefined) { futureTitles[7].textContent = allLiturgies.filter(x => x.date > todaysDate)[8].occasion; }
             if ((allLiturgies.filter(x => x.date > todaysDate)[9]) != undefined) { futureTitles[8].textContent = allLiturgies.filter(x => x.date > todaysDate)[9].occasion; }
             if ((allLiturgies.filter(x => x.date > todaysDate)[10]) != undefined) { futureTitles[9].textContent = allLiturgies.filter(x => x.date > todaysDate)[10].occasion; }
+            futureHymnsSection();
             break;
 
         case "Offertory Extras":
@@ -1078,8 +1099,9 @@ document.querySelector(".liturgyPlan .flex-container").addEventListener("click",
 });
 function checkAndPopulateInstrumentals(number) {
     const futureContent = wrapper.querySelectorAll('.futureServices li.hymnOccasion')
+    // console.log(nextLiturgy[number].instrumental.length);
 
-    if (nextLiturgy[number].instrumental.length !== 0) {
+    if (nextLiturgy[number].instrumental !== undefined) {
 
         const instrumentalsDiv = document.createElement('div')
         instrumentalsDiv.classList.add('futureHymnsOpen', 'extras_future')
@@ -1147,9 +1169,13 @@ function addElement(addOrRemove, number) {
             // add the newly created element and its content into the DOM
 
         })
-        const futurePsalm = allLiturgies.filter(x => x.date > todaysDate)[number].psalm;
-        addPsalm(futurePsalm, `#hymnOccasion${number - 1}`)
+
         futureContent[number - 1].appendChild(newDiv);
+
+        const futurePsalm = allLiturgies.filter(x => x.date > todaysDate)[number].psalm;
+        if (document.querySelector(`#hymnOccasion${number - 1} details`) === null && futurePsalm !== undefined) {
+            addPsalm(futurePsalm, `#hymnOccasion${number - 1} .futureHymnsOpen`, ".futureHymnsOpen h6")
+        }
         checkAndPopulateInstrumentals(number);
 
     } else {
@@ -1159,14 +1185,21 @@ function addElement(addOrRemove, number) {
         allCreatedDivs.forEach((div) => { futureContent[number - 1].removeChild(div) });
         // futureContent[number].removeChild(futureContent[number].querySelector('.extras_future'));
 
+        // const futurePsalm = allLiturgies.filter(x => x.date > todaysDate)[number].psalm;
+        // console.log(futureContent[number - 1])
+
+        //     const element = futureContent[number - 1].querySelector('.futureHymnsOpen'); 
+        // //     while (element.firstChild && element.firstChild !== ofType(h4) ) {
+        //         element.remove();
+        // //     }
     }
 }
 
 
-futureHymnsSection();
+
 function futureHymnsSection() {
     //open/close up hymn list in future hymns
-    liturgyPlan.querySelector(".futureServices ul ").addEventListener("click", (e) => {
+    liturgyPlan.querySelector(".futureServices ul").addEventListener("click", (e) => {
 
         const targetFirstClass = Number(e.target.classList[0])
         const closestDivFirstClass = e.target.closest('div').classList[0]
@@ -1189,7 +1222,10 @@ function futureHymnsSection() {
 
         }
         //further open hymns if selected
-        else {
+
+        else if (e.target.closest("div").classList.contains("futureHymnsOpen") && e.target.closest("details") === null) {
+            console.log(e.target.closest("details"));
+
 
 
 

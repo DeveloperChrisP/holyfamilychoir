@@ -1022,6 +1022,7 @@ hr {
 	width: fit-content;
 	border-radius: 20px;
 	background: rgba(255, 255, 0, 0.735);
+	background: var(--borderColour);
 	transition: all 2s;
 	margin: 0.5rem 0;
 }
@@ -1191,6 +1192,10 @@ details.psalm {
 	border: var(--borderColour) solid 1px;
 	padding: 0.5rem;
 	border-radius: 10px;
+}
+.futureServices details.psalm {
+	border: yellow solid 1px;
+	grid-column: span 2;
 }
 details summary {
 	border-radius: 10px;
