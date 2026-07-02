@@ -423,7 +423,7 @@ new Hymn("Though the mountains may fall", 785, "", "", "https://www.youtube.com/
 new Hymn("To Jesus Heart, all burning", 800, "", "", "https://www.youtube.com/embed/rM0EbMA3cJE?si=730e5YZCVTKesQ5l")
 new Hymn("Turn to me", 786, "", "", "https://www.youtube.com/embed/C0_8VPBRDgY?si=b2B_ea92iST7WEoQ")
 new Hymn("Ubi Caritas", 246, "", "", "https://www.youtube.com/embed/Vvfr_2euIFo?si=aShcg8H8_txp1nBH")
-new Hymn("Unless a grain of wheat", "748", "", "https://www.youtube.com/embed/hZz35vPa3kA?si=S1vb2MzDsuTDNhX0",)
+new Hymn("Unless a grain of wheat", 748, "", "", "https://www.youtube.com/embed/hZz35vPa3kA?si=S1vb2MzDsuTDNhX0",)
 new Hymn("Unto us is born a son", 152, "", "", "https://www.youtube.com/embed/4_4xMMpcqbM?si=RhsMJeDjUpuP2bYO");
 new Hymn("Upon thy table", 606, "", "", "https://www.youtube.com/embed/mTKeKMu0shs?si=G-bRZOzNwJniaYWw");
 new Hymn("Virgin wholly marvellous", "cfe 761 (tune349)", "", "", "https://www.youtube.com/embed/pWoCNeVNHuw?si=6Q3BXHqgR85IESkM")
@@ -1064,8 +1064,15 @@ document.querySelector(".liturgyPlan .flex-container").addEventListener("click",
             if (document.getElementById("extra") !== null) {
                 document.getElementById("extra").remove();
             }
-            document.getElementById("nextPsalm").remove();
-            document.getElementById("alleluia").remove();
+            if (document.getElementById("nextPsalm") !== null) {
+                document.getElementById("nextPsalm").remove();
+            }
+            if (document.getElementById("alleluia") !== null) {
+                document.getElementById("alleluia").remove();
+            }
+
+            // document.getElementById("nextPsalm").remove();
+            // document.getElementById("alleluia").remove();
             const futureTitles = wrapper.querySelectorAll(".futureServices h4")
 
             if ((allLiturgies.filter(x => x.date > todaysDate)[1]) != undefined) { futureTitles[0].textContent = allLiturgies.filter(x => x.date > todaysDate)[1].occasion; }
