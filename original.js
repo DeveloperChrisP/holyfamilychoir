@@ -170,6 +170,7 @@ new Psalm("34(33)", "2-3. 4-5. 6-7. 8-9. ℟5", "From all my terrors the Lord se
 
 new Psalm("65(64)", "10a-d. 10e-11. 12-13. 14. ℟ Luke 8:8", "Some seed fell into good soil and yielded its fruit.", "", "./sheetMusic/psalms/Psalm 65(64)/Psalm 65(64).jpg", "./audio/psalms/Psalm 65(64)/Psalm 65(64) - Melody.mp3")
 new Psalm("145(144)", "1-2. 8-9. 10-11. 13c-14. ℟ cf. 1", "I will bless your name for ever, my God and king.", "./sheetMusic/psalms/Psalm 145(144)/Psalm 145(144).pdf")
+new Psalm("86(85)", "5-6. 9-10. 15-16a. ℟5a", "O Lord, you are good and forgiving.", "./sheetMusic/psalms/Psalm 86(85)/Psalm 86(85).pdf", "./sheetMusic/psalms/Psalm 86(85)/Psalm 86(85).jpg", { "SA": "./audio/psalms/Psalm 86(85)/Psalm 86(85) - SA.mp3", "Melody": "./audio/psalms/Psalm 86(85)/Psalm 86(85) - Melody.mp3", "Alto": "./audio/psalms/Psalm 86(85)/Psalm 86(85) - Alto.mp3" })
 
 new AlleluiaVerse("John 14:18", "I will not leave you as orphans, says the Lord.", "I am going away and I will come to you, and your hearts will rejoice.")
 new AlleluiaVerse("unknown", "Come, Holy Spirit, fill the hearts of your faithful", "and kindle in them the fire of your love.")
@@ -178,7 +179,8 @@ new AlleluiaVerse("John 6:51", "I am the living bread that came down from heaven
 new AlleluiaVerse("Mark 1:15", "The kingdom of God is at hand;", "repent and believe in the gospel.")
 new AlleluiaVerse("John 15:26b, 27a", "The Spirit of truth will bear witness about me, says the Lord,", "and you also will bear witness.")
 new AlleluiaVerse("Matthew 16:18", "You are Peter, and on this rock I will build my Church,", "and the gates of hell shall not prevail against it.")
-
+new AlleluiaVerse("unknown2", "The seed is the word of God, Christ the sower; all who find him will live for ever.")
+new AlleluiaVerse("Matthew 11:25", "I thank you, Father, Lord of heaven and earth,", "you have revealed the secrets of the kingdom to little children.")
 
 new Acclamation("Mass of Christ the Saviour", "Glory to God", "./sheetMusic/acclamations/Dan Schutte Mass/Glory to God/Glory To God (Schutte Liturgy).pdf", ["sab", "alto", "bass", "piano"], "https://www.youtube.com/embed/oeKKr2xIFMg?si=UTR02G3kyx-Hus-A")
 new Acclamation("Mass of Christ the Saviour", "Gospel Acclamation Alleluia", "", ["sab", "melody", "alto", "bass", "piano"], "")
@@ -561,7 +563,7 @@ new Liturgy(new Date("14 Jun 2026"), "11th Sunday in Ordinary Time", "A", "Julia
 new Liturgy(new Date("21 Jun 2026"), "12th Sunday in Ordinary Time", "A", "Julian", ["My God accept my heart this day", "Faith of our fathers", "Lead kindly light", "I'll sing a Hymn to Mary"], ["Do not be afraid", "O the word of my Lord"], "69(68)", "John 15:26b, 27a")
 new Liturgy(new Date("28 Jun 2026"), "13th Sunday in Ordinary Time", "A", "Julian", ["Hail Redeemer, King Divine", "Dear Lord and father of mankind", "O sacred heart", "Follow me, follow me"], ["Taste and see"], "34(33)", "Matthew 16:18")
 new Liturgy(new Date("5 Jul 2026"), "14th Sunday in Ordinary Time", "A", "Chris", ["Sing of the Lord's Goodness", "The Servant King", "O let all who thirst", "Sing of Mary, Pure and lowly"], ["Taste and see"], "145(144)", "Matthew 11:25")
-new Liturgy(new Date("12 Jul 2026"), "15th Sunday in Ordinary Time", "A", "Chris", ["Love divine, all loves excelling", "I will be with you", "We Come to your feast", "O the word of my Lord", "Unless a grain of wheat", "Here I am, Lord"], "", "65(64)")
+new Liturgy(new Date("12 Jul 2026"), "15th Sunday in Ordinary Time", "A", "Chris", ["Love divine, all loves excelling", "I will be with you", "We Come to your feast", "O the word of my Lord", "Unless a grain of wheat", "Here I am, Lord"], "", "65(64)", "unknown2")
 new Liturgy(new Date("19 Jul 2026"), "16th Sunday in Ordinary Time", "A", "Chris", ["Gather us in", "All people that on earth do dwell", "Be still for the presence of the Lord", "O Mother blest"], ["O Lord, hear my prayer", "Amazing Grace"], "86(85)", "Matthew 11:25")
 new Liturgy(new Date("26 July 2026"), "17th Sunday in Ordinary Time", "A", "Chris", ["Seek ye first", "Be thou my vision", "O the Love of my Lord is the essence", "Hail, Queen of heaven"], ["Teach me, O God"], "119(118)", "Matthew 11:25")
 new Liturgy(new Date("2 Aug 2026"), "18th Sunday in Ordinary Time", "A", "Chris", ["Alleluia Sing to Jesus", "Bread of life", "I am the bread of life", "Holy Virgin, by God's decree"], "", "145(144)")
@@ -572,7 +574,7 @@ new Liturgy(new Date("23 Aug 2026"), "21st Sunday in Ordinary Time", "A", "Chris
 //2nd/ 6th/ 17th /20th (A) Sunday of ordinary - 26th of July: "Teach Me, O God (Christopher Walker)"
 
 let nextLiturgy = allLiturgies.filter(x => x.date >= todaysDate);
-// nextLiturgy = [allLiturgies[allLiturgies.length - 9]]; //show latest liturgy on opening page (for easier adding)
+// nextLiturgy = [allLiturgies[allLiturgies.length - 7]]; //show latest liturgy on opening page (for easier adding)
 
 
 
