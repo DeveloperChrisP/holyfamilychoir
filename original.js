@@ -167,10 +167,10 @@ new Psalm("147", "12-13. 14-15. 19-20. ℟12a", "O Jerusalem, glorify the Lord!"
 new Psalm("100(99)", "1-2. 3. 5. ℟3c", "We are his people, the sheep of his flock.", "", "./sheetMusic/psalms/Psalm 100(99)/Psalm 100(99).jpg", { "SATB": "./audio/psalms/Psalm 100(99)/Psalm 100(99) - SATB.mp3", "Melody": "./audio/psalms/Psalm 100(99)/Psalm 100(99) - Melody.mp3", "Alto": "./audio/psalms/Psalm 100(99)/Psalm 100(99) - Alto.mp3", "Tenor": "./audio/psalms/Psalm 100(99)/Psalm 100(99) - Tenor.mp3", "Bass": "./audio/psalms/Psalm 100(99)/Psalm 100(99) - Bass.mp3" })
 new Psalm("69(68)", "8-10. 14, 17. 33-35. ℟14c", "In your great mercy, answer me, O Lord.", "", "./sheetMusic/psalms/Psalm 69(68)/Psalm 69(68).jpg", { "SATB": "./audio/psalms/Psalm 69(68)/Psalm 69(68) - SATB.mp3", "Melody": "./audio/psalms/Psalm 69(68)/Psalm 69(68) - Melody.mp3", "Alto": "./audio/psalms/Psalm 69(68)/Psalm 69(68) - Alto.mp3", "Tenor": "./audio/psalms/Psalm 69(68)/Psalm 69(68) - Tenor.mp3", "Bass": "./audio/psalms/Psalm 69(68)/Psalm 69(68) - Bass.mp3" })
 new Psalm("34(33)", "2-3. 4-5. 6-7. 8-9. ℟5", "From all my terrors the Lord set me free.", "./sheetMusic/psalms/Psalm 34(33)/Psalm 34(33) - SATB.pdf", "./sheetMusic/psalms/Psalm 34(33)/Psalm 34(33).png", { "SATB": "./audio/psalms/Psalm 34(33)/Psalm 34(33) - SATB.mp3", "Melody": "./audio/psalms/Psalm 34(33)/Psalm 34(33) - Melody.mp3", "Alto": "./audio/psalms/Psalm 34(33)/Psalm 34(33) - Alto.mp3", "Tenor": "./audio/psalms/Psalm 34(33)/Psalm 34(33) - Tenor.mp3", "Bass": "./audio/psalms/Psalm 34(33)/Psalm 34(33) - Bass.mp3" })
-
 new Psalm("65(64)", "10a-d. 10e-11. 12-13. 14. ℟ Luke 8:8", "Some seed fell into good soil and yielded its fruit.", "", "./sheetMusic/psalms/Psalm 65(64)/Psalm 65(64).jpg", "./audio/psalms/Psalm 65(64)/Psalm 65(64) - Melody.mp3")
 new Psalm("145(144)", "1-2. 8-9. 10-11. 13c-14. ℟ cf. 1", "I will bless your name for ever, my God and king.", "./sheetMusic/psalms/Psalm 145(144)/Psalm 145(144).pdf")
 new Psalm("86(85)", "5-6. 9-10. 15-16a. ℟5a", "O Lord, you are good and forgiving.", "./sheetMusic/psalms/Psalm 86(85)/Psalm 86(85).pdf", "./sheetMusic/psalms/Psalm 86(85)/Psalm 86(85).jpg", { "SA": "./audio/psalms/Psalm 86(85)/Psalm 86(85) - SA.mp3", "Melody": "./audio/psalms/Psalm 86(85)/Psalm 86(85) - Melody.mp3", "Alto": "./audio/psalms/Psalm 86(85)/Psalm 86(85) - Alto.mp3" })
+new Psalm("119(118)", "57, 72. 76-77. 127-128. 129-130. ℟97a", "O Lord, how I love your law!", "./sheetMusic/psalms/Psalm 119(118)/Psalm 119(118).pdf", "", "")
 
 new AlleluiaVerse("John 14:18", "I will not leave you as orphans, says the Lord.", "I am going away and I will come to you, and your hearts will rejoice.")
 new AlleluiaVerse("unknown", "Come, Holy Spirit, fill the hearts of your faithful", "and kindle in them the fire of your love.")
@@ -373,6 +373,7 @@ new Hymn("O Mother Blest", 364, "", "", "https://www.youtube.com/embed/Nb7PchC-p
 new Hymn("O purest of creatures", 347, "", "", "https://www.youtube.com/embed/NFBb5g2tXgk?si=j58XTHjmY4JXkuFm");
 new Hymn("O Sacred Head", 237, "", "", "https://www.youtube.com/embed/wcrS8rFWMXQ?si=Uw6btV7cUilLklLm")
 new Hymn("O Sacred Heart", 799, "", "", "https://www.youtube.com/embed/zZwEZpx0x1A?si=e58KWuaRhnzNygB7")
+new Hymn("O the love of my Lord is the essence", 967, "", "", "https://www.youtube.com/embed/xQyEHQhnBI0?si=Q4qKc4kV-yFQub8w")
 new Hymn("O the word of my Lord", 979, "", "", "https://www.youtube.com/embed/S7wrUFmTvxk?si=-RcJSWyv84SoBGZc")
 new Hymn("O Worship the King", 683, "", "", "https://www.youtube.com/embed/25mleGwF1QM?si=rHAF34l7XMI8cpMh")
 new Hymn("Of the glorious body telling", 247, "", "", "https://www.youtube.com/embed/9nVBNxfJ-oA?si=nOVzHJhwpwvkZRD3")
@@ -402,6 +403,7 @@ new Hymn("Sweet Sacrament Divine", 663, "", "", "https://www.youtube.com/embed/6
 new Hymn("Take my life and let it be", 874, "", "", "https://www.youtube.com/embed/VUitRcLnfNk?si=zYJqQe2royTp1q_b")
 new Hymn("Take our bread", 605, "", "", "https://www.youtube.com/embed/g0amLuMeVjY?si=UbwdvgeVfH5Nv_KV");
 new Hymn("Taste and See", "Sheet", "./sheetMusic/hymns/Taste & See (chords & lyrics).pdf", "", "https://www.youtube.com/embed/cRHOCB0Th0M?si=8tmszbX8vsjWCobF")
+new Hymn("Teach me, O God", "Sheet", "", "", "https://www.youtube.com/embed/__voVCEZo3w?si=VGI6iwUsEg71Hexm")
 new Hymn("Tell out my soul", 880, "", "", "https://www.youtube.com/embed/A59pfx4sb2Q?si=2CAw8d2OBfjEWvFT");
 new Hymn("The angel Gabriel", 113, "", "", "https://www.youtube.com/embed/pliqObTHxUQ?si=n-iBUx5I6ggQvds1");
 new Hymn("The Church's One Foundation", 830, "", "", "https://www.youtube.com/embed/1ooRvCyULoU?si=c381yxAE3XBSKWhi");
