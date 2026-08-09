@@ -172,6 +172,7 @@ new Psalm("145(144)", "1-2. 8-9. 10-11. 13c-14. ℟ cf. 1", "I will bless your n
 new Psalm("86(85)", "5-6. 9-10. 15-16a. ℟5a", "O Lord, you are good and forgiving.", "./sheetMusic/psalms/Psalm 86(85)/Psalm 86(85).pdf", "./sheetMusic/psalms/Psalm 86(85)/Psalm 86(85).jpg", { "SA": "./audio/psalms/Psalm 86(85)/Psalm 86(85) - SA.mp3", "Melody": "./audio/psalms/Psalm 86(85)/Psalm 86(85) - Melody.mp3", "Alto": "./audio/psalms/Psalm 86(85)/Psalm 86(85) - Alto.mp3" })
 new Psalm("119(118)", "57, 72. 76-77. 127-128. 129-130. ℟97a", "O Lord, how I love your law!", "./sheetMusic/psalms/Psalm 119(118)/Psalm 119(118).pdf", "", "")
 new Psalm("145(144)v2", "8-9. 15-16. 17-18. ℟ cf. 16", "You open your hand and fulfil us, O Lord.", "./sheetMusic/psalms/Psalm 145(144)v2/Psalm 145(144)v2.pdf", "./sheetMusic/psalms/Psalm 145(144)v2/Psalm 145(144)v2.jpg", { "SATB": "./audio/psalms/Psalm 145(144)v2/Psalm 145(144)v2 - SATB.mp3", "Melody": "./audio/psalms/Psalm 145(144)v2/Psalm 145(144)v2 - Melody.mp3", "Alto": "./audio/psalms/Psalm 145(144)v2/Psalm 145(144)v2 - Alto.mp3", "Tenor": "./audio/psalms/Psalm 145(144)v2/Psalm 145(144)v2 - Tenor.mp3", "Bass": "./audio/psalms/Psalm 145(144)v2/Psalm 145(144)v2 - Bass.mp3" })
+new Psalm("45(44)", "10. 11. 12. 16. ℟10b", "On your right stands the queen in gold of Ophir")
 
 new AlleluiaVerse("John 14:18", "I will not leave you as orphans, says the Lord.", "I am going away and I will come to you, and your hearts will rejoice.")
 new AlleluiaVerse("unknown", "Come, Holy Spirit, fill the hearts of your faithful", "and kindle in them the fire of your love.")
@@ -351,10 +352,12 @@ new Hymn("Long ago prophets knew", 116, "", "", "https://www.youtube.com/embed/O
 new Hymn("Lord of all hopefulness", 969, "", "", "https://www.youtube.com/embed/fxEuqZ_4iI0?si=vxAYvDdp-QoMbhzO");
 new Hymn("Lord of Creation, to you be all praise", 869, "", "", "https://www.youtube.com/embed/dHEfi5TKezY?si=XoSYldQ4HqqQlguW")
 new Hymn("Love divine, all loves excelling", 801, "", "", "https://www.youtube.com/embed/cu5zgfKMbAU?si=zNiaaCx1SNydoh4F");
+new Hymn("Magnificat", "Sheet", "", "", "https://www.youtube.com/embed/FSYVdlxfpUY?si=D32iUcckKCBcYK6Q", ["My soul glorifies the Lord, my spirit rejoices. My God forever he will be, bless his holy name.", "He looks upon me his servant, looks on me in my lowliness. He works marvels for me, Hence forth all ages call me blessed, Call me blessed.", "He scatters the proud hearted, casts the mighty from their thrones. His mighty arm before me, In strength he raises the lowly, raises the lowly.", "He fills the starving with plenty, but empty sends the rich away. From age to age his mercy, The mercy promised us forever, promised forever."])
 new Hymn("Make me a channel of your peace", 898, "", "", "https://www.youtube.com/embed/C8QYMvsp7VI?si=Jpymro5PI9Jj33jb")
 new Hymn("Mary immaculate, star of the morning", 363, "", "", "https://www.youtube.com/embed/S3-ZL66lwmc?si=VZrkx1go1x1MRd1C")
 new Hymn("Might to save", '---', "", "", "https://www.youtube.com/embed/GEAcs2B-kNc?si=KcBUIZ1HYKwpUPw6")
 new Hymn("My God accept my heart this day", 872, "", "", "https://www.youtube.com/embed/1O1lrg22__E?si=_WgGRmefs7VgG-C-")
+new Hymn("My God loves me", 499 + "(CFE)", "", "", "https://www.youtube.com/embed/ht7lnPyzOdY?si=HJZMTE13CCOpT_3e&start=16")
 new Hymn("My song is love unknown", 752, "", "", "https://www.youtube.com/embed/Nv2bipRf1xo?si=EULjdoDQMr-asu6d");
 new Hymn("My soul proclaims you, mighty God", 340 + ' (' + 846 + ')', "", "", "https://www.youtube.com/embed/j7wIiuSBmSw?si=15WfGIlp3IQiWJsR")
 new Hymn("Now the green blade riseth", 278, "", "", "https://www.youtube.com/embed/t_-6-VKu8SM?si=lhMNDR8p0egeFFeM")
@@ -572,7 +575,7 @@ new Liturgy(new Date("19 Jul 2026"), "16th Sunday in Ordinary Time", "A", "Chris
 new Liturgy(new Date("26 July 2026"), "17th Sunday in Ordinary Time", "A", "Chris", ["Seek ye first", "Be thou my vision", "O the Love of my Lord is the essence", "Hail, Queen of heaven"], ["Teach me, O God"], "119(118)", "Matthew 11:25")
 new Liturgy(new Date("2 Aug 2026"), "18th Sunday in Ordinary Time", "A", "Chris", ["Alleluia Sing to Jesus", "Bread of life", "I am the bread of life", "Holy Virgin, by God's decree"], "", "145(144)v2", "Matthew 4:4b")
 new Liturgy(new Date("9 Aug 2026"), "19th Sunday in Ordinary Time", "A", "Chris", ["Guide me O thou great redeemer", "Be still, and know I am with you", "I will be with you", "As I kneel before you"], ["Eye has not seen", "O the love of my Lord is the essence"], "85(84)")
-new Liturgy(new Date("16 Aug 2026"), "The Assumption of the Blessed Virgin Mary", "A", "Chris", ["Holy is his name", "My God loves me", "Mary immaculate, star of the morning", "Immaculate Mary"], ["The magnificat"], "45(44)")
+new Liturgy(new Date("16 Aug 2026"), "The Assumption of the Blessed Virgin Mary", "A", "Chris", ["Holy is his name", "My God loves me", "Mary immaculate, star of the morning", "Immaculate Mary"], ["Magnificat"], "45(44)")
 new Liturgy(new Date("23 Aug 2026"), "21st Sunday in Ordinary Time", "A", "Chris", ["All my hope on God is founded", "Praise to the Lord, the Almighty", "Be still for the presence of the Lord", "Holy Virgin, by God's decree"], ["Out of Darkness"], "138(137)")
 
 //2nd/ 6th/ 17th /20th (A) Sunday of ordinary - 26th of July: "Teach Me, O God (Christopher Walker)"
@@ -1561,10 +1564,16 @@ document.querySelectorAll("button.up, button.down").forEach(btn => {
 
 
 function hymnSelect() { //populate titles based upon 'count' number//
-
-    var title = allHymns[count].title;
+    if (allHymns[count]) {
+        var title = allHymns[count].title;
+    } else {
+        title = "unprepaired"
+    }
     document.querySelector("#panel1_title").textContent = title;
-    var lastHymn = allHymns[allHymns.length - 1].title; //Hark the herald
+    if ([allHymns.length - 1].title) {
+        var lastHymn = allHymns[allHymns.length - 1].title;
+    }
+    else { lastHymn = "unprepaired" }
     switch (allHymns.length) {
         case 1:
             var secondToLastHymn = title;
