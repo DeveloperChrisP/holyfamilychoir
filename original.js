@@ -174,7 +174,7 @@ new Psalm("119(118)", "57, 72. 76-77. 127-128. 129-130. ℟97a", "O Lord, how I 
 new Psalm("145(144)v2", "8-9. 15-16. 17-18. ℟ cf. 16", "You open your hand and fulfil us, O Lord.", "./sheetMusic/psalms/Psalm 145(144)v2/Psalm 145(144)v2.pdf", "./sheetMusic/psalms/Psalm 145(144)v2/Psalm 145(144)v2.jpg", { "SATB": "./audio/psalms/Psalm 145(144)v2/Psalm 145(144)v2 - SATB.mp3", "Melody": "./audio/psalms/Psalm 145(144)v2/Psalm 145(144)v2 - Melody.mp3", "Alto": "./audio/psalms/Psalm 145(144)v2/Psalm 145(144)v2 - Alto.mp3", "Tenor": "./audio/psalms/Psalm 145(144)v2/Psalm 145(144)v2 - Tenor.mp3", "Bass": "./audio/psalms/Psalm 145(144)v2/Psalm 145(144)v2 - Bass.mp3" })
 new Psalm("45(44)", "10. 11. 12. 16. ℟10b", "On your right stands the queen in gold of Ophir")
 new Psalm("138(137)", "1-2a. 2bc, 3. 6, 8bc. ℟8bc", "O Lord, your merciful love is eternal; discard not the work of your hands.")
-new Psalm("95(94)", "1-2. 6-7b. 7c-9. ℟7c, 8a", "O that today you would listen to his voice! ‘Harden not your hearts.’", "./sheetMusic/psalms/Psalm 95(94)/Psalm 95(94) - Piano.pdf", "./sheetMusic/psalms/Psalm 95(94)/Psalm 95(94) - SATB.jpg")
+new Psalm("95(94)", "1-2. 6-7b. 7c-9. ℟7c, 8a", "O that today you would listen to his voice! ‘Harden not your hearts.’", "./sheetMusic/psalms/Psalm 95(94)/Psalm 95(94) - Piano.pdf", "./sheetMusic/psalms/Psalm 95(94)/Psalm 95(94) - SATB.jpg", { "SATB": "./audio/psalms/Psalm 95(94)/Psalm 95(94) - SATB.mp3", "Melody": "./audio/psalms/Psalm 95(94)/Psalm 95(94) - Melody.mp3", "Alto": "./audio/psalms/Psalm 95(94)/Psalm 95(94) - Alto.mp3", "Tenor": "./audio/psalms/Psalm 95(94)/Psalm 95(94) - Tenor.mp3", "Bass": "./audio/psalms/Psalm 95(94)/Psalm 95(94) - Bass.mp3", "Piano": "./audio/psalms/Psalm 95(94)/Psalm 95(94) - Piano.mp3" })
 
 new AlleluiaVerse("John 14:18", "I will not leave you as orphans, says the Lord.", "I am going away and I will come to you, and your hearts will rejoice.")
 new AlleluiaVerse("unknown", "Come, Holy Spirit, fill the hearts of your faithful", "and kindle in them the fire of your love.")
@@ -962,7 +962,7 @@ function addExtras(ExtrasTitle, ExtrasIMG, ExtrasPDF, ExtrasAudio, Timer) {
     imgChanger();
     function imgChanger() {
         let imgCount
-        // if (startTime > Timer){imgCount = Math.floor(startTime / Timer)}
+        if (startTime > Timer) { imgCount = Math.floor(startTime / Timer) }
         const audioElement = document.getElementById("psalmAudio");
         //         if (audioElement.paused) {
         //     console.log('Audio is currently paused.');

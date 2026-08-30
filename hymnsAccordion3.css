@@ -1327,6 +1327,9 @@ details.psalm .product__mediaPlayer div.container {
 		width: 100dvh;
 	}
 }
+audio {
+	width: 100%;
+}
 .imgButtonContainer {
 	display: flex;
 	flex-direction: row;
