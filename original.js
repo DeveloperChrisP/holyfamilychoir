@@ -175,6 +175,7 @@ new Psalm("145(144)v2", "8-9. 15-16. 17-18. ℟ cf. 16", "You open your hand and
 new Psalm("45(44)", "10. 11. 12. 16. ℟10b", "On your right stands the queen in gold of Ophir")
 new Psalm("138(137)", "1-2a. 2bc, 3. 6, 8bc. ℟8bc", "O Lord, your merciful love is eternal; discard not the work of your hands.")
 new Psalm("95(94)", "1-2. 6-7b. 7c-9. ℟7c, 8a", "O that today you would listen to his voice! ‘Harden not your hearts.’", "./sheetMusic/psalms/Psalm 95(94)/Psalm 95(94) - Piano.pdf", "./sheetMusic/psalms/Psalm 95(94)/Psalm 95(94) - SATB.jpg", { "SATB": "./audio/psalms/Psalm 95(94)/Psalm 95(94) - SATB.mp3", "Melody": "./audio/psalms/Psalm 95(94)/Psalm 95(94) - Melody.mp3", "Alto": "./audio/psalms/Psalm 95(94)/Psalm 95(94) - Alto.mp3", "Tenor": "./audio/psalms/Psalm 95(94)/Psalm 95(94) - Tenor.mp3", "Bass": "./audio/psalms/Psalm 95(94)/Psalm 95(94) - Bass.mp3", "Piano": "./audio/psalms/Psalm 95(94)/Psalm 95(94) - Piano.mp3" })
+new Psalm("103(102)", "1-2. 3-4. 9-10. 11-12. ℟8", "The Lord is compassionate and gracious, slow to anger and rich in mercy.", "./sheetMusic/psalms/Psalm 103(102)/Psalm 103(102).pdf", "./sheetMusic/psalms/Psalm 103(102)/Psalm 103(102).jpg", { "SATB": "./audio/psalms/Psalm 103(102)/Psalm 103(102) - SATB.mp3", "Melody": "./audio/psalms/Psalm 103(102)/Psalm 103(102) - Melody.mp3", "Alto": "./audio/psalms/Psalm 103(102)/Psalm 103(102) - Alto.mp3", "Tenor": "./audio/psalms/Psalm 103(102)/Psalm 103(102) - Tenor.mp3", "Bass": "./audio/psalms/Psalm 103(102)/Psalm 103(102) - Bass.mp3", "Piano": "./audio/psalms/Psalm 103(102)/Psalm 103(102) - Piano.mp3" })
 
 new AlleluiaVerse("John 14:18", "I will not leave you as orphans, says the Lord.", "I am going away and I will come to you, and your hearts will rejoice.")
 new AlleluiaVerse("unknown", "Come, Holy Spirit, fill the hearts of your faithful", "and kindle in them the fire of your love.")
@@ -187,13 +188,13 @@ new AlleluiaVerse("unknown2", "The seed is the word of God, Christ the sower; al
 new AlleluiaVerse("Matthew 11:25", "I thank you, Father, Lord of heaven and earth,", "you have revealed the secrets of the kingdom to little children.")
 new AlleluiaVerse("Matthew 4:4b", "One does not live by bread alone,", "but by every word that comes forth from the mouth of God.")
 
-new Acclamation("Mass of Christ the Saviour", "Glory to God", "./sheetMusic/acclamations/Dan Schutte Mass/Glory to God/Glory To God (Schutte Liturgy).pdf", ["sab", "alto", "bass", "piano"], "https://www.youtube.com/embed/oeKKr2xIFMg?si=UTR02G3kyx-Hus-A")
-new Acclamation("Mass of Christ the Saviour", "Gospel Acclamation Alleluia", "", ["sab", "melody", "alto", "bass", "piano"], "")
+new Acclamation("Mass of Christ the Saviour", "Glory to God", "./sheetMusic/acclamations/Dan Schutte Mass/Glory to God/Dan Schutte - Glory To God.pdf", ["sab", "alto", "bass", "piano"], "https://www.youtube.com/embed/oeKKr2xIFMg?si=UTR02G3kyx-Hus-A")
+new Acclamation("Mass of Christ the Saviour", "Gospel Acclamation Alleluia", "", ["sab", "melody", "alto", "bass", "piano"], "./sheetMusic/acclamations/Dan Schutte Mass/Alleluia/Dan Schutte - Gospel Acclamation_ Alleluia.pdf")
 new Acclamation("Mass of Christ the Saviour", "Lenten Gospel Acclamation", "./sheetMusic/acclamations/Dan Schutte Mass/Lenten Gospel Acclamation/Dan Schutte - Lenten Gospel Acclamation.pdf", ["sab", "melody", "alto", "bass", "piano"], "")
-new Acclamation("Mass of Christ the Saviour", "Holy holy", "./sheetMusic/acclamations/Dan Schutte Mass/Holy Holy/Holy Holy(Schutte Liturgy).pdf", ["SAB", "melody", "alto", "bass"], "https://www.youtube.com/embed/LsFxjynY5dw?si=-xN5UmeR6stjopkt")
-new Acclamation("Mass of Christ the Saviour", "We proclaim your death", "./sheetMusic/acclamations/Dan Schutte Mass/Memorial Acclamations/Dan Schutte - Memorial Acclamation 1.pdf", ["piano", "melody", "bass", "alto", "sab"], "https://www.youtube.com/embed/slLLVzWzQWg?si=2LqjV5sjar3PxuSD")
-new Acclamation("Mass of Christ the Saviour", "When we eat this bread", "./sheetMusic/acclamations/Dan Schutte Mass/Memorial Acclamations/Dan Schutte - Memorial Acclamation 2.pdf", ["piano", "melody", "bass", "alto", "sab"], "https://www.youtube.com/embed/I-72zONivNQ?si=fvRRp56uvagvTfRm")
-new Acclamation("Mass of Christ the Saviour", "Lamb of God", "./sheetMusic/acclamations/Dan Schutte Mass/Lamb of God/Lamb Of God (Schutte Liturgy).pdf", ["SAB", "melody", "alto", "bass"], "https://www.youtube.com/embed/PBuZqtPLcIo?si=0HLxaD3bYyvmlqb8")
+new Acclamation("Mass of Christ the Saviour", "Holy holy", "./sheetMusic/acclamations/Dan Schutte Mass/Holy Holy/Dan Schutte - Holy Holy.pdf", ["SAB", "melody", "alto", "bass"], "https://www.youtube.com/embed/LsFxjynY5dw?si=-xN5UmeR6stjopkt")
+new Acclamation("Mass of Christ the Saviour", "We proclaim your death", "./sheetMusic/acclamations/Dan Schutte Mass/Memorial Acclamations/Dan Schutte - We Proclaim Your Death.pdf", ["piano", "melody", "bass", "alto", "sab"], "https://www.youtube.com/embed/slLLVzWzQWg?si=2LqjV5sjar3PxuSD")
+new Acclamation("Mass of Christ the Saviour", "When we eat this bread", "./sheetMusic/acclamations/Dan Schutte Mass/Memorial Acclamations/Dan Schutte - When We Eat This Bread.pdf", ["piano", "melody", "bass", "alto", "sab"], "https://www.youtube.com/embed/I-72zONivNQ?si=fvRRp56uvagvTfRm")
+new Acclamation("Mass of Christ the Saviour", "Lamb of God", "./sheetMusic/acclamations/Dan Schutte Mass/Lamb of God/Dan Schutte - Lamb Of God.pdf", ["SAB", "melody", "alto", "bass"], "https://www.youtube.com/embed/PBuZqtPLcIo?si=0HLxaD3bYyvmlqb8")
 
 new Acclamation("Mass of Creation", "Glory to God", "", "", "https://www.youtube.com/embed/bbHerWk32Vk?si=ys3OGM0_1Exjecv4")
 new Acclamation("Mass of Creation", "Holy Holy", "", "", "https://www.youtube.com/embed/2nwTK9YKWWo?si=jE6ilEY5LqOOeh7e")
@@ -207,12 +208,12 @@ new Acclamation("Mass of Hope", "Alleluia", "", ["satb", "melody", "alto", "teno
 new Acclamation("Mass of Hope", "Holy holy", "", ["melody", "piano"], "https://www.youtube.com/embed/PC8Fl0CAWB8?si=CsDSavSKw_6fwM1f&start=154&end=244");
 new Acclamation("Mass of Hope", "We proclaim your death", "", "", "https://www.youtube.com/embed/PC8Fl0CAWB8?si=CsDSavSKw_6fwM1f&start=245&end=277");
 new Acclamation("Mass of Hope", "When we eat this bread", "", ["melody", "piano"], "https://www.youtube.com/embed/PC8Fl0CAWB8?si=CsDSavSKw_6fwM1f&start=282&end=330");
-new Acclamation("Mass of Hope", "Save us, saviour", "", "", "https://www.youtube.com/embed/PC8Fl0CAWB8?si=CsDSavSKw_6fwM1f&start=335&end=385");
+new Acclamation("Mass of Hope", "Save us, saviour", "/holyfamilychoir/sheetMusic/acclamations/Mass of Hope/Memorial Acclamations/Bernadette Farrell - Save Us, Savior.pdf", "", "https://www.youtube.com/embed/PC8Fl0CAWB8?si=CsDSavSKw_6fwM1f&start=335&end=385");
 new Acclamation("Mass of Hope", "Great Amen", "", ["melody", "piano"], "https://www.youtube.com/embed/PC8Fl0CAWB8?si=CsDSavSKw_6fwM1f&start=390");
 new Acclamation("Mass of Hope", "Lamb of God (Creation)", "", ["SATB", "melody", "alto", "tenor", "bass", "piano"], "https://www.youtube.com/embed/_KlqHDoGLzE?si=FOKHV82msHsXCsGJ");
 
-new Acclamation("Simple Mass", "Holy holy", "./sheetMusic/acclamations/Simple Mass/Holy Holy (Simple Mass).pdf", ["satb", "melody", "alto", "tenor", "bass", "piano"], "")
-new Acclamation("Simple Mass", "Lamb of God", "./sheetMusic/acclamations/Simple Mass/Lamb of God (Simple Mass).pdf", "", "")
+new Acclamation("Simple Mass", "Holy holy", "./sheetMusic/acclamations/Simple Mass/Holy Holy/Holy Holy (Simple Mass).pdf", ["satb", "melody", "alto", "tenor", "bass", "piano"], "")
+new Acclamation("Simple Mass", "Lamb of God", "./sheetMusic/acclamations/Simple Mass/Lamb of God/Lamb of God (Simple Mass).pdf", "", "")
 
 new Acclamation("Celtic Mass", "Gloria", "./sheetMusic/acclamations/Celtic Mass/Glory to God/Glory To God (Celtic Liturgy).pdf", ["satb", 'melody', 'alto', 'tenor', 'bass'], "");
 new Acclamation("Celtic Mass", "Alleluia", "./sheetMusic/acclamations/Celtic Mass/Alleluia/Alleluia (Celtic Liturgy).pdf", "", "https://www.youtube.com/embed/AFvdHcrPhkw?si=V7FLgxX593bN33GH");
@@ -582,7 +583,7 @@ new Liturgy(new Date("16 Aug 2026"), "The Assumption of the Blessed Virgin Mary"
 new Liturgy(new Date("23 Aug 2026"), "21st Sunday in Ordinary Time", "A", "Chris", ["All my hope on God is founded", "Praise to the Lord, the Almighty", "Be still for the presence of the Lord", "Holy Virgin, by God's decree"], ["Out of Darkness", "Bread of life", "The summons"], "138(137)")
 new Liturgy(new Date("30 Aug 2026"), "22nd Sunday in Ordinary Time", "A", "Chris", ["Dear Lord and father of mankind", "O God you search me", "Christ be our light", "O lady full of God's own grace"], ["Brother sister let me serve you", "Out of darkness", "The summons", "Unless a grain of wheat"])
 new Liturgy(new Date("6 Sept 2026"), "23rd Sunday in Ordinary Time", "A", "Chris", ["Gather us in", "Brother, sister let me serve you", "This is my body", "Sing of Mary, pure and lowly"], ["Bread of life"], "95(94)")
-new Liturgy(new Date("13 Sept 2026"), "24th Sunday in Ordinary Time", "A", "Chris", ["freely freely", "Make me a channel of your peace", "O let all who thirst", "As I kneel before you"], ["Taste and see", "ubi caritas", "My God loves me"])
+new Liturgy(new Date("13 Sept 2026"), "24th Sunday in Ordinary Time", "A", "Chris", ["freely freely", "Make me a channel of your peace", "O let all who thirst", "As I kneel before you"], ["Taste and see", "ubi caritas", "My God loves me"], "103(102)")
 //2nd/ 6th/ 17th /20th (A) Sunday of ordinary - 26th of July: "Teach Me, O God (Christopher Walker)"
 
 let nextLiturgy = allLiturgies.filter(x => x.date >= todaysDate);
