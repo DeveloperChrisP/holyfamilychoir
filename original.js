@@ -121,12 +121,12 @@ function grabAcclamationObject(massTitle) {
 
 
 
-function grabPsalmObject(psalmNumber) {
+function grabPsalmObject(psalmResponse) {
     //return array of hymn objects (up to 8) depending on how many are requested in 'new liturgy'
 
-    if (psalmNumber !== undefined && psalmNumber !== "") {
+    if (psalmResponse !== undefined && psalmResponse !== "") {
         // psalmNumber.forEach(input => {
-        let psalm = allPsalms.filter(x => (x.number == psalmNumber))[0]
+        let psalm = allPsalms.filter(x => (x.response == psalmResponse))[0]
         // }
 
         // )
@@ -159,23 +159,24 @@ function grabAlleluiaObject(alleluiaRef) {
 
 
 
-new Psalm("66(65)", "1-3a. 4-5. 6-7a. 16, 20. ℟1", "Cry out with joy to God, all the earth.", "./sheetMusic/psalms/Psalm - 6th Sunday of Easter (A).pdf")
-new Psalm("27(26)", "1. 4. 7-8a. ℟13", "I believe I shall see the Lord's goodness in the land of the living.", "./sheetMusic/psalms/Psalm - 7th Sunday of Easter (A).pdf", "", "./audio/psalms/Psalm 27(26)/Psalm 27(26).mp3")
-new Psalm("104(103)", "1ab, 24ac. 29b-30. 31, 34. ℟ cf. 30", "Send forth your spirit, O Lord, and renew the face of the earth.", "./sheetMusic/psalms/Psalm 104(103)/Psalm 104(103) - SATB.pdf", "./sheetMusic/psalms/Psalm 104(103)/Psalm 104(103).jpg", { "SATB": "./audio/psalms/Psalm 104(103)/Psalm 104(103) - SATB.mp3", "Melody": "./audio/psalms/Psalm 104(103)/Psalm 104(103) - Melody.mp3", "Alto": "./audio/psalms/Psalm 104(103)/Psalm 104(103) - Alto.mp3", "Tenor": "./audio/psalms/Psalm 104(103)/Psalm 104(103) - Tenor.mp3", "Bass": "./audio/psalms/Psalm 104(103)/Psalm 104(103) - Bass.mp3" })
 new Psalm("Daniel 3", "52. 53. 54. 55. 56. ℟52b", "To be praised and highly exalted for ever!", "./sheetMusic/psalms/Psalm Daniel 3/Psalm Daniel 3 - Melody.pdf", "./sheetMusic/psalms/Psalm Daniel 3/Psalm Daniel 3.png", { "SATB": "./audio/psalms/Psalm Daniel 3/Psalm Daniel 3 - SATB.mp3", "Melody": "./audio/psalms/Psalm Daniel 3/Psalm Daniel 3 - Melody.mp3", "Alto": "./audio/psalms/Psalm Daniel 3/Psalm Daniel 3 - Alto.mp3", "Tenor": "./audio/psalms/Psalm Daniel 3/Psalm Daniel 3 - Tenor.mp3", "Bass": "./audio/psalms/Psalm Daniel 3/Psalm Daniel 3 - Bass.mp3" })
-new Psalm("147", "12-13. 14-15. 19-20. ℟12a", "O Jerusalem, glorify the Lord!", "./sheetMusic/psalms/Psalm 147/Psalm 147 - SATB.pdf", "./sheetMusic/psalms/Psalm 147/Psalm 147.jpg", { "SATB": "./audio/psalms/Psalm 147/Psalm 147 - SATB.mp3", "Melody": "./audio/psalms/Psalm 147/Psalm 147 - Melody.mp3", "Alto": "./audio/psalms/Psalm 147/Psalm 147 - Alto.mp3", "Tenor": "./audio/psalms/Psalm 147/Psalm 147 - Tenor.mp3", "Bass": "./audio/psalms/Psalm 147/Psalm 147 - Bass.mp3" })
-new Psalm("100(99)", "1-2. 3. 5. ℟3c", "We are his people, the sheep of his flock.", "", "./sheetMusic/psalms/Psalm 100(99)/Psalm 100(99).jpg", { "SATB": "./audio/psalms/Psalm 100(99)/Psalm 100(99) - SATB.mp3", "Melody": "./audio/psalms/Psalm 100(99)/Psalm 100(99) - Melody.mp3", "Alto": "./audio/psalms/Psalm 100(99)/Psalm 100(99) - Alto.mp3", "Tenor": "./audio/psalms/Psalm 100(99)/Psalm 100(99) - Tenor.mp3", "Bass": "./audio/psalms/Psalm 100(99)/Psalm 100(99) - Bass.mp3" })
-new Psalm("69(68)", "8-10. 14, 17. 33-35. ℟14c", "In your great mercy, answer me, O Lord.", "", "./sheetMusic/psalms/Psalm 69(68)/Psalm 69(68).jpg", { "SATB": "./audio/psalms/Psalm 69(68)/Psalm 69(68) - SATB.mp3", "Melody": "./audio/psalms/Psalm 69(68)/Psalm 69(68) - Melody.mp3", "Alto": "./audio/psalms/Psalm 69(68)/Psalm 69(68) - Alto.mp3", "Tenor": "./audio/psalms/Psalm 69(68)/Psalm 69(68) - Tenor.mp3", "Bass": "./audio/psalms/Psalm 69(68)/Psalm 69(68) - Bass.mp3" })
+new Psalm("27(26)", "1. 4. 7-8a. ℟13", "I believe I shall see the Lord's goodness in the land of the living.", "./sheetMusic/psalms/Psalm - 7th Sunday of Easter (A).pdf", "", "./audio/psalms/Psalm 27(26)/Psalm 27(26).mp3")
 new Psalm("34(33)", "2-3. 4-5. 6-7. 8-9. ℟5", "From all my terrors the Lord set me free.", "./sheetMusic/psalms/Psalm 34(33)/Psalm 34(33) - SATB.pdf", "./sheetMusic/psalms/Psalm 34(33)/Psalm 34(33).png", { "SATB": "./audio/psalms/Psalm 34(33)/Psalm 34(33) - SATB.mp3", "Melody": "./audio/psalms/Psalm 34(33)/Psalm 34(33) - Melody.mp3", "Alto": "./audio/psalms/Psalm 34(33)/Psalm 34(33) - Alto.mp3", "Tenor": "./audio/psalms/Psalm 34(33)/Psalm 34(33) - Tenor.mp3", "Bass": "./audio/psalms/Psalm 34(33)/Psalm 34(33) - Bass.mp3" })
-new Psalm("65(64)", "10a-d. 10e-11. 12-13. 14. ℟ Luke 8:8", "Some seed fell into good soil and yielded its fruit.", "", "./sheetMusic/psalms/Psalm 65(64)/Psalm 65(64).jpg", "./audio/psalms/Psalm 65(64)/Psalm 65(64) - Melody.mp3")
-new Psalm("145(144)", "1-2. 8-9. 10-11. 13c-14. ℟ cf. 1", "I will bless your name for ever, my God and king.", "./sheetMusic/psalms/Psalm 145(144)/Psalm 145(144).pdf")
-new Psalm("86(85)", "5-6. 9-10. 15-16a. ℟5a", "O Lord, you are good and forgiving.", "./sheetMusic/psalms/Psalm 86(85)/Psalm 86(85).pdf", "./sheetMusic/psalms/Psalm 86(85)/Psalm 86(85).jpg", { "SA": "./audio/psalms/Psalm 86(85)/Psalm 86(85) - SA.mp3", "Melody": "./audio/psalms/Psalm 86(85)/Psalm 86(85) - Melody.mp3", "Alto": "./audio/psalms/Psalm 86(85)/Psalm 86(85) - Alto.mp3" })
-new Psalm("119(118)", "57, 72. 76-77. 127-128. 129-130. ℟97a", "O Lord, how I love your law!", "./sheetMusic/psalms/Psalm 119(118)/Psalm 119(118).pdf", "", "")
-new Psalm("145(144)v2", "8-9. 15-16. 17-18. ℟ cf. 16", "You open your hand and fulfil us, O Lord.", "./sheetMusic/psalms/Psalm 145(144)v2/Psalm 145(144)v2.pdf", "./sheetMusic/psalms/Psalm 145(144)v2/Psalm 145(144)v2.jpg", { "SATB": "./audio/psalms/Psalm 145(144)v2/Psalm 145(144)v2 - SATB.mp3", "Melody": "./audio/psalms/Psalm 145(144)v2/Psalm 145(144)v2 - Melody.mp3", "Alto": "./audio/psalms/Psalm 145(144)v2/Psalm 145(144)v2 - Alto.mp3", "Tenor": "./audio/psalms/Psalm 145(144)v2/Psalm 145(144)v2 - Tenor.mp3", "Bass": "./audio/psalms/Psalm 145(144)v2/Psalm 145(144)v2 - Bass.mp3" })
 new Psalm("45(44)", "10. 11. 12. 16. ℟10b", "On your right stands the queen in gold of Ophir")
-new Psalm("138(137)", "1-2a. 2bc, 3. 6, 8bc. ℟8bc", "O Lord, your merciful love is eternal; discard not the work of your hands.")
+new Psalm("65(64)", "10a-d. 10e-11. 12-13. 14. ℟ Luke 8:8", "Some seed fell into good soil and yielded its fruit.", "", "./sheetMusic/psalms/Psalm 65(64)/Psalm 65(64).jpg", "./audio/psalms/Psalm 65(64)/Psalm 65(64) - Melody.mp3")
+new Psalm("66(65)", "1-3a. 4-5. 6-7a. 16, 20. ℟1", "Cry out with joy to God, all the earth.", "./sheetMusic/psalms/Psalm - 6th Sunday of Easter (A).pdf")
+new Psalm("69(68)", "8-10. 14, 17. 33-35. ℟14c", "In your great mercy, answer me, O Lord.", "", "./sheetMusic/psalms/Psalm 69(68)/Psalm 69(68).jpg", { "SATB": "./audio/psalms/Psalm 69(68)/Psalm 69(68) - SATB.mp3", "Melody": "./audio/psalms/Psalm 69(68)/Psalm 69(68) - Melody.mp3", "Alto": "./audio/psalms/Psalm 69(68)/Psalm 69(68) - Alto.mp3", "Tenor": "./audio/psalms/Psalm 69(68)/Psalm 69(68) - Tenor.mp3", "Bass": "./audio/psalms/Psalm 69(68)/Psalm 69(68) - Bass.mp3" })
+new Psalm("86(85)", "5-6. 9-10. 15-16a. ℟5a", "O Lord, you are good and forgiving.", "./sheetMusic/psalms/Psalm 86(85)/Psalm 86(85).pdf", "./sheetMusic/psalms/Psalm 86(85)/Psalm 86(85).jpg", { "SA": "./audio/psalms/Psalm 86(85)/Psalm 86(85) - SA.mp3", "Melody": "./audio/psalms/Psalm 86(85)/Psalm 86(85) - Melody.mp3", "Alto": "./audio/psalms/Psalm 86(85)/Psalm 86(85) - Alto.mp3" })
 new Psalm("95(94)", "1-2. 6-7b. 7c-9. ℟7c, 8a", "O that today you would listen to his voice! ‘Harden not your hearts.’", "./sheetMusic/psalms/Psalm 95(94)/Psalm 95(94) - Piano.pdf", "./sheetMusic/psalms/Psalm 95(94)/Psalm 95(94) - SATB.jpg", { "SATB": "./audio/psalms/Psalm 95(94)/Psalm 95(94) - SATB.mp3", "Melody": "./audio/psalms/Psalm 95(94)/Psalm 95(94) - Melody.mp3", "Alto": "./audio/psalms/Psalm 95(94)/Psalm 95(94) - Alto.mp3", "Tenor": "./audio/psalms/Psalm 95(94)/Psalm 95(94) - Tenor.mp3", "Bass": "./audio/psalms/Psalm 95(94)/Psalm 95(94) - Bass.mp3", "Piano": "./audio/psalms/Psalm 95(94)/Psalm 95(94) - Piano.mp3" })
+new Psalm("100(99)", "1-2. 3. 5. ℟3c", "We are his people, the sheep of his flock.", "", "./sheetMusic/psalms/Psalm 100(99)/Psalm 100(99).jpg", { "SATB": "./audio/psalms/Psalm 100(99)/Psalm 100(99) - SATB.mp3", "Melody": "./audio/psalms/Psalm 100(99)/Psalm 100(99) - Melody.mp3", "Alto": "./audio/psalms/Psalm 100(99)/Psalm 100(99) - Alto.mp3", "Tenor": "./audio/psalms/Psalm 100(99)/Psalm 100(99) - Tenor.mp3", "Bass": "./audio/psalms/Psalm 100(99)/Psalm 100(99) - Bass.mp3" })
 new Psalm("103(102)", "1-2. 3-4. 9-10. 11-12. ℟8", "The Lord is compassionate and gracious, slow to anger and rich in mercy.", "./sheetMusic/psalms/Psalm 103(102)/Psalm 103(102).pdf", "./sheetMusic/psalms/Psalm 103(102)/Psalm 103(102).jpg", { "SATB": "./audio/psalms/Psalm 103(102)/Psalm 103(102) - SATB.mp3", "Melody": "./audio/psalms/Psalm 103(102)/Psalm 103(102) - Melody.mp3", "Alto": "./audio/psalms/Psalm 103(102)/Psalm 103(102) - Alto.mp3", "Tenor": "./audio/psalms/Psalm 103(102)/Psalm 103(102) - Tenor.mp3", "Bass": "./audio/psalms/Psalm 103(102)/Psalm 103(102) - Bass.mp3", "Piano": "./audio/psalms/Psalm 103(102)/Psalm 103(102) - Piano.mp3" })
+new Psalm("104(103)", "1ab, 24ac. 29b-30. 31, 34. ℟ cf. 30", "Send forth your spirit, O Lord, and renew the face of the earth.", "./sheetMusic/psalms/Psalm 104(103)/Psalm 104(103) - SATB.pdf", "./sheetMusic/psalms/Psalm 104(103)/Psalm 104(103).jpg", { "SATB": "./audio/psalms/Psalm 104(103)/Psalm 104(103) - SATB.mp3", "Melody": "./audio/psalms/Psalm 104(103)/Psalm 104(103) - Melody.mp3", "Alto": "./audio/psalms/Psalm 104(103)/Psalm 104(103) - Alto.mp3", "Tenor": "./audio/psalms/Psalm 104(103)/Psalm 104(103) - Tenor.mp3", "Bass": "./audio/psalms/Psalm 104(103)/Psalm 104(103) - Bass.mp3" })
+new Psalm("119(118)", "57, 72. 76-77. 127-128. 129-130. ℟97a", "O Lord, how I love your law!", "./sheetMusic/psalms/Psalm 119(118)/Psalm 119(118).pdf", "", "")
+new Psalm("138(137)", "1-2a. 2bc, 3. 6, 8bc. ℟8bc", "O Lord, your merciful love is eternal; discard not the work of your hands.")
+new Psalm("145(144)", "1-2. 8-9. 10-11. 13c-14. ℟ cf. 1", "I will bless your name for ever, my God and king.", "./sheetMusic/psalms/Psalm 145(144)/Psalm 145(144).pdf")
+new Psalm("145(144)", "8-9. 15-16. 17-18. ℟ cf. 16", "You open your hand and fulfil us, O Lord.", "./sheetMusic/psalms/Psalm 145(144)v2/Psalm 145(144)v2.pdf", "./sheetMusic/psalms/Psalm 145(144)v2/Psalm 145(144)v2.jpg", { "SATB": "./audio/psalms/Psalm 145(144)v2/Psalm 145(144)v2 - SATB.mp3", "Melody": "./audio/psalms/Psalm 145(144)v2/Psalm 145(144)v2 - Melody.mp3", "Alto": "./audio/psalms/Psalm 145(144)v2/Psalm 145(144)v2 - Alto.mp3", "Tenor": "./audio/psalms/Psalm 145(144)v2/Psalm 145(144)v2 - Tenor.mp3", "Bass": "./audio/psalms/Psalm 145(144)v2/Psalm 145(144)v2 - Bass.mp3" })
+new Psalm("145(144)", "2-3. 8-9. 17-18. ℟18a", "The Lord is close to all who call him.")
+new Psalm("147", "12-13. 14-15. 19-20. ℟12a", "O Jerusalem, glorify the Lord!", "./sheetMusic/psalms/Psalm 147/Psalm 147 - SATB.pdf", "./sheetMusic/psalms/Psalm 147/Psalm 147.jpg", { "SATB": "./audio/psalms/Psalm 147/Psalm 147 - SATB.mp3", "Melody": "./audio/psalms/Psalm 147/Psalm 147 - Melody.mp3", "Alto": "./audio/psalms/Psalm 147/Psalm 147 - Alto.mp3", "Tenor": "./audio/psalms/Psalm 147/Psalm 147 - Tenor.mp3", "Bass": "./audio/psalms/Psalm 147/Psalm 147 - Bass.mp3" })
 
 new AlleluiaVerse("John 14:18", "I will not leave you as orphans, says the Lord.", "I am going away and I will come to you, and your hearts will rejoice.")
 new AlleluiaVerse("unknown", "Come, Holy Spirit, fill the hearts of your faithful", "and kindle in them the fire of your love.")
@@ -583,11 +584,24 @@ new Liturgy(new Date("16 Aug 2026"), "The Assumption of the Blessed Virgin Mary"
 new Liturgy(new Date("23 Aug 2026"), "21st Sunday in Ordinary Time", "A", "Chris", ["All my hope on God is founded", "Praise to the Lord, the Almighty", "Be still for the presence of the Lord", "Holy Virgin, by God's decree"], ["Out of Darkness", "Bread of life", "The summons"], "138(137)")
 new Liturgy(new Date("30 Aug 2026"), "22nd Sunday in Ordinary Time", "A", "Chris", ["Dear Lord and father of mankind", "O God you search me", "Christ be our light", "O lady full of God's own grace"], ["Brother sister let me serve you", "Out of darkness", "The summons", "Unless a grain of wheat"])
 new Liturgy(new Date("6 Sept 2026"), "23rd Sunday in Ordinary Time", "A", "Chris", ["Gather us in", "Brother, sister let me serve you", "This is my body", "Sing of Mary, pure and lowly"], ["Bread of life"], "95(94)")
-new Liturgy(new Date("13 Sept 2026"), "24th Sunday in Ordinary Time", "A", "Chris", ["freely freely", "Make me a channel of your peace", "O let all who thirst", "As I kneel before you"], ["Taste and see", "ubi caritas", "My God loves me"], "103(102)")
+new Liturgy(new Date("13 Sept 2026"), "24th Sunday in Ordinary Time", "A", "Chris", ["freely freely", "Make me a channel of your peace", "O let all who thirst", "As I kneel before you"], ["Taste and see", "ubi caritas", "My God loves me"], "The Lord is compassionate and gracious, slow to anger and rich in mercy.")
+new Liturgy(new Date("20 Sept 2026"), "25th Sunday in Ordinary Time", "A", "Julian", ["Praise my soul, the king of heaven", "Immortal invisible", "The servant King", "Seek ye first"], "", "The Lord is close to all who call him.")
+new Liturgy(new Date("27 Sept 2026"), "26th Sunday in Ordinary Time", "A", "Julian", ["At the name of Jesus", "Lead us heavenly father", "A new commandment", "O purest of creatures"])
+new Liturgy(new Date("4 Oct 2026"), "27th Sunday in Ordinary Time", "A", "Julian", ["All creatures of our God and king", "Alleluia sing to Jesus", "My song is love unknown", "Hail queen of heaven"])
+new Liturgy(new Date("11 Oct 2026"), "28th Sunday in Ordinary Time", "A", "Julian", ["Be thou my vision", "All people that on earth do dwell", "The Lord's my shepherd", "Sing of Mary, pure and lowly"])
+new Liturgy(new Date("18 Oct 2026"), "29th Sunday in Ordinary Time", "A", "Julian", ["Praise to the Lord, the almighty", "O worship the King", "Make me a channel of your peace", "Bring flowers to the rarest"])
+new Liturgy(new Date("25 Oct 2026"), "30th Sunday in Ordinary Time", "A", "Julian", ["Love divine all loves excelling", "Dear Lord and Father of mankind", "O perfect love", "As I kneel before you"])
+new Liturgy(new Date("1 Nov 2026"), "All saints day", "A", "Julian", ["For all the saints", "Take my life and let it be", "For the healing of the nations", "Daily daily sing to Mary"])
+new Liturgy(new Date("8 Nov 2026"), "Remembrance Sunday", "A", "Julian", ["The day thou gavest", "O God our help in ages past", "O come and mourn with me a while", "He who would valiant be"])
+new Liturgy(new Date("15 Nov 2026"), "33rd Sunday in Ordinary Time", "A", "Julian", ["Hills of the North rejoice", "Sweet heart of Jesus", "All that I am", "Immaculate Mary"])
+new Liturgy(new Date("22 Nov 2026"), "Christ the King", "A", "Julian", ["Hail redeemer King divine", "Crown him with many crowns", "Lord for tomorrow and its needs", "Our God reigns"])
+new Liturgy(new Date("29 Nov 2026"), "1st Sunday of Advent", "A", "Julian", ["Guide me O thou great redeemer", "Hail to the Lord's annoited", "freely freely", "Christ be our light"])
+new Liturgy(new Date("6 Dec 2026"), "2nd Sunday of Advent", "A", "Julian", ["Tell out my soul", "O come, O come emmanuel", "Hark! a herald voice is calling", "O lady, full of God's own grace"])
+
 //2nd/ 6th/ 17th /20th (A) Sunday of ordinary - 26th of July: "Teach Me, O God (Christopher Walker)"
 
 let nextLiturgy = allLiturgies.filter(x => x.date >= todaysDate);
-// nextLiturgy = [allLiturgies[allLiturgies.length - 1]]; //show latest liturgy on opening page (for easier adding)
+// nextLiturgy = [allLiturgies[allLiturgies.length - 12]]; //show latest liturgy on opening page (for easier adding)
 
 
 
