@@ -1175,7 +1175,6 @@ document.querySelector(".liturgyPlan .flex-container").addEventListener("click",
 });
 
 
-
 function checkAndPopulateInstrumentals(number) {
     const futureContent = wrapper.querySelectorAll('.futureServices li.hymnOccasion')
     // console.log(nextLiturgy[number].instrumental.length);
