@@ -1063,6 +1063,16 @@ document.querySelector(".liturgyPlan .flex-container").addEventListener("click",
 
     switch (clickedText) {
         case "Acclamations":
+            generateLiturgyButtons("remove")
+            if (document.getElementById("extra") !== null) {
+                document.getElementById("extra").remove();
+            }
+            if (document.getElementById("nextPsalm") !== null) {
+                document.getElementById("nextPsalm").remove();
+            }
+            if (document.getElementById("alleluia") !== null) {
+                document.getElementById("alleluia").remove();
+            }
 
             liturgyPlan.querySelector(".acclamationsTitle").classList.add("selected");
             // liturgyPlan.querySelector(".hymnsTitle", ".hymns").classList.remove("selected");
@@ -1076,6 +1086,7 @@ document.querySelector(".liturgyPlan .flex-container").addEventListener("click",
             }
             break;
         case "Next":
+            generateLiturgyButtons("remove")
             // liturgyPlan.querySelector(".acclamationsTitle").classList.remove("selected");
             liturgyPlan.querySelector(".hymnsTitle", ".hymns").classList.add("selected");
             // liturgyPlan.querySelector(".acclamations").classList.remove("selected");
@@ -1087,6 +1098,7 @@ document.querySelector(".liturgyPlan .flex-container").addEventListener("click",
             }
             break;
         case "Upcoming":
+            generateLiturgyButtons("remove")
             liturgyPlan.querySelector(".container").classList.add("hidden"); //upcoming
             liturgyPlan.querySelector(".easterTitle").classList.add("selected");
             liturgyPlan.querySelector(".futureServices").classList.add("selected");
@@ -1119,6 +1131,16 @@ document.querySelector(".liturgyPlan .flex-container").addEventListener("click",
             break;
 
         case "Offertory Extras":
+            generateLiturgyButtons("remove")
+            if (document.getElementById("extra") !== null) {
+                document.getElementById("extra").remove();
+            }
+            if (document.getElementById("nextPsalm") !== null) {
+                document.getElementById("nextPsalm").remove();
+            }
+            if (document.getElementById("alleluia") !== null) {
+                document.getElementById("alleluia").remove();
+            }
             liturgyPlan.querySelector(".container").classList.add("hidden"); //upcoming
             liturgyPlan.querySelector(".container").classList.add("hidden");
             liturgyPlan.querySelector(".extras").classList.add("selected");
@@ -1131,9 +1153,29 @@ document.querySelector(".liturgyPlan .flex-container").addEventListener("click",
             break;
         // console.log(extra);
         // (ExtrasTitle, ExtrasIMG, ExtrasPDF, ExtrasAudio, Timer)
+
+        case "Full Liturgy Plan":
+            document.getElementById("fullLiturgyBtn").classList.add("selected");
+            liturgyPlan.querySelector(".container").classList.add("hidden");
+            if (document.getElementById("extra") !== null) {
+                document.getElementById("extra").remove();
+            }
+            if (document.getElementById("nextPsalm") !== null) {
+                document.getElementById("nextPsalm").remove();
+            }
+            if (document.getElementById("alleluia") !== null) {
+                document.getElementById("alleluia").remove();
+            }
+            // liturgyPlan.querySelector("hr").remove();
+            // liturgyPlan.querySelector("h3.allHymns").remove();
+            generateLiturgyButtons();
+        // liturgyPlan.getElementById("fullLiturgyBtn").classList.add("selected");
     }
     psalmOrNot();
 });
+
+
+
 function checkAndPopulateInstrumentals(number) {
     const futureContent = wrapper.querySelectorAll('.futureServices li.hymnOccasion')
     // console.log(nextLiturgy[number].instrumental.length);
@@ -2089,3 +2131,34 @@ function hymnSearch() {
     hymnSelect();
 
 }
+
+function addArticle() {
+    const newArticle = document.createElement("article");
+    newArticle.innerHTML =
+        `<h2 class="dateAndOccasion">19/20 September - 25th Sunday of Ordinary Time</h2>
+            <div class="container massHymns">
+                <div class="container hymnDetails">
+                    <h3 class="hymnPosition">Entrance</h3>
+                    <h4 class="hymnNumber">807</h4>
+                    <h5 class="hymnTitle">Praise my soul, the King of Heaven</h5>
+                </div>
+                <div class="container hymnDetails">
+                    <h3 class="hymnPosition">Entrance</h3>
+                    <h4 class="hymnNumber">807</h4>
+                    <h5 class="hymnTitle">Praise my soul, the King of Heaven</h5>
+                </div>
+                <div class="container hymnDetails">
+                    <h3 class="hymnPosition">Entrance</h3>
+                    <h4 class="hymnNumber">807</h4>
+                    <h5 class="hymnTitle">Praise my soul, the King of Heaven</h5>
+                </div>
+                <div class="container hymnDetails">
+                    <h3 class="hymnPosition">Entrance</h3>
+                    <h4 class="hymnNumber">807</h4>
+                    <h5 class="hymnTitle">Praise my soul, the King of Heaven</h5>
+                </div>
+            </div>`
+    document.querySelector(".wrapper.liturgyPlan").append(newArticle);
+}
+// addArticle();
+
