@@ -1217,6 +1217,34 @@ document.querySelector(".liturgyPlan .flex-container").addEventListener("click",
     }
     psalmOrNot();
 });
+function generateLiturgyButtons(remove) {
+    const liturgyButtonContainer = document.createElement("div");
+    liturgyButtonContainer.classList.add("container", "liturgyMonths", "no-print");
+    liturgyButtonContainer.id = "liturgyMonthsContainer"
+    liturgyButtonContainer.innerHTML = `
+    <button class="month" id="january">January</button>
+            <button class="month" id="february">February</button>
+            <button class="month" id="march">March</button>
+            <button class="month" id="april">April</button>
+            <button class="month" id="may">May</button>
+            <button class="month" id="june">June</button>
+            <button class="month" id="july">July</button>
+            <button class="month" id="august">August</button>
+            <button class="month" id="september">September</button>
+            <button class="month" id="october">October</button>
+            <button class="month" id="november">November</button>
+            <button class="month" id="december">December</button>
+    `
+    if (remove == "remove" && document.getElementById("liturgyMonthsContainer") !== null) { document.getElementById("liturgyMonthsContainer").remove() }
+    else if (remove !== "remove") {
+        liturgyPlan.querySelector(".container2").append(liturgyButtonContainer);
+        document.getElementById("liturgyMonthsContainer").addEventListener("click", (e) => {
+            console.log(e.target);
+        })
+    }
+}
+
+
 function checkAndPopulateInstrumentals(number) {
     const futureContent = wrapper.querySelectorAll('.futureServices li.hymnOccasion')
     // console.log(nextLiturgy[number].instrumental.length);
