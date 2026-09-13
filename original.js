@@ -1217,6 +1217,7 @@ document.querySelector(".liturgyPlan .flex-container").addEventListener("click",
     }
     psalmOrNot();
 });
+const fullLiturgyPlans = [];
 function generateLiturgyButtons(remove) {
     const liturgyButtonContainer = document.createElement("div");
     liturgyButtonContainer.classList.add("container", "liturgyMonths", "no-print");
@@ -1239,7 +1240,25 @@ function generateLiturgyButtons(remove) {
     else if (remove !== "remove") {
         liturgyPlan.querySelector(".container2").append(liturgyButtonContainer);
         document.getElementById("liturgyMonthsContainer").addEventListener("click", (e) => {
-            console.log(e.target);
+
+            //toggle 'active' classname to clicked button
+            if (e.target.localName != "button") { return; } else { e.target.classList.toggle("active") }
+            //Filter for liturgies for each month (jan = 0 etc, 126 = 2026)
+            switch (e.target.id) {
+                case "january":
+                    if (document.getElementById("january").classList.contains("active")) {
+                        const liturgies = allLiturgies.filter(x => x.date.getMonth() == 0 && x.date.getYear() == 126)
+                        console.log(liturgies.length);
+
+                        fullLiturgyPlans.push(liturgies);
+
+
+                    }
+                    break;
+
+                default:
+                    break;
+            }
         })
     }
 }
