@@ -1129,6 +1129,7 @@ document.querySelector(".liturgyPlan .flex-container").addEventListener("click",
             break;
         case "Next":
             // generateLiturgyButtons("remove")
+            generateLiturgyButtons("remove")
             // liturgyPlan.querySelector(".acclamationsTitle").classList.remove("selected");
             liturgyPlan.querySelector(".hymnsTitle", ".hymns").classList.add("selected");
             // liturgyPlan.querySelector(".acclamations").classList.remove("selected");
@@ -1140,7 +1141,7 @@ document.querySelector(".liturgyPlan .flex-container").addEventListener("click",
             }
             break;
         case "Upcoming":
-            // generateLiturgyButtons("remove")
+            generateLiturgyButtons("remove")
             liturgyPlan.querySelector(".container").classList.add("hidden"); //upcoming
             liturgyPlan.querySelector(".easterTitle").classList.add("selected");
             liturgyPlan.querySelector(".futureServices").classList.add("selected");
@@ -1216,8 +1217,6 @@ document.querySelector(".liturgyPlan .flex-container").addEventListener("click",
     }
     psalmOrNot();
 });
-
-
 function checkAndPopulateInstrumentals(number) {
     const futureContent = wrapper.querySelectorAll('.futureServices li.hymnOccasion')
     // console.log(nextLiturgy[number].instrumental.length);

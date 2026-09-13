@@ -1361,3 +1361,83 @@ audio {
 .product__mediaPlayer {
 	padding: 1rem;
 }
+@media print {
+	@page {
+		/* Sets the paper size to A4 and orientation to landscape */
+		size: A4 portrait;
+		/* Removes default browser headers/footers (optional) */
+		margin: 0rem;
+		/* margin-right: 1rem;  */
+	}
+
+	body {
+		/* Ensures the layout expands properly */
+		width: 100%;
+		/* Optional: Sets your content's printable boundaries */
+		box-sizing: border-box;
+		align-items: center;
+	}
+	.no-print {
+		display: none !important;
+	}
+	.title {
+	}
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+/* body {
+	display: flex;
+	flex-direction: column;
+
+	height: 100dvh;
+	width: 100%;
+
+} */
+div.title {
+	/* margin-bottom: 1rem; */
+	width: 100%;
+	grid-column: span 2;
+}
+/* h1 {
+	
+	text-align: left;
+} */
+div.container.liturgyMonths {
+	grid-column: span 2;
+	display: flex;
+	justify-content: space-between;
+}
+div.wrapper.liturgyPlan {
+	background-color: blue;
+	display: grid;
+	grid-template-columns: min-content min-content;
+	width: max-content;
+	gap: 1rem;
+}
+article {
+	background-color: rgba(144, 238, 144, 0.265);
+	border: solid 2px;
+	/* margin: 1rem; */
+	border-radius: 10px;
+	width: max-content;
+	padding: 0.5rem;
+}
+h2.dateAndOccasion {
+	/* margin:0; */
+	font-size: medium;
+}
+div.container.massHymns {
+	display: flex;
+	flex-direction: column;
+	gap: 0.25rem;
+	margin: 0.5rem;
+}
+div.container.hymnDetails {
+	display: flex;
+	gap: 1rem;
+	align-items: baseline;
+}
