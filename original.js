@@ -174,7 +174,7 @@ new Psalm("104(103)", "1ab, 24ac. 29b-30. 31, 34. ℟ cf. 30", "Send forth your 
 new Psalm("119(118)", "57, 72. 76-77. 127-128. 129-130. ℟97a", "O Lord, how I love your law!", "./sheetMusic/psalms/Psalm 119(118)/Psalm 119(118).pdf", "", "")
 new Psalm("138(137)", "1-2a. 2bc, 3. 6, 8bc. ℟8bc", "O Lord, your merciful love is eternal; discard not the work of your hands.")
 new Psalm("145(144)", "1-2. 8-9. 10-11. 13c-14. ℟ cf. 1", "I will bless your name for ever, my God and king.", "./sheetMusic/psalms/Psalm 145(144)/Psalm 145(144).pdf")
-new Psalm("145(144)", "8-9. 15-16. 17-18. ℟ cf. 16", "You open your hand and fulfil us, O Lord.", "./sheetMusic/psalms/Psalm 145(144)v2/Psalm 145(144)v2.pdf", "./sheetMusic/psalms/Psalm 145(144)v2/Psalm 145(144)v2.jpg", { "SATB": "./audio/psalms/Psalm 145(144)v2/Psalm 145(144)v2 - SATB.mp3", "Melody": "./audio/psalms/Psalm 145(144)v2/Psalm 145(144)v2 - Melody.mp3", "Alto": "./audio/psalms/Psalm 145(144)v2/Psalm 145(144)v2 - Alto.mp3", "Tenor": "./audio/psalms/Psalm 145(144)v2/Psalm 145(144)v2 - Tenor.mp3", "Bass": "./audio/psalms/Psalm 145(144)v2/Psalm 145(144)v2 - Bass.mp3" })
+new Psalm("145(144)", "8-9. 15-16. 17-18. ℟ cf. 16", "You open your hand and fulfil us, O Lord.", "./sheetMusic/psalms/Psalm 145(144)/Psalm 145(144)v2.pdf", "./sheetMusic/psalms/Psalm 145(144)    /Psalm 145(144)v2.jpg", { "SATB": "./audio/psalms/Psalm 145(144)v2/Psalm 145(144)v2 - SATB.mp3", "Melody": "./audio/psalms/Psalm 145(144)v2/Psalm 145(144)v2 - Melody.mp3", "Alto": "./audio/psalms/Psalm 145(144)v2/Psalm 145(144)v2 - Alto.mp3", "Tenor": "./audio/psalms/Psalm 145(144)v2/Psalm 145(144)v2 - Tenor.mp3", "Bass": "./audio/psalms/Psalm 145(144)v2/Psalm 145(144)v2 - Bass.mp3" })
 new Psalm("145(144)", "2-3. 8-9. 17-18. ℟18a", "The Lord is close to all who call him.", "./sheetMusic/psalms/Psalm 145(144)/Psalm 145(144)v3.pdf", "./sheetMusic/psalms/Psalm 145(144)/Psalm 145(144)v3.jpg")
 new Psalm("147", "12-13. 14-15. 19-20. ℟12a", "O Jerusalem, glorify the Lord!", "./sheetMusic/psalms/Psalm 147/Psalm 147 - SATB.pdf", "./sheetMusic/psalms/Psalm 147/Psalm 147.jpg", { "SATB": "./audio/psalms/Psalm 147/Psalm 147 - SATB.mp3", "Melody": "./audio/psalms/Psalm 147/Psalm 147 - Melody.mp3", "Alto": "./audio/psalms/Psalm 147/Psalm 147 - Alto.mp3", "Tenor": "./audio/psalms/Psalm 147/Psalm 147 - Tenor.mp3", "Bass": "./audio/psalms/Psalm 147/Psalm 147 - Bass.mp3" })
 
@@ -1063,7 +1063,7 @@ document.querySelector(".liturgyPlan .flex-container").addEventListener("click",
 
     switch (clickedText) {
         case "Acclamations":
-            generateLiturgyButtons("remove")
+            // generateLiturgyButtons("remove")
             if (document.getElementById("extra") !== null) {
                 document.getElementById("extra").remove();
             }
@@ -1086,7 +1086,7 @@ document.querySelector(".liturgyPlan .flex-container").addEventListener("click",
             }
             break;
         case "Next":
-            generateLiturgyButtons("remove")
+            // generateLiturgyButtons("remove")
             // liturgyPlan.querySelector(".acclamationsTitle").classList.remove("selected");
             liturgyPlan.querySelector(".hymnsTitle", ".hymns").classList.add("selected");
             // liturgyPlan.querySelector(".acclamations").classList.remove("selected");
@@ -1098,7 +1098,7 @@ document.querySelector(".liturgyPlan .flex-container").addEventListener("click",
             }
             break;
         case "Upcoming":
-            generateLiturgyButtons("remove")
+            // generateLiturgyButtons("remove")
             liturgyPlan.querySelector(".container").classList.add("hidden"); //upcoming
             liturgyPlan.querySelector(".easterTitle").classList.add("selected");
             liturgyPlan.querySelector(".futureServices").classList.add("selected");
@@ -1131,7 +1131,7 @@ document.querySelector(".liturgyPlan .flex-container").addEventListener("click",
             break;
 
         case "Offertory Extras":
-            generateLiturgyButtons("remove")
+            // generateLiturgyButtons("remove")
             if (document.getElementById("extra") !== null) {
                 document.getElementById("extra").remove();
             }
