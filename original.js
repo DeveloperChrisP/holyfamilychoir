@@ -1741,17 +1741,20 @@ accordion.addEventListener("click", (e) => {
             partTitle = partTitle.toUpperCase();
         }
         const audioDescription = title + " - " + partTitle;
-        let filename = "./audio/" + title.toLowerCase() + "/" + title.toLowerCase()/*.replace(/ /g, "")*/ + " - " + partTitle.toLowerCase() + ".mp3";
+        const filename = "./audio/" + title.toLowerCase() + "/" + title.toLowerCase()/*.replace(/ /g, "")*/ + " - " + partTitle.toLowerCase() + ".mp3";
+
 
 
         // ./audio/gloria/gloria - melody.mp3
-        if (document.querySelector(".liturgyPlan button").classList.contains("selected") || document.querySelector(".liturgyPlan .easterTitle").classList.contains("selected")) {
+        if (document.querySelector(".liturgyPlan button").classList.contains("selected") || document.querySelector(".liturgyPlan .acclamationsTitle").classList.contains("selected")) {
             filename = "./audio/" + "hymns/" + title.toLowerCase() + "/" + title.toLowerCase()/*.replace(/ /g, "")*/ + " - " + partTitle.toLowerCase() + ".mp3";
+
 
         } else {
             filename = "./audio/" + "acclamations/" + massTitle.toLowerCase() + "/" + title.toLowerCase() + "/" + massTitle.toLowerCase() + " - " + title.toLowerCase()/*.replace(/ /g, "")*/ + " - " + partTitle.toLowerCase() + ".mp3";
 
         }
+
 
         //  filename = "not happening"
         // }
