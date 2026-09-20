@@ -189,13 +189,13 @@ new AlleluiaVerse("unknown2", "The seed is the word of God, Christ the sower; al
 new AlleluiaVerse("Matthew 11:25", "I thank you, Father, Lord of heaven and earth,", "you have revealed the secrets of the kingdom to little children.")
 new AlleluiaVerse("Matthew 4:4b", "One does not live by bread alone,", "but by every word that comes forth from the mouth of God.")
 
-new Acclamation("Mass of Christ the Saviour", "Glory to God", "./sheetMusic/acclamations/Dan Schutte Mass/Glory to God/Dan Schutte - Glory To God.pdf", ["sab", "alto", "bass", "piano"], "https://www.youtube.com/embed/oeKKr2xIFMg?si=UTR02G3kyx-Hus-A")
-new Acclamation("Mass of Christ the Saviour", "Gospel Acclamation Alleluia", "", ["sab", "melody", "alto", "bass", "piano"], "./sheetMusic/acclamations/Dan Schutte Mass/Alleluia/Dan Schutte - Gospel Acclamation_ Alleluia.pdf")
-new Acclamation("Mass of Christ the Saviour", "Lenten Gospel Acclamation", "./sheetMusic/acclamations/Dan Schutte Mass/Lenten Gospel Acclamation/Dan Schutte - Lenten Gospel Acclamation.pdf", ["sab", "melody", "alto", "bass", "piano"], "")
-new Acclamation("Mass of Christ the Saviour", "Holy holy", "./sheetMusic/acclamations/Dan Schutte Mass/Holy Holy/Dan Schutte - Holy Holy.pdf", ["SAB", "melody", "alto", "bass"], "https://www.youtube.com/embed/LsFxjynY5dw?si=-xN5UmeR6stjopkt")
-new Acclamation("Mass of Christ the Saviour", "We proclaim your death", "./sheetMusic/acclamations/Dan Schutte Mass/Memorial Acclamations/Dan Schutte - We Proclaim Your Death.pdf", ["piano", "melody", "bass", "alto", "sab"], "https://www.youtube.com/embed/slLLVzWzQWg?si=2LqjV5sjar3PxuSD")
-new Acclamation("Mass of Christ the Saviour", "When we eat this bread", "./sheetMusic/acclamations/Dan Schutte Mass/Memorial Acclamations/Dan Schutte - When We Eat This Bread.pdf", ["piano", "melody", "bass", "alto", "sab"], "https://www.youtube.com/embed/I-72zONivNQ?si=fvRRp56uvagvTfRm")
-new Acclamation("Mass of Christ the Saviour", "Lamb of God", "./sheetMusic/acclamations/Dan Schutte Mass/Lamb of God/Dan Schutte - Lamb Of God.pdf", ["SAB", "melody", "alto", "bass"], "https://www.youtube.com/embed/PBuZqtPLcIo?si=0HLxaD3bYyvmlqb8")
+new Acclamation("Mass of Christ the Saviour", "Glory to God", "./music/acclamations/Dan Schutte Mass/Glory to God/sheetmusic/Dan Schutte - Glory To God.pdf", { "sab": "./music/acclamations/Dan Schutte Mass/Glory to God/audio/mass of christ the saviour - glory to god - sab.mp3", "alto": "./music/acclamations/Dan Schutte Mass/Glory to God/audio/mass of christ the saviour - glory to god - alto.mp3", "bass": "./music/acclamations/Dan Schutte Mass/Glory to God/audio/mass of christ the saviour - glory to god - bass.mp3", "piano": "./music/acclamations/Dan Schutte Mass/Glory to God/audio/mass of christ the saviour - glory to god - piano.mp3" }, "https://www.youtube.com/embed/oeKKr2xIFMg?si=UTR02G3kyx-Hus-A")
+new Acclamation("Mass of Christ the Saviour", "Gospel Acclamation Alleluia", "./music/acclamations/Dan Schutte Mass/Alleluia/sheetmusic/Dan Schutte - Gospel Acclamation_ Alleluia.pdf", { "sab": "./music/acclamations/Dan Schutte Mass/Alleluia/audio/mass of christ the saviour - gospel acclamation alleluia - sab.mp3", "melody": "./music/acclamations/Dan Schutte Mass/Alleluia/audio/mass of christ the saviour - gospel acclamation alleluia - melody.mp3", "alto": "./music/acclamations/Dan Schutte Mass/Alleluia/audio/mass of christ the saviour - gospel acclamation alleluia - alto.mp3", "bass": "./music/acclamations/Dan Schutte Mass/Alleluia/audio/mass of christ the saviour - gospel acclamation alleluia - bass.mp3", "piano": "./music/acclamations/Dan Schutte Mass/Alleluia/audio/mass of christ the saviour - gospel acclamation alleluia - piano.mp3" }, "")
+new Acclamation("Mass of Christ the Saviour", "Lenten Gospel Acclamation", "./music/acclamations/Dan Schutte Mass/Lenten Gospel Acclamation/sheetmusic/Dan Schutte - Lenten Gospel Acclamation.pdf", { "sab": "./music/acclamations/Dan Schutte Mass/Lenten Gospel Acclamation/audio/mass of christ the saviour - lenten gospel acclamation - sab.mp3", "melody": "./music/acclamations/Dan Schutte Mass/Lenten Gospel Acclamation/audio/mass of christ the saviour - lenten gospel acclamation - melody.mp3", "alto": "./music/acclamations/Dan Schutte Mass/Lenten Gospel Acclamation/audio/mass of christ the saviour - lenten gospel acclamation - alto.mp3", "bass": "./music/acclamations/Dan Schutte Mass/Lenten Gospel Acclamation/audio/mass of christ the saviour - lenten gospel acclamation - bass.mp3", "piano": "./music/acclamations/Dan Schutte Mass/Lenten Gospel Acclamation/audio/mass of christ the saviour - lenten gospel acclamation - piano.mp3" }, "")
+new Acclamation("Mass of Christ the Saviour", "Holy holy", "./music/acclamations/Dan Schutte Mass/Holy Holy/sheetmusic/Dan Schutte - Holy Holy.pdf", { "SAB": "./music/acclamations/Dan Schutte Mass/Holy Holy/audio/mass of christ the saviour - holy holy - sab.mp3", "melody": "./music/acclamations/Dan Schutte Mass/Holy Holy/audio/mass of christ the saviour - holy holy - melody.mp3", "alto": "./music/acclamations/Dan Schutte Mass/Holy Holy/audio/mass of christ the saviour - holy holy - alto.mp3", "bass": "./music/acclamations/Dan Schutte Mass/Holy Holy/audio/mass of christ the saviour - holy holy - bass.mp3" }, "https://www.youtube.com/embed/LsFxjynY5dw?si=-xN5UmeR6stjopkt")
+new Acclamation("Mass of Christ the Saviour", "We proclaim your death", "./music/acclamations/Dan Schutte Mass/Memorial Acclamations/We proclaim your death/sheetmusic/Dan Schutte - We Proclaim Your Death.pdf", { "piano": "./music/acclamations/Dan Schutte Mass/Memorial Acclamations/We proclaim your death/audio/mass of christ the saviour - we proclaim your death - piano.mp3", "melody": "./music/acclamations/Dan Schutte Mass/Memorial Acclamations/We proclaim your death/audio/mass of christ the saviour - we proclaim your death - melody.mp3", "bass": "./music/acclamations/Dan Schutte Mass/Memorial Acclamations/We proclaim your death/audio/mass of christ the saviour - we proclaim your death - bass.mp3", "alto": "./music/acclamations/Dan Schutte Mass/Memorial Acclamations/We proclaim your death/audio/mass of christ the saviour - we proclaim your death - alto.mp3", "sab": "./music/acclamations/Dan Schutte Mass/Memorial Acclamations/We proclaim your death/audio/mass of christ the saviour - we proclaim your death - sab.mp3" }, "https://www.youtube.com/embed/slLLVzWzQWg?si=2LqjV5sjar3PxuSD")
+new Acclamation("Mass of Christ the Saviour", "When we eat this bread", "./music/acclamations/Dan Schutte Mass/Memorial Acclamations/When we eat this bread/sheetmusic/Dan Schutte - When We Eat This Bread.pdf", { "piano": "./music/acclamations/Dan Schutte Mass/Memorial Acclamations/When we eat this bread/audio/mass of christ the saviour - when we eat this bread - piano.mp3", "melody": "./music/acclamations/Dan Schutte Mass/Memorial Acclamations/When we eat this bread/audio/mass of christ the saviour - when we eat this bread - melody.mp3", "bass": "./music/acclamations/Dan Schutte Mass/Memorial Acclamations/When we eat this bread/audio/mass of christ the saviour - when we eat this bread - bass.mp3", "alto": "./music/acclamations/Dan Schutte Mass/Memorial Acclamations/When we eat this bread/audio/mass of christ the saviour - when we eat this bread - alto.mp3", "sab": "./music/acclamations/Dan Schutte Mass/Memorial Acclamations/When we eat this bread/audio/mass of christ the saviour - when we eat this bread - sab.mp3" }, "https://www.youtube.com/embed/I-72zONivNQ?si=fvRRp56uvagvTfRm")
+new Acclamation("Mass of Christ the Saviour", "Lamb of God", "./music/acclamations/Dan Schutte Mass/Lamb of God/sheetmusic/Dan Schutte - Lamb Of God.pdf", { "SAB": "./music/acclamations/Dan Schutte Mass/Lamb of God/audio/mass of christ the saviour - lamb of god - sab.mp3", "melody": "./music/acclamations/Dan Schutte Mass/Lamb of God/audio/mass of christ the saviour - lamb of god - melody.mp3", "alto": "./music/acclamations/Dan Schutte Mass/Lamb of God/audio/mass of christ the saviour - lamb of god - alto.mp3", "bass": "./music/acclamations/Dan Schutte Mass/Lamb of God/audio/mass of christ the saviour - lamb of god - bass.mp3" }, "https://www.youtube.com/embed/PBuZqtPLcIo?si=0HLxaD3bYyvmlqb8")
 
 new Acclamation("Mass of Creation", "Glory to God", "", "", "https://www.youtube.com/embed/bbHerWk32Vk?si=ys3OGM0_1Exjecv4")
 new Acclamation("Mass of Creation", "Holy Holy", "", "", "https://www.youtube.com/embed/2nwTK9YKWWo?si=jE6ilEY5LqOOeh7e")
@@ -1302,7 +1302,7 @@ function futureHymnsSection() {
         //further open hymns if selected
 
         else if (e.target.closest("div").classList.contains("futureHymnsOpen") && e.target.closest("details") === null) {
-            console.log(e.target.closest("details"));
+            // console.log(e.target.closest("details"));
 
 
 
@@ -1355,6 +1355,7 @@ wrapper.querySelector(".acclamations").addEventListener("click", function (e) {
 
     allHymns = originalHymns;
     allHymns = allAcclamationSettings[e.target.closest("li").classList.value].acclamation;
+    // console.log(allHymns);
 
     count = 0;
     hymnSelect();
@@ -1719,6 +1720,7 @@ accordion.addEventListener("click", (e) => {
 
 
 
+
     const activePanel = e.target.closest(".accordion_panel");
     const specificClick = e.target.closest(".closePanel");
     const audioButton = e.target.closest(".audioSelection")
@@ -1733,27 +1735,32 @@ accordion.addEventListener("click", (e) => {
     }
     else if (audioButton) {
 
+
         const allLights = audioButton.parentElement.parentElement.querySelectorAll(".audioCategory__light");
         const accordionContent = audioButton.parentElement.parentElement.parentElement;
 
         let partTitle = audioButton.innerHTML;
-        if (partTitle == "Satb") {
-            partTitle = partTitle.toUpperCase();
-        }
-        const audioDescription = title + " - " + partTitle;
-        const filename = "./audio/" + title.toLowerCase() + "/" + title.toLowerCase()/*.replace(/ /g, "")*/ + " - " + partTitle.toLowerCase() + ".mp3";
+        // partTitle = partTitle.toUpperCase();
 
+
+
+
+
+        const audioDescription = title + " - " + partTitle;
+        // const filename = "./audio/" + title.toLowerCase() + "/" + title.toLowerCase()/*.replace(/ /g, "")*/ + " - " + partTitle.toLowerCase() + ".mp3";
+        const filename = allAcclamationSettings[0].acclamation[0].vocalPart[partTitle.toLowerCase()];
+        // console.log(filename);
 
 
         // ./audio/gloria/gloria - melody.mp3
-        if (document.querySelector(".liturgyPlan button").classList.contains("selected") || document.querySelector(".liturgyPlan .acclamationsTitle").classList.contains("selected")) {
-            filename = "./audio/" + "hymns/" + title.toLowerCase() + "/" + title.toLowerCase()/*.replace(/ /g, "")*/ + " - " + partTitle.toLowerCase() + ".mp3";
+        // if (document.querySelector(".liturgyPlan button").classList.contains("selected") || document.querySelector(".liturgyPlan .acclamationsTitle").classList.contains("selected")) {
+        //     filename = "./audio/" + "hymns/" + title.toLowerCase() + "/" + title.toLowerCase()/*.replace(/ /g, "")*/ + " - " + partTitle.toLowerCase() + ".mp3";
 
 
-        } else {
-            filename = "./audio/" + "acclamations/" + massTitle.toLowerCase() + "/" + title.toLowerCase() + "/" + massTitle.toLowerCase() + " - " + title.toLowerCase()/*.replace(/ /g, "")*/ + " - " + partTitle.toLowerCase() + ".mp3";
+        // } else {
+        //     filename = "./audio/" + "acclamations/" + massTitle.toLowerCase() + "/" + title.toLowerCase() + "/" + massTitle.toLowerCase() + " - " + title.toLowerCase()/*.replace(/ /g, "")*/ + " - " + partTitle.toLowerCase() + ".mp3";
 
-        }
+        // }
 
 
         //  filename = "not happening"
@@ -1768,7 +1775,7 @@ accordion.addEventListener("click", (e) => {
 
         }
         switch (audioButton.innerHTML) {
-            case capitalize(allHymns[count].vocalPart[0]):
+            case capitalize(Object.keys(allHymns[0].vocalPart)[0]):
 
                 /* Add selection light to SATB button */
                 audioButton.parentElement.querySelector(".satb").classList.add("selected");
@@ -1779,7 +1786,7 @@ accordion.addEventListener("click", (e) => {
                 accordionContent.querySelector("#mediaPlayer__description").textContent = audioDescription;
 
                 break;
-            case capitalize(allHymns[count].vocalPart[1]):
+            case capitalize(Object.keys(allHymns[0].vocalPart)[1]):
                 /* Add selection light to SATB button */
                 audioButton.parentElement.querySelector(".melody").classList.add("selected");
                 /* Add selection light to Media Player button */
@@ -1789,7 +1796,7 @@ accordion.addEventListener("click", (e) => {
                 accordionContent.querySelector("#mediaPlayer__description").textContent = audioDescription;
 
                 break;
-            case capitalize(allHymns[count].vocalPart[2]):
+            case capitalize(Object.keys(allHymns[0].vocalPart)[2]):
                 /* Add selection light to SATB button */
                 audioButton.parentElement.querySelector(".alto").classList.add("selected");
                 /* Add selection light to Media Player button */
@@ -1799,7 +1806,7 @@ accordion.addEventListener("click", (e) => {
                 accordionContent.querySelector("#mediaPlayer__description").textContent = audioDescription;
 
                 break;
-            case capitalize(allHymns[count].vocalPart[3]):
+            case capitalize(Object.keys(allHymns[0].vocalPart)[3]):
                 /* Add selection light to SATB button */
                 audioButton.parentElement.querySelector(".tenor").classList.add("selected");
                 /* Add selection light to Media Player button */
@@ -1809,7 +1816,7 @@ accordion.addEventListener("click", (e) => {
                 accordionContent.querySelector("#mediaPlayer__description").textContent = audioDescription;
 
                 break;
-            case capitalize(allHymns[count].vocalPart[4]):
+            case capitalize(Object.keys(allHymns[0].vocalPart)[4]):
                 /* Add selection light to SATB button */
                 audioButton.parentElement.querySelector(".bass").classList.add("selected");
                 /* Add selection light to Media Player button */
@@ -1819,7 +1826,7 @@ accordion.addEventListener("click", (e) => {
                 accordionContent.querySelector("#mediaPlayer__description").textContent = audioDescription;
 
                 break;
-            case capitalize(allHymns[count].vocalPart[5]):
+            case capitalize(Object.keys(allHymns[0].vocalPart)[5]):
                 /* Add selection light to SATB button */
                 audioButton.parentElement.querySelector(".piano").classList.add("selected");
                 /* Add selection light to Media Player button */
@@ -1862,7 +1869,7 @@ function toggleAccordion(panelToActivate) {
             panelToActivate.parentElement.querySelector("#panel2").classList.add("hidden");
         } else { panelToActivate.parentElement.querySelector("#panel2").classList.remove("hidden"); }
 
-        if (allHymns[count].vocalPart.length == 0) {
+        if (Object.keys(allHymns[count].vocalPart).length == 0) {
             panelToActivate.parentElement.querySelector("#panel3").classList.add("hidden");
         } else {
             panelToActivate.parentElement.querySelector("#panel3").classList.remove("hidden");
@@ -1915,10 +1922,13 @@ function toggleAccordion(panelToActivate) {
                 }
 
 
-                for (let index = 0; index < allHymns[count].vocalPart.length; index++) { //populate audio parts
+                for (let index = 0; index < Object.keys(allHymns[count].vocalPart).length; index++) { //populate audio parts
                     const element = allListItems[index];
+
                     element.classList.add("visible");
-                    element.lastElementChild.innerHTML = capitalize(allHymns[count].vocalPart[index]);
+                    element.lastElementChild.innerHTML = capitalize(Object.keys(allHymns[count].vocalPart)[index]);
+
+
                 }
                 document.querySelector(".wrapper").classList.toggle("restrictHeight");
                 break;
