@@ -755,7 +755,8 @@ i.fa-magnifying-glass {
 	border-radius: 50%;
 }
 
-.satb.selected {
+.satb.selected,
+.sab.selected {
 	background-color: hsl(60, 100%, 90%);
 	box-shadow:
 		0.2rem 0.2rem 0.3rem hsl(60, 100%, 90%),

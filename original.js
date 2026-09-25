@@ -237,7 +237,7 @@ for (let index = 0; index < allAcclamationSettings.length; index++) {
     const element = document.querySelectorAll(".acclamations h6")[index];
     element.textContent = allAcclamationSettings[index].composer;
 }
-const extra = new Hymn("Taste & See", "Sheet", "./sheetMusic/hymns/Taste & See (chords & lyrics).pdf", { "SATB": "./audio/hymns/Taste and See/Taste & See - SATB.mp3", "Melody": "./audio/hymns/Taste and See/Taste & See - Melody.mp3", "Alto": "./audio/hymns/Taste and See/Taste & See - Alto.mp3", "Tenor": "./audio/hymns/Taste and See/Taste & See - Tenor.mp3", "Bass": "./audio/hymns/Taste and See/Taste & See - Bass.mp3", "Piano": "./audio/hymns/Taste and See/Taste & See - Piano.mp3" }, "https://www.youtube.com/embed/cRHOCB0Th0M?si=8tmszbX8vsjWCobF", "", { "Refrain 1": "./images/hymns/Taste & See/Refrain 1 - SATB.jpg", "Refrain 2": "./images/hymns/Taste & See/Refrain 2 - SATB.jpg", "Refrain 3": "./images/hymns/Taste & See/Refrain 3 - SATB.jpg", "Refrain 4": "./images/hymns/Taste & See/Refrain 4 - SATB.jpg" }, { "Timer": 32, "ImgOrder": [1, 2, 1, 3, 1, 4, 1] }) //Timer should be 32
+const extra = new Hymn("Taste & See", "Sheet", "./music/hymns/Taste and See/sheetmusic/Taste & See (chords & lyrics).pdf", { "SATB": "./music/hymns/Taste and See/audio/Taste & See - SATB.mp3", "Melody": "./music/hymns/Taste and See/audio/Taste & See - Melody.mp3", "Alto": "./music/hymns/Taste and See/audio/Taste & See - Alto.mp3", "Tenor": "./music/hymns/Taste and See/audio/Taste & See - Tenor.mp3", "Bass": "./music/hymns/Taste and See/audio/Taste & See - Bass.mp3", "Piano": "./music/hymns/Taste and See/audio/Taste & See - Piano.mp3" }, "https://www.youtube.com/embed/cRHOCB0Th0M?si=8tmszbX8vsjWCobF", "", { "Refrain 1": "./music/hymns/Taste and See/sheetmusic/Refrain 1 - SATB.jpg", "Refrain 2": "./music/hymns/Taste and See/sheetmusic/Refrain 2 - SATB.jpg", "Refrain 3": "./music/hymns/Taste and See/sheetmusic/Refrain 3 - SATB.jpg", "Refrain 4": "./music/hymns/Taste and See/sheetmusic/Refrain 4 - SATB.jpg" }, { "Timer": 32, "ImgOrder": [1, 2, 1, 3, 1, 4, 1] }) //Timer should be 32
 const extra2 = new Hymn("How great is our God", "Sheet", { "Chords": "./sheetMusic/hymns/How Great Is Our God - Chords.pdf" }, "", "", "", "", { "Timer": 50 })
 
 new Hymn("10,000 reasons", "sheet", "./sheetMusic/hymns/10,000 Reasons (Bless The Lord) (G) - sheet music.pdf", "", "https://www.youtube.com/embed/XtwIT8JjddM?si=nEiKqySIOsHt8SG_")
@@ -1632,7 +1632,7 @@ function hymnSelect() { //populate titles based upon 'count' number//
         title = "unprepaired"
     }
     document.querySelector("#panel1_title").textContent = title;
-    if ([allHymns.length - 1].title) {
+    if (allHymns[allHymns.length - 1].title) {
         var lastHymn = allHymns[allHymns.length - 1].title;
     }
     else { lastHymn = "unprepaired" }
@@ -1649,6 +1649,8 @@ function hymnSelect() { //populate titles based upon 'count' number//
             break;
 
         default:
+
+            var secondToLastHymn = allHymns[allHymns.length - 2].title; // Silent night
             var thirdToLastHymn = allHymns[allHymns.length - 3].title; // Silent night
             break;
     }
@@ -1725,6 +1727,11 @@ accordion.addEventListener("click", (e) => {
     const specificClick = e.target.closest(".closePanel");
     const audioButton = e.target.closest(".audioSelection")
     title = allHymns[count].title;
+    // console.log(e.target.closest("#panel1_trigger").innerText);
+    // console.log(e.target.firstElementChild.innerText);
+    // console.log(e.target.innerText);
+    // console.log(allHymns[count].vocalPart);
+
 
 
 
@@ -1742,14 +1749,17 @@ accordion.addEventListener("click", (e) => {
         let partTitle = audioButton.innerHTML;
         // partTitle = partTitle.toUpperCase();
 
-
+        // let chosenAcc = 
 
 
 
         const audioDescription = title + " - " + partTitle;
         // const filename = "./audio/" + title.toLowerCase() + "/" + title.toLowerCase()/*.replace(/ /g, "")*/ + " - " + partTitle.toLowerCase() + ".mp3";
-        const filename = allAcclamationSettings[0].acclamation[0].vocalPart[partTitle.toLowerCase()];
-        // console.log(filename);
+        // const filename = allAcclamationSettings[0].acclamation[0].vocalPart[partTitle.toLowerCase()];
+
+        const filename = allHymns[count].vocalPart[partTitle.toLowerCase()];
+
+
 
 
         // ./audio/gloria/gloria - melody.mp3
@@ -1768,78 +1778,96 @@ accordion.addEventListener("click", (e) => {
 
         document.querySelector("#mediaPlayer__light").removeAttribute("class");
         // document.querySelector("#title").removeAttribute("class");
+        // console.log(audioButton.parentElement.firstElementChild);
+
+
 
         for (let index = 0; index < allLights.length; index++) {
             const element = allLights[index];
             element.classList.remove("selected");
 
         }
-        switch (audioButton.innerHTML) {
-            case capitalize(Object.keys(allHymns[0].vocalPart)[0]):
+        //add selection light to vocal part
+        audioButton.parentElement.firstElementChild.classList.add("selected");
 
-                /* Add selection light to SATB button */
-                audioButton.parentElement.querySelector(".satb").classList.add("selected");
-                /* Add selection light to Media Player button */
-                accordionContent.querySelector("#mediaPlayer__light").classList.add("selected", "satb");
-                //Add audio file + audio description
-                accordionContent.querySelector("audio").setAttribute("src", filename);
-                accordionContent.querySelector("#mediaPlayer__description").textContent = audioDescription;
+        /* Add selection light to Media Player button */
+        accordionContent.querySelector("#mediaPlayer__light").classList.add("selected", audioButton.innerHTML.toLowerCase());
 
-                break;
-            case capitalize(Object.keys(allHymns[0].vocalPart)[1]):
-                /* Add selection light to SATB button */
-                audioButton.parentElement.querySelector(".melody").classList.add("selected");
-                /* Add selection light to Media Player button */
-                accordionContent.querySelector("#mediaPlayer__light").classList.add("selected", "melody");
-                //Add audio file + audio description
-                accordionContent.querySelector("audio").setAttribute("src", filename);
-                accordionContent.querySelector("#mediaPlayer__description").textContent = audioDescription;
+        //Add audio file + audio description
+        accordionContent.querySelector("audio").setAttribute("src", filename);
+        accordionContent.querySelector("#mediaPlayer__description").textContent = audioDescription;
+        // switch (audioButton.innerHTML) {
+        //     // case capitalize(Object.keys(allHymns[0].vocalPart)[0]):
+        //     case "Satb" || "Sab":
 
-                break;
-            case capitalize(Object.keys(allHymns[0].vocalPart)[2]):
-                /* Add selection light to SATB button */
-                audioButton.parentElement.querySelector(".alto").classList.add("selected");
-                /* Add selection light to Media Player button */
-                accordionContent.querySelector("#mediaPlayer__light").classList.add("selected", "alto");
-                //Add audio file + audio description
-                accordionContent.querySelector("audio").setAttribute("src", filename);
-                accordionContent.querySelector("#mediaPlayer__description").textContent = audioDescription;
+        //         /* Add selection light to SATB button */
+        //         audioButton.parentElement.querySelector(".satb").classList.add("selected");
+        //         /* Add selection light to Media Player button */
+        //         accordionContent.querySelector("#mediaPlayer__light").classList.add("selected", "satb");
+        //         //Add audio file + audio description
+        //         accordionContent.querySelector("audio").setAttribute("src", filename);
+        //         accordionContent.querySelector("#mediaPlayer__description").textContent = audioDescription;
 
-                break;
-            case capitalize(Object.keys(allHymns[0].vocalPart)[3]):
-                /* Add selection light to SATB button */
-                audioButton.parentElement.querySelector(".tenor").classList.add("selected");
-                /* Add selection light to Media Player button */
-                accordionContent.querySelector("#mediaPlayer__light").classList.add("selected", "tenor");
-                //Add audio file + audio description
-                accordionContent.querySelector("audio").setAttribute("src", filename);
-                accordionContent.querySelector("#mediaPlayer__description").textContent = audioDescription;
+        //         break;
+        //     // case capitalize(Object.keys(allHymns[0].vocalPart)[1]):
+        //     case "Melody":
+        //         /* Add selection light to SATB button */
+        //         audioButton.parentElement.querySelector(".melody").classList.add("selected");
+        //         /* Add selection light to Media Player button */
+        //         accordionContent.querySelector("#mediaPlayer__light").classList.add("selected", "melody");
+        //         //Add audio file + audio description
+        //         accordionContent.querySelector("audio").setAttribute("src", filename);
+        //         accordionContent.querySelector("#mediaPlayer__description").textContent = audioDescription;
 
-                break;
-            case capitalize(Object.keys(allHymns[0].vocalPart)[4]):
-                /* Add selection light to SATB button */
-                audioButton.parentElement.querySelector(".bass").classList.add("selected");
-                /* Add selection light to Media Player button */
-                accordionContent.querySelector("#mediaPlayer__light").classList.add("selected", "bass");
-                //Add audio file + audio description
-                accordionContent.querySelector("audio").setAttribute("src", filename);
-                accordionContent.querySelector("#mediaPlayer__description").textContent = audioDescription;
+        //         break;
+        //     // case capitalize(Object.keys(allHymns[0].vocalPart)[2]):
+        //     case "Alto":
+        //         /* Add selection light to SATB button */
+        //         audioButton.parentElement.querySelector(".alto").classList.add("selected");
+        //         /* Add selection light to Media Player button */
+        //         accordionContent.querySelector("#mediaPlayer__light").classList.add("selected", "alto");
+        //         //Add audio file + audio description
+        //         accordionContent.querySelector("audio").setAttribute("src", filename);
+        //         accordionContent.querySelector("#mediaPlayer__description").textContent = audioDescription;
 
-                break;
-            case capitalize(Object.keys(allHymns[0].vocalPart)[5]):
-                /* Add selection light to SATB button */
-                audioButton.parentElement.querySelector(".piano").classList.add("selected");
-                /* Add selection light to Media Player button */
-                accordionContent.querySelector("#mediaPlayer__light").classList.add("selected", "piano");
-                //Add audio file + audio description
-                accordionContent.querySelector("audio").setAttribute("src", filename);
-                accordionContent.querySelector("#mediaPlayer__description").textContent = audioDescription;
+        //         break;
+        //     // case capitalize(Object.keys(allHymns[0].vocalPart)[3]):
+        //     case "Tenor":
+        //         /* Add selection light to SATB button */
+        //         audioButton.parentElement.querySelector(".tenor").classList.add("selected");
+        //         /* Add selection light to Media Player button */
+        //         accordionContent.querySelector("#mediaPlayer__light").classList.add("selected", "tenor");
+        //         //Add audio file + audio description
+        //         accordionContent.querySelector("audio").setAttribute("src", filename);
+        //         accordionContent.querySelector("#mediaPlayer__description").textContent = audioDescription;
 
-                break;
+        //         break;
+        //     // case capitalize(Object.keys(allHymns[0].vocalPart)[4]):
+        //     case "Bass":
+        //         /* Add selection light to SATB button */
+        //         audioButton.parentElement.querySelector(".bass").classList.add("selected");
+        //         /* Add selection light to Media Player button */
+        //         accordionContent.querySelector("#mediaPlayer__light").classList.add("selected", "bass");
+        //         //Add audio file + audio description
+        //         accordionContent.querySelector("audio").setAttribute("src", filename);
+        //         accordionContent.querySelector("#mediaPlayer__description").textContent = audioDescription;
 
-            default:
-                break;
-        }
+        //         break;
+        //     // case capitalize(Object.keys(allHymns[0].vocalPart)[5]):
+        //     case "Piano":
+        //         /* Add selection light to SATB button */
+        //         audioButton.parentElement.querySelector(".piano").classList.add("selected");
+        //         /* Add selection light to Media Player button */
+        //         accordionContent.querySelector("#mediaPlayer__light").classList.add("selected", "piano");
+        //         //Add audio file + audio description
+        //         accordionContent.querySelector("audio").setAttribute("src", filename);
+        //         accordionContent.querySelector("#mediaPlayer__description").textContent = audioDescription;
+
+        //         break;
+
+        //     default:
+        //         break;
+        // }
     }
 
     else {
