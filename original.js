@@ -222,11 +222,14 @@ new Acclamation("Celtic Mass", "Holy Holy", "./music/acclamations/Celtic Mass/Ho
 new Acclamation("Celtic Mass", "Memorial Acclamation", "./sheetMusic/acclamations/Celtic Mass/Memorial Acclamation/Memorial Acclamations (Celtic Liturgy).pdf", "", "");
 new Acclamation("Celtic Mass", "Lamb of God", "./music/acclamations/Celtic Mass/Lamb of God/sheetmusic/Lamb Of God (Celtic Liturgy).pdf", "", "https://www.youtube.com/embed/rW6qeHqQvOw?si=FuIo9pu-Dmm8NtlC");
 
+new Acclamation("Anderson Mass", "Gloria", "./music/acclamations/Anderson/sheetmusic/Gloria (Anderson) - melody.pdf", "", "")
+
 new AcclamationSetting("Mass of Christ the Saviour", "Dan Schutte", "Mass of Christ the Saviour")
 new AcclamationSetting("Mass of Creation", "Marty Haugen", "Mass of Creation")
 new AcclamationSetting("Mass of Hope", "Bernadette Farrell", "Mass of Hope")
 new AcclamationSetting("Simple Mass", "unknown", "Simple Mass")
 new AcclamationSetting("Celtic Mass", "Christopher Walker", "Celtic Mass")
+new AcclamationSetting("Anderson Mass", "Mike Anderson", "Anderson Mass")
 
 for (let index = 0; index < allAcclamationSettings.length; index++) {
     const element = document.querySelectorAll(".acclamations h4")[index];
