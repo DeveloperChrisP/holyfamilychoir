@@ -202,25 +202,25 @@ new Acclamation("Mass of Creation", "Holy Holy", "", "", "https://www.youtube.co
 new Acclamation("Mass of Creation", "We proclaim your death", "", "", "https://www.youtube.com/embed/MaPV39uou1I?si=QPqM_OOPfo3qBqPW")
 new Acclamation("Mass of Creation", "When we eat this bread", "", "", "https://www.youtube.com/embed/cBApgcKhJo0?si=V6t0Fou6IH22dmU8")
 new Acclamation("Mass of Creation", "Amen", "", "", "https://www.youtube.com/embed/8drMbyPFlPU?si=UrAor9slVmBgzMg5")
-new Acclamation("Mass of Creation", "Lamb of God", "", ["SATB", "melody", "alto", "tenor", "bass", "piano"], "https://www.youtube.com/embed/_KlqHDoGLzE?si=FOKHV82msHsXCsGJ")
+new Acclamation("Mass of Creation", "Lamb of God", "", { "satb": "./music/acclamations/mass of creation/lamb of god/audio/mass of creation - lamb of god - satb.mp3", "melody": "./music/acclamations/mass of creation/lamb of god/audio/mass of creation - lamb of god - melody.mp3", "alto": "./music/acclamations/mass of creation/lamb of god/audio/mass of creation - lamb of god - alto.mp3", "tenor": "./music/acclamations/mass of creation/lamb of god/audio/mass of creation - lamb of god - tenor.mp3", "bass": "./music/acclamations/mass of creation/lamb of god/audio/mass of creation - lamb of god - bass.mp3", "piano": "./music/acclamations/mass of creation/lamb of god/audio/mass of creation - lamb of god - piano.mp3" }, "https://www.youtube.com/embed/_KlqHDoGLzE?si=FOKHV82msHsXCsGJ")
 
-new Acclamation("Mass of Hope", "Glory to God (Jugan)", "", ["satb", "melody (chorus)", "alto (chorus)", "tenor (chorus)", "bass (chorus)"], "");
-new Acclamation("Mass of Hope", "Alleluia", "", ["satb", "melody", "alto", "tenor", "bass", "piano"], "https://www.youtube.com/embed/PC8Fl0CAWB8?si=CsDSavSKw_6fwM1f&start=8&end=149")
-new Acclamation("Mass of Hope", "Holy holy", "", ["melody", "piano"], "https://www.youtube.com/embed/PC8Fl0CAWB8?si=CsDSavSKw_6fwM1f&start=154&end=244");
+new Acclamation("Mass of Hope", "Glory to God (Jugan)", "", { "satb": "./music/acclamations/Mass of Hope/glory to god (jugan)/audio/mass of hope - glory to god (jugan) - satb.mp3", "melody": "./music/acclamations/Mass of Hope/glory to god (jugan)/audio/mass of hope - glory to god (jugan) - melody (chorus).mp3", "alto": "./music/acclamations/Mass of Hope/glory to god (jugan)/audio/mass of hope - glory to god (jugan) - alto (chorus).mp3", "tenor": "./music/acclamations/Mass of Hope/glory to god (jugan)/audio/mass of hope - glory to god (jugan) - tenor (chorus).mp3", "bass": "./music/acclamations/Mass of Hope/glory to god (jugan)/audio/mass of hope - glory to god (jugan) - bass (chorus).mp3" }, "");
+new Acclamation("Mass of Hope", "Alleluia", "", { "satb": "./music/acclamations/Mass of Hope/alleluia/audio/mass of hope - alleluia - satb.mp3", "melody": "./music/acclamations/Mass of Hope/alleluia/audio/mass of hope - alleluia - melody.mp3", "alto": "./music/acclamations/Mass of Hope/alleluia/audio/mass of hope - alleluia - alto.mp3", "tenor": "./music/acclamations/Mass of Hope/alleluia/audio/mass of hope - alleluia - tenor.mp3", "bass": "./music/acclamations/Mass of Hope/alleluia/audio/mass of hope - alleluia - bass.mp3", "piano": "./music/acclamations/Mass of Hope/alleluia/audio/mass of hope - alleluia - piano.mp3" }, "https://www.youtube.com/embed/PC8Fl0CAWB8?si=CsDSavSKw_6fwM1f&start=8&end=149")
+new Acclamation("Mass of Hope", "Holy holy", "", { "melody": "./music/acclamations/Mass of Hope/holy holy/audio/mass of hope - holy holy - melody.mp3", "piano": "./music/acclamations/Mass of Hope/holy holy/audio/mass of hope - holy holy - piano.mp3" }, "https://www.youtube.com/embed/PC8Fl0CAWB8?si=CsDSavSKw_6fwM1f&start=154&end=244");
 new Acclamation("Mass of Hope", "We proclaim your death", "", "", "https://www.youtube.com/embed/PC8Fl0CAWB8?si=CsDSavSKw_6fwM1f&start=245&end=277");
-new Acclamation("Mass of Hope", "When we eat this bread", "", ["melody", "piano"], "https://www.youtube.com/embed/PC8Fl0CAWB8?si=CsDSavSKw_6fwM1f&start=282&end=330");
-new Acclamation("Mass of Hope", "Save us, saviour", "/holyfamilychoir/sheetMusic/acclamations/Mass of Hope/Memorial Acclamations/Bernadette Farrell - Save Us, Savior.pdf", "", "https://www.youtube.com/embed/PC8Fl0CAWB8?si=CsDSavSKw_6fwM1f&start=335&end=385");
-new Acclamation("Mass of Hope", "Great Amen", "", ["melody", "piano"], "https://www.youtube.com/embed/PC8Fl0CAWB8?si=CsDSavSKw_6fwM1f&start=390");
-new Acclamation("Mass of Hope", "Lamb of God (Creation)", "", ["SATB", "melody", "alto", "tenor", "bass", "piano"], "https://www.youtube.com/embed/_KlqHDoGLzE?si=FOKHV82msHsXCsGJ");
+new Acclamation("Mass of Hope", "When we eat this bread", "", { "melody": "./music/acclamations/Mass of Hope/Memorial Acclamations/when we eat this bread/audio/mass of hope - when we eat this bread - melody.mp3", "piano": "./music/acclamations/Mass of Hope/Memorial Acclamations/when we eat this bread/audio/mass of hope - when we eat this bread - piano.mp3" }, "https://www.youtube.com/embed/PC8Fl0CAWB8?si=CsDSavSKw_6fwM1f&start=282&end=330");
+new Acclamation("Mass of Hope", "Save us, saviour", "./music/acclamations/Mass of Hope/Memorial Acclamations/Save Us Saviour/sheetmusic/Bernadette Farrell - Save Us, Savior.pdf", "", "https://www.youtube.com/embed/PC8Fl0CAWB8?si=CsDSavSKw_6fwM1f&start=335&end=385");
+new Acclamation("Mass of Hope", "Great Amen", "", { "melody": "./music/acclamations/Mass of Hope/great amen/audio/mass of hope - great amen - melody.mp3", "piano": "./music/acclamations/Mass of Hope/great amen/audio/mass of hope - great amen - piano.mp3" }, "https://www.youtube.com/embed/PC8Fl0CAWB8?si=CsDSavSKw_6fwM1f&start=390");
+new Acclamation("Mass of Hope", "Lamb of God (Creation)", "", { "satb": "./music/acclamations/mass of creation/lamb of god/audio/mass of creation - lamb of god - satb.mp3", "melody": "./music/acclamations/mass of creation/lamb of god/audio/mass of creation - lamb of god - melody.mp3", "alto": "./music/acclamations/mass of creation/lamb of god/audio/mass of creation - lamb of god - alto.mp3", "tenor": "./music/acclamations/mass of creation/lamb of god/audio/mass of creation - lamb of god - tenor.mp3", "bass": "./music/acclamations/mass of creation/lamb of god/audio/mass of creation - lamb of god - bass.mp3", "piano": "./music/acclamations/mass of creation/lamb of god/audio/mass of creation - lamb of god - piano.mp3" }, "https://www.youtube.com/embed/_KlqHDoGLzE?si=FOKHV82msHsXCsGJ");
 
-new Acclamation("Simple Mass", "Holy holy", "./sheetMusic/acclamations/Simple Mass/Holy Holy/Holy Holy (Simple Mass).pdf", ["satb", "melody", "alto", "tenor", "bass", "piano"], "")
-new Acclamation("Simple Mass", "Lamb of God", "./sheetMusic/acclamations/Simple Mass/Lamb of God/Lamb of God (Simple Mass).pdf", "", "")
+new Acclamation("Simple Mass", "Holy holy", "./music/acclamations/Simple Mass/Holy Holy/sheetmusic/Holy Holy (Simple Mass).pdf", { "satb": "./music/acclamations/Simple Mass/Holy Holy/audio/simple mass - holy holy - satb.mp3", "melody": "./music/acclamations/Simple Mass/Holy Holy/audio/simple mass - holy holy - melody.mp3", "alto": "./music/acclamations/Simple Mass/Holy Holy/audio/simple mass - holy holy - alto.mp3", "tenor": "./music/acclamations/Simple Mass/Holy Holy/audio/simple mass - holy holy - tenor.mp3", "bass": "./music/acclamations/Simple Mass/Holy Holy/audio/simple mass - holy holy - bass.mp3", "piano": "./music/acclamations/Simple Mass/Holy Holy/audio/simple mass - holy holy - piano.mp3" }, "")
+new Acclamation("Simple Mass", "Lamb of God", "./music/acclamations/Simple Mass/Lamb of God/Lamb of God (Simple Mass).pdf", "", "")
 
-new Acclamation("Celtic Mass", "Gloria", "./sheetMusic/acclamations/Celtic Mass/Glory to God/Glory To God (Celtic Liturgy).pdf", ["satb", 'melody', 'alto', 'tenor', 'bass'], "");
-new Acclamation("Celtic Mass", "Alleluia", "./sheetMusic/acclamations/Celtic Mass/Alleluia/Alleluia (Celtic Liturgy).pdf", "", "https://www.youtube.com/embed/AFvdHcrPhkw?si=V7FLgxX593bN33GH");
-new Acclamation("Celtic Mass", "Holy Holy", "./sheetMusic/acclamations/Celtic Mass/Holy Holy/Holy, Holy, Holy (Celtic Liturgy).pdf", ["satb", "melody", 'alto', 'tenor', 'bass', 'piano'], "");
+new Acclamation("Celtic Mass", "Gloria", "./music/acclamations/Celtic Mass/Glory to God/sheetmusic/Glory To God (Celtic Liturgy).pdf", { "satb": "./music/acclamations/Celtic Mass/Glory to God/audio/celtic mass - gloria - satb.mp3", "melody": "./music/acclamations/Celtic Mass/Glory to God/audio/celtic mass - gloria - melody.mp3", 'alto': "./music/acclamations/Celtic Mass/Glory to God/audio/celtic mass - gloria - alto.mp3", 'tenor': "./music/acclamations/Celtic Mass/Glory to God/audio/celtic mass - gloria - tenor.mp3", 'bass': "./music/acclamations/Celtic Mass/Glory to God/audio/celtic mass - gloria - bass.mp3" }, "");
+new Acclamation("Celtic Mass", "Alleluia", "./music/acclamations/Celtic Mass/Alleluia/sheetmusic/Alleluia (Celtic Liturgy).pdf", "", "https://www.youtube.com/embed/AFvdHcrPhkw?si=V7FLgxX593bN33GH");
+new Acclamation("Celtic Mass", "Holy Holy", "./music/acclamations/Celtic Mass/Holy Holy/sheetmusic/Holy, Holy, Holy (Celtic Liturgy).pdf", { "satb": "./music/acclamations/Celtic Mass/Holy Holy/audio/celtic mass - holy holy - satb.mp3", "melody": "./music/acclamations/Celtic Mass/Holy Holy/audio/celtic mass - holy holy - melody.mp3", 'alto': "./music/acclamations/Celtic Mass/Holy Holy/audio/celtic mass - holy holy - alto.mp3", 'tenor': "./music/acclamations/Celtic Mass/Holy Holy/audio/celtic mass - holy holy - tenor.mp3", 'bass': "./music/acclamations/Celtic Mass/Holy Holy/audio/celtic mass - holy holy - bass.mp3", 'piano': "./music/acclamations/Celtic Mass/Holy Holy/audio/celtic mass - holy holy - piano.mp3" }, "");
 new Acclamation("Celtic Mass", "Memorial Acclamation", "./sheetMusic/acclamations/Celtic Mass/Memorial Acclamation/Memorial Acclamations (Celtic Liturgy).pdf", "", "");
-new Acclamation("Celtic Mass", "Lamb of God", "./sheetMusic/acclamations/Celtic Mass/Lamb of God/Lamb Of God (Celtic Liturgy).pdf", "", "https://www.youtube.com/embed/rW6qeHqQvOw?si=FuIo9pu-Dmm8NtlC");
+new Acclamation("Celtic Mass", "Lamb of God", "./music/acclamations/Celtic Mass/Lamb of God/sheetmusic/Lamb Of God (Celtic Liturgy).pdf", "", "https://www.youtube.com/embed/rW6qeHqQvOw?si=FuIo9pu-Dmm8NtlC");
 
 new AcclamationSetting("Mass of Christ the Saviour", "Dan Schutte", "Mass of Christ the Saviour")
 new AcclamationSetting("Mass of Creation", "Marty Haugen", "Mass of Creation")
@@ -237,10 +237,10 @@ for (let index = 0; index < allAcclamationSettings.length; index++) {
     const element = document.querySelectorAll(".acclamations h6")[index];
     element.textContent = allAcclamationSettings[index].composer;
 }
-const extra = new Hymn("Taste & See", "Sheet", "./music/hymns/Taste and See/sheetmusic/Taste & See (chords & lyrics).pdf", { "SATB": "./music/hymns/Taste and See/audio/Taste & See - SATB.mp3", "Melody": "./music/hymns/Taste and See/audio/Taste & See - Melody.mp3", "Alto": "./music/hymns/Taste and See/audio/Taste & See - Alto.mp3", "Tenor": "./music/hymns/Taste and See/audio/Taste & See - Tenor.mp3", "Bass": "./music/hymns/Taste and See/audio/Taste & See - Bass.mp3", "Piano": "./music/hymns/Taste and See/audio/Taste & See - Piano.mp3" }, "https://www.youtube.com/embed/cRHOCB0Th0M?si=8tmszbX8vsjWCobF", "", { "Refrain 1": "./music/hymns/Taste and See/sheetmusic/Refrain 1 - SATB.jpg", "Refrain 2": "./music/hymns/Taste and See/sheetmusic/Refrain 2 - SATB.jpg", "Refrain 3": "./music/hymns/Taste and See/sheetmusic/Refrain 3 - SATB.jpg", "Refrain 4": "./music/hymns/Taste and See/sheetmusic/Refrain 4 - SATB.jpg" }, { "Timer": 32, "ImgOrder": [1, 2, 1, 3, 1, 4, 1] }) //Timer should be 32
-const extra2 = new Hymn("How great is our God", "Sheet", { "Chords": "./sheetMusic/hymns/How Great Is Our God - Chords.pdf" }, "", "", "", "", { "Timer": 50 })
+const extra = new Hymn("Taste & See", "Sheet", "./music/hymns/Taste and See/sheetmusic/Taste & See (chords & lyrics).pdf", { "satb": "./music/hymns/Taste and See/audio/Taste & See - SATB.mp3", "melody": "./music/hymns/Taste and See/audio/Taste & See - Melody.mp3", "alto": "./music/hymns/Taste and See/audio/Taste & See - Alto.mp3", "tenor": "./music/hymns/Taste and See/audio/Taste & See - Tenor.mp3", "bass": "./music/hymns/Taste and See/audio/Taste & See - Bass.mp3", "piano": "./music/hymns/Taste and See/audio/Taste & See - Piano.mp3" }, "https://www.youtube.com/embed/cRHOCB0Th0M?si=8tmszbX8vsjWCobF", "", { "Refrain 1": "./music/hymns/Taste and See/sheetmusic/Refrain 1 - SATB.jpg", "Refrain 2": "./music/hymns/Taste and See/sheetmusic/Refrain 2 - SATB.jpg", "Refrain 3": "./music/hymns/Taste and See/sheetmusic/Refrain 3 - SATB.jpg", "Refrain 4": "./music/hymns/Taste and See/sheetmusic/Refrain 4 - SATB.jpg" }, { "Timer": 32, "ImgOrder": [1, 2, 1, 3, 1, 4, 1] }) //Timer should be 32
+const extra2 = new Hymn("How great is our God", "Sheet", { "Chords": "./music/hymns/How great is our god/sheetmusic/How Great Is Our God - Chords.pdf" }, "", "", "", "", { "Timer": 50 })
 
-new Hymn("10,000 reasons", "sheet", "./sheetMusic/hymns/10,000 Reasons (Bless The Lord) (G) - sheet music.pdf", "", "https://www.youtube.com/embed/XtwIT8JjddM?si=nEiKqySIOsHt8SG_")
+new Hymn("10,000 reasons", "sheet", "./music/hymns/10,000 Reasons/sheetmusic/10,000 Reasons (Bless The Lord) (G) - sheet music.pdf", "", "https://www.youtube.com/embed/XtwIT8JjddM?si=nEiKqySIOsHt8SG_")
 new Hymn("A hymn of glory let us sing!", "sheet", "", "", "https://www.youtube.com/embed/fWLdhI9zZbs?si=s5xONlEFIr-KQDbp")
 new Hymn("A new commandment", 920, "", "", "https://www.youtube.com/embed/aqM2Ujl7Aas?si=GyuGykvyaGV3dFZI");
 new Hymn("Abide with me", 907, "", "", "https://www.youtube.com/embed/zf12lQnKlGk?si=FbBC6mn29tMilxZ5")
@@ -268,14 +268,14 @@ new Hymn("Be thou my vision", 970, "", "", "https://www.youtube.com/embed/aTKoZZ
 new Hymn("Because the Lord is my shepherd", 948, "", "", "https://www.youtube.com/embed/o1oTLkhE9qM?si=R1z1YPrwcNoGnYGG")
 new Hymn("Bethlehem of noblest cities", 167, "", "", "https://www.youtube.com/embed/rlbmmn9uOLg?si=H0LS3ygSKcTXnlA6")
 new Hymn("Bless the Lord, my soul", 813, "", "", "https://www.youtube.com/embed/3y_2ZStGV58?si=JoCK3Ay47AX9uGpT");
-new Hymn("Blessed virgin mother", 361, "", ["piano"], "");
+new Hymn("Blessed virgin mother", 361, "", { "piano": "./music/hymns/blessed virgin mother/audio/blessed virgin mother - piano.mp3" }, "");
 new Hymn("Blest are you, Lord", 603, "", "", "https://www.youtube.com/embed/tsGr49LpuGI?si=p4yTl1Xy_chXtTgN");
 new Hymn("Bread of life", 631, "", "", "https://www.youtube.com/embed/iYKxMAn3Kfo?si=Fei0At7L0HqudqQ3");
 new Hymn("Breathe on me, Breath of God", 302, "", "", "https://www.youtube.com/embed/vzQo2p5LGkA?si=Rmp9LEeAMoc1d4L4")
 new Hymn("Brother sister let me serve you", 924, "", "", "https://www.youtube.com/embed/ohy-vGSbkx8?si=yeEMWpxBWu_J93AO")
 new Hymn("Centre of my life", 423, "", "", "https://www.youtube.com/embed/B5Zo548rT8o?si=RS5kEu3QkdFq6otW")
 new Hymn("Christ be beside me", 910, "", "", "https://www.youtube.com/embed/KNkWoy5uVh8?si=38stRqmtz_7Bswpd")
-new Hymn("Christ be our light", 883, "./sheetMusic/hymns/Christ Be Our Light.pdf", "", "https://www.youtube.com/embed/kt3Qc04ulOM?si=ACm00WhsjdIdZRMB");
+new Hymn("Christ be our light", 883, "./music/hymns/Christ be our light/sheetmusic/Christ Be Our Light.pdf", "", "https://www.youtube.com/embed/kt3Qc04ulOM?si=ACm00WhsjdIdZRMB");
 new Hymn("Christ is made the sure foundation", 456, "", "", "https://www.youtube.com/embed/RPq0CwbwkqI?si=CPEIF1QlGumNhQfx", ["Christ is made the sure foundation, Christ the head and cornerstone, chosen of the Lord, and precious, binding all the church in one, holy Zion's help forever, and her confidence alone.", "All that dedicated city, dearly loved of God on high, in exultant jubilation pours perpetual melody, God the One in Three adoring in glad hymns eternally.", "To this temple, where we call You, come, O Lord of Hosts, today; with accustomed loving kindness, hear Your servants as they pray; and Your fullest benediction shed within its walls alway.", "Grant, we pray, to all Your servants what they ask of You to gain, what they gain from You, forever with the blessed to retain, and hereafter in Your glory evermore with You to reign.", "Praise and honor to the Father, praise and honor to the Son, praise and honor to the Spirit, ever Three, and ever One, consubstantial, coeternal, while unending ages run."])
 new Hymn("Christ is our King", 325, "", "", "https://www.youtube.com/embed/SBdD_fSHNUM?si=PVRoDFeOOJoBpHRp")
 new Hymn("Come down O love divine", 303, "", "", "https://www.youtube.com/embed/8qYyql13u2M?si=tDEIWYOONNacjOAF")
@@ -302,7 +302,7 @@ new Hymn("Freely, freely", 849, "", "", "https://www.youtube.com/embed/BS1ndKgU3
 new Hymn("Gather us in", 475, "", "", "https://www.youtube.com/embed/HuLORIyEet4?si=_nhhj7WvmOj5ojiM");
 new Hymn("Gifts of bread & wine", 643, "", "", "https://www.youtube.com/embed/c-AussFcZws?si=mjMWSMWt-20tjcA_");
 new Hymn("Glory be to Jesus", 750, "", "", "https://www.youtube.com/embed/FJUY1Cw5shw?si=bDNnlRLZHYf3zpGp")
-new Hymn("God has chosen me", "sheet", "./sheetMusic/hymns/God Has Chosen Me.pdf", ["melody", "alto", "tenor", "bass", "satb"], "https://www.youtube.com/embed/587oCGpfRZ0?si=rWjSujvVU5MIzTpa")
+new Hymn("God has chosen me", "sheet", "./music/hymns/god has chosen me/sheetmusic/God Has Chosen Me.pdf", { "melody": "./music/hymns/god has chosen me/audio/god has chosen me - melody.mp3", "alto": "./music/hymns/god has chosen me/audio/god has chosen me - alto.mp3", "tenor": "./music/hymns/god has chosen me/audio/god has chosen me - tenor.mp3", "bass": "./music/hymns/god has chosen me/audio/god has chosen me - bass.mp3", "satb": "./music/hymns/god has chosen me/audio/god has chosen me - satb.mp3" }, "https://www.youtube.com/embed/587oCGpfRZ0?si=rWjSujvVU5MIzTpa")
 new Hymn("God is love, his the care", 794, "", "", "https://www.youtube.com/embed/poj6FN8wA1Q?si=qKQc0gaFUsE1dtUt")
 new Hymn("God of mercy and compassion", 840, "", "", "https://www.youtube.com/embed/dd8ddCFmyNc?si=pnH9I7ukeenS1we3");
 new Hymn("Godhead here in hiding", 660, "", "", "https://www.youtube.com/embed/cqHIf5DYF2c?si=C84lGCj3tZZlXQ-4");
@@ -317,7 +317,7 @@ new Hymn("He is Lord", 761, "", "", "https://www.youtube.com/embed/BrJEATD5jq8?s
 new Hymn("He is risen, tell the story", 276, "", "", "https://www.youtube.com/embed/i3jPtFOANBY?si=hIaScfCO4O3jgTpt")
 new Hymn("He who would valiant be", 862, "", "", "https://www.youtube.com/embed/AD7W92d4jmE?si=t6gu0qjlx4gG3Het")
 new Hymn("Here I am, Lord", 865, "", "", "https://www.youtube.com/embed/_sCkT5cLWCM?si=yLtHCX7cK0RJ4Hzq");
-new Hymn("Here we bring you", "Sheet", "./sheetMusic/hymns/Here We Bring You.pdf", ["piano"], "");
+new Hymn("Here we bring you", "Sheet", "./music/hymns/here we bring you/sheetmusic/Here We Bring You.pdf", { "piano": "./music/hymns/here we bring you/audio/here we bring you - piano.mp3" }, "");
 new Hymn("Holy Forever", "n/a", "", "", "https://www.youtube.com/embed/VhdAZ2aQtBk?si=EFlxlkTKBo3aAkd0")
 new Hymn("Holy holy holy, Lord God almighty", 468, "", "", "https://www.youtube.com/embed/2D4gg03f0DM?si=rKbTQbXM7fIgd9qh")
 new Hymn("Holy holy holy, Lord God almighty (Agnus Dei)", "", "", "", "https://www.youtube.com/embed/UWndDW_271g?si=06sYstfg-GFnGu4n")
@@ -334,10 +334,10 @@ new Hymn("I'll sing a hymn to Mary", 355, "", "", "https://www.youtube.com/embed
 new Hymn("Immaculate Mary", 365, "", "", "https://www.youtube.com/embed/PcrFbTixYAA?si=HF43bqSi82D-OVlV");
 new Hymn("Immortal, invisible", 725, "", "", "https://www.youtube.com/embed/lmefJS09fKE?si=5cKzvl1vDm-9QeNn")
 new Hymn("In bread we bring you, Lord", 609, "", "", "https://www.youtube.com/embed/OrtI_rEcGHI?si=THvVL9iuFqs-eFbk");
-new Hymn("In Christ alone", "Sheet", "./sheetMusic/hymns/In Christ Alone (D).pdf", "", "https://www.youtube.com/embed/E-H-rh1rZog?si=nbkYf_N4Yz8OaTAV")
+new Hymn("In Christ alone", "Sheet", "./music/hymns/In Christ alone/sheetmusic/In Christ Alone (D).pdf", "", "https://www.youtube.com/embed/E-H-rh1rZog?si=nbkYf_N4Yz8OaTAV")
 new Hymn("In the bleak mid-winter", 144, "", "", "https://www.youtube.com/embed/cBCYZ9jIJkI?si=7IfiGM2MqBrA1q6t");
 new Hymn("In the Breaking of the Bread", 624, "", "", "https://www.youtube.com/embed/0H8CPadsVco?si=TEfbe6JW7aAJ_ZVA");
-new Hymn("Infant Holy, Infant lowly", 138, "", ["satb", "melody", "alto", "tenor", "bass"], "https://www.youtube.com/embed/kFQMDG1j9JQ?si=SB72UyZyoQFlbOMN");
+new Hymn("Infant Holy, Infant lowly", 138, "", { "satb": "./music/hymns/infant holy, infant lowly/audio/infant holy, infant lowly - satb.mp3", "melody": "./music/hymns/infant holy, infant lowly/audio/infant holy, infant lowly - melody.mp3", "alto": "./music/hymns/infant holy, infant lowly/audio/infant holy, infant lowly - alto.mp3", "tenor": "./music/hymns/infant holy, infant lowly/audio/infant holy, infant lowly - tenor.mp3", "bass": "./music/hymns/infant holy, infant lowly/audio/infant holy, infant lowly - bass.mp3" }, "https://www.youtube.com/embed/kFQMDG1j9JQ?si=SB72UyZyoQFlbOMN");
 new Hymn("It came upon the midnight clear", 135, "", "", "https://www.youtube.com/embed/hx7LJZIXXJo?si=7a3g6ieIB0AZB4MY&start=6&end=129");
 new Hymn("Jerusalem", "", "", "", "https://www.youtube.com/embed/KuSJFx6tuZ0?si=D81QimGli0IL0nxJ")
 new Hymn("Jesu, Jesu, fill us with your love", "241", "", "", "https://www.youtube.com/embed/qSuTmW1t8zs?si=8wlA7-6bowt5zX6q")
@@ -377,7 +377,7 @@ new Hymn("O let all who thirst", 408, "", "", "https://www.youtube.com/embed/MwG
 new Hymn("O little town of Bethlehem", 127, "", "", "https://www.youtube.com/embed/bIXQEVUNNjE?si=K4ExJw2kZT7YvXJX")
 new Hymn("O Lord hear my prayer", 929, "", "", "https://www.youtube.com/embed/npjgYMt2pHc?si=rgQ2VlIwKSI-j7bi")
 new Hymn("O Lord my God", 721, "", "", "https://www.youtube.com/embed/i6cuVLzUVKY?si=7p65giWxScRq43UW")
-new Hymn("O Mary Conceived In The Grace Of Your Son", 354, "", ["piano"], "");
+new Hymn("O Mary Conceived In The Grace Of Your Son", 354, "", { "piano": "./music/hymns/o mary conceived in the grace of your son/audio/o mary conceived in the grace of your son - piano.mp3" }, "");
 new Hymn("O Mother Blest", 364, "", "", "https://www.youtube.com/embed/Nb7PchC-p04?si=N_d9mCYKGQG5nhst");
 new Hymn("O purest of creatures", 347, "", "", "https://www.youtube.com/embed/NFBb5g2tXgk?si=j58XTHjmY4JXkuFm");
 new Hymn("O Sacred Head", 237, "", "", "https://www.youtube.com/embed/wcrS8rFWMXQ?si=Uw6btV7cUilLklLm")
@@ -399,7 +399,7 @@ new Hymn("Praise to you o christ our saviour", 200, "", "", "https://www.youtube
 new Hymn("Saints of God in Glory", "-", "", "", "https://www.youtube.com/embed/Rtb1UHBON0k?si=1Y0wAruG-INx8oJP");
 new Hymn("See amid the winter's snow", 151, "", "", "https://www.youtube.com/embed/T4OqarWpBWM?si=g-8h5ggRdBSzrQFY")
 new Hymn("Seek ye first", 820, "", "", "https://www.youtube.com/embed/EsBpM9IcBts?si=CYmfUYl5QoX9Jc9s")
-new Hymn("Silent Night", 136, "./sheetMusic/hymns/SilentNight.pdf", ["satb", "melody", "alto", "tenor", "bass", "piano"], "https://www.youtube-nocookie.com/embed/POcDlbYiF9c?si=cBj0zCzSgsO6fK7T");
+new Hymn("Silent Night", 136, "./music/hymns/silent night/sheetmusic/SilentNight.pdf", { "satb": "./music/hymns/silent night/audio/silent night - satb.mp3", "melody": "./music/hymns/silent night/audio/silent night - melody.mp3", "alto": "./music/hymns/silent night/audio/silent night - alto.mp3", "tenor": "./music/hymns/silent night/audio/silent night - tenor.mp3", "bass": "./music/hymns/silent night/audio/silent night - bass.mp3", "piano": "./music/hymns/silent night/audio/silent night - piano.mp3" }, "https://www.youtube-nocookie.com/embed/POcDlbYiF9c?si=cBj0zCzSgsO6fK7T");
 new Hymn("Sing of Mary, pure and lowly", 341, "", "", "https://www.youtube.com/embed/Ap6Hym_ERQM?si=dN6iC0-7Wsk2DXnz");
 new Hymn("Sing of the Lord's Goodness", 713, "", "", "https://www.youtube.com/embed/xzTXl_jA-XQ?si=4Poy3GZQvRYyieDe")
 new Hymn("Sing we of the blessed Mother", 344, "", "", "https://www.youtube.com/embed/zYZ4MbY5kG0?si=2NTmZecGpeCPOkvP");
@@ -412,7 +412,7 @@ new Hymn("Stay with me", 249, "", "", "https://www.youtube.com/embed/FCr2tn4yYKY
 new Hymn("Sweet Sacrament Divine", 663, "", "", "https://www.youtube.com/embed/6N1IfoGFF-I?si=4SrRraG5OQcqP0KN");
 new Hymn("Take my life and let it be", 874, "", "", "https://www.youtube.com/embed/VUitRcLnfNk?si=zYJqQe2royTp1q_b")
 new Hymn("Take our bread", 605, "", "", "https://www.youtube.com/embed/g0amLuMeVjY?si=UbwdvgeVfH5Nv_KV");
-new Hymn("Taste and See", "Sheet", "./sheetMusic/hymns/Taste & See (chords & lyrics).pdf", "", "https://www.youtube.com/embed/cRHOCB0Th0M?si=8tmszbX8vsjWCobF")
+new Hymn("Taste & See", "Sheet", "./music/hymns/Taste and See/sheetmusic/Taste & See (chords & lyrics).pdf", { "satb": "./music/hymns/Taste and See/audio/Taste & See - SATB.mp3", "melody": "./music/hymns/Taste and See/audio/Taste & See - Melody.mp3", "alto": "./music/hymns/Taste and See/audio/Taste & See - Alto.mp3", "tenor": "./music/hymns/Taste and See/audio/Taste & See - Tenor.mp3", "bass": "./music/hymns/Taste and See/audio/Taste & See - Bass.mp3", "piano": "./music/hymns/Taste and See/audio/Taste & See - Piano.mp3" }, "https://www.youtube.com/embed/cRHOCB0Th0M?si=8tmszbX8vsjWCobF")
 new Hymn("Teach me, O God", "Sheet", "", "", "https://www.youtube.com/embed/__voVCEZo3w?si=VGI6iwUsEg71Hexm")
 new Hymn("Tell out my soul", 880, "", "", "https://www.youtube.com/embed/A59pfx4sb2Q?si=2CAw8d2OBfjEWvFT");
 new Hymn("The angel Gabriel", 113, "", "", "https://www.youtube.com/embed/pliqObTHxUQ?si=n-iBUx5I6ggQvds1");
@@ -446,10 +446,10 @@ new Hymn("Walk with me, O my Lord", 966, "", "", "https://www.youtube.com/embed/
 new Hymn("Water of life", 512, "", "", "https://www.youtube.com/embed/p153CSsGRxs?si=_yModMrXNcTu4vYm");
 new Hymn("We come to your feast", "Sheet", "", "", "https://www.youtube.com/embed/He1viPvFXzc?si=LFrNiFMv5B6KBU-I")
 new Hymn("We have a gospel to proclaim", 852, "", "", "https://www.youtube.com/embed/OXlojQCipg4?si=fxCJvBdV-nCFq-It");
-new Hymn("We Should Glory in the Cross", "-", "", ["piano"])
+new Hymn("We Should Glory in the Cross", "-", "", "")
 new Hymn("We three kings", 170, "", "", "https://www.youtube.com/embed/Lx35_DRIZ8g?si=bCTGGMdpULJm0UDc");
 new Hymn("Were you there", 225, "", "", "https://www.youtube.com/embed/7z1SwwFopJk?si=HdluGOjnErTcgVdP");
-new Hymn("What a beautiful name", "n/a", "./sheetMusic/hymns/What a Beautiful Name.pdf", "", "https://www.youtube.com/embed/nQWFzMvCfLE?si=RVe6ehjYO5i6ZIb5")
+new Hymn("What a beautiful name", "n/a", "./music/hymns/What a beautiful name/sheetmusic/What a Beautiful Name.pdf", "", "https://www.youtube.com/embed/nQWFzMvCfLE?si=RVe6ehjYO5i6ZIb5")
 new Hymn("What child is this", 145, "", "", "https://www.youtube.com/embed/6jroBAl3WW8?si=kZEj9G4qmknU1RlB");
 new Hymn("Whatsoever you do", 926, "", "", "https://www.youtube.com/embed/oDa1mcyK8B4?si=_6sQlfjIpREqHU1N")
 new Hymn("When I survey the Wondrous Cross", 756, "", "", "https://www.youtube.com/embed/YSh1uU7xpdo?si=h_b1saj9HxZTLxCk", ["When I survey the wondrous cross on which the Prince of Glory died, my richest gain I count but loss, and poor contempt on all my pride.", "Forbid it, Lord, that I should boast, save in the death of Christ, my God; all the vain things that charm me most, I sacrifice them to his blood.", "See from his head, his hands, his feet, sorrow and love flow mingled down; did e’er such love and sorrow meet, or thorns compose so rich a crown?", "His dying crimson like a robe, spreads o’er his body on the Tree; then I am dead to all the globe, and all the globe is dead to me.", "Were the whole realm of nature mine, that were an offering far too small; love so amazing, so divine, demands my soul, my life, my all."])
