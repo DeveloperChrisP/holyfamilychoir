@@ -1270,14 +1270,24 @@ function addElement(addOrRemove, number) {
             // and give it some content 
 
             // console.log(allLiturgies.filter(x => x.date > todaysDate)[number].hymn[idx]);
+            // console.log(allLiturgies.filter(x => x.date > todaysDate)[number].hymn);
+            // console.log(hymn.title);
+
+            if (hymn) {
+                const hymnText = hymn.title;
+                const newContent = document.createTextNode(hymnText);
+                newH4.appendChild(newContent);
+                const hymnRef = hymn.hymnNumber
+                newH6.appendChild(document.createTextNode(hymnRef));
 
 
-            const hymnText = allLiturgies.filter(x => x.date > todaysDate)[number].hymn[idx].title;
-            const hymnRef = allLiturgies.filter(x => x.date > todaysDate)[number].hymn[idx].hymnNumber
-            const newContent = document.createTextNode(hymnText);
-            newH6.appendChild(document.createTextNode(hymnRef));
-            newH4.appendChild(newContent);
-
+            } else {
+                const hymnText = "unloaded";
+                const newContent = document.createTextNode(hymnText);
+                newH4.appendChild(newContent);
+                const hymnRef = "unloaded";
+                newH6.appendChild(document.createTextNode(hymnRef));
+            }
 
 
 
