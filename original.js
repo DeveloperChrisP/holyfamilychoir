@@ -11,6 +11,7 @@ const allPsalms = [];
 const allAlleluiaVerses = [];
 
 const todaysDate = new Date();
+const offertoryExtras = ["Taste & See"];
 
 
 
@@ -240,7 +241,7 @@ for (let index = 0; index < allAcclamationSettings.length; index++) {
     const element = document.querySelectorAll(".acclamations h6")[index];
     element.textContent = allAcclamationSettings[index].composer;
 }
-const extra = new Hymn("Taste & See", "Sheet", "./music/hymns/Taste and See/sheetmusic/Taste & See (chords & lyrics).pdf", { "satb": "./music/hymns/Taste and See/audio/Taste & See - SATB.mp3", "melody": "./music/hymns/Taste and See/audio/Taste & See - Melody.mp3", "alto": "./music/hymns/Taste and See/audio/Taste & See - Alto.mp3", "tenor": "./music/hymns/Taste and See/audio/Taste & See - Tenor.mp3", "bass": "./music/hymns/Taste and See/audio/Taste & See - Bass.mp3", "piano": "./music/hymns/Taste and See/audio/Taste & See - Piano.mp3" }, "https://www.youtube.com/embed/cRHOCB0Th0M?si=8tmszbX8vsjWCobF", "", { "Refrain 1": "./music/hymns/Taste and See/sheetmusic/Refrain 1 - SATB.jpg", "Refrain 2": "./music/hymns/Taste and See/sheetmusic/Refrain 2 - SATB.jpg", "Refrain 3": "./music/hymns/Taste and See/sheetmusic/Refrain 3 - SATB.jpg", "Refrain 4": "./music/hymns/Taste and See/sheetmusic/Refrain 4 - SATB.jpg" }, { "Timer": 32, "ImgOrder": [1, 2, 1, 3, 1, 4, 1] }) //Timer should be 32
+// const extra = new Hymn("Taste & See", "Sheet", "./music/hymns/Taste and See/sheetmusic/Taste & See (chords & lyrics).pdf", { "satb": "./music/hymns/Taste and See/audio/Taste & See - SATB.mp3", "melody": "./music/hymns/Taste and See/audio/Taste & See - Melody.mp3", "alto": "./music/hymns/Taste and See/audio/Taste & See - Alto.mp3", "tenor": "./music/hymns/Taste and See/audio/Taste & See - Tenor.mp3", "bass": "./music/hymns/Taste and See/audio/Taste & See - Bass.mp3", "piano": "./music/hymns/Taste and See/audio/Taste & See - Piano.mp3" }, "https://www.youtube.com/embed/cRHOCB0Th0M?si=8tmszbX8vsjWCobF","", { "Refrain 1": "./music/hymns/Taste and See/sheetmusic/Refrain 1 - SATB.jpg", "Refrain 2": "./music/hymns/Taste and See/sheetmusic/Refrain 2 - SATB.jpg", "Refrain 3": "./music/hymns/Taste and See/sheetmusic/Refrain 3 - SATB.jpg", "Refrain 4": "./music/hymns/Taste and See/sheetmusic/Refrain 4 - SATB.jpg" }, { "Timer": 32, "ImgOrder": [1, 2, 1, 3, 1, 4, 1] }) //Timer should be 32
 const extra2 = new Hymn("How great is our God", "Sheet", { "Chords": "./music/hymns/How great is our god/sheetmusic/How Great Is Our God - Chords.pdf" }, "", "", "", "", { "Timer": 50 })
 
 new Hymn("10,000 reasons", "sheet", "./music/hymns/10,000 Reasons/sheetmusic/10,000 Reasons (Bless The Lord) (G) - sheet music.pdf", "", "https://www.youtube.com/embed/XtwIT8JjddM?si=nEiKqySIOsHt8SG_")
@@ -415,7 +416,7 @@ new Hymn("Stay with me", 249, "", "", "https://www.youtube.com/embed/FCr2tn4yYKY
 new Hymn("Sweet Sacrament Divine", 663, "", "", "https://www.youtube.com/embed/6N1IfoGFF-I?si=4SrRraG5OQcqP0KN");
 new Hymn("Take my life and let it be", 874, "", "", "https://www.youtube.com/embed/VUitRcLnfNk?si=zYJqQe2royTp1q_b")
 new Hymn("Take our bread", 605, "", "", "https://www.youtube.com/embed/g0amLuMeVjY?si=UbwdvgeVfH5Nv_KV");
-new Hymn("Taste & See", "Sheet", "./music/hymns/Taste and See/sheetmusic/Taste & See (chords & lyrics).pdf", { "satb": "./music/hymns/Taste and See/audio/Taste & See - SATB.mp3", "melody": "./music/hymns/Taste and See/audio/Taste & See - Melody.mp3", "alto": "./music/hymns/Taste and See/audio/Taste & See - Alto.mp3", "tenor": "./music/hymns/Taste and See/audio/Taste & See - Tenor.mp3", "bass": "./music/hymns/Taste and See/audio/Taste & See - Bass.mp3", "piano": "./music/hymns/Taste and See/audio/Taste & See - Piano.mp3" }, "https://www.youtube.com/embed/cRHOCB0Th0M?si=8tmszbX8vsjWCobF")
+new Hymn("Taste & See", "Sheet", "./music/hymns/Taste and See/sheetmusic/Taste & See (chords & lyrics).pdf", { "satb": "./music/hymns/Taste and See/audio/Taste & See - SATB.mp3", "melody": "./music/hymns/Taste and See/audio/Taste & See - Melody.mp3", "alto": "./music/hymns/Taste and See/audio/Taste & See - Alto.mp3", "tenor": "./music/hymns/Taste and See/audio/Taste & See - Tenor.mp3", "bass": "./music/hymns/Taste and See/audio/Taste & See - Bass.mp3", "piano": "./music/hymns/Taste and See/audio/Taste & See - Piano.mp3" }, "https://www.youtube.com/embed/cRHOCB0Th0M?si=8tmszbX8vsjWCobF", "", { "Refrain 1": "./music/hymns/Taste and See/sheetmusic/Refrain 1 - SATB.jpg", "Refrain 2": "./music/hymns/Taste and See/sheetmusic/Refrain 2 - SATB.jpg", "Refrain 3": "./music/hymns/Taste and See/sheetmusic/Refrain 3 - SATB.jpg", "Refrain 4": "./music/hymns/Taste and See/sheetmusic/Refrain 4 - SATB.jpg" }, { "Timer": 32, "ImgOrder": [1, 2, 1, 3, 1, 4, 1] }) //Timer should be 32)
 new Hymn("Teach me, O God", "Sheet", "", "", "https://www.youtube.com/embed/__voVCEZo3w?si=VGI6iwUsEg71Hexm")
 new Hymn("Tell out my soul", 880, "", "", "https://www.youtube.com/embed/A59pfx4sb2Q?si=2CAw8d2OBfjEWvFT");
 new Hymn("The angel Gabriel", 113, "", "", "https://www.youtube.com/embed/pliqObTHxUQ?si=n-iBUx5I6ggQvds1");
@@ -817,226 +818,261 @@ function addAlleluia(line1, line2) {
     document.querySelector(".container2").insertBefore(alleluia, document.querySelector(".container-HymnsAcclamations"));
 
 }
+function activateButton(cancelButtons, activateButton, addClass) {
 
+    for (let index = 0; index < cancelButtons.length; index++) {
+        const element = cancelButtons[index];
+        element.classList.remove(addClass)
+    }
+    activateButton.classList.add(addClass);
+}
 //add extras section
 
 // addExtras(extra.title, extra.img, extra.sheetMusic, extra.vocalPart, extra.imgTimer);
 
-function addExtras(ExtrasTitle, ExtrasIMG, ExtrasPDF, ExtrasAudio, Timer) {
+// , ExtrasIMG, ExtrasPDF, ExtrasAudio, Timer) 
+function addExtras(hymnTitle, whereToAppend) {
+    // console.log(hymnTitle);
+
+    // const hymn = allHymns.find((element) => element.title)
+    hymnTitle.forEach((title, idx) => {
+        idx++;
+        const hymn = allHymns.find((element) => element.title === title)
+        // console.log(hymn);
 
 
-    const extra = document.createElement("details");
-    // extra.setAttribute("open", "true")
-    extra.id = "extra";
-
-    extra.innerHTML = `
-    <summary> <span id="psalmNumber">${ExtrasTitle}</span> 
-    </summary>
-    `
-    document.querySelector(".container2").append(extra);
-
-    if (ExtrasIMG !== undefined && ExtrasIMG !== "") {
-        const extrasImage = document.createElement("img");
-        extrasImage.id = "extrasIMG"
-        const container = document.createElement("div");
-        container.classList.add("imgButtonContainer")
-        document.getElementById("extra").append(extrasImage);
-        document.getElementById("extra").append(container);
-
-        // document.querySelector(".imgButtonContainer").parentElement.firstElementChild.classList.add("selected")
-        // document.getElementById("extra .imgButtonContainer").closest("button")
-        // console.log(document.querySelector("#extra .imgButtonContainer button.audioSelection"));
 
 
-        if (typeof ExtrasIMG == "object") {
+        // allHymns.find((element) => element.title === title)
+
+        // console.log(allHymns.find((element) => element.title === "Abide with me"));
 
 
-            extrasImage.setAttribute("src", Object.values(ExtrasIMG)[0])
-            for (let index = 0; index < Object.keys(ExtrasIMG).length; index++) {
-                const tag = Object.keys(ExtrasIMG)[index];
-                const imgButton = document.createElement("button");
-                imgButton.classList.add("audioSelection");
-                imgButton.textContent = tag;
-                document.querySelector(".imgButtonContainer").append(imgButton);
-            }
-            document.querySelector("#extra .imgButtonContainer button.audioSelection").classList.add("active");
-            document.querySelector(".imgButtonContainer").addEventListener("click", (e) => {
-                // console.log(ExtrasIMG[e.target.textContent]);
-                extrasImage.setAttribute("src", ExtrasIMG[e.target.textContent])
+        const extra = document.createElement("details");
+        // extra.setAttribute("open", "true")
+        extra.id = `offExtra${idx}`;
+        extra.classList.add("extra");
+        extra.innerHTML = `
+        <summary> <span id="psalmNumber">${hymn.title}</span> 
+        </summary>
+        `
+        whereToAppend.append(extra);
+        if (hymn.img !== undefined && hymn.img !== "") {
+            const extrasImage = document.createElement("img");
+            extrasImage.id = `extrasIMG${idx}`;
+            extrasImage.classList.add("extrasIMG");
+            const container = document.createElement("div");
+            container.classList.add("imgButtonContainer")
 
-                const imageButtons = document.querySelectorAll("#extra .imgButtonContainer button");
-                activateButton(imageButtons, e.target, "active");
-            })
-            function activateButton(cancelButtons, activateButton, addClass) {
 
-                for (let index = 0; index < cancelButtons.length; index++) {
-                    const element = cancelButtons[index];
-                    element.classList.remove(addClass)
+
+
+            document.getElementById(`offExtra${idx}`).append(extrasImage);
+            document.getElementById(`offExtra${idx}`).append(container);
+
+            // document.querySelector(".imgButtonContainer").parentElement.firstElementChild.classList.add("selected")
+            // document.getElementById("extra .imgButtonContainer").closest("button")
+            // console.log(document.querySelector("#extra .imgButtonContainer button.audioSelection"));
+
+
+
+            if (typeof hymn.img == "object") {
+
+
+
+                extrasImage.setAttribute("src", Object.values(hymn.img)[0])
+                for (let index = 0; index < Object.keys(hymn.img).length; index++) {
+                    const tag = Object.keys(hymn.img)[index];
+                    const imgButton = document.createElement("button");
+                    imgButton.classList.add("audioSelection");
+                    imgButton.textContent = tag;
+                    document.querySelector(".imgButtonContainer").append(imgButton);
                 }
-                activateButton.classList.add(addClass);
+                document.querySelector(`#offExtra${idx} .imgButtonContainer button.audioSelection`).classList.add("active");
+                document.querySelector(".imgButtonContainer").addEventListener("click", (e) => {
+                    // console.log(ExtrasIMG[e.target.textContent]);
+                    extrasImage.setAttribute("src", hymn.img[e.target.textContent])
+
+                    const imageButtons = document.querySelectorAll(`#offExtra${idx} .imgButtonContainer button`);
+                    activateButton(imageButtons, e.target, "active");
+                })
+
+                //first img button active
             }
-            //first img button active
+            else {
+                console.log(hymn.img);
+
+                extrasImage.setAttribute("src", hymn.img)
+            }
+            if (hymn.sheetMusic !== undefined && hymn.sheetMusic !== "") {
+                const psalmButton = document.createElement("button");
+                psalmButton.innerHTML = `<a href="${hymn.sheetMusic}">Full Sheetmusic</a>`
+                // psalmButton.textContent = "Full Sheetmusic";
+                // psalmButton.setAttribute("onclick", "window.location.href=" + psalmPDF);
+                document.getElementById(`offExtra${idx}`).append(psalmButton);
+            }
+            // document.getElementById(`ExtrasIMG${idx}`).addEventListener("click", (e) => {
+            //     e.target.classList.toggle("fullScreen");
+            // })
         }
-        else { extrasImage.setAttribute("src", ExtrasIMG) }
-        if (ExtrasPDF !== undefined && ExtrasPDF !== "") {
-            const psalmButton = document.createElement("button");
-            psalmButton.innerHTML = `<a href="${ExtrasPDF}">Full Sheetmusic</a>`
-            // psalmButton.textContent = "Full Sheetmusic";
-            // psalmButton.setAttribute("onclick", "window.location.href=" + psalmPDF);
-            document.getElementById("extra").append(psalmButton);
-        }
-        document.getElementById("extrasIMG").addEventListener("click", (e) => {
-            e.target.classList.toggle("fullScreen");
-        })
-    }
-    // if (typeof allPsalms[2].audio == "object"){console.log("success")}else{console.log("failure")}
-    // if (ExtrasAudio !== undefined && ExtrasAudio !== "" && typeof ExtrasAudio == "object") {
+        // console.log(hymn.img);
+
+
+        // if (typeof allPsalms[2].audio == "object"){console.log("success")}else{console.log("failure")}
+        // if (ExtrasAudio !== undefined && ExtrasAudio !== "" && typeof ExtrasAudio == "object") {
 
 
 
 
-    // }
-    // console.log(typeof ExtrasAudio)
-    // if (ExtrasAudio !== undefined && ExtrasAudio == "object") {
-    // console.log("Object.keys = " + Object.keys(psalmAudio)[0]);
-    // console.log("Object.values = " + Object.values(psalmAudio)[0]);
-    // console.log("Object.entries = " + Object.entries(psalmAudio)[0]);
-
-
-    const mediaPlayer = document.createElement("div");
-    mediaPlayer.classList = "product__mediaPlayer";
-    mediaPlayer.id = "mediaPlayer";
-    if (typeof ExtrasAudio == "string") {
-        mediaPlayer.innerHTML = `             
-                        <h3 class="mediaPlayer__title">Audio Player</h3>
-                        <div class="flexContainer">
-                            <div id="mediaPlayer__light" class= "melody selected"></div>
-                            <h4 id="mediaPlayer__description"> ${ExtrasTitle} - Melody</h4>
-                        </div>
-                        <div class="mediaPlayer__audioDiv">
-                            <audio controls preload="metadata" src="${ExtrasAudio}" class="mediaPlayer__audio"></audio>
-                        </div>`
-    } else {
-        mediaPlayer.innerHTML = `             
-                        <div class="container">
-                            <svg class="accordion_icon" aria-hidden="true">
-                                <use xlink:href="#headphones"></use>
-                            </svg>
-                            <h3 class="mediaPlayer__title">Audio Player</h3>
-                        </div>
-                        <div class="flexContainer">
-                            <div id="mediaPlayer__light" class= "${Object.keys(ExtrasAudio)[0].toLowerCase()} selected"></div>
-                            <h4 id="mediaPlayer__description"> ${ExtrasTitle} - ${Object.keys(ExtrasAudio)[0]}</h4>
-                        </div>
-                        <div class="mediaPlayer__audioDiv">
-                            <audio loop=true id="psalmAudio" controls preload="metadata" src="${Object.values(ExtrasAudio)[0]}" class="mediaPlayer__audio"></audio>
-                
-                            </div>
-                        <ul id = "audioPartContainer" class = "product__audioCategory">
-                        
-                        </ul>
-                        `
-
-    }
-    document.getElementById("extra").append(mediaPlayer)
-    // console.log(document.getElementById("psalmAudio"));
-    // console.log(ExtrasAudio);
-
-    for (const property in ExtrasAudio) {
-        const part = document.createElement("li");
-        part.classList = "visible"
-
-        part.innerHTML = `<div class="audioCategory__light extra ${property.toLowerCase()}"></div>
-            <button class = "audioSelection">${property}</button>`
-        document.querySelector("#audioPartContainer").append(part)
-    }
-    const mediaPlayerButtons = document.querySelectorAll("#extra #mediaPlayer #audioPartContainer button")
-    const mediaPlayerLights = document.querySelectorAll("#extra #mediaPlayer #audioPartContainer .audioCategory__light")
-
-    activateButton(mediaPlayerButtons, mediaPlayerButtons[0], "active");
-    activateButton(mediaPlayerLights, mediaPlayerLights[0], "selected");
-
-    document.getElementById("audioPartContainer").addEventListener("click", (e) => {
-        const objKey = e.target.closest('button').textContent;
-        // console.log(psalmAudio[objKey]);
-        document.getElementById("psalmAudio").setAttribute("src", ExtrasAudio[objKey]);
-        document.getElementById("mediaPlayer__description").innerText = ` ${ExtrasTitle} - ${objKey}`;
-
-        const partArray = document.querySelectorAll(".audioCategory__light.extra");
-        for (let index = 0; index < partArray.length; index++) {
-            const element = partArray[index];
-            element.classList.remove("selected")
-            // console.log();
-            element.parentElement.lastElementChild.classList.remove("active")
-        }
-        // console.log(document.querySelectorAll(`.audioCategory__light.psalm.${e.target.innerHTML.toLowerCase()}`))
-        // console.log(e.target.parentElement.firstElementChild)
-        e.target.parentElement.firstElementChild.classList.add("selected")
-        e.target.closest("button").classList.add("active");
-    })
-    // console.log(Object.values(ExtrasIMG)[0]);
-    //change extra images based on hymnTimer time
-    // imgChanger(document.getElementById("psalmAudio").currentTime);
-    imgChanger();
-    function imgChanger() {
-        let imgCount
-        if (startTime > Timer) { imgCount = Math.floor(startTime / Timer) }
-        const audioElement = document.getElementById("psalmAudio");
-        //         if (audioElement.paused) {
-        //     console.log('Audio is currently paused.');
         // }
-        audioElement.addEventListener("playing", (e) => {
-            // let startTime = audioElement.currentTime;
-            const currentaudioTime = audioElement.currentTime * 1000;
-            const sectionTime = Timer.Timer * 1000;
+        // console.log(typeof ExtrasAudio)
+        // if (ExtrasAudio !== undefined && ExtrasAudio == "object") {
+        // console.log("Object.keys = " + Object.keys(psalmAudio)[0]);
+        // console.log("Object.values = " + Object.values(psalmAudio)[0]);
+        // console.log("Object.entries = " + Object.entries(psalmAudio)[0]);
 
 
-            // console.log(e);
+        const mediaPlayer = document.createElement("div");
+        mediaPlayer.classList = "product__mediaPlayer";
+        mediaPlayer.id = "mediaPlayer";
+        if (typeof ExtrasAudio == "string") {
+            mediaPlayer.innerHTML = `             
+                <h3 class="mediaPlayer__title">Audio Player</h3>
+                <div class="flexContainer">
+                <div id="mediaPlayer__light" class= "melody selected"></div>
+                <h4 id="mediaPlayer__description"> ${hymnTitle} - Melody</h4>
+                </div>
+                <div class="mediaPlayer__audioDiv">
+                <audio controls preload="metadata" src="${ExtrasAudio}" class="mediaPlayer__audio"></audio>
+                </div>`
+        } else {
+            mediaPlayer.innerHTML = `             
+                <div class="container">
+                <svg class="accordion_icon" aria-hidden="true">
+                <use xlink:href="#headphones"></use>
+                </svg>
+                <h3 class="mediaPlayer__title">Audio Player</h3>
+                </div>
+                <div class="flexContainer">
+                <div id="mediaPlayer__light" class= "${Object.keys(hymn.vocalPart)[0].toLowerCase()} selected"></div>
+                <h4 id="mediaPlayer__description"> ${hymnTitle} - ${Object.keys(hymn.vocalPart)[0]}</h4>
+                </div>
+                <div class="mediaPlayer__audioDiv">
+                <audio loop=true id="psalmAudio" controls preload="metadata" src="${Object.values(hymn.vocalPart)[0]}" class="mediaPlayer__audio"></audio>
+                
+                </div>
+                <ul id = "audioPartContainer" class = "product__audioCategory">
+                
+                </ul>
+                `
 
-            // if (e.type !== "playing"){"paused"};
-            // console.log(e.type);
-            // console.log();
+        }
 
 
-            imgCount = Math.floor(currentaudioTime / sectionTime);
-            imgTimer();
-            const my1stInterval = setTimeout(interval, (sectionTime) - (currentaudioTime % sectionTime));
+        document.getElementById(`offExtra${idx}`).append(mediaPlayer)
+        // console.log(document.getElementById("psalmAudio"));
+        // console.log(document.getElementById(`extra${idx}`));
 
+        for (const property in hymn.vocalPart) {
+            const part = document.createElement("li");
+            part.classList = "visible"
 
-            function interval() {
-                imgTimer();
-                const my2ndInterval = setInterval(imgTimer(), sectionTime);
-                if (audioElement.paused) {
-                    clearInterval(my2ndInterval);
-                    clearInterval(my1stInterval);
-                    // console.log("paused")
-                    return;
-                }
+            part.innerHTML = `<div class="audioCategory__light extra ${property.toLowerCase()}"></div>
+            <button class = "audioSelection">${property}</button>`
+            document.querySelector("#audioPartContainer").append(part)
+        }
+        const mediaPlayerButtons = document.querySelectorAll(`#offExtra${idx} #mediaPlayer #audioPartContainer button`)
+        const mediaPlayerLights = document.querySelectorAll(`#offExtra${idx} #mediaPlayer #audioPartContainer .audioCategory__light`)
+
+        activateButton(mediaPlayerButtons, mediaPlayerButtons[0], "active");
+        activateButton(mediaPlayerLights, mediaPlayerLights[0], "selected");
+
+        document.getElementById("audioPartContainer").addEventListener("click", (e) => {
+            const objKey = e.target.closest('button').textContent;
+            // console.log(psalmAudio[objKey]);
+            document.getElementById("psalmAudio").setAttribute("src", hymn.vocalPart[objKey]);
+            document.getElementById("mediaPlayer__description").innerText = ` ${hymnTitle} - ${objKey}`;
+
+            const partArray = document.querySelectorAll(".audioCategory__light.extra");
+            for (let index = 0; index < partArray.length; index++) {
+                const element = partArray[index];
+                element.classList.remove("selected")
+                // console.log();
+                element.parentElement.lastElementChild.classList.remove("active")
             }
-            // } 
-
-            // const myInterval = setInterval(imgTimer, 3000);
-            function imgTimer(interval) {
-                // console.log(audioElement)
-                if (audioElement.paused) {
-                    // clearInterval(my2ndInterval);
-                    // clearInterval(my2ndInterval);
-                    // console.log("paused")
-                    return;
-                }
-                if (Timer.ImgOrder == undefined) { //If no ImgOrder is defined, then cycle through images 
-                    if (Object.keys(ExtrasIMG).length - 1 >= (imgCount + 1)) { imgCount++; } else { imgCount = 0 }
-                    document.getElementById("extrasIMG").setAttribute("src", Object.values(ExtrasIMG)[imgCount]);
-                } else {//follow ImgOrder from hymn Timer
-                    if (imgCount == (Timer.ImgOrder.length) - 1) { imgCount = 0; }
-                    console.log(Timer.ImgOrder[imgCount])
-                    document.getElementById("extrasIMG").setAttribute("src", Object.values(ExtrasIMG)[(Timer.ImgOrder[imgCount]) - 1]);
-                    imgCount++;
-
-                }
-            }
+            // console.log(document.querySelectorAll(`.audioCategory__light.psalm.${e.target.innerHTML.toLowerCase()}`))
+            // console.log(e.target.parentElement.firstElementChild)
+            e.target.parentElement.firstElementChild.classList.add("selected")
+            e.target.closest("button").classList.add("active");
         })
-    }
+        // console.log(Object.values(ExtrasIMG)[0]);
+        //change extra images based on hymnTimer time
+        // imgChanger(document.getElementById("psalmAudio").currentTime);
+        // imgChanger();
+        function imgChanger() {
+            let imgCount;
+            // if (startTime > Timer) { imgCount = Math.floor(startTime / Timer) }
+            const audioElement = document.getElementById("psalmAudio");
+            //         if (audioElement.paused) {
+            //     console.log('Audio is currently paused.');
+            // }
+            audioElement.addEventListener("playing", (e) => {
+                // let startTime = audioElement.currentTime;
+
+
+                const currentaudioTime = audioElement.currentTime * 1000;
+                const sectionTime = hymn.imgTimer['Timer'] * 1000;
+
+
+                // console.log(e);
+
+                // if (e.type !== "playing"){"paused"};
+                // console.log(e.type);
+                // console.log();
+
+
+                imgCount = Math.floor(currentaudioTime / sectionTime);
+                imgTimer();
+                const my1stInterval = setTimeout(interval, (sectionTime) - (currentaudioTime % sectionTime));
+
+
+                function interval() {
+                    imgTimer();
+                    const my2ndInterval = setInterval(imgTimer(), sectionTime);
+                    if (audioElement.paused) {
+                        clearInterval(my2ndInterval);
+                        clearInterval(my1stInterval);
+                        // console.log("paused")
+                        return;
+                    }
+                }
+                // } 
+
+                // const myInterval = setInterval(imgTimer, 3000);
+                function imgTimer(interval) {
+                    // console.log(audioElement)
+                    if (audioElement.paused) {
+                        // clearInterval(my2ndInterval);
+                        // clearInterval(my2ndInterval);
+                        // console.log("paused")
+                        return;
+                    }
+                    console.log(hymn);
+
+                    if (hymn.imgTimer['ImgOrder'] == undefined) { //If no ImgOrder is defined, then cycle through images 
+                        if (Object.keys(`ExtrasIMG${idx}`).length - 1 >= (imgCount + 1)) { imgCount++; } else { imgCount = 0 }
+                        document.getElementById(`extrasIMG${idx}`).setAttribute("src", Object.values(hymn.img)[imgCount]);
+                    } else {//follow ImgOrder from hymn Timer
+                        if (imgCount == (hymn.imgTimer['ImgOrder'].length) - 1) { imgCount = 0; }
+                        console.log(hymn.imgTimer['ImgOrder'][imgCount])
+                        document.getElementById(`extrasIMG${idx}`).setAttribute("src", Object.values(hymn.img)[(hymn.imgTimer['ImgOrder'][imgCount]) - 1]);
+                        imgCount++;
+
+                    }
+                }
+            })
+        }
+    });
 
 
 
@@ -1067,8 +1103,9 @@ document.querySelector(".liturgyPlan .flex-container").addEventListener("click",
     switch (clickedText) {
         case "Acclamations":
             // generateLiturgyButtons("remove")
-            if (document.getElementById("extra") !== null) {
-                document.getElementById("extra").remove();
+
+            if (document.querySelector("details.extra") !== null) {
+                document.querySelector("details.extra").remove();
             }
             if (document.getElementById("nextPsalm") !== null) {
                 document.getElementById("nextPsalm").remove();
@@ -1084,8 +1121,8 @@ document.querySelector(".liturgyPlan .flex-container").addEventListener("click",
             // liturgyPlan.querySelector(".hymns").classList.remove("selected");
 
             liturgyPlan.querySelector(".container").classList.add("hidden");
-            if (document.getElementById("extra") !== null) {
-                document.getElementById("extra").remove();
+            if (document.querySelector("details.extra") !== null) {
+                document.querySelector("details.extra").remove();
             }
             break;
         case "Next":
@@ -1096,8 +1133,8 @@ document.querySelector(".liturgyPlan .flex-container").addEventListener("click",
             liturgyPlan.querySelector(".hymns").classList.add("selected");
 
             liturgyPlan.querySelector(".container").classList.remove("hidden");
-            if (document.getElementById("extra") !== null) {
-                document.getElementById("extra").remove();
+            if (document.querySelector("details.extra") !== null) {
+                document.querySelector("details.extra").remove();
             }
             break;
         case "Upcoming":
@@ -1106,8 +1143,8 @@ document.querySelector(".liturgyPlan .flex-container").addEventListener("click",
             liturgyPlan.querySelector(".easterTitle").classList.add("selected");
             liturgyPlan.querySelector(".futureServices").classList.add("selected");
             liturgyPlan.querySelector(".container").classList.add("hidden");
-            if (document.getElementById("extra") !== null) {
-                document.getElementById("extra").remove();
+            if (document.querySelector("details.extra") !== null) {
+                document.querySelector("details.extra").remove();
             }
             if (document.getElementById("nextPsalm") !== null) {
                 document.getElementById("nextPsalm").remove();
@@ -1135,8 +1172,8 @@ document.querySelector(".liturgyPlan .flex-container").addEventListener("click",
 
         case "Offertory Extras":
             // generateLiturgyButtons("remove")
-            if (document.getElementById("extra") !== null) {
-                document.getElementById("extra").remove();
+            if (document.getElementById("offExtra") !== null) {
+                document.getElementById("offExtra").remove();
             }
             if (document.getElementById("nextPsalm") !== null) {
                 document.getElementById("nextPsalm").remove();
@@ -1149,13 +1186,14 @@ document.querySelector(".liturgyPlan .flex-container").addEventListener("click",
             liturgyPlan.querySelector(".extras").classList.add("selected");
             // document.getElementById("psalm").remove()
             // document.getElementById("alleluia").remove()
-            if (document.getElementById("extra") === null) {
-                addExtras(extra.title, extra.img, extra.sheetMusic, extra.vocalPart, extra.imgTimer);
+            if (document.getElementById("offExtra") === null) {
+                addExtras(offertoryExtras, document.querySelector(".container2"));
+                // , extra.img, extra.sheetMusic, extra.vocalPart, extra.imgTimer);
             }// addExtras(extra2.title, extra.img, extra2.sheetMusic, extra.vocalPart, extra.imgTimer);
 
             break;
         // console.log(extra);
-        // (ExtrasTitle, ExtrasIMG, ExtrasPDF, ExtrasAudio, Timer)
+        // (hymnTitle, ExtrasIMG, ExtrasPDF, ExtrasAudio, Timer)
 
         case "Full Liturgy Plan":
             document.getElementById("fullLiturgyBtn").classList.add("selected");
