@@ -1173,15 +1173,21 @@ hr {
 	text-align: center;
 	border-radius: 0 50% 50% 0;
 }
-details.psalm[open] {
+details[open] {
 	display: grid;
 	gap: 1rem;
 	grid-template-columns: auto;
 	grid-template-rows: auto auto;
 	grid-auto-columns: max-content;
 	/* row-gap: 5px; */
+	background-color: color-mix(
+		in oklab,
+		var(--linearGradient1) 50%,
+		var(--linearGradient2) 20%
+	);
 }
-details.psalm {
+details {
+	transition: background-color 2s;
 	/* margin-bottom: 1rem; */
 	font-family: var(--lavishFont);
 	/* color: darkblue; */
@@ -1189,11 +1195,21 @@ details.psalm {
 	text-align: left;
 	align-items: baseline;
 	width: 100%;
-	/* background-color: blue; */
+
 	border: var(--borderColour) solid 1px;
 	padding: 0.5rem;
 	border-radius: 10px;
 }
+details::details-content {
+	opacity: 0;
+	transition:
+		opacity 2s,
+		content-visibility 2s;
+}
+details[open]::details-content {
+	opacity: 1;
+}
+
 .futureServices details.psalm {
 	border: yellow solid 1px;
 	grid-column: span 2;
