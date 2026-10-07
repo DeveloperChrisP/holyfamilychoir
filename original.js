@@ -1115,6 +1115,9 @@ document.querySelector(".liturgyPlan .flex-container").addEventListener("click",
             if (document.getElementById("alleluia") !== null) {
                 document.getElementById("alleluia").remove();
             }
+            if (document.querySelector("div.liturgyMonths") !== null) {
+                document.querySelector("div.liturgyMonths").remove();
+            }
 
             liturgyPlan.querySelector(".acclamationsTitle").classList.add("selected");
             // liturgyPlan.querySelector(".hymnsTitle", ".hymns").classList.remove("selected");
@@ -1139,6 +1142,9 @@ document.querySelector(".liturgyPlan .flex-container").addEventListener("click",
             if (document.querySelector("details.extra") !== null) {
                 document.querySelector("details.extra").remove();
             }
+            if (document.querySelector("div.liturgyMonths") !== null) {
+                document.querySelector("div.liturgyMonths").remove();
+            }
             break;
         case "Upcoming":
             generateLiturgyButtons("remove")
@@ -1154,6 +1160,9 @@ document.querySelector(".liturgyPlan .flex-container").addEventListener("click",
             }
             if (document.getElementById("alleluia") !== null) {
                 document.getElementById("alleluia").remove();
+            }
+            if (document.querySelector("div.liturgyMonths") !== null) {
+                document.querySelector("div.liturgyMonths").remove();
             }
 
             // document.getElementById("nextPsalm").remove();
@@ -1175,14 +1184,17 @@ document.querySelector(".liturgyPlan .flex-container").addEventListener("click",
 
         case "Offertory Extras":
             // generateLiturgyButtons("remove")
-            if (document.getElementById("offExtra") !== null) {
-                document.getElementById("offExtra").remove();
+            if (document.querySelector("details.extra") !== null) {
+                document.querySelector("details.extra").remove();
             }
             if (document.getElementById("nextPsalm") !== null) {
                 document.getElementById("nextPsalm").remove();
             }
             if (document.getElementById("alleluia") !== null) {
                 document.getElementById("alleluia").remove();
+            }
+            if (document.querySelector("div.liturgyMonths") !== null) {
+                document.querySelector("div.liturgyMonths").remove();
             }
             liturgyPlan.querySelector(".container").classList.add("hidden"); //upcoming
             liturgyPlan.querySelector(".container").classList.add("hidden");
@@ -1201,8 +1213,10 @@ document.querySelector(".liturgyPlan .flex-container").addEventListener("click",
         case "Full Liturgy Plan":
             document.getElementById("fullLiturgyBtn").classList.add("selected");
             liturgyPlan.querySelector(".container").classList.add("hidden");
-            if (document.getElementById("extra") !== null) {
-                document.getElementById("extra").remove();
+
+
+            if (document.querySelector("details.extra") !== null) {
+                document.querySelector("details.extra").remove();
             }
             if (document.getElementById("nextPsalm") !== null) {
                 document.getElementById("nextPsalm").remove();
@@ -1210,14 +1224,17 @@ document.querySelector(".liturgyPlan .flex-container").addEventListener("click",
             if (document.getElementById("alleluia") !== null) {
                 document.getElementById("alleluia").remove();
             }
+
+
             // liturgyPlan.querySelector("hr").remove();
             // liturgyPlan.querySelector("h3.allHymns").remove();
-            generateLiturgyButtons();
+
+            if (document.querySelector("div.liturgyMonths") == null) { generateLiturgyButtons(); }
         // liturgyPlan.getElementById("fullLiturgyBtn").classList.add("selected");
     }
     psalmOrNot();
 });
-const fullLiturgyPlans = [];
+let fullLiturgyPlans = [];
 function generateLiturgyButtons(remove) {
     const liturgyButtonContainer = document.createElement("div");
     liturgyButtonContainer.classList.add("container", "liturgyMonths", "no-print");
@@ -1242,23 +1259,38 @@ function generateLiturgyButtons(remove) {
         document.getElementById("liturgyMonthsContainer").addEventListener("click", (e) => {
 
             //toggle 'active' classname to clicked button
-            if (e.target.localName != "button") { return; } else { e.target.classList.toggle("active") }
-            //Filter for liturgies for each month (jan = 0 etc, 126 = 2026)
-            switch (e.target.id) {
-                case "january":
-                    if (document.getElementById("january").classList.contains("active")) {
-                        const liturgies = allLiturgies.filter(x => x.date.getMonth() == 0 && x.date.getYear() == 126)
-                        console.log(liturgies.length);
-
-                        fullLiturgyPlans.push(liturgies);
+            if (e.target.localName != "button") { return; }
+            else {
+                e.target.classList.toggle("active");
+                const clickedMonth = new Date(e.target.id + 2026).getMonth();
 
 
-                    }
-                    break;
+                //Filter for liturgies for each month (jan = 0 etc, 126 = 2026)
+                if (e.target.classList.contains("active")) {
 
-                default:
-                    break;
+                    const liturgies = allLiturgies.filter(x => x.date.getMonth() == clickedMonth && x.date.getYear() == 126)
+                    // console.log(liturgies.length);
+                    // take each liturgy from array and add to the fullLiturgyPlans array, individually
+                    liturgies.forEach(liturgy => {
+                        fullLiturgyPlans.push(liturgy);
+                    })
+                } else {
+                    let a = fullLiturgyPlans;
+                    let b = a.filter(x => x.date.getMonth() === clickedMonth && x.date.getYear() == 126)
+                    b.forEach(x => a.splice(a.findIndex(e => e.date.getMonth() === x.date.getMonth()), 1));
+                    // console.log(a);
+                    fullLiturgyPlans = a;
+
+                    /*
+                    var a = [{name:'tc_001'}, {name:'tc_002'}, {name:'tc_003'}],
+                    b = a.filter(e => e.name === "tc_001");
+                    b.forEach(f => a.splice(a.findIndex(e => e.name === f.name),1));
+                    console.log(a);
+                    */
+
+                }
             }
+            generateFullHymnArticles()
         })
     }
 }
@@ -2299,5 +2331,95 @@ function addArticle() {
             </div>`
     document.querySelector(".wrapper.liturgyPlan").append(newArticle);
 }
-// addArticle();
+// editing("fullLiturgyPlan")
+function editing(SectionToEdit) {
+    switch (SectionToEdit) {
+        case "fullLiturgyPlan":
+            liturgyPlan.querySelector(".container").classList.add("hidden");
 
+
+            if (document.querySelector("details.extra") !== null) {
+                document.querySelector("details.extra").remove();
+            }
+            if (document.getElementById("nextPsalm") !== null) {
+                document.getElementById("nextPsalm").remove();
+            }
+            if (document.getElementById("alleluia") !== null) {
+                document.getElementById("alleluia").remove();
+            }
+            document.querySelector(".nextHymns").classList.add("hidden");
+
+            // liturgyPlan.querySelector("hr").remove();
+            // liturgyPlan.querySelector("h3.allHymns").remove();
+
+            if (document.querySelector("div.liturgyMonths") == null) { generateLiturgyButtons(); }
+
+
+            break;
+
+        default:
+            break;
+    }
+
+}
+//for editing perposes (delete after)
+// editingLiturgies();
+function editingLiturgies() {
+    const liturgies = allLiturgies.filter(x => x.date.getMonth() == 0 && x.date.getYear() == 126);
+    console.log(liturgies.length);
+    // take each liturgy from array and add to the fullLiturgyPlans array, individually
+    liturgies.forEach(liturgy => {
+        fullLiturgyPlans.push(liturgy);
+    })
+}
+
+// generateFullHymnArticles();
+function generateFullHymnArticles() {
+    if (document.getElementById("listOfLiturgies")) {
+        document.getElementById("listOfLiturgies").remove();
+    }
+    const listOfLiturgies = document.createElement("ul");
+    listOfLiturgies.id = "listOfLiturgies";
+    generateLi();
+    function generateLi() {
+        const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+        const hymnSectionNames = ["Entrance", "Offertory", "Communion", "Recessional"]
+        for (let index = 0; index < fullLiturgyPlans.length; index++) {
+            const liturgy = fullLiturgyPlans[index];
+            const liElement = document.createElement("li");
+            const dayNumber = liturgy["date"].getDate();
+            const monthNumber = liturgy["date"].getMonth()
+            liElement.classList.add("liturgy");
+            // console.log(liturgy["hymn"]);
+
+            liElement.innerHTML = `
+            <h2 class= "liturgyTitle">${ordinal(dayNumber)} ${monthNames[monthNumber]} - ${liturgy["occasion"]}</h2>`
+            listOfLiturgies.appendChild(liElement);
+            // <h3>hi</h3><h4>hi</h4><h4>hi</h4>;
+
+            for (let index = 0; index < liturgy["hymn"].length; index++) {
+                const hymn = liturgy["hymn"][index];
+                const hymns = document.createElement("h3")
+                hymns.textContent = hymnSectionNames[index]
+                liElement.append(hymns);
+
+                const hymnNumber = document.createElement("h4");
+                if (hymn) {
+                    hymnNumber.textContent = hymn["hymnNumber"];
+                }
+                else { hymnNumber.textContent = "unloaded" }
+                liElement.append(hymnNumber);
+
+                const hymnTitle = document.createElement("h4");
+                if (hymn) {
+                    hymnTitle.textContent = hymn["title"];
+                }
+                else { hymnTitle.textContent = "unloaded" }
+                liElement.append(hymnTitle);
+            }
+
+        }
+    }
+    document.querySelector("div.container2").append(listOfLiturgies);
+
+}

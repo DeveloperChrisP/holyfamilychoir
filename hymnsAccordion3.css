@@ -1361,34 +1361,7 @@ audio {
 .product__mediaPlayer {
 	padding: 1rem;
 }
-@media print {
-	@page {
-		/* Sets the paper size to A4 and orientation to landscape */
-		size: A4 portrait;
-		/* Removes default browser headers/footers (optional) */
-		margin: 0rem;
-		/* margin-right: 1rem;  */
-	}
 
-	body {
-		/* Ensures the layout expands properly */
-		width: 100%;
-		/* Optional: Sets your content's printable boundaries */
-		box-sizing: border-box;
-		align-items: center;
-	}
-	.no-print {
-		display: none !important;
-	}
-	.title {
-	}
-}
-
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
 /* body {
 	display: flex;
 	flex-direction: column;
@@ -1407,9 +1380,15 @@ div.title {
 	text-align: left;
 } */
 div.container.liturgyMonths {
-	grid-column: span 2;
+	/* grid-column: span 2; */
 	display: flex;
-	justify-content: space-between;
+	flex-direction: row;
+	flex-wrap: wrap;
+	/* justify-content: space-between; */
+	width: 100%;
+}
+div.container.liturgyMonths button.month {
+	width: max-content;
 }
 div.wrapper.liturgyPlan {
 	background-color: blue;
@@ -1417,6 +1396,38 @@ div.wrapper.liturgyPlan {
 	grid-template-columns: min-content min-content;
 	width: max-content;
 	gap: 1rem;
+}
+ul#listOfLiturgies {
+	width: 100%;
+	line-height: 1.3;
+	font-size: medium;
+	gap: 1rem;
+	display: grid;
+	/* grid-column: span 3; */
+	/* grid-template-columns: subgrid; */
+}
+ul#listOfLiturgies li.liturgy {
+	display: grid;
+	grid-template-columns: 8rem minmax(min-content, 4rem) 1fr;
+	border: black solid 1px;
+	width: 100%;
+	gap: 5px;
+	padding: 10px;
+	/* grid-column: fit-content fit-content auto; */
+}
+ul#listOfLiturgies li.liturgy h2.liturgyTitle {
+	font-size: larger;
+	grid-column: span 3;
+}
+.liturgyMonths button.month.active {
+	color: white;
+	border: solid white 1px;
+	--_boxShadowColour: white;
+	box-shadow:
+		2px 2px 5px var(--_boxShadowColour),
+		-2px -2px 5px var(--_boxShadowColour),
+		2px -2px 5px var(--_boxShadowColour),
+		-2px 2px 5px var(--_boxShadowColour);
 }
 article {
 	background-color: rgba(144, 238, 144, 0.265);
@@ -1440,4 +1451,91 @@ div.container.hymnDetails {
 	display: flex;
 	gap: 1rem;
 	align-items: baseline;
+}
+
+@media print {
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+	@page {
+		/* Sets the paper size to A4 and orientation to portrait */
+		size: A4;
+		/* Removes default browser headers/footers (optional) */
+		margin: 0rem;
+		/* margin-right: 1rem;  */
+	}
+
+	body {
+		/* Ensures the layout expands properly */
+		width: 100%;
+		/* Optional: Sets your content's printable boundaries */
+		box-sizing: border-box;
+		align-items: center;
+		line-height: 1.3;
+		font-size: 11px;
+	}
+	.no-print {
+		display: none !important;
+	}
+
+	.wrapper {
+		/* height: calc((((var(--_panel-padding)*2) + var(--_button-size) + (var(--_panel-gap)*2))*6) - (var(--_panel-gap)*2)); */
+		/* max-height: min-content; */
+		/* time needs to match with JS scrollSpeed */
+
+		/* overflow: hidden; */
+		/* width: 100%; */
+
+		max-width: none;
+
+		/* margin-inline: auto; */
+		/* padding-inline: 1rem; */
+		display: block;
+		/* gap: calc(var(--_panel-gap) * 2); */
+		flex-direction: column;
+		/* justify-content: center; */
+		/* align-items: center; */
+		/* outline: red solid 2px; */
+		/* min-height: 100%; */
+		/* min-height: 100svh; */
+		/* touch-action: none; */
+		user-select: none;
+		/* position: relative; */
+		/* contain: content; */
+		/* max-height: 100vh; */
+		/* width: 342px; phone width */
+	}
+
+	.liturgyPlan {
+		border-radius: 0;
+		width: 595pt; /*a4 page size*/
+		height: 842pt;
+		display: flex;
+		flex-direction: column;
+		grid-template-columns: 1fr 1fr;
+		gap: 1rem;
+		/* grid-template-rows: 2fr 1fr 1fr 1fr; */
+	}
+	.liturgyPlan #pageTitleDiv {
+		text-align: left;
+		/* grid-column: span 2; */
+		/* width: 100%; */
+	}
+	.liturgyPlan #pageTitleDiv h1 {
+		text-align: left;
+	}
+	ul#listOfLiturgies {
+		/* border: purple solid 1px; */
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 10px;
+	}
+	li.liturgy {
+		width: 100%;
+		border: black solid 1px;
+		gap: 5px;
+		padding: 10px;
+	}
 }
