@@ -161,7 +161,7 @@ function grabAlleluiaObject(alleluiaRef) {
 
 
 new Psalm("Daniel 3", "52. 53. 54. 55. 56. ℟52b", "To be praised and highly exalted for ever!", "./music/psalms/Psalm Daniel 3/sheetmusic/Psalm Daniel 3 - Melody.pdf", "./music/psalms/Psalm Daniel 3/sheetmusic/Psalm Daniel 3.png", { "SATB": "./music/psalms/Psalm Daniel 3/audio/Psalm Daniel 3 - SATB.mp3", "Melody": "./music/psalms/Psalm Daniel 3/audio/Psalm Daniel 3 - Melody.mp3", "Alto": "./music/psalms/Psalm Daniel 3/audio/Psalm Daniel 3 - Alto.mp3", "Tenor": "./music/psalms/Psalm Daniel 3/audio/Psalm Daniel 3 - Tenor.mp3", "Bass": "./music/psalms/Psalm Daniel 3/audio/Psalm Daniel 3 - Bass.mp3" })
-new Psalm("23(22)", "1-3a. 3b-4. 5. 6. ℟1", "In the Lord's own house shall I dwell for length of days unending.", "./music/psalms/Psalm 23(22)/Psalm 23(22).pdf", "./music/psalms/Psalm 23(22)/Psalm 23(22).jpg")
+new Psalm("23(22)", "1-3a. 3b-4. 5. 6. ℟1", "In the Lord's own house shall I dwell for length of days unending.", "./music/psalms/Psalm 23(22)/sheetmusic/Psalm 23(22).pdf", "./music/psalms/Psalm 23(22)/sheetmusic/Psalm 23(22).jpg", "./music/psalms/Psalm 23(22)/audio/Psalm 23(22) - melody.mp3")
 new Psalm("27(26)", "1. 4. 7-8a. ℟13", "I believe I shall see the Lord's goodness in the land of the living.", "./music/psalms/Psalm 27(26)/sheetmusic/Psalm - 7th Sunday of Easter (A).pdf", "", "./music/psalms/Psalm 27(26)/audio/Psalm 27(26).mp3")
 new Psalm("34(33)", "2-3. 4-5. 6-7. 8-9. ℟5", "From all my terrors the Lord set me free.", "./music/psalms/Psalm 34(33)/sheetmusic/Psalm 34(33) - SATB.pdf", "./music/psalms/Psalm 34(33)/sheetmusic/Psalm 34(33).png", { "SATB": "./music/psalms/Psalm 34(33)/audio/Psalm 34(33) - SATB.mp3", "Melody": "./music/psalms/Psalm 34(33)/audio/Psalm 34(33) - Melody.mp3", "Alto": "./music/psalms/Psalm 34(33)/audio/Psalm 34(33) - Alto.mp3", "Tenor": "./music/psalms/Psalm 34(33)/audio/Psalm 34(33) - Tenor.mp3", "Bass": "./music/psalms/Psalm 34(33)/audio/Psalm 34(33) - Bass.mp3" })
 new Psalm("45(44)", "10. 11. 12. 16. ℟10b", "On your right stands the queen in gold of Ophir")
@@ -1119,6 +1119,10 @@ document.querySelector(".liturgyPlan .flex-container").addEventListener("click",
                 document.querySelector("div.liturgyMonths").remove();
             }
 
+            if (document.getElementById("listOfLiturgies") !== null) {
+                document.getElementById("listOfLiturgies").remove();
+            }
+
             liturgyPlan.querySelector(".acclamationsTitle").classList.add("selected");
             // liturgyPlan.querySelector(".hymnsTitle", ".hymns").classList.remove("selected");
             liturgyPlan.querySelector(".acclamations").classList.add("selected");
@@ -1145,6 +1149,9 @@ document.querySelector(".liturgyPlan .flex-container").addEventListener("click",
             if (document.querySelector("div.liturgyMonths") !== null) {
                 document.querySelector("div.liturgyMonths").remove();
             }
+            if (document.getElementById("listOfLiturgies") !== null) {
+                document.getElementById("listOfLiturgies").remove();
+            }
             break;
         case "Upcoming":
             generateLiturgyButtons("remove")
@@ -1164,7 +1171,9 @@ document.querySelector(".liturgyPlan .flex-container").addEventListener("click",
             if (document.querySelector("div.liturgyMonths") !== null) {
                 document.querySelector("div.liturgyMonths").remove();
             }
-
+            if (document.getElementById("listOfLiturgies") !== null) {
+                document.getElementById("listOfLiturgies").remove();
+            }
             // document.getElementById("nextPsalm").remove();
             // document.getElementById("alleluia").remove();
             const futureTitles = wrapper.querySelectorAll(".futureServices h4")
@@ -1196,6 +1205,9 @@ document.querySelector(".liturgyPlan .flex-container").addEventListener("click",
             if (document.querySelector("div.liturgyMonths") !== null) {
                 document.querySelector("div.liturgyMonths").remove();
             }
+            if (document.getElementById("listOfLiturgies") !== null) {
+                document.getElementById("listOfLiturgies").remove();
+            }
             liturgyPlan.querySelector(".container").classList.add("hidden"); //upcoming
             liturgyPlan.querySelector(".container").classList.add("hidden");
             liturgyPlan.querySelector(".extras").classList.add("selected");
@@ -1211,6 +1223,9 @@ document.querySelector(".liturgyPlan .flex-container").addEventListener("click",
         // (hymnTitle, ExtrasIMG, ExtrasPDF, ExtrasAudio, Timer)
 
         case "Full Liturgy Plan":
+            if (fullLiturgyPlans !== null) {
+                fullLiturgyPlans.length = 0;
+            }
             document.getElementById("fullLiturgyBtn").classList.add("selected");
             liturgyPlan.querySelector(".container").classList.add("hidden");
 
@@ -1273,6 +1288,8 @@ function generateLiturgyButtons(remove) {
                     // take each liturgy from array and add to the fullLiturgyPlans array, individually
                     liturgies.forEach(liturgy => {
                         fullLiturgyPlans.push(liturgy);
+
+                        fullLiturgyPlans.sort((a, b) => a.date - b.date);
                     })
                 } else {
                     let a = fullLiturgyPlans;
