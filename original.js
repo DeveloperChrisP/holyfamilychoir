@@ -2352,6 +2352,7 @@ function addArticle() {
 function editing(SectionToEdit) {
     switch (SectionToEdit) {
         case "fullLiturgyPlan":
+
             liturgyPlan.querySelector(".container").classList.add("hidden");
 
 
@@ -2421,6 +2422,7 @@ function generateFullHymnArticles() {
                 liElement.append(hymns);
 
                 const hymnNumber = document.createElement("h4");
+                hymnNumber.classList.add("hymnNumber");
                 if (hymn) {
                     hymnNumber.textContent = hymn["hymnNumber"];
                 }
@@ -2428,6 +2430,7 @@ function generateFullHymnArticles() {
                 liElement.append(hymnNumber);
 
                 const hymnTitle = document.createElement("h4");
+                hymnTitle.classList.add("hymnTitle")
                 if (hymn) {
                     hymnTitle.textContent = hymn["title"];
                 }
