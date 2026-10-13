@@ -12,7 +12,7 @@ const allAlleluiaVerses = [];
 
 const todaysDate = new Date();
 const offertoryExtras = ["Taste & See"];
-
+const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 
 
 
@@ -1283,7 +1283,7 @@ function generateLiturgyButtons(remove) {
                 //Filter for liturgies for each month (jan = 0 etc, 126 = 2026)
                 if (e.target.classList.contains("active")) {
 
-                    const liturgies = allLiturgies.filter(x => x.date.getMonth() == clickedMonth && x.date.getYear() == 126)
+                    const liturgies = allLiturgies.filter(x => x.date.getMonth() == clickedMonth && x.date.getFullYear() == 2026)
                     // console.log(liturgies.length);
                     // take each liturgy from array and add to the fullLiturgyPlans array, individually
                     liturgies.forEach(liturgy => {
@@ -1306,11 +1306,85 @@ function generateLiturgyButtons(remove) {
                     */
 
                 }
+                generateFullHymnArticles();
+                createDateTitle();
+                function createDateTitle() {
+                    const dateTitleId = document.getElementById("dateTitle");
+
+                    if (dateTitleId == null) {
+                        const firstArrayDate = fullLiturgyPlans[0].date.getDate();
+                        const firstArrayMonth = monthNames[fullLiturgyPlans[0].date.getMonth()];
+                        const firstArrayYear = fullLiturgyPlans[0].date.getFullYear();
+                        const lastArrayDate = fullLiturgyPlans[fullLiturgyPlans.length - 1].date.getDate();
+                        const lastArrayMonth = monthNames[fullLiturgyPlans[fullLiturgyPlans.length - 1].date.getMonth()]
+                        const lastArrayYear = fullLiturgyPlans[fullLiturgyPlans.length - 1].date.getFullYear();
+                        const dateTitle = document.createElement("div");
+                        dateTitle.id = "dateTitle";
+
+
+                        dateTitle.innerHTML = `<p> ${ordinal(firstArrayDate)}   ${firstArrayMonth} - ${ordinal(lastArrayDate)}   ${lastArrayMonth} ${lastArrayYear}</p>`;
+                        document.getElementById("pageTitle").insertAdjacentElement("afterend", dateTitle);
+                    }
+                    else if (fullLiturgyPlans.length == 0) { //if all buttons are unselected, delete datetitle
+                        dateTitleId.remove();
+                    }
+                    else {
+                        const firstArrayDate = fullLiturgyPlans[0].date.getDate();
+                        const firstArrayMonthNumber = fullLiturgyPlans[0].date.getMonth();
+                        const firstArrayMonth = monthNames[firstArrayMonthNumber];
+                        const firstArrayYear = fullLiturgyPlans[0].date.getFullYear();
+                        const lastArrayDate = fullLiturgyPlans[fullLiturgyPlans.length - 1].date.getDate();
+                        const lastArrayMonthNumber = fullLiturgyPlans[fullLiturgyPlans.length - 1].date.getMonth();
+                        const lastArrayMonth = monthNames[lastArrayMonthNumber];
+                        const lastArrayYear = fullLiturgyPlans[fullLiturgyPlans.length - 1].date.getFullYear();
+                        // console.log(lastArrayMonthNumber - firstArrayMonthNumber - fullLiturgyPlans.length);
+
+                        const activeMonthButtons = document.getElementById("liturgyMonthsContainer").querySelectorAll("button.month.active").length;
+                        if (lastArrayMonthNumber - firstArrayMonthNumber - activeMonthButtons == -1 && firstArrayYear == lastArrayYear) { //if selected months are consecutive & years are equal
+
+                            dateTitleId.innerHTML =
+                                `<p> ${ordinal(firstArrayDate)}   ${firstArrayMonth} - ${ordinal(lastArrayDate)}   ${lastArrayMonth} ${lastArrayYear}</p>`
+                        } else {
+
+                            function getMonths() {
+                                const activatedLiturgyMonths = [];
+                                const activeMonths = document.getElementById("liturgyMonthsContainer").querySelectorAll("button.month.active");
+                                activeMonths.forEach((plan) => {
+                                    activatedLiturgyMonths.push(plan.innerText)
+                                })
+
+                                let text = "<p>";
+                                activatedLiturgyMonths.forEach((month, idx) => {
+
+                                    if (idx == activatedLiturgyMonths.length - 1) {
+                                        text += "& " + month;
+                                    } else {
+                                        text += month + " " /* '+=' add to text */
+                                    }
+
+
+                                })
+                                /*add year*/
+                                if (firstArrayYear == lastArrayYear) {
+                                    text += " " + firstArrayYear;
+                                }
+                                text += "</p>";
+
+
+                                return text;
+
+                            }
+                            dateTitleId.innerHTML = getMonths();
+
+
+                        }
+                    }//update datetitle rather than creating new
+                }
             }
-            generateFullHymnArticles()
         })
     }
 }
+
 
 
 function checkAndPopulateInstrumentals(number) {
@@ -2383,8 +2457,9 @@ function editing(SectionToEdit) {
 //for editing perposes (delete after)
 // editingLiturgies();
 function editingLiturgies() {
-    const liturgies = allLiturgies.filter(x => x.date.getMonth() == 0 && x.date.getYear() == 126);
-    console.log(liturgies.length);
+    // x.date.getMonth() == 0 && 
+    const liturgies = allLiturgies.filter(x => x.date.getYear() == 126);
+    // console.log(liturgies.length);
     // take each liturgy from array and add to the fullLiturgyPlans array, individually
     liturgies.forEach(liturgy => {
         fullLiturgyPlans.push(liturgy);
@@ -2400,7 +2475,7 @@ function generateFullHymnArticles() {
     listOfLiturgies.id = "listOfLiturgies";
     generateLi();
     function generateLi() {
-        const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+
         const hymnSectionNames = ["Entrance", "Offertory", "Communion", "Recessional"]
         for (let index = 0; index < fullLiturgyPlans.length; index++) {
             const liturgy = fullLiturgyPlans[index];

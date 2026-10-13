@@ -50,7 +50,7 @@ body {
 	place-content: center;
 	/* min-height: 100vh; */
 	color: white;
-	margin: 0.1rem;
+	margin: 0rem;
 }
 
 .wrapper {
@@ -1394,7 +1394,7 @@ div.wrapper.liturgyPlan {
 	background-color: blue;
 	display: grid;
 	grid-template-columns: min-content min-content;
-	width: max-content;
+	width: 100%;
 	gap: 1rem;
 }
 ul#listOfLiturgies {
@@ -1416,7 +1416,7 @@ ul#listOfLiturgies li.liturgy {
 	width: 100%;
 	gap: 5px;
 	padding: 10px;
-	height: fit-content;
+	height: max-content;
 	/* grid-column: fit-content fit-content auto; */
 }
 ul#listOfLiturgies li.liturgy h2.liturgyTitle {
@@ -1470,48 +1470,78 @@ div.container.hymnDetails {
 
 @media print {
 	* {
-		margin: 0;
+		margin: 0rem;
 		padding: 0;
 		box-sizing: border-box;
+		/* border: gold solid 1px; */
 	}
 	@page {
 		/* Sets the paper size to A4 and orientation to portrait */
 		size: A4;
 		/* Removes default browser headers/footers (optional) */
-		margin: 0rem;
+		/* margin: 2rem; */
+
+		/* padding-top: 1rem; */
+		/* border: gold solid 1px; */
 		/* margin-right: 1rem;  */
 	}
 
 	body {
 		/* Ensures the layout expands properly */
-		width: 100%;
+		/* width: 100%; */
+		/* display: grid; */
 		/* Optional: Sets your content's printable boundaries */
-		box-sizing: border-box;
-		align-items: center;
+
+		/* place-content: left; */
+		/* width: 100%; */
 		line-height: 1.3;
 		font-size: 11px;
+		width: 100%;
+		display: grid;
+
+		/* margin: 1rem; */
+		justify-content: none;
+		/* a4 page size */
+		/* height: 841.89pt; */
+		/* width: 595.28pt; */
+		/* width: 100%; */
+		/* border: red solid 5px; */
+		z-index: 1000;
 	}
 	.no-print {
 		display: none !important;
 	}
 
 	.wrapper {
+		--_button-size: 0;
+		--_panel-gap: 0;
 		/* height: calc((((var(--_panel-padding)*2) + var(--_button-size) + (var(--_panel-gap)*2))*6) - (var(--_panel-gap)*2)); */
 		/* max-height: min-content; */
 		/* time needs to match with JS scrollSpeed */
 
 		/* overflow: hidden; */
 		/* width: 100%; */
-
-		max-width: none;
-
+		/* max-height: 841.89pt; */
+		max-width: 100%;
+		/* overflow: hidden; */
 		/* margin-inline: auto; */
 		/* padding-inline: 1rem; */
-		display: block;
+		display: grid;
+
+		place-content: centre;
+		/* border: purple solid 1px; */
+		z-index: 700;
+		/* flex-basis: 100%; */
+		/* flex-direction: column; */
+		/* overflow: visible; */
+		/* place-content: center; */
+		/* width: 100%; */
+		justify-content: center;
 		/* gap: calc(var(--_panel-gap) * 2); */
-		flex-direction: column;
+		/* flex-direction: column; */
 		/* justify-content: center; */
 		/* align-items: center; */
+		align-content: center;
 		/* outline: red solid 2px; */
 		/* min-height: 100%; */
 		/* min-height: 100svh; */
@@ -1521,36 +1551,73 @@ div.container.hymnDetails {
 		/* contain: content; */
 		/* max-height: 100vh; */
 		/* width: 342px; phone width */
+		width: 100%;
+		/* flex-basis: 100%; */
 	}
 
 	.liturgyPlan {
-		border-radius: 0;
-		width: 595pt; /*a4 page size*/
-		height: 842pt;
-		display: flex;
-		flex-direction: column;
+		padding: 0;
+		border-radius: 0px;
+		/* a4 page size */
+		/* height: 841.89pt; */
+		/* width: 595.28pt;  */
+		width: 100%;
+		/* flex-basis: 100%; */
+		display: block;
 		grid-template-columns: 1fr 1fr;
-		gap: 1rem;
+		/* flex-basis: 1rem; */
+		flex-direction: row;
+		/* grid-template-columns: 1fr 1fr; */
+		/* gap: 1rem; */
+		/* justify-content: left; */
+		/* align-content: left; */
 		/* grid-template-rows: 2fr 1fr 1fr 1fr; */
+		/* display: none; */
+		box-sizing: border-box;
+	}
+	div.container2 {
+		width: 100%;
+
+		display: grid;
+		grid-template-columns: 1fr;
+		justify-content: center;
+		/* grid-column: span 2; */
+		/* margin: 1rem; */
 	}
 	.liturgyPlan #pageTitleDiv {
 		text-align: left;
 		/* grid-column: span 2; */
-		/* width: 100%; */
+		width: max-content;
+		height: min-content;
+		margin-left: 1rem;
+		display: flex;
+		align-items: baseline;
+		gap: 1rem;
 	}
 	.liturgyPlan #pageTitleDiv h1 {
 		text-align: left;
 	}
+	.liturgyPlan #dateTitle {
+		font-family: var(--lavishFont);
+		font-size: large;
+		font-weight: 400;
+		font-style: italic;
+	}
 	ul#listOfLiturgies {
 		/* border: purple solid 1px; */
+		justify-content: center;
 		display: grid;
-		grid-template-columns: 1fr 1fr;
+		grid-template-columns: 47% 47%;
 		gap: 10px;
+		width: 100%;
+		/* flex-basis: 100%; */
+		/* margin: 1rem; */
 	}
-	li.liturgy {
+	ul#listOfLiturgies li.liturgy {
+		page-break-inside: avoid;
 		width: 100%;
 		border: black solid 1px;
 		gap: 5px;
-		padding: 10px;
+		/* padding: 10px; */
 	}
 }
