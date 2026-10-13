@@ -2517,7 +2517,8 @@ function generateFullHymnArticles() {
     generateLi();
     function generateLi() {
 
-        const hymnSectionNames = ["Entrance", "Offertory", "Communion", "Recessional"]
+        // console.log(Object.entries(fullLiturgyPlans[0].hymn));
+        // const hymnSectionNames = ["Entrance", "Offertory", "Communion", "Recessional"]
         for (let index = 0; index < fullLiturgyPlans.length; index++) {
             const liturgy = fullLiturgyPlans[index];
             const liElement = document.createElement("li");
@@ -2530,17 +2531,22 @@ function generateFullHymnArticles() {
             <h2 class= "liturgyTitle">${ordinal(dayNumber)} ${monthNames[monthNumber]} - ${liturgy["occasion"]}</h2>`
             listOfLiturgies.appendChild(liElement);
             // <h3>hi</h3><h4>hi</h4><h4>hi</h4>;
+            // console.log(Object.keys(liturgy["hymn"]).length);
 
-            for (let index = 0; index < liturgy["hymn"].length; index++) {
-                const hymn = liturgy["hymn"][index];
+            // console.log(Object.entries(liturgy["hymn"]));
+            Object.entries(liturgy["hymn"]).forEach(hymn => {
+
+                // const hymn = hymn;
+                console.log(hymn[1]);
                 const hymns = document.createElement("h3")
-                hymns.textContent = hymnSectionNames[index]
+                hymns.textContent = hymn[0]
                 liElement.append(hymns);
+
 
                 const hymnNumber = document.createElement("h4");
                 hymnNumber.classList.add("hymnNumber");
                 if (hymn) {
-                    hymnNumber.textContent = hymn["hymnNumber"];
+                    hymnNumber.textContent = hymn[1]["hymnNumber"];
                 }
                 else { hymnNumber.textContent = "unloaded" }
                 liElement.append(hymnNumber);
@@ -2548,11 +2554,11 @@ function generateFullHymnArticles() {
                 const hymnTitle = document.createElement("h4");
                 hymnTitle.classList.add("hymnTitle")
                 if (hymn) {
-                    hymnTitle.textContent = hymn["title"];
+                    hymnTitle.textContent = hymn[1]["title"];
                 }
                 else { hymnTitle.textContent = "unloaded" }
                 liElement.append(hymnTitle);
-            }
+            })
 
         }
     }
