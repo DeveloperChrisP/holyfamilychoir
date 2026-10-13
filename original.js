@@ -561,7 +561,9 @@ new Liturgy(new Date("8 Mar 2026"), "3rd Sunday of Lent", "A", "Chris", ["Praise
 new Liturgy(new Date("15 Mar 2026"), "4th Sunday of Lent", "A", "Chris", ["Be thou my vision", "O the word of my Lord", "The Servant King", "As I kneel before you"], ["Do not be afraid", "Because the Lord is my shepherd"])
 new Liturgy(new Date("22 Mar 2026"), "5th Sunday of Lent", "A", "Chris", ["Freely freely", "When I survey the wondrous cross", "This is my body", "Holy virgin by God's decree"], ["Bless the Lord my soul", "Ubi Caritas"])
 new Liturgy(new Date("29 Mar 2026"), "Palm Sunday", "A", "Chris", ["All Glory Laud and Honour", "God of mercy and compassion", "O Sacred head", "Holy light on earth's horizon"], ["My song is love unknown"])
-new Liturgy(new Date("2 Apr 2026"), "Maundy Thursday", "A", "Chris", ["We should glory in the cross", "Brother sister let me serve you", "The Lord Jesus", "Ubi Caritas", "An upper room", "This is my body", "Of the glorious body telling"])
+
+new Liturgy(new Date("2 Apr 2026"), "Maundy Thursday", "A", "Chris", ["We should glory in the cross", ["Brother sister let me serve you", "The Lord Jesus"], ["Ubi Caritas", "An upper room"], "This is my body", "Of the glorious body telling"])
+
 new Liturgy(new Date("3 Apr 2026"), "Good Friday", "A", "Chris", ["When I survey the wondrous cross", "My song is love unknown"])
 new Liturgy(new Date("4 Apr 2026"), "Easter Vigil", "A", "Chris", ["Saints of God in glory", "You have put on Christ", "Spirit of God", "Christ be our light", "Bread of life", "Thine be the glory"])
 new Liturgy(new Date("5 Apr 2026"), "Easter Sunday", "A", "Chris", ["Sing of the lord's goodness", "This day was made by the Lord", "Jesus Christ is risen today", "Alleluia alleluia give thanks", "He is risen, tell the story"])
@@ -607,7 +609,7 @@ new Liturgy(new Date("6 Dec 2026"), "2nd Sunday of Advent", "A", "Julian", ["Tel
 //2nd/ 6th/ 17th /20th (A) Sunday of ordinary - 26th of July: "Teach Me, O God (Christopher Walker)"
 
 let nextLiturgy = allLiturgies.filter(x => x.date >= todaysDate);
-nextLiturgy = [allLiturgies[allLiturgies.length - 12]]; //show latest liturgy on opening page (for easier adding)
+// nextLiturgy = [allLiturgies[allLiturgies.length - 12]]; //show latest liturgy on opening page (for easier adding)
 
 
 
@@ -1621,7 +1623,7 @@ if (nextLiturgy[0] !== undefined) {
 
         const hymnText = wrapper.querySelector(`#hymn${idx}`);
         const hymnRef = wrapper.querySelector(`#hymnReference${idx}`);
-        if (hymn) {
+        if (hymn[1]) {
             hymnText.textContent = hymn[1].title;
             hymnRef.textContent = hymn[1].hymnNumber;
         } else {
@@ -1770,29 +1772,76 @@ function ordinal(day) { //add 'st','nd','rd' or 'th' to date
 
 
 // }
-
+// grabHymnObjectTest(["silent night", ["taste & see", "ubi caritas"], "Of the glorious body telling", "brother sister let me serve you"])
 function grabHymnObject(hymnTitleArray) {
+
     //return array of hymn objects (up to 8) depending on how many are requested in 'new liturgy'
 
-
+    // console.log(typeof hymnTitleArray)
     if (hymnTitleArray !== undefined && hymnTitleArray !== "") {
         var hymns = [];
+        let hymnObject = {};
+        const hymnOccasion = ["Entrance", "Offertory", "Communion", "Ressesional"]
         hymnTitleArray.forEach((input, idx) => {
-            if (input) {
-                hymns.push(allHymns.filter(x => (x.title.toLowerCase().replace(/,/g, "") == input.toLowerCase().replace(/,/g, "")))[0])
+            if (typeof input == "object") {
+                // console.log(input);
+                input.forEach((input, index) => {
+                    // hymns.push(allHymns.filter(x => (x.title.toLowerCase().replace(/,/g, "") == input.toLowerCase().replace(/,/g, "")))[0])
+                    const hymn = allHymns.filter(x => (x.title.toLowerCase().replace(/,/g, "") == input.toLowerCase().replace(/,/g, "")))[0];
+                    // console.log(`${hymnOccasion[idx]} ${[index + 1]}`);
+
+                    hymnObject[`${hymnOccasion[idx]} ${[index + 1]}`] = hymn
+
+                })
+
+            } else if (typeof input == "string") {
+                // console.log(allHymns.filter(x => (x.title.toLowerCase().replace(/,/g, "") == input.toLowerCase().replace(/,/g, "")))[0]);
+                const hymn = allHymns.filter(x => (x.title.toLowerCase().replace(/,/g, "") == input.toLowerCase().replace(/,/g, "")))[0];
+                // hymns.push(allHymns.filter(x => (x.title.toLowerCase().replace(/,/g, "") == input.toLowerCase().replace(/,/g, "")))[0])
+                hymnObject[hymnOccasion[idx]] = hymn
+
             }
+
         }
         )
-        let hymnObject = {};
+
         hymns.forEach((hymn, idx) => {
-            const hymnOccasion = ["Entrance", "Offertory", "Communion", "Ressesional"]
-            hymnObject[hymnOccasion[idx]] = hymn;
+
+            // hymnObject[hymnOccasion[idx]] = hymn;
         })
         // console.log(hymnObject);
 
         return hymnObject;
     }
 }
+
+
+// function grabHymnObject(hymnTitleArray) {
+//     // console.log(hymnTitleArray);
+
+//     //return array of hymn objects (up to 8) depending on how many are requested in 'new liturgy'
+
+//     // console.log(typeof hymnTitleArray)
+//     if (hymnTitleArray !== undefined && hymnTitleArray !== "") {
+//         var hymns = [];
+//         hymnTitleArray.forEach((input, idx) => {
+//             if (input) {
+
+//                 hymns.push(allHymns.filter(x => (x.title.toLowerCase().replace(/,/g, "") == input.toLowerCase().replace(/,/g, "")))[0])
+//             }
+
+//         }
+//         )
+//         let hymnObject = {};
+//         hymns.forEach((hymn, idx) => {
+//             const hymnOccasion = ["Entrance", "Offertory", "Communion", "Ressesional"]
+//             hymnObject[hymnOccasion[idx]] = hymn;
+//         })
+//         // console.log(hymnObject);
+
+//         return hymnObject;
+//     }
+// }
 
 
 count = 0;
@@ -1884,7 +1933,7 @@ function hymnSelect() { //populate titles based upon 'count' number//
         title = "unprepaired"
     }
     document.querySelector("#panel1_title").textContent = title;
-    if (Object.values(allHymns)[Object.values(allHymns).length - 1].title) {
+    if (Object.values(allHymns)[Object.values(allHymns).length - 1] !== undefined) {
         var lastHymn = Object.values(allHymns)[Object.values(allHymns).length - 1].title;
     }
     else { lastHymn = "unprepaired" }
@@ -2499,7 +2548,7 @@ function editing(SectionToEdit) {
 // editingLiturgies();
 function editingLiturgies() {
     // x.date.getMonth() == 0 && 
-    const liturgies = allLiturgies.filter(x => x.date.getMonth() == 3 && x.date.getFullYear() == 2026);
+    const liturgies = allLiturgies.filter(x => x.date.getMonth() == 3 && x.date.getFullYear() == 2026 && x.date.getDate() == 2);
     // console.log(liturgies.length);
     // take each liturgy from array and add to the fullLiturgyPlans array, individually
     liturgies.forEach(liturgy => {
@@ -2537,7 +2586,7 @@ function generateFullHymnArticles() {
             Object.entries(liturgy["hymn"]).forEach(hymn => {
 
                 // const hymn = hymn;
-                console.log(hymn[1]);
+                // console.log(hymn[1]);
                 const hymns = document.createElement("h3")
                 hymns.textContent = hymn[0]
                 liElement.append(hymns);
