@@ -1467,7 +1467,13 @@ div.container.hymnDetails {
 	gap: 1rem;
 	align-items: baseline;
 }
-
+.liturgyPlan #dateTitle {
+	font-family: var(--lavishFont);
+	font-size: large;
+	font-weight: 400;
+	font-style: italic;
+	text-align: center;
+}
 @media print {
 	* {
 		margin: 0rem;
@@ -1597,12 +1603,7 @@ div.container.hymnDetails {
 	.liturgyPlan #pageTitleDiv h1 {
 		text-align: left;
 	}
-	.liturgyPlan #dateTitle {
-		font-family: var(--lavishFont);
-		font-size: large;
-		font-weight: 400;
-		font-style: italic;
-	}
+
 	ul#listOfLiturgies {
 		/* border: purple solid 1px; */
 		justify-content: center;

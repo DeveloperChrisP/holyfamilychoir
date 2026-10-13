@@ -1753,26 +1753,51 @@ function ordinal(day) { //add 'st','nd','rd' or 'th' to date
 }
 
 
-// function grabHymnObject(hymnTitleArray) {
-//     //return array of hymn objects (up to 8) depending on how many are requested in 'new liturgy'
-
-
-//     if (hymnTitleArray !== undefined && hymnTitleArray !== "") {
-//         var hymns = [];
-//         hymnTitleArray.forEach((input, idx) => {
-//             hymns.push(allHymns.filter(x => (x.title.toLowerCase().replace(/,/g, "") == input.toLowerCase().replace(/,/g, "")))[0])
-//         }
-//         )
-
-//         return hymns;
-//     }
-
-
-
-
 
 // }
-// grabHymnObjectTest(["silent night", ["taste & see", "ubi caritas"], "Of the glorious body telling", "brother sister let me serve you"])
+grabHymnObjectTest(["silent night", "taste & see", "ubi caritas", "Of the glorious body telling", "brother sister let me serve you"])
+function grabHymnObjectTest(hymnTitleArray) {
+
+    //return array of hymn objects (up to 8) depending on how many are requested in 'new liturgy'
+
+    // console.log(typeof hymnTitleArray)
+    if (hymnTitleArray !== undefined && hymnTitleArray !== "") {
+        var hymns = [];
+        let hymnObject = {};
+        const hymnOccasion = ["Entrance", "Offertory", "Communion", "Ressesional"]
+        hymnTitleArray.forEach((input, idx) => {
+            if (typeof input == "object") {
+                // console.log(input);
+                input.forEach((input, index) => {
+                    // hymns.push(allHymns.filter(x => (x.title.toLowerCase().replace(/,/g, "") == input.toLowerCase().replace(/,/g, "")))[0])
+                    const hymn = allHymns.filter(x => (x.title.toLowerCase().replace(/,/g, "") == input.toLowerCase().replace(/,/g, "")))[0];
+                    // console.log(`${hymnOccasion[idx]} ${[index + 1]}`);
+
+                    hymnObject[`${hymnOccasion[idx]} ${[index + 1]}`] = hymn
+
+                })
+
+            } else if (typeof input == "string") {
+                // console.log(allHymns.filter(x => (x.title.toLowerCase().replace(/,/g, "") == input.toLowerCase().replace(/,/g, "")))[0]);
+                const hymn = allHymns.filter(x => (x.title.toLowerCase().replace(/,/g, "") == input.toLowerCase().replace(/,/g, "")))[0];
+                // hymns.push(allHymns.filter(x => (x.title.toLowerCase().replace(/,/g, "") == input.toLowerCase().replace(/,/g, "")))[0])
+                hymnObject[hymnOccasion[idx]] = hymn
+
+            }
+
+        }
+        )
+
+        hymns.forEach((hymn, idx) => {
+
+            // hymnObject[hymnOccasion[idx]] = hymn;
+        })
+        // console.log(hymnObject);
+
+        return hymnObject;
+    }
+}
+
 function grabHymnObject(hymnTitleArray) {
 
     //return array of hymn objects (up to 8) depending on how many are requested in 'new liturgy'
@@ -1816,32 +1841,6 @@ function grabHymnObject(hymnTitleArray) {
 }
 
 
-// function grabHymnObject(hymnTitleArray) {
-//     // console.log(hymnTitleArray);
-
-//     //return array of hymn objects (up to 8) depending on how many are requested in 'new liturgy'
-
-//     // console.log(typeof hymnTitleArray)
-//     if (hymnTitleArray !== undefined && hymnTitleArray !== "") {
-//         var hymns = [];
-//         hymnTitleArray.forEach((input, idx) => {
-//             if (input) {
-
-//                 hymns.push(allHymns.filter(x => (x.title.toLowerCase().replace(/,/g, "") == input.toLowerCase().replace(/,/g, "")))[0])
-//             }
-
-//         }
-//         )
-//         let hymnObject = {};
-//         hymns.forEach((hymn, idx) => {
-//             const hymnOccasion = ["Entrance", "Offertory", "Communion", "Ressesional"]
-//             hymnObject[hymnOccasion[idx]] = hymn;
-//         })
-//         // console.log(hymnObject);
-
-//         return hymnObject;
-//     }
-// }
 
 
 count = 0;
@@ -2512,7 +2511,7 @@ function addArticle() {
             </div>`
     document.querySelector(".wrapper.liturgyPlan").append(newArticle);
 }
-// editing("fullLiturgyPlan")
+editing("fullLiturgyPlan")
 function editing(SectionToEdit) {
     switch (SectionToEdit) {
         case "fullLiturgyPlan":
@@ -2545,7 +2544,7 @@ function editing(SectionToEdit) {
 
 }
 //for editing perposes (delete after)
-// editingLiturgies();
+editingLiturgies();
 function editingLiturgies() {
     // x.date.getMonth() == 0 && 
     const liturgies = allLiturgies.filter(x => x.date.getMonth() == 3 && x.date.getFullYear() == 2026 && x.date.getDate() == 2);
@@ -2556,7 +2555,7 @@ function editingLiturgies() {
     })
 }
 
-// generateFullHymnArticles(); /*editing*/
+generateFullHymnArticles(); /*editing*/
 function generateFullHymnArticles() {
     if (document.getElementById("listOfLiturgies")) {
         document.getElementById("listOfLiturgies").remove();
