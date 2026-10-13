@@ -607,7 +607,7 @@ new Liturgy(new Date("6 Dec 2026"), "2nd Sunday of Advent", "A", "Julian", ["Tel
 //2nd/ 6th/ 17th /20th (A) Sunday of ordinary - 26th of July: "Teach Me, O God (Christopher Walker)"
 
 let nextLiturgy = allLiturgies.filter(x => x.date >= todaysDate);
-// nextLiturgy = [allLiturgies[allLiturgies.length - 12]]; //show latest liturgy on opening page (for easier adding)
+nextLiturgy = [allLiturgies[allLiturgies.length - 12]]; //show latest liturgy on opening page (for easier adding)
 
 
 
@@ -1428,12 +1428,13 @@ function checkAndPopulateInstrumentals(number) {
 function addElement(addOrRemove, number) {
     const futureContent = wrapper.querySelectorAll('.futureServices li.hymnOccasion')
     const hymnsObjectArray = (allLiturgies.filter(x => x.date > todaysDate)[number].hymn);
-
+    const obj = Object.values(hymnsObjectArray);
     if (addOrRemove === 'add') {
         const newDiv = document.createElement("div");
         newDiv.classList.add('futureHymnsOpen')
+        console.log(obj);
 
-        hymnsObjectArray.forEach((hymn, idx) => {
+        obj.forEach((hymn, idx) => {
 
             // create a new div element
             const newH4 = document.createElement('h4');
@@ -1614,12 +1615,15 @@ if (nextLiturgy[0] !== undefined) {
     wrapper.querySelector("#nextOccasion").textContent = nextLiturgy[0].occasion;
     let x = 0;
     //populate hymn titles with nexthymn object
-    nextLiturgy[0].hymn.forEach((hymn, idx) => {
+    const liturgyHymnObject = nextLiturgy[0].hymn
+    // console.log(Object.entries(liturgyHymnObject));
+    Object.entries(liturgyHymnObject).forEach((hymn, idx) => {
+
         const hymnText = wrapper.querySelector(`#hymn${idx}`);
         const hymnRef = wrapper.querySelector(`#hymnReference${idx}`);
-        if (nextLiturgy[0].hymn[idx]) {
-            hymnText.textContent = nextLiturgy[0].hymn[idx].title;
-            hymnRef.textContent = nextLiturgy[0].hymn[idx].hymnNumber;
+        if (hymn) {
+            hymnText.textContent = hymn[1].title;
+            hymnRef.textContent = hymn[1].hymnNumber;
         } else {
             hymnText.textContent = "Undefined";
             hymnRef.textContent = "Undefined";
@@ -1747,24 +1751,49 @@ function ordinal(day) { //add 'st','nd','rd' or 'th' to date
 }
 
 
+// function grabHymnObject(hymnTitleArray) {
+//     //return array of hymn objects (up to 8) depending on how many are requested in 'new liturgy'
+
+
+//     if (hymnTitleArray !== undefined && hymnTitleArray !== "") {
+//         var hymns = [];
+//         hymnTitleArray.forEach((input, idx) => {
+//             hymns.push(allHymns.filter(x => (x.title.toLowerCase().replace(/,/g, "") == input.toLowerCase().replace(/,/g, "")))[0])
+//         }
+//         )
+
+//         return hymns;
+//     }
+
+
+
+
+
+// }
+
 function grabHymnObject(hymnTitleArray) {
     //return array of hymn objects (up to 8) depending on how many are requested in 'new liturgy'
 
 
     if (hymnTitleArray !== undefined && hymnTitleArray !== "") {
         var hymns = [];
-        hymnTitleArray.forEach(input => {
-            hymns.push(allHymns.filter(x => (x.title.toLowerCase().replace(/,/g, "") == input.toLowerCase().replace(/,/g, "")))[0])
+        hymnTitleArray.forEach((input, idx) => {
+            if (input) {
+                hymns.push(allHymns.filter(x => (x.title.toLowerCase().replace(/,/g, "") == input.toLowerCase().replace(/,/g, "")))[0])
+            }
         }
         )
-        return hymns;
+        let hymnObject = {};
+        hymns.forEach((hymn, idx) => {
+            const hymnOccasion = ["Entrance", "Offertory", "Communion", "Ressesional"]
+            hymnObject[hymnOccasion[idx]] = hymn;
+        })
+        // console.log(hymnObject);
+
+        return hymnObject;
     }
-
-
-
-
-
 }
+
 
 count = 0;
 let start;
@@ -1848,14 +1877,15 @@ document.querySelectorAll("button.up, button.down").forEach(btn => {
 
 
 function hymnSelect() { //populate titles based upon 'count' number//
+    allHymns = Object.values(allHymns)
     if (allHymns[count]) {
         var title = allHymns[count].title;
     } else {
         title = "unprepaired"
     }
     document.querySelector("#panel1_title").textContent = title;
-    if (allHymns[allHymns.length - 1].title) {
-        var lastHymn = allHymns[allHymns.length - 1].title;
+    if (Object.values(allHymns)[Object.values(allHymns).length - 1].title) {
+        var lastHymn = Object.values(allHymns)[Object.values(allHymns).length - 1].title;
     }
     else { lastHymn = "unprepaired" }
     switch (allHymns.length) {
@@ -1871,9 +1901,12 @@ function hymnSelect() { //populate titles based upon 'count' number//
             break;
 
         default:
-
-            var secondToLastHymn = allHymns[allHymns.length - 2].title; // Silent night
-            var thirdToLastHymn = allHymns[allHymns.length - 3].title; // Silent night
+            if (allHymns[allHymns.length - 2] !== undefined) {
+                var secondToLastHymn = allHymns[allHymns.length - 2].title;
+            }// Silent night
+            if (allHymns[allHymns.length - 3] !== undefined) {
+                var thirdToLastHymn = allHymns[allHymns.length - 3].title;
+            } // Silent night
             break;
     }
 
@@ -1894,7 +1927,9 @@ function hymnSelect() { //populate titles based upon 'count' number//
         document.querySelector("#prepanelTop_title").textContent = thirdToLastHymn;
     }
     else {
-        document.querySelector("#prepanel1_title").textContent = allHymns[count - 1].title;
+        if (allHymns[count - 1] !== undefined) {
+            document.querySelector("#prepanel1_title").textContent = allHymns[count - 1].title;
+        }
         if (count == 1) {
             document.querySelector("#prepanel0_title").textContent = lastHymn;
             document.querySelector("#prepanelTop_title").textContent = secondToLastHymn;
@@ -1914,16 +1949,22 @@ function hymnSelect() { //populate titles based upon 'count' number//
     if (count == allHymns.length - 1 && allHymns.length > 1) {
         document.querySelector("#prepanel2_title").textContent = allHymns[0].title;
         document.querySelector("#prepanel3_title").textContent = allHymns[1].title;
-        document.querySelector("#prepanelBottom_title").textContent = allHymns[2].title;
+        if (allHymns[2] !== undefined) {
+            document.querySelector("#prepanelBottom_title").textContent = allHymns[2].title;
+        }
     }
     else if (allHymns.length > 1) {
-        document.querySelector("#prepanel2_title").textContent = allHymns[count + 1].title;
+        if (allHymns[count + 1] !== undefined) {
+            document.querySelector("#prepanel2_title").textContent = allHymns[count + 1].title;
+        }
         if (count == allHymns.length - 2) {
             document.querySelector("#prepanel3_title").textContent = allHymns[0].title;
             document.querySelector("#prepanelBottom_title").textContent = allHymns[1].title;
         }
         else {
-            document.querySelector("#prepanel3_title").textContent = allHymns[count + 2].title;
+            if (allHymns[count + 2] !== undefined) {
+                document.querySelector("#prepanel3_title").textContent = allHymns[count + 2].title;
+            }
             if (count == allHymns.length - 3) {
                 document.querySelector("#prepanelBottom_title").textContent = allHymns[0].title;
             } else {
@@ -2458,7 +2499,7 @@ function editing(SectionToEdit) {
 // editingLiturgies();
 function editingLiturgies() {
     // x.date.getMonth() == 0 && 
-    const liturgies = allLiturgies.filter(x => x.date.getYear() == 126);
+    const liturgies = allLiturgies.filter(x => x.date.getMonth() == 3 && x.date.getFullYear() == 2026);
     // console.log(liturgies.length);
     // take each liturgy from array and add to the fullLiturgyPlans array, individually
     liturgies.forEach(liturgy => {
@@ -2466,7 +2507,7 @@ function editingLiturgies() {
     })
 }
 
-// generateFullHymnArticles();
+// generateFullHymnArticles(); /*editing*/
 function generateFullHymnArticles() {
     if (document.getElementById("listOfLiturgies")) {
         document.getElementById("listOfLiturgies").remove();
