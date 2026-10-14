@@ -1534,7 +1534,7 @@ div.container.hymnDetails {
 		/* padding-inline: 1rem; */
 		display: grid;
 
-		place-content: centre;
+		/* place-content: centre; */
 		/* border: purple solid 1px; */
 		z-index: 700;
 		/* flex-basis: 100%; */
@@ -1542,12 +1542,12 @@ div.container.hymnDetails {
 		/* overflow: visible; */
 		/* place-content: center; */
 		/* width: 100%; */
-		justify-content: center;
+		justify-content: left;
 		/* gap: calc(var(--_panel-gap) * 2); */
 		/* flex-direction: column; */
 		/* justify-content: center; */
 		/* align-items: center; */
-		align-content: center;
+		align-content: left;
 		/* outline: red solid 2px; */
 		/* min-height: 100%; */
 		/* min-height: 100svh; */

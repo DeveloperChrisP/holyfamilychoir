@@ -250,6 +250,7 @@ new Hymn("10,000 reasons", "sheet", "./music/hymns/10,000 Reasons/sheetmusic/10,
 new Hymn("A hymn of glory let us sing!", "sheet", "", "", "https://www.youtube.com/embed/fWLdhI9zZbs?si=s5xONlEFIr-KQDbp")
 new Hymn("A new commandment", 920, "", "", "https://www.youtube.com/embed/aqM2Ujl7Aas?si=GyuGykvyaGV3dFZI");
 new Hymn("Abide with me", 907, "", "", "https://www.youtube.com/embed/zf12lQnKlGk?si=FbBC6mn29tMilxZ5")
+new Hymn("Agnus Dei", "Sheet", "", "", "https://www.youtube.com/embed/alJOStsdw3s?si=Up00Z6VF9MudyOdy")
 new Hymn("All are welcome", 458, "", "", "https://www.youtube.com/embed/GlnVLP0qFEo?si=ndG5RjVx8SuVLSNs")
 new Hymn("All creatures of our God & King", 694, "", "", "https://www.youtube.com/embed/MUZD0hgtSgE?si=mh3_Ij7UkrFV1cdZ")
 new Hymn("All glory laud and honour", 229, "", "", "https://www.youtube.com/embed/eBfJyjDolwA?si=krjAwgqp2jbrq7UH")
@@ -278,6 +279,7 @@ new Hymn("Blessed virgin mother", 361, "", { "piano": "./music/hymns/blessed vir
 new Hymn("Blest are you, Lord", 603, "", "", "https://www.youtube.com/embed/tsGr49LpuGI?si=p4yTl1Xy_chXtTgN");
 new Hymn("Bread of life", 631, "", "", "https://www.youtube.com/embed/iYKxMAn3Kfo?si=Fei0At7L0HqudqQ3");
 new Hymn("Breathe on me, Breath of God", 302, "", "", "https://www.youtube.com/embed/vzQo2p5LGkA?si=Rmp9LEeAMoc1d4L4")
+new Hymn("Bring flowers of the Rarest", "CFE" + 101, "", "", "https://www.youtube.com/embed/fLZm5iJndW0?si=oBWH3TfrUVEdkbvd")
 new Hymn("Brother sister let me serve you", 924, "", "", "https://www.youtube.com/embed/ohy-vGSbkx8?si=yeEMWpxBWu_J93AO")
 new Hymn("Centre of my life", 423, "", "", "https://www.youtube.com/embed/B5Zo548rT8o?si=RS5kEu3QkdFq6otW")
 new Hymn("Christ be beside me", 910, "", "", "https://www.youtube.com/embed/KNkWoy5uVh8?si=38stRqmtz_7Bswpd")
@@ -385,6 +387,7 @@ new Hymn("O Lord hear my prayer", 929, "", "", "https://www.youtube.com/embed/np
 new Hymn("O Lord my God", 721, "", "", "https://www.youtube.com/embed/i6cuVLzUVKY?si=7p65giWxScRq43UW")
 new Hymn("O Mary Conceived In The Grace Of Your Son", 354, "", { "piano": "./music/hymns/o mary conceived in the grace of your son/audio/o mary conceived in the grace of your son - piano.mp3" }, "");
 new Hymn("O Mother Blest", 364, "", "", "https://www.youtube.com/embed/Nb7PchC-p04?si=N_d9mCYKGQG5nhst");
+new Hymn("O perfect love", 415, "", "", "https://www.youtube.com/embed/4yES4SU4tQ0?si=gJlBDAkeHIudjT0k")
 new Hymn("O purest of creatures", 347, "", "", "https://www.youtube.com/embed/NFBb5g2tXgk?si=j58XTHjmY4JXkuFm");
 new Hymn("O Sacred Head", 237, "", "", "https://www.youtube.com/embed/wcrS8rFWMXQ?si=Uw6btV7cUilLklLm")
 new Hymn("O Sacred Heart", 799, "", "", "https://www.youtube.com/embed/zZwEZpx0x1A?si=e58KWuaRhnzNygB7")
@@ -600,7 +603,7 @@ new Liturgy(new Date("11 Oct 2026"), "28th Sunday in Ordinary Time", "A", "Julia
 new Liturgy(new Date("18 Oct 2026"), "29th Sunday in Ordinary Time", "A", "Julian", ["Praise to the Lord, the almighty", "O worship the King", "Make me a channel of your peace", "Bring flowers to the rarest"])
 new Liturgy(new Date("25 Oct 2026"), "30th Sunday in Ordinary Time", "A", "Julian", ["Love divine all loves excelling", "Dear Lord and Father of mankind", "O perfect love", "As I kneel before you"])
 new Liturgy(new Date("1 Nov 2026"), "All saints day", "A", "Julian", ["For all the saints", "Take my life and let it be", "For the healing of the nations", "Daily daily sing to Mary"])
-new Liturgy(new Date("8 Nov 2026"), "Remembrance Sunday", "A", "Julian", ["The day thou gavest", "O God our help in ages past", "O come and mourn with me a while", "He who would valiant be"])
+new Liturgy(new Date("8 Nov 2026"), "Remembrance Sunday", "A", "Julian", ["The day thou gavest", "O God our help in ages past", "O come and mourn with me awhile", "He who would valiant be"])
 new Liturgy(new Date("15 Nov 2026"), "33rd Sunday in Ordinary Time", "A", "Julian", ["Hills of the North rejoice", "Sweet heart of Jesus", "All that I am", "Immaculate Mary"])
 new Liturgy(new Date("22 Nov 2026"), "Christ the King", "A", "Julian", ["Hail redeemer King divine", "Crown him with many crowns", "Lord for tomorrow and its needs", "Our God reigns"])
 new Liturgy(new Date("29 Nov 2026"), "1st Sunday of Advent", "A", "Julian", ["Guide me O thou great redeemer", "Hail to the Lord's annoited", "freely freely", "Christ be our light"])
