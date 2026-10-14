@@ -562,11 +562,11 @@ new Liturgy(new Date("15 Mar 2026"), "4th Sunday of Lent", "A", "Chris", ["Be th
 new Liturgy(new Date("22 Mar 2026"), "5th Sunday of Lent", "A", "Chris", ["Freely freely", "When I survey the wondrous cross", "This is my body", "Holy virgin by God's decree"], ["Bless the Lord my soul", "Ubi Caritas"])
 new Liturgy(new Date("29 Mar 2026"), "Palm Sunday", "A", "Chris", ["All Glory Laud and Honour", "God of mercy and compassion", "O Sacred head", "Holy light on earth's horizon"], ["My song is love unknown"])
 
-new Liturgy(new Date("2 Apr 2026"), "Maundy Thursday", "A", "Chris", ["We should glory in the cross", { "Washing of feet 1": "Brother sister let me serve you" }, { "Washing of feet 2": "The Lord Jesus" }, ["Ubi Caritas", "An upper room"], "This is my body", "Of the glorious body telling"])
+new Liturgy(new Date("2 Apr 2026"), "Maundy Thursday", "A", "Chris", ["We should glory in the cross", { "Washing of feet 1": "Brother sister let me serve you" }, { "Washing of feet 2": "The Lord Jesus" }, { "Washing of feet 3": "Ubi Caritas" }, "An upper room", "This is my body", "Of the glorious body telling"])
 
-new Liturgy(new Date("3 Apr 2026"), "Good Friday", "A", "Chris", ["When I survey the wondrous cross", "My song is love unknown"])
-new Liturgy(new Date("4 Apr 2026"), "Easter Vigil", "A", "Chris", ["Saints of God in glory", "You have put on Christ", "Spirit of God", "Christ be our light", "Bread of life", "Thine be the glory"])
-new Liturgy(new Date("5 Apr 2026"), "Easter Sunday", "A", "Chris", ["Sing of the lord's goodness", "This day was made by the Lord", "Jesus Christ is risen today", "Alleluia alleluia give thanks", "He is risen, tell the story"])
+new Liturgy(new Date("3 Apr 2026"), "Good Friday", "A", "Chris", [{ "The Reproaches": "When I survey the wondrous cross" }, { "Communion": "My song is love unknown" }])
+new Liturgy(new Date("4 Apr 2026"), "Easter Vigil", "A", "Chris", [{ "The Litany of the Saints": "Saints of God in glory" }, { "Baptism": "You have put on Christ" }, { "Confirmation": "Spirit of God" }, { "Offertory": "Christ be our light" }, { "Communion": "Bread of life" }, { "Ressesional": "Thine be the glory" }])
+new Liturgy(new Date("5 Apr 2026"), "Easter Sunday", "A", "Chris", ["Sing of the lord's goodness", { "The Psalm": "This day was made by the Lord" }, "Jesus Christ is risen today", "Alleluia alleluia give thanks", "He is risen, tell the story"])
 new Liturgy(new Date("12 Apr 2026"), "2nd Sunday of Easter", "A", "Julian", ["All creatures of our God & king", "Alleluia sing to Jesus", "Amazing Grace", "O purest of creatures"])
 new Liturgy(new Date("19 Apr 2026"), "3rd Sunday of Easter", "A", "Julian", ["Gather us in", "To Jesus, heart all burning", "I will be with you", "O lady, full of God's own grace"])
 new Liturgy(new Date("26 Apr 2026"), "4th Sunday of Easter", "A", "Julian", ["All are welcome", "O bread of heaven", "The Lord's my shepherd", "He who would valiant be"])
@@ -583,7 +583,7 @@ new Liturgy(new Date("14 Jun 2026"), "11th Sunday in Ordinary Time", "A", "Julia
 new Liturgy(new Date("21 Jun 2026"), "12th Sunday in Ordinary Time", "A", "Julian", ["My God accept my heart this day", "Faith of our fathers", "Lead kindly light", "I'll sing a Hymn to Mary"], ["Do not be afraid", "O the word of my Lord"], "In your great mercy, answer me, O Lord.", "John 15:26b")
 new Liturgy(new Date("28 Jun 2026"), "13th Sunday in Ordinary Time", "A", "Julian", ["Hail Redeemer, King Divine", "Dear Lord and father of mankind", "O sacred heart", "Follow me, follow me"], ["Taste and see"], "From all my terrors the Lord set me free.", "Matthew 16:18")
 new Liturgy(new Date("5 Jul 2026"), "14th Sunday in Ordinary Time", "A", "Chris", ["Sing of the Lord's Goodness", "The Servant King", "O let all who thirst", "Sing of Mary, Pure and lowly"], ["Taste and see"], "I will bless your name for ever, my God and king.", "Matthew 11:25")
-new Liturgy(new Date("12 Jul 2026"), "15th Sunday in Ordinary Time", "A", "Chris", ["Love divine, all loves excelling", "I will be with you", "We Come to your feast", "O the word of my Lord", "Unless a grain of wheat", "Here I am, Lord"], "", "Some seed fell into good soil and yielded its fruit.", "unknown2")
+new Liturgy(new Date("12 Jul 2026"), "15th Sunday in Ordinary Time", "A", "Chris", [["Love divine, all loves excelling", "I will be with you"], ["We Come to your feast", "O the word of my Lord"], "Unless a grain of wheat", "Here I am, Lord"], "", "Some seed fell into good soil and yielded its fruit.", "unknown2")
 new Liturgy(new Date("19 Jul 2026"), "16th Sunday in Ordinary Time", "A", "Chris", ["Gather us in", "All people that on earth do dwell", "Be still for the presence of the Lord", "O Mother blest"], ["O Lord, hear my prayer", "Amazing Grace"], "O Lord, you are good and forgiving.", "Matthew 11:25")
 new Liturgy(new Date("26 July 2026"), "17th Sunday in Ordinary Time", "A", "Chris", ["Seek ye first", "Be thou my vision", "O the Love of my Lord is the essence", "Hail, Queen of heaven"], ["Teach me, O God"], "O Lord, how I love your law!", "Matthew 11:25")
 new Liturgy(new Date("2 Aug 2026"), "18th Sunday in Ordinary Time", "A", "Chris", ["Alleluia Sing to Jesus", "Bread of life", "I am the bread of life", "Holy Virgin, by God's decree"], "", "You open your hand and fulfil us, O Lord.", "Matthew 4:4b")
@@ -1757,7 +1757,7 @@ function ordinal(day) { //add 'st','nd','rd' or 'th' to date
 // }
 
 // 
-// grabHymnObjectTest([{ "extra": "silent night" }, "Of the glorious body telling", ["taste & see", "ubi caritas"], "brother sister let me serve you"])
+// grabHymnObjectTest([{ "extra 3": "silent night" }, "Of the glorious body telling", ["taste & see", "ubi caritas"], ["taste & see", "ubi caritas"], "brother sister let me serve you"])
 function grabHymnObject(hymnTitleArray) {
     // console.log(hymnTitleArray);
 
@@ -1823,47 +1823,6 @@ function grabHymnObject(hymnTitleArray) {
     }
 }
 
-// function grabHymnObject(hymnTitleArray) {
-
-//     //return array of hymn objects (up to 8) depending on how many are requested in 'new liturgy'
-
-//     // console.log(typeof hymnTitleArray)
-//     if (hymnTitleArray !== undefined && hymnTitleArray !== "") {
-//         var hymns = [];
-//         let hymnObject = {};
-//         const hymnOccasion = ["Entrance", "Offertory", "Communion", "Ressesional"]
-//         hymnTitleArray.forEach((input, idx) => {
-//             if (typeof input == "object") {
-//                 // console.log(input);
-//                 input.forEach((input, index) => {
-//                     // hymns.push(allHymns.filter(x => (x.title.toLowerCase().replace(/,/g, "") == input.toLowerCase().replace(/,/g, "")))[0])
-//                     const hymn = allHymns.filter(x => (x.title.toLowerCase().replace(/,/g, "") == input.toLowerCase().replace(/,/g, "")))[0];
-//                     // console.log(`${hymnOccasion[idx]} ${[index + 1]}`);
-
-//                     hymnObject[`${hymnOccasion[idx]} ${[index + 1]}`] = hymn
-
-//                 })
-
-//             } else if (typeof input == "string") {
-//                 // console.log(allHymns.filter(x => (x.title.toLowerCase().replace(/,/g, "") == input.toLowerCase().replace(/,/g, "")))[0]);
-//                 const hymn = allHymns.filter(x => (x.title.toLowerCase().replace(/,/g, "") == input.toLowerCase().replace(/,/g, "")))[0];
-//                 // hymns.push(allHymns.filter(x => (x.title.toLowerCase().replace(/,/g, "") == input.toLowerCase().replace(/,/g, "")))[0])
-//                 hymnObject[hymnOccasion[idx]] = hymn
-
-//             }
-
-//         }
-//         )
-
-//         hymns.forEach((hymn, idx) => {
-
-//             // hymnObject[hymnOccasion[idx]] = hymn;
-//         })
-//         // console.log(hymnObject);
-
-//         return hymnObject;
-//     }
-// }
 
 
 
@@ -2536,7 +2495,7 @@ function addArticle() {
             </div>`
     document.querySelector(".wrapper.liturgyPlan").append(newArticle);
 }
-editing("fullLiturgyPlan")
+// editing("fullLiturgyPlan")
 function editing(SectionToEdit) {
     switch (SectionToEdit) {
         case "fullLiturgyPlan":
@@ -2569,7 +2528,7 @@ function editing(SectionToEdit) {
 
 }
 //for editing perposes (delete after)
-editingLiturgies();
+// editingLiturgies();
 function editingLiturgies() {
     // x.date.getMonth() == 0 && 
     const liturgies = allLiturgies.filter(x => x.date.getMonth() == 3 && x.date.getFullYear() == 2026 && x.date.getDate() == 2);
@@ -2580,7 +2539,7 @@ function editingLiturgies() {
     })
 }
 
-generateFullHymnArticles(); /*editing*/
+// generateFullHymnArticles(); /*editing*/
 function generateFullHymnArticles() {
     if (document.getElementById("listOfLiturgies")) {
         document.getElementById("listOfLiturgies").remove();
