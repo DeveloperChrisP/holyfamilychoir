@@ -279,7 +279,7 @@ new Hymn("Blessed virgin mother", 361, "", { "piano": "./music/hymns/blessed vir
 new Hymn("Blest are you, Lord", 603, "", "", "https://www.youtube.com/embed/tsGr49LpuGI?si=p4yTl1Xy_chXtTgN");
 new Hymn("Bread of life", 631, "", "", "https://www.youtube.com/embed/iYKxMAn3Kfo?si=Fei0At7L0HqudqQ3");
 new Hymn("Breathe on me, Breath of God", 302, "", "", "https://www.youtube.com/embed/vzQo2p5LGkA?si=Rmp9LEeAMoc1d4L4")
-new Hymn("Bring flowers of the Rarest", "CFE" + 101, "", "", "https://www.youtube.com/embed/fLZm5iJndW0?si=oBWH3TfrUVEdkbvd")
+new Hymn("Bring flowers of the Rarest", "CFE " + 101, "", "", "https://www.youtube.com/embed/fLZm5iJndW0?si=oBWH3TfrUVEdkbvd")
 new Hymn("Brother sister let me serve you", 924, "", "", "https://www.youtube.com/embed/ohy-vGSbkx8?si=yeEMWpxBWu_J93AO")
 new Hymn("Centre of my life", 423, "", "", "https://www.youtube.com/embed/B5Zo548rT8o?si=RS5kEu3QkdFq6otW")
 new Hymn("Christ be beside me", 910, "", "", "https://www.youtube.com/embed/KNkWoy5uVh8?si=38stRqmtz_7Bswpd")
@@ -600,7 +600,7 @@ new Liturgy(new Date("20 Sept 2026"), "25th Sunday in Ordinary Time", "A", "Juli
 new Liturgy(new Date("27 Sept 2026"), "26th Sunday in Ordinary Time", "A", "Julian", ["At the name of Jesus", "Lead us heavenly father", "A new commandment", "O purest of creatures"])
 new Liturgy(new Date("4 Oct 2026"), "27th Sunday in Ordinary Time", "A", "Julian", ["All creatures of our God & king", "Alleluia sing to Jesus", "My song is love unknown", "Hail queen of heaven"], "", "The vineyard of the Lord is the house of Israel.")
 new Liturgy(new Date("11 Oct 2026"), "28th Sunday in Ordinary Time", "A", "Julian", ["Be thou my vision", "All people that on earth do dwell", "The Lord's my shepherd", "Sing of Mary, pure and lowly"], "", "In the Lord's own house shall I dwell for length of days unending.")
-new Liturgy(new Date("18 Oct 2026"), "29th Sunday in Ordinary Time", "A", "Julian", ["Praise to the Lord, the almighty", "O worship the King", "Make me a channel of your peace", "Bring flowers to the rarest"])
+new Liturgy(new Date("18 Oct 2026"), "29th Sunday in Ordinary Time", "A", "Julian", ["Praise to the Lord, the almighty", "O worship the King", "Make me a channel of your peace", "Bring flowers of the rarest"])
 new Liturgy(new Date("25 Oct 2026"), "30th Sunday in Ordinary Time", "A", "Julian", ["Love divine all loves excelling", "Dear Lord and Father of mankind", "O perfect love", "As I kneel before you"])
 new Liturgy(new Date("1 Nov 2026"), "All saints day", "A", "Julian", ["For all the saints", "Take my life and let it be", "For the healing of the nations", "Daily daily sing to Mary"])
 new Liturgy(new Date("8 Nov 2026"), "Remembrance Sunday", "A", "Julian", ["The day thou gavest", "O God our help in ages past", "O come and mourn with me awhile", "He who would valiant be"])
