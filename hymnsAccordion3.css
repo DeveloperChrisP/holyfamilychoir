@@ -916,7 +916,7 @@ button.down.hidden {
 
 	grid-template-columns: 100%;
 	gap: calc(var(--_panel-gap) / 3f);
-	transition: 1s;
+	transition: all 1s;
 	color: black;
 }
 .liturgyPlan .container.hidden {
@@ -1219,7 +1219,7 @@ details summary {
 }
 button:hover {
 	cursor: pointer;
-	transform: scale(1.05);
+	scale: (1.05);
 	color: white;
 	box-shadow: black 2px 2px 3px;
 }
@@ -1390,7 +1390,7 @@ div.container.liturgyMonths {
 	border: white solid 3px;
 	border-radius: 10px;
 	position: relative;
-	transition: all 2s;
+	transition: transform 2s;
 	padding-top: 15px;
 	padding-bottom: 15px;
 	/* transition: all 2; */

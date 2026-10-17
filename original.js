@@ -1286,7 +1286,7 @@ function generateLiturgyButtons(remove) {
         let yearDiv = document.getElementById("yearDiv");
         const lastLiturgy = allLiturgies[allLiturgies.length - 1];
         const firstLiturgy = allLiturgies[0];
-        console.log(lastLiturgy.date.getFullYear());
+        // console.log(lastLiturgy.date.getFullYear());
 
         arrowDateCheck();
         function arrowDateCheck() {
@@ -1306,37 +1306,89 @@ function generateLiturgyButtons(remove) {
         // arrowDateCheck();
 
 
+        let savedMonths = [];
+        let activeMonthsObject = {};
         document.getElementById("liturgyMonthsContainer").addEventListener("click", (e) => {
 
             //toggle 'active' classname to clicked button
             if (e.target.localName != "button") { //button or arrow selection
 
                 if (e.target.closest("div").id == "arrowDiv") {
+                    switchYear();
+                    function switchYear() {
 
-                    document.getElementById("arrowDiv").classList.toggle("spin");
+                        const arrowDiv = document.getElementById("arrowDiv");
+                        const yearDiv = document.getElementById("yearDiv");
+                        const liturgyMonthContainer = document.getElementById("liturgyMonthsContainer");
+                        saveButtonMonths(Number(yearDiv.innerHTML))
+                        function saveButtonMonths(selectedYear) {
+                            let activeMonthsArray = [];
 
-                    document.getElementById("yearDiv").classList.toggle("spin");
-                    document.getElementById("liturgyMonthsContainer").classList.toggle("spin");
-                    setTimeout(() => {
-                        document.getElementById("liturgyMonthsContainer").classList.toggle("flexReverse");
-                        if (e.target.closest("svg").id == "leftBtn") {
-                            yearDiv.innerHTML = Number(thisYear - 1);
-                            arrowDateCheck();
-                        } else {
-                            yearDiv.innerHTML = Number(thisYear + 1);
-                            arrowDateCheck();
+                            liturgyMonthContainer.querySelectorAll("button.month").forEach((btn) => {
+                                if (btn.classList.contains("active")) {
+                                    activeMonthsArray.push(btn.id);
+                                };
+
+                            });
+                            activeMonthsObject[Number(selectedYear)] = activeMonthsArray;
+                            activeMonthsArray = [];
+                            // savedMonths.push(activeMonthsObject)
+                            // `{${selectedYear}:${activeMonthsArray}}`;
+
+                            // console.log(savedMonths[1]);
+                            // console.log(activeMonthsObject);
+
+
                         }
-                        // console.log((yearDiv.innerHTML));
 
-                    }, 500);
+                        arrowDiv.classList.toggle("spin");
+                        yearDiv.classList.toggle("spin");
+                        liturgyMonthContainer.classList.toggle("spin");
 
 
-                    document.querySelectorAll("button.month").forEach(btn => {
-                        btn.classList.toggle("spin");
-                    })
+                        setTimeout(() => {
+                            document.getElementById("liturgyMonthsContainer").classList.toggle("flexReverse");
+                            if (e.target.closest("svg").id == "leftBtn") {
+                                yearDiv.innerHTML = Number(thisYear - 1);
+                                thisYear = Number(yearDiv.innerHTML);
+
+                                arrowDateCheck();
+                            } else {
+                                yearDiv.innerHTML = Number(thisYear + 1);
+                                thisYear = Number(yearDiv.innerHTML);
+                                arrowDateCheck();
+                            }
+                            // console.log((yearDiv.innerHTML));
+
+                        }, 500);
+
+
+
+                        document.querySelectorAll("button.month").forEach(btn => {
+                            btn.classList.toggle("spin");
+                            setTimeout(() => {
+                                btn.classList.remove("active");
+                                // {2026:["september","october"]}
+                                if (activeMonthsObject.hasOwnProperty(thisYear)) {
+                                    activeMonthsObject[thisYear].forEach((monthId) => {
+                                        document.getElementById(monthId).classList.add("active")
+                                    })
+                                    // document.getElementById(activeMonthsObject[2026]).classList.add("active");
+
+                                };
+
+                                // if (activeMonthsObject[thisYear]
+                            }, 500);
+                        })
+
+
+
+                    }
+
+                    arrowDateCheck();
+                    //add previously activated buttons
+
                 }
-                thisYear = Number(yearDiv.innerHTML);
-                arrowDateCheck();
             }
             else {
                 e.target.classList.toggle("active");
