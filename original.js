@@ -1256,11 +1256,18 @@ document.querySelector(".liturgyPlan .flex-container").addEventListener("click",
 });
 let fullLiturgyPlans = [];
 function generateLiturgyButtons(remove) {
+    let thisYear = new Date().getFullYear();
+
     const liturgyButtonContainer = document.createElement("div");
     liturgyButtonContainer.classList.add("container", "liturgyMonths", "no-print");
     liturgyButtonContainer.id = "liturgyMonthsContainer"
     liturgyButtonContainer.innerHTML = `
-    <button class="month" id="january">January</button>
+            <div id="yearDiv" >${thisYear}</div>
+            <div id="arrowDiv">
+            <svg class="arrowMonths" id="leftBtn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M41.4 342.6C28.9 330.1 28.9 309.8 41.4 297.3L169.4 169.3C178.6 160.1 192.3 157.4 204.3 162.4C216.3 167.4 224 179.1 224 192L224 256L560 256C586.5 256 608 277.5 608 304L608 336C608 362.5 586.5 384 560 384L224 384L224 448C224 460.9 216.2 472.6 204.2 477.6C192.2 482.6 178.5 479.8 169.3 470.7L41.3 342.7z"/></svg>
+            <svg class="arrowMonths" id="rightBtn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M598.6 297.4C611.1 309.9 611.1 330.2 598.6 342.7L470.6 470.7C461.4 479.9 447.7 482.6 435.7 477.6C423.7 472.6 416 460.9 416 448L416 384L80 384C53.5 384 32 362.5 32 336L32 304C32 277.5 53.5 256 80 256L416 256L416 192C416 179.1 423.8 167.4 435.8 162.4C447.8 157.4 461.5 160.2 470.7 169.3L598.7 297.3z"/></svg>
+            </div>
+            <button class="month" id="january">January</button>
             <button class="month" id="february">February</button>
             <button class="month" id="march">March</button>
             <button class="month" id="april">April</button>
@@ -1276,19 +1283,74 @@ function generateLiturgyButtons(remove) {
     if (remove == "remove" && document.getElementById("liturgyMonthsContainer") !== null) { document.getElementById("liturgyMonthsContainer").remove() }
     else if (remove !== "remove") {
         liturgyPlan.querySelector(".container2").append(liturgyButtonContainer);
+        let yearDiv = document.getElementById("yearDiv");
+        const lastLiturgy = allLiturgies[allLiturgies.length - 1];
+        const firstLiturgy = allLiturgies[0];
+        console.log(lastLiturgy.date.getFullYear());
+
+        arrowDateCheck();
+        function arrowDateCheck() {
+            if (Number(yearDiv.innerHTML >= lastLiturgy.date.getFullYear())) {
+                document.getElementById("rightBtn").classList.add("hidden");
+            } else {
+                document.getElementById("rightBtn").classList.remove("hidden")
+            }
+            if (Number(yearDiv.innerHTML <= firstLiturgy.date.getFullYear())) {
+                document.getElementById("leftBtn").classList.add("hidden");
+                document.getElementById("arrowDiv").classList.add("flexReverse");
+            } else {
+                document.getElementById("leftBtn").classList.remove("hidden");
+                document.getElementById("arrowDiv").classList.remove("flexReverse");
+            }
+        }
+        // arrowDateCheck();
+
+
         document.getElementById("liturgyMonthsContainer").addEventListener("click", (e) => {
 
             //toggle 'active' classname to clicked button
-            if (e.target.localName != "button") { return; }
+            if (e.target.localName != "button") { //button or arrow selection
+
+                if (e.target.closest("div").id == "arrowDiv") {
+
+                    document.getElementById("arrowDiv").classList.toggle("spin");
+
+                    document.getElementById("yearDiv").classList.toggle("spin");
+                    document.getElementById("liturgyMonthsContainer").classList.toggle("spin");
+                    setTimeout(() => {
+                        document.getElementById("liturgyMonthsContainer").classList.toggle("flexReverse");
+                        if (e.target.closest("svg").id == "leftBtn") {
+                            yearDiv.innerHTML = Number(thisYear - 1);
+                            arrowDateCheck();
+                        } else {
+                            yearDiv.innerHTML = Number(thisYear + 1);
+                            arrowDateCheck();
+                        }
+                        // console.log((yearDiv.innerHTML));
+
+                    }, 500);
+
+
+                    document.querySelectorAll("button.month").forEach(btn => {
+                        btn.classList.toggle("spin");
+                    })
+                }
+                thisYear = Number(yearDiv.innerHTML);
+                arrowDateCheck();
+            }
             else {
                 e.target.classList.toggle("active");
-                const clickedMonth = new Date(e.target.id + 2026).getMonth();
+                // console.log((yearDiv.innerText));
+                // console.log(Number(document.getElementById("yearDiv").innerHTML));
+                let selectedYear = Number(document.getElementById("yearDiv").innerHTML);
+                const clickedMonth = new Date(e.target.id + selectedYear).getMonth();
+
 
 
                 //Filter for liturgies for each month (jan = 0 etc, 126 = 2026)
                 if (e.target.classList.contains("active")) {
 
-                    const liturgies = allLiturgies.filter(x => x.date.getMonth() == clickedMonth && x.date.getFullYear() == 2026)
+                    const liturgies = allLiturgies.filter(x => x.date.getMonth() == clickedMonth && x.date.getFullYear() == selectedYear)
                     // console.log(liturgies.length);
                     // take each liturgy from array and add to the fullLiturgyPlans array, individually
                     liturgies.forEach(liturgy => {
@@ -1298,7 +1360,7 @@ function generateLiturgyButtons(remove) {
                     })
                 } else {
                     let a = fullLiturgyPlans;
-                    let b = a.filter(x => x.date.getMonth() === clickedMonth && x.date.getYear() == 126)
+                    let b = a.filter(x => x.date.getMonth() === clickedMonth && x.date.getFullYear() == selectedYear)
                     b.forEach(x => a.splice(a.findIndex(e => e.date.getMonth() === x.date.getMonth()), 1));
                     // console.log(a);
                     fullLiturgyPlans = a;
@@ -2498,7 +2560,7 @@ function addArticle() {
             </div>`
     document.querySelector(".wrapper.liturgyPlan").append(newArticle);
 }
-// editing("fullLiturgyPlan")
+editing("fullLiturgyPlan")
 function editing(SectionToEdit) {
     switch (SectionToEdit) {
         case "fullLiturgyPlan":

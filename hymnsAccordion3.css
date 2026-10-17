@@ -1380,16 +1380,65 @@ div.title {
 	text-align: left;
 } */
 div.container.liturgyMonths {
+	margin-top: 1.7rem;
 	/* grid-column: span 2; */
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	/* justify-content: space-between; */
 	width: 100%;
+	border: white solid 3px;
+	border-radius: 10px;
+	position: relative;
+	transition: all 2s;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	/* transition: all 2; */
+
+	/* box-shadow: 3px 3px 20px white */
 }
+.spin {
+	transform: rotateY(180deg);
+	/* transition: all 2s; */
+	/* transform: rotateX(180deg); */
+}
+
+.flexReverse {
+	flex-direction: row-reverse !important;
+	/* transition: all 2s; */
+	/* background-color: blue; */
+}
+
 div.container.liturgyMonths button.month {
 	width: max-content;
+	transition: transform 2s;
+
+	/* transform: rotate3d(0, 1, 0.5, 3.142rad); */
 }
+
+div.container.liturgyMonths #yearDiv {
+	transition: all 2s;
+	color: blue;
+	position: absolute;
+	top: -17px;
+	outline: 3px solid white;
+	border-radius: 7px;
+	/* background-clip: padding-box; */
+	background-color: rgb(237 198 48);
+	z-index: 100;
+	opacity: 10;
+	/* width: 100% */
+}
+div#arrowDiv {
+	position: absolute;
+	top: -29px;
+	width: 35%;
+	height: 3.5rem;
+	display: flex;
+	gap: calc(42.656px + 1rem);
+	transition: all 2s;
+}
+
 div.wrapper.liturgyPlan {
 	background-color: blue;
 	display: grid;
