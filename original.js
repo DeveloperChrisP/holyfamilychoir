@@ -998,6 +998,8 @@ function addExtras(hymnTitle, whereToAppend) {
         document.getElementById("audioPartContainer").addEventListener("click", (e) => {
             const objKey = e.target.closest('button').textContent;
             // console.log(psalmAudio[objKey]);
+            // console.log(hymn.vocalPart[objKey]);
+
             document.getElementById("psalmAudio").setAttribute("src", hymn.vocalPart[objKey]);
             document.getElementById("mediaPlayer__description").innerText = ` ${hymnTitle} - ${objKey}`;
 
@@ -2196,9 +2198,19 @@ accordion.addEventListener("click", (e) => {
     }
     else if (audioButton) {
 
-
+        let filename;
         const allLights = audioButton.parentElement.parentElement.querySelectorAll(".audioCategory__light");
         const accordionContent = audioButton.parentElement.parentElement.parentElement;
+        const accTitle = accordionContent.parentElement.parentElement.firstElementChild.firstElementChild.firstElementChild.firstElementChild.innerText; //holy holy etc
+        if (allHymns[count].vocalPart[e.target.innerText] == undefined) {
+
+            filename = allHymns[count].vocalPart[e.target.innerText.toLowerCase()];
+        } else {
+
+            filename = allHymns[count].vocalPart[e.target.innerText]
+        }
+        // console.log(allHymns[count].vocalPart[e.target.innerText]);
+
 
         let partTitle = audioButton.innerHTML;
         // partTitle = partTitle.toUpperCase();
@@ -2210,8 +2222,9 @@ accordion.addEventListener("click", (e) => {
         const audioDescription = title + " - " + partTitle;
         // const filename = "./audio/" + title.toLowerCase() + "/" + title.toLowerCase()/*.replace(/ /g, "")*/ + " - " + partTitle.toLowerCase() + ".mp3";
         // const filename = allAcclamationSettings[0].acclamation[0].vocalPart[partTitle.toLowerCase()];
+        const objKey = e.target.closest("button").textContent
 
-        const filename = allHymns[count].vocalPart[partTitle.toLowerCase()];
+        // const filename = allHymns[count].vocalPart[objKey.toLowerCase()];
 
 
 
