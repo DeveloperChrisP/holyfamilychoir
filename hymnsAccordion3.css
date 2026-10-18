@@ -1479,7 +1479,7 @@ ul#listOfLiturgies li.liturgy h4.hymnNumber {
 	/* height: 5rem; */
 }
 ul#listOfLiturgies li.liturgy h4.hymnTitle {
-	width: max-content;
+	width: content;
 	text-wrap: wrap;
 	/* height: 5rem; */
 }
@@ -1522,6 +1522,7 @@ div.container.hymnDetails {
 	font-weight: 400;
 	font-style: italic;
 	text-align: center;
+	text-wrap: wrap;
 }
 @media print {
 	* {
@@ -1651,6 +1652,13 @@ div.container.hymnDetails {
 	}
 	.liturgyPlan #pageTitleDiv h1 {
 		text-align: left;
+		width: fit-content;
+	}
+
+	#dateTitle {
+		text-align: wrap;
+		flex-wrap: wrap;
+		/* flex-basis: 100%; */
 	}
 
 	ul#listOfLiturgies {

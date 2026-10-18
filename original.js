@@ -171,6 +171,7 @@ new Psalm("69(68)", "8-10. 14, 17. 33-35. ℟14c", "In your great mercy, answer 
 new Psalm("80(79)", "9, 12. 13-14. 15-16. 19-20. ℟ Isaiah 5:7a", "The vineyard of the Lord is the house of Israel.", "./music/psalms/Psalm 80(79)/Psalm 80(79).pdf", "./music/psalms/Psalm 80(79)/Psalm 80(79).jpg")
 new Psalm("86(85)", "5-6. 9-10. 15-16a. ℟5a", "O Lord, you are good and forgiving.", "./music/psalms/Psalm 86(85)/sheetmusic/Psalm 86(85).pdf", "./music/psalms/Psalm 86(85)/sheetmusic/Psalm 86(85).jpg", { "SA": "./music/psalms/Psalm 86(85)/audio/Psalm 86(85) - SA.mp3", "Melody": "./music/psalms/Psalm 86(85)/audio/Psalm 86(85) - Melody.mp3", "Alto": "./music/psalms/Psalm 86(85)/audio/Psalm 86(85) - Alto.mp3" })
 new Psalm("95(94)", "1-2. 6-7b. 7c-9. ℟7c, 8a", "O that today you would listen to his voice! ‘Harden not your hearts.’", "./music/psalms/Psalm 95(94)/sheetmusic/Psalm 95(94) - Piano.pdf", "./music/psalms/Psalm 95(94)/sheetmusic/Psalm 95(94) - SATB.jpg", { "SATB": "./music/psalms/Psalm 95(94)/audio/Psalm 95(94) - SATB.mp3", "Melody": "./music/psalms/Psalm 95(94)/audio/Psalm 95(94) - Melody.mp3", "Alto": "./music/psalms/Psalm 95(94)/audio/Psalm 95(94) - Alto.mp3", "Tenor": "./music/psalms/Psalm 95(94)/audio/Psalm 95(94) - Tenor.mp3", "Bass": "./music/psalms/Psalm 95(94)/audio/Psalm 95(94) - Bass.mp3", "Piano": "./music/psalms/Psalm 95(94)/audio/Psalm 95(94) - Piano.mp3" })
+new Psalm("96(95)", "1, 3. 4-5. 7-8. 9-10a, c. ℟7b", "Ascribe to the Lord glory and power.", "./music/psalms/Psalm 96(95)/sheetmusic/Psalm 96(95).pdf")
 new Psalm("100(99)", "1-2. 3. 5. ℟3c", "We are his people, the sheep of his flock.", "", "./music/psalms/Psalm 100(99)/sheetmusic/Psalm 100(99).jpg", { "SATB": "./music/psalms/Psalm 100(99)/audio/Psalm 100(99) - SATB.mp3", "Melody": "./music/psalms/Psalm 100(99)/audio/Psalm 100(99) - Melody.mp3", "Alto": "./music/psalms/Psalm 100(99)/audio/Psalm 100(99) - Alto.mp3", "Tenor": "./music/psalms/Psalm 100(99)/audio/Psalm 100(99) - Tenor.mp3", "Bass": "./music/psalms/Psalm 100(99)/audio/Psalm 100(99) - Bass.mp3" })
 new Psalm("103(102)", "1-2. 3-4. 9-10. 11-12. ℟8", "The Lord is compassionate and gracious, slow to anger and rich in mercy.", "./music/psalms/Psalm 103(102)/sheetmusic/Psalm 103(102).pdf", "./music/psalms/Psalm 103(102)/sheetmusic/Psalm 103(102).jpg", { "SATB": "./music/psalms/Psalm 103(102)/audio/Psalm 103(102) - SATB.mp3", "Melody": "./music/psalms/Psalm 103(102)/audio/Psalm 103(102) - Melody.mp3", "Alto": "./music/psalms/Psalm 103(102)/audio/Psalm 103(102) - Alto.mp3", "Tenor": "./music/psalms/Psalm 103(102)/audio/Psalm 103(102) - Tenor.mp3", "Bass": "./music/psalms/Psalm 103(102)/audio/Psalm 103(102) - Bass.mp3", "Piano": "./music/psalms/Psalm 103(102)/audio/Psalm 103(102) - Piano.mp3" })
 new Psalm("104(103)", "1ab, 24ac. 29b-30. 31, 34. ℟ cf. 30", "Send forth your spirit, O Lord, and renew the face of the earth.", "./music/psalms/Psalm 104(103)/sheetmusic/Psalm 104(103) - SATB.pdf", "./music/psalms/Psalm 104(103)/sheetmusic/Psalm 104(103).jpg", { "SATB": "./music/psalms/Psalm 104(103)/audio/Psalm 104(103) - SATB.mp3", "Melody": "./music/psalms/Psalm 104(103)/audio/Psalm 104(103) - Melody.mp3", "Alto": "./music/psalms/Psalm 104(103)/audio/Psalm 104(103) - Alto.mp3", "Tenor": "./music/psalms/Psalm 104(103)/audio/Psalm 104(103) - Tenor.mp3", "Bass": "./music/psalms/Psalm 104(103)/audio/Psalm 104(103) - Bass.mp3" })
@@ -600,7 +601,7 @@ new Liturgy(new Date("20 Sept 2026"), "25th Sunday in Ordinary Time", "A", "Juli
 new Liturgy(new Date("27 Sept 2026"), "26th Sunday in Ordinary Time", "A", "Julian", ["At the name of Jesus", "Lead us heavenly father", "A new commandment", "O purest of creatures"])
 new Liturgy(new Date("4 Oct 2026"), "27th Sunday in Ordinary Time", "A", "Julian", ["All creatures of our God & king", "Alleluia sing to Jesus", "My song is love unknown", "Hail queen of heaven"], "", "The vineyard of the Lord is the house of Israel.")
 new Liturgy(new Date("11 Oct 2026"), "28th Sunday in Ordinary Time", "A", "Julian", ["Be thou my vision", "All people that on earth do dwell", "The Lord's my shepherd", "Sing of Mary, pure and lowly"], "", "In the Lord's own house shall I dwell for length of days unending.")
-new Liturgy(new Date("18 Oct 2026"), "29th Sunday in Ordinary Time", "A", "Julian", ["Praise to the Lord, the almighty", "O worship the King", "Make me a channel of your peace", "Sing of Mary pure and lowly"])
+new Liturgy(new Date("18 Oct 2026"), "29th Sunday in Ordinary Time", "A", "Julian", ["Praise to the Lord, the almighty", "O worship the King", "Make me a channel of your peace", "Sing of Mary pure and lowly"], "", "Ascribe to the Lord glory and power.")
 new Liturgy(new Date("25 Oct 2026"), "30th Sunday in Ordinary Time", "A", "Julian", ["Love divine all loves excelling", "Dear Lord and Father of mankind", "O perfect love", "As I kneel before you"])
 new Liturgy(new Date("1 Nov 2026"), "All saints day", "A", "Julian", ["For all the saints", "Take my life and let it be", "For the healing of the nations", "Daily daily sing to Mary"])
 new Liturgy(new Date("8 Nov 2026"), "Remembrance Sunday", "A", "Julian", ["The day thou gavest", "O God our help in ages past", "O come and mourn with me awhile", "He who would valiant be"])
@@ -1127,6 +1128,9 @@ document.querySelector(".liturgyPlan .flex-container").addEventListener("click",
             if (document.getElementById("listOfLiturgies") !== null) {
                 document.getElementById("listOfLiturgies").remove();
             }
+            if (document.getElementById("dateTitle") !== null) {
+                document.getElementById("dateTitle").remove();
+            }
 
             liturgyPlan.querySelector(".acclamationsTitle").classList.add("selected");
             // liturgyPlan.querySelector(".hymnsTitle", ".hymns").classList.remove("selected");
@@ -1157,6 +1161,9 @@ document.querySelector(".liturgyPlan .flex-container").addEventListener("click",
             if (document.getElementById("listOfLiturgies") !== null) {
                 document.getElementById("listOfLiturgies").remove();
             }
+            if (document.getElementById("dateTitle") !== null) {
+                document.getElementById("dateTitle").remove();
+            }
             break;
         case "Upcoming":
             generateLiturgyButtons("remove")
@@ -1178,6 +1185,9 @@ document.querySelector(".liturgyPlan .flex-container").addEventListener("click",
             }
             if (document.getElementById("listOfLiturgies") !== null) {
                 document.getElementById("listOfLiturgies").remove();
+            }
+            if (document.getElementById("dateTitle") !== null) {
+                document.getElementById("dateTitle").remove();
             }
             // document.getElementById("nextPsalm").remove();
             // document.getElementById("alleluia").remove();
@@ -1212,6 +1222,9 @@ document.querySelector(".liturgyPlan .flex-container").addEventListener("click",
             }
             if (document.getElementById("listOfLiturgies") !== null) {
                 document.getElementById("listOfLiturgies").remove();
+            }
+            if (document.getElementById("dateTitle") !== null) {
+                document.getElementById("dateTitle").remove();
             }
             liturgyPlan.querySelector(".container").classList.add("hidden"); //upcoming
             liturgyPlan.querySelector(".container").classList.add("hidden");
@@ -1286,8 +1299,25 @@ function generateLiturgyButtons(remove) {
         let yearDiv = document.getElementById("yearDiv");
         const lastLiturgy = allLiturgies[allLiturgies.length - 1];
         const firstLiturgy = allLiturgies[0];
-        // console.log(lastLiturgy.date.getFullYear());
+        // console.log(monthNames);
+        // console.log(monthNames.findIndex((x) => x === 'December'));
+        // console.log(monthDateCheck());
 
+        function monthDateCheck() {
+            const monthBtns = document.querySelectorAll(".liturgyMonths .month ");
+            monthBtns.forEach(btn => {
+                //filter for all liturgies of the selected year, then check if they contain each month.
+                const answer = allLiturgies.filter((x) => x.date.getFullYear() === Number(yearDiv.innerText)).some(x => x.date.getMonth() == monthNames.findIndex((x) => x === btn.innerText))
+                // console.log(answer);
+                if (answer !== true) {
+                    btn.classList.add("hidden")
+                } else {
+                    btn.classList.remove("hidden");
+                }
+                // return answer
+            })
+
+        }
         arrowDateCheck();
         function arrowDateCheck() {
             if (Number(yearDiv.innerHTML >= lastLiturgy.date.getFullYear())) {
@@ -1303,10 +1333,10 @@ function generateLiturgyButtons(remove) {
                 document.getElementById("arrowDiv").classList.remove("flexReverse");
             }
         }
-        // arrowDateCheck();
 
 
-        let savedMonths = [];
+
+
         let activeMonthsObject = {};
         document.getElementById("liturgyMonthsContainer").addEventListener("click", (e) => {
 
@@ -1332,12 +1362,6 @@ function generateLiturgyButtons(remove) {
                             });
                             activeMonthsObject[Number(selectedYear)] = activeMonthsArray;
                             activeMonthsArray = [];
-                            // savedMonths.push(activeMonthsObject)
-                            // `{${selectedYear}:${activeMonthsArray}}`;
-
-                            // console.log(savedMonths[1]);
-                            // console.log(activeMonthsObject);
-
 
                         }
 
@@ -1350,15 +1374,15 @@ function generateLiturgyButtons(remove) {
                             document.getElementById("liturgyMonthsContainer").classList.toggle("flexReverse");
                             if (e.target.closest("svg").id == "leftBtn") {
                                 yearDiv.innerHTML = Number(thisYear - 1);
-                                thisYear = Number(yearDiv.innerHTML);
+
 
                                 arrowDateCheck();
                             } else {
                                 yearDiv.innerHTML = Number(thisYear + 1);
-                                thisYear = Number(yearDiv.innerHTML);
                                 arrowDateCheck();
                             }
-                            // console.log((yearDiv.innerHTML));
+                            thisYear = Number(yearDiv.innerHTML);
+                            monthDateCheck()
 
                         }, 500);
 
@@ -1437,6 +1461,7 @@ function generateLiturgyButtons(remove) {
                         const lastArrayDate = fullLiturgyPlans[fullLiturgyPlans.length - 1].date.getDate();
                         const lastArrayMonth = monthNames[fullLiturgyPlans[fullLiturgyPlans.length - 1].date.getMonth()]
                         const lastArrayYear = fullLiturgyPlans[fullLiturgyPlans.length - 1].date.getFullYear();
+
                         const dateTitle = document.createElement("div");
                         dateTitle.id = "dateTitle";
 
@@ -1456,13 +1481,30 @@ function generateLiturgyButtons(remove) {
                         const lastArrayMonthNumber = fullLiturgyPlans[fullLiturgyPlans.length - 1].date.getMonth();
                         const lastArrayMonth = monthNames[lastArrayMonthNumber];
                         const lastArrayYear = fullLiturgyPlans[fullLiturgyPlans.length - 1].date.getFullYear();
+                        const firstArrayOccasion = fullLiturgyPlans[0].occasion;
+                        const lastArrayOccasion = fullLiturgyPlans[fullLiturgyPlans.length - 1].occasion;
+                        const firstArrayYearLetter = fullLiturgyPlans[0].year;
+                        const lastArrayYearLetter = fullLiturgyPlans[fullLiturgyPlans.length - 1].year;
+
                         // console.log(lastArrayMonthNumber - firstArrayMonthNumber - fullLiturgyPlans.length);
-
+                        const multiplier = (lastArrayYear - firstArrayYear) * 11;
                         const activeMonthButtons = document.getElementById("liturgyMonthsContainer").querySelectorAll("button.month.active").length;
-                        if (lastArrayMonthNumber - firstArrayMonthNumber - activeMonthButtons == -1 && firstArrayYear == lastArrayYear) { //if selected months are consecutive & years are equal
+                        // console.log(fullLiturgyPlans);
 
-                            dateTitleId.innerHTML =
-                                `<p> ${ordinal(firstArrayDate)}   ${firstArrayMonth} - ${ordinal(lastArrayDate)}   ${lastArrayMonth} ${lastArrayYear}</p>`
+
+                        if (lastArrayMonthNumber - firstArrayMonthNumber - activeMonthButtons + multiplier == -1) { //if selected months are consecutive
+                            if (lastArrayYear == firstArrayYear) {
+                                dateTitleId.innerHTML =
+                                    `<p> ${ordinal(firstArrayDate)}   ${firstArrayMonth} - ${ordinal(lastArrayDate)}   ${lastArrayMonth} ${lastArrayYear}</p>`
+                            } else {
+                                dateTitleId.innerHTML =
+                                    `<p> ${ordinal(firstArrayDate)}   ${firstArrayMonth} ${firstArrayYear} - ${ordinal(lastArrayDate)}   ${lastArrayMonth} ${lastArrayYear}</p>`
+                            }
+                            const liturgyOccasion = document.createElement("p");
+                            if (firstArrayYearLetter == lastArrayYearLetter) {
+                                liturgyOccasion.textContent = `${firstArrayOccasion} - ${lastArrayOccasion}: Year ${firstArrayYearLetter}`
+                            }
+                            document.querySelector("#dateTitle p").insertAdjacentElement("afterend", liturgyOccasion);
                         } else {
 
                             function getMonths() {
@@ -2612,7 +2654,7 @@ function addArticle() {
             </div>`
     document.querySelector(".wrapper.liturgyPlan").append(newArticle);
 }
-editing("fullLiturgyPlan")
+// editing("fullLiturgyPlan")
 function editing(SectionToEdit) {
     switch (SectionToEdit) {
         case "fullLiturgyPlan":
@@ -2684,6 +2726,7 @@ function generateFullHymnArticles() {
 
             // console.log(Object.entries(liturgy["hymn"]));
             Object.entries(liturgy["hymn"]).forEach(hymn => {
+                // console.log(Object.entries(liturgy["hymn"]));
 
                 // const hymn = hymn;
                 // console.log(hymn[1]);
@@ -2694,7 +2737,9 @@ function generateFullHymnArticles() {
 
                 const hymnNumber = document.createElement("h4");
                 hymnNumber.classList.add("hymnNumber");
-                if (hymn) {
+                if (hymn[1]) {
+                    // console.log(hymn[1]);
+
                     hymnNumber.textContent = hymn[1]["hymnNumber"];
                 }
                 else { hymnNumber.textContent = "unloaded" }
@@ -2702,7 +2747,7 @@ function generateFullHymnArticles() {
 
                 const hymnTitle = document.createElement("h4");
                 hymnTitle.classList.add("hymnTitle")
-                if (hymn) {
+                if (hymn[1]) {
                     hymnTitle.textContent = hymn[1]["title"];
                 }
                 else { hymnTitle.textContent = "unloaded" }
