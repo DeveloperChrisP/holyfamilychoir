@@ -328,6 +328,7 @@ new Hymn("He is risen, tell the story", 276, "", "", "https://www.youtube.com/em
 new Hymn("He who would valiant be", 862, "", "", "https://www.youtube.com/embed/AD7W92d4jmE?si=t6gu0qjlx4gG3Het")
 new Hymn("Here I am, Lord", 865, "", "", "https://www.youtube.com/embed/_sCkT5cLWCM?si=yLtHCX7cK0RJ4Hzq");
 new Hymn("Here we bring you", "Sheet", "./music/hymns/here we bring you/sheetmusic/Here We Bring You.pdf", { "piano": "./music/hymns/here we bring you/audio/here we bring you - piano.mp3" }, "");
+new Hymn("Hills of the North Rejoice", 983, "", "", "https://www.youtube.com/embed/ivgSpDaLyEo?si=AmRD-0s-NKL2QB_n")
 new Hymn("Holy Forever", "n/a", "", "", "https://www.youtube.com/embed/VhdAZ2aQtBk?si=EFlxlkTKBo3aAkd0")
 new Hymn("Holy holy holy, Lord God almighty", 468, "", "", "https://www.youtube.com/embed/2D4gg03f0DM?si=rKbTQbXM7fIgd9qh")
 new Hymn("Holy holy holy, Lord God almighty (Agnus Dei)", "", "", "", "https://www.youtube.com/embed/UWndDW_271g?si=06sYstfg-GFnGu4n")
@@ -363,6 +364,7 @@ new Hymn("Lead kindly light", 961, "", "", "https://www.youtube.com/embed/8fNjEg
 new Hymn("Like a sea without a shore", 84, "", "", "https://www.youtube.com/embed/vz9b4_P_PNs?si=W1u-nI90xKVbQhFQ")
 new Hymn("Living Lord", 772, "", "", "https://www.youtube.com/embed/QA_g98O42Q4?si=gN2wLtm1K_HrDzUL")
 new Hymn("Long ago prophets knew", 116, "", "", "https://www.youtube.com/embed/OeLA1LhqFA4?si=Y_jd5YhNoRzLi9ae");
+new Hymn("Lord for tomorrow and its needs", 940, "", "", "https://www.youtube.com/embed/yBaDH1jHWI4?si=1XE-kKbuSTed_yK_")
 new Hymn("Lord of all hopefulness", 969, "", "", "https://www.youtube.com/embed/fxEuqZ_4iI0?si=vxAYvDdp-QoMbhzO");
 new Hymn("Lord of Creation, to you be all praise", 869, "", "", "https://www.youtube.com/embed/dHEfi5TKezY?si=XoSYldQ4HqqQlguW")
 new Hymn("Love divine, all loves excelling", 801, "", "", "https://www.youtube.com/embed/cu5zgfKMbAU?si=zNiaaCx1SNydoh4F");
@@ -420,6 +422,7 @@ new Hymn("Soul of my saviour", 938, "", "", "https://www.youtube.com/embed/2AdFN
 new Hymn("Spirit of God", "sheet", "", "", "https://www.youtube.com/embed/boC7tn31vLc?si=PKBGjGK3-eUORtO8")
 new Hymn("Spirit of the living God", 306, "", "", "https://www.youtube.com/embed/vSFUkLUTJAY?si=YuczmqHL6SGr2DVk")
 new Hymn("Stay with me", 249, "", "", "https://www.youtube.com/embed/FCr2tn4yYKY?si=aDsPK3waY6YgSzTZ")
+new Hymn("Sweet Heart of Jesus", "CFE 673", "", "", "https://www.youtube.com/embed/hJsAjEgTShI?si=xkc-i4VbwAUDxb0x")
 new Hymn("Sweet Sacrament Divine", 663, "", "", "https://www.youtube.com/embed/6N1IfoGFF-I?si=4SrRraG5OQcqP0KN");
 new Hymn("Take my life and let it be", 874, "", "", "https://www.youtube.com/embed/VUitRcLnfNk?si=zYJqQe2royTp1q_b")
 new Hymn("Take our bread", 605, "", "", "https://www.youtube.com/embed/g0amLuMeVjY?si=UbwdvgeVfH5Nv_KV");
@@ -608,13 +611,13 @@ new Liturgy(new Date("1 Nov 2026"), "All saints day", "A", "Julian", ["For all t
 new Liturgy(new Date("8 Nov 2026"), "Remembrance Sunday", "A", "Julian", ["The day thou gavest", "O God our help in ages past", "O come and mourn with me awhile", "He who would valiant be"])
 new Liturgy(new Date("15 Nov 2026"), "33rd Sunday in Ordinary Time", "A", "Julian", ["Hills of the North rejoice", "Sweet heart of Jesus", "All that I am", "Immaculate Mary"])
 new Liturgy(new Date("22 Nov 2026"), "Christ the King", "A", "Julian", ["Hail redeemer King divine", "Crown him with many crowns", "Lord for tomorrow and its needs", "Our God reigns"])
-new Liturgy(new Date("29 Nov 2026"), "1st Sunday of Advent", "A", "Julian", ["Guide me O thou great redeemer", "Hail to the Lord's annoited", "freely freely", "Christ be our light"])
+new Liturgy(new Date("29 Nov 2026"), "1st Sunday of Advent", "A", "Julian", ["Guide me O thou great redeemer", "Hail to the Lord's annointed", "freely freely", "Christ be our light"])
 new Liturgy(new Date("6 Dec 2026"), "2nd Sunday of Advent", "A", "Julian", ["Tell out my soul", "O come, O come emmanuel", "Hark! a herald voice is calling", "O lady, full of God's own grace"])
 
 //2nd/ 6th/ 17th /20th (A) Sunday of ordinary - 26th of July: "Teach Me, O God (Christopher Walker)"
 
 let nextLiturgy = allLiturgies.filter(x => x.date >= todaysDate);
-// nextLiturgy = [allLiturgies[allLiturgies.length - 12]]; //show latest liturgy on opening page (for easier adding)
+// nextLiturgy = [allLiturgies[allLiturgies.length - 2]]; //show latest liturgy on opening page (for easier adding)
 
 
 
