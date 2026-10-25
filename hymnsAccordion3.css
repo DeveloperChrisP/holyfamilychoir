@@ -662,6 +662,9 @@ i.fa-magnifying-glass {
 	padding-left: var(--_panel-padding);
 	padding-bottom: calc(var(--_panel-padding) / 2);
 }
+#mediaPlayer .container {
+	justify-content: left;
+}
 #mediaPlayer__light {
 	border: black solid 0.3rem;
 	border-radius: 50%;
@@ -1003,7 +1006,7 @@ hr {
 	/* flex-direction: column; */
 	/* width: 5rem; */
 	justify-content: center;
-	width: fit-content;
+	width: 100%;
 }
 .liturgyContents {
 	flex-basis: 0;
@@ -1039,6 +1042,11 @@ hr {
 	gap: 0.5rem;
 	align-items: baseline;
 	text-align: left;
+	width: 100%;
+}
+div.nextHymns {
+	display: flex;
+	/* width: 100%; */
 }
 .extras_future {
 	display: block;
@@ -1125,7 +1133,7 @@ hr {
 }
 .liturgyPlan .container {
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	justify-content: left;
 	/* align-items: center; */
 
