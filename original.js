@@ -231,12 +231,16 @@ new Acclamation("Celtic Mass", "Lamb of God", "./music/acclamations/Celtic Mass/
 
 new Acclamation("Anderson Mass", "Gloria", "./music/acclamations/Anderson/sheetmusic/Gloria (Anderson) - melody.pdf", "", "")
 
+new Acclamation("Belmont/Sussex Mass", "Gloria", "", { "Melody": "./music/acclamations/Belmont,Sussex/Gloria/audio/Belmont Gloria - melody.mp3" })
+new Acclamation("Belmont/Sussex Mass", "Holy Holy", "", { "SATB": "./music/acclamations/Belmont,Sussex/Holy Holy/audio/Sussex Holy Holy - SATB.mp3", "Melody": "./music/acclamations/Belmont,Sussex/Holy Holy/audio/Sussex Holy Holy - Melody.mp3", "Alto": "./music/acclamations/Belmont,Sussex/Holy Holy/audio/Sussex Holy Holy - Alto.mp3", "Tenor": "./music/acclamations/Belmont,Sussex/Holy Holy/audio/Sussex Holy Holy - Tenor.mp3", "Bass": "./music/acclamations/Belmont,Sussex/Holy Holy/audio/Sussex Holy Holy - Bass.mp3", "Piano": "./music/acclamations/Belmont,Sussex/Holy Holy/audio/Sussex Holy Holy - Piano.mp3" })
+
 new AcclamationSetting("Mass of Christ the Saviour", "Dan Schutte", "Mass of Christ the Saviour")
 new AcclamationSetting("Mass of Creation", "Marty Haugen", "Mass of Creation")
 new AcclamationSetting("Mass of Hope", "Bernadette Farrell", "Mass of Hope")
 new AcclamationSetting("Simple Mass", "unknown", "Simple Mass")
 new AcclamationSetting("Celtic Mass", "Christopher Walker", "Celtic Mass")
 new AcclamationSetting("Anderson Mass", "Mike Anderson", "Anderson Mass")
+new AcclamationSetting("Belmont/Sussex Mass", "WalkerDean", "Belmont/Sussex Mass")
 
 for (let index = 0; index < allAcclamationSettings.length; index++) {
     const element = document.querySelectorAll(".acclamations h4")[index];
@@ -2377,7 +2381,7 @@ function toggleAccordion(panelToActivate) {
 
         }
 
-        if (allHymns[count].video.length == 0) {
+        if (!allHymns[count].video) {
             panelToActivate.parentElement.querySelector("#panel4").classList.add("hidden");
         } else { panelToActivate.parentElement.querySelector("#panel4").classList.remove("hidden"); }
 
