@@ -231,8 +231,10 @@ new Acclamation("Celtic Mass", "Lamb of God", "./music/acclamations/Celtic Mass/
 
 new Acclamation("Anderson Mass", "Gloria", "./music/acclamations/Anderson/sheetmusic/Gloria (Anderson) - melody.pdf", "", "")
 
-new Acclamation("Belmont/Sussex Mass", "Gloria", "", { "Melody": "./music/acclamations/Belmont,Sussex/Gloria/audio/Belmont Gloria - melody.mp3" })
+new Acclamation("Belmont/Sussex Mass", "Gloria", "", { "Melody": "./music/acclamations/Belmont,Sussex/Gloria/audio/Belmont Gloria - melody.mp3" }, "https://www.youtube.com/embed/XquMG_l0JbQ?si=3AZKv4p3bBagA9r6")
+new Acclamation("Belmont/Sussex Mass", "Belmont Alleluia", "", "", "https://www.youtube.com/embed/a5yXFPRpDMY?si=vwYq3xFpxdWeBKv3")
 new Acclamation("Belmont/Sussex Mass", "Holy Holy", "", { "SATB": "./music/acclamations/Belmont,Sussex/Holy Holy/audio/Sussex Holy Holy - SATB.mp3", "Melody": "./music/acclamations/Belmont,Sussex/Holy Holy/audio/Sussex Holy Holy - Melody.mp3", "Alto": "./music/acclamations/Belmont,Sussex/Holy Holy/audio/Sussex Holy Holy - Alto.mp3", "Tenor": "./music/acclamations/Belmont,Sussex/Holy Holy/audio/Sussex Holy Holy - Tenor.mp3", "Bass": "./music/acclamations/Belmont,Sussex/Holy Holy/audio/Sussex Holy Holy - Bass.mp3", "Piano": "./music/acclamations/Belmont,Sussex/Holy Holy/audio/Sussex Holy Holy - Piano.mp3" })
+new Acclamation("Belmont/Sussex Mass", "Lamb of God - Matt Mayer", "", "", "https://www.youtube.com/embed/5YaB9Jcmxng?si=wnBz2epVCSn-QHpQ");
 
 new AcclamationSetting("Mass of Christ the Saviour", "Dan Schutte", "Mass of Christ the Saviour")
 new AcclamationSetting("Mass of Creation", "Marty Haugen", "Mass of Creation")
