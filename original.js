@@ -245,7 +245,7 @@ new AcclamationSetting("Mass of Hope", "Bernadette Farrell", "Mass of Hope")
 new AcclamationSetting("Simple Mass", "unknown", "Simple Mass")
 new AcclamationSetting("Celtic Mass", "Christopher Walker", "Celtic Mass")
 new AcclamationSetting("Anderson Mass", "Mike Anderson", "Anderson Mass")
-new AcclamationSetting("Belmont/Sussex Mass", "WalkerDean", "Belmont/Sussex Mass")
+new AcclamationSetting("Belmont/Sussex Mass", "Walker,Dean,Maher", "Belmont/Sussex Mass")
 
 for (let index = 0; index < allAcclamationSettings.length; index++) {
     const element = document.querySelectorAll(".acclamations h4")[index];
@@ -628,7 +628,7 @@ new Liturgy(new Date("6 Dec 2026"), "2nd Sunday of Advent", "A", "Julian", ["Tel
 //2nd/ 6th/ 17th /20th (A) Sunday of ordinary - 26th of July: "Teach Me, O God (Christopher Walker)"
 
 let nextLiturgy = allLiturgies.filter(x => x.date >= todaysDate);
-nextLiturgy = [allLiturgies[allLiturgies.length - 4]]; //show latest liturgy on opening page (for easier adding)
+// nextLiturgy = [allLiturgies[allLiturgies.length - 4]]; //show latest liturgy on opening page (for easier adding)
 
 
 
